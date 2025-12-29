@@ -1,0 +1,26 @@
+# Robots.txt for Gem City Cleaning Crew
+# Professional cleaning services in Dayton, OH
+
+User-agent: *
+Allow: /
+
+# Allow all pages to be crawled
+Allow: /residential
+Allow: /recurring-cleaning-service
+Allow: /deep-cleaning
+Allow: /residential-house-cleaning-checklist
+Allow: /quote
+Allow: /blog
+Allow: /page
+
+# Disallow unnecessary files
+Disallow: /assets/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.map$
+
+# Sitemap location
+Sitemap: https://gemcitycleaningcrew.com/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 1 

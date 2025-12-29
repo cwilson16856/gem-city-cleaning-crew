@@ -1,0 +1,291 @@
+/* ========================================
+   HEADER COMPONENT STYLES
+   ======================================== */
+
+.header-container {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header-container.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-toolbar {
+  padding: 0.75rem 0;
+  min-height: 70px;
+}
+
+/* Logo Section */
+.header-logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 45px;
+  width: auto;
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+  transform: scale(1.05);
+}
+
+.header-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-company-name {
+  font-weight: 700;
+  color: #D81B60;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-company-name:hover {
+  color: #AD1457;
+}
+
+.header-tagline {
+  color: #525252;
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: -2px;
+}
+
+/* Navigation */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-nav-link {
+  color: #1C1C1C;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.header-nav-link:hover {
+  color: #D81B60;
+  background-color: rgba(216, 27, 96, 0.04);
+}
+
+.header-nav-link.active {
+  color: #D81B60;
+  font-weight: 600;
+}
+
+.header-nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background-color: #D81B60;
+  border-radius: 1px;
+}
+
+/* Action Buttons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: 1rem;
+}
+
+.header-cta-button {
+  background: linear-gradient(135deg, #D81B60 0%, #AD1457 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(216, 27, 96, 0.3);
+  background: linear-gradient(135deg, #AD1457 0%, #880E4F 100%);
+}
+
+.header-contact-button {
+  border: 1.5px solid #D81B60;
+  color: #D81B60;
+  background: transparent;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-contact-button:hover {
+  background-color: rgba(216, 27, 96, 0.04);
+  border-color: #AD1457;
+}
+
+/* Contact Dropdown */
+.header-contact-dropdown {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 0.5rem;
+  min-width: 220px;
+}
+
+.header-contact-item {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-contact-item:last-child {
+  border-bottom: none;
+}
+
+.header-contact-item:hover {
+  background-color: rgba(216, 27, 96, 0.04);
+}
+
+.header-contact-icon {
+  color: #D81B60;
+  font-size: 1.2rem;
+}
+
+.header-contact-text {
+  flex: 1;
+}
+
+.header-contact-primary {
+  font-weight: 600;
+  color: #1C1C1C;
+  margin-bottom: 0.25rem;
+}
+
+.header-contact-secondary {
+  font-size: 0.85rem;
+  color: #525252;
+}
+
+/* Mobile Menu */
+.header-mobile-button {
+  color: #1C1C1C;
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.header-mobile-button:hover {
+  background-color: rgba(216, 27, 96, 0.04);
+}
+
+.header-mobile-menu {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 0.5rem;
+  min-width: 200px;
+}
+
+.header-mobile-item {
+  padding: 1rem 1.5rem;
+  color: #1C1C1C;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-mobile-item:last-child {
+  border-bottom: none;
+}
+
+.header-mobile-item:hover {
+  background-color: rgba(216, 27, 96, 0.04);
+  color: #D81B60;
+}
+
+.header-mobile-item.active {
+  color: #D81B60;
+  font-weight: 600;
+}
+
+/* Development Badge */
+.header-dev-badge {
+  background-color: #525252;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-toolbar {
+    padding: 0.5rem 0;
+    min-height: 60px;
+  }
+  
+  .header-logo {
+    height: 35px;
+    margin-right: 8px;
+  }
+  
+  .header-company-name {
+    font-size: 1.1rem;
+  }
+  
+  .header-tagline {
+    font-size: 0.7rem;
+  }
+  
+  .header-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-company-name {
+    font-size: 1rem;
+  }
+  
+  .header-tagline {
+    font-size: 0.65rem;
+  }
+} 

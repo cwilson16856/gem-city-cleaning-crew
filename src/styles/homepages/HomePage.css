@@ -1,0 +1,673 @@
+/* ========================================
+   GEM CITY CLEANING CREW - HOMEPAGE STYLES
+   Beautiful, Modern, Professional Design
+   ======================================== */
+
+/* CSS Custom Properties for Brand Colors */
+:root {
+  --primary-pink: #D81B60;
+  --primary-pink-light: #F06292;
+  --primary-pink-dark: #AD1457;
+  --secondary-black: #1C1C1C;
+  --accent-light: #f8f9fa;
+  --accent-purple: #F0E6EF;
+  --text-primary: #1C1C1C;
+  --text-secondary: #525252;
+  --white: #ffffff;
+  --shadow-light: rgba(216, 27, 96, 0.2);
+  --shadow-dark: rgba(0, 0, 0, 0.15);
+  --success-green: #2E7D32;
+}
+
+/* ========================================
+   HERO SECTION STYLES
+   ======================================== */
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(24, 24, 24, 0.8) 0%,
+    rgba(233, 30, 99, 0.6) 50%,
+    rgba(24, 24, 24, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: heroFadeInUp 1.2s ease-out;
+}
+
+.hero-title {
+  background: linear-gradient(135deg, #ffffff 0%, var(--primary-pink-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  background-clip: text;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.hero-subtitle {
+  animation: subtitleSlideIn 1.5s ease-out 0.3s backwards;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-cta-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px var(--shadow-light);
+  animation: buttonBounceIn 1.8s ease-out 0.6s backwards;
+}
+
+.hero-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+.hero-cta-button:hover::before {
+  left: 100%;
+}
+
+.hero-cta-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 16px 48px var(--shadow-light);
+  color: 'white';
+}
+
+/* ========================================
+   ANIMATED HEADLINE SECTION
+   ======================================== */
+
+.animated-headline {
+  animation: headlineFadeIn 1s ease-out;
+}
+
+.headline-text {
+  position: relative;
+  display: inline-block;
+}
+
+.headline-text::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-pink), var(--primary-pink-light));
+  border-radius: 2px;
+  animation: underlineExpand 2s ease-out 0.5s forwards;
+}
+
+.tagline-text {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.8s forwards;
+}
+
+/* ========================================
+   SERVICE CARDS & FEATURES
+   ======================================== */
+
+.service-section {
+  animation: sectionSlideIn 1s ease-out;
+}
+
+.service-card {
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-pink), var(--primary-pink-light));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 
+    0 20px 60px rgba(233, 30, 99, 0.2),
+    0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-pink-light);
+}
+
+.feature-icon {
+  transition: all 0.3s ease;
+  filter: drop-shadow(2px 2px 8px rgba(233, 30, 99, 0.3));
+}
+
+.service-card:hover .feature-icon {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(4px 4px 16px rgba(233, 30, 99, 0.5));
+}
+
+.feature-title {
+  background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-pink-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .feature-title {
+  transform: scale(1.05);
+}
+
+/* ========================================
+   IMAGE STYLES
+   ======================================== */
+
+.service-image {
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.service-image:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 16px 48px rgba(233, 30, 99, 0.3);
+}
+
+/* ========================================
+   VIDEO SECTION
+   ======================================== */
+
+.video-container {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.video-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 32px 80px rgba(233, 30, 99, 0.3);
+}
+
+.video-container video {
+  transition: all 0.3s ease;
+}
+
+.video-container:hover video {
+  filter: brightness(1.1) contrast(1.1);
+}
+
+/* ========================================
+   TESTIMONIALS SECTION
+   ======================================== */
+
+.testimonials-section {
+  background: linear-gradient(135deg, #9FEDF3 0%, #77CAF0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(233, 30, 99, 0.1) 0%, transparent 70%);
+  animation: backgroundPulse 8s ease-in-out infinite;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(233, 30, 99, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 24px 48px rgba(233, 30, 99, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-quote {
+  font-size: 3rem;
+  background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-pink-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: quoteFloat 3s ease-in-out infinite alternate;
+}
+
+.testimonial-name {
+  background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-pink-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   SERVICE AREAS SECTION
+   ======================================== */
+
+.service-areas-section {
+  background: linear-gradient(135deg, #F0E6EF 0%, #E8D5E7 100%);
+  position: relative;
+}
+
+.service-areas-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23E91E63" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.area-text {
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: default;
+}
+
+.area-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  right: -8px;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary-pink-light), var(--primary-pink));
+  border-radius: 8px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.area-text:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.area-text:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ========================================
+   FINAL CTA SECTION
+   ======================================== */
+
+.final-cta-section {
+  background: linear-gradient(135deg, #9FEDF3 0%, #77CAF0 50%, #5BC5D1 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  animation: ctaGlow 6s ease-in-out infinite;
+}
+
+.final-cta-button {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-pink-dark) 100%);
+  box-shadow: 
+    0 12px 32px var(--shadow-light),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.final-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s;
+}
+
+.final-cta-button:hover::before {
+  left: 100%;
+}
+
+.final-cta-button:hover {
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 
+    0 20px 48px var(--shadow-light),
+    0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   SCROLL ANIMATIONS
+   ======================================== */
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+/* Stagger animation delays */
+.fade-in-up:nth-child(1) { animation-delay: 0.1s; }
+.fade-in-up:nth-child(2) { animation-delay: 0.2s; }
+.fade-in-up:nth-child(3) { animation-delay: 0.3s; }
+.fade-in-up:nth-child(4) { animation-delay: 0.4s; }
+
+/* ========================================
+   KEYFRAME ANIMATIONS
+   ======================================== */
+
+@keyframes heroFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleGlow {
+  0% {
+    filter: drop-shadow(2px 4px 8px rgba(233, 30, 99, 0.3));
+  }
+  100% {
+    filter: drop-shadow(4px 8px 16px rgba(233, 30, 99, 0.6));
+  }
+}
+
+@keyframes subtitleSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes buttonBounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(40px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes headlineFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineExpand {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sectionSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes backgroundPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes quoteFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes ctaGlow {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem !important;
+  }
+  
+  .service-card {
+    margin-bottom: 2rem;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .testimonial-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem !important;
+  }
+  
+  .hero-cta-button {
+    font-size: 1rem !important;
+    padding: 12px 24px !important;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY & PERFORMANCE
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .service-card {
+    border: 2px solid var(--primary-pink);
+  }
+  
+  .testimonial-card {
+    border: 2px solid var(--primary-pink);
+  }
+}
+
+/* Dark mode support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+  }
+}
+
+/* Elementor-style Animated Headlines - Simple Show/Hide */
+.elementor-headline-dynamic-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+  overflow: visible;
+}
+
+.elementor-headline-dynamic-text {
+  position: relative;
+  color: var(--primary-pink) !important;
+  font-weight: 800 !important;
+  line-height: 1.1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.elementor-headline-dynamic-text.elementor-headline-text-active {
+  opacity: 1;
+} 

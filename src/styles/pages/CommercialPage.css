@@ -1,0 +1,284 @@
+/* Commercial Page Specific Styles */
+
+/* Service Cards */
+.commercial-service-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: visible !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid rgba(216, 27, 96, 0.1);
+  height: 100%;
+  position: relative;
+  margin-top: 16px; /* Space for chips */
+}
+
+.commercial-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(216, 27, 96, 0.15);
+  border-color: rgba(216, 27, 96, 0.3);
+}
+
+.commercial-service-card .MuiChip-root {
+  position: absolute !important;
+  top: -12px !important;
+  right: 12px !important;
+  z-index: 10 !important;
+  box-shadow: 0 4px 12px rgba(216, 27, 96, 0.4) !important;
+}
+
+.commercial-service-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #D81B60 0%, #AD1457 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  transition: all 0.3s ease;
+}
+
+.commercial-service-card:hover .commercial-service-icon {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(216, 27, 96, 0.3);
+}
+
+.commercial-service-title {
+  font-weight: 700;
+  color: #1C1C1C;
+  margin-bottom: 12px;
+}
+
+.commercial-service-description {
+  color: #525252;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.commercial-service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.commercial-service-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #525252;
+}
+
+.commercial-service-features .feature-check {
+  color: #D81B60;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.commercial-service-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  transition: all 0.2s ease;
+}
+
+.commercial-service-feature-item:hover {
+  background-color: rgba(216, 27, 96, 0.02);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+/* Testimonials */
+.commercial-testimonial-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 1px solid rgba(216, 27, 96, 0.1);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.commercial-testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #D81B60 0%, #AD1457 100%);
+}
+
+.commercial-testimonial-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(216, 27, 96, 0.15) !important;
+}
+
+/* FAQ Section */
+.commercial-faq-accordion {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(216, 27, 96, 0.1);
+  overflow: hidden;
+}
+
+.commercial-faq-accordion:before {
+  display: none;
+}
+
+.commercial-faq-accordion:hover {
+  box-shadow: 0 4px 12px rgba(216, 27, 96, 0.1) !important;
+}
+
+.commercial-faq-accordion .MuiAccordionSummary-root {
+  background-color: #fafafa;
+  border-radius: 8px 8px 0 0;
+}
+
+.commercial-faq-accordion .MuiAccordionSummary-root:hover {
+  background-color: #f5f5f5;
+}
+
+/* Commercial Areas Grid */
+.commercial-areas-grid .MuiCard-root,
+.commercial-areas-grid {
+  transition: all 0.3s ease;
+  border-radius: 12px !important;
+  border: 1px solid rgba(216, 27, 96, 0.1);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  height: 100%;
+  text-align: center;
+  padding: 16px;
+}
+
+.commercial-areas-grid .MuiCard-root:hover,
+.commercial-areas-grid:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(216, 27, 96, 0.15) !important;
+  border-color: rgba(216, 27, 96, 0.3);
+}
+
+/* Service Area Chips */
+.commercial-service-area-chip {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(216, 27, 96, 0.2);
+}
+
+.commercial-service-area-chip:hover {
+  background-color: #D81B60;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(216, 27, 96, 0.3);
+}
+
+/* Video Container */
+.commercial-video-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.commercial-video-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* CTA Section */
+.commercial-cta-section {
+  background: linear-gradient(135deg, #D81B60 0%, #AD1457 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.commercial-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.commercial-cta-section .MuiContainer-root {
+  position: relative;
+  z-index: 2;
+}
+
+/* Button Animations */
+.commercial-cta-section .MuiButton-root {
+  transition: all 0.3s ease;
+}
+
+.commercial-cta-section .MuiButton-contained:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+.commercial-cta-section .MuiButton-outlined:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Professional Business Styling */
+.commercial-professional-badge {
+  background: linear-gradient(135deg, #D81B60 0%, #AD1457 100%);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(216, 27, 96, 0.3);
+}
+
+/* Commercial Quote CTA Card */
+.commercial-quote-cta {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 2px solid #D81B60 !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease;
+}
+
+.commercial-quote-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(216, 27, 96, 0.2) !important;
+}
+
+/* Task Items */
+.commercial-task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.commercial-task-item:hover {
+  background-color: rgba(216, 27, 96, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .commercial-service-card {
+    margin-bottom: 24px;
+  }
+}
+
+/* Commercial Room Icons */
+.commercial-room-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #D81B60 0%, #AD1457 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 16px;
+} 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/webp" href="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/favicon-48x48-1.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Preload critical fonts to prevent layout shifts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Preload Material Icons to prevent layout shifts -->
+    <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></noscript>
+    
+    <title>Gem City Cleaning Crew</title>
+    
+    <!-- Prevent layout shifts with critical CSS -->
+    <style>
+      /* Prevent layout shifts during font loading */
+      * {
+        font-display: swap;
+      }
+      
+      /* Reserve space for logo to prevent shifts */
+      .logo-container {
+        min-height: 48px;
+        min-width: 48px;
+      }
+      
+      /* Prevent header height shifts */
+      .MuiAppBar-root {
+        min-height: 64px;
+      }
+      
+      /* Reserve space for main content */
+      .main-content {
+        min-height: 100vh;
+      }
+      
+      /* Prevent rating component shifts */
+      .MuiRating-root {
+        min-height: 24px;
+      }
+      
+      /* Prevent button shifts */
+      .MuiButton-root {
+        min-height: 36px;
+      }
+      
+      /* Prevent Typography shifts */
+      .MuiTypography-root {
+        font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+      }
+      
+      /* Prevent Card shifts */
+      .MuiCard-root {
+        min-height: 100px;
+      }
+      
+      /* Prevent chip layout shifts */
+      .MuiChip-root {
+        min-height: 32px;
+      }
+      
+      /* Ensure consistent line heights */
+      body {
+        font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html> 
