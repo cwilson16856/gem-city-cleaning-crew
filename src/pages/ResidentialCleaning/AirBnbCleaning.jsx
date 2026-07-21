@@ -211,8 +211,6 @@ const AirBnbCleaning = () => {
         <meta name="language" content="en-US" />
         <meta name="geo.region" content="US-OH" />
         <meta name="geo.placename" content="Dayton, Ohio" />
-        <meta name="geo.position" content="39.7589;-84.1916" />
-        <meta name="ICBM" content="39.7589, -84.1916" />
         <meta name="author" content="Gem City Cleaning Crew" />
         <meta name="coverage" content="Worldwide" />
         <meta name="distribution" content="Global" />
@@ -264,16 +262,9 @@ const AirBnbCleaning = () => {
             "paymentAccepted": "Cash, Check, Credit Card, Venmo, Zelle",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "278 Mertland Ave",
               "addressLocality": "Dayton",
               "addressRegion": "OH",
-              "postalCode": "45431",
               "addressCountry": "US"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 39.7589,
-              "longitude": -84.1916
             },
             "areaServed": [
               {
@@ -347,15 +338,6 @@ const AirBnbCleaning = () => {
             "alternateName": ["Short-Term Rental Cleaning", "Vacation Rental Cleaning", "AirBnb Turnover Cleaning"],
             "description": "Professional AirBnb and vacation rental cleaning service in Dayton, Ohio with same-day turnaround, hospitality standards, and flexible scheduling around guest check-ins and check-outs",
             "serviceType": "Short-Term Rental Cleaning Service",
-            "serviceArea": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.7589,
-                "longitude": -84.1916
-              },
-              "geoRadius": "30000"
-            },
             "provider": {
               "@type": "LocalBusiness",
               "name": "Gem City Cleaning Crew",

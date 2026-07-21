@@ -158,8 +158,6 @@ const MoveOutCleaningPage = () => {
         <meta name="language" content="en-US" />
         <meta name="geo.region" content="US-OH" />
         <meta name="geo.placename" content="Dayton, Ohio" />
-        <meta name="geo.position" content="39.7589;-84.1916" />
-        <meta name="ICBM" content="39.7589, -84.1916" />
         <meta name="author" content="Gem City Cleaning Crew" />
         <meta name="coverage" content="Worldwide" />
         <meta name="distribution" content="Global" />
@@ -200,15 +198,6 @@ const MoveOutCleaningPage = () => {
             "alternateName": ["Tenant Cleaning", "Security Deposit Cleaning", "Move Out House Cleaning", "End of Lease Cleaning"],
             "description": "Professional move-out cleaning services in Dayton, OH including security deposit protection cleaning that meets landlord and lease requirements",
             "serviceType": "Move-Out Cleaning",
-            "serviceArea": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.7589,
-                "longitude": -84.1916
-              },
-              "geoRadius": "30000"
-            },
             "provider": {
               "@type": "LocalBusiness",
               "name": "Gem City Cleaning Crew",

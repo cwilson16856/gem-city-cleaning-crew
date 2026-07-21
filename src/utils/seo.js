@@ -129,16 +129,9 @@ export const generateLocalBusinessStructuredData = () => {
     'email': 'info@gemcitycleaningcrew.com',
     'address': {
       '@type': 'PostalAddress',
-      'streetAddress': '278 Mertland Ave',
       'addressLocality': 'Dayton',
       'addressRegion': 'OH',
-      'postalCode': '45431',
       'addressCountry': 'US'
-    },
-    'geo': {
-      '@type': 'GeoCoordinates',
-      'latitude': 39.7589,
-      'longitude': -84.1916
     },
     'description': 'Professional residential and commercial cleaning services in Dayton, OH. We make life easier with reliable, thorough cleaning.',
     'slogan': 'We Make Life Easier',

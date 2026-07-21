@@ -178,10 +178,8 @@ const DeepCleaningPage = () => {
               "telephone": "937-892-4157",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "278 Mertland Ave",
                 "addressLocality": "Dayton",
-                "addressRegion": "OH",
-                "postalCode": "45431"
+                "addressRegion": "OH"
               }
             },
             "areaServed": "Dayton, OH and surrounding areas",

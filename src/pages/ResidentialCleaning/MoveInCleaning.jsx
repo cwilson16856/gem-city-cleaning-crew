@@ -158,8 +158,6 @@ const MoveInCleaningPage = () => {
         <meta name="language" content="en-US" />
         <meta name="geo.region" content="US-OH" />
         <meta name="geo.placename" content="Dayton, Ohio" />
-        <meta name="geo.position" content="39.7589;-84.1916" />
-        <meta name="ICBM" content="39.7589, -84.1916" />
         <meta name="author" content="Gem City Cleaning Crew" />
         <meta name="coverage" content="Worldwide" />
         <meta name="distribution" content="Global" />
@@ -200,15 +198,6 @@ const MoveInCleaningPage = () => {
             "alternateName": ["New Home Cleaning", "Fresh Start Cleaning", "Move In House Cleaning", "New Apartment Cleaning"],
             "description": "Professional move-in cleaning services in Dayton, OH including deep sanitization for new homes and apartments, perfect for families starting fresh",
             "serviceType": "Move-In Cleaning",
-            "serviceArea": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.7589,
-                "longitude": -84.1916
-              },
-              "geoRadius": "30000"
-            },
             "provider": {
               "@type": "LocalBusiness",
               "name": "Gem City Cleaning Crew",

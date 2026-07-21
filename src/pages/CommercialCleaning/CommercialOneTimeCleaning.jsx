@@ -259,16 +259,9 @@ const CommercialOneTimeCleaning = () => {
             "email": "info@gemcitycleaningcrew.com",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "278 Mertland Ave",
               "addressLocality": "Dayton",
               "addressRegion": "OH",
-              "postalCode": "45431",
               "addressCountry": "US"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.7589",
-              "longitude": "-84.1916"
             },
             "openingHours": [
               "Mo-Fr 08:00-18:00",
@@ -305,15 +298,6 @@ const CommercialOneTimeCleaning = () => {
                 "addressRegion": "OH"
               }
             ],
-            "serviceArea": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": "39.7589",
-                "longitude": "-84.1916"
-              },
-              "geoRadius": "30000"
-            },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.5",
@@ -574,15 +558,6 @@ const CommercialOneTimeCleaning = () => {
                 "areaServed": "US"
               }
             ],
-            "serviceArea": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": "39.7589",
-                "longitude": "-84.1916"
-              },
-              "geoRadius": "30000"
-            }
           })}
         </script>
 

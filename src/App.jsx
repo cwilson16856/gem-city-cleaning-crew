@@ -199,13 +199,10 @@ function App() {
           {/* Contact Information */}
           <meta name="contact:phone_number" content="937-892-4157" />
           <meta name="contact:email" content="info@gemcitycleaningcrew.com" />
-          <meta name="contact:address" content="278 Mertland Ave, Dayton, OH 45431" />
           
           {/* Geographic Information */}
           <meta name="geo.region" content="US-OH" />
           <meta name="geo.placename" content="Dayton, Ohio" />
-          <meta name="geo.position" content="39.7589;-84.1916" />
-          <meta name="ICBM" content="39.7589, -84.1916" />
         </Helmet>
 
         <Header siteInfo={siteInfo} />

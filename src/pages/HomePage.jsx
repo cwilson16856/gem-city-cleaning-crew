@@ -179,10 +179,8 @@ const HomePage = () => {
             "email": "info@gemcitycleaningcrew.com",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "278 Mertland Ave",
               "addressLocality": "Dayton",
               "addressRegion": "OH",
-              "postalCode": "45431",
               "addressCountry": "US"
             },
             "aggregateRating": {

@@ -209,8 +209,6 @@ const CondoCleaning = () => {
         <meta name="language" content="en-US" />
         <meta name="geo.region" content="US-OH" />
         <meta name="geo.placename" content="Dayton, Ohio" />
-        <meta name="geo.position" content="39.7589;-84.1916" />
-        <meta name="ICBM" content="39.7589, -84.1916" />
         <meta name="author" content="Gem City Cleaning Crew" />
         
         {/* Open Graph / Facebook */}
@@ -239,10 +237,8 @@ const CondoCleaning = () => {
               "url": "https://gemcitycleaningcrew.com",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "278 Mertland Ave",
                 "addressLocality": "Dayton",
                 "addressRegion": "OH",
-                "postalCode": "45431",
                 "addressCountry": "US"
               }
             },

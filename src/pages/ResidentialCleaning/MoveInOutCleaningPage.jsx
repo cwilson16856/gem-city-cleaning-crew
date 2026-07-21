@@ -158,8 +158,6 @@ const MoveInOutCleaningPage = () => {
         <meta name="language" content="en-US" />
         <meta name="geo.region" content="US-OH" />
         <meta name="geo.placename" content="Dayton, Ohio" />
-        <meta name="geo.position" content="39.7589;-84.1916" />
-        <meta name="ICBM" content="39.7589, -84.1916" />
         <meta name="author" content="Gem City Cleaning Crew" />
         <meta name="coverage" content="Worldwide" />
         <meta name="distribution" content="Global" />
@@ -183,10 +181,8 @@ const MoveInOutCleaningPage = () => {
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:updated_time" content={new Date().toISOString()} />
-        <meta property="business:contact_data:street_address" content="278 Mertland Ave" />
         <meta property="business:contact_data:locality" content="Dayton" />
         <meta property="business:contact_data:region" content="OH" />
-        <meta property="business:contact_data:postal_code" content="45431" />
         <meta property="business:contact_data:country_name" content="United States" />
         <meta property="business:contact_data:phone_number" content="+1-937-892-4157" />
         
@@ -219,15 +215,6 @@ const MoveInOutCleaningPage = () => {
             "alternateName": ["Moving Cleaning Service", "Tenant Cleaning", "Move Out Cleaning", "Move In Cleaning", "Empty Home Cleaning"],
             "description": "Professional move-in/move-out cleaning services in Dayton, OH including deep cleaning for empty homes, perfect for landlords, tenants, and new homeowners",
             "serviceType": "Move-In Move-Out Cleaning",
-            "serviceArea": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.7589,
-                "longitude": -84.1916
-              },
-              "geoRadius": "30000"
-            },
             "provider": {
               "@type": "LocalBusiness",
               "name": "Gem City Cleaning Crew",
@@ -236,16 +223,9 @@ const MoveInOutCleaningPage = () => {
               "url": "https://gemcitycleaningcrew.com",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "278 Mertland Ave",
                 "addressLocality": "Dayton",
                 "addressRegion": "OH",
-                "postalCode": "45431",
                 "addressCountry": "US"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.7589,
-                "longitude": -84.1916
               },
               "openingHoursSpecification": [
                 {
@@ -403,16 +383,9 @@ const MoveInOutCleaningPage = () => {
             "paymentAccepted": "Cash, Check, Credit Card, Venmo, Zelle",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "278 Mertland Ave",
               "addressLocality": "Dayton",
               "addressRegion": "OH",
-              "postalCode": "45431",
               "addressCountry": "US"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 39.7589,
-              "longitude": -84.1916
             },
             "areaServed": [
               {
