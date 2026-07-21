@@ -36,7 +36,7 @@ import BeavercreekCommercialPage from './pages/Locations/Beavercreek/CommercialC
 import LocationPage from './pages/LocationPage'
 import BlogPage from './pages/BlogPage'
 import PostPage from './pages/PostPage'
-import PageView from './pages/PageView'
+import AboutPage from './pages/AboutPage'
 import QuotePage from './pages/QuotePage'
 import NotFound from './pages/NotFound'
 
@@ -240,7 +240,7 @@ function App() {
             <Route path="/quote" element={<QuotePage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<PostPage />} />
-            <Route path="/page/:slug" element={<PageView />} />
+            <Route path="/about-us" element={<AboutPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

@@ -61,9 +61,9 @@ const NotFound = () => {
             variant="contained"
             color="secondary"
             component={Link}
-            to="/page/contact-us"
+            to="/quote"
           >
-            Contact Us Today
+            Get a Free Quote
           </Button>
         </Box>
       </Container>

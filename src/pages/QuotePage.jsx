@@ -807,8 +807,8 @@ const QuotePage = () => {
                   
                   <Box sx={{ mb: 3 }}>
                     {[
-                      { label: 'Established 2017', desc: 'Years of experience', link: '/page/about-us' },
-                      { label: 'Professional Team', desc: 'Trained & insured', link: '/page/about-us' },
+                      { label: 'Established 2017', desc: 'Years of experience', link: '/about-us' },
+                      { label: 'Professional Team', desc: 'Trained & insured', link: '/about-us' },
                       { label: 'Flexible Scheduling', desc: 'We work around you', link: '/recurring-cleaning-service' },
                       { label: 'Satisfaction Guaranteed', desc: 'We make it right', link: '/residential' },
                       { label: 'Serving Dayton Area', desc: 'Local & reliable', link: '/locations' }
@@ -1188,7 +1188,7 @@ const QuotePage = () => {
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
                 Supporting local businesses like Gem City Cleaning keeps your investment in the Dayton community, 
                 supporting local jobs and economic growth. Learn more{' '}
-                <Link to="/page/about-us" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                <Link to="/about-us" style={{ color: '#1976d2', textDecoration: 'none' }}>
                   about our local commitment
                 </Link>.
               </Typography>

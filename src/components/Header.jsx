@@ -115,7 +115,7 @@ const Header = ({ siteInfo }) => {
   }
 
   const navigationLinks = [
-    { label: 'About Us', path: '/page/about-us' },
+    { label: 'About Us', path: '/about-us' },
     { label: 'Blog', path: '/blog' }
   ]
 
@@ -620,10 +620,10 @@ const Header = ({ siteInfo }) => {
               {/* About Us Link */}
               <Button
                 component={Link}
-                to="/page/about-us"
+                to="/about-us"
                 sx={{
-                  color: isActive('/page/about-us') ? theme.palette.primary.main : theme.palette.text.primary,
-                  fontWeight: isActive('/page/about-us') ? 600 : 500,
+                  color: isActive('/about-us') ? theme.palette.primary.main : theme.palette.text.primary,
+                  fontWeight: isActive('/about-us') ? 600 : 500,
                   px: 2,
                   py: 1,
                   '&:hover': {
