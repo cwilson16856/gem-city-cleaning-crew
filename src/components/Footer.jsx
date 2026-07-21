@@ -8,7 +8,6 @@ import {
 import {
   Phone,
   Email,
-  LocationOn,
   Schedule
 } from '@mui/icons-material'
 import styles from '../styles/components/Footer.module.css'
@@ -16,15 +15,22 @@ import styles from '../styles/components/Footer.module.css'
 const Footer = ({ siteInfo }) => {
   const currentYear = new Date().getFullYear()
 
-  const serviceAreas = ['Dayton', 'Tipp City', 'Troy', 'Huber Heights', 'Vandalia', 'Englewood']
-  
+  const serviceAreas = [
+    'Dayton', 'Kettering', 'Oakwood', 'Centerville',
+    'Miamisburg', 'Springboro', 'Huber Heights', 'Riverside',
+    'Xenia', 'Beavercreek', 'Fairborn', 'Yellow Springs',
+    'Tipp City', 'Bellbrook', 'Vandalia', 'Troy',
+    'Springfield', 'Franklin', 'Middletown', 'Carlisle'
+  ]
+
   const services = [
     { name: 'Residential Cleaning', link: '/residential' },
     { name: 'Recurring Cleaning', link: '/recurring-cleaning-service' },
     { name: 'Deep Cleaning', link: '/deep-cleaning' },
     { name: 'Move-In/Out Cleaning', link: '/move-in-out-cleaning' },
     { name: 'Commercial Cleaning', link: '/commercial' },
-    { name: 'Office Cleaning', link: '/commercial' }
+    { name: 'Office Cleaning', link: '/commercial' },
+    { name: 'Blog', link: '/blog' }
   ]
 
   return (
@@ -104,19 +110,6 @@ const Footer = ({ siteInfo }) => {
               </div>
               
               <div className={styles.contactItem}>
-                <LocationOn className={styles.contactIcon} />
-                <div>
-                  <p className={styles.contactLabel}>
-                    Address
-                  </p>
-                  <p className={styles.contactValue}>
-                    278 Mertland Ave<br />
-                    Dayton, OH 45431
-                  </p>
-                </div>
-              </div>
-              
-              <div className={styles.contactItem}>
                 <Schedule className={styles.contactIcon} />
                 <div>
                   <p className={styles.contactLabel}>
@@ -178,7 +171,7 @@ const Footer = ({ siteInfo }) => {
             </div>
             
             <p className={styles.additionalAreasNote}>
-              *Additional areas available upon request
+              Proudly serving Dayton and communities within 30+ miles — <Link to="/locations" className={styles.serviceItemLink}>view all service areas</Link>
             </p>
           </div>
         </div>

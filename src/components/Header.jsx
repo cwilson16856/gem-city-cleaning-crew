@@ -115,7 +115,8 @@ const Header = ({ siteInfo }) => {
   }
 
   const navigationLinks = [
-    { label: 'About Us', path: '/page/about-us' }
+    { label: 'About Us', path: '/page/about-us' },
+    { label: 'Blog', path: '/blog' }
   ]
 
   // Location service areas in alphabetical order
@@ -632,6 +633,24 @@ const Header = ({ siteInfo }) => {
                 }}
               >
                 About Us
+              </Button>
+
+              {/* Blog Link */}
+              <Button
+                component={Link}
+                to="/blog"
+                sx={{
+                  color: isActive('/blog') ? theme.palette.primary.main : theme.palette.text.primary,
+                  fontWeight: isActive('/blog') ? 600 : 500,
+                  px: 2,
+                  py: 1,
+                  '&:hover': {
+                    color: theme.palette.primary.main,
+                    backgroundColor: 'rgba(216, 27, 96, 0.04)'
+                  }
+                }}
+              >
+                Blog
               </Button>
 
               {/* Action Buttons */}
