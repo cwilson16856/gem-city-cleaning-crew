@@ -8,9 +8,10 @@ import DOMPurify from 'dompurify'
 import LoadingSpinner from '../components/LoadingSpinner'
 import { usePage, useRankMathSEO } from '../hooks/useWordPress'
 import { 
-  getFeaturedImage, 
-  generateSEOTitle, 
-  generateSocialMetaData
+  getFeaturedImage,
+  generateSEOTitle,
+  generateSocialMetaData,
+  getSafeExcerpt
 } from '../utils/seo'
 
 const PageView = () => {
@@ -40,7 +41,7 @@ const PageView = () => {
 
   const featuredImage = getFeaturedImage(page)
   const seoTitle = generateSEOTitle(seoData?.title || page.title?.rendered)
-  const seoDescription = seoData?.description || page.excerpt?.rendered
+  const seoDescription = seoData?.description || getSafeExcerpt(page, 160)
   const socialMeta = generateSocialMetaData(page, seoData, featuredImage)
 
   return (

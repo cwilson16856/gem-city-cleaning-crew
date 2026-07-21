@@ -15,7 +15,7 @@ import { format } from 'date-fns'
 
 import LoadingSpinner from '../components/LoadingSpinner'
 import { usePosts } from '../hooks/useWordPress'
-import { getFeaturedImage, cleanHtmlForMeta } from '../utils/seo'
+import { getFeaturedImage, getSafeExcerpt } from '../utils/seo'
 
 const BlogPage = () => {
   const { data: posts, isLoading, error } = usePosts({ per_page: 12, _embed: true })
@@ -35,8 +35,8 @@ const BlogPage = () => {
   return (
     <>
       <Helmet>
-        <title>Blog - Gem City Cleaning Tools</title>
-        <meta name="description" content="Read our latest cleaning tips, industry news, and service updates. Professional cleaning advice from Gem City Cleaning Tools." />
+        <title>Blog - Gem City Cleaning Crew</title>
+        <meta name="description" content="Read our latest cleaning tips, industry news, and service updates. Professional cleaning advice from Gem City Cleaning Crew." />
       </Helmet>
 
       <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -51,7 +51,7 @@ const BlogPage = () => {
           <Grid container spacing={4} sx={{ mt: 2 }}>
             {posts.map((post) => {
               const featuredImage = getFeaturedImage(post)
-              const excerpt = cleanHtmlForMeta(post.excerpt?.rendered || post.content?.rendered, 150)
+              const excerpt = getSafeExcerpt(post, 150)
               
               return (
                 <Grid item xs={12} md={6} lg={4} key={post.id}>

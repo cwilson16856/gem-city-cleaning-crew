@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <>
       <Helmet>
-        <title>Page Not Found - Gem City Cleaning Tools</title>
+        <title>Page Not Found - Gem City Cleaning Crew</title>
         <meta name="description" content="The page you're looking for could not be found. Return to our homepage or browse our cleaning services." />
         <meta name="robots" content="noindex,follow" />
       </Helmet>

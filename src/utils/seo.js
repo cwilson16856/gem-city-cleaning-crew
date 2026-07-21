@@ -23,6 +23,20 @@ export const cleanHtmlForMeta = (html, maxLength = 160) => {
   return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...'
 }
 
+// Get a safe excerpt for a post, guarding against corrupted WordPress
+// excerpts. Some old Elementor posts have raw CSS leaked into their stored
+// excerpt field, because WordPress's server-side excerpt generation strips
+// HTML tags but not the text content of <style> blocks. Falls back to
+// generating from the full content, which still has real <style> markup
+// that DOMPurify strips correctly (tag and contents together).
+export const getSafeExcerpt = (post, maxLength = 160) => {
+  const cleaned = cleanHtmlForMeta(post?.excerpt?.rendered, maxLength)
+  const looksLikeCss = /^\/\*!|[.#][\w-]+\s*\{|\}\s*\.[\w-]/.test(cleaned)
+
+  if (cleaned && !looksLikeCss) return cleaned
+  return cleanHtmlForMeta(post?.content?.rendered, maxLength)
+}
+
 // Generate SEO title with site name
 export const generateSEOTitle = (title, siteName = 'Gem City Cleaning Crew', separator = ' | ') => {
   if (!title) return siteName
@@ -64,7 +78,7 @@ export const generateArticleStructuredData = (post, seoData = null) => {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title?.rendered || '',
-    description: cleanHtmlForMeta(post.excerpt?.rendered || post.content?.rendered),
+    description: getSafeExcerpt(post),
     datePublished: post.date,
     dateModified: post.modified,
     author: {
@@ -271,7 +285,7 @@ export const generateCanonicalUrl = (path) => {
 // Generate social media meta tags data
 export const generateSocialMetaData = (post, seoData = null, featuredImage = null) => {
   const title = seoData?.title || post.title?.rendered || ''
-  const description = seoData?.description || cleanHtmlForMeta(post.excerpt?.rendered || post.content?.rendered)
+  const description = seoData?.description || getSafeExcerpt(post)
   const image = featuredImage?.url || LOGO_URL
 
   return {

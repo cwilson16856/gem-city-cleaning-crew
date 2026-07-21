@@ -20,12 +20,13 @@ import DOMPurify from 'dompurify'
 import LoadingSpinner from '../components/LoadingSpinner'
 import { usePost, useRankMathSEO } from '../hooks/useWordPress'
 import { 
-  getFeaturedImage, 
-  generateSEOTitle, 
+  getFeaturedImage,
+  generateSEOTitle,
   generateArticleStructuredData,
   generateSocialMetaData,
   extractKeywords,
-  calculateReadingTime
+  calculateReadingTime,
+  getSafeExcerpt
 } from '../utils/seo'
 
 const PostPage = () => {
@@ -55,7 +56,7 @@ const PostPage = () => {
 
   const featuredImage = getFeaturedImage(post)
   const seoTitle = generateSEOTitle(seoData?.title || post.title?.rendered)
-  const seoDescription = seoData?.description || post.excerpt?.rendered
+  const seoDescription = seoData?.description || getSafeExcerpt(post, 160)
   const structuredData = generateArticleStructuredData(post, seoData)
   const socialMeta = generateSocialMetaData(post, seoData, featuredImage)
   const keywords = extractKeywords(post, seoData)
@@ -259,7 +260,7 @@ const PostPage = () => {
             Need Professional Cleaning Services?
           </Typography>
           <Typography variant="body1" paragraph color="primary.contrastText">
-            Contact Gem City Cleaning Tools for all your residential and commercial cleaning needs.
+            Contact Gem City Cleaning Crew for all your residential and commercial cleaning needs.
           </Typography>
           <Button
             variant="contained"

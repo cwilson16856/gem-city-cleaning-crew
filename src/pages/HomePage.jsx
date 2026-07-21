@@ -35,6 +35,9 @@ import AreasWeServe from '../components/AreasWeServe'
 // Hooks
 import { usePosts } from '../hooks/useWordPress'
 
+// Utils
+import { getSafeExcerpt } from '../utils/seo'
+
 const HomePage = () => {
   const theme = useTheme()
   const { data: recentPosts, isLoading, error } = usePosts({ per_page: 3, _embed: true })
@@ -744,10 +747,9 @@ const HomePage = () => {
                           WebkitBoxOrient: 'vertical',
                           overflow: 'hidden'
                         }}
-                        dangerouslySetInnerHTML={{ 
-                          __html: post.excerpt.rendered.replace(/<[^>]*>/g, '').substring(0, 120) + '...' 
-                        }}
-                      />
+                      >
+                        {getSafeExcerpt(post, 120)}
+                      </Typography>
                       <Typography variant="caption" color="primary" sx={{ fontWeight: 600 }}>
                         Read More →
                       </Typography>
