@@ -31,28 +31,22 @@ npm install
 
 ### 2. Environment Configuration
 
-Create a `.env` file in the project root:
+Copy `.env.example` to `.env` in the project root and adjust as needed:
 
 ```env
-# WordPress Configuration
-REACT_APP_WORDPRESS_URL=https://your-wordpress-site.com
-REACT_APP_SITE_URL=https://your-react-site.com
+# WordPress backend (headless CMS)
+VITE_WORDPRESS_URL=https://gemcitycleaningcrew.com
+VITE_WP_API_BASE=/wp-json/wp/v2
+VITE_RANKMATH_API_BASE=/wp-json/rankmath/v1
 
-# SEO Configuration
-REACT_APP_SITE_NAME=Gem City Cleaning Tools
-REACT_APP_DEFAULT_TITLE=Professional Cleaning Services
-REACT_APP_DEFAULT_DESCRIPTION=Professional cleaning services and tools for residential and commercial cleaning.
+# This frontend's own public URL, used for canonical links & structured data
+VITE_SITE_URL=https://gemcitycleaningcrew.com
 
-# Social Media
-REACT_APP_TWITTER_HANDLE=@YourTwitterHandle
-REACT_APP_FACEBOOK_URL=https://facebook.com/yourpage
-REACT_APP_INSTAGRAM_URL=https://instagram.com/yourpage
-
-# Contact Information
-REACT_APP_PHONE=(555) 123-4567
-REACT_APP_EMAIL=info@gemcitycleaningtools.com
-REACT_APP_ADDRESS=Tipp City, Ohio 45371
+# Optional
+VITE_TWITTER_HANDLE=
 ```
+
+This is a Vite app, so env vars must use the `VITE_` prefix and are read via `import.meta.env.VITE_*` — not the Create React App `REACT_APP_*` convention. All other business info (phone, address, service areas, social links) is hardcoded directly in the relevant components rather than env-driven.
 
 ### 3. WordPress Setup
 

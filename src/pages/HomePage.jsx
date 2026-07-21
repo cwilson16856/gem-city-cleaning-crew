@@ -74,7 +74,7 @@ const HomePage = () => {
       title: "Specialized Services",
       description: "Deep cleans, move-outs, post-construction",
       icon: <CleaningServicesIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      link: "/services",
+      link: "/deep-cleaning",
       badge: "Same Day Available",
       features: ["Move-in/move-out", "Post-construction cleanup", "Deep sanitizing"],
       differentiator: "Comprehensive cleaning solutions for every situation"
@@ -171,7 +171,7 @@ const HomePage = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Gem City Cleaning Crew",
-            "image": "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/favicon-48x48-1.webp",
+            "image": "https://gemcitycleaningcrew.com/logo.png",
             "telephone": "937-892-4157",
             "email": "info@gemcitycleaningcrew.com",
             "address": {

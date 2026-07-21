@@ -16,7 +16,7 @@ import {
 const PageView = () => {
   const { slug } = useParams()
   const { data: page, isLoading, error } = usePage(slug)
-  const { data: seoData } = useRankMathSEO(page?.id)
+  const { data: seoData } = useRankMathSEO(page?.link)
 
   if (isLoading) return <LoadingSpinner />
 

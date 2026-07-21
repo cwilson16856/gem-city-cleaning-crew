@@ -115,25 +115,25 @@ class WordPressAPI {
     return response.data
   }
 
-  // RankMath SEO Data
-  async getRankMathSEO(postId) {
+  // RankMath SEO data for a given page's canonical URL.
+  // RankMath's public decoupled-site endpoint returns rendered <head> HTML
+  // for a URL (not per-field JSON), so we parse out the bits we use.
+  async getRankMathSEO(url) {
+    if (!url) return null
     try {
-      const response = await this.rankmathApi.get(`/posts/${postId}/seo`)
-      return response.data
+      const response = await this.rankmathApi.get('/getHead', { params: { url } })
+      const headHtml = response.data?.head
+      if (!headHtml) return null
+
+      const parsed = new DOMParser().parseFromString(headHtml, 'text/html')
+      const title = parsed.querySelector('title')?.textContent || null
+      const description = parsed.querySelector('meta[name="description"]')?.getAttribute('content') || null
+
+      if (!title && !description) return null
+      return { title, description }
     } catch (error) {
       console.warn('RankMath API not available:', error.message)
       return null
-    }
-  }
-
-  // Get SEO data for all posts
-  async getAllSEOData() {
-    try {
-      const response = await this.rankmathApi.get('/seo-data')
-      return response.data
-    } catch (error) {
-      console.warn('RankMath SEO data not available:', error.message)
-      return []
     }
   }
 

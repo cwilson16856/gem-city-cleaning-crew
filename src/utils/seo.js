@@ -1,5 +1,9 @@
 import DOMPurify from 'dompurify'
 
+const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://gemcitycleaningcrew.com'
+const LOGO_URL = `${SITE_URL}/logo.png`
+const TWITTER_HANDLE = import.meta.env.VITE_TWITTER_HANDLE || ''
+
 // Clean HTML content for meta descriptions
 export const cleanHtmlForMeta = (html, maxLength = 160) => {
   if (!html) return ''
@@ -72,7 +76,7 @@ export const generateArticleStructuredData = (post, seoData = null) => {
       name: 'Gem City Cleaning Crew',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://your-site.com/logo.png' // Update with your logo URL
+        url: LOGO_URL
       }
     }
   }
@@ -103,9 +107,9 @@ export const generateLocalBusinessStructuredData = () => {
     '@type': 'LocalBusiness',
     'name': 'Gem City Cleaning Crew',
     'image': [
-      'https://gemcitycleaningcrew.com/wp-content/uploads/2023/03/Logo.png'
+      LOGO_URL
     ],
-    'logo': 'https://gemcitycleaningcrew.com/wp-content/uploads/2023/03/Logo.png',
+    'logo': LOGO_URL,
     'url': 'https://gemcitycleaningcrew.com',
     'telephone': '937-892-4157',
     'email': 'info@gemcitycleaningcrew.com',
@@ -261,22 +265,21 @@ export const calculateReadingTime = (content) => {
 
 // Generate canonical URL
 export const generateCanonicalUrl = (path) => {
-  const baseUrl = process.env.REACT_APP_SITE_URL || 'https://your-site.com'
-  return `${baseUrl}${path.startsWith('/') ? path : '/' + path}`
+  return `${SITE_URL}${path.startsWith('/') ? path : '/' + path}`
 }
 
 // Generate social media meta tags data
 export const generateSocialMetaData = (post, seoData = null, featuredImage = null) => {
   const title = seoData?.title || post.title?.rendered || ''
   const description = seoData?.description || cleanHtmlForMeta(post.excerpt?.rendered || post.content?.rendered)
-  const image = featuredImage?.url || 'https://your-site.com/default-og-image.jpg' // Update with your default image
-  
+  const image = featuredImage?.url || LOGO_URL
+
   return {
     title,
     description,
     image,
     type: 'article',
-    site: '@YourTwitterHandle', // Update with your Twitter handle
-    creator: '@YourTwitterHandle'
+    site: TWITTER_HANDLE,
+    creator: TWITTER_HANDLE
   }
-} 
+}

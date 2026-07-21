@@ -115,7 +115,7 @@ const Header = ({ siteInfo }) => {
   }
 
   const navigationLinks = [
-    { label: 'About Us', path: '/about' }
+    { label: 'About Us', path: '/page/about-us' }
   ]
 
   // Location service areas in alphabetical order
@@ -213,7 +213,7 @@ const Header = ({ siteInfo }) => {
                 }}
               >
                 <img
-                  src="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/favicon-48x48-1.webp"
+                  src="/logo-header.png"
                   alt="Gem City Cleaning Crew Logo"
                   width="48"
                   height="48"
@@ -619,10 +619,10 @@ const Header = ({ siteInfo }) => {
               {/* About Us Link */}
               <Button
                 component={Link}
-                to="/about"
+                to="/page/about-us"
                 sx={{
-                  color: isActive('/about') ? theme.palette.primary.main : theme.palette.text.primary,
-                  fontWeight: isActive('/about') ? 600 : 500,
+                  color: isActive('/page/about-us') ? theme.palette.primary.main : theme.palette.text.primary,
+                  fontWeight: isActive('/page/about-us') ? 600 : 500,
                   px: 2,
                   py: 1,
                   '&:hover': {

@@ -833,11 +833,11 @@ const QuotePage = () => {
                   
                   <Box sx={{ mb: 3 }}>
                     {[
-                      { label: 'Established 2017', desc: 'Years of experience', link: '/about' },
-                      { label: 'Professional Team', desc: 'Trained & insured', link: '/about' },
+                      { label: 'Established 2017', desc: 'Years of experience', link: '/page/about-us' },
+                      { label: 'Professional Team', desc: 'Trained & insured', link: '/page/about-us' },
                       { label: 'Flexible Scheduling', desc: 'We work around you', link: '/recurring-cleaning-service' },
-                      { label: 'Satisfaction Guaranteed', desc: 'We make it right', link: '/residential-cleaning' },
-                      { label: 'Serving Dayton Area', desc: 'Local & reliable', link: '/service-areas' }
+                      { label: 'Satisfaction Guaranteed', desc: 'We make it right', link: '/residential' },
+                      { label: 'Serving Dayton Area', desc: 'Local & reliable', link: '/locations' }
                     ].map((item, index) => (
                       <Box key={index} sx={{ mb: 2, display: 'flex', alignItems: 'flex-start' }}>
                         <Box 
@@ -880,8 +880,7 @@ const QuotePage = () => {
                     {[
                       { service: 'Recurring Cleaning Service', link: '/recurring-cleaning-service' },
                       { service: 'Deep Cleaning Service', link: '/deep-cleaning' },
-                      { service: 'Move-in/Move-out Cleaning', link: '/move-in-out-cleaning' },
-                      { service: 'Post-Construction Cleanup', link: '/post-construction-cleaning' }
+                      { service: 'Move-in/Move-out Cleaning', link: '/move-in-out-cleaning' }
                     ].map((item, index) => (
                       <Typography 
                         key={index}
@@ -905,7 +904,7 @@ const QuotePage = () => {
                     Service Areas We Cover
                   </Typography>
                   <Typography variant="body2" paragraph sx={{ color: '#666' }}>
-                    <Link to="/service-areas" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                    <Link to="/locations" style={{ color: '#1976d2', textDecoration: 'none' }}>
                       Dayton, Tipp City, Troy, Huber Heights, and surrounding areas
                     </Link>
                   </Typography>
@@ -1015,7 +1014,7 @@ const QuotePage = () => {
                 investment works for your specific home and budget. We guarantee same-day response to all quote requests 
                 because we understand that when you're ready to get help with house cleaning, you want answers quickly. 
                 Check out our{' '}
-                <Link to="/service-areas" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                <Link to="/locations" style={{ color: '#1976d2', textDecoration: 'none' }}>
                   service areas throughout the Dayton region
                 </Link>.
               </Typography>
@@ -1220,7 +1219,7 @@ const QuotePage = () => {
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
                 Supporting local businesses like Gem City Cleaning keeps your investment in the Dayton community, 
                 supporting local jobs and economic growth. Learn more{' '}
-                <Link to="/about" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                <Link to="/page/about-us" style={{ color: '#1976d2', textDecoration: 'none' }}>
                   about our local commitment
                 </Link>.
               </Typography>

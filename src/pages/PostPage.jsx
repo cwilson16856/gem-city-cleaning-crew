@@ -31,7 +31,7 @@ import {
 const PostPage = () => {
   const { slug } = useParams()
   const { data: post, isLoading, error } = usePost(slug)
-  const { data: seoData } = useRankMathSEO(post?.id)
+  const { data: seoData } = useRankMathSEO(post?.link)
 
   if (isLoading) return <LoadingSpinner />
 
@@ -266,7 +266,7 @@ const PostPage = () => {
             color="secondary"
             size="large"
             component={Link}
-            to="/page/contact"
+            to="/quote"
           >
             Get Your Free Quote
           </Button>

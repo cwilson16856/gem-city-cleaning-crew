@@ -1,21 +1,21 @@
 // Environment configuration
 const config = {
   wordpress: {
-    url: process.env.REACT_APP_WORDPRESS_URL || 'https://gemcitycleaningcrew.com',
-    apiBase: process.env.REACT_APP_WP_API_BASE || '/wp-json/wp/v2',
-    rankmathApiBase: process.env.REACT_APP_RANKMATH_API_BASE || '/wp-json/rankmath/v1'
+    url: import.meta.env.VITE_WORDPRESS_URL || 'https://gemcitycleaningcrew.com',
+    apiBase: import.meta.env.VITE_WP_API_BASE || '/wp-json/wp/v2',
+    rankmathApiBase: import.meta.env.VITE_RANKMATH_API_BASE || '/wp-json/rankmath/v1'
   },
-  
+
   // API endpoints
   api: {
     wordpress: null, // Will be set below
     rankmath: null   // Will be set below
   },
-  
+
   // App settings
   app: {
     timeout: 10000,
-    isDevelopment: process.env.NODE_ENV === 'development'
+    isDevelopment: import.meta.env.DEV
   }
 }
 
@@ -49,7 +49,7 @@ const debugConfig = () => {
     console.log('WordPress URL:', config.wordpress.url)
     console.log('WordPress API:', config.api.wordpress)
     console.log('RankMath API:', config.api.rankmath)
-    console.log('Environment:', process.env.NODE_ENV)
+    console.log('Environment:', import.meta.env.MODE)
     console.groupEnd()
   }
 }

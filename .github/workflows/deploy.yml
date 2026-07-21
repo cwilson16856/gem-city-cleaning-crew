@@ -1,0 +1,41 @@
+name: Deploy to Bluehost
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          VITE_WORDPRESS_URL: ${{ vars.VITE_WORDPRESS_URL || 'https://gemcitycleaningcrew.com' }}
+          VITE_WP_API_BASE: ${{ vars.VITE_WP_API_BASE || '/wp-json/wp/v2' }}
+          VITE_RANKMATH_API_BASE: ${{ vars.VITE_RANKMATH_API_BASE || '/wp-json/rankmath/v1' }}
+          VITE_SITE_URL: ${{ vars.VITE_SITE_URL }}
+          VITE_TWITTER_HANDLE: ${{ vars.VITE_TWITTER_HANDLE }}
+
+      - name: Deploy to Bluehost via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.BLUEHOST_FTP_SERVER }}
+          username: ${{ secrets.BLUEHOST_FTP_USERNAME }}
+          password: ${{ secrets.BLUEHOST_FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: ./

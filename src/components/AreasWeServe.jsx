@@ -15,7 +15,8 @@ const AreasWeServe = ({ onCityClick }) => {
     'Dayton', 'Kettering', 'Oakwood', 'Centerville',
     'Miamisburg', 'Springboro', 'Huber Heights', 'Riverside',
     'Xenia', 'Beavercreek', 'Fairborn', 'Yellow Springs',
-    'Tipp City', 'Bellbrook', 'Vandalia', 'Troy'
+    'Tipp City', 'Bellbrook', 'Vandalia', 'Troy',
+    'Springfield', 'Franklin', 'Middletown', 'Carlisle'
   ]
 
   return (

@@ -148,28 +148,16 @@ export const useComments = (params = {}) => {
   )
 }
 
-// RankMath SEO hooks
-export const useRankMathSEO = (postId) => {
+// RankMath SEO hook — takes a page/post's canonical URL (e.g. post.link)
+export const useRankMathSEO = (url) => {
   return useQuery(
-    ['rankmath-seo', postId],
-    () => wordpressApi.getRankMathSEO(postId),
+    ['rankmath-seo', url],
+    () => wordpressApi.getRankMathSEO(url),
     {
-      enabled: !!postId,
+      enabled: !!url,
       staleTime: 10 * 60 * 1000,
       cacheTime: 20 * 60 * 1000,
       retry: 1, // Don't retry too much if RankMath API is not available
-    }
-  )
-}
-
-export const useAllSEOData = () => {
-  return useQuery(
-    ['rankmath-seo', 'all'],
-    () => wordpressApi.getAllSEOData(),
-    {
-      staleTime: 10 * 60 * 1000,
-      cacheTime: 20 * 60 * 1000,
-      retry: 1,
     }
   )
 }

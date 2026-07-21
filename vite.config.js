@@ -31,8 +31,5 @@ export default defineConfig({
       }
     },
     chunkSizeWarningLimit: 600
-  },
-  define: {
-    'process.env': {}
   }
-}) 
+})

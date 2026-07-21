@@ -31,6 +31,7 @@ import OfficeCleaningChecklist from './pages/CommercialCleaning/OfficeCleaningCh
 import RetailCleaning from './pages/CommercialCleaning/RetailCleaning'
 import DaycareCleaning from './pages/CommercialCleaning/EducationCenterCleaning'
 import ApartmentBuildingCleaning from './pages/CommercialCleaning/ApartmentBuildingCleaning'
+import IndustrialCleaning from './pages/CommercialCleaning/IndustrialCleaning'
 import BeavercreekCommercialPage from './pages/Locations/Beavercreek/CommercialCleaning/BeavercreekCommercialPage'
 import LocationPage from './pages/LocationPage'
 import BlogPage from './pages/BlogPage'
@@ -234,6 +235,7 @@ function App() {
             <Route path="/retail-cleaning" element={<RetailCleaning />} />
             <Route path="/school-cleaning" element={<DaycareCleaning />} />
             <Route path="/apartment-building-cleaning" element={<ApartmentBuildingCleaning />} />
+            <Route path="/industrial-cleaning" element={<IndustrialCleaning />} />
             <Route path="/locations" element={<LocationPage />} />
             <Route path="/locations/:city/house-cleaning-services" element={<LocationPage />} />
             <Route path="/locations/:city/commercial-cleaning-services" element={<LocationPage />} />

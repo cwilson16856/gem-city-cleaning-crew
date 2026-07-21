@@ -135,7 +135,7 @@ const ResidentialPage = () => {
     },
     {
       question: "What happens if I'm not satisfied with your house cleaning services?",
-      answer: "We do offer a satisfaction guarantee and will work with you to address any issues. It's important to communicate any concerns with us as soon as possible so they can be resolved. You can call, text, or email us at 937-321-7842."
+      answer: "We do offer a satisfaction guarantee and will work with you to address any issues. It's important to communicate any concerns with us as soon as possible so they can be resolved. You can call, text, or email us at 937-892-4157."
     },
     {
       question: "Are your cleaners insured and bonded?",

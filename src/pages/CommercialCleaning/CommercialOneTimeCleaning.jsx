@@ -249,14 +249,14 @@ const CommercialOneTimeCleaning = () => {
             "alternateName": "Gem City Cleaning",
             "description": "Professional commercial and residential cleaning services in Dayton, OH. Specializing in deep cleaning, one-time cleaning, and recurring maintenance services.",
             "url": "https://gemcitycleaningcrew.com",
-            "logo": "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp",
+            "logo": "https://gemcitycleaningcrew.com/logo.png",
             "image": [
               "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/20240512_125224-scaled.webp",
               "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240512-WA0027.webp",
               "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/WhatsApp-Image-2024-05-12-at-18.02.07_cdbb91df.webp"
             ],
             "telephone": "937-892-4157",
-            "email": "contact@gemcitycleaningcrew.com",
+            "email": "info@gemcitycleaningcrew.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "278 Mertland Ave",
@@ -547,9 +547,9 @@ const CommercialOneTimeCleaning = () => {
             "url": "https://gemcitycleaningcrew.com",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp",
-              "width": 1200,
-              "height": 630
+              "url": "https://gemcitycleaningcrew.com/logo.png",
+              "width": 300,
+              "height": 300
             },
             "foundingDate": "2020",
             "founder": {

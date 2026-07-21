@@ -38,7 +38,7 @@ const Footer = ({ siteInfo }) => {
               <div className={styles.logoContainer}>
                 <div className={styles.logoImageContainer}>
                   <img
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/favicon-48x48-1.webp"
+                    src="/logo-header.png"
                     alt="Gem City Cleaning Crew Logo"
                     width="40"
                     height="40"
