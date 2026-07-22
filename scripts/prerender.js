@@ -4,6 +4,13 @@
 // the rest of the site has the same CSR gap but is a separate follow-up.
 //
 // Runs as "postbuild" (see package.json), after `vite build` has produced dist/.
+//
+// Best-effort only: Vercel's build image is not an officially-supported Playwright
+// OS (it's missing shared libs like libnspr4.so that plain `playwright install`
+// doesn't provide, and `--with-deps` needs apt, which isn't available there either).
+// So this must (a) never leave the process hanging on a partially-started server/
+// browser, and (b) always exit 0 on failure — a missing prerender is a lost SEO
+// nice-to-have, not something that should ever block a deploy.
 
 import fs from 'node:fs'
 import path from 'node:path'
@@ -36,14 +43,16 @@ async function main() {
     process.exit(1)
   }
 
-  const server = await preview({
-    root: ROOT,
-    preview: { port: PORT, strictPort: true },
-  })
-  const baseUrl = `http://localhost:${PORT}`
-
-  const browser = await chromium.launch()
+  let server
+  let browser
   try {
+    server = await preview({
+      root: ROOT,
+      preview: { port: PORT, strictPort: true },
+    })
+    const baseUrl = `http://localhost:${PORT}`
+
+    browser = await chromium.launch()
     const page = await browser.newPage()
 
     await snapshot(page, `${baseUrl}/blog`, path.join(distDir, 'blog', 'index.html'))
@@ -59,16 +68,17 @@ async function main() {
 
     console.log(`Prerendered /blog + ${posts.length} post(s).`)
   } finally {
-    await browser.close()
-    await new Promise((resolve) => server.httpServer.close(resolve))
+    // Both may be undefined if failure happened before they were assigned —
+    // guard each close independently so cleanup never itself throws, and so
+    // the process is always free to exit (no dangling server keeping it alive).
+    if (browser) await browser.close().catch(() => {})
+    if (server) await new Promise((resolve) => server.httpServer.close(resolve))
   }
 }
 
-main().catch((error) => {
-  // Non-fatal by design: prerendering only helps non-JS-executing crawlers see
-  // blog content early. The SPA works fine without it, so a prerender failure
-  // (e.g. a missing browser binary in a fresh CI environment) must never fail
-  // `npm run build` and take the whole production deploy down with it.
-  console.error('[prerender] failed, continuing without prerendered blog pages:', error)
-  process.exitCode = 0
-})
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error('[prerender] failed, continuing without prerendered blog pages:', error)
+    process.exit(0)
+  })

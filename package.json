@@ -33,7 +33,6 @@
   },
   "scripts": {
     "dev": "vite",
-    "postinstall": "playwright install chromium",
     "build": "vite build",
     "postbuild": "node scripts/prerender.js",
     "preview": "vite preview",
