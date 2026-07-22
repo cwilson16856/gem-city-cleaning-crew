@@ -13,8 +13,7 @@ import {
   Chip,
   useTheme,
   Rating,
-  CardActionArea,
-  Badge
+  CardActionArea
 } from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home'
 import BusinessIcon from '@mui/icons-material/Business'
@@ -29,18 +28,14 @@ import LocalOfferIcon from '@mui/icons-material/LocalOffer'
 import '../styles/homepages/HomePage.css'
 
 // Components
-import LoadingSpinner from '../components/LoadingSpinner'
 import AreasWeServe from '../components/AreasWeServe'
 
-// Hooks
-import { usePosts } from '../hooks/useWordPress'
-
-// Utils
-import { getSafeExcerpt } from '../utils/seo'
+// Content
+import { getAllPosts } from '../content/blog'
 
 const HomePage = () => {
   const theme = useTheme()
-  const { data: recentPosts, isLoading, error } = usePosts({ per_page: 3, _embed: true })
+  const recentPosts = getAllPosts().slice(0, 3)
 
   // Rotating headline animation - Elementor style slide-down
   const [currentHeadline, setCurrentHeadline] = useState(0)
@@ -133,8 +128,6 @@ const HomePage = () => {
       highlight: "Property Owner Approved"
     }
   ]
-
-  if (isLoading) return <LoadingSpinner />
 
   return (
     <>
@@ -510,7 +503,7 @@ const HomePage = () => {
               Cleaning Services That Fit Your Life
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
-              Flexible, personal service that corporate chains can't match
+              Flexible, personal service that corporate chains can&apos;t match
             </Typography>
           </Box>
 
@@ -643,7 +636,7 @@ const HomePage = () => {
                 />
                   <Rating value={testimonial.rating} readOnly size="small" />
                 <Typography variant="body1" sx={{ mb: 3, fontStyle: 'italic' }}>
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </Typography>
                 <Typography variant="subtitle2" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
                   - {testimonial.name}
@@ -704,10 +697,10 @@ const HomePage = () => {
           </Box>
 
           <Grid container spacing={4}>
-            {recentPosts.slice(0, 3).map((post) => (
-              <Grid item xs={12} md={4} key={post.id}>
-                <Card 
-                  sx={{ 
+            {recentPosts.map((post) => (
+              <Grid item xs={12} md={4} key={post.slug}>
+                <Card
+                  sx={{
                     height: '100%',
                     transition: 'all 0.3s ease',
                     '&:hover': {
@@ -717,11 +710,11 @@ const HomePage = () => {
                   }}
                 >
                   <CardActionArea component={Link} to={`/blog/${post.slug}`} sx={{ height: '100%' }}>
-                    {post._embedded?.['wp:featuredmedia']?.[0] && (
+                    {post.coverImage && (
                       <Box
                         component="img"
-                        src={post._embedded['wp:featuredmedia'][0].media_details.sizes?.medium?.source_url || post._embedded['wp:featuredmedia'][0].source_url}
-                        alt={post._embedded['wp:featuredmedia'][0].alt_text || post.title.rendered}
+                        src={post.coverImage}
+                        alt={post.title}
                         loading="lazy"
                         sx={{
                           width: '100%',
@@ -733,12 +726,12 @@ const HomePage = () => {
                     )}
                     <CardContent sx={{ p: 3 }}>
                       <Typography variant="h6" component="h3" sx={{ mb: 2, fontWeight: 600 }}>
-                        {post.title.rendered}
+                        {post.title}
                       </Typography>
-                      <Typography 
-                        variant="body2" 
-                        color="text.secondary" 
-                        sx={{ 
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        sx={{
                           mb: 2,
                           display: '-webkit-box',
                           WebkitLineClamp: 3,
@@ -746,7 +739,7 @@ const HomePage = () => {
                           overflow: 'hidden'
                         }}
                       >
-                        {getSafeExcerpt(post, 120)}
+                        {post.description}
                       </Typography>
                       <Typography variant="caption" color="primary" sx={{ fontWeight: 600 }}>
                         Read More →

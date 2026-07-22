@@ -43,77 +43,6 @@ export const generateSEOTitle = (title, siteName = 'Gem City Cleaning Crew', sep
   return `${title}${separator}${siteName}`
 }
 
-// Extract featured image from WordPress post
-export const getFeaturedImage = (post) => {
-  if (!post) return null
-  
-  // Check if _embedded data is available
-  if (post._embedded && post._embedded['wp:featuredmedia']) {
-    const media = post._embedded['wp:featuredmedia'][0]
-    return {
-      url: media.source_url,
-      alt: media.alt_text || post.title?.rendered || '',
-      caption: media.caption?.rendered || '',
-      sizes: media.media_details?.sizes || {}
-    }
-  }
-  
-  // Fallback for featured_media ID
-  if (post.featured_media) {
-    return {
-      id: post.featured_media,
-      url: null, // Would need separate API call
-      alt: post.title?.rendered || ''
-    }
-  }
-  
-  return null
-}
-
-// Generate structured data for articles
-export const generateArticleStructuredData = (post, seoData = null) => {
-  if (!post) return null
-  
-  const baseData = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title?.rendered || '',
-    description: getSafeExcerpt(post),
-    datePublished: post.date,
-    dateModified: post.modified,
-    author: {
-      '@type': 'Person',
-      name: post._embedded?.author?.[0]?.name || 'Gem City Cleaning Crew'
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Gem City Cleaning Crew',
-      logo: {
-        '@type': 'ImageObject',
-        url: LOGO_URL
-      }
-    }
-  }
-  
-  // Add featured image if available
-  const featuredImage = getFeaturedImage(post)
-  if (featuredImage?.url) {
-    baseData.image = {
-      '@type': 'ImageObject',
-      url: featuredImage.url,
-      caption: featuredImage.caption
-    }
-  }
-  
-  // Add RankMath SEO data if available
-  if (seoData) {
-    if (seoData.title) baseData.headline = seoData.title
-    if (seoData.description) baseData.description = seoData.description
-  }
-  
-  return baseData
-}
-
 // Generate structured data for local business
 export const generateLocalBusinessStructuredData = () => {
   return {
@@ -229,36 +158,6 @@ export const generateBreadcrumbStructuredData = (breadcrumbs) => {
   }
 }
 
-// Extract keywords from RankMath or content
-export const extractKeywords = (post, seoData = null) => {
-  const keywords = []
-  
-  // From RankMath SEO data
-  if (seoData?.focus_keywords) {
-    keywords.push(...seoData.focus_keywords.split(',').map(k => k.trim()))
-  }
-  
-  // From categories
-  if (post._embedded?.['wp:term']) {
-    const categories = post._embedded['wp:term'].find(terms => 
-      terms.some(term => term.taxonomy === 'category')
-    )
-    if (categories) {
-      keywords.push(...categories.map(cat => cat.name))
-    }
-    
-    // From tags
-    const tags = post._embedded['wp:term'].find(terms => 
-      terms.some(term => term.taxonomy === 'post_tag')
-    )
-    if (tags) {
-      keywords.push(...tags.map(tag => tag.name))
-    }
-  }
-  
-  return [...new Set(keywords)] // Remove duplicates
-}
-
 // Calculate reading time
 export const calculateReadingTime = (content) => {
   if (!content) return 0
@@ -275,16 +174,12 @@ export const generateCanonicalUrl = (path) => {
   return `${SITE_URL}${path.startsWith('/') ? path : '/' + path}`
 }
 
-// Generate social media meta tags data
-export const generateSocialMetaData = (post, seoData = null, featuredImage = null) => {
-  const title = seoData?.title || post.title?.rendered || ''
-  const description = seoData?.description || getSafeExcerpt(post)
-  const image = featuredImage?.url || LOGO_URL
-
+// Generate social media meta tags data for a local blog post
+export const generateSocialMetaData = (post) => {
   return {
-    title,
-    description,
-    image,
+    title: post?.title || '',
+    description: post?.description || '',
+    image: post?.coverImage ? `${SITE_URL}${post.coverImage}` : LOGO_URL,
     type: 'article',
     site: TWITTER_HANDLE,
     creator: TWITTER_HANDLE

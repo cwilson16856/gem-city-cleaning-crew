@@ -1,13 +1,3 @@
-export { default as config } from './config'
-export { default } from './config'
-
-// Re-export specific config sections for convenience
-import config from './config'
-
-export const wordpressConfig = config.wordpress
-export const apiConfig = config.api
-export const appConfig = config.app
-
 // Utility functions
 export const isValidUrl = (url) => {
   try {
@@ -16,10 +6,6 @@ export const isValidUrl = (url) => {
   } catch {
     return false
   }
-}
-
-export const buildApiUrl = (endpoint, baseUrl = config.api.wordpress) => {
-  return `${baseUrl}${endpoint.startsWith('/') ? endpoint : `/${endpoint}`}`
 }
 
 export const isProduction = () => import.meta.env.PROD

@@ -4,14 +4,28 @@
 User-agent: *
 Allow: /
 
-# Allow all pages to be crawled
-Allow: /residential
-Allow: /recurring-cleaning-service
-Allow: /deep-cleaning
-Allow: /residential-house-cleaning-checklist
-Allow: /quote
-Allow: /blog
-Allow: /page
+# AI answer-engine / LLM crawlers — explicitly allowed for AI Overview /
+# AI-answer-engine discoverability
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
 
 # Disallow unnecessary files
 Disallow: /assets/
@@ -23,4 +37,4 @@ Disallow: /*.map$
 Sitemap: https://gemcitycleaningcrew.com/sitemap.xml
 
 # Crawl delay for polite crawling
-Crawl-delay: 1 
+Crawl-delay: 1

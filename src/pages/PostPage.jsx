@@ -10,33 +10,31 @@ import {
   Divider
 } from '@mui/material'
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
-import PersonIcon from '@mui/icons-material/Person'
 import CategoryIcon from '@mui/icons-material/Category'
 import TagIcon from '@mui/icons-material/Tag'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import { format } from 'date-fns'
 import DOMPurify from 'dompurify'
 
-import LoadingSpinner from '../components/LoadingSpinner'
-import { usePost, useRankMathSEO } from '../hooks/useWordPress'
-import { 
-  getFeaturedImage,
+import { getPostBySlug } from '../content/blog'
+import {
   generateSEOTitle,
-  generateArticleStructuredData,
+  generateBreadcrumbStructuredData,
+  generateCanonicalUrl,
   generateSocialMetaData,
-  extractKeywords,
-  calculateReadingTime,
-  getSafeExcerpt
+  calculateReadingTime
 } from '../utils/seo'
+import {
+  generateBlogPostingStructuredData,
+  generateFAQPageStructuredData,
+  generateHowToStructuredData
+} from '../utils/blogSchema'
 
 const PostPage = () => {
   const { slug } = useParams()
-  const { data: post, isLoading, error } = usePost(slug)
-  const { data: seoData } = useRankMathSEO(post?.link)
+  const post = getPostBySlug(slug)
 
-  if (isLoading) return <LoadingSpinner />
-
-  if (error || !post) {
+  if (!post) {
     return (
       <Container maxWidth="md" sx={{ py: 4 }}>
         <Typography variant="h4" color="error">
@@ -54,43 +52,55 @@ const PostPage = () => {
     )
   }
 
-  const featuredImage = getFeaturedImage(post)
-  const seoTitle = generateSEOTitle(seoData?.title || post.title?.rendered)
-  const seoDescription = seoData?.description || getSafeExcerpt(post, 160)
-  const structuredData = generateArticleStructuredData(post, seoData)
-  const socialMeta = generateSocialMetaData(post, seoData, featuredImage)
-  const keywords = extractKeywords(post, seoData)
-  const readingTime = calculateReadingTime(post.content?.rendered)
-
-  // Get categories and tags
-  const categories = post._embedded?.['wp:term']?.find(terms => 
-    terms.some(term => term.taxonomy === 'category')
-  )?.filter(term => term.taxonomy === 'category') || []
-  
-  const tags = post._embedded?.['wp:term']?.find(terms => 
-    terms.some(term => term.taxonomy === 'post_tag')
-  )?.filter(term => term.taxonomy === 'post_tag') || []
+  const postUrl = generateCanonicalUrl(`/blog/${post.slug}`)
+  const seoTitle = generateSEOTitle(post.title)
+  const seoDescription = post.description
+  const structuredData = generateBlogPostingStructuredData(post, postUrl)
+  const faqStructuredData = generateFAQPageStructuredData(post.faqs)
+  const howToStructuredData = generateHowToStructuredData(post)
+  const breadcrumbData = generateBreadcrumbStructuredData([
+    { name: 'Home', url: generateCanonicalUrl('/') },
+    { name: 'Blog', url: generateCanonicalUrl('/blog') },
+    { name: post.title, url: postUrl }
+  ])
+  const socialMeta = generateSocialMetaData(post)
+  const readingTime = calculateReadingTime(post.content)
 
   return (
     <>
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
-        <meta name="keywords" content={keywords.join(', ')} />
-        
-        {/* Article structured data */}
+        {post.keywords?.length > 0 && (
+          <meta name="keywords" content={post.keywords.join(', ')} />
+        )}
+
         {structuredData && (
           <script type="application/ld+json">
             {JSON.stringify(structuredData)}
           </script>
         )}
-        
-        {/* Social media meta tags */}
+        {faqStructuredData && (
+          <script type="application/ld+json">
+            {JSON.stringify(faqStructuredData)}
+          </script>
+        )}
+        {howToStructuredData && (
+          <script type="application/ld+json">
+            {JSON.stringify(howToStructuredData)}
+          </script>
+        )}
+        {breadcrumbData && (
+          <script type="application/ld+json">
+            {JSON.stringify(breadcrumbData)}
+          </script>
+        )}
+
         <meta property="og:title" content={socialMeta.title} />
         <meta property="og:description" content={socialMeta.description} />
         <meta property="og:image" content={socialMeta.image} />
         <meta property="og:type" content={socialMeta.type} />
-        
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={socialMeta.title} />
         <meta name="twitter:description" content={socialMeta.description} />
@@ -111,15 +121,14 @@ const PostPage = () => {
         <article>
           <header>
             <Typography variant="h1" component="h1" gutterBottom>
-              {post.title?.rendered}
+              {post.title}
             </Typography>
 
-            {/* Post meta information */}
-            <Box 
-              sx={{ 
-                display: 'flex', 
-                flexWrap: 'wrap', 
-                gap: 2, 
+            <Box
+              sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: 2,
                 mb: 3,
                 color: 'text.secondary',
                 fontSize: '0.9rem'
@@ -127,16 +136,9 @@ const PostPage = () => {
             >
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
                 <CalendarTodayIcon fontSize="small" />
-                {format(new Date(post.date), 'MMMM d, yyyy')}
+                {format(new Date(post.publishedAt), 'MMMM d, yyyy')}
               </Box>
-              
-              {post._embedded?.author?.[0] && (
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                  <PersonIcon fontSize="small" />
-                  {post._embedded.author[0].name}
-                </Box>
-              )}
-              
+
               {readingTime > 0 && (
                 <Box>
                   📖 {readingTime} min read
@@ -144,28 +146,23 @@ const PostPage = () => {
               )}
             </Box>
 
-            {/* Categories */}
-            {categories.length > 0 && (
+            {post.category && (
               <Box sx={{ mb: 2 }}>
-                {categories.map((category) => (
-                  <Chip
-                    key={category.id}
-                    label={category.name}
-                    size="small"
-                    color="primary"
-                    sx={{ mr: 1, mb: 1 }}
-                    icon={<CategoryIcon />}
-                  />
-                ))}
+                <Chip
+                  label={post.category}
+                  size="small"
+                  color="primary"
+                  sx={{ mr: 1, mb: 1 }}
+                  icon={<CategoryIcon />}
+                />
               </Box>
             )}
 
-            {/* Featured image */}
-            {featuredImage?.url && (
+            {post.coverImage && (
               <Box sx={{ mb: 4 }}>
                 <img
-                  src={featuredImage.url}
-                  alt={featuredImage.alt}
+                  src={post.coverImage}
+                  alt={post.title}
                   style={{
                     width: '100%',
                     height: 'auto',
@@ -173,25 +170,15 @@ const PostPage = () => {
                     boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
                   }}
                 />
-                {featuredImage.caption && (
-                  <Typography 
-                    variant="caption" 
-                    color="text.secondary" 
-                    sx={{ display: 'block', mt: 1, textAlign: 'center', fontStyle: 'italic' }}
-                  >
-                    {featuredImage.caption}
-                  </Typography>
-                )}
               </Box>
             )}
           </header>
 
-          {/* Post content */}
-          <Box 
+          <Box
             className="post-content"
-            sx={{ 
-              '& img': { 
-                maxWidth: '100%', 
+            sx={{
+              '& img': {
+                maxWidth: '100%',
                 height: 'auto',
                 borderRadius: 2,
                 my: 2
@@ -223,15 +210,29 @@ const PostPage = () => {
                 p: 2,
                 borderRadius: 1,
                 overflow: 'auto'
+              },
+              '& table': {
+                width: '100%',
+                borderCollapse: 'collapse',
+                my: 2
+              },
+              '& th, & td': {
+                border: '1px solid',
+                borderColor: 'grey.300',
+                p: 1,
+                textAlign: 'left'
+              },
+              '& th': {
+                backgroundColor: 'grey.50',
+                fontWeight: 600
               }
             }}
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(post.content?.rendered || '')
+              __html: DOMPurify.sanitize(post.content || '')
             }}
           />
 
-          {/* Tags */}
-          {tags.length > 0 && (
+          {post.tags?.length > 0 && (
             <>
               <Divider sx={{ my: 4 }} />
               <Box>
@@ -239,10 +240,10 @@ const PostPage = () => {
                   <TagIcon /> Tags
                 </Typography>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  {tags.map((tag) => (
+                  {post.tags.map((tag) => (
                     <Chip
-                      key={tag.id}
-                      label={tag.name}
+                      key={tag}
+                      label={tag}
                       size="small"
                       variant="outlined"
                       color="secondary"
@@ -254,7 +255,6 @@ const PostPage = () => {
           )}
         </article>
 
-        {/* Call to action */}
         <Box sx={{ mt: 6, p: 3, backgroundColor: 'primary.light', borderRadius: 2, textAlign: 'center' }}>
           <Typography variant="h5" gutterBottom color="primary.contrastText">
             Need Professional Cleaning Services?
@@ -277,4 +277,4 @@ const PostPage = () => {
   )
 }
 
-export default PostPage 
+export default PostPage

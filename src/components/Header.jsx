@@ -12,7 +12,6 @@ import {
   Container,
   useTheme,
   useMediaQuery,
-  Chip,
   Divider,
   ListItemText
 } from '@mui/material'
@@ -24,9 +23,7 @@ import {
   ExpandMore as ExpandMoreIcon,
   ChevronRight as ChevronRightIcon
 } from '@mui/icons-material'
-import { isDevelopment } from '../config'
-
-const Header = ({ siteInfo }) => {
+const Header = () => {
   const [mobileMenuAnchor, setMobileMenuAnchor] = useState(null)
   const [contactMenuAnchor, setContactMenuAnchor] = useState(null)
   const [residentialMenuAnchor, setResidentialMenuAnchor] = useState(null)

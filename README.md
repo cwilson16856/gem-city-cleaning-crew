@@ -1,233 +1,73 @@
-# WordPress React Frontend
+# Gem City Cleaning Crew
 
-A modern React application that connects to your WordPress site via the REST API, featuring RankMath SEO integration and a beautiful, responsive design.
+The React frontend for [gemcitycleaningcrew.com](https://gemcitycleaningcrew.com) — a Dayton, OH residential/commercial cleaning service. Fully self-contained: content (service pages, location pages, blog) lives in this repo, not a CMS.
 
 ## Features
 
-- 🚀 **Modern React with Vite** - Fast development and build times
-- 🎨 **Material-UI Components** - Beautiful, accessible UI components
-- 📱 **Fully Responsive** - Works perfectly on all devices
-- 🔍 **SEO Optimized** - Built-in SEO with RankMath integration
-- ⚡ **Performance Focused** - React Query for efficient data fetching
-- 🛡️ **Secure** - DOMPurify for content sanitization
-- 📊 **Analytics Ready** - Google Analytics integration ready
-
-## WordPress Integration
-
-This app connects to your WordPress site using:
-- **WordPress REST API** for content delivery
-- **RankMath SEO Plugin** for advanced SEO features
-- **Featured Images** and embedded media
-- **Categories and Tags** for content organization
-- **Custom Post Types** support
+- 🚀 **Vite + React 18** — fast dev/build
+- 🎨 **Material-UI** components
+- 🔍 **SEO + AI-discoverability** — JSON-LD (`BlogPosting`, `FAQPage`, `BreadcrumbList`, `LocalBusiness`), `llms.txt`, AI-crawler-aware `robots.txt`, prerendered blog HTML for non-JS crawlers
+- 🛡️ **DOMPurify** for content sanitization
 
 ## Quick Start
 
-### 1. Install Dependencies
-
 ```bash
 npm install
-```
-
-### 2. Environment Configuration
-
-Copy `.env.example` to `.env` in the project root and adjust as needed:
-
-```env
-# WordPress backend (headless CMS)
-VITE_WORDPRESS_URL=https://gemcitycleaningcrew.com
-VITE_WP_API_BASE=/wp-json/wp/v2
-VITE_RANKMATH_API_BASE=/wp-json/rankmath/v1
-
-# This frontend's own public URL, used for canonical links & structured data
-VITE_SITE_URL=https://gemcitycleaningcrew.com
-
-# Optional
-VITE_TWITTER_HANDLE=
-```
-
-This is a Vite app, so env vars must use the `VITE_` prefix and are read via `import.meta.env.VITE_*` — not the Create React App `REACT_APP_*` convention. All other business info (phone, address, service areas, social links) is hardcoded directly in the relevant components rather than env-driven.
-
-### 3. WordPress Setup
-
-#### Enable WordPress REST API
-The WordPress REST API is enabled by default in WordPress 4.7+. No additional setup required.
-
-#### Install RankMath SEO Plugin (Recommended)
-1. Install and activate the RankMath SEO plugin
-2. Enable the REST API in RankMath settings
-3. The app will automatically fetch SEO data for enhanced meta tags
-
-#### Optional Plugins
-- **REST API Menus** - For dynamic navigation menus
-- **Custom Post Types** - If you have custom content types
-
-### 4. Run the Development Server
-
-```bash
+cp .env.example .env   # fill in VITE_SITE_URL / VITE_TWITTER_HANDLE as needed
 npm run dev
 ```
 
-The app will be available at `http://localhost:3000`
+App runs at `http://localhost:3000`.
 
-### 5. Build for Production
-
-```bash
-npm run build
-```
+Env vars use the Vite convention (`VITE_*`, read via `import.meta.env.VITE_*`) — not Create React App's `REACT_APP_*`. Business info (phone, address, service areas, social links) is hardcoded in the relevant components, not env-driven.
 
 ## Project Structure
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── Header.jsx      # Navigation header
-│   ├── Footer.jsx      # Site footer
-│   └── LoadingSpinner.jsx
-├── pages/              # Page components
-│   ├── HomePage.jsx    # Landing page
-│   ├── BlogPage.jsx    # Blog listing
-│   ├── PostPage.jsx    # Individual blog post
-│   ├── PageView.jsx    # WordPress pages
-│   └── NotFound.jsx    # 404 error page
-├── hooks/              # Custom React hooks
-│   └── useWordPress.js # WordPress API hooks
-├── services/           # API services
-│   └── wordpressApi.js # WordPress REST API client
-├── utils/              # Utility functions
-│   └── seo.js         # SEO helper functions
-└── styles/             # CSS styles
-    └── index.css      # Global styles
+├── components/          # Header, Footer, shared UI
+├── content/blog/        # Self-hosted blog content
+│   ├── index.js         # getAllPosts()/getPostBySlug(), post metadata array
+│   └── posts/{slug}.js  # Per-post HTML body strings
+├── pages/                # Route-level pages (service, location, blog, quote)
+├── utils/
+│   ├── seo.js            # Generic SEO/structured-data helpers (LocalBusiness, breadcrumbs, canonical URLs)
+│   └── blogSchema.js      # Blog-specific JSON-LD (BlogPosting, FAQPage, HowTo)
+└── styles/                # Global CSS
+
+scripts/                  # Node CLI tooling (image generation, GHL upload, sitemap/llms.txt regen, prerender)
+.claude/skills/            # gccc-blog-research / gccc-blog-post content skill pair
 ```
 
-## WordPress REST API Endpoints
+## Blog Content
 
-The app uses these WordPress REST API endpoints:
+Blog posts are plain data, not fetched from any CMS. Each post is an entry in `src/content/blog/index.js` (metadata: slug, title, description, dates, category, tags, keywords, coverImage, faqs, optional howToSteps) paired with an HTML body string in `src/content/blog/posts/{slug}.js`. `BlogPage.jsx`/`PostPage.jsx` read directly from `getAllPosts()`/`getPostBySlug()` — no network call, nothing async.
 
-- `GET /wp-json/wp/v2/posts` - Blog posts
-- `GET /wp-json/wp/v2/pages` - WordPress pages
-- `GET /wp-json/wp/v2/categories` - Post categories
-- `GET /wp-json/wp/v2/tags` - Post tags
-- `GET /wp-json/wp/v2/media` - Media files
-- `GET /wp-json/rankmath/v1/seo-data` - RankMath SEO data
+Use the `gccc-blog-research` → `gccc-blog-post` skill pair (`.claude/skills/`) to research and author new posts, including image generation, sitemap/llms.txt updates, and social copy.
 
-## SEO Features
+## SEO / AI-Discoverability
 
-### Built-in SEO Optimization
-- Dynamic meta titles and descriptions
-- Open Graph and Twitter Card tags
-- Structured data (JSON-LD) for articles and business
-- Canonical URLs
-- Image alt text and captions
-- Reading time calculation
+- `PostPage.jsx` emits `BlogPosting`, `FAQPage`, `BreadcrumbList`, and (when applicable) `HowTo` JSON-LD.
+- `public/robots.txt` explicitly allows known AI-answer-engine crawlers (GPTBot, ChatGPT-User, Google-Extended, PerplexityBot, ClaudeBot, anthropic-ai, CCBot) alongside the general wildcard rule.
+- `public/llms.txt` gives AI agents a plain-language index of services, service areas, and blog posts.
+- `scripts/generate-sitemap-and-llms.js` regenerates `public/sitemap.xml` and `public/llms.txt` from the blog content index — run after adding/updating a post.
+- `scripts/prerender.js` runs as a `postbuild` step, snapshotting `/blog` and every `/blog/:slug` to static HTML so non-JS-executing crawlers see real content instead of an empty SPA shell.
 
-### RankMath Integration
-When RankMath is installed, the app automatically:
-- Fetches SEO titles and descriptions
-- Uses focus keywords for meta tags
-- Integrates with RankMath's schema markup
-- Respects SEO settings from WordPress admin
+## Scripts
 
-## Performance Features
-
-- **React Query** for intelligent caching and data fetching
-- **Code splitting** with React.lazy()
-- **Image optimization** with responsive loading
-- **Prefetching** for better user experience
-- **Service worker** ready for offline functionality
-
-## Customization
-
-### Styling
-The app uses Material-UI with a custom theme. Modify the theme in `src/App.jsx`:
-
-```javascript
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#2E7D32', // Your brand color
-    },
-    // ... other theme options
-  },
-})
-```
-
-### Adding Custom Post Types
-To add support for custom post types, extend the WordPress API service:
-
-```javascript
-// In src/services/wordpressApi.js
-async getCustomPosts(postType, params = {}) {
-  const response = await this.api.get(`/${postType}`, { params })
-  return response.data
-}
-```
-
-### Custom Hooks
-Create custom hooks in `src/hooks/` for specific functionality:
-
-```javascript
-// Example: useServices.js for a services custom post type
-export const useServices = (params = {}) => {
-  return useCustomPosts('services', params)
-}
+```bash
+npm run dev                 # start dev server
+npm run build                # production build (triggers postbuild prerender)
+npm run preview              # preview the production build locally
+npm run lint                 # eslint
+npm run optimize-images      # regenerate WebP/AVIF for blog cover images
+npm run generate-sitemap     # regenerate sitemap.xml + llms.txt from blog content
 ```
 
 ## Deployment
 
-### Environment Variables for Production
-Set these environment variables in your hosting platform:
-
-- `REACT_APP_WORDPRESS_URL` - Your WordPress site URL
-- `REACT_APP_SITE_URL` - Your React app URL
-
-### Recommended Hosting
-- **Vercel** - Automatic deployments from Git
-- **Netlify** - JAMstack focused hosting
-- **AWS S3 + CloudFront** - Scalable and cost-effective
-
-### WordPress CORS Setup
-If you encounter CORS issues, add this to your WordPress `functions.php`:
-
-```php
-function add_cors_http_header(){
-    header("Access-Control-Allow-Origin: https://your-react-site.com");
-    header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-    header("Access-Control-Allow-Headers: Content-Type");
-}
-add_action('init','add_cors_http_header');
-```
-
-## Troubleshooting
-
-### Common Issues
-
-1. **CORS Errors**: Configure CORS in WordPress or use a proxy
-2. **Missing Posts**: Check WordPress REST API is enabled
-3. **SEO Data Not Loading**: Verify RankMath plugin is installed and REST API is enabled
-4. **Images Not Loading**: Check media URLs and CORS settings
-
-### Development Tips
-
-- Use browser dev tools to inspect WordPress API responses
-- Test API endpoints directly in browser: `your-site.com/wp-json/wp/v2/posts`
-- Use React Developer Tools for debugging components
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+Hosted on Vercel, connected to this repo's `main` branch for automatic deploys. `vercel.json` handles SPA client-side routing.
 
 ## License
 
-This project is open source and available under the MIT License.
-
-## Support
-
-For issues or questions:
-- Check the WordPress REST API documentation
-- Review Material-UI component documentation
-- Open an issue in this repository 
+Private — Gem City Cleaning Crew.

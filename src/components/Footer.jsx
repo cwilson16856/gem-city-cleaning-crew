@@ -1,18 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {
-  Container,
-  Typography,
-  IconButton
-} from '@mui/material'
-import {
   Phone,
   Email,
   Schedule
 } from '@mui/icons-material'
 import styles from '../styles/components/Footer.module.css'
 
-const Footer = ({ siteInfo }) => {
+const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const serviceAreas = [

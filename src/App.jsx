@@ -7,7 +7,6 @@ import CssBaseline from '@mui/material/CssBaseline'
 // Components
 import Header from './components/Header'
 import Footer from './components/Footer'
-import LoadingSpinner from './components/LoadingSpinner'
 import ScrollToTop from './components/ScrollToTop'
 
 // Pages
@@ -39,9 +38,6 @@ import PostPage from './pages/PostPage'
 import AboutPage from './pages/AboutPage'
 import QuotePage from './pages/QuotePage'
 import NotFound from './pages/NotFound'
-
-// Hooks
-import { useSiteInfo } from './hooks/useWordPress'
 
 // Utils
 import { generateLocalBusinessStructuredData } from './utils/seo'
@@ -155,13 +151,7 @@ const theme = createTheme({
 })
 
 function App() {
-  const { data: siteInfo, isLoading: siteLoading } = useSiteInfo()
-
   const localBusinessData = generateLocalBusinessStructuredData()
-
-  if (siteLoading) {
-    return <LoadingSpinner />
-  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -187,14 +177,14 @@ function App() {
           <meta property="og:description" content="Professional residential and commercial cleaning services in Dayton, OH. We make life easier with reliable, thorough cleaning." />
           <meta property="og:url" content="https://gemcitycleaningcrew.com" />
           <meta property="og:site_name" content="Gem City Cleaning Crew" />
-          <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+          <meta property="og:image" content="https://gemcitycleaningcrew.com/logo.png" />
           <meta property="og:locale" content="en_US" />
           
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Gem City Cleaning Crew - Professional Cleaning Services" />
           <meta name="twitter:description" content="Professional residential and commercial cleaning services in Dayton, OH. We make life easier with reliable, thorough cleaning." />
-          <meta name="twitter:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+          <meta name="twitter:image" content="https://gemcitycleaningcrew.com/logo.png" />
           
           {/* Contact Information */}
           <meta name="contact:phone_number" content="937-892-4157" />
@@ -205,7 +195,7 @@ function App() {
           <meta name="geo.placename" content="Dayton, Ohio" />
         </Helmet>
 
-        <Header siteInfo={siteInfo} />
+        <Header />
         
         <ScrollToTop />
         
@@ -245,7 +235,7 @@ function App() {
           </Routes>
         </main>
 
-        <Footer siteInfo={siteInfo} />
+        <Footer />
       </div>
     </ThemeProvider>
   )
