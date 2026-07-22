@@ -65,6 +65,10 @@ async function main() {
 }
 
 main().catch((error) => {
-  console.error('[prerender] failed:', error)
-  process.exit(1)
+  // Non-fatal by design: prerendering only helps non-JS-executing crawlers see
+  // blog content early. The SPA works fine without it, so a prerender failure
+  // (e.g. a missing browser binary in a fresh CI environment) must never fail
+  // `npm run build` and take the whole production deploy down with it.
+  console.error('[prerender] failed, continuing without prerendered blog pages:', error)
+  process.exitCode = 0
 })
