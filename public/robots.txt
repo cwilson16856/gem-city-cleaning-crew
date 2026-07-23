@@ -27,10 +27,8 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Disallow unnecessary files
-Disallow: /assets/
-Disallow: /*.js$
-Disallow: /*.css$
+# Disallow only debug artifacts, not rendering resources — Google needs JS/CSS
+# to evaluate mobile usability and render the page correctly
 Disallow: /*.map$
 
 # Sitemap location
