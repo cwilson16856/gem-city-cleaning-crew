@@ -42,6 +42,33 @@ const QuotePage = () => {
     }
   }, [])
 
+  useEffect(() => {
+    // The quote form is a cross-origin GHL iframe, so GA4's automatic form-detection
+    // can't see submissions. GHL doesn't document a postMessage contract for plain
+    // form embeds (only for booking calendars), so this detects the submission by
+    // the shape of the lead payload GHL posts to the parent window.
+    let leadFired = false
+    const handleFormMessage = (event) => {
+      if (event.origin !== 'https://api.leadconnectorhq.com') return
+      if (leadFired) return
+
+      const payload = Array.isArray(event.data) ? event.data[2] : null
+      if (typeof payload !== 'string') return
+      if (!payload.includes('full_name') || !payload.includes('email') || !payload.includes('customer_id')) return
+
+      leadFired = true
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          method: 'quote_form',
+          form_id: 'lHxZlrt3gWUXleLkGg53'
+        })
+      }
+    }
+
+    window.addEventListener('message', handleFormMessage)
+    return () => window.removeEventListener('message', handleFormMessage)
+  }, [])
+
   return (
     <>
       <Helmet>
