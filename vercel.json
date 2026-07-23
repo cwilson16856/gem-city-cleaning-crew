@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    { "source": "/deep-cleaning-services", "destination": "/deep-cleaning", "permanent": true },
+    { "source": "/deep-cleaning-services/", "destination": "/deep-cleaning", "permanent": true },
+    { "source": "/house-cleaning-services-springboro-ohio", "destination": "/locations/springboro/house-cleaning-services", "permanent": true },
+    { "source": "/house-cleaning-services-springboro-ohio/", "destination": "/locations/springboro/house-cleaning-services", "permanent": true },
+    { "source": "/contact-us", "destination": "/quote", "permanent": true },
+    { "source": "/contact-us/", "destination": "/quote", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
