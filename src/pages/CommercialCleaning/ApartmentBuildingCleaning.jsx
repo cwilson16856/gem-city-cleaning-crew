@@ -88,19 +88,19 @@ const ApartmentBuildingCleaning = () => {
       title: "Licensed & Insured",
       description: "Fully licensed, insured, and bonded with commercial-grade coverage for your property's protection.",
       icon: <SecurityIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Plan.png"
+      image: "/images/legacy/Plan.png"
     },
     {
       title: "Flexible Scheduling",
       description: "We work around your residents' schedules with evening and weekend cleaning options available.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.png"
     },
     {
       title: "Trained Professionals",
       description: "Our cleaning staff are trained specifically for apartment building environments and safety protocols.",
       icon: <VerifiedIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Trained.png"
+      image: "/images/legacy/Trained.png"
     }
   ]
 
@@ -154,7 +154,7 @@ const ApartmentBuildingCleaning = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/apartment-building-cleaning" />
         <meta property="og:title" content="Professional Apartment Building Cleaning Services Dayton | Gem City Cleaning" />
         <meta property="og:description" content="Expert apartment building cleaning services in Dayton. Common areas, laundry rooms, hallways & more." />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/sono-bono-XrsB8dosSWQ-unsplash-scaled.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/sono-bono-XrsB8dosSWQ-unsplash-scaled.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -167,7 +167,7 @@ const ApartmentBuildingCleaning = () => {
         title="Professional Apartment Building Cleaning"
         subtitle="Expert Cleaning Services for Apartment Buildings & Multi-Unit Properties"
         description="Entrances • Common Areas • Laundry Rooms • Hallways • Stairs • Elevators • Windows"
-        backgroundImage="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/sono-bono-XrsB8dosSWQ-unsplash-scaled.webp"
+        backgroundImage="/images/legacy/sono-bono-XrsB8dosSWQ-unsplash-scaled.webp"
         chipText="LICENSED • INSURED • PROFESSIONAL"
         primaryButtonText="Get Your Free Quote"
         primaryButtonLink="/quote?service=apartment-building"

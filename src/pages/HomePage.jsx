@@ -141,7 +141,7 @@ const HomePage = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/" />
         <meta property="og:title" content="Top-Rated Dayton House Cleaning | No Contracts | Gem City Cleaning Crew" />
         <meta property="og:description" content="Professional Dayton house cleaning service. No contracts, 3-month trained staff, all supplies included. Serving Dayton, Kettering, and surrounding areas." />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Gem City Cleaning Crew - Professional house cleaning service in Dayton, Ohio" />
@@ -153,7 +153,7 @@ const HomePage = () => {
         <meta name="twitter:url" content="https://gemcitycleaningcrew.com/" />
         <meta name="twitter:title" content="Top-Rated Dayton House Cleaning | No Contracts | Gem City Cleaning Crew" />
         <meta name="twitter:description" content="Professional Dayton house cleaning service. No contracts, 3-month trained staff, all supplies included. Call 937-892-4157" />
-        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta name="twitter:image:alt" content="Gem City Cleaning Crew - Professional house cleaning service in Dayton, Ohio" />
         
         {/* Additional SEO */}
@@ -215,7 +215,7 @@ const HomePage = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -671,10 +671,10 @@ const HomePage = () => {
               <video
                 controls
                 style={{ width: '100%', height: 'auto' }}
-                poster="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
+                poster="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
                 aria-label="Meet the Gem City Cleaning Crew professional team"
               >
-                <source src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Gem-City-Video.mp4" type="video/mp4" />
+                <source src="/images/legacy/Gem-City-Video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </Card>

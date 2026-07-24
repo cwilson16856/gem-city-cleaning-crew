@@ -217,7 +217,7 @@ const KitchenCleaningServices = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/kitchen-cleaning-services" />
         <meta property="og:title" content="Kitchen Cleaning Services Dayton OH – Deep Clean, Appliances, Grease Removal" />
         <meta property="og:description" content="⭐ #1 Kitchen Cleaning in Dayton. Deep cleaning, appliance cleaning, grease removal. Professional results for healthier cooking. FREE quotes!" />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/kitchen-2.jpg" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/kitchen-2.jpg" />
         <meta property="og:image:alt" content="Professional kitchen cleaning service results showing spotless stainless steel appliances and white cabinets in Dayton OH" />
         
         {/* JSON-LD Structured Data */}
@@ -266,7 +266,7 @@ const KitchenCleaningServices = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/kitchen-2.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/kitchen-2.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -646,7 +646,7 @@ const KitchenCleaningServices = () => {
                 >
                   <Box
                     component="img"
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/kitchen-3.jpg"
+                    src="/images/legacy/kitchen-3.jpg"
                     alt="Professional kitchen cleaning results showing spotless white cabinets and stainless steel appliances in Dayton OH"
                     sx={{
                       width: '100%',
@@ -682,7 +682,7 @@ const KitchenCleaningServices = () => {
                 >
                   <Box
                     component="img"
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/stove.jpg"
+                    src="/images/legacy/stove.jpg"
                     alt="Professional stove and appliance cleaning results showing pristine gas stove in Dayton OH kitchen"
                     sx={{
                       width: '100%',

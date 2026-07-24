@@ -140,19 +140,19 @@ const DaycareCleaning = () => {
       title: "Child-Safe Products",
       description: "We use eco-friendly, non-toxic cleaning products that are safe for children of all ages.",
       icon: <SecurityIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Plan.png"
+      image: "/images/legacy/Plan.png"
     },
     {
       title: "Flexible Scheduling",
       description: "We work around your daycare hours with evening and weekend cleaning options.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.png"
     },
     {
       title: "Trained Professionals",
       description: "Our staff is trained in daycare facility cleaning protocols and safety procedures.",
       icon: <ChildCareIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Trained.png"
+      image: "/images/legacy/Trained.png"
     }
   ]
 
@@ -224,7 +224,7 @@ const DaycareCleaning = () => {
       <Box
         className="hero-section commercial-hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gautam-arora-78Ae6N7rNvI-unsplash-scaled.webp')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/gautam-arora-78Ae6N7rNvI-unsplash-scaled.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -495,7 +495,7 @@ const DaycareCleaning = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            background: `linear-gradient(rgba(24, 24, 24, 0.9), rgba(24, 24, 24, 0.9)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gautam-arora-78Ae6N7rNvI-unsplash-scaled.webp')`,
+            background: `linear-gradient(rgba(24, 24, 24, 0.9), rgba(24, 24, 24, 0.9)), url('/images/legacy/gautam-arora-78Ae6N7rNvI-unsplash-scaled.webp')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             zIndex: 1

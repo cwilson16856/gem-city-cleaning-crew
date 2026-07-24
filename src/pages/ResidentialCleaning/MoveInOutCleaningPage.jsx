@@ -52,32 +52,32 @@ const MoveInOutCleaningPage = () => {
     {
       title: "Oven Deep Cleaning",
       description: "Complete interior and exterior oven cleaning with grease removal and sanitization",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Dirty-Oven-e1749136044376.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Oven-e1749135938970.webp",
+      beforeImage: "/images/legacy/Dirty-Oven-e1749136044376.webp",
+      afterImage: "/images/legacy/Clean-Oven-e1749135938970.webp",
       beforeAlt: "Dirty oven interior showing grease buildup before move-in move-out cleaning services Dayton",
       afterAlt: "Spotless clean oven after professional move-in move-out cleaning Dayton service showing pristine condition"
     },
     {
       title: "Toilet Deep Sanitization",
       description: "Thorough toilet cleaning including behind-the-toilet areas and complete sanitization",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/dirty-toilet-e1749136119717.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/clean-toilet-e1749135967505.webp",
+      beforeImage: "/images/legacy/dirty-toilet-e1749136119717.webp",
+      afterImage: "/images/legacy/clean-toilet-e1749135967505.webp",
       beforeAlt: "Dirty toilet showing stains and buildup before professional move-out cleaning service",
       afterAlt: "Spotless toilet after move-out cleaning service showing complete sanitization and shine"
     },
     {
       title: "Refrigerator Deep Cleaning",
       description: "Complete interior cleaning and sanitization of refrigerator shelves, drawers, and compartments",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240803-WA0010.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240803-WA0028.webp",
+      beforeImage: "/images/legacy/IMG-20240803-WA0010.webp",
+      afterImage: "/images/legacy/IMG-20240803-WA0028.webp",
       beforeAlt: "Dirty refrigerator interior with spills and stains before move-out cleaning service",
       afterAlt: "Clean refrigerator interior after professional move-out cleaning showing sanitized shelves"
     },
     {
       title: "Ceiling Fan Deep Cleaning",
       description: "Thorough cleaning of ceiling fan blades, housing, and light fixtures",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/dirty-ceiling-fan-e1749136101325.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/clean-ceiling-fan-e1749136008916.webp",
+      beforeImage: "/images/legacy/dirty-ceiling-fan-e1749136101325.webp",
+      afterImage: "/images/legacy/clean-ceiling-fan-e1749136008916.webp",
       beforeAlt: "Dirty ceiling fan with dust buildup on blades before move-out cleaning",
       afterAlt: "Clean ceiling fan after professional move-out cleaning with dust-free blades"
     }
@@ -166,7 +166,7 @@ const MoveInOutCleaningPage = () => {
         <meta name="theme-color" content="#D81B60" />
         
         {/* Preload critical resources for better LCP */}
-        <link rel="preload" as="image" href="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Oven.webp" />
+        <link rel="preload" as="image" href="/images/legacy/Clean-Oven.webp" />
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
         
         {/* Enhanced Open Graph / Facebook */}
@@ -175,7 +175,7 @@ const MoveInOutCleaningPage = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/move-in-out-cleaning" />
         <meta property="og:title" content="#1 Professional Move-In Move-Out Cleaning Services Dayton OH | Gem City Cleaning" />
         <meta property="og:description" content="⭐ #1 Professional move-in/move-out cleaning services in Dayton, OH. Deep cleaning for empty homes, perfect for landlords, tenants, and new homeowners. Protect your security deposit!" />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Professional move-in move-out cleaning services in Dayton OH" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -192,7 +192,7 @@ const MoveInOutCleaningPage = () => {
         <meta name="twitter:creator" content="@GemCityCleaning" />
         <meta name="twitter:title" content="#1 Professional Move-In Move-Out Cleaning Services Dayton OH" />
         <meta name="twitter:description" content="⭐ #1 Professional move-in/move-out cleaning services in Dayton, OH. Deep cleaning for empty homes, protect your security deposit!" />
-        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta name="twitter:image:alt" content="Move-in move-out cleaning services Dayton OH" />
         
         {/* Additional Social Media */}
@@ -539,7 +539,7 @@ const MoveInOutCleaningPage = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Oven.webp')`,
+          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/legacy/Clean-Oven.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

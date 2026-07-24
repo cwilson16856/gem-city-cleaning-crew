@@ -61,7 +61,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: #ffffff;
   background-clip: text;
-  animation: titleGlow 3s ease-in-out infinite alternate;
+  animation: titleGlow 3s ease-in-out 3 alternate;
 }
 
 .hero-subtitle {

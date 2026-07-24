@@ -112,16 +112,16 @@ const AirBnbCleaning = () => {
     {
       title: "Dining Area Transformation",
       description: "From cluttered and dirty to spotless and welcoming - ready for your next guests to enjoy meals.",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/airbnb-dining-table-dirty.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/airbnb-dining-table-clean.webp",
+      beforeImage: "/images/legacy/airbnb-dining-table-dirty.webp",
+      afterImage: "/images/legacy/airbnb-dining-table-clean.webp",
       beforeAlt: "Dirty dining table with clutter before AirBnb cleaning service",
       afterAlt: "Clean, organized dining table after professional AirBnb cleaning"
     },
     {
       title: "Bedroom Ready for Guests",
       description: "Professional bed making and room preparation that creates a welcoming first impression for every guest.",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/airbnb-bed-not-made.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/airbnb-bed-made.webp", 
+      beforeImage: "/images/legacy/airbnb-bed-not-made.webp",
+      afterImage: "/images/legacy/airbnb-bed-made.webp", 
       beforeAlt: "Unmade bed in AirBnb before cleaning service",
       afterAlt: "Professionally made bed ready for AirBnb guests"
     }
@@ -224,7 +224,7 @@ const AirBnbCleaning = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/airbnb-cleaning-service" />
         <meta property="og:title" content="Best AirBnb Cleaning Service Dayton OH | Same-Day Turnaround | Professional" />
         <meta property="og:description" content="⭐ #1 Rated AirBnb Cleaning in Dayton. Same-day turnaround, hospitality standards, flexible scheduling. Maximize bookings with spotless properties. FREE quotes!" />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/airbnb-bed-made.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/airbnb-bed-made.webp" />
         <meta property="og:image:alt" content="Professional AirBnb cleaning results - perfectly made bed ready for guests" />
         <meta property="og:image:width" content="1536" />
         <meta property="og:image:height" content="2048" />
@@ -237,7 +237,7 @@ const AirBnbCleaning = () => {
         <meta name="twitter:creator" content="@GemCityCleaning" />
         <meta name="twitter:title" content="Best AirBnb Cleaning Service Dayton OH | Same-Day Turnaround" />
         <meta name="twitter:description" content="⭐ #1 Rated AirBnb Cleaning in Dayton. Same-day turnaround, hospitality standards. Maximize bookings with spotless properties!" />
-        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/airbnb-bed-made.webp" />
+        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/airbnb-bed-made.webp" />
         <meta name="twitter:image:alt" content="Professional AirBnb cleaning results in Dayton OH" />
         
         {/* Canonical and Alternate URLs */}
@@ -382,7 +382,7 @@ const AirBnbCleaning = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/airbnb-bed-made.webp')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/airbnb-bed-made.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

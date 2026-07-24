@@ -181,19 +181,19 @@ const BeavercreekCommercialPage = () => {
       title: "Licensed & Insured",
       description: "Fully licensed, insured, and bonded with commercial-grade coverage for your peace of mind and property protection.",
       icon: <SecurityIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Plan.png"
+      image: "/images/legacy/Plan.png"
     },
     {
       title: "Flexible Scheduling",
       description: "We work around your business hours with evening, weekend, and holiday cleaning options available.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.png"
     },
     {
       title: "Trained Professionals",
       description: "Our commercial cleaning staff undergo specialized training for different business environments and safety protocols.",
       icon: <VerifiedIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Trained.png"
+      image: "/images/legacy/Trained.png"
     }
   ]
 
@@ -243,7 +243,7 @@ const BeavercreekCommercialPage = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/beavercreek/commercial" />
         <meta property="og:title" content="Elite Beavercreek Commercial Cleaning Services | Trusted by 100+ Businesses" />
         <meta property="og:description" content="Transform your Beavercreek business with our premium commercial cleaning services. Trusted by 100+ local businesses. Schedule your free consultation today!" />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/beavercreek-sign.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/beavercreek-sign.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -320,7 +320,7 @@ const BeavercreekCommercialPage = () => {
       <Box
         className="hero-section commercial-hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.8), rgba(24, 24, 24, 0.8)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/beavercreek-sign.webp')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.8), rgba(24, 24, 24, 0.8)), url('/images/legacy/beavercreek-sign.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -771,7 +771,7 @@ const BeavercreekCommercialPage = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/FAQ.png"
+              src="/images/legacy/FAQ.png"
               alt="Frequently asked questions about professional Beavercreek commercial cleaning services"
               sx={{
                 width: 80,
@@ -873,7 +873,7 @@ const BeavercreekCommercialPage = () => {
 
           <Box
             component="img"
-            src="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/20240512_125224-scaled.webp"
+            src="/images/legacy/20240512_125224-scaled.webp"
             alt="Professional clean windows showcasing Gem City Cleaning Crew's commercial window cleaning results and attention to detail"
             sx={{
               width: '100%',

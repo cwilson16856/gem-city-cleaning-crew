@@ -273,7 +273,7 @@ const RecurringCleaningPage = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/recurring-cleaning-service" />
         <meta property="og:title" content="Best Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner" />
         <meta property="og:description" content="⭐ #1 Rated Recurring House Cleaning in Dayton. No contracts, same professional cleaner every visit, flexible scheduling. Weekly, bi-weekly & monthly options. FREE quotes!" />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Professional recurring house cleaning results showing organized living room with vacuum lines" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -290,7 +290,7 @@ const RecurringCleaningPage = () => {
         <meta name="twitter:creator" content="@GemCityCleaning" />
         <meta name="twitter:title" content="Best Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner" />
         <meta name="twitter:description" content="⭐ #1 Rated Recurring House Cleaning in Dayton. No contracts, same professional cleaner every visit. Weekly, bi-weekly & monthly options. FREE quotes!" />
-        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta name="twitter:image:alt" content="Professional recurring house cleaning results in Dayton OH" />
         
         {/* Additional Social Media */}
@@ -305,7 +305,7 @@ const RecurringCleaningPage = () => {
         
         {/* Preload critical resources */}
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
-        <link rel="preload" href="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" as="image" />
+        <link rel="preload" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" as="image" />
         
         {/* JSON-LD Structured Data - Enhanced LocalBusiness */}
         <script type="application/ld+json">
@@ -650,7 +650,7 @@ const RecurringCleaningPage = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -1463,7 +1463,7 @@ const RecurringCleaningPage = () => {
                 <Box sx={{ position: 'relative' }}>
                   <Box
                     component="img"
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/living-room-2.jpg"
+                    src="/images/legacy/living-room-2.jpg"
                     alt="Professional recurring cleaning results - living room with visible vacuum lines showing attention to detail"
                     sx={{
                       width: '100%',
@@ -1541,7 +1541,7 @@ const RecurringCleaningPage = () => {
                 <Box sx={{ position: 'relative' }}>
                   <Box
                     component="img"
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/kitchen-2.jpg"
+                    src="/images/legacy/kitchen-2.jpg"
                     alt="Professional recurring kitchen cleaning - spotless counters, organized and sanitized"
                     sx={{
                       width: '100%',
@@ -1619,7 +1619,7 @@ const RecurringCleaningPage = () => {
                 <Box sx={{ position: 'relative' }}>
                   <Box
                     component="img"
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/bathroom-4.jpg"
+                    src="/images/legacy/bathroom-4.jpg"
                     alt="Professional recurring bathroom cleaning - sparkling clean bathtub and walk-in shower"
                     sx={{
                       width: '100%',

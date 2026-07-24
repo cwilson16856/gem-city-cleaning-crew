@@ -97,7 +97,7 @@ const QuotePage = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/quote" />
         <meta property="og:title" content="Get Free House Cleaning Quote Dayton OH | Request Estimate Online" />
         <meta property="og:description" content="⭐ Get your FREE house cleaning quote online in Dayton, OH! Professional residential & commercial cleaning estimates. Same-day response guaranteed. Call 937-892-4157!" />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Professional house cleaning quote form for Dayton OH residents" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -114,7 +114,7 @@ const QuotePage = () => {
         <meta name="twitter:creator" content="@GemCityCleaning" />
         <meta name="twitter:title" content="Get Free House Cleaning Quote Dayton OH | Request Estimate Online" />
         <meta name="twitter:description" content="⭐ Get your FREE house cleaning quote online in Dayton, OH! Professional cleaning estimates with same-day response. Call 937-892-4157!" />
-        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta name="twitter:image:alt" content="Free house cleaning quote form for Dayton OH" />
         
         {/* Additional Social Media */}
@@ -492,7 +492,7 @@ const QuotePage = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

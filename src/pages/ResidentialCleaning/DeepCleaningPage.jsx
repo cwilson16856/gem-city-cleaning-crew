@@ -61,32 +61,32 @@ const DeepCleaningPage = () => {
     {
       title: "Oven Deep Cleaning",
       description: "Complete interior and exterior oven cleaning with grease removal and sanitization",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Dirty-Oven-e1749136044376.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Oven-e1749135938970.webp",
+      beforeImage: "/images/legacy/Dirty-Oven-e1749136044376.webp",
+      afterImage: "/images/legacy/Clean-Oven-e1749135938970.webp",
       beforeAlt: "Dirty oven interior showing grease buildup and food residue before Dayton deep cleaning services",
       afterAlt: "Spotless clean oven interior after professional Dayton deep cleaning services showing pristine condition"
     },
     {
       title: "Toilet Deep Sanitization",
       description: "Thorough toilet cleaning including behind-the-toilet areas and complete sanitization",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/dirty-toilet-e1749136119717.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/clean-toilet-e1749135967505.webp",
+      beforeImage: "/images/legacy/dirty-toilet-e1749136119717.webp",
+      afterImage: "/images/legacy/clean-toilet-e1749135967505.webp",
       beforeAlt: "Dirty toilet showing stains and buildup before professional Dayton deep cleaning services",
       afterAlt: "Spotless toilet after Dayton deep cleaning services showing complete sanitization and shine"
     },
     {
       title: "Floor Deep Cleaning",
       description: "Intensive floor cleaning including corners, baseboards, and hard-to-reach areas",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Dirty-Floor-e1749135981660.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Floor-e1749136533513.webp",
+      beforeImage: "/images/legacy/Dirty-Floor-e1749135981660.webp",
+      afterImage: "/images/legacy/Clean-Floor-e1749136533513.webp",
       beforeAlt: "Dirty laundry room floor with stains and buildup before deep cleaning service",
       afterAlt: "Clean laundry room floor after deep cleaning showing restored original condition"
     },
     {
       title: "Wall & Behind Furniture Cleaning",
       description: "Moving furniture to clean walls, baseboards, and areas typically missed in regular cleaning",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Dirty-Wall-e1749136136991.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Wall-e1749136061202.webp",
+      beforeImage: "/images/legacy/Dirty-Wall-e1749136136991.webp",
+      afterImage: "/images/legacy/Clean-Wall-e1749136061202.webp",
       beforeAlt: "Dirty wall behind furniture showing dust and grime accumulation before deep cleaning",
       afterAlt: "Clean wall behind furniture after deep cleaning service showing complete dust removal"
     }
@@ -148,20 +148,20 @@ const DeepCleaningPage = () => {
         <meta name="keywords" content="deep cleaning services, Dayton deep cleaning, deep house cleaning, professional deep cleaning, appliance cleaning, detailed cleaning service" />
         
         {/* Preload hero background image for better LCP */}
-        <link rel="preload" as="image" href="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Oven.webp" />
+        <link rel="preload" as="image" href="/images/legacy/Clean-Oven.webp" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/deep-cleaning" />
         <meta property="og:title" content="Dayton Deep Cleaning Services | Transform Your Home in Just 1 Day" />
         <meta property="og:description" content="Complete deep house cleaning services in Dayton. See dramatic before/after results from our professional deep cleaning team." />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dayton Deep Cleaning Services | Transform Your Home in Just 1 Day" />
         <meta name="twitter:description" content="Complete deep house cleaning services in Dayton. See dramatic before/after results." />
-        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         
         <link rel="canonical" href="https://gemcitycleaningcrew.com/deep-cleaning" />
         
@@ -229,7 +229,7 @@ const DeepCleaningPage = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Oven.webp')`,
+          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/legacy/Clean-Oven.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

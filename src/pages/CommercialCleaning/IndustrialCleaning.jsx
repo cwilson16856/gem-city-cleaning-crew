@@ -167,7 +167,7 @@ const IndustrialCleaning = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/industrial-cleaning" />
         <meta property="og:title" content="Professional Dayton Industrial Cleaning Services | Gem City Cleaning" />
         <meta property="og:description" content="Professional Dayton industrial cleaning for warehouses, manufacturing plants, and distribution centers." />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Professional Dayton Industrial Cleaning Services | Gem City Cleaning" />
@@ -216,7 +216,7 @@ const IndustrialCleaning = () => {
       <Box
         className="hero-section commercial-hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/8643309867_00758e220a_c.webp')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/8643309867_00758e220a_c.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

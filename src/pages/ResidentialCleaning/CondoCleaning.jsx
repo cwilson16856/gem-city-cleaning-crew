@@ -217,7 +217,7 @@ const CondoCleaning = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/condo-cleaning" />
         <meta property="og:title" content="Condo Cleaning Dayton OH – Luxury Property Care, HOA Compliant, Value Protection" />
         <meta property="og:description" content="⭐ #1 Condo Cleaning in Dayton. Luxury finish care, HOA compliant service. Protect your property value! Professional maid service. FREE quotes!" />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Professional luxury condo cleaning service results showing pristine high-end finishes in Dayton OH" />
         
         {/* JSON-LD Structured Data */}
@@ -266,7 +266,7 @@ const CondoCleaning = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

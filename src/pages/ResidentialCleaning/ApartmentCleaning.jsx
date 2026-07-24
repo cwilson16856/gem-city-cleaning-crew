@@ -217,7 +217,7 @@ const ApartmentCleaning = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/apartment-cleaning" />
         <meta property="og:title" content="Apartment Cleaning Dayton OH – Move-Out Pros, Same-Day Service, Deposit Back Guarantee" />
         <meta property="og:description" content="⭐ #1 Apartment Cleaning in Dayton. Move-in/out cleaning specialists. Get your deposit back! Same-day service available. Student housing experts. FREE quotes!" />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Professional apartment cleaning service results showing clean modern apartment ready for move-out inspection in Dayton OH" />
         
         {/* JSON-LD Structured Data */}
@@ -266,7 +266,7 @@ const ApartmentCleaning = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

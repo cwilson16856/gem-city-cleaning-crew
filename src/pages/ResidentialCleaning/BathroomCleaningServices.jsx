@@ -219,7 +219,7 @@ const BathroomCleaningServices = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/bathroom-cleaning-services" />
         <meta property="og:title" content="Bathroom Cleaning Services Dayton OH – Deep Clean, Sanitization, Mold Removal" />
         <meta property="og:description" content="⭐ #1 Bathroom Cleaning in Dayton. Deep cleaning, sanitization, mold removal, grout restoration. Professional results for healthier bathrooms. FREE quotes!" />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/bathroom-sink.jpg" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/bathroom-sink.jpg" />
         <meta property="og:image:alt" content="Professional bathroom cleaning service results showing spotless bathroom sink and fixtures in Dayton OH" />
         
         {/* JSON-LD Structured Data */}
@@ -268,7 +268,7 @@ const BathroomCleaningServices = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/bathroom-sink.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/bathroom-sink.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -648,7 +648,7 @@ const BathroomCleaningServices = () => {
                 >
                   <Box
                     component="img"
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/bathroom-2.jpg"
+                    src="/images/legacy/bathroom-2.jpg"
                     alt="Professional bathroom cleaning results showing spotless shower and bathtub in Dayton OH"
                     sx={{
                       width: '100%',
@@ -684,7 +684,7 @@ const BathroomCleaningServices = () => {
                 >
                   <Box
                     component="img"
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/bathroom-4.jpg"
+                    src="/images/legacy/bathroom-4.jpg"
                     alt="Professional bathroom cleaning results showing sparkling clean bathtub and walk-in shower in Dayton OH"
                     sx={{
                       width: '100%',

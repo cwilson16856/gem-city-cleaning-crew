@@ -195,24 +195,24 @@ const CommercialOneTimeCleaning = () => {
     {
       title: "Professional Window Cleaning",
       description: "Post-construction window restoration and detailing - from dusty and debris-covered to crystal clear",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240513-WA0012.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/20240512_125224-scaled.webp",
+      beforeImage: "/images/legacy/IMG-20240513-WA0012.webp",
+      afterImage: "/images/legacy/20240512_125224-scaled.webp",
       beforeAlt: "Commercial windows before professional cleaning - showing construction dust and debris",
       afterAlt: "Commercial windows after professional deep cleaning - crystal clear and spotless"
     },
     {
       title: "Commercial Restroom Deep Cleaning",
       description: "Complete sanitization and restoration of commercial bathroom facilities",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240512-WA0025.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240512-WA0027.webp",
+      beforeImage: "/images/legacy/IMG-20240512-WA0025.webp",
+      afterImage: "/images/legacy/IMG-20240512-WA0027.webp",
       beforeAlt: "Commercial bathroom before professional deep cleaning",
       afterAlt: "Commercial bathroom after professional deep cleaning and sanitization"
     },
     {
       title: "Commercial Floor Deep Cleaning",
       description: "Stripping, cleaning and restoration of commercial floors removing construction debris and buildup",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240512-WA0010.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/WhatsApp-Image-2024-05-12-at-18.02.07_cdbb91df.webp",
+      beforeImage: "/images/legacy/IMG-20240512-WA0010.webp",
+      afterImage: "/images/legacy/WhatsApp-Image-2024-05-12-at-18.02.07_cdbb91df.webp",
       beforeAlt: "Commercial floors before professional deep cleaning - covered in construction debris",
       afterAlt: "Commercial floors after professional deep cleaning - pristine and polished"
     }
@@ -230,7 +230,7 @@ const CommercialOneTimeCleaning = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/commercial-one-time-cleaning" />
         <meta property="og:title" content="Commercial One-Time Deep Cleaning Dayton OH | Gem City Cleaning" />
         <meta property="og:description" content="Professional one-time commercial deep cleaning in Dayton, OH. Perfect for special events, move-ins, post-construction cleanup." />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -251,9 +251,9 @@ const CommercialOneTimeCleaning = () => {
             "url": "https://gemcitycleaningcrew.com",
             "logo": "https://gemcitycleaningcrew.com/logo.png",
             "image": [
-              "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/20240512_125224-scaled.webp",
-              "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240512-WA0027.webp",
-              "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/WhatsApp-Image-2024-05-12-at-18.02.07_cdbb91df.webp"
+              "/images/legacy/20240512_125224-scaled.webp",
+              "/images/legacy/IMG-20240512-WA0027.webp",
+              "/images/legacy/WhatsApp-Image-2024-05-12-at-18.02.07_cdbb91df.webp"
             ],
             "telephone": "937-892-4157",
             "email": "info@gemcitycleaningcrew.com",
@@ -351,9 +351,9 @@ const CommercialOneTimeCleaning = () => {
             "alternateName": ["Commercial Deep Cleaning", "Office Deep Cleaning", "One-Time Commercial Cleaning"],
             "description": "Professional one-time deep cleaning services for commercial spaces in Dayton, OH including special events, move-ins, post-construction cleanup, and quarterly deep cleans with same-day availability.",
             "image": [
-              "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/20240512_125224-scaled.webp",
-              "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240512-WA0027.webp",
-              "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/WhatsApp-Image-2024-05-12-at-18.02.07_cdbb91df.webp"
+              "/images/legacy/20240512_125224-scaled.webp",
+              "/images/legacy/IMG-20240512-WA0027.webp",
+              "/images/legacy/WhatsApp-Image-2024-05-12-at-18.02.07_cdbb91df.webp"
             ],
             "provider": {
               "@id": "https://gemcitycleaningcrew.com/#business"
@@ -589,7 +589,7 @@ const CommercialOneTimeCleaning = () => {
             "@type": "HowTo",
             "name": "How Commercial One-Time Deep Cleaning Works",
             "description": "Step-by-step process for professional commercial deep cleaning services",
-            "image": "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/20240512_125224-scaled.webp",
+            "image": "/images/legacy/20240512_125224-scaled.webp",
             "totalTime": "PT4H",
             "estimatedCost": {
               "@type": "MonetaryAmount",
@@ -601,19 +601,19 @@ const CommercialOneTimeCleaning = () => {
                 "@type": "HowToStep",
                 "name": "Initial Assessment",
                 "text": "We evaluate your commercial space and discuss specific areas needing attention",
-                "image": "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240513-WA0012.webp"
+                "image": "/images/legacy/IMG-20240513-WA0012.webp"
               },
               {
                 "@type": "HowToStep", 
                 "name": "Room-by-Room Deep Clean",
                 "text": "Following our comprehensive checklist plus intensive deep cleaning tasks for all areas",
-                "image": "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240512-WA0025.webp"
+                "image": "/images/legacy/IMG-20240512-WA0025.webp"
               },
               {
                 "@type": "HowToStep",
                 "name": "Quality Inspection", 
                 "text": "Final walkthrough to ensure every area meets our high commercial standards",
-                "image": "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/WhatsApp-Image-2024-05-12-at-18.02.07_cdbb91df.webp"
+                "image": "/images/legacy/WhatsApp-Image-2024-05-12-at-18.02.07_cdbb91df.webp"
               }
             ]
           })}
@@ -624,7 +624,7 @@ const CommercialOneTimeCleaning = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/benjamin-child-GWe0dlVD9e0-unsplash.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/benjamin-child-GWe0dlVD9e0-unsplash.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

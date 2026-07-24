@@ -53,32 +53,32 @@ const MoveInCleaningPage = () => {
     {
       title: "Kitchen Deep Sanitization",
       description: "Complete kitchen sanitization including appliance interiors and cabinet cleaning",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Dirty-Oven-e1749136044376.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Oven-e1749135938970.webp",
+      beforeImage: "/images/legacy/Dirty-Oven-e1749136044376.webp",
+      afterImage: "/images/legacy/Clean-Oven-e1749135938970.webp",
       beforeAlt: "Dirty kitchen before professional move-in cleaning services Dayton showing grease buildup",
       afterAlt: "Spotless clean kitchen after move-in cleaning Dayton service ready for new homeowners"
     },
     {
       title: "Bathroom Complete Sanitization",
       description: "Thorough bathroom cleaning and sanitization for health and safety",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/dirty-toilet-e1749136119717.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/clean-toilet-e1749135967505.webp",
+      beforeImage: "/images/legacy/dirty-toilet-e1749136119717.webp",
+      afterImage: "/images/legacy/clean-toilet-e1749135967505.webp",
       beforeAlt: "Dirty bathroom before move-in cleaning showing stains and buildup",
       afterAlt: "Sanitized bathroom after professional move-in cleaning service ready for family use"
     },
     {
       title: "Refrigerator Fresh Start",
       description: "Complete refrigerator sanitization for food safety in your new home",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240803-WA0010.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240803-WA0028.webp",
+      beforeImage: "/images/legacy/IMG-20240803-WA0010.webp",
+      afterImage: "/images/legacy/IMG-20240803-WA0028.webp",
       beforeAlt: "Dirty refrigerator interior before move-in cleaning service",
       afterAlt: "Clean sanitized refrigerator after move-in cleaning ready for groceries"
     },
     {
       title: "Ceiling Fan & Fixtures",
       description: "Clean air circulation from day one with professionally cleaned fixtures",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/dirty-ceiling-fan-e1749136101325.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/clean-ceiling-fan-e1749136008916.webp",
+      beforeImage: "/images/legacy/dirty-ceiling-fan-e1749136101325.webp",
+      afterImage: "/images/legacy/clean-ceiling-fan-e1749136008916.webp",
       beforeAlt: "Dusty ceiling fan before move-in cleaning",
       afterAlt: "Clean ceiling fan after move-in cleaning providing fresh air circulation"
     }
@@ -171,7 +171,7 @@ const MoveInCleaningPage = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/move-in-cleaning" />
         <meta property="og:title" content="#1 Professional Move-In Cleaning Services Dayton OH | Fresh Start Cleaning" />
         <meta property="og:description" content="⭐ #1 Professional move-in cleaning services in Dayton, OH. Deep sanitization for new homes & apartments. Fresh start cleaning for families moving to Dayton." />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Professional move-in cleaning services in Dayton OH" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -183,7 +183,7 @@ const MoveInCleaningPage = () => {
         <meta name="twitter:creator" content="@GemCityCleaning" />
         <meta name="twitter:title" content="#1 Professional Move-In Cleaning Services Dayton OH" />
         <meta name="twitter:description" content="⭐ #1 Professional move-in cleaning services in Dayton, OH. Fresh start cleaning for families moving to Dayton." />
-        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://gemcitycleaningcrew.com/move-in-cleaning" />
@@ -255,7 +255,7 @@ const MoveInCleaningPage = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Oven.webp')`,
+          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/legacy/Clean-Oven.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

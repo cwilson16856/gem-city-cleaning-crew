@@ -226,13 +226,13 @@ const ResidentialChecklistPage = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/residential-house-cleaning-checklist" />
         <meta property="og:title" content="Professional House Cleaning Checklist | Gem City Cleaning" />
         <meta property="og:description" content="Complete house cleaning checklist used by professional cleaners in Dayton. Room-by-room guide ensuring nothing gets missed." />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Professional House Cleaning Checklist | Gem City Cleaning" />
         <meta name="twitter:description" content="Complete house cleaning checklist used by professional cleaners in Dayton. Room-by-room guide ensuring nothing gets missed." />
-        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         
         <link rel="canonical" href="https://gemcitycleaningcrew.com/residential-house-cleaning-checklist" />
         
@@ -308,7 +308,7 @@ const ResidentialChecklistPage = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/clay-elliot-1by_GbwEMwc-unsplash-2.jpg')`,
+          background: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -586,7 +586,7 @@ const ResidentialChecklistPage = () => {
                   }}
                 >
                   <img
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Team-Notes.webp"
+                    src="/images/legacy/Team-Notes.webp"
                     alt="Team notes showing customized room selections and specific cleaning tasks for individual client preferences"
                     title="Custom Client Team Notes - Personalized Cleaning Instructions"
                     style={{
@@ -649,7 +649,7 @@ const ResidentialChecklistPage = () => {
                   }}
                 >
                   <img
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Cleaners-Checklist-Example.webp"
+                    src="/images/legacy/Cleaners-Checklist-Example.webp"
                     alt="Mobile house cleaning checklist showing detailed bedroom cleaning tasks that field staff use during service visits"
                     title="Professional House Cleaning Checklist - Mobile Field Guide for Bedroom Cleaning"
                     style={{

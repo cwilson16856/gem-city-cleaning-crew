@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
@@ -9,35 +9,38 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 
-// Pages
+// Home page is loaded eagerly since it's the most common entry point
 import HomePage from './pages/HomePage'
-import ResidentialPage from './pages/ResidentialCleaning/ResidentialPage'
-import ResidentialChecklistPage from './pages/ResidentialCleaning/ResidentialChecklistPage'
-import RecurringCleaningPage from './pages/ResidentialCleaning/RecurringCleaningPage'
-import DeepCleaningPage from './pages/ResidentialCleaning/DeepCleaningPage'
-import MoveInOutCleaningPage from './pages/ResidentialCleaning/MoveInOutCleaningPage'
-import MoveInCleaningPage from './pages/ResidentialCleaning/MoveInCleaning'
-import MoveOutCleaningPage from './pages/ResidentialCleaning/MoveOutCleaning'
-import AirBnbCleaning from './pages/ResidentialCleaning/AirBnbCleaning'
-import ApartmentCleaning from './pages/ResidentialCleaning/ApartmentCleaning'
-import CondoCleaning from './pages/ResidentialCleaning/CondoCleaning'
-import KitchenCleaningServices from './pages/ResidentialCleaning/KitchenCleaningServices'
-import BathroomCleaningServices from './pages/ResidentialCleaning/BathroomCleaningServices'
-import CommercialPage from './pages/CommercialCleaning/CommercialPage'
-import CommercialOneTimeCleaning from './pages/CommercialCleaning/CommercialOneTimeCleaning'
-import OfficeCleaning from './pages/CommercialCleaning/OfficeCleaning'
-import OfficeCleaningChecklist from './pages/CommercialCleaning/OfficeCleaningChecklist'
-import RetailCleaning from './pages/CommercialCleaning/RetailCleaning'
-import DaycareCleaning from './pages/CommercialCleaning/EducationCenterCleaning'
-import ApartmentBuildingCleaning from './pages/CommercialCleaning/ApartmentBuildingCleaning'
-import IndustrialCleaning from './pages/CommercialCleaning/IndustrialCleaning'
-import BeavercreekCommercialPage from './pages/Locations/Beavercreek/CommercialCleaning/BeavercreekCommercialPage'
-import LocationPage from './pages/LocationPage'
-import BlogPage from './pages/BlogPage'
-import PostPage from './pages/PostPage'
-import AboutPage from './pages/AboutPage'
-import QuotePage from './pages/QuotePage'
-import NotFound from './pages/NotFound'
+
+// All other pages are code-split per route so the initial bundle only
+// contains what's needed to render the page the visitor actually landed on
+const ResidentialPage = lazy(() => import('./pages/ResidentialCleaning/ResidentialPage'))
+const ResidentialChecklistPage = lazy(() => import('./pages/ResidentialCleaning/ResidentialChecklistPage'))
+const RecurringCleaningPage = lazy(() => import('./pages/ResidentialCleaning/RecurringCleaningPage'))
+const DeepCleaningPage = lazy(() => import('./pages/ResidentialCleaning/DeepCleaningPage'))
+const MoveInOutCleaningPage = lazy(() => import('./pages/ResidentialCleaning/MoveInOutCleaningPage'))
+const MoveInCleaningPage = lazy(() => import('./pages/ResidentialCleaning/MoveInCleaning'))
+const MoveOutCleaningPage = lazy(() => import('./pages/ResidentialCleaning/MoveOutCleaning'))
+const AirBnbCleaning = lazy(() => import('./pages/ResidentialCleaning/AirBnbCleaning'))
+const ApartmentCleaning = lazy(() => import('./pages/ResidentialCleaning/ApartmentCleaning'))
+const CondoCleaning = lazy(() => import('./pages/ResidentialCleaning/CondoCleaning'))
+const KitchenCleaningServices = lazy(() => import('./pages/ResidentialCleaning/KitchenCleaningServices'))
+const BathroomCleaningServices = lazy(() => import('./pages/ResidentialCleaning/BathroomCleaningServices'))
+const CommercialPage = lazy(() => import('./pages/CommercialCleaning/CommercialPage'))
+const CommercialOneTimeCleaning = lazy(() => import('./pages/CommercialCleaning/CommercialOneTimeCleaning'))
+const OfficeCleaning = lazy(() => import('./pages/CommercialCleaning/OfficeCleaning'))
+const OfficeCleaningChecklist = lazy(() => import('./pages/CommercialCleaning/OfficeCleaningChecklist'))
+const RetailCleaning = lazy(() => import('./pages/CommercialCleaning/RetailCleaning'))
+const DaycareCleaning = lazy(() => import('./pages/CommercialCleaning/EducationCenterCleaning'))
+const ApartmentBuildingCleaning = lazy(() => import('./pages/CommercialCleaning/ApartmentBuildingCleaning'))
+const IndustrialCleaning = lazy(() => import('./pages/CommercialCleaning/IndustrialCleaning'))
+const BeavercreekCommercialPage = lazy(() => import('./pages/Locations/Beavercreek/CommercialCleaning/BeavercreekCommercialPage'))
+const LocationPage = lazy(() => import('./pages/LocationPage'))
+const BlogPage = lazy(() => import('./pages/BlogPage'))
+const PostPage = lazy(() => import('./pages/PostPage'))
+const AboutPage = lazy(() => import('./pages/AboutPage'))
+const QuotePage = lazy(() => import('./pages/QuotePage'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 // Utils
 import { generateLocalBusinessStructuredData } from './utils/seo'
@@ -200,6 +203,7 @@ function App() {
         <ScrollToTop />
         
         <main className="main-content">
+          <Suspense fallback={null}>
           <Routes>
             {/* Other routes remain the same */}
             <Route path="/" element={<HomePage />} />
@@ -233,6 +237,7 @@ function App() {
             <Route path="/about-us" element={<AboutPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </Suspense>
         </main>
 
         <Footer />

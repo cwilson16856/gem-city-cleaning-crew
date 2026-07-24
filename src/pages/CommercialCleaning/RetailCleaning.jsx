@@ -148,19 +148,19 @@ const RetailCleaning = () => {
       title: "Customer-Focused Cleaning",
       description: "We understand that clean retail spaces directly impact customer experience and sales, prioritizing areas that matter most to your business.",
       icon: <PersonIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Trained.png"
+      image: "/images/legacy/Trained.png"
     },
     {
       title: "Flexible Scheduling",
       description: "Work around your business hours with evening, weekend, and holiday cleaning options that don't disrupt customer traffic.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Plan.png"
+      image: "/images/legacy/Plan.png"
     },
     {
       title: "No Contracts Required",
       description: "Flexible retail cleaning services without long-term contracts. Adjust frequency and services as your business needs change.",
       icon: <DescriptionIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.png"
     }
   ]
 
@@ -220,7 +220,7 @@ const RetailCleaning = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/retail-cleaning" />
         <meta property="og:title" content="Professional Dayton Retail Cleaning Services | Gem City Cleaning" />
         <meta property="og:description" content="Professional Dayton retail cleaning for stores, restaurants, salons. Flexible scheduling, no contracts, customer-focused service." />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -293,7 +293,7 @@ const RetailCleaning = () => {
       <Box
         className="hero-section commercial-hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/8643309867_00758e220a_c.webp')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/8643309867_00758e220a_c.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -742,7 +742,7 @@ const RetailCleaning = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/FAQ.png"
+              src="/images/legacy/FAQ.png"
               alt="Frequently asked questions about professional Dayton retail cleaning services"
               sx={{
                 width: 80,
@@ -818,7 +818,7 @@ const RetailCleaning = () => {
 
           <Box
             component="img"
-            src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/8643309867_00758e220a_c.webp"
+            src="/images/legacy/8643309867_00758e220a_c.webp"
             alt="Professional retail environment showcasing Gem City Cleaning Crew's retail cleaning results and customer-focused approach"
             sx={{
               width: '100%',

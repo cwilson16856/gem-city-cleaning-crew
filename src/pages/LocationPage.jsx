@@ -228,7 +228,7 @@ const LocationPage = () => {
         title="Service Locations"
         subtitle="Professional Cleaning Services Throughout Greater Dayton"
         description="Residential & Commercial Cleaning Services in Dayton and Surrounding Areas"
-        backgroundImage="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
+        backgroundImage="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
         chipText="LICENSED • INSURED • PROFESSIONAL"
         showRating={true}
         ratingValue={4.5}

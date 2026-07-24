@@ -169,19 +169,19 @@ const ResidentialPage = () => {
       title: "Custom Cleaning Plans",
       description: "We'll work with you to create a cleaning plan that works best for you. We'll simply add, or take off any room that you'd like.",
       icon: <AssignmentIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Plan.png"
+      image: "/images/legacy/Plan.png"
     },
     {
       title: "No Contracts",
       description: "We don't like contracts as much as you don't. You can keep us on for as little or as long as you like!",
       icon: <PersonIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.png"
     },
     {
       title: "Trained Employees",
       description: "Our employees go through 3 months of training in order to keep your home clean consistently at the highest level.",
       icon: <GroupsIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Trained.png"
+      image: "/images/legacy/Trained.png"
     }
   ]
 
@@ -241,7 +241,7 @@ const ResidentialPage = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/residential" />
         <meta property="og:title" content="Top 3 Dayton House Cleaning Services | Gem City Cleaning" />
         <meta property="og:description" content="Expert Dayton house cleaning services with 3-month trained staff, custom plans, and no contracts. Free quotes available!" />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -314,7 +314,7 @@ const ResidentialPage = () => {
       <Box
         className="hero-section residential-hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/clay-elliot-1by_GbwEMwc-unsplash-2.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -789,10 +789,10 @@ const ResidentialPage = () => {
             <video
               controls
               style={{ width: '100%', height: 'auto' }}
-              poster="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
+              poster="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
               aria-label="Meet the Gem City Cleaning Crew professional team"
             >
-              <source src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Gem-City-Video.mp4" type="video/mp4" />
+              <source src="/images/legacy/Gem-City-Video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </Card>
@@ -805,7 +805,7 @@ const ResidentialPage = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/FAQ.png"
+              src="/images/legacy/FAQ.png"
               alt="Frequently asked questions about professional Dayton house cleaning services and maid service options"
               sx={{
                 width: 80,
@@ -882,7 +882,7 @@ const ResidentialPage = () => {
 
           <Box
             component="img"
-            src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/naomi-hebert-MP0bgaS_d1c-unsplash-2-scaled.jpg"
+            src="/images/legacy/naomi-hebert-MP0bgaS_d1c-unsplash-2-scaled.jpg"
             alt="Beautiful clean home interior showcasing professional Dayton house cleaning services results and quality workmanship"
             sx={{
               width: '100%',

@@ -53,32 +53,32 @@ const MoveOutCleaningPage = () => {
     {
       title: "Oven Complete Restoration",
       description: "Deep cleaning and degreasing to meet landlord inspection standards",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Dirty-Oven-e1749136044376.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Oven-e1749135938970.webp",
+      beforeImage: "/images/legacy/Dirty-Oven-e1749136044376.webp",
+      afterImage: "/images/legacy/Clean-Oven-e1749135938970.webp",
       beforeAlt: "Dirty oven with grease buildup before move-out cleaning services Dayton",
       afterAlt: "Spotless oven after professional move-out cleaning meeting landlord standards"
     },
     {
       title: "Bathroom Deposit Protection",
       description: "Thorough sanitization and cleaning to prevent security deposit deductions",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/dirty-toilet-e1749136119717.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/clean-toilet-e1749135967505.webp",
+      beforeImage: "/images/legacy/dirty-toilet-e1749136119717.webp",
+      afterImage: "/images/legacy/clean-toilet-e1749135967505.webp",
       beforeAlt: "Dirty bathroom before move-out cleaning showing stains that could cost security deposit",
       afterAlt: "Clean bathroom after move-out cleaning protecting tenant security deposit"
     },
     {
       title: "Appliance Move-Out Ready",
       description: "Complete appliance cleaning to lease-compliant standards",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240803-WA0010.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/IMG-20240803-WA0028.webp",
+      beforeImage: "/images/legacy/IMG-20240803-WA0010.webp",
+      afterImage: "/images/legacy/IMG-20240803-WA0028.webp",
       beforeAlt: "Dirty appliance interior before move-out cleaning",
       afterAlt: "Clean appliance after move-out cleaning ready for landlord inspection"
     },
     {
       title: "Fixture Restoration",
       description: "Professional cleaning of all fixtures to original condition",
-      beforeImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/dirty-ceiling-fan-e1749136101325.webp",
-      afterImage: "https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/clean-ceiling-fan-e1749136008916.webp",
+      beforeImage: "/images/legacy/dirty-ceiling-fan-e1749136101325.webp",
+      afterImage: "/images/legacy/clean-ceiling-fan-e1749136008916.webp",
       beforeAlt: "Dusty fixture before move-out cleaning",
       afterAlt: "Clean fixture after move-out cleaning ready for next tenant"
     }
@@ -171,7 +171,7 @@ const MoveOutCleaningPage = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/move-out-cleaning" />
         <meta property="og:title" content="#1 Professional Move-Out Cleaning Services Dayton OH | Security Deposit Protection" />
         <meta property="og:description" content="⭐ #1 Professional move-out cleaning services in Dayton, OH. Protect your security deposit with thorough cleaning that meets landlord standards." />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Professional move-out cleaning services in Dayton OH" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -183,7 +183,7 @@ const MoveOutCleaningPage = () => {
         <meta name="twitter:creator" content="@GemCityCleaning" />
         <meta name="twitter:title" content="#1 Professional Move-Out Cleaning Services Dayton OH" />
         <meta name="twitter:description" content="⭐ Protect your security deposit with professional move-out cleaning in Dayton, OH." />
-        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://gemcitycleaningcrew.com/move-out-cleaning" />
@@ -255,7 +255,7 @@ const MoveOutCleaningPage = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Clean-Oven.webp')`,
+          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/legacy/Clean-Oven.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

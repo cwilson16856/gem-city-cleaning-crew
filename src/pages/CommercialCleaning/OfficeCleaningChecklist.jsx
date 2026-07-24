@@ -219,7 +219,7 @@ const OfficeCleaningChecklist = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/office-cleaning-checklist" />
         <meta property="og:title" content="Professional Office Cleaning Checklist | Gem City Cleaning" />
         <meta property="og:description" content="Complete office cleaning checklist used by professional cleaners in Dayton. Area-by-area guide ensuring nothing gets missed." />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -274,7 +274,7 @@ const OfficeCleaningChecklist = () => {
       <Box
         className="hero-section commercial-hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.75), rgba(24, 24, 24, 0.75)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/8643309867_00758e220a_c.webp')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.75), rgba(24, 24, 24, 0.75)), url('/images/legacy/8643309867_00758e220a_c.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -550,7 +550,7 @@ const OfficeCleaningChecklist = () => {
                   }}
                 >
                   <img
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Team-Notes.webp"
+                    src="/images/legacy/Team-Notes.webp"
                     alt="Office cleaning team notes showing customized business requirements and specific cleaning tasks for commercial clients"
                     title="Custom Business Team Notes - Office Cleaning Requirements"
                     style={{
@@ -610,7 +610,7 @@ const OfficeCleaningChecklist = () => {
                   }}
                 >
                   <img
-                    src="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/Cleaners-Checklist-Example.webp"
+                    src="/images/legacy/Cleaners-Checklist-Example.webp"
                     alt="Mobile office cleaning checklist showing detailed workspace cleaning tasks that commercial cleaning staff use during service visits"
                     title="Professional Office Cleaning Checklist - Mobile Guide for Workspace Cleaning"
                     style={{

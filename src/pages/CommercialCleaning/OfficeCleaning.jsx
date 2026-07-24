@@ -139,19 +139,19 @@ const OfficeCleaning = () => {
       title: "No Contracts Required",
       description: "Flexible office cleaning services without long-term contracts. Book one-time cleanings or recurring services with the freedom to adjust as needed.",
       icon: <DescriptionIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.png"
     },
     {
       title: "Recurring Services Available",
       description: "Consistent office cleaning with daily, weekly, bi-weekly, or monthly recurring services tailored to your business needs and schedule.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Plan.png"
+      image: "/images/legacy/Plan.png"
     },
     {
       title: "In-Person Quotes",
       description: "We visit your office to provide accurate, personalized quotes based on your specific space, needs, and cleaning requirements.",
       icon: <PersonIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/Trained.png"
+      image: "/images/legacy/Trained.png"
     }
   ]
 
@@ -211,7 +211,7 @@ const OfficeCleaning = () => {
         <meta property="og:url" content="https://gemcitycleaningcrew.com/office-cleaning" />
         <meta property="og:title" content="Professional Dayton Office Cleaning Services | Gem City Cleaning" />
         <meta property="og:description" content="Professional Dayton office cleaning for law firms, real estate, therapy practices. No contracts, recurring services, in-person quotes." />
-        <meta property="og:image" content="https://gemcitycleaningcrew.com/wp-content/uploads/2025/06/gemcitycleaningcrew-facebook.webp" />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -284,7 +284,7 @@ const OfficeCleaning = () => {
       <Box
         className="hero-section commercial-hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/8643309867_00758e220a_c.webp')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/8643309867_00758e220a_c.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -756,7 +756,7 @@ const OfficeCleaning = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/FAQ.png"
+              src="/images/legacy/FAQ.png"
               alt="Frequently asked questions about professional Dayton office cleaning services"
               sx={{
                 width: 80,
@@ -832,7 +832,7 @@ const OfficeCleaning = () => {
 
           <Box
             component="img"
-            src="https://gemcitycleaningcrew.com/wp-content/uploads/2023/04/8643309867_00758e220a_c.webp"
+            src="/images/legacy/8643309867_00758e220a_c.webp"
             alt="Professional office environment showcasing Gem City Cleaning Crew's office cleaning results and attention to detail"
             sx={{
               width: '100%',
