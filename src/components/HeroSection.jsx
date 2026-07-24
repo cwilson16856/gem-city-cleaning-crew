@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import {
   Container,
   Typography,
@@ -31,6 +32,12 @@ const HeroSection = ({
   const theme = useTheme()
 
   return (
+    <>
+    {backgroundImage && (
+      <Helmet>
+        <link rel="preload" as="image" href={backgroundImage} fetchPriority="high" />
+      </Helmet>
+    )}
     <Box
       className="hero-section"
       sx={{
@@ -247,6 +254,7 @@ const HeroSection = ({
         )}
       </Container>
     </Box>
+    </>
   )
 }
 
