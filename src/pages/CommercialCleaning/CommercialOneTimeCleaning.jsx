@@ -221,6 +221,7 @@ const CommercialOneTimeCleaning = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/benjamin-child-GWe0dlVD9e0-unsplash.jpg" fetchPriority="high" />
         <title>Commercial One-Time Deep Cleaning Dayton OH | Special Events & Move-Out Cleaning | Gem City Cleaning</title>
         <meta name="description" content="Professional one-time commercial deep cleaning in Dayton, OH. Perfect for special events, move-ins, post-construction, and quarterly deep cleans. Same-day availability!" />
         <meta name="keywords" content="commercial one-time cleaning, deep cleaning Dayton, office deep cleaning, post-construction cleanup, special event cleaning, move-out cleaning commercial" />

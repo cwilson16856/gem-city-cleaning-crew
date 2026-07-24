@@ -197,6 +197,7 @@ const CondoCleaning = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Condo Cleaning Dayton OH – Luxury Property Care, HOA Compliant, Value Protection | Gem City Cleaning</title>
         <meta name="title" content="Condo Cleaning Dayton OH – Luxury Property Care, HOA Compliant, Value Protection" />

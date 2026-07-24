@@ -146,6 +146,7 @@ const MoveInCleaningPage = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/Clean-Oven.webp" fetchPriority="high" />
         {/* Primary Meta Tags - Enhanced */}
         <title>#1 Move-In Cleaning Services Dayton OH | Professional New Home Cleaners | Gem City Cleaning</title>
         <meta name="title" content="#1 Move-In Cleaning Services Dayton OH | Professional New Home Cleaners | Gem City Cleaning" />

@@ -213,6 +213,7 @@ const DaycareCleaning = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/gautam-arora-78Ae6N7rNvI-unsplash-scaled.webp" fetchPriority="high" />
         <title>Daycare Cleaning Services Dayton | Gem City Cleaning</title>
         <meta 
           name="description" 

@@ -248,6 +248,7 @@ const RecurringCleaningPage = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Best Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner Every Visit | Gem City Cleaning</title>
         <meta name="title" content="Best Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner Every Visit" />

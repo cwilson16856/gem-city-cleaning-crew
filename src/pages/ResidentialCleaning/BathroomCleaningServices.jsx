@@ -199,6 +199,7 @@ const BathroomCleaningServices = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/bathroom-sink.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Bathroom Cleaning Services Dayton OH – Deep Clean, Sanitization, Mold Removal | Gem City Cleaning</title>
         <meta name="title" content="Bathroom Cleaning Services Dayton OH – Deep Clean, Sanitization, Mold Removal" />

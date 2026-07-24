@@ -220,6 +220,7 @@ const CommercialPage = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/benjamin-child-GWe0dlVD9e0-unsplash.jpg" fetchPriority="high" />
         <title>Professional Dayton Commercial Cleaning Services | Office & Retail Cleaning | Gem City Cleaning</title>
         <meta name="description" content="Professional Dayton commercial cleaning services for offices, retail, medical facilities, and more. Flexible scheduling, insured team, custom cleaning plans. Free quotes!" />
         <meta name="keywords" content="Dayton commercial cleaning, office cleaning, retail cleaning, medical facility cleaning, janitorial services, business cleaning" />

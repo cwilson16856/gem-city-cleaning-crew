@@ -199,6 +199,7 @@ const AirBnbCleaning = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/airbnb-bed-made.webp" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Best AirBnb Cleaning Service Dayton OH | Same-Day Turnaround | Professional Short-Term Rental Cleaning | Gem City Cleaning</title>
         <meta name="title" content="Best AirBnb Cleaning Service Dayton OH | Same-Day Turnaround | Professional Short-Term Rental Cleaning" />

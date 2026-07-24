@@ -72,6 +72,7 @@ const QuotePage = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Get Free House Cleaning Quote Dayton OH | Request Estimate Online | Gem City Cleaning</title>
         <meta name="title" content="Get Free House Cleaning Quote Dayton OH | Request Estimate Online | Gem City Cleaning" />

@@ -197,6 +197,7 @@ const KitchenCleaningServices = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/kitchen-2.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Kitchen Cleaning Services Dayton OH – Deep Clean, Appliances, Grease Removal | Gem City Cleaning</title>
         <meta name="title" content="Kitchen Cleaning Services Dayton OH – Deep Clean, Appliances, Grease Removal" />

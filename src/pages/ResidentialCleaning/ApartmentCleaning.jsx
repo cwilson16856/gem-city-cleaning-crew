@@ -197,6 +197,7 @@ const ApartmentCleaning = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Apartment Cleaning Dayton OH – Move-Out Pros, Same-Day Service, Deposit Back Guarantee | Gem City Cleaning</title>
         <meta name="title" content="Apartment Cleaning Dayton OH – Move-Out Pros, Same-Day Service, Deposit Back Guarantee" />

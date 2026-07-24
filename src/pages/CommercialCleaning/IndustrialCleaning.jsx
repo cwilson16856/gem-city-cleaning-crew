@@ -159,6 +159,7 @@ const IndustrialCleaning = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/8643309867_00758e220a_c.webp" fetchPriority="high" />
         <title>Professional Dayton Industrial Cleaning Services | Warehouses, Manufacturing | Gem City Cleaning</title>
         <meta name="description" content="Professional Dayton industrial cleaning for warehouses, manufacturing plants, and distribution centers. Flexible scheduling, no contracts. Free quotes!" />
         <meta name="keywords" content="Dayton industrial cleaning, warehouse cleaning, manufacturing facility cleaning, factory cleaning, distribution center cleaning" />

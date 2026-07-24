@@ -232,6 +232,7 @@ const ResidentialPage = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg" fetchPriority="high" />
         <title>Top 3 Dayton House Cleaning Services | No Contracts | Custom Plans | Gem City Cleaning</title>
         <meta name="description" content="Expert Dayton house cleaning services with 3-month trained staff, custom plans, and no contracts. Kitchens, bathrooms, bedrooms, and more. Free quotes available!" />
         <meta name="keywords" content="Dayton house cleaning, residential cleaning, custom cleaning plans, no contracts, professional cleaners, home cleaning service" />

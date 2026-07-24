@@ -217,6 +217,7 @@ const ResidentialChecklistPage = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg" fetchPriority="high" />
         <title>House Cleaning Checklist | Professional Dayton Cleaning Standards | Gem City Cleaning</title>
         <meta name="description" content="Complete house cleaning checklist used by professional cleaners in Dayton. Our detailed room-by-room house cleaning checklist ensures nothing gets missed in your home cleaning service." />
         <meta name="keywords" content="house cleaning checklist, Dayton house cleaning checklist, residential cleaning checklist, professional cleaning checklist, home cleaning checklist, cleaning standards" />

@@ -146,6 +146,7 @@ const MoveOutCleaningPage = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/Clean-Oven.webp" fetchPriority="high" />
         {/* Primary Meta Tags - Enhanced */}
         <title>#1 Move-Out Cleaning Services Dayton OH | Security Deposit Protection | Gem City Cleaning</title>
         <meta name="title" content="#1 Move-Out Cleaning Services Dayton OH | Security Deposit Protection | Gem City Cleaning" />

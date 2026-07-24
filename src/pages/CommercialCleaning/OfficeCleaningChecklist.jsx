@@ -210,6 +210,7 @@ const OfficeCleaningChecklist = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/8643309867_00758e220a_c.webp" fetchPriority="high" />
         <title>Office Cleaning Checklist | Professional Dayton Office Cleaning Standards | Gem City Cleaning</title>
         <meta name="description" content="Complete office cleaning checklist used by professional cleaners in Dayton. Our detailed office cleaning checklist ensures nothing gets missed in your business cleaning service." />
         <meta name="keywords" content="office cleaning checklist, Dayton office cleaning checklist, commercial cleaning checklist, professional office cleaning checklist, business cleaning checklist, office cleaning standards" />

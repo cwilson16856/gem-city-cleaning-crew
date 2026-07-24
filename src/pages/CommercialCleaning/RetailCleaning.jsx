@@ -211,6 +211,7 @@ const RetailCleaning = () => {
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/images/legacy/8643309867_00758e220a_c.webp" fetchPriority="high" />
         <title>Professional Dayton Retail Cleaning Services | Stores, Restaurants, Salons | Gem City Cleaning</title>
         <meta name="description" content="Professional Dayton retail cleaning for stores, restaurants, salons, fitness centers. Flexible scheduling, no contracts, customer-focused cleaning. Free quotes!" />
         <meta name="keywords" content="Dayton retail cleaning, store cleaning, restaurant cleaning, salon cleaning, retail store cleaning, shopping center cleaning" />
