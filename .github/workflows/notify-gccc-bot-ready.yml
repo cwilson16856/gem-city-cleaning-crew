@@ -4,7 +4,7 @@ on:
     types: [labeled]
 jobs:
   request-review:
-    if: github.event.label.name == "bot-ready-for-merge"
+    if: github.event.label.name == 'bot-ready-for-merge'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
