@@ -38,6 +38,14 @@ import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService'
 import '../../styles/homepages/HomePage.css'
 import '../../styles/pages/CommercialPage.css'
 
+import {
+  generateLocalBusinessSchema,
+  generateLocationWebPageSchema
+} from '../../utils/localBusinessSchema'
+
+const PAGE_URL = 'https://gemcitycleaningcrew.com/commercial'
+const SERVICE_ID = `${PAGE_URL}#service`
+
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
@@ -239,17 +247,36 @@ const CommercialPage = () => {
         
         <link rel="canonical" href="https://gemcitycleaningcrew.com/commercial" />
         
+        {/* LocalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocalBusinessSchema(['Dayton', 'Kettering', 'Centerville', 'Beavercreek', 'Oakwood']))}
+        </script>
+
+        {/* WebPage Schema (with breadcrumb) */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocationWebPageSchema({
+            id: `${PAGE_URL}#webpage`,
+            url: PAGE_URL,
+            name: 'Professional Dayton Commercial Cleaning Services',
+            description: 'Professional Dayton commercial cleaning services for offices, retail, medical facilities, and more.',
+            aboutId: SERVICE_ID,
+            breadcrumbs: [
+              { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+              { name: 'Commercial Cleaning', url: PAGE_URL }
+            ]
+          }))}
+        </script>
+
         {/* Service Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": SERVICE_ID,
             "name": "Commercial Cleaning Services",
             "description": "Professional Dayton commercial cleaning services for offices, retail, medical facilities, and business properties",
             "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "937-892-4157"
+              "@id": "https://gemcitycleaningcrew.com/#business"
             },
             "areaServed": "Dayton, OH and surrounding areas",
             "hasOfferCatalog": {

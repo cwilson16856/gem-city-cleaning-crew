@@ -8,6 +8,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { getAllPosts } from '../src/content/blog/index.js'
+import { CITY_SLUGS } from '../src/data/locations.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.join(__dirname, '..')
@@ -43,15 +44,10 @@ const STATIC_ROUTES = [
   { path: '/about-us', changefreq: 'monthly', priority: '0.6' },
 ]
 
-// City slugs with dedicated location pages (matches src/pages/LocationPage.jsx's
-// `locations` array). Beavercreek's commercial page has a special dedicated route.
-const LOCATION_CITIES = [
-  'dayton', 'kettering', 'oakwood', 'centerville', 'miamisburg', 'springboro',
-  'huber-heights', 'riverside', 'xenia', 'beavercreek', 'fairborn',
-  'yellow-springs', 'tipp-city', 'bellbrook', 'vandalia', 'troy',
-]
-
-for (const city of LOCATION_CITIES) {
+// City slugs with dedicated location pages — sourced from src/data/locations.js,
+// the single source of truth (also used by LocationPage.jsx itself).
+// Beavercreek's commercial page has a special dedicated route.
+for (const city of CITY_SLUGS) {
   STATIC_ROUTES.push({ path: `/locations/${city}/house-cleaning-services`, changefreq: 'monthly', priority: '0.6' })
   STATIC_ROUTES.push({
     path: city === 'beavercreek'

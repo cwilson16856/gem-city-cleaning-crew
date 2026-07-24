@@ -43,6 +43,15 @@ import '../../styles/pages/CommercialPage.css'
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
 import QuoteForm from '../../components/QuoteForm'
+import { generateFAQPageStructuredData } from '../../utils/blogSchema'
+import {
+  generateLocalBusinessSchema,
+  generateServiceSchema,
+  generateLocationWebPageSchema
+} from '../../utils/localBusinessSchema'
+
+const PAGE_URL = 'https://gemcitycleaningcrew.com/school-cleaning'
+const SERVICE_ID = `${PAGE_URL}#service`
 
 const DaycareCleaning = () => {
   const theme = useTheme()
@@ -215,10 +224,54 @@ const DaycareCleaning = () => {
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/gautam-arora-78Ae6N7rNvI-unsplash-scaled.webp" fetchPriority="high" />
         <title>Daycare Cleaning Services Dayton | Gem City Cleaning</title>
-        <meta 
-          name="description" 
+        <meta
+          name="description"
           content="Professional daycare cleaning services in Dayton. Child-safe, thorough cleaning that creates a healthy environment for children. Licensed and insured cleaners."
         />
+        <link rel="canonical" href={PAGE_URL} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:title" content="Daycare Cleaning Services Dayton | Gem City Cleaning" />
+        <meta property="og:description" content="Professional daycare cleaning services in Dayton. Child-safe, thorough cleaning that creates a healthy environment for children." />
+        <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gautam-arora-78Ae6N7rNvI-unsplash-scaled.webp" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Daycare Cleaning Services Dayton | Gem City Cleaning" />
+        <meta name="twitter:description" content="Professional daycare cleaning services in Dayton. Child-safe, thorough cleaning that creates a healthy environment for children." />
+
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocalBusinessSchema(['Dayton', 'Kettering', 'Beavercreek', 'Centerville', 'Springboro']))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateServiceSchema({
+            id: SERVICE_ID,
+            name: 'Daycare Cleaning',
+            description: 'Professional daycare and childcare facility cleaning with child-safe products, covering play areas, nap rooms, dining areas, and bathrooms.',
+            serviceType: 'Daycare Cleaning',
+            areaServedCities: ['Dayton', 'Kettering', 'Beavercreek', 'Centerville', 'Springboro'],
+            url: PAGE_URL
+          }))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocationWebPageSchema({
+            id: `${PAGE_URL}#webpage`,
+            url: PAGE_URL,
+            name: 'Daycare Cleaning Services Dayton',
+            description: 'Professional daycare cleaning services in Dayton. Child-safe, thorough cleaning that creates a healthy environment for children.',
+            aboutId: SERVICE_ID,
+            breadcrumbs: [
+              { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+              { name: 'Commercial Cleaning', url: 'https://gemcitycleaningcrew.com/commercial' },
+              { name: 'Daycare Cleaning', url: PAGE_URL }
+            ]
+          }))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateFAQPageStructuredData(faqData))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

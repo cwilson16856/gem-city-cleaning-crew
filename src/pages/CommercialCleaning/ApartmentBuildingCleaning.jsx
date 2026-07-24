@@ -35,6 +35,15 @@ import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
 import QuoteForm from '../../components/QuoteForm'
 import HeroSection from '../../components/HeroSection'
+import { generateFAQPageStructuredData } from '../../utils/blogSchema'
+import {
+  generateLocalBusinessSchema,
+  generateServiceSchema,
+  generateLocationWebPageSchema
+} from '../../utils/localBusinessSchema'
+
+const PAGE_URL = 'https://gemcitycleaningcrew.com/apartment-building-cleaning'
+const SERVICE_ID = `${PAGE_URL}#service`
 
 const ApartmentBuildingCleaning = () => {
   const theme = useTheme()
@@ -148,7 +157,8 @@ const ApartmentBuildingCleaning = () => {
         <title>Professional Apartment Building Cleaning Services Dayton | Gem City Cleaning</title>
         <meta name="description" content="Expert apartment building cleaning services in Dayton. Common areas, laundry rooms, hallways, elevators & more. Licensed & insured team. Get your free quote!" />
         <meta name="keywords" content="apartment building cleaning, common area cleaning, laundry room cleaning, hallway cleaning, Dayton property cleaning" />
-        
+        <link rel="canonical" href={PAGE_URL} />
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/apartment-building-cleaning" />
@@ -160,6 +170,37 @@ const ApartmentBuildingCleaning = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Professional Apartment Building Cleaning Services Dayton | Gem City Cleaning" />
         <meta name="twitter:description" content="Expert apartment building cleaning services in Dayton. Common areas, laundry rooms, hallways & more." />
+
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocalBusinessSchema(['Dayton', 'Kettering', 'Beavercreek', 'Oakwood', 'Centerville']))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateServiceSchema({
+            id: SERVICE_ID,
+            name: 'Apartment Building Cleaning',
+            description: 'Professional cleaning services for apartment buildings and multi-unit residential complexes, covering entrances, laundry rooms, hallways, elevators, and common areas.',
+            serviceType: 'Apartment Building Cleaning',
+            areaServedCities: ['Dayton', 'Kettering', 'Beavercreek', 'Oakwood', 'Centerville'],
+            url: PAGE_URL
+          }))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocationWebPageSchema({
+            id: `${PAGE_URL}#webpage`,
+            url: PAGE_URL,
+            name: 'Professional Apartment Building Cleaning Services Dayton',
+            description: 'Expert apartment building cleaning services in Dayton. Common areas, laundry rooms, hallways, elevators & more.',
+            aboutId: SERVICE_ID,
+            breadcrumbs: [
+              { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+              { name: 'Commercial Cleaning', url: 'https://gemcitycleaningcrew.com/commercial' },
+              { name: 'Apartment Building Cleaning', url: PAGE_URL }
+            ]
+          }))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateFAQPageStructuredData(faqData))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

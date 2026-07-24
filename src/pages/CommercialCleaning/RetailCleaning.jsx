@@ -39,6 +39,14 @@ import FitnessCenterIcon from '@mui/icons-material/FitnessCenter'
 import '../../styles/homepages/HomePage.css'
 import '../../styles/pages/CommercialPage.css'
 
+import {
+  generateLocalBusinessSchema,
+  generateLocationWebPageSchema
+} from '../../utils/localBusinessSchema'
+
+const PAGE_URL = 'https://gemcitycleaningcrew.com/retail-cleaning'
+const SERVICE_ID = `${PAGE_URL}#service`
+
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
@@ -229,18 +237,38 @@ const RetailCleaning = () => {
         <meta name="twitter:description" content="Professional Dayton retail cleaning for stores, restaurants, salons." />
         
         <link rel="canonical" href="https://gemcitycleaningcrew.com/retail-cleaning" />
-        
+
+        {/* LocalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocalBusinessSchema(['Dayton', 'Kettering', 'Centerville', 'Beavercreek', 'Xenia']))}
+        </script>
+
+        {/* WebPage Schema (with breadcrumb) */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocationWebPageSchema({
+            id: `${PAGE_URL}#webpage`,
+            url: PAGE_URL,
+            name: 'Professional Dayton Retail Cleaning Services',
+            description: 'Professional Dayton retail cleaning services for stores, restaurants, salons, fitness centers, and retail businesses.',
+            aboutId: SERVICE_ID,
+            breadcrumbs: [
+              { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+              { name: 'Commercial Cleaning', url: 'https://gemcitycleaningcrew.com/commercial' },
+              { name: 'Retail Cleaning', url: PAGE_URL }
+            ]
+          }))}
+        </script>
+
         {/* Service Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": SERVICE_ID,
             "name": "Retail Cleaning Services",
             "description": "Professional Dayton retail cleaning services for stores, restaurants, salons, fitness centers, and retail businesses",
             "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "937-892-4157"
+              "@id": "https://gemcitycleaningcrew.com/#business"
             },
             "areaServed": "Dayton, OH and surrounding areas",
             "hasOfferCatalog": {

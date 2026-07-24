@@ -38,6 +38,14 @@ import PersonIcon from '@mui/icons-material/Person'
 import '../../styles/homepages/HomePage.css'
 import '../../styles/pages/CommercialPage.css'
 
+import {
+  generateLocalBusinessSchema,
+  generateLocationWebPageSchema
+} from '../../utils/localBusinessSchema'
+
+const PAGE_URL = 'https://gemcitycleaningcrew.com/office-cleaning'
+const SERVICE_ID = `${PAGE_URL}#service`
+
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
@@ -220,18 +228,38 @@ const OfficeCleaning = () => {
         <meta name="twitter:description" content="Professional Dayton office cleaning for law firms, real estate, therapy practices." />
         
         <link rel="canonical" href="https://gemcitycleaningcrew.com/office-cleaning" />
-        
+
+        {/* LocalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocalBusinessSchema(['Dayton', 'Kettering', 'Centerville', 'Oakwood', 'Beavercreek']))}
+        </script>
+
+        {/* WebPage Schema (with breadcrumb) */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocationWebPageSchema({
+            id: `${PAGE_URL}#webpage`,
+            url: PAGE_URL,
+            name: 'Professional Dayton Office Cleaning Services',
+            description: 'Professional Dayton office cleaning services for law firms, real estate offices, therapy offices, and corporate offices.',
+            aboutId: SERVICE_ID,
+            breadcrumbs: [
+              { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+              { name: 'Commercial Cleaning', url: 'https://gemcitycleaningcrew.com/commercial' },
+              { name: 'Office Cleaning', url: PAGE_URL }
+            ]
+          }))}
+        </script>
+
         {/* Service Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": SERVICE_ID,
             "name": "Office Cleaning Services",
             "description": "Professional Dayton office cleaning services for law firms, real estate offices, therapy offices, and corporate offices",
             "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "937-892-4157"
+              "@id": "https://gemcitycleaningcrew.com/#business"
             },
             "areaServed": "Dayton, OH and surrounding areas",
             "hasOfferCatalog": {

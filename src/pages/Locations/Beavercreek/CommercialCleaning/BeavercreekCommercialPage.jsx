@@ -37,6 +37,14 @@ import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService'
 import '../../../../styles/homepages/HomePage.css'
 import '../../../../styles/pages/CommercialPage.css'
 
+import {
+  generateLocalBusinessSchema,
+  generateLocationWebPageSchema
+} from '../../../../utils/localBusinessSchema'
+
+const PAGE_URL = 'https://gemcitycleaningcrew.com/locations/beavercreek/commercial-services'
+const SERVICE_ID = `${PAGE_URL}#service`
+
 // Components
 import AreasWeServe from '../../../../components/AreasWeServe'
 import TableOfContents from '../../../../components/TableOfContents'
@@ -241,7 +249,7 @@ const BeavercreekCommercialPage = () => {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://gemcitycleaningcrew.com/beavercreek/commercial" />
+        <meta property="og:url" content={PAGE_URL} />
         <meta property="og:title" content="Elite Beavercreek Commercial Cleaning Services | Trusted by 100+ Businesses" />
         <meta property="og:description" content="Transform your Beavercreek business with our premium commercial cleaning services. Trusted by 100+ local businesses. Schedule your free consultation today!" />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/beavercreek-sign.webp" />
@@ -251,24 +259,44 @@ const BeavercreekCommercialPage = () => {
         <meta name="twitter:title" content="Elite Beavercreek Commercial Cleaning Services | Trusted by 100+ Businesses" />
         <meta name="twitter:description" content="Transform your Beavercreek business with our premium commercial cleaning services." />
         
-        <link rel="canonical" href="https://gemcitycleaningcrew.com/beavercreek/commercial" />
-        
+        <link rel="canonical" href={PAGE_URL} />
+
+        {/* LocalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocalBusinessSchema(['Beavercreek', 'Fairborn', 'Xenia', 'Dayton']))}
+        </script>
+
+        {/* WebPage Schema (with breadcrumb) */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocationWebPageSchema({
+            id: `${PAGE_URL}#webpage`,
+            url: PAGE_URL,
+            name: '7+ Elite Commercial Cleaning Services in Beavercreek',
+            description: "Beavercreek's premier commercial cleaning service. Trusted by 100+ local businesses. Expert office & retail cleaning.",
+            aboutId: SERVICE_ID,
+            breadcrumbs: [
+              { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+              { name: 'Locations', url: 'https://gemcitycleaningcrew.com/locations' },
+              { name: 'Beavercreek Commercial Cleaning', url: PAGE_URL }
+            ]
+          }))}
+        </script>
+
         {/* Service Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": SERVICE_ID,
             "name": "Commercial Cleaning Services",
             "description": "Elite Beavercreek commercial cleaning services for offices, retail, medical facilities, and business properties. Trusted by 100+ local businesses.",
             "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "937-892-4157",
-              "areaServed": {
-                "@type": "City",
-                "name": "Beavercreek",
-                "state": "OH"
-              }
+              "@id": "https://gemcitycleaningcrew.com/#business"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Beavercreek",
+              "addressRegion": "OH"
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",

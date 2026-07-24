@@ -228,8 +228,8 @@ function App() {
             <Route path="/apartment-building-cleaning" element={<ApartmentBuildingCleaning />} />
             <Route path="/industrial-cleaning" element={<IndustrialCleaning />} />
             <Route path="/locations" element={<LocationPage />} />
-            <Route path="/locations/:city/house-cleaning-services" element={<LocationPage />} />
-            <Route path="/locations/:city/commercial-cleaning-services" element={<LocationPage />} />
+            <Route path="/locations/:city/house-cleaning-services" element={<LocationPage serviceType="residential" />} />
+            <Route path="/locations/:city/commercial-cleaning-services" element={<LocationPage serviceType="commercial" />} />
             <Route path="/locations/beavercreek/commercial-services" element={<BeavercreekCommercialPage />} />
             <Route path="/quote" element={<QuotePage />} />
             <Route path="/blog" element={<BlogPage />} />
