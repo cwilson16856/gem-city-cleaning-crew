@@ -288,13 +288,6 @@ const MoveInOutCleaningPage = () => {
                 }
               }))
             },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.5",
-              "reviewCount": "85",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
             "offers": {
               "@type": "Offer",
               "name": "Move-In Move-Out Cleaning Service",

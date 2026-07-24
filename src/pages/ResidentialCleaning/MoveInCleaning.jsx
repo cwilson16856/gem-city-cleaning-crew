@@ -208,12 +208,7 @@ const MoveInCleaningPage = () => {
             },
             "areaServed": [
               "Dayton, OH", "Kettering, OH", "Centerville, OH", "Oakwood, OH", "Huber Heights, OH", "Miamisburg, OH"
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.5",
-              "reviewCount": "85"
-            }
+            ]
           })}
         </script>
 

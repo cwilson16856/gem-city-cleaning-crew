@@ -497,14 +497,7 @@ const RecurringCleaningPage = () => {
                 "validFrom": "2024-01-01",
                 "areaServed": "Dayton, OH and surrounding areas"
               }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.5",
-              "reviewCount": "85",
-              "bestRating": "5",
-              "worstRating": "1"
-            }
+            ]
           })}
         </script>
 

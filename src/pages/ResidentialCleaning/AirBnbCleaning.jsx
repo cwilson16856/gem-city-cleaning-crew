@@ -353,12 +353,7 @@ const AirBnbCleaning = () => {
                 "priceCurrency": "USD",
                 "availability": "https://schema.org/InStock"
               }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.5",
-              "reviewCount": "85"
-            }
+            ]
           })}
         </script>
 
