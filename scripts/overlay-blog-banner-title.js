@@ -57,7 +57,20 @@ async function main() {
 
   const kicker = cli.kicker || 'Gem City Cleaning Crew'
 
-  const fontStack = 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif'
+  // Font must be an explicitly-named, actually-installed system font — NOT
+  // a generic keyword chain (`system-ui`/`-apple-system` only resolves to
+  // San Francisco on macOS; a headless Linux box has none of those and
+  // silently falls back to a generic sans, which is why a VPS-generated
+  // cover looked different from one made locally — root-caused on GCCT's
+  // pipeline 2026-07-23 and ported here). Also NOT a base64 @font-face embed
+  // (empirically confirmed broken/silently ignored by this box's librsvg).
+  // "Inter" must be installed via fontconfig on every machine that runs this
+  // script (VPS + Chris's Mac).
+  const FONT_BOLD = 'Inter'
+  const FONT_BOLD_WEIGHT = '700'
+  const FONT_SEMIBOLD = 'Inter'
+  const FONT_SEMIBOLD_WEIGHT = '600'
+
   const lineHeight = Math.round(h * 0.095)
   const fontSize = Math.round(h * 0.09)
   const startY = Math.round(h * 0.22)
@@ -66,7 +79,7 @@ async function main() {
   const textBlocks = lines
     .map((line, i) => {
       const y = startY + i * lineHeight
-      return `<text x="${padX}" y="${y}" font-family="${fontStack}" font-size="${fontSize}" font-weight="700" fill="#ffffff">${escapeXml(line)}</text>`
+      return `<text x="${padX}" y="${y}" font-family="${FONT_BOLD}" font-weight="${FONT_BOLD_WEIGHT}" font-size="${fontSize}" fill="#ffffff">${escapeXml(line)}</text>`
     })
     .join('\n    ')
 
@@ -87,7 +100,7 @@ async function main() {
   <g filter="url(#shadow)">
     ${textBlocks}
   </g>
-  <text x="${padX}" y="${startY + lines.length * lineHeight + Math.round(fontSize * 0.85)}" font-family="${fontStack}" font-size="${Math.round(fontSize * 0.33)}" font-weight="600" fill="#F06292">${escapeXml(kicker)}</text>
+  <text x="${padX}" y="${startY + lines.length * lineHeight + Math.round(fontSize * 0.85)}" font-family="${FONT_SEMIBOLD}" font-weight="${FONT_SEMIBOLD_WEIGHT}" font-size="${Math.round(fontSize * 0.33)}" fill="#F06292">${escapeXml(kicker)}</text>
 </svg>`.trim()
 
   const buf = await sharp(inputPath)
