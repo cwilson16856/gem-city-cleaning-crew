@@ -1,0 +1,14 @@
+name: Notify Chris - bot-ready-for-merge
+on:
+  pull_request:
+    types: [labeled]
+jobs:
+  request-review:
+    if: github.event.label.name == "bot-ready-for-merge"
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - run: gh pr edit ${{ github.event.pull_request.number }} --add-reviewer cwilson16856 --repo cwilson16856/gem-city-cleaning-crew
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
