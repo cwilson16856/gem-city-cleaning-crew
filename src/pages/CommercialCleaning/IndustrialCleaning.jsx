@@ -59,7 +59,7 @@ const IndustrialCleaning = () => {
       title: "Factories & Plants",
       description: "Heavy-duty cleaning for factory environments, from production floors to administrative offices",
       icon: <FactoryIcon sx={{ fontSize: 32, color: 'white' }} />,
-      features: ["Floor coating maintenance", "Administrative area cleaning", "Restroom & break area care", "Scheduled deep cleans"],
+      features: ["Sweeping & mopping", "Administrative area cleaning", "Restroom & break area care", "Scheduled deep cleans"],
       popular: false
     },
     {

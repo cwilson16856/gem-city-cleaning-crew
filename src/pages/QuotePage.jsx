@@ -16,15 +16,22 @@ import {
 } from '@mui/material'
 import PhoneIcon from '@mui/icons-material/Phone'
 import EmailIcon from '@mui/icons-material/Email'
+import HomeIcon from '@mui/icons-material/Home'
+import BusinessIcon from '@mui/icons-material/Business'
 import { Helmet } from 'react-helmet-async'
+import { QUOTE_FORMS } from '../utils/quoteForms'
 
 // Import the styling
 import '../styles/homepages/HomePage.css'
 import '../styles/pages/ResidentialPage.css'
 
 const QuotePage = () => {
+  // This page is titled/optimized around house cleaning, so it defaults to the
+  // residential form, but visitors can switch to Commercial without leaving the page.
+  const [serviceType, setServiceType] = useState('residential')
   const [formLoaded, setFormLoaded] = useState(false)
   const theme = useTheme()
+  const activeForm = QUOTE_FORMS[serviceType]
 
   useEffect(() => {
     // Load the form embed script
@@ -41,6 +48,12 @@ const QuotePage = () => {
       }
     }
   }, [])
+
+  useEffect(() => {
+    // Switching residential/commercial swaps the iframe's src, so show the
+    // loading state again until the newly-selected form finishes loading.
+    setFormLoaded(false)
+  }, [serviceType])
 
   useEffect(() => {
     // The quote form is a cross-origin GHL iframe, so GA4's automatic form-detection
@@ -60,14 +73,14 @@ const QuotePage = () => {
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'generate_lead', {
           method: 'quote_form',
-          form_id: 'lHxZlrt3gWUXleLkGg53'
+          form_id: activeForm.formId
         })
       }
     }
 
     window.addEventListener('message', handleFormMessage)
     return () => window.removeEventListener('message', handleFormMessage)
-  }, [])
+  }, [activeForm.formId])
 
   return (
     <>
@@ -763,14 +776,28 @@ const QuotePage = () => {
                 }
               }}
             >
-              {/* Optional: Add a header to the form section */}
-              <Box sx={{ p: 3, pb: 1, borderBottom: '1px solid rgba(0, 0, 0, 0.06)' }}>
+              {/* Header + residential/commercial toggle */}
+              <Box sx={{ p: 3, pb: 2, borderBottom: '1px solid rgba(0, 0, 0, 0.06)' }}>
                 <Typography variant="h3" sx={{ fontWeight: 600, color: '#333' }}>
-                  Fill Out Your Free House Cleaning Quote Request
+                  Fill Out Your Free {activeForm.label} Quote Request
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#666', mt: 0.5 }}>
+                <Typography variant="body2" sx={{ color: '#666', mt: 0.5, mb: 2 }}>
                   Get your personalized <strong>cleaning estimate</strong> in just a few minutes
                 </Typography>
+                <Box sx={{ display: 'flex', gap: 1 }}>
+                  {['residential', 'commercial'].map((type) => (
+                    <Button
+                      key={type}
+                      size="small"
+                      variant={serviceType === type ? 'contained' : 'outlined'}
+                      startIcon={type === 'residential' ? <HomeIcon fontSize="small" /> : <BusinessIcon fontSize="small" />}
+                      onClick={() => setServiceType(type)}
+                      sx={{ textTransform: 'none', fontWeight: 600 }}
+                    >
+                      {QUOTE_FORMS[type].label}
+                    </Button>
+                  ))}
+                </Box>
               </Box>
 
               {/* Loading state for better UX */}
@@ -783,8 +810,8 @@ const QuotePage = () => {
               )}
 
               {/* Iframe with better styling */}
-              <Box 
-                sx={{ 
+              <Box
+                sx={{
                   position: 'relative',
                   background: '#ffffff',
                   '& iframe': {
@@ -793,14 +820,14 @@ const QuotePage = () => {
                 }}
               >
                 <iframe
-                  src="https://api.leadconnectorhq.com/widget/form/lHxZlrt3gWUXleLkGg53"
+                  src={`https://api.leadconnectorhq.com/widget/form/${activeForm.formId}`}
                   style={{
                     width: '100%',
                     height: '720px', // Slightly taller for better content fit
                     border: 'none',
                     background: 'transparent'
                   }}
-                  id="inline-lHxZlrt3gWUXleLkGg53" 
+                  id="inline-quote-form"
                   data-layout="{'id':'INLINE'}"
                   data-trigger-type="alwaysShow"
                   data-trigger-value=""
@@ -808,11 +835,11 @@ const QuotePage = () => {
                   data-activation-value=""
                   data-deactivation-type="neverDeactivate"
                   data-deactivation-value=""
-                  data-form-name="Request a House Cleaning Quote"
+                  data-form-name={activeForm.formName}
                   data-height="720"
-                  data-layout-iframe-id="inline-lHxZlrt3gWUXleLkGg53"
-                  data-form-id="lHxZlrt3gWUXleLkGg53"
-                  title="Request a House Cleaning Quote"
+                  data-layout-iframe-id="inline-quote-form"
+                  data-form-id={activeForm.formId}
+                  title={activeForm.formName}
                   onLoad={() => setFormLoaded(true)}
                 />
               </Box>

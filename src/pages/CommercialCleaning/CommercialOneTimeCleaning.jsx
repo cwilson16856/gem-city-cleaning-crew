@@ -71,7 +71,7 @@ const CommercialOneTimeCleaning = () => {
       title: "Quarterly Deep Cleaning",
       description: "Comprehensive seasonal cleaning to maintain professional standards year-round",
       icon: <TrendingUpIcon sx={{ fontSize: 32, color: 'white' }} />,
-      features: ["Top-to-bottom cleaning", "Equipment deep cleaning", "Air vent cleaning", "Carpet deep cleaning"],
+      features: ["Top-to-bottom cleaning", "Equipment deep cleaning", "Air vent cleaning", "Deep vacuuming"],
       popular: false
     },
     {
@@ -117,7 +117,7 @@ const CommercialOneTimeCleaning = () => {
     },
     {
       title: "Floors & Carpets",
-      tasks: ["Deep vacuum & carpet cleaning", "Floor stripping & waxing", "Baseboard cleaning", "Stain treatment"]
+      tasks: ["Deep vacuuming", "Sweeping & mopping", "Baseboard cleaning", "Edge & corner detailing"]
     },
     {
       title: "Windows & Glass Surfaces",
@@ -210,7 +210,7 @@ const CommercialOneTimeCleaning = () => {
     },
     {
       title: "Commercial Floor Deep Cleaning",
-      description: "Stripping, cleaning and restoration of commercial floors removing construction debris and buildup",
+      description: "Deep vacuuming, sweeping, and mopping of commercial floors removing construction debris and buildup",
       beforeImage: "/images/legacy/IMG-20240512-WA0010.webp",
       afterImage: "/images/legacy/WhatsApp-Image-2024-05-12-at-18.02.07_cdbb91df.webp",
       beforeAlt: "Commercial floors before professional deep cleaning - covered in construction debris",
@@ -1262,10 +1262,13 @@ const CommercialOneTimeCleaning = () => {
       </Box>
 
       {/* Quote Form Modal */}
-      <QuoteForm 
+      {/* Quote modal defaults to suggesting Commercial (this is a commercial page), but always
+          asks the user to confirm residential vs. commercial before loading either form. */}
+      <QuoteForm
         open={quoteFormOpen}
         onClose={handleCloseQuoteForm}
         title="Get Your Free Cleaning Estimate!"
+        defaultServiceType="commercial"
       />
     </>
   )

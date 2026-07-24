@@ -136,7 +136,7 @@ const theme = createTheme({
           '&:hover': {
             borderColor: '#AD1457',
             backgroundColor: 'rgba(216, 27, 96, 0.04)',
-            color: 'white'
+            color: '#AD1457'
           }
         }
       }

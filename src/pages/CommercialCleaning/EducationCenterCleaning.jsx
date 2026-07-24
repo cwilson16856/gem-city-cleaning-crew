@@ -569,10 +569,13 @@ const DaycareCleaning = () => {
       </Box>
 
       {/* Quote Form Dialog */}
-      <QuoteForm 
+      {/* Quote modal defaults to suggesting Commercial (this is a commercial page), but always
+          asks the user to confirm residential vs. commercial before loading either form. */}
+      <QuoteForm
         open={quoteFormOpen}
         onClose={handleCloseQuoteForm}
         title="Get Your Free Daycare Cleaning Estimate!"
+        defaultServiceType="commercial"
       />
     </>
   )

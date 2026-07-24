@@ -14,34 +14,55 @@ import {
 } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
 import PhoneIcon from '@mui/icons-material/Phone'
+import HomeIcon from '@mui/icons-material/Home'
+import BusinessIcon from '@mui/icons-material/Business'
+import { QUOTE_FORMS } from '../utils/quoteForms'
 
-const QuoteForm = ({ open, onClose, title = "Get Your Free Cleaning Estimate!" }) => {
+const QuoteForm = ({
+  open,
+  onClose,
+  title = "Get Your Free Cleaning Estimate!",
+  defaultServiceType
+}) => {
+  // Asked fresh every time the modal opens, regardless of which page it was
+  // triggered from — this is the safety net against a page ever being wired
+  // to the wrong form (residential vs. commercial).
+  const [serviceType, setServiceType] = useState(null)
   const [formLoaded, setFormLoaded] = useState(false)
+  const [showIframe, setShowIframe] = useState(false)
   const theme = useTheme()
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'))
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   useEffect(() => {
-    if (open) {
-      // Load the form embed script when modal opens
+    if (open && serviceType) {
+      // Load the form embed script once a service type is chosen
       const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]')
-      
+
       if (!existingScript) {
         const script = document.createElement('script')
         script.src = 'https://link.msgsndr.com/js/form_embed.js'
         script.async = true
-        script.onload = () => setFormLoaded(true)
         document.body.appendChild(script)
-      } else {
-        setFormLoaded(true)
       }
+
+      // Delay mounting the iframe by 1s so the modal chrome (header/footer)
+      // paints instantly and isn't blocked by the heavier GHL widget load.
+      const timer = setTimeout(() => setShowIframe(true), 1000)
+      return () => clearTimeout(timer)
+    } else {
+      setShowIframe(false)
     }
-  }, [open])
+  }, [open, serviceType])
 
   const handleClose = () => {
     setFormLoaded(false)
+    setShowIframe(false)
+    setServiceType(null)
     onClose()
   }
+
+  const activeForm = serviceType ? QUOTE_FORMS[serviceType] : null
 
   return (
     <Dialog
@@ -50,12 +71,10 @@ const QuoteForm = ({ open, onClose, title = "Get Your Free Cleaning Estimate!" }
       maxWidth="md"
       fullWidth
       fullScreen={fullScreen}
-      scroll="body"
       PaperProps={{
         sx: {
           borderRadius: fullScreen ? 0 : 3,
           maxHeight: fullScreen ? '100vh' : '95vh',
-          overflow: 'hidden',
           background: '#ffffff',
           boxShadow: theme.shadows[12],
           m: fullScreen ? 0 : 2
@@ -155,24 +174,59 @@ const QuoteForm = ({ open, onClose, title = "Get Your Free Cleaning Estimate!" }
       </DialogTitle>
 
       {/* Dialog Content */}
-      <DialogContent 
-        sx={{ 
-          p: 0, 
+      <DialogContent
+        sx={{
+          p: 0,
+          flex: '1 1 auto',
+          minHeight: 0,
           overflow: 'auto',
-          maxHeight: fullScreen 
-            ? 'calc(100vh - 180px)' 
-            : isMobile 
-              ? '60vh' 
-              : '70vh',
           '-webkit-overflow-scrolling': 'touch' // Smooth scrolling on iOS
         }}
       >
+        {/* Service type chooser — shown first, every time the modal opens */}
+        {!serviceType && (
+          <Box sx={{ p: { xs: 3, sm: 5 }, textAlign: 'center' }}>
+            <Typography
+              variant="h6"
+              sx={{
+                mb: 3,
+                fontWeight: 600,
+                color: theme.palette.text.primary,
+                fontFamily: 'Inter, sans-serif'
+              }}
+            >
+              What type of cleaning quote are you looking for?
+            </Typography>
+            <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
+              {['residential', 'commercial'].map((type) => (
+                <Button
+                  key={type}
+                  variant={defaultServiceType === type ? 'contained' : 'outlined'}
+                  size="large"
+                  startIcon={type === 'residential' ? <HomeIcon /> : <BusinessIcon />}
+                  onClick={() => setServiceType(type)}
+                  sx={{
+                    minWidth: 220,
+                    py: 1.5,
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    fontFamily: 'Inter, sans-serif',
+                    textTransform: 'none'
+                  }}
+                >
+                  {QUOTE_FORMS[type].label}
+                </Button>
+              ))}
+            </Box>
+          </Box>
+        )}
+
         {/* Loading state */}
-        {!formLoaded && (
+        {serviceType && !formLoaded && (
           <Box sx={{ p: { xs: 3, sm: 4 }, textAlign: 'center' }}>
-            <Typography 
-              variant="body1" 
-              sx={{ 
+            <Typography
+              variant="body1"
+              sx={{
                 color: theme.palette.text.secondary,
                 fontFamily: 'Inter, sans-serif',
                 fontSize: { xs: '0.9rem', sm: '1rem' }
@@ -184,49 +238,69 @@ const QuoteForm = ({ open, onClose, title = "Get Your Free Cleaning Estimate!" }
         )}
 
         {/* Iframe Form */}
-        <Box 
-          sx={{ 
-            position: 'relative',
-            background: '#ffffff',
-            minHeight: formLoaded ? 'auto' : { xs: 300, sm: 400 },
-            '& iframe': {
-              display: formLoaded ? 'block' : 'none'
-            }
-          }}
-        >
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/lHxZlrt3gWUXleLkGg53"
-            style={{
-              width: '100%',
-              height: fullScreen 
-                ? 'calc(100vh - 180px)' 
-                : isMobile 
-                  ? '60vh' 
-                  : '65vh',
-              minHeight: isMobile ? '400px' : '500px',
-              border: 'none',
-              background: 'transparent'
-            }}
-            id="inline-lHxZlrt3gWUXleLkGg53" 
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Request a House Cleaning Quote"
-            data-height={fullScreen 
-              ? 'calc(100vh - 180px)' 
-              : isMobile 
-                ? '60vh' 
-                : '65vh'}
-            data-layout-iframe-id="inline-lHxZlrt3gWUXleLkGg53"
-            data-form-id="lHxZlrt3gWUXleLkGg53"
-            title="Request a House Cleaning Quote"
-            onLoad={() => setFormLoaded(true)}
-          />
-        </Box>
+        {serviceType && (
+          <>
+            <Box sx={{ px: { xs: 2, sm: 3 }, pt: { xs: 1, sm: 1.5 } }}>
+              <Button
+                size="small"
+                onClick={() => {
+                  setServiceType(null)
+                  setShowIframe(false)
+                  setFormLoaded(false)
+                }}
+                sx={{ textTransform: 'none', fontFamily: 'Inter, sans-serif', color: theme.palette.text.secondary }}
+              >
+                ← Requesting a {activeForm.label} quote — not right? Switch
+              </Button>
+            </Box>
+
+            {showIframe && (
+              <Box
+                sx={{
+                  position: 'relative',
+                  background: '#ffffff',
+                  minHeight: formLoaded ? 'auto' : { xs: 300, sm: 400 },
+                  '& iframe': {
+                    display: formLoaded ? 'block' : 'none'
+                  }
+                }}
+              >
+                <iframe
+                  src={`https://api.leadconnectorhq.com/widget/form/${activeForm.formId}`}
+                  style={{
+                    width: '100%',
+                    height: fullScreen
+                      ? 'calc(100vh - 180px)'
+                      : isMobile
+                        ? '60vh'
+                        : '65vh',
+                    minHeight: isMobile ? '400px' : '500px',
+                    border: 'none',
+                    background: 'transparent'
+                  }}
+                  id="inline-quote-form"
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name={activeForm.formName}
+                  data-height={fullScreen
+                    ? 'calc(100vh - 180px)'
+                    : isMobile
+                      ? '60vh'
+                      : '65vh'}
+                  data-layout-iframe-id="inline-quote-form"
+                  data-form-id={activeForm.formId}
+                  title={activeForm.formName}
+                  onLoad={() => setFormLoaded(true)}
+                />
+              </Box>
+            )}
+          </>
+        )}
       </DialogContent>
 
       {/* Dialog Actions */}

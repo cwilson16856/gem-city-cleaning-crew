@@ -77,7 +77,7 @@ const CommercialPage = () => {
       title: "One-Time Deep Cleaning for Commercial",
       description: "Comprehensive deep cleaning services for commercial spaces - perfect for special events, move-ins, or quarterly cleanings",
       icon: <CleaningServicesIcon sx={{ fontSize: 32, color: 'white' }} />,
-      features: ["Complete deep sanitization", "Equipment & fixture cleaning", "Floor stripping & waxing", "Window & glass detailing"],
+      features: ["Complete deep sanitization", "Equipment & fixture cleaning", "Deep vacuum & mop", "Window & glass detailing"],
       popular: false,
       link: "/commercial-one-time-cleaning"
     },
@@ -101,7 +101,7 @@ const CommercialPage = () => {
       title: "Industrial Cleaning",
       description: "Heavy-duty cleaning for warehouses, manufacturing, and industrial facilities",
       icon: <CleaningServicesIcon sx={{ fontSize: 32, color: 'white' }} />,
-      features: ["Equipment degreasing", "Floor coating maintenance", "Safety compliance", "Specialized equipment"],
+      features: ["Equipment degreasing", "Sweeping & mopping", "Safety compliance", "Specialized equipment"],
       popular: false,
       link: "/industrial-cleaning"
     }
@@ -193,7 +193,7 @@ const CommercialPage = () => {
     {
       title: "Floors & Carpets",
       icon: <HomeRepairServiceIcon sx={{ fontSize: 32, color: 'white' }} />,
-      description: "Vacuuming, mopping, floor waxing, and carpet deep cleaning"
+      description: "Vacuuming, sweeping, and mopping all floor surfaces"
     },
     {
       title: "Windows & Glass",
@@ -895,10 +895,13 @@ const CommercialPage = () => {
       </Box>
 
       {/* Quote Form Modal */}
-      <QuoteForm 
+      {/* Quote modal defaults to suggesting Commercial (this is a commercial page), but always
+          asks the user to confirm residential vs. commercial before loading either form. */}
+      <QuoteForm
         open={quoteFormOpen}
         onClose={handleCloseQuoteForm}
         title="Get Your Free Cleaning Estimate!"
+        defaultServiceType="commercial"
       />
     </>
   )
