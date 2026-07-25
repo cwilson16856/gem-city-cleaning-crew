@@ -181,6 +181,10 @@ const Footer = () => {
           <p className={styles.bottomFooterText}>
             Proudly serving the Dayton area
           </p>
+          <div className={styles.legalLinks}>
+            <Link to="/privacy-policy" className={styles.legalLink}>Privacy Policy</Link>
+            <Link to="/terms-of-service" className={styles.legalLink}>Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer> 

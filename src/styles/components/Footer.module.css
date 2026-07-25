@@ -202,6 +202,22 @@
   margin: 0;
 }
 
+.legalLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.legalLink {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.legalLink:hover {
+  color: #e91e63;
+}
+
 /* Grid responsive layouts */
 .mainGrid {
   display: grid;
