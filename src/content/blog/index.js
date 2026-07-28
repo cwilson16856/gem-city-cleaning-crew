@@ -2,10 +2,78 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import wrightPattPcsMoveOutCleaningContent from './posts/wright-patterson-afb-pcs-move-out-cleaning-dayton.js'
 import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning-dayton-ud-wright-state.js'
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'wright-patterson-afb-pcs-move-out-cleaning-dayton',
+    title: 'Wright-Patterson PCS Move-Out Cleaning: A Dayton Guide',
+    description: 'PCS season means a base-housing or off-base rental inspection is coming. Here’s how Wright-Patterson families get a Dayton move-out clean that passes.',
+    publishedAt: '2026-07-28',
+    updatedAt: '2026-07-28',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Moving & Turnover',
+    tags: ['move-out cleaning', 'PCS cleaning', 'military housing', 'Wright-Patterson AFB', 'Dayton'],
+    keywords: [
+      'Wright-Patterson PCS move-out cleaning',
+      'military move-out cleaning Dayton',
+      'PCS cleaning checklist',
+      'base housing move-out inspection',
+      'off-base rental move-out cleaning Fairborn',
+      'how to pass a military housing move-out inspection',
+      'should you hire a cleaning service for PCS',
+      'move-out cleaning cost military housing',
+      'Wright-Patterson AFB relocation cleaning',
+    ],
+    problem: 'Wright-Patterson families PCS out every summer and face a documented move-out inspection — on base or on an off-base rental — right after the movers leave, with little time to get an empty home to standard.',
+    solution: 'A Dayton-area PCS move-out cleaning guide tied to Wright-Patterson timing, with a room-by-room inspection checklist and the on-base vs. off-base standards that decide whether you pass.',
+    targetAudience: 'Military families PCSing out of Wright-Patterson AFB from privatized on-base housing or off-base rentals in Fairborn, Riverside, Beavercreek, and Huber Heights',
+    coverImage: '/images/blog/wright-patterson-afb-pcs-move-out-cleaning-dayton.png',
+    featured: false,
+    content: wrightPattPcsMoveOutCleaningContent,
+    faqs: [
+      {
+        question: 'How do you pass a military housing move-out inspection?',
+        answer: 'Get the housing office’s clearing checklist up front and clean to it exactly — inspectors grade against that document, not a general impression. Focus on the high-scrutiny areas first: inside and behind the oven and fridge, inside cabinets, descaled tubs and showers, and clean grout. Do the deep clean after your household goods are picked up so every surface is reachable, then walk the home with the checklist before the inspector arrives. Cleaning to the written standard, not to "looks clean," is what actually passes.',
+      },
+      {
+        question: 'Do you have to professionally clean base housing before a PCS?',
+        answer: 'It depends on the housing office. Some privatized housing offices require a receipt from a professional cleaning service; many just require the home to pass inspection however you get it there. Ask your housing office which applies to you before you decide. Even where it isn’t required, families often hire a crew because the cleaning window is short — the movers leave and the inspection follows within a day or two, usually while you’re also trying to get on the road.',
+      },
+      {
+        question: 'Should you hire a cleaning service for a PCS move-out?',
+        answer: 'For a lot of Wright-Patterson families it’s worth it, mainly for timing. PCS week is packed with packing, out-processing, and travel, and the move-out clean has to land in the narrow gap after the packers leave and before the inspection. Paying a crew to deep-clean the empty home means you’re not scrubbing an oven at 10 p.m. the night before you drive out. If you have the time, a good room-by-room checklist covers what a professional clean would hit anyway.',
+      },
+      {
+        question: 'What does a PCS move-out clean include?',
+        answer: 'A full move-out clean covers the whole home to inspection standard: inside and behind the oven and fridge, inside all cabinets and drawers, descaled and disinfected bathrooms, wiped walls and baseboards, clean windows and tracks, dusted fixtures and vents, and vacuumed, swept, and mopped floors. On base, it may also include the garage, patio, and yard per the clearing checklist. It’s more thorough than a standard cleaning because it targets the surfaces a weekly clean normally skips.',
+      },
+      {
+        question: 'How much does move-out cleaning cost for military housing?',
+        answer: 'It varies with the size and condition of the home, so the honest answer is that a quote based on your specific place is the only accurate number. Pricing generally scales with square footage, number of bathrooms, and how much deep-cleaning the unit needs — a larger home left in rough shape costs more than a small, well-kept one. The best move is to get a free quote a couple of weeks before your PCS date, while you can still lock in a summer appointment.',
+      },
+      {
+        question: 'When should you book move-out cleaning before a PCS?',
+        answer: 'Book two to three weeks ahead if you’re moving in the May-through-August peak, which is when most Wright-Patterson PCS moves happen and when Dayton-area cleaners are busiest. The clean itself has to be scheduled for after your household goods pickup and before your inspection, so pin down those dates first, then book into that gap. Waiting until the last week often means competing with every other family PCSing on the same timeline.',
+      },
+      {
+        question: 'Who is responsible for cleaning an off-base rental when you PCS out?',
+        answer: 'The tenant is, in almost every case. Your lease sets the standard — some say "broom clean," others require professional cleaning — and meeting it is what protects your security deposit. Under Ohio law, a landlord has to return your deposit, minus any itemized deductions, within 30 days of the lease ending, so leaving the rental clean and documenting its condition with dated photos is the best way to get the full amount back after you’ve already left the area.',
+      },
+    ],
+    howToTitle: 'How to Clean a Home for a PCS Move-Out Inspection',
+    howToSteps: [
+      { name: 'Get the checklist first', text: 'Pull the housing office’s clearing checklist or re-read your lease so you’re cleaning to the actual standard, not guessing.' },
+      { name: 'Start with an empty home', text: 'Clean after household goods are picked up — an empty unit is the only time you can reach behind appliances, inside closets, and the floor under everything.' },
+      { name: 'Deep clean the kitchen', text: 'Pull out the stove and fridge, clean behind and under them, then inside the oven, fridge, cabinets, and drawers before sanitizing counters and the sink.' },
+      { name: 'Deep clean the bathrooms', text: 'Descale and scrub the tub, shower, and glass, clean grout, disinfect the toilet, then wipe the vanity, mirror, and vent cover.' },
+      { name: 'Walls, windows, and fixtures', text: 'Erase marks and hand prints, dust ceiling fans and light fixtures, and clean interior windows, sills, and tracks.' },
+      { name: 'Do the floors last', text: 'Vacuum all carpet and spot-treat stains, then sweep and mop hard floors, working toward the door.' },
+      { name: 'Final walkthrough', text: 'Walk the home with the checklist in hand, confirm nothing personal is left behind, and take dated photos of the empty, clean unit for your records.' },
+    ],
+  },
   {
     slug: 'student-move-in-cleaning-dayton-ud-wright-state',
     title: 'Move-In Cleaning for Dayton Student Rentals: 2026 Guide',
