@@ -2,11 +2,78 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import winterSaltMudFloorProtectionContent from './posts/winter-salt-mud-floor-protection-dayton.js'
 import wrightPattPcsMoveOutCleaningContent from './posts/wright-patterson-afb-pcs-move-out-cleaning-dayton.js'
 import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning-dayton-ud-wright-state.js'
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'winter-salt-mud-floor-protection-dayton',
+    title: 'How to Protect Dayton Floors From Winter Salt and Mud',
+    description: 'Road salt and slush wreck Dayton’s older hardwood floors every winter. Here’s how to protect your entryways and lift salt stains before they leave a mark.',
+    publishedAt: '2026-07-30',
+    updatedAt: '2026-07-30',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Local Guides & Seasonal',
+    tags: ['winter cleaning', 'floor care', 'road salt', 'entryway maintenance', 'Dayton'],
+    keywords: [
+      'protect hardwood floors from road salt',
+      'remove salt stains from floors',
+      'winter mud and salt cleaning Dayton',
+      'how to clean road salt off hardwood floors',
+      'entryway mats for winter salt',
+      'does road salt damage hardwood floors',
+      'winter floor protection Miami Valley',
+      'vinegar to remove salt residue floors',
+      'ice melt hardwood floor damage',
+    ],
+    problem: 'Every Dayton winter, road salt and mud get tracked across floors — and the alkaline, gritty residue dulls finishes and stains older hardwood, which the Miami Valley has a lot of.',
+    solution: 'A Dayton-specific winter floor-care guide: an entryway setup that stops salt and mud at the door, a finish-safe method for removing salt stains, and extra care for the older homes most at risk.',
+    targetAudience: 'Dayton-area homeowners and renters — especially those in older Oregon District, Wright-Dunbar, and Oakwood homes with original hardwood — protecting floors through winter salt season',
+    coverImage: '/images/blog/winter-salt-mud-floor-protection-dayton.png',
+    featured: false,
+    content: winterSaltMudFloorProtectionContent,
+    faqs: [
+      {
+        question: 'Does road salt actually damage hardwood floors?',
+        answer: 'Yes. Road salt and ice melt leave an alkaline, gritty residue that scratches and dulls a floor’s finish underfoot, and if it’s left to sit, it draws moisture that can cause whitish stains, cupping, and discoloration over a winter. Older hardwood with a worn finish — common in Dayton’s Oregon District and Oakwood homes — shows the damage fastest, which is why prevention at the door matters more than any single cleaning.',
+      },
+      {
+        question: 'How do you get salt stains off hardwood floors?',
+        answer: 'Vacuum up the loose grit first, then lightly mist the stain with a solution of about one tablespoon of white vinegar per quart of warm water. Wipe it with a damp — not wet — microfiber cloth, then go over it with a dry cloth so no moisture is left behind. Vinegar works because it neutralizes the alkaline salt; a plain neutral cleaner just spreads it. Use the solution sparingly and never let water stand on the wood.',
+      },
+      {
+        question: 'What’s the best entryway setup to keep salt and mud out?',
+        answer: 'Two mats and a shoes-off habit. Put a coarse, stiff-bristled scraper mat outside the door to knock chunks of salt and mud off boot treads, and an absorbent mat just inside to catch meltwater and fine grit. Add a boot tray and a bench so taking shoes off is easy. Then actually shake out and vacuum the mats a couple times a week — a salt-saturated mat just tracks it back onto the floor.',
+      },
+      {
+        question: 'How often should you clean floors during winter in Dayton?',
+        answer: 'During active snow or melt, wipe down entryway and high-traffic floors daily with a damp microfiber mop, and do a full floor cleaning weekly. The point of the daily pass is to catch salt before it spreads and dries into a residue. In quieter stretches of winter, a normal weekly clean is fine — it’s the treated-road, freeze-thaw days that call for extra attention.',
+      },
+      {
+        question: 'Does vinegar really neutralize road salt on floors?',
+        answer: 'Yes. Salt residue is alkaline, and a diluted white-vinegar solution is mildly acidic, so it neutralizes the salt and lets it wipe away instead of smearing around. The catch on hardwood and laminate is restraint: keep it well diluted, apply it as a light mist, and dry the floor right after. Too much vinegar or standing water can dull or swell a wood finish, trading one problem for another.',
+      },
+      {
+        question: 'Will ice melt hurt my floors and my pet’s paws?',
+        answer: 'It can do both. Tracked-in ice melt dulls floor finishes the same way rock salt does, and the granules can irritate or crack a dog’s paw pads. Wiping paws at the door protects both the floor and the pet, and switching to a pet-safe ice melt on your own walk and steps reduces what comes inside in the first place. A mat and a paw towel by the door handle most of it.',
+      },
+      {
+        question: 'When does winter salt season start in the Miami Valley?',
+        answer: 'Roughly December through March, whenever road crews start treating for ice and the freeze-thaw cycle keeps yards muddy. Some years it starts in late November; some years March keeps handing out one more slushy week. Because it stretches across four-plus months, it’s worth setting up your entryway and floor-care routine before the first hard freeze rather than reacting to the first bad stain.',
+      },
+    ],
+    howToTitle: 'How to Protect and Clean Dayton Floors Through Salt Season',
+    howToSteps: [
+      { name: 'Set up a two-mat entryway', text: 'Place a coarse, stiff-bristled scraper mat outside the door and an absorbent mat just inside, so salt and mud come off boots before they reach the floor.' },
+      { name: 'Make winter a shoes-off house', text: 'Add a boot tray and a bench by the door so removing shoes is the easy default — it’s the single biggest thing that keeps salt off your floors.' },
+      { name: 'Sweep or vacuum grit daily', text: 'During active snow or melt, vacuum or dry-sweep entry and high-traffic floors every day to lift abrasive salt granules before they’re ground into the finish.' },
+      { name: 'Neutralize salt with diluted vinegar', text: 'Lightly mist any salt haze with about one tablespoon of white vinegar per quart of warm water, then wipe with a damp microfiber cloth — the acid neutralizes the alkaline residue.' },
+      { name: 'Dry the floor completely', text: 'Follow with a dry cloth or mop so no moisture is left standing, especially on hardwood and laminate seams where water causes staining and warping.' },
+      { name: 'Shake out and reset the mats', text: 'A couple times a week, shake out the outdoor mat and vacuum the indoor one so a salt-saturated mat isn’t re-depositing grit back onto the floor.' },
+    ],
+  },
   {
     slug: 'wright-patterson-afb-pcs-move-out-cleaning-dayton',
     title: 'Wright-Patterson PCS Move-Out Cleaning: A Dayton Guide',
