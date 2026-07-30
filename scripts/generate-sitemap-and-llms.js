@@ -8,58 +8,15 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { getAllPosts } from '../src/content/blog/index.js'
-import { CITY_SLUGS } from '../src/data/locations.js'
+import { SITEMAP_ROUTES } from './routes.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.join(__dirname, '..')
 const SITE_URL = 'https://gemcitycleaningcrew.com'
 const TODAY = new Date().toISOString().split('T')[0]
 
-// Static, non-dynamic routes (matches src/App.jsx's <Route> list).
-const STATIC_ROUTES = [
-  { path: '/', changefreq: 'weekly', priority: '1.0' },
-  { path: '/residential', changefreq: 'monthly', priority: '0.9' },
-  { path: '/residential-house-cleaning-checklist', changefreq: 'monthly', priority: '0.7' },
-  { path: '/recurring-cleaning-service', changefreq: 'monthly', priority: '0.9' },
-  { path: '/deep-cleaning', changefreq: 'monthly', priority: '0.9' },
-  { path: '/move-in-out-cleaning', changefreq: 'monthly', priority: '0.8' },
-  { path: '/move-in-cleaning', changefreq: 'monthly', priority: '0.7' },
-  { path: '/move-out-cleaning', changefreq: 'monthly', priority: '0.7' },
-  { path: '/airbnb-cleaning-service', changefreq: 'monthly', priority: '0.7' },
-  { path: '/apartment-cleaning', changefreq: 'monthly', priority: '0.7' },
-  { path: '/condo-cleaning', changefreq: 'monthly', priority: '0.7' },
-  { path: '/kitchen-cleaning-services', changefreq: 'monthly', priority: '0.6' },
-  { path: '/bathroom-cleaning-services', changefreq: 'monthly', priority: '0.6' },
-  { path: '/commercial', changefreq: 'monthly', priority: '0.9' },
-  { path: '/commercial-one-time-cleaning', changefreq: 'monthly', priority: '0.7' },
-  { path: '/office-cleaning', changefreq: 'monthly', priority: '0.7' },
-  { path: '/office-cleaning-checklist', changefreq: 'monthly', priority: '0.6' },
-  { path: '/retail-cleaning', changefreq: 'monthly', priority: '0.7' },
-  { path: '/school-cleaning', changefreq: 'monthly', priority: '0.7' },
-  { path: '/apartment-building-cleaning', changefreq: 'monthly', priority: '0.7' },
-  { path: '/industrial-cleaning', changefreq: 'monthly', priority: '0.7' },
-  { path: '/locations', changefreq: 'monthly', priority: '0.8' },
-  { path: '/quote', changefreq: 'monthly', priority: '0.8' },
-  { path: '/blog', changefreq: 'weekly', priority: '0.7' },
-  { path: '/about-us', changefreq: 'monthly', priority: '0.6' },
-]
-
-// City slugs with dedicated location pages — sourced from src/data/locations.js,
-// the single source of truth (also used by LocationPage.jsx itself).
-// Beavercreek's commercial page has a special dedicated route.
-for (const city of CITY_SLUGS) {
-  STATIC_ROUTES.push({ path: `/locations/${city}/house-cleaning-services`, changefreq: 'monthly', priority: '0.6' })
-  STATIC_ROUTES.push({
-    path: city === 'beavercreek'
-      ? '/locations/beavercreek/commercial-services'
-      : `/locations/${city}/commercial-cleaning-services`,
-    changefreq: 'monthly',
-    priority: '0.6',
-  })
-}
-
 function buildSitemap(posts) {
-  const urlEntries = STATIC_ROUTES.map(({ path: routePath, changefreq, priority }) => `  <url>
+  const urlEntries = SITEMAP_ROUTES.map(({ path: routePath, changefreq, priority }) => `  <url>
     <loc>${SITE_URL}${routePath}</loc>
     <lastmod>${TODAY}</lastmod>
     <changefreq>${changefreq}</changefreq>
@@ -153,7 +110,7 @@ function main() {
 
   const sitemapXml = buildSitemap(posts)
   fs.writeFileSync(path.join(ROOT, 'public', 'sitemap.xml'), sitemapXml)
-  console.log(`Wrote public/sitemap.xml (${STATIC_ROUTES.length} static routes + ${posts.length} blog posts)`)
+  console.log(`Wrote public/sitemap.xml (${SITEMAP_ROUTES.length} static routes + ${posts.length} blog posts)`)
 
   const llmsTxt = buildLlmsTxt(posts)
   fs.writeFileSync(path.join(ROOT, 'public', 'llms.txt'), llmsTxt)
