@@ -2,12 +2,81 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import airbnbStrTurnoverContent from './posts/airbnb-str-turnover-cleaning-dayton.js'
 import winterSaltMudFloorProtectionContent from './posts/winter-salt-mud-floor-protection-dayton.js'
 import wrightPattPcsMoveOutCleaningContent from './posts/wright-patterson-afb-pcs-move-out-cleaning-dayton.js'
 import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning-dayton-ud-wright-state.js'
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'airbnb-str-turnover-cleaning-dayton',
+    title: 'Airbnb Turnover Cleaning in Dayton: A Fast Host Guide',
+    description: 'First Four weekend fills Dayton’s rentals fast. Here’s how short-term-rental hosts near UD Arena nail a same-day Airbnb turnover clean before the next guest.',
+    publishedAt: '2026-08-04',
+    updatedAt: '2026-08-04',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Moving & Turnover',
+    tags: ['Airbnb cleaning', 'short-term rental', 'turnover cleaning', 'Dayton', 'UD Arena', 'First Four'],
+    keywords: [
+      'Airbnb turnover cleaning Dayton',
+      'short-term rental cleaning Dayton Ohio',
+      'Airbnb cleaning checklist',
+      'vacation rental turnover cleaning',
+      'how to clean an Airbnb between guests',
+      'same-day turnover cleaning',
+      'STR cleaning service Dayton',
+      'UD Arena First Four short-term rental',
+      'Airbnb deep cleaning vs turnover',
+      'guest-ready reset checklist',
+    ],
+    problem: 'Dayton short-term rentals turn over in back-to-back bursts around events like the UD Arena First Four, and a rushed same-day clean is where reviews and ratings quietly slip.',
+    solution: 'A Dayton-specific short-term-rental turnover system: a room-by-room reset checklist, a same-day sequence built around the four-hour window, and when to bring in a crew for the surges.',
+    targetAudience: 'Dayton-area Airbnb, VRBO, and short-term-rental hosts — especially those near UD Arena, downtown, and Wright-Patterson — managing back-to-back guest turnovers',
+    coverImage: '/images/blog/airbnb-str-turnover-cleaning-dayton.png',
+    featured: false,
+    content: airbnbStrTurnoverContent,
+    faqs: [
+      {
+        question: 'How long does an Airbnb turnover clean take?',
+        answer: 'A one- or two-bedroom short-term rental typically takes about two to three hours for a full turnover — strip and remake beds, clean the kitchen and bathroom, dust, reset, restock, and do the floors. Laundry is the limiting factor, since a wash-and-dry cycle runs longer than the cleaning itself, which is why hosts start it the moment they walk in. A larger multi-bedroom unit, or one left in rough shape, can push past four hours and is where a two-person crew makes a same-day turnaround realistic.',
+      },
+      {
+        question: 'What is the 4-hour turnover window for short-term rentals?',
+        answer: 'Most short-term rentals set checkout at 11am and check-in at 3pm, which leaves roughly a four-hour window to fully reset the unit between guests. Everything — laundry, kitchen, bathroom, dusting, restocking, and floors — has to fit inside it. In Dayton, that window gets tight during demand spikes like First Four weekend, when the same unit may turn over on consecutive days, so hosts either tighten their process or line up cleaning help ahead of time.',
+      },
+      {
+        question: 'How often should I deep clean my Airbnb versus just cleaning between guests?',
+        answer: 'Turnover clean between every guest; deep clean on a regular schedule on top of that — roughly monthly for an active rental, and always once before your busy season. Turnovers keep the visible surfaces guest-ready, but they intentionally skip the slow jobs: inside the oven and fridge, grout, baseboards, vents, descaling, and behind furniture. In Dayton’s moderately hard water, bathroom scale in particular builds up faster than a turnover clean can address, so a periodic deep clean is what keeps the unit from slowly sliding.',
+      },
+      {
+        question: 'Why is cleanliness so important for Airbnb reviews?',
+        answer: 'Cleanliness is scored as its own category in Airbnb reviews and is one of the first things guests mention, good or bad. Because future guests read those reviews before booking, a single “not clean” comment can suppress your bookings for months, while a run of spotless stays builds the rating that lets you charge more. For a short-term rental, the cleaning isn’t a chore attached to the business — it basically is the product.',
+      },
+      {
+        question: 'When is the busiest season for Dayton short-term rentals?',
+        answer: 'The biggest concentrated surge is the NCAA First Four at UD Arena in mid-March — March 16–17 in 2027, expanded to six games in Dayton that year — which fills rentals near the University of Dayton. Other reliable spikes include the Dayton Air Show in mid-June, UD move-in and family weekends in August and October, graduation in May, and steady year-round demand from Wright-Patterson AFB visitors and relocating military families. The common thread is that bookings cluster into a few days at a time rather than spreading out.',
+      },
+      {
+        question: 'Should I hire a cleaning service or clean my rental myself?',
+        answer: 'If your bookings are occasional and your turnovers rarely overlap, self-cleaning is very manageable with a consistent checklist. The case for hiring a crew gets stronger as volume rises: back-to-back same-day turnovers, multiple properties, busy stretches like First Four weekend, or simply hosting from out of town. A professional turnover buys you consistency and a reliable backup — the two things that protect your review score — so many Dayton hosts self-clean in slow months and bring in help for the surges.',
+      },
+      {
+        question: 'What should be restocked between Airbnb guests?',
+        answer: 'At minimum: fresh linens and towels, toilet paper, hand soap and basic toiletries, trash bags, paper towels, dish soap, and coffee and filters if you provide them. Restocking is easy to rush and easy to notice — a guest who finds one square of toilet paper left will remember it. Keeping a small par level of each item on-site and checking it every turn, as part of the same routine as the cleaning, prevents the mid-stay message asking where the supplies are.',
+      },
+    ],
+    howToTitle: 'How to Do a Same-Day Airbnb Turnover Clean',
+    howToSteps: [
+      { name: 'Strip and start laundry first', text: 'Pull all sheets and towels the second you walk in and get a load going — laundry is the longest single task, so it should run in the background while you clean everything else.' },
+      { name: 'Clear trash and leftovers', text: 'Walk the whole unit pulling trash, dishes, and anything the last guest left in the fridge, so you are cleaning empty surfaces.' },
+      { name: 'Reset the kitchen', text: 'Load or empty the dishwasher, wipe counters and appliances, clean the sink, and restock the basics guests expect like coffee, filters, and dish soap.' },
+      { name: 'Clean and restock the bathroom', text: 'Scrub and descale the toilet, shower, and fixtures, wipe the vanity and mirror, then set out fresh towels and restock toilet paper and toiletries.' },
+      { name: 'Dust and reset living spaces', text: 'Dust top to bottom, remake the beds with fresh linens, straighten cushions, and reset remotes, chargers, and welcome materials to their photo-ready spots.' },
+      { name: 'Clean the floors last', text: 'Vacuum all carpet, then sweep and mop hard floors, working toward the door so you finish on a clean surface.' },
+      { name: 'Final walk-through and photos', text: 'Walk each room as if you were the guest, fix anything off, and snap a few reset photos as your record that the unit went out clean.' },
+    ],
+  },
   {
     slug: 'winter-salt-mud-floor-protection-dayton',
     title: 'How to Protect Dayton Floors From Winter Salt and Mud',
