@@ -2,6 +2,7 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import recurringCleaningServiceContent from './posts/what-to-expect-recurring-cleaning-service-dayton.js'
 import airbnbStrTurnoverContent from './posts/airbnb-str-turnover-cleaning-dayton.js'
 import winterSaltMudFloorProtectionContent from './posts/winter-salt-mud-floor-protection-dayton.js'
 import wrightPattPcsMoveOutCleaningContent from './posts/wright-patterson-afb-pcs-move-out-cleaning-dayton.js'
@@ -9,6 +10,69 @@ import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'what-to-expect-recurring-cleaning-service-dayton',
+    title: 'Recurring House Cleaning in Dayton: What to Expect',
+    description: "Weekly or bi-weekly cleaning in the Miami Valley? Here's what a recurring house cleaning service includes each visit, what it skips, and how often to book.",
+    publishedAt: '2026-08-06',
+    updatedAt: '2026-08-06',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Cleaning Tips',
+    tags: ['recurring cleaning', 'house cleaning', 'cleaning frequency', 'residential cleaning', 'Dayton'],
+    keywords: [
+      'recurring cleaning service Dayton',
+      'what to expect from a recurring cleaning service',
+      'recurring house cleaning Dayton Ohio',
+      'weekly vs bi-weekly cleaning',
+      'what is included in a recurring clean',
+      'recurring vs deep cleaning',
+      'how often should you get your house cleaned',
+      'do you tip a recurring house cleaner',
+      'do you need to be home for house cleaner',
+      'bi-weekly cleaning service Dayton',
+      'Miami Valley house cleaning',
+    ],
+    problem: 'Cleaning companies advertise recurring service but rarely explain what you actually get — what happens each visit, what gets skipped between visits, how often you really need it, and the access and etiquette logistics no one mentions upfront.',
+    solution: "A plain-English guide to how recurring house cleaning works: what's included and excluded each visit, recurring vs. a one-time deep clean, choosing weekly/bi-weekly/monthly, and why it pays off in the Miami Valley's hard water, pollen, and salt seasons.",
+    targetAudience: 'Dayton-area homeowners — especially dual-income and commuter households in Kettering, Oakwood, Centerville, Beavercreek, and Springboro — weighing a standing weekly or bi-weekly cleaning schedule',
+    coverImage: '/images/blog/what-to-expect-recurring-cleaning-service-dayton.png',
+    featured: false,
+    content: recurringCleaningServiceContent,
+    faqs: [
+      {
+        question: "What's included in a recurring house cleaning?",
+        answer: 'A standard recurring clean covers the surfaces that get dirty on a normal week: dusting reachable surfaces and fixtures, wiping counters and high-touch spots like switches and doorknobs, cleaning and disinfecting bathrooms (toilets, tubs, showers, sinks, mirrors), wiping the kitchen including the stovetop and appliance exteriors and the microwave, emptying trash, and vacuuming and mopping all floors. It is designed to maintain a consistent baseline every visit rather than tackle deep buildup.',
+      },
+      {
+        question: "What's the difference between a recurring clean and a deep clean?",
+        answer: 'A deep clean is a top-to-bottom reset that hits what a normal clean skips — inside the oven and fridge, grout, baseboards, descaling fixtures, and behind furniture. A recurring clean maintains the baseline that deep clean established, so it is faster and costs less per visit. Most companies start a new recurring client with a deep or initial clean, then switch to the lighter recurring rhythm, because trying to do first-time buildup at a recurring price means either a rushed job or a surprise on the bill.',
+      },
+      {
+        question: 'How often should I have my house cleaned — weekly, bi-weekly, or monthly?',
+        answer: 'It depends on your household, but bi-weekly is the practical default for most homes — frequent enough that dust, bathroom scale, and floor grime never get ahead of you, without the cost of a weekly appointment. Weekly makes sense with pets, kids, allergies, or a high-traffic home. Monthly works for smaller or lower-traffic homes, as long as you are comfortable with each visit doing a bit more work since more buildup accumulates between cleanings.',
+      },
+      {
+        question: 'How much does recurring house cleaning cost per visit?',
+        answer: 'Pricing scales with the size and condition of your home, the number of bathrooms, and how often you are on the schedule — more frequent visits generally cost less per visit because there is less buildup each time. Because it depends on your specific home, the only accurate number is a quote based on your place. As a rule of thumb, expect your first (initial or deep) clean to cost more than the ongoing recurring visits that follow it.',
+      },
+      {
+        question: 'Do you tip a recurring house cleaner?',
+        answer: 'Tipping is always optional and never expected, but many recurring clients do tip, especially around the holidays or after an unusually big job. Because you often have the same crew every visit, a common approach is a modest per-visit tip or a larger year-end thank-you rather than tipping heavily every single time. If you would rather not tip, a genuine review or a referral is just as valued — for a local service business, both go a long way.',
+      },
+      {
+        question: 'Do I need to be home when the cleaners come?',
+        answer: 'No — most recurring clients are not home during the clean, which is part of the appeal for commuter households. You just need to arrange reliable access: a spare key, a garage or lockbox code, or a smart lock. A trustworthy company keeps that access information secure and sends the same familiar crew, so you are not letting a stranger in each time. Being home for the first visit to walk through your priorities is helpful, but not required after that.',
+      },
+      {
+        question: 'Should I tidy before the cleaner arrives?',
+        answer: "A quick tidy helps, but don't pre-clean. Clearing clutter — toys, papers, dishes, loose items on counters and floors — lets the crew spend their time actually cleaning surfaces instead of moving your things around, which means a better result in the same visit. You don't need to scrub anything ahead of time; that's the job. Think of it as clearing the runway, not doing the work.",
+      },
+      {
+        question: 'Will I get the same cleaning team every visit?',
+        answer: 'With a good recurring service, usually yes — and it matters. A consistent crew learns your home: which surfaces you care about most, where the pets are, how you like things left. That familiarity is a big part of why recurring service gets more efficient and more consistent over time compared with a rotating cast of one-off cleaners. If crew consistency is important to you, it is a fair thing to ask about before you sign up.',
+      },
+    ],
+  },
   {
     slug: 'airbnb-str-turnover-cleaning-dayton',
     title: 'Airbnb Turnover Cleaning in Dayton: A Fast Host Guide',
