@@ -2,6 +2,7 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import hardWaterStainsContent from './posts/how-to-remove-hard-water-stains-bathroom-fixtures-dayton.js'
 import prepHomeBeforeCleaningCrewContent from './posts/how-to-prep-home-before-cleaning-crew-dayton.js'
 import recurringCleaningServiceContent from './posts/what-to-expect-recurring-cleaning-service-dayton.js'
 import airbnbStrTurnoverContent from './posts/airbnb-str-turnover-cleaning-dayton.js'
@@ -11,6 +12,73 @@ import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'how-to-remove-hard-water-stains-bathroom-fixtures-dayton',
+    title: 'How to Remove Hard Water Stains From Bathroom Fixtures',
+    description: "Dayton's tap water runs about 9 grains hard, so fixtures spot fast. Here's how to remove hard water stains from faucets, glass, and showerheads safely.",
+    publishedAt: '2026-08-13',
+    updatedAt: '2026-08-13',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Cleaning Tips',
+    tags: ['hard water stains', 'bathroom cleaning', 'limescale removal', 'cleaning tips', 'Dayton'],
+    keywords: [
+      'how to remove hard water stains from bathroom fixtures',
+      'remove hard water stains from faucets',
+      'remove limescale from shower glass',
+      'hard water stains Dayton Ohio',
+      'how to descale a showerhead',
+      'does vinegar remove hard water stains',
+      'how to prevent hard water stains',
+      'remove water spots from chrome fixtures',
+      'clean hard water stains without damaging finish',
+      'hard water spots bathroom Miami Valley',
+    ],
+    problem: "Dayton-area tap water is hard enough (about 9 grains per gallon after county softening) to leave chalky mineral buildup on faucets, showerheads, and glass — and regular cleaning spray just slides over it.",
+    solution: 'A finish-safe, step-by-step method using white vinegar and baking soda to dissolve and lift hard water stains from bathroom fixtures, plus daily habits that keep the scale from coming back.',
+    targetAudience: 'Dayton-area homeowners and renters — across Kettering, Centerville, Beavercreek, and the surrounding Miami Valley — dealing with hard water spotting on bathroom fixtures and shower glass',
+    coverImage: '/images/blog/how-to-remove-hard-water-stains-bathroom-fixtures-dayton.png',
+    featured: false,
+    content: hardWaterStainsContent,
+    faqs: [
+      {
+        question: 'Does vinegar really remove hard water stains?',
+        answer: 'Yes. Hard water stains are alkaline mineral deposits — mostly calcium and magnesium — and white vinegar is mildly acidic, so it dissolves the scale instead of just smearing it around like a neutral cleaner does. The key is contact time: let the vinegar dwell on the deposit for 10 to 60 minutes depending on how thick it is, rather than wiping it off right away. For crusty buildup on faucets and showerheads, soaking with a vinegar-filled bag works far better than scrubbing.',
+      },
+      {
+        question: "What removes hard water stains that vinegar won't budge?",
+        answer: 'For deposits vinegar alone cannot lift, add mechanical help without adding scratches: make a paste of baking soda and a little water, apply it over the vinegar-dampened area, and gently work it with a soft cloth or toothbrush. The baking soda gives just enough grit to break the crust while staying safe on glass and chrome. Very old, thick limescale may need a second full soak. Save commercial descalers as a last resort, and never use abrasive pads or scouring powder on polished or coated finishes.',
+      },
+      {
+        question: "Is Dayton's water hard enough to cause this?",
+        answer: 'Yes. Montgomery County softens its water to roughly 9 grains per gallon before distribution, which still falls in the "hard" category, so mineral spotting on fixtures and glass is common across Dayton, Kettering, Centerville, Beavercreek, and the surrounding suburbs. The county notes many residents do not install a home softener because the water is already partially treated — but partially softened still leaves enough mineral content to build up on surfaces that get wet and dry every day.',
+      },
+      {
+        question: 'How do I clean a clogged showerhead without taking it off?',
+        answer: 'Fill a plastic bag with white vinegar, raise it around the showerhead until the nozzles are submerged, and secure it to the neck with a rubber band. Leave it about an hour — overnight for heavy buildup — then remove the bag, run hot water to flush loosened minerals, and scrub any remaining spots off the rubber nozzle tips with a soft toothbrush. This clears the clogged jets that cause weak or crooked spray without any tools or disassembly.',
+      },
+      {
+        question: 'Can hard water stains permanently damage fixtures or glass?',
+        answer: 'If left long enough, yes — mineral deposits can etch into glass and pit or dull metal finishes over time, and at that point the surface itself is damaged rather than just coated. That is why regular removal matters. The bigger risk for most people, though, is self-inflicted: scrubbing with abrasive pads or harsh powders scratches the finish, and those micro-scratches trap minerals and make future spotting worse. Gentle acid plus time is almost always safer than aggressive scrubbing.',
+      },
+      {
+        question: 'How do I stop hard water stains from coming back?',
+        answer: 'Do not let water sit and evaporate on the surface. Squeegee shower glass after every use, keep a microfiber cloth by the sink to dry the faucet after use, run the exhaust fan so surfaces dry faster, and do a quick weekly vinegar wipe so scale never accumulates. These small habits prevent buildup far more easily than removing it later, and they matter more than any single product in a hard water area like the Miami Valley.',
+      },
+      {
+        question: 'Is a commercial descaler like CLR safe on bathroom fixtures?',
+        answer: 'It can be, but read the label carefully and treat it as a last resort after vinegar. Products like CLR are effective on heavy limescale, yet many warn against use on coated, plated, colored, or natural-stone surfaces because the stronger acids can damage the finish. If you do use one, test an inconspicuous spot first, keep contact time short, rinse thoroughly, and never mix it with other cleaners. For routine hard water spotting, diluted white vinegar handles the job with far less risk.',
+      },
+    ],
+    howToTitle: 'How to Remove Hard Water Stains From Bathroom Fixtures',
+    howToSteps: [
+      { name: 'Mix a vinegar solution', text: 'Combine equal parts white vinegar and water in a spray bottle for light spotting, and keep a jug of straight vinegar handy for soaking crusty buildup.' },
+      { name: 'Soak the faucets and showerhead', text: 'Wrap a vinegar-filled bag around faucet spouts and the showerhead so the buildup is submerged, band it in place, and let it sit 30 minutes to an hour. Drop removable aerators in a bowl of vinegar too.' },
+      { name: 'Clear the shower glass', text: 'Mist the glass with the 50/50 solution from the top down, let it dwell about 15 minutes while re-spraying as it drips, then wipe with a microfiber cloth.' },
+      { name: 'Break down stubborn spots', text: 'For deposits that remain, dip a damp cloth or soft toothbrush in baking soda and work the area in small circles — enough grit to lift scale, gentle enough not to scratch.' },
+      { name: 'Rinse, dry, and buff', text: 'Run water to flush loosened minerals, then dry every surface with a clean microfiber cloth and buff fixtures so no droplets are left to evaporate.' },
+      { name: 'Squeegee to prevent buildup', text: 'Finish by squeegeeing the glass and make it a daily habit — drying surfaces after use is what keeps hard water stains from returning.' },
+    ],
+  },
   {
     slug: 'how-to-prep-home-before-cleaning-crew-dayton',
     title: 'How to Prep Your Dayton Home Before the Cleaning Crew',
