@@ -7,6 +7,9 @@
     { "source": "/contact-us", "destination": "/quote", "permanent": true },
     { "source": "/contact-us/", "destination": "/quote", "permanent": true }
   ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

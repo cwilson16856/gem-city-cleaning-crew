@@ -3,6 +3,7 @@
 // Newest posts go first in the array.
 
 import hardWaterStainsContent from './posts/how-to-remove-hard-water-stains-bathroom-fixtures-dayton.js'
+import prepHomeBeforeCleaningCrewContent from './posts/how-to-prep-home-before-cleaning-crew-dayton.js'
 import recurringCleaningServiceContent from './posts/what-to-expect-recurring-cleaning-service-dayton.js'
 import airbnbStrTurnoverContent from './posts/airbnb-str-turnover-cleaning-dayton.js'
 import winterSaltMudFloorProtectionContent from './posts/winter-salt-mud-floor-protection-dayton.js'
@@ -76,6 +77,73 @@ const posts = [
       { name: 'Break down stubborn spots', text: 'For deposits that remain, dip a damp cloth or soft toothbrush in baking soda and work the area in small circles — enough grit to lift scale, gentle enough not to scratch.' },
       { name: 'Rinse, dry, and buff', text: 'Run water to flush loosened minerals, then dry every surface with a clean microfiber cloth and buff fixtures so no droplets are left to evaporate.' },
       { name: 'Squeegee to prevent buildup', text: 'Finish by squeegeeing the glass and make it a daily habit — drying surfaces after use is what keeps hard water stains from returning.' },
+    ],
+  },
+  {
+    slug: 'how-to-prep-home-before-cleaning-crew-dayton',
+    title: 'How to Prep Your Dayton Home Before the Cleaning Crew',
+    description: 'Prepping before your cleaning crew arrives means more actual cleaning for your money. Here’s the 15-minute checklist Dayton homeowners should run first.',
+    publishedAt: '2026-08-11',
+    updatedAt: '2026-08-11',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Cleaning Tips',
+    tags: ['house cleaning prep', 'cleaning checklist', 'first cleaning appointment', 'declutter', 'residential cleaning', 'Dayton'],
+    keywords: [
+      'how to prepare for a cleaning service',
+      'what to do before house cleaners arrive',
+      'house cleaning prep checklist',
+      'should I clean before the cleaner comes',
+      'prepare home for cleaning service Dayton',
+      'first house cleaning appointment tips',
+      'declutter before cleaners',
+      'do I need to be home for house cleaners',
+      'what to put away before cleaners',
+      'do I provide supplies for a cleaning service',
+    ],
+    problem: 'Homeowners waste part of a paid cleaning visit having the crew tidy clutter, secure valuables, and work around pets — time that could have gone toward actual deep cleaning.',
+    solution: 'A quick 15-minute pre-clean routine — clear floors and counters, stash valuables, sort out pets and access, and flag priorities — so the crew spends the visit cleaning, not tidying.',
+    targetAudience: 'Dayton-area homeowners and renters — especially busy Kettering, Oakwood, and Centerville households — booking a house cleaning, particularly a first visit',
+    coverImage: '/images/blog/how-to-prep-home-before-cleaning-crew-dayton.png',
+    featured: false,
+    content: prepHomeBeforeCleaningCrewContent,
+    faqs: [
+      {
+        question: 'Should I clean before the cleaner comes?',
+        answer: 'No — you should tidy, not clean. The goal is to clear obstacles so the crew can reach the surfaces they’re there to clean, not to pre-scrub anything. Pick up clutter from floors and counters, clear the sink, and put away valuables. Actual scrubbing, dusting, and disinfecting is the crew’s job, and doing it yourself the night before just wastes your effort and theirs. A tidy, accessible home is all a professional cleaner needs to do their best work.',
+      },
+      {
+        question: 'Do I need to be home when the cleaning crew arrives?',
+        answer: 'No. Most clients arrange access — a key, a lockbox, or a garage or smart-lock code — and go about their day. If you won’t be home, leave a note listing your priorities and anything that’s off-limits, and confirm the entry method ahead of time so the crew isn’t stuck outside. Being present for the first visit can be helpful for a quick walk-through, but after that, many Dayton-area households simply come home to a clean house.',
+      },
+      {
+        question: 'What should I do with my pets during a cleaning?',
+        answer: 'Let the crew know about any pets ahead of time, then decide based on your animal’s temperament. A calm, friendly pet can usually roam, but a nervous, territorial, or door-dashing pet is safer in a crate, a closed-off room, or a secure backyard when the weather allows. Crews are moving in and out with equipment and leaving doors open, so containing a bolt-risk pet protects the animal and lets the cleaners work without stopping to keep an eye on it.',
+      },
+      {
+        question: 'What should I put away before house cleaners arrive?',
+        answer: 'Put away anything valuable, fragile, or personal: jewelry, cash, medications, important documents, and sentimental or breakable items. Also clear everyday clutter — toys, shoes, laundry, mail piles, and dishes — from floors and counters so surfaces are accessible. This isn’t about hiding things from the crew; it’s so nobody has to decide whether to move your belongings, and so the time you’re paying for goes toward cleaning rather than tidying around your stuff.',
+      },
+      {
+        question: 'Do I need to provide cleaning supplies?',
+        answer: 'No. A professional cleaning crew brings its own products, tools, and equipment, including a vacuum and microfiber cloths. The exception is if you want a specific product used on a particular surface — say, a special cleaner for a natural-stone counter or a delicate floor. In that case, just leave the product out with a quick note. Otherwise, you don’t need to buy or stage anything for the visit.',
+      },
+      {
+        question: 'How long does it take to prep for a cleaning service?',
+        answer: 'About 15 minutes for most homes, and you can spread it across the night before and a quick morning pass. Clearing floors and counters, emptying the sink, taking out the trash, and putting away valuables is the bulk of it. That small investment typically saves the crew 30 to 45 minutes of tidying, which turns into more time on the deep-cleaning tasks you actually care about — a genuinely good return on a quarter-hour.',
+      },
+      {
+        question: 'What should I tell the cleaners before they start?',
+        answer: 'Point out your top priorities and any quirks in the home. If hard-water film on the shower glass, dusty blinds during ragweed season, or scuffed baseboards are what bug you most, say so — that’s what aims the visit. Also flag anything off-limits, any surface that needs special care such as older hardwood or natural stone, and how to handle pets and entry. A two-minute conversation at the first visit is the single best way to make sure the clean matches what you had in mind.',
+      },
+    ],
+    howToTitle: 'How to Prep Your Home Before a Cleaning Crew Arrives',
+    howToSteps: [
+      { name: 'Clear the floors', text: 'Pick up toys, shoes, laundry, backpacks, and pet bowls so the crew can vacuum and mop without navigating around your belongings.' },
+      { name: 'Clear counters and the sink', text: 'Move small appliances you don’t want touched, put away the mail pile and fruit bowl, and load or empty the dishwasher so the sink and counters are open to clean.' },
+      { name: 'Secure valuables and personal items', text: 'Put jewelry, cash, medications, documents, and anything fragile or sentimental somewhere out of the way so nobody has to decide whether to move it.' },
+      { name: 'Empty the trash', text: 'Bag up garbage and take it to the outside bins so the crew can wipe and reline empty cans instead of working around a full bag.' },
+      { name: 'Plan for pets and access', text: 'Decide where pets will be, and confirm how the crew will get in — a key, lockbox, or door code — so entry and animals are settled before arrival.' },
+      { name: 'Note your priorities', text: 'Leave a short list or have a quick word at the door about your top concerns and any off-limits rooms, so the visit targets what matters most to you.' },
     ],
   },
   {
