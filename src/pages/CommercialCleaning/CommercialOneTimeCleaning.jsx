@@ -79,7 +79,11 @@ const CommercialOneTimeCleaning = () => {
       description: "Specialized cleaning after renovations, construction, or remodeling projects",
       icon: <StorefrontIcon sx={{ fontSize: 32, color: 'white' }} />,
       features: ["Dust & debris removal", "Paint & adhesive cleanup", "Window restoration", "Safety compliance"],
-      popular: false
+      popular: false,
+      // This card covers commercial/office buildout cleanup specifically —
+      // for the general/residential version of this service, see the
+      // dedicated page.
+      link: { to: '/post-construction-cleaning', label: 'See our full post-construction cleaning service' }
     },
     {
       title: "Emergency Cleaning",
@@ -883,6 +887,23 @@ const CommercialOneTimeCleaning = () => {
                       </Box>
                     ))}
                   </Box>
+
+                  {scenario.link && (
+                    <Typography
+                      component={Link}
+                      to={scenario.link.to}
+                      variant="body2"
+                      sx={{
+                        mt: 2,
+                        color: theme.palette.primary.main,
+                        fontWeight: 600,
+                        textDecoration: 'none',
+                        '&:hover': { textDecoration: 'underline' }
+                      }}
+                    >
+                      {scenario.link.label} →
+                    </Typography>
+                  )}
                 </CardContent>
               </Card>
             </Grid>

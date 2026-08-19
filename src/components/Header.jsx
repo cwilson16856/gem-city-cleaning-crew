@@ -135,6 +135,7 @@ const Header = () => {
     { label: 'Move-In/Out Cleaning', path: '/move-in-out-cleaning', description: 'Moving transition cleaning' },
     { label: 'Move-In Cleaning', path: '/move-in-cleaning', description: 'Fresh start for new homes' },
     { label: 'Move-Out Cleaning', path: '/move-out-cleaning', description: 'Protect your security deposit' },
+    { label: 'Post-Construction Cleaning', path: '/post-construction-cleaning', description: 'Rough clean, final clean & touch-up for new builds and renovations' },
     { label: 'Apartment Cleaning', path: '/apartment-cleaning', description: 'Specialized apartment & rental cleaning' },
     { label: 'Condo Cleaning', path: '/condo-cleaning', description: 'Luxury condo cleaning & HOA compliance' },
     { label: 'AirBnb Cleaning', path: '/airbnb-cleaning-service', description: 'Same-day guest turnaround' },

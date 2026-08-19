@@ -35,6 +35,7 @@ import RecurringCleaningPage from './pages/ResidentialCleaning/RecurringCleaning
 import DeepCleaningPage from './pages/ResidentialCleaning/DeepCleaningPage'
 import MoveInOutCleaningPage from './pages/ResidentialCleaning/MoveInOutCleaningPage'
 import MoveInCleaningPage from './pages/ResidentialCleaning/MoveInCleaning'
+import PostConstructionCleaningPage from './pages/ResidentialCleaning/PostConstructionCleaning'
 import MoveOutCleaningPage from './pages/ResidentialCleaning/MoveOutCleaning'
 import AirBnbCleaning from './pages/ResidentialCleaning/AirBnbCleaning'
 import ApartmentCleaning from './pages/ResidentialCleaning/ApartmentCleaning'
@@ -129,6 +130,7 @@ export function render(url) {
                 <Route path="/deep-cleaning" element={<DeepCleaningPage />} />
                 <Route path="/move-in-out-cleaning" element={<MoveInOutCleaningPage />} />
                 <Route path="/move-in-cleaning" element={<MoveInCleaningPage />} />
+                <Route path="/post-construction-cleaning" element={<PostConstructionCleaningPage />} />
                 <Route path="/move-out-cleaning" element={<MoveOutCleaningPage />} />
                 <Route path="/airbnb-cleaning-service" element={<AirBnbCleaning />} />
                 <Route path="/apartment-cleaning" element={<ApartmentCleaning />} />
