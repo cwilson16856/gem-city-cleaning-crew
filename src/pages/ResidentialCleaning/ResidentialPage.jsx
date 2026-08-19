@@ -233,21 +233,21 @@ const ResidentialPage = () => {
     <>
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg" fetchPriority="high" />
-        <title>Top 3 Dayton House Cleaning Services | No Contracts | Custom Plans | Gem City Cleaning</title>
-        <meta name="description" content="Expert Dayton house cleaning services with 3-month trained staff, custom plans, and no contracts. Kitchens, bathrooms, bedrooms, and more. Free quotes available!" />
+        <title>House Cleaning Services Dayton Ohio | No Contracts, Custom Plans | Gem City Cleaning</title>
+        <meta name="description" content="Expert house cleaning services in Dayton, Ohio with 3-month trained staff, custom plans, and no contracts. Kitchens, bathrooms, bedrooms, and more. Free quotes available!" />
         <meta name="keywords" content="Dayton house cleaning, residential cleaning, custom cleaning plans, no contracts, professional cleaners, home cleaning service" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/residential" />
-        <meta property="og:title" content="Top 3 Dayton House Cleaning Services | Gem City Cleaning" />
-        <meta property="og:description" content="Expert Dayton house cleaning services with 3-month trained staff, custom plans, and no contracts. Free quotes available!" />
+        <meta property="og:title" content="House Cleaning Services Dayton Ohio | Gem City Cleaning" />
+        <meta property="og:description" content="Expert house cleaning services in Dayton, Ohio with 3-month trained staff, custom plans, and no contracts. Free quotes available!" />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Top 3 Dayton House Cleaning Services | Gem City Cleaning" />
-        <meta name="twitter:description" content="Expert Dayton house cleaning services with 3-month trained staff, custom plans, and no contracts." />
+        <meta name="twitter:title" content="House Cleaning Services Dayton Ohio | Gem City Cleaning" />
+        <meta name="twitter:description" content="Expert house cleaning services in Dayton, Ohio with 3-month trained staff, custom plans, and no contracts." />
         
         <link rel="canonical" href="https://gemcitycleaningcrew.com/residential" />
         
@@ -348,7 +348,7 @@ const ResidentialPage = () => {
               lineHeight: 1.1
             }}
           >
-            Dayton House Cleaning Services
+            House Cleaning Services in Dayton, Ohio
           </Typography>
           
           <Typography 

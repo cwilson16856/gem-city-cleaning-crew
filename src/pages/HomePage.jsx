@@ -132,16 +132,16 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Top-Rated Dayton House Cleaning | No Contracts | Free Quotes | Gem City Cleaning Crew</title>
-        <meta name="description" content="Professional Dayton house cleaning service. No contracts, 3-month trained staff, all supplies included. Serving Dayton, Kettering, and surrounding areas. Call 937-892-4157" />
+        <title>House Cleaning Dayton Ohio | No Contracts, Free Quotes | Gem City Cleaning Crew</title>
+        <meta name="description" content="Professional house cleaning in Dayton, Ohio. No contracts, 3-month trained staff, all supplies included. Serving Dayton, Kettering, and surrounding areas. Call 937-892-4157" />
         <meta name="keywords" content="Dayton house cleaning, no contracts cleaning, local cleaning service, professional cleaning, residential cleaning Dayton" />
         <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/" />
-        <meta property="og:title" content="Top-Rated Dayton House Cleaning | No Contracts | Gem City Cleaning Crew" />
-        <meta property="og:description" content="Professional Dayton house cleaning service. No contracts, 3-month trained staff, all supplies included. Serving Dayton, Kettering, and surrounding areas." />
+        <meta property="og:title" content="House Cleaning Dayton Ohio | No Contracts | Gem City Cleaning Crew" />
+        <meta property="og:description" content="Professional house cleaning in Dayton, Ohio. No contracts, 3-month trained staff, all supplies included. Serving Dayton, Kettering, and surrounding areas." />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -152,8 +152,8 @@ const HomePage = () => {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://gemcitycleaningcrew.com/" />
-        <meta name="twitter:title" content="Top-Rated Dayton House Cleaning | No Contracts | Gem City Cleaning Crew" />
-        <meta name="twitter:description" content="Professional Dayton house cleaning service. No contracts, 3-month trained staff, all supplies included. Call 937-892-4157" />
+        <meta name="twitter:title" content="House Cleaning Dayton Ohio | No Contracts | Gem City Cleaning Crew" />
+        <meta name="twitter:description" content="Professional house cleaning in Dayton, Ohio. No contracts, 3-month trained staff, all supplies included. Call 937-892-4157" />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta name="twitter:image:alt" content="Gem City Cleaning Crew - Professional house cleaning service in Dayton, Ohio" />
         
@@ -250,7 +250,7 @@ const HomePage = () => {
               lineHeight: 1.1
             }}
           >
-            Trusted Cleaning Services in Dayton, OH
+            Trusted House Cleaning in Dayton, OH
           </Typography>
           
           <Typography 
@@ -389,7 +389,7 @@ const HomePage = () => {
             Why Choose Gem City Cleaning Crew
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 700, mx: 'auto', fontSize: '1.1rem' }}>
-            Professional cleaning service with the personal touch you deserve
+            Whether you&apos;re looking for house cleaning or a maid service, get the same professional, personal touch every visit
           </Typography>
         </Box>
 
