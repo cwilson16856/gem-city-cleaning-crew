@@ -44,10 +44,19 @@ const isBrowser = typeof window !== 'undefined'
 export function sanitizeForDisplay(html) {
   if (!html) return ''
   if (isBrowser) return DOMPurify.sanitize(html)
-  // sanitize-html's defaults already cover every tag used across the
-  // existing blog posts (verified via `grep -ohE "<[a-zA-Z]+" src/content/blog/posts/*.js`
-  // against sanitizeHtmlLib.defaults.allowedTags) — no custom allowlist needed.
-  return sanitizeHtmlLib(html)
+  // sanitize-html's defaults cover every tag used across the existing blog
+  // posts (verified via `grep -ohE "<[a-zA-Z]+" src/content/blog/posts/*.js`
+  // against sanitizeHtmlLib.defaults.allowedTags) EXCEPT <img> — sanitize-html
+  // omits it from defaults.allowedTags even though defaults.allowedAttributes
+  // already has an img entry (an inconsistency in their own defaults).
+  // Explicitly add it so a future post with an inline image isn't silently
+  // stripped server-side while still rendering fine client-side via
+  // DOMPurify's more permissive browser defaults — that divergence would
+  // undermine the whole point of this SSR path (crawlers seeing the same
+  // content real users do).
+  return sanitizeHtmlLib(html, {
+    allowedTags: sanitizeHtmlLib.defaults.allowedTags.concat(['img']),
+  })
 }
 
 // Strips all HTML tags, returning plain text (meta descriptions, reading-time

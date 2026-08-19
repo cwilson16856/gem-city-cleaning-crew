@@ -33,7 +33,7 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 import { getAllPosts } from '../src/content/blog/index.js'
 import { ALL_PRERENDER_ROUTES } from './routes.js'
 
@@ -58,6 +58,19 @@ function outFileFor(distDir, routePath) {
 // remounts client-side on load (main.jsx uses createRoot, not hydrateRoot —
 // this prerendered HTML is a crawler-only snapshot, not something the client
 // hydrates into).
+// Applies one named string replacement and throws if it didn't actually
+// change anything — a silent no-op here (e.g. the template's shape changes
+// in a future Vite upgrade) would otherwise write a broken page with no
+// error anywhere, exactly the class of silent failure that caused the
+// original Chromium-based prerender to go unnoticed for weeks.
+function replaceOrThrow(html, searchValue, replaceValue, label) {
+  const result = html.replace(searchValue, replaceValue)
+  if (result === html) {
+    throw new Error(`buildDocument: "${label}" replacement had no effect — dist/index.html may have changed shape`)
+  }
+  return result
+}
+
 function buildDocument(template, appHtml, helmet) {
   const headTags = [
     helmet.title.toString(),
@@ -66,13 +79,13 @@ function buildDocument(template, appHtml, helmet) {
     helmet.script.toString(),
   ].join('')
 
-  return template
-    // index.html's own source has a static fallback <title> (for the raw,
-    // un-prerendered dev/CSR case) — every prerendered page must replace it,
-    // not add to it, or the built document ends up with two <title> tags.
-    .replace(/<title>.*?<\/title>/s, '')
-    .replace('</head>', `${headTags}</head>`)
-    .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+  // index.html's own source has a static fallback <title> (for the raw,
+  // un-prerendered dev/CSR case) — every prerendered page must replace it,
+  // not add to it, or the built document ends up with two <title> tags.
+  let html = replaceOrThrow(template, /<title>.*?<\/title>/s, '', 'static <title>')
+  html = replaceOrThrow(html, '</head>', `${headTags}</head>`, '</head>')
+  html = replaceOrThrow(html, '<div id="root"></div>', `<div id="root">${appHtml}</div>`, '#root placeholder')
+  return html
 }
 
 async function main() {
@@ -89,7 +102,7 @@ async function main() {
   }
 
   const template = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8')
-  const { render } = await import(pathToFileUrl(ssrEntryPath))
+  const { render } = await import(pathToFileURL(ssrEntryPath).href)
 
   const posts = getAllPosts()
   const routePaths = [
@@ -127,12 +140,6 @@ async function main() {
   }
 
   console.log(`Prerendered ${succeeded} of ${routePaths.length + 1} route(s) (${failed} failed).`)
-}
-
-// Node's dynamic import() needs a file:// URL on some platforms (notably
-// Windows, but harmless everywhere) when given an absolute filesystem path.
-function pathToFileUrl(absolutePath) {
-  return `file://${absolutePath}`
 }
 
 main()
