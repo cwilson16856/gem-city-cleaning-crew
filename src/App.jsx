@@ -48,7 +48,9 @@ const NotFound = lazy(() => import('./pages/NotFound'))
 import { generateLocalBusinessStructuredData } from './utils/seo'
 
 // Theme configuration
-const theme = createTheme({
+// Exported (not just default-consumed here) so entry-server.jsx can reuse the
+// exact same theme object for SSR without duplicating ~100 lines of MUI config.
+export const theme = createTheme({
   palette: {
     primary: {
       main: '#D81B60', // Softer, more professional pink
