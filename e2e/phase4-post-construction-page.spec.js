@@ -36,6 +36,17 @@ test.describe('Post-Construction Cleaning Page', () => {
     await expect(link).toBeVisible()
   })
 
+  test('marks the header Residential nav button as active on this page', async ({ page }) => {
+    await page.goto('/post-construction-cleaning')
+    // Header.jsx colors the "Residential" trigger with theme.palette.primary.main
+    // (#D81B60 / rgb(216, 27, 96)) when isResidentialActive() matches the
+    // current route — regression guard for residentialPaths missing this
+    // route's path.
+    await expect(page.getByRole('button', { name: 'Residential' })).toHaveCSS(
+      'color', 'rgb(216, 27, 96)'
+    )
+  })
+
   test.describe('Backend Integration', () => {
     test('no console errors', async ({ page }) => {
       const consoleErrors = []

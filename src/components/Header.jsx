@@ -103,7 +103,7 @@ const Header = () => {
 
   const isActive = (path) => location.pathname === path
   const isResidentialActive = () => {
-    const residentialPaths = ['/residential', '/recurring-cleaning-service', '/deep-cleaning', '/kitchen-cleaning-services', '/bathroom-cleaning-services', '/move-in-out-cleaning', '/move-in-cleaning', '/move-out-cleaning', '/apartment-cleaning', '/condo-cleaning', '/airbnb-cleaning-service', '/residential-house-cleaning-checklist']
+    const residentialPaths = ['/residential', '/recurring-cleaning-service', '/deep-cleaning', '/kitchen-cleaning-services', '/bathroom-cleaning-services', '/move-in-out-cleaning', '/move-in-cleaning', '/move-out-cleaning', '/post-construction-cleaning', '/apartment-cleaning', '/condo-cleaning', '/airbnb-cleaning-service', '/residential-house-cleaning-checklist']
     return residentialPaths.includes(location.pathname)
   }
 
