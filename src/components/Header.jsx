@@ -23,6 +23,7 @@ import {
   ExpandMore as ExpandMoreIcon,
   ChevronRight as ChevronRightIcon
 } from '@mui/icons-material'
+import { CITY_SLUGS, CITIES } from '../data/locations'
 const Header = () => {
   const [mobileMenuAnchor, setMobileMenuAnchor] = useState(null)
   const [contactMenuAnchor, setContactMenuAnchor] = useState(null)
@@ -116,42 +117,14 @@ const Header = () => {
     { label: 'Blog', path: '/blog' }
   ]
 
-  // Location service areas in alphabetical order
-  const locationCities = [
-    'Beavercreek',
-    'Bellbrook',
-    'Brookville',
-    'Carlisle',
-    'Centerville',
-    'Clayton',
-    'Dayton',
-    'Englewood',
-    'Fairborn',
-    'Franklin',
-    'Germantown',
-    'Huber Heights',
-    'Kettering',
-    'Lebanon',
-    'Miamisburg',
-    'Middletown',
-    'Moraine',
-    'New Carlisle',
-    'New Lebanon',
-    'Oakwood',
-    'Riverside',
-    'Springboro',
-    'Springfield',
-    'Tipp City',
-    'Trotwood',
-    'Troy',
-    'Union',
-    'Vandalia',
-    'Washington Township',
-    'West Carrollton',
-    'West Milton',
-    'Xenia',
-    'Yellow Springs'
-  ]
+  // Location service areas in alphabetical order — derived from CITY_SLUGS
+  // (src/data/locations.js), the single source of truth for which cities
+  // have a real /locations/:city page. This used to be a separate,
+  // hand-maintained list of 33 cities that had drifted out of sync with the
+  // real 16 — 17 of them (Springfield, Middletown, Lebanon, Franklin, etc.)
+  // linked to pages that don't exist, a 404 on every click, in the site's
+  // own global nav, on every single page.
+  const locationCities = CITY_SLUGS.map((slug) => CITIES[slug].name).sort()
 
   const residentialLinks = [
     { label: 'Residential Services', path: '/residential', description: 'Complete house cleaning services' },
@@ -547,7 +520,7 @@ const Header = () => {
                   <MenuItem 
                     key={city}
                     component={Link}
-                    to={city === 'Beavercreek' ? '/locations/beavercreek/commercial-services' : `/locations/${city.toLowerCase().replace(' ', '-')}/commercial-cleaning-services`}
+                    to={city === 'Beavercreek' ? '/locations/beavercreek/commercial-services' : `/locations/${city.toLowerCase().replace(/\s+/g, '-')}/commercial-cleaning-services`}
                     onClick={handleLocationsMenuClose}
                     sx={{ 
                       minWidth: 280,
@@ -594,7 +567,7 @@ const Header = () => {
                   <MenuItem 
                     key={city}
                     component={Link}
-                    to={`/locations/${city.toLowerCase().replace(' ', '-')}/house-cleaning-services`}
+                    to={`/locations/${city.toLowerCase().replace(/\s+/g, '-')}/house-cleaning-services`}
                     onClick={handleLocationsMenuClose}
                     sx={{ 
                       minWidth: 280,

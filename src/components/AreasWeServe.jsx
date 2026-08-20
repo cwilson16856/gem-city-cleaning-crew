@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   Container,
   Typography,
@@ -8,6 +9,7 @@ import {
   Button
 } from '@mui/material'
 import styles from '../styles/components/AreasWeServe.module.css'
+import { CITY_SLUGS } from '../data/locations'
 
 const AreasWeServe = ({ onCityClick }) => {
   // Service areas
@@ -18,6 +20,13 @@ const AreasWeServe = ({ onCityClick }) => {
     'Tipp City', 'Bellbrook', 'Vandalia', 'Troy',
     'Springfield', 'Franklin', 'Middletown', 'Carlisle'
   ]
+
+  // Only the first 16 of the above have a real /locations/:city page (the
+  // last 4 — Springfield, Franklin, Middletown, Carlisle — are listed as
+  // "areas we serve" but have no dedicated CITY_SLUGS entry). Slugify each
+  // name and only link the ones that resolve to a real page; the rest stay
+  // as plain, non-linked labels rather than 404ing.
+  const slugFor = (area) => area.toLowerCase().replace(/\s+/g, '-')
 
   return (
     <Container maxWidth="lg" className={styles.container}>
@@ -55,22 +64,60 @@ const AreasWeServe = ({ onCityClick }) => {
           </Typography>
           
           <Grid container spacing={2} className={styles.areasGrid}>
-            {serviceAreas.map((area, index) => (
-              <Grid item xs={6} sm={4} key={index}>
-                <Chip 
-                  label={area} 
+            {serviceAreas.map((area, index) => {
+              // LocationPage.jsx passes onCityClick for an in-page
+              // scroll-to-anchor — preserve that exact behavior unchanged,
+              // never wrap it in a navigation Link.
+              if (onCityClick) {
+                return (
+                  <Grid item xs={6} sm={4} key={index}>
+                    <Chip
+                      label={area}
+                      className={styles.areaChip}
+                      onClick={() => onCityClick(area)}
+                      sx={{
+                        cursor: 'pointer',
+                        '&:hover': {
+                          backgroundColor: 'rgba(216, 27, 96, 0.08)',
+                          transform: 'translateY(-2px)'
+                        }
+                      }}
+                    />
+                  </Grid>
+                )
+              }
+
+              // Every other call site (21 service pages): link to the real
+              // location page when one exists, so these chips actually pass
+              // internal link equity instead of rendering as inert text.
+              const hasPage = CITY_SLUGS.includes(slugFor(area))
+              const chip = (
+                <Chip
+                  label={area}
                   className={styles.areaChip}
-                  onClick={() => onCityClick && onCityClick(area)}
                   sx={{
-                    cursor: onCityClick ? 'pointer' : 'default',
-                    '&:hover': onCityClick ? {
+                    cursor: hasPage ? 'pointer' : 'default',
+                    '&:hover': hasPage ? {
                       backgroundColor: 'rgba(216, 27, 96, 0.08)',
                       transform: 'translateY(-2px)'
                     } : {}
                   }}
                 />
-              </Grid>
-            ))}
+              )
+
+              return (
+                <Grid item xs={6} sm={4} key={index}>
+                  {hasPage ? (
+                    <Link
+                      to={`/locations/${slugFor(area)}/house-cleaning-services`}
+                      style={{ textDecoration: 'none' }}
+                    >
+                      {chip}
+                    </Link>
+                  ) : chip}
+                </Grid>
+              )
+            })}
           </Grid>
 
           <Box className={styles.expandSection}>
