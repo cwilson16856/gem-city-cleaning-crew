@@ -901,11 +901,11 @@ const MoveInCleaningPage = () => {
         }}
       >
         <Container maxWidth="md" sx={{ textAlign: 'center' }}>
-          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600, color: 'white' }}>
             Ready for a Fresh Start in Your New Home?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
-            Let us prepare your new Dayton home with professional move-in cleaning services. 
+          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9, color: 'white' }}>
+            Let us prepare your new Dayton home with professional move-in cleaning services.
             Complete sanitization and deep cleaning so you can focus on settling in with your family.
           </Typography>
           

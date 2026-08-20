@@ -520,10 +520,10 @@ const PostConstructionCleaning = () => {
         }}
       >
         <Container maxWidth="md" sx={{ textAlign: 'center' }}>
-          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600, color: 'white' }}>
             Ready to Get Your Space Move-In Ready?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9, color: 'white' }}>
             Tell us about your project and we&apos;ll put together a free quote for rough clean, final clean, or both.
           </Typography>
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>

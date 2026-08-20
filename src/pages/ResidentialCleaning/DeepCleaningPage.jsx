@@ -838,11 +838,11 @@ const DeepCleaningPage = () => {
         }}
       >
         <Container maxWidth="md" sx={{ textAlign: 'center' }}>
-          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600, color: 'white' }}>
             Ready for a Deep Cleaning Transformation?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
-            See the dramatic difference our professional deep cleaning services can make in your Dayton home. 
+          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9, color: 'white' }}>
+            See the dramatic difference our professional deep cleaning services can make in your Dayton home.
             Add-on services available at no extra charge when requested!
           </Typography>
           

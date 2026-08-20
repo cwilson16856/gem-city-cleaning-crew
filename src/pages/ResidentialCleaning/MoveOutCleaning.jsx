@@ -963,11 +963,11 @@ const MoveOutCleaningPage = () => {
         }}
       >
         <Container maxWidth="md" sx={{ textAlign: 'center' }}>
-          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600, color: 'white' }}>
             Ready to Protect Your Security Deposit?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
-            Don't risk losing your deposit to cleaning fees. Our professional move-out cleaning services 
+          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9, color: 'white' }}>
+            Don't risk losing your deposit to cleaning fees. Our professional move-out cleaning services
             in Dayton help ensure you get your full security deposit back.
           </Typography>
           

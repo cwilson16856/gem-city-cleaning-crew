@@ -1346,11 +1346,11 @@ const MoveInOutCleaningPage = () => {
         }}
       >
         <Container maxWidth="md" sx={{ textAlign: 'center' }}>
-          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600, color: 'white' }}>
             Ready for Stress-Free Moving?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
-            Let us handle the cleaning while you focus on your move. Professional move-in/move-out 
+          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9, color: 'white' }}>
+            Let us handle the cleaning while you focus on your move. Professional move-in/move-out
             cleaning services throughout the Dayton area help protect deposits and ensure fresh starts.
           </Typography>
           
