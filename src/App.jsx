@@ -20,6 +20,7 @@ const RecurringCleaningPage = lazy(() => import('./pages/ResidentialCleaning/Rec
 const DeepCleaningPage = lazy(() => import('./pages/ResidentialCleaning/DeepCleaningPage'))
 const MoveInOutCleaningPage = lazy(() => import('./pages/ResidentialCleaning/MoveInOutCleaningPage'))
 const MoveInCleaningPage = lazy(() => import('./pages/ResidentialCleaning/MoveInCleaning'))
+const PostConstructionCleaningPage = lazy(() => import('./pages/ResidentialCleaning/PostConstructionCleaning'))
 const MoveOutCleaningPage = lazy(() => import('./pages/ResidentialCleaning/MoveOutCleaning'))
 const AirBnbCleaning = lazy(() => import('./pages/ResidentialCleaning/AirBnbCleaning'))
 const ApartmentCleaning = lazy(() => import('./pages/ResidentialCleaning/ApartmentCleaning'))
@@ -217,6 +218,7 @@ function App() {
             <Route path="/deep-cleaning" element={<DeepCleaningPage />} />
             <Route path="/move-in-out-cleaning" element={<MoveInOutCleaningPage />} />
             <Route path="/move-in-cleaning" element={<MoveInCleaningPage />} />
+            <Route path="/post-construction-cleaning" element={<PostConstructionCleaningPage />} />
             <Route path="/move-out-cleaning" element={<MoveOutCleaningPage />} />
             <Route path="/airbnb-cleaning-service" element={<AirBnbCleaning />} />
             <Route path="/apartment-cleaning" element={<ApartmentCleaning />} />

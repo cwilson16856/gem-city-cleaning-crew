@@ -103,7 +103,7 @@ const Header = () => {
 
   const isActive = (path) => location.pathname === path
   const isResidentialActive = () => {
-    const residentialPaths = ['/residential', '/recurring-cleaning-service', '/deep-cleaning', '/kitchen-cleaning-services', '/bathroom-cleaning-services', '/move-in-out-cleaning', '/move-in-cleaning', '/move-out-cleaning', '/apartment-cleaning', '/condo-cleaning', '/airbnb-cleaning-service', '/residential-house-cleaning-checklist']
+    const residentialPaths = ['/residential', '/recurring-cleaning-service', '/deep-cleaning', '/kitchen-cleaning-services', '/bathroom-cleaning-services', '/move-in-out-cleaning', '/move-in-cleaning', '/move-out-cleaning', '/post-construction-cleaning', '/apartment-cleaning', '/condo-cleaning', '/airbnb-cleaning-service', '/residential-house-cleaning-checklist']
     return residentialPaths.includes(location.pathname)
   }
 
@@ -135,6 +135,7 @@ const Header = () => {
     { label: 'Move-In/Out Cleaning', path: '/move-in-out-cleaning', description: 'Moving transition cleaning' },
     { label: 'Move-In Cleaning', path: '/move-in-cleaning', description: 'Fresh start for new homes' },
     { label: 'Move-Out Cleaning', path: '/move-out-cleaning', description: 'Protect your security deposit' },
+    { label: 'Post-Construction Cleaning', path: '/post-construction-cleaning', description: 'Rough clean, final clean & touch-up for new builds and renovations' },
     { label: 'Apartment Cleaning', path: '/apartment-cleaning', description: 'Specialized apartment & rental cleaning' },
     { label: 'Condo Cleaning', path: '/condo-cleaning', description: 'Luxury condo cleaning & HOA compliance' },
     { label: 'AirBnb Cleaning', path: '/airbnb-cleaning-service', description: 'Same-day guest turnaround' },

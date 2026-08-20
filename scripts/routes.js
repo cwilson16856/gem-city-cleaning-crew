@@ -17,6 +17,7 @@ export const STATIC_ROUTES = [
   { path: '/deep-cleaning', changefreq: 'monthly', priority: '0.9' },
   { path: '/move-in-out-cleaning', changefreq: 'monthly', priority: '0.8' },
   { path: '/move-in-cleaning', changefreq: 'monthly', priority: '0.7' },
+  { path: '/post-construction-cleaning', changefreq: 'monthly', priority: '0.7' },
   { path: '/move-out-cleaning', changefreq: 'monthly', priority: '0.7' },
   { path: '/airbnb-cleaning-service', changefreq: 'monthly', priority: '0.7' },
   { path: '/apartment-cleaning', changefreq: 'monthly', priority: '0.7' },
