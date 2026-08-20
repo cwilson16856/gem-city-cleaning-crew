@@ -91,7 +91,7 @@ export const CITIES = {
     residential: {
       heroTitle: 'House Cleaning Services in Centerville, OH',
       heroSubtitle: 'Serving Homes Across Centerville Since Founding in 1796',
-      metaDescription: 'Professional house cleaning in Centerville, OH — Uptown and surrounding neighborhoods. Licensed, insured, no contracts.',
+      metaDescription: 'Professional house cleaning services in Centerville, Ohio — Uptown and surrounding neighborhoods. Licensed, insured, no contracts.',
       intro: [
         "Founded in 1796, Centerville has one of Ohio's largest collections of early stone buildings, and Uptown Centerville's brick sidewalks and limestone architecture still define the area around the Asahel Wright House at the Four Corners.",
         "We clean homes throughout Centerville's 45305, 45458, and 45459 zip codes, from homes near Uptown to newer developments further out, with the same reliable, no-contract scheduling."
@@ -247,7 +247,7 @@ export const CITIES = {
     residential: {
       heroTitle: 'House Cleaning Services in Beavercreek, OH',
       heroSubtitle: 'Serving Homes Near The Greene and WPAFB',
-      metaDescription: 'Professional house cleaning in Beavercreek, OH, zip codes 45431, 45432, and 45434. Licensed & insured, same-day availability.',
+      metaDescription: 'Professional house cleaning services in Beavercreek, Ohio, zip codes 45431, 45432, and 45434. Licensed & insured, same-day availability.',
       intro: [
         "Beavercreek's neighborhoods sit close to The Greene Town Center and are just minutes from Wright-Patterson Air Force Base, making it one of the area's most active residential communities for both families and base personnel.",
         "We clean homes throughout Beavercreek's 45431, 45432, and 45434 zip codes, with flexible scheduling for busy households near The Greene, Fairfield Commons, and the Colonel Glenn Highway corridor."
