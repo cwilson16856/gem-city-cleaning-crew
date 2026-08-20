@@ -1,4 +1,9 @@
-import DOMPurify from 'dompurify'
+// This module runs both in the browser (client bundle) and in Node (SSR
+// prerender + build scripts) — stripTags picks the right sanitizer for
+// whichever environment it's actually called in. See sanitizeHtml.js for why
+// (plain dompurify needs a real `window`, and isomorphic-dompurify's jsdom
+// dependency doesn't work on the Node version this build environment uses).
+import { stripTags } from './sanitizeHtml'
 
 const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://gemcitycleaningcrew.com'
 const LOGO_URL = `${SITE_URL}/logo.png`
@@ -9,7 +14,7 @@ export const cleanHtmlForMeta = (html, maxLength = 160) => {
   if (!html) return ''
   
   // Remove HTML tags
-  const cleanText = DOMPurify.sanitize(html, { ALLOWED_TAGS: [] })
+  const cleanText = stripTags(html)
   
   // Remove extra whitespace and trim
   const trimmedText = cleanText.replace(/\s+/g, ' ').trim()
@@ -163,7 +168,7 @@ export const calculateReadingTime = (content) => {
   if (!content) return 0
   
   const wordsPerMinute = 200
-  const cleanText = DOMPurify.sanitize(content, { ALLOWED_TAGS: [] })
+  const cleanText = stripTags(content)
   const wordCount = cleanText.trim().split(/\s+/).length
   
   return Math.ceil(wordCount / wordsPerMinute)

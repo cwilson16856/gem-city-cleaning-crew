@@ -14,7 +14,10 @@ import CategoryIcon from '@mui/icons-material/Category'
 import TagIcon from '@mui/icons-material/Tag'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import { format } from 'date-fns'
-import DOMPurify from 'dompurify'
+// This page renders both in the browser and in Node (SSR prerender) —
+// sanitizeForDisplay picks the right sanitizer for whichever environment
+// it's actually called in. See src/utils/sanitizeHtml.js for why.
+import { sanitizeForDisplay } from '../utils/sanitizeHtml'
 
 import { getPostBySlug } from '../content/blog'
 import {
@@ -228,7 +231,7 @@ const PostPage = () => {
               }
             }}
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(post.content || '')
+              __html: sanitizeForDisplay(post.content || '')
             }}
           />
 
