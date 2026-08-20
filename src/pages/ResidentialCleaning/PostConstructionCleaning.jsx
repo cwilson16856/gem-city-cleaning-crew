@@ -191,7 +191,13 @@ const PostConstructionCleaning = () => {
           alignItems: 'center'
         }}
       >
-        <Container maxWidth="lg">
+        {/* .hero-section::before (HomePage.css) paints a semi-transparent
+            overlay across the whole hero at z-index: 1 — without this
+            Container establishing its own stacking context above that, the
+            content paints underneath it, washing out the white text/chip
+            into a hazy, low-contrast look. Matches MoveInCleaning.jsx's
+            same fix for the same shared class. */}
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
           <Chip
             label="POST-CONSTRUCTION & RENOVATION CLEANUP"
             sx={{
@@ -211,7 +217,9 @@ const PostConstructionCleaning = () => {
               fontSize: { xs: '2.5rem', md: '4rem' },
               fontWeight: 700,
               mb: 2,
-              lineHeight: 1.1
+              lineHeight: 1.1,
+              color: 'white',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)'
             }}
           >
             Post-Construction Cleaning Dayton, OH
@@ -224,7 +232,9 @@ const PostConstructionCleaning = () => {
               fontWeight: 400,
               mb: 4,
               maxWidth: 800,
-              mx: 'auto'
+              mx: 'auto',
+              color: 'white',
+              textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8)'
             }}
           >
             From construction dust to move-in ready — rough clean, final clean, and touch-up cleaning for new builds and renovations

@@ -36,6 +36,28 @@ test.describe('Post-Construction Cleaning Page', () => {
     await expect(link).toBeVisible()
   })
 
+  test('hero text is actually white and stacked above the .hero-section overlay', async ({ page }) => {
+    // Regression guard for a real bug: the hero H1/subtitle initially had no
+    // explicit color (fell back to the theme's near-black default) AND the
+    // content Container had no position/z-index, so HomePage.css's shared
+    // .hero-section::before overlay (position: absolute, z-index: 1) painted
+    // on top of it — result was washed-out, barely-legible "ghost text" in
+    // production. Both halves of the fix are checked independently: text
+    // color alone isn't enough if the overlay still paints over it, and
+    // z-index alone isn't enough if the text color is wrong.
+    await page.goto('/post-construction-cleaning')
+
+    await expect(page.locator('h1')).toHaveCSS('color', 'rgb(255, 255, 255)')
+
+    const containerStacking = await page.locator('h1').evaluate((el) => {
+      const container = el.closest('.MuiContainer-root')
+      const style = getComputedStyle(container)
+      return { position: style.position, zIndex: style.zIndex }
+    })
+    expect(containerStacking.position).toBe('relative')
+    expect(Number(containerStacking.zIndex)).toBeGreaterThanOrEqual(2)
+  })
+
   test('marks the header Residential nav button as active on this page', async ({ page }) => {
     await page.goto('/post-construction-cleaning')
     // Header.jsx colors the "Residential" trigger with theme.palette.primary.main
