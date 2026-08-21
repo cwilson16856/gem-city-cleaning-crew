@@ -2,6 +2,7 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import officeCleanBetweenCleaningsContent from './posts/how-to-keep-office-clean-between-cleanings-dayton.js'
 import stainlessSteelAppliancesContent from './posts/how-to-deep-clean-stainless-steel-appliances-dayton.js'
 import hardWaterStainsContent from './posts/how-to-remove-hard-water-stains-bathroom-fixtures-dayton.js'
 import prepHomeBeforeCleaningCrewContent from './posts/how-to-prep-home-before-cleaning-crew-dayton.js'
@@ -13,6 +14,69 @@ import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'how-to-keep-office-clean-between-cleanings-dayton',
+    title: 'How to Keep Your Office Clean Between Professional Cleanings',
+    description: 'A crew resets your office weekly, but clients and staff see it daily. Here is how Dayton office managers keep a workspace sharp between professional cleanings.',
+    publishedAt: '2026-08-20',
+    updatedAt: '2026-08-20',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Commercial Cleaning',
+    tags: ['office cleaning', 'commercial cleaning', 'workplace maintenance', 'cleaning tips', 'facility management', 'Dayton'],
+    keywords: [
+      'how to keep office clean between cleanings',
+      'office cleaning tips for employees',
+      'maintaining office between professional cleanings',
+      'daily office cleaning checklist',
+      'how often should an office be professionally cleaned',
+      'commercial office cleaning Dayton Ohio',
+      'office break room cleaning tips',
+      'keep office floors clean between cleanings',
+      'high touch surface cleaning office',
+      'office cleaning maintenance schedule',
+    ],
+    problem: 'A professional crew resets an office on a schedule, but the workdays in between are what clients and staff actually see — and without light maintenance, a space that sparkled Monday looks tired by Thursday.',
+    solution: 'A simple between-visit routine: a 10-minute daily reset of shared areas, a handful of weekly team habits, strong entryway matting to stop tracked-in dirt, and midweek attention to break rooms and high-touch surfaces — while the heavy work stays with the crew.',
+    targetAudience: 'Dayton-area office managers, small-business owners, and facility managers — across downtown Dayton, Kettering, and Beavercreek office parks — keeping a workspace presentable between professional commercial cleanings',
+    coverImage: '/images/blog/how-to-keep-office-clean-between-cleanings-dayton.png',
+    featured: false,
+    content: officeCleanBetweenCleaningsContent,
+    faqs: [
+      {
+        question: 'How often should an office be professionally cleaned?',
+        answer: 'Most offices do well with professional cleaning one to three times a week, depending on foot traffic, headcount, and the type of work. A small professional office with a dozen people might book twice weekly, while a busy medical or client-facing space often needs daily service. Restrooms, kitchens, and high-traffic entryways drive the frequency more than square footage does. Between those visits, light daily maintenance by staff keeps the space presentable — the professional schedule handles the deep and detailed work, and your team simply keeps surfaces clear and catches spills early.',
+      },
+      {
+        question: 'What daily tasks keep an office clean between professional visits?',
+        answer: 'The highest-impact daily habits are clearing desks and shared surfaces, emptying full trash and recycling bins, wiping down the coffee station and any conference table after use, and straightening the lobby or reception area. A ten-minute end-of-day reset on the shared areas — or two minutes per person at each desk — resets the whole office nightly instead of letting mess build all week. None of this replaces professional cleaning; it protects the results between visits so each one starts from tidy.',
+      },
+      {
+        question: 'How do you keep office floors clean between cleanings?',
+        answer: 'The most effective step happens at the door: roughly 80 to 90 percent of the dirt in a commercial building is tracked in from outside, so a good entrance mat system captures most of it before it reaches your floors. Use enough matting that shoes are clean and dry after a few steps, and shake or vacuum the mats regularly so they keep working. In the Dayton area, winter road salt is especially hard on floors — abrasive and dulling — so matting and a winter boot tray matter even more from December through March. Blot spills immediately, and leave vacuuming and mopping to the professional crew.',
+      },
+      {
+        question: 'Whose job is it to keep the office clean — staff or the cleaning company?',
+        answer: 'It works best as a split. The professional cleaning company handles the skilled, heavy work: restrooms, floors, disinfection, and detailed surface cleaning on a set schedule. Staff handle light maintenance between visits — clearing their own desks, managing the break room, taking down full bins, and spot-cleaning spills. Many offices assign a rotating office steward each week to own the shared-area tasks so nothing falls through the cracks. Clear expectations about who does what prevents both the "someone else will get it" gap and the resentment of turning employees into janitors.',
+      },
+      {
+        question: 'How do you keep an office break room from smelling?',
+        answer: 'Odor in a break room almost always traces to three sources: the trash, the coffee station, and the refrigerator. Take down full bins at the end of the day rather than overnight, rinse the coffee pot and wipe the counter daily, and clear the shared fridge of unlabeled or forgotten food on a set weekly day. In the Dayton area, the moderately hard water also leaves mineral film on sinks and coffee makers, so a quick dry-down keeps that from building up. Staying ahead of these three spots handles the vast majority of break-room smell between professional cleanings.',
+      },
+      {
+        question: 'What should you clean in an office during cold and flu season?',
+        answer: 'Focus on high-touch surfaces, because that is how illness travels through a workplace. Door handles, light switches, shared keyboards and mice, phone handsets, the printer or copier touchscreen, microwave keypads, and refrigerator handles all benefit from a disinfecting wipe once or twice midweek, on top of the professional cleaning schedule. Keeping hand sanitizer and disinfecting wipes accessible encourages people to clean their own space too. This is maintenance between visits, not a substitute for professional disinfection — but during peak season it noticeably cuts down how quickly a bug spreads through the office.',
+      },
+    ],
+    howToTitle: 'How to Do a 10-Minute End-of-Day Office Reset',
+    howToSteps: [
+      { name: 'Clear the shared surfaces', text: 'Walk the common areas and clear desktops, the reception counter, and the conference table — papers filed or stacked, mugs and dishes to the kitchen. A clear surface is what makes a room read as clean.' },
+      { name: 'Take down full bins', text: 'Empty any trash or recycling bin that is full and walk it to the dumpster rather than leaving it overnight. This is where odor and pests start, so do not let it wait for the crew.' },
+      { name: 'Reset the coffee station', text: 'Rinse the pot, toss the grounds, and wipe the counter. A neglected coffee area is the single biggest source of break-room smell by the end of the week.' },
+      { name: 'Wipe high-touch and meeting surfaces', text: 'Run a disinfecting wipe over the conference table after the last meeting and hit the main door handles and light switches — thirty seconds that keeps germs and coffee rings from building up.' },
+      { name: 'Straighten the lobby', text: 'Square the chairs, fan the magazines, and clear the reception counter. It is the first thing every visitor sees and the fastest room to reset.' },
+      { name: 'Check the entrance mats', text: 'Give entry mats a quick shake or vacuum so they keep catching tracked-in dirt — especially important in Dayton winters when road salt and slush come in on every shoe.' },
+    ],
+  },
   {
     slug: 'how-to-deep-clean-stainless-steel-appliances-dayton',
     title: 'How to Deep Clean Stainless Steel Kitchen Appliances',
