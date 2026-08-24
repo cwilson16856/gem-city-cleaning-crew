@@ -57,7 +57,7 @@ const PrivacyPolicy = () => {
             Privacy Policy
           </Typography>
           <Typography variant="body1" sx={{ mt: 1, opacity: 0.9 }}>
-            Last Updated: July 25, 2026
+            Last Updated: August 24, 2026
           </Typography>
         </Container>
       </Box>
@@ -104,7 +104,23 @@ const PrivacyPolicy = () => {
           </List>
         </Section>
 
-        <Section title="4. We Do Not Sell or Share Your Information">
+        <Section title="4. AI-Assisted Calls &amp; Text Messages">
+          <Typography variant="body1" sx={{ mb: 2, fontSize: '1.05rem', lineHeight: 1.7 }}>
+            To respond quickly to quote requests and scheduling questions, Gem City Cleaning Crew uses
+            an AI-powered voice and messaging assistant as part of our normal customer communications.
+            By providing your phone number, you consent to being contacted using an AI-assisted voice
+            or text messaging system regarding your quote request and, if you become a customer, your
+            scheduled service.
+          </Typography>
+          <List sx={{ pl: 2 }}>
+            <ListItemStyled>Calls or texts you receive about your quote request or appointment may be placed, answered, or conducted in whole or in part by an AI assistant rather than a live team member.</ListItemStyled>
+            <ListItemStyled>Calls to our business phone number may also be answered by our AI assistant, which can answer questions, collect details about your cleaning needs, and help schedule service.</ListItemStyled>
+            <ListItemStyled>We&apos;ll let you know when you&apos;re speaking with our AI assistant, and you can ask to speak with a person on our team at any time.</ListItemStyled>
+            <ListItemStyled>Calls and text conversations with our AI assistant may be recorded and/or transcribed for quality assurance and to improve our service, consistent with Section 3 above.</ListItemStyled>
+          </List>
+        </Section>
+
+        <Section title="5. We Do Not Sell or Share Your Information">
           <Typography variant="body1" sx={{ mb: 2, fontSize: '1.05rem', lineHeight: 1.7 }}>
             We do not sell your personal information to third parties. No mobile information —
             including your phone number and your SMS consent — will be shared with or sold to third
@@ -114,21 +130,21 @@ const PrivacyPolicy = () => {
           </Typography>
         </Section>
 
-        <Section title="5. Data Retention &amp; Security">
+        <Section title="6. Data Retention &amp; Security">
           <Typography variant="body1" sx={{ mb: 2, fontSize: '1.05rem', lineHeight: 1.7 }}>
             We retain your information for as long as needed to respond to your inquiry or provide
             ongoing service, and take reasonable measures to protect it from unauthorized access.
           </Typography>
         </Section>
 
-        <Section title="6. Changes to This Policy">
+        <Section title="7. Changes to This Policy">
           <Typography variant="body1" sx={{ mb: 2, fontSize: '1.05rem', lineHeight: 1.7 }}>
             We may update this Privacy Policy from time to time. The &quot;Last Updated&quot; date above
             reflects the most recent revision.
           </Typography>
         </Section>
 
-        <Section title="7. Contact Us">
+        <Section title="8. Contact Us">
           <Typography variant="body1" sx={{ fontSize: '1.05rem', lineHeight: 1.7 }}>
             If you have questions about this Privacy Policy, contact us at{' '}
             <a href="mailto:info@gemcitycleaningcrew.com" style={{ color: theme.palette.primary.main }}>
