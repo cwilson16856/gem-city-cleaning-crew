@@ -58,7 +58,7 @@ const TermsOfService = () => {
             Terms of Service
           </Typography>
           <Typography variant="body1" sx={{ mt: 1, opacity: 0.9 }}>
-            Last Updated: July 25, 2026
+            Last Updated: August 24, 2026
           </Typography>
         </Container>
       </Box>
@@ -87,8 +87,10 @@ const TermsOfService = () => {
           <List sx={{ pl: 2 }}>
             <ListItemStyled>Message frequency varies. Message and data rates may apply.</ListItemStyled>
             <ListItemStyled>Reply <strong>STOP</strong> to any text message to opt out at any time, or <strong>HELP</strong> for help.</ListItemStyled>
+            <ListItemStyled>Some calls and text messages may be placed, answered, or conducted in whole or in part by an AI-powered voice or messaging assistant on our behalf.</ListItemStyled>
             <ListItemStyled>
-              For details on how we handle your information and text messaging consent, see our{' '}
+              For details on how we handle your information, text messaging consent, and AI-assisted
+              communications, see our{' '}
               <Link to="/privacy-policy" style={{ color: theme.palette.primary.main }}>Privacy Policy</Link>.
             </ListItemStyled>
           </List>
