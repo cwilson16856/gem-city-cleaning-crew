@@ -323,7 +323,7 @@ const ApartmentBuildingCleaning = () => {
                 aria-controls={`panel${index}a-content`}
                 id={`panel${index}a-header`}
               >
-                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>

@@ -276,6 +276,7 @@ const IndustrialCleaning = () => {
 
           <Typography
             variant="h4"
+            component="p"
             className="hero-subtitle"
             sx={{ fontSize: { xs: '1.2rem', md: '1.8rem' }, fontWeight: 400, mb: 2, maxWidth: 800, mx: 'auto' }}
           >
@@ -284,6 +285,7 @@ const IndustrialCleaning = () => {
 
           <Typography
             variant="h5"
+            component="p"
             sx={{ fontSize: { xs: '1.1rem', md: '1.4rem' }, fontWeight: 500, mb: 4, maxWidth: 700, mx: 'auto' }}
           >
             Built for Scale • Flexible Shift Scheduling • Professional Results
@@ -519,7 +521,7 @@ const IndustrialCleaning = () => {
           {faqData.map((faq, index) => (
             <Accordion key={index} className="commercial-faq-accordion">
               <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>
-                <Typography variant="h6" sx={{ fontWeight: 600 }}>{faq.question}</Typography>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>{faq.question}</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography variant="body1" sx={{ lineHeight: 1.6 }}>{faq.answer}</Typography>
@@ -558,7 +560,7 @@ const IndustrialCleaning = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready for Professional Industrial Cleaning?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Built for scale • Flexible shift scheduling • No contracts • Licensed & insured
           </Typography>
 

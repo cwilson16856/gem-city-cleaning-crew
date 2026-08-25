@@ -415,7 +415,8 @@ const AirBnbCleaning = () => {
           </Typography>
           
           <Typography 
-            variant="h4" 
+            variant="h4"
+            component="p"
             className="hero-subtitle"
             sx={{ 
               fontSize: { xs: '1.2rem', md: '1.8rem' },
@@ -429,7 +430,8 @@ const AirBnbCleaning = () => {
           </Typography>
 
           <Typography 
-            variant="h5" 
+            variant="h5"
+            component="p"
             sx={{ 
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
@@ -465,7 +467,8 @@ const AirBnbCleaning = () => {
               }} 
             />
             <Typography 
-              variant="h6" 
+              variant="h6"
+              component="p"
               sx={{ 
                 color: '#FFD700', 
                 fontWeight: 600,
@@ -603,7 +606,8 @@ const AirBnbCleaning = () => {
                   }}
                 >
                   <Typography 
-                    variant="h3" 
+                    variant="h3"
+                    component="p"
                     sx={{ 
                       color: 'white', 
                       fontWeight: 700,
@@ -614,7 +618,7 @@ const AirBnbCleaning = () => {
                   </Typography>
                 </Box>
                 
-                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
+                <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
                   {step.title}
                 </Typography>
                 
@@ -793,7 +797,7 @@ const AirBnbCleaning = () => {
                     {benefit.icon}
                   </Box>
                   <Box sx={{ flex: 1 }}>
-                    <Typography variant="h5" sx={{ mb: 1, fontWeight: 600, color: theme.palette.primary.main }}>
+                    <Typography variant="h5" component="h3" sx={{ mb: 1, fontWeight: 600, color: theme.palette.primary.main }}>
                       {benefit.title}
                     </Typography>
                     <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.6 }}>
@@ -868,7 +872,7 @@ const AirBnbCleaning = () => {
                   </Typography>
                   
                   <Box>
-                    <Typography variant="subtitle2" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
+                    <Typography variant="subtitle2" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
                       - {testimonial.name}
                     </Typography>
                     <Typography variant="caption" color="text.secondary">
@@ -905,7 +909,7 @@ const AirBnbCleaning = () => {
                 aria-controls={`airbnb-faq-${index}`}
                 id={`airbnb-faq-${index}`}
               >
-                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>
@@ -925,7 +929,7 @@ const AirBnbCleaning = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready to Maximize Your AirBnb Revenue in Dayton?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Professional AirBnb cleaning service that protects your investment and creates memorable stays in Dayton, OH. 
             Same-day service, hospitality standards, guaranteed results for short-term rental success.
           </Typography>

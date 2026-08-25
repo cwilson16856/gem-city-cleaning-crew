@@ -87,7 +87,7 @@ const TableOfContents = ({
             onClick={handleToggle}
           >
             <MenuBookIcon sx={{ color: theme.palette.primary.main, fontSize: 24 }} />
-            <Typography variant="h3" sx={defaultTitleSx}>
+            <Typography variant="h3" component="h2" sx={defaultTitleSx}>
               {title}
             </Typography>
             {showItemCount && (
@@ -112,7 +112,7 @@ const TableOfContents = ({
             </IconButton>
           </Box>
         ) : (
-          <Typography variant="h3" sx={defaultTitleSx}>
+          <Typography variant="h3" component="h2" sx={defaultTitleSx}>
             {title}
           </Typography>
         )}

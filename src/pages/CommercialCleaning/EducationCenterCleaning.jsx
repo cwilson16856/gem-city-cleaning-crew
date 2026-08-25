@@ -315,7 +315,8 @@ const DaycareCleaning = () => {
           </Typography>
           
           <Typography 
-            variant="h4" 
+            variant="h4"
+            component="p"
             className="hero-subtitle"
             sx={{ 
               fontSize: { xs: '1.2rem', md: '1.8rem' },
@@ -329,7 +330,8 @@ const DaycareCleaning = () => {
           </Typography>
 
           <Typography 
-            variant="h5" 
+            variant="h5"
+            component="p"
             sx={{ 
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
@@ -560,7 +562,7 @@ const DaycareCleaning = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready to Partner with Professional Daycare Cleaners?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Licensed, insured, and experienced cleaning team serving Dayton daycare facilities.
           </Typography>
           

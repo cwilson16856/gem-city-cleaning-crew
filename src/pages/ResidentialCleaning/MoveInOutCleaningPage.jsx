@@ -1012,7 +1012,7 @@ const MoveInOutCleaningPage = () => {
                   borderColor: theme.palette.primary.main
                 }
               }}>
-                <Typography variant="h4" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 700 }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 700 }}>
                   For Landlords & Property Managers
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#525252', lineHeight: 1.6 }}>
@@ -1038,7 +1038,7 @@ const MoveInOutCleaningPage = () => {
                   borderColor: theme.palette.primary.main
                 }
               }}>
-                <Typography variant="h4" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 700 }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 700 }}>
                   For Tenants Moving Out
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#525252', lineHeight: 1.6 }}>
@@ -1064,7 +1064,7 @@ const MoveInOutCleaningPage = () => {
                   borderColor: theme.palette.primary.main
                 }
               }}>
-                <Typography variant="h4" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 700 }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 700 }}>
                   For New Homeowners
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#525252', lineHeight: 1.6 }}>
@@ -1112,7 +1112,7 @@ const MoveInOutCleaningPage = () => {
                   }}
                 >
                   <HealthAndSafetyIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
-                  <Typography variant="h4" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 700 }}>
+                  <Typography variant="h4" component="h3" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 700 }}>
                     Move-In Cleaning
                   </Typography>
                   <Typography variant="body1" sx={{ color: '#525252', lineHeight: 1.6, mb: 3, textAlign: 'center' }}>
@@ -1160,7 +1160,7 @@ const MoveInOutCleaningPage = () => {
                   }}
                 >
                   <AttachMoneyIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
-                  <Typography variant="h4" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 700 }}>
+                  <Typography variant="h4" component="h3" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 700 }}>
                     Move-Out Cleaning
                   </Typography>
                   <Typography variant="body1" sx={{ color: '#525252', lineHeight: 1.6, mb: 3, textAlign: 'center' }}>
@@ -1349,7 +1349,7 @@ const MoveInOutCleaningPage = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600, color: 'white' }}>
             Ready for Stress-Free Moving?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9, color: 'white' }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9, color: 'white' }}>
             Let us handle the cleaning while you focus on your move. Professional move-in/move-out
             cleaning services throughout the Dayton area help protect deposits and ensure fresh starts.
           </Typography>

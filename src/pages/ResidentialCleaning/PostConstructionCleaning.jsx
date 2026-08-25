@@ -227,6 +227,7 @@ const PostConstructionCleaning = () => {
 
           <Typography
             variant="h4"
+            component="p"
             sx={{
               fontSize: { xs: '1.2rem', md: '1.8rem' },
               fontWeight: 400,
@@ -405,7 +406,7 @@ const PostConstructionCleaning = () => {
                 primary={step.title}
                 secondary={step.description}
                 sx={{ ml: 2 }}
-                primaryTypographyProps={{ variant: 'h6', fontWeight: 700 }}
+                primaryTypographyProps={{ variant: 'h6', component: 'h3', fontWeight: 700 }}
               />
             </ListItem>
           ))}
@@ -421,7 +422,7 @@ const PostConstructionCleaning = () => {
           {faqs.map((faq) => (
             <Accordion key={faq.question} sx={{ mb: 2, '&:before': { display: 'none' } }}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography variant="h6" sx={{ fontWeight: 600, fontSize: '1.05rem' }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 600, fontSize: '1.05rem' }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>
@@ -458,7 +459,7 @@ const PostConstructionCleaning = () => {
               }}
             >
               <HomeIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
-              <Typography variant="h5" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 600 }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 600 }}>
                 Move-In Cleaning
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -478,7 +479,7 @@ const PostConstructionCleaning = () => {
               }}
             >
               <BusinessIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
-              <Typography variant="h5" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 600 }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 600 }}>
                 Commercial One-Time Cleaning
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -498,7 +499,7 @@ const PostConstructionCleaning = () => {
               }}
             >
               <CleaningServicesIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
-              <Typography variant="h5" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 600 }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 600 }}>
                 Deep Cleaning
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -523,7 +524,7 @@ const PostConstructionCleaning = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600, color: 'white' }}>
             Ready to Get Your Space Move-In Ready?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9, color: 'white' }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9, color: 'white' }}>
             Tell us about your project and we&apos;ll put together a free quote for rough clean, final clean, or both.
           </Typography>
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>

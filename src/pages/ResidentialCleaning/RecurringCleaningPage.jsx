@@ -680,10 +680,11 @@ const RecurringCleaningPage = () => {
             Best Recurring House Cleaning Service in Dayton
           </Typography>
           
-          <Typography 
-            variant="h4" 
+          <Typography
+            variant="h4"
+            component="p"
             className="hero-subtitle"
-            sx={{ 
+            sx={{
               fontSize: { xs: '1.2rem', md: '1.8rem' },
               fontWeight: 400,
               mb: 2,
@@ -694,9 +695,10 @@ const RecurringCleaningPage = () => {
             Same Professional Cleaner • No Contracts • Flexible Scheduling
           </Typography>
 
-          <Typography 
-            variant="h5" 
-            sx={{ 
+          <Typography
+            variant="h5"
+            component="p"
+            sx={{
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
               mb: 4,
@@ -730,10 +732,11 @@ const RecurringCleaningPage = () => {
                 }
               }} 
             />
-            <Typography 
-              variant="h6" 
-              sx={{ 
-                color: '#FFD700', 
+            <Typography
+              variant="h6"
+              component="p"
+              sx={{
+                color: '#FFD700',
                 fontWeight: 600,
                 fontFamily: 'Inter, sans-serif',
                 minWidth: 200
@@ -869,10 +872,11 @@ const RecurringCleaningPage = () => {
                     boxShadow: '0 4px 16px rgba(216, 27, 96, 0.3)'
                   }}
                 >
-                  <Typography 
-                    variant="h3" 
-                    sx={{ 
-                      color: 'white', 
+                  <Typography
+                    variant="h3"
+                    component="p"
+                    sx={{
+                      color: 'white',
                       fontWeight: 700,
                       fontSize: '2.5rem'
                     }}
@@ -880,8 +884,8 @@ const RecurringCleaningPage = () => {
                     {index + 1}
                   </Typography>
                 </Box>
-                
-                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
+
+                <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
                   {step.title}
                 </Typography>
                 
@@ -940,7 +944,7 @@ const RecurringCleaningPage = () => {
                       {benefit.icon}
                     </Box>
                     <Box sx={{ flex: 1 }}>
-                      <Typography variant="h5" sx={{ mb: 1, fontWeight: 600, color: theme.palette.primary.main }}>
+                      <Typography variant="h5" component="h3" sx={{ mb: 1, fontWeight: 600, color: theme.palette.primary.main }}>
                         {benefit.title}
                       </Typography>
                       <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.6 }}>
@@ -987,7 +991,7 @@ const RecurringCleaningPage = () => {
                   >
                     <CheckCircleIcon sx={{ fontSize: 40, color: 'white' }} />
                   </Box>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                  <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600 }}>
                     3-Month Training Program
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
@@ -1013,7 +1017,7 @@ const RecurringCleaningPage = () => {
                   >
                     <CleaningServicesIcon sx={{ fontSize: 40, color: 'white' }} />
                   </Box>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                  <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600 }}>
                     All Supplies Included
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
@@ -1039,7 +1043,7 @@ const RecurringCleaningPage = () => {
                   >
                     <StarIcon sx={{ fontSize: 40, color: 'white' }} />
                   </Box>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                  <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600 }}>
                     100% Satisfaction Guarantee
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
@@ -1204,7 +1208,7 @@ const RecurringCleaningPage = () => {
         </TableContainer>
 
         <Box sx={{ textAlign: 'center', mt: 4 }}>
-          <Typography variant="h4" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 600 }}>
+          <Typography variant="h4" component="h3" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 600 }}>
             Why Choose Local Over National Chains?
           </Typography>
           <Typography variant="body1" sx={{ maxWidth: 700, mx: 'auto', fontSize: '1.1rem', color: '#525252', mb: 4 }}>
@@ -1251,7 +1255,7 @@ const RecurringCleaningPage = () => {
               <Grid item xs={12} md={4}>
                 <Box sx={{ textAlign: 'center' }}>
                   <CheckCircleIcon sx={{ fontSize: 40, color: theme.palette.primary.main, mb: 1 }} />
-                  <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
+                  <Typography variant="h6" component="h4" sx={{ fontWeight: 600, mb: 1 }}>
                     Room-by-Room Tasks
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
@@ -1262,7 +1266,7 @@ const RecurringCleaningPage = () => {
               <Grid item xs={12} md={4}>
                 <Box sx={{ textAlign: 'center' }}>
                   <AssignmentIcon sx={{ fontSize: 40, color: theme.palette.primary.main, mb: 1 }} />
-                  <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
+                  <Typography variant="h6" component="h4" sx={{ fontWeight: 600, mb: 1 }}>
                     Customizable Options
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
@@ -1273,7 +1277,7 @@ const RecurringCleaningPage = () => {
               <Grid item xs={12} md={4}>
                 <Box sx={{ textAlign: 'center' }}>
                   <ScheduleIcon sx={{ fontSize: 40, color: theme.palette.primary.main, mb: 1 }} />
-                  <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
+                  <Typography variant="h6" component="h4" sx={{ fontWeight: 600, mb: 1 }}>
                     Time Estimates
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
@@ -1356,7 +1360,7 @@ const RecurringCleaningPage = () => {
                 )}
                 
                 <CardContent sx={{ p: 4, textAlign: 'center' }}>
-                  <Typography variant="h4" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
+                  <Typography variant="h4" component="h3" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
                     {option.title}
                   </Typography>
                   
@@ -1448,7 +1452,7 @@ const RecurringCleaningPage = () => {
                     textAlign: 'center'
                   }}
                 >
-                  <Typography variant="h6" sx={{ color: theme.palette.primary.main, fontWeight: 600 }}>
+                  <Typography variant="h6" component="h3" sx={{ color: theme.palette.primary.main, fontWeight: 600 }}>
                     Organized & Detailed
                   </Typography>
                 </Box>
@@ -1485,7 +1489,7 @@ const RecurringCleaningPage = () => {
                     }}
                   >
                     <Box sx={{ position: 'absolute', bottom: 24, left: 24, right: 24 }}>
-                      <Typography variant="h6" sx={{ fontWeight: 700, mb: 1, color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+                      <Typography variant="h6" component="h4" sx={{ fontWeight: 700, mb: 1, color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                         Living Spaces
                       </Typography>
                       <Typography variant="body2" sx={{ color: 'white', fontWeight: 500, textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
@@ -1526,7 +1530,7 @@ const RecurringCleaningPage = () => {
                     textAlign: 'center'
                   }}
                 >
-                  <Typography variant="h6" sx={{ color: theme.palette.primary.main, fontWeight: 600 }}>
+                  <Typography variant="h6" component="h3" sx={{ color: theme.palette.primary.main, fontWeight: 600 }}>
                     Spotless & Sanitized
                   </Typography>
                 </Box>
@@ -1563,7 +1567,7 @@ const RecurringCleaningPage = () => {
                     }}
                   >
                     <Box sx={{ position: 'absolute', bottom: 24, left: 24, right: 24 }}>
-                      <Typography variant="h6" sx={{ fontWeight: 700, mb: 1, color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+                      <Typography variant="h6" component="h4" sx={{ fontWeight: 700, mb: 1, color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                         Kitchen Deep Clean
                       </Typography>
                       <Typography variant="body2" sx={{ color: 'white', fontWeight: 500, textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
@@ -1604,7 +1608,7 @@ const RecurringCleaningPage = () => {
                     textAlign: 'center'
                   }}
                 >
-                  <Typography variant="h6" sx={{ color: theme.palette.primary.main, fontWeight: 600 }}>
+                  <Typography variant="h6" component="h3" sx={{ color: theme.palette.primary.main, fontWeight: 600 }}>
                     Deep & Thorough
                   </Typography>
                 </Box>
@@ -1641,7 +1645,7 @@ const RecurringCleaningPage = () => {
                     }}
                   >
                     <Box sx={{ position: 'absolute', bottom: 24, left: 24, right: 24 }}>
-                      <Typography variant="h6" sx={{ fontWeight: 700, mb: 1, color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+                      <Typography variant="h6" component="h4" sx={{ fontWeight: 700, mb: 1, color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                         Bathroom Excellence
                       </Typography>
                       <Typography variant="body2" sx={{ color: 'white', fontWeight: 500, textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
@@ -1716,7 +1720,7 @@ const RecurringCleaningPage = () => {
                   </Typography>
                   
                   <Box>
-                    <Typography variant="subtitle2" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
+                    <Typography variant="subtitle2" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
                       - {testimonial.name}
                     </Typography>
                     <Typography variant="caption" color="text.secondary">
@@ -1752,7 +1756,7 @@ const RecurringCleaningPage = () => {
                 aria-controls={`recurring-faq-${index}`}
                 id={`recurring-faq-${index}`}
               >
-                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>
@@ -1772,8 +1776,8 @@ const RecurringCleaningPage = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready for Reliable Recurring Cleaning?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
-            Join the hundreds of Dayton families who trust us with their homes every week. 
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
+            Join the hundreds of Dayton families who trust us with their homes every week.
             No contracts, same cleaner, flexible scheduling guaranteed.
           </Typography>
           

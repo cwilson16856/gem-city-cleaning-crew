@@ -536,7 +536,8 @@ const QuotePage = () => {
           </Typography>
           
           <Typography 
-            variant="h4" 
+            variant="h4"
+            component="p"
             className="hero-subtitle"
             sx={{ 
               fontSize: { xs: '1.2rem', md: '1.8rem' },
@@ -550,7 +551,8 @@ const QuotePage = () => {
           </Typography>
 
           <Typography 
-            variant="h5" 
+            variant="h5"
+            component="p"
             sx={{ 
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
@@ -586,7 +588,8 @@ const QuotePage = () => {
               }} 
             />
             <Typography 
-              variant="h6" 
+              variant="h6"
+              component="p"
               sx={{ 
                 color: '#FFD700', 
                 fontWeight: 600,
@@ -717,11 +720,11 @@ const QuotePage = () => {
                       mb: 2
                     }}
                   >
-                    <Typography variant="h4" sx={{ color: 'white', fontWeight: 700 }}>
+                    <Typography variant="h4" component="p" sx={{ color: 'white', fontWeight: 700 }}>
                       {process.step}
                     </Typography>
                   </Box>
-                  <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+                  <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                     {process.title}
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
@@ -733,7 +736,7 @@ const QuotePage = () => {
           </Grid>
           
           <Box sx={{ mt: 4, p: 3, backgroundColor: 'rgba(25, 118, 210, 0.05)', borderRadius: 2, textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ mb: 1, fontWeight: 600 }}>
+            <Typography variant="h6" component="h4" sx={{ mb: 1, fontWeight: 600 }}>
               Ready for Your Cleaning Estimate?
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -849,7 +852,7 @@ const QuotePage = () => {
                 }}
               >
                 <CardContent sx={{ p: 3 }}>
-                  <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, color: '#333' }}>
+                  <Typography variant="h5" component="h4" gutterBottom sx={{ fontWeight: 600, color: '#333' }}>
                     Why Choose Gem City Cleaning Crew?
                   </Typography>
                   
@@ -895,7 +898,7 @@ const QuotePage = () => {
                     ))}
                   </Box>
                   
-                  <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: '#333', mt: 3 }}>
+                  <Typography variant="h6" component="h5" gutterBottom sx={{ fontWeight: 600, color: '#333', mt: 3 }}>
                     Our Cleaning Services
                   </Typography>
                   <Box sx={{ mb: 3 }}>
@@ -922,7 +925,7 @@ const QuotePage = () => {
                     ))}
                   </Box>
                   
-                  <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: '#333', mt: 3 }}>
+                  <Typography variant="h6" component="h5" gutterBottom sx={{ fontWeight: 600, color: '#333', mt: 3 }}>
                     Service Areas We Cover
                   </Typography>
                   <Typography variant="body2" paragraph sx={{ color: '#666' }}>
@@ -931,7 +934,7 @@ const QuotePage = () => {
                     </Link>
                   </Typography>
                   
-                  <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: '#333', mt: 3 }}>
+                  <Typography variant="h6" component="h5" gutterBottom sx={{ fontWeight: 600, color: '#333', mt: 3 }}>
                     Contact Information
                   </Typography>
                   <Box sx={{ '& > div': { mb: 1 } }}>
@@ -960,7 +963,7 @@ const QuotePage = () => {
                 }}
               >
                 <CardContent sx={{ p: 2.5 }}>
-                  <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: '#333' }}>
+                  <Typography variant="h6" component="h5" gutterBottom sx={{ fontWeight: 600, color: '#333' }}>
                     🏆 Your Trusted Local Cleaners
                   </Typography>
                   <Typography variant="body2" sx={{ color: '#666', fontSize: '0.875rem' }}>
@@ -1039,7 +1042,7 @@ const QuotePage = () => {
             
             <Grid item xs={12} md={6}>
               <Paper elevation={3} sx={{ p: 4, borderRadius: 3 }}>
-                <Typography variant="h5" sx={{ mb: 3, fontWeight: 600, color: 'primary.main' }}>
+                <Typography variant="h5" component="h3" sx={{ mb: 3, fontWeight: 600, color: 'primary.main' }}>
                   Your Free Quote Includes:
                 </Typography>
                 
@@ -1132,7 +1135,7 @@ const QuotePage = () => {
                 Our transparent approach to house cleaning quotes ensures you understand exactly what influences your investment.
               </Typography>
               
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                 Home Size & Layout
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
@@ -1140,7 +1143,7 @@ const QuotePage = () => {
                 for square footage, number of rooms, and the complexity of your home's layout.
               </Typography>
               
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                 Cleaning Frequency
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
@@ -1151,7 +1154,7 @@ const QuotePage = () => {
                 </Link>.
               </Typography>
               
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                 Specific Services Needed
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
@@ -1167,7 +1170,7 @@ const QuotePage = () => {
             
             <Grid item xs={12} md={4}>
               <Card elevation={2} sx={{ p: 3, height: 'fit-content' }}>
-                <Typography variant="h6" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+                <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                   Cost Factors Include:
                 </Typography>
                 <Box sx={{ '& > div': { mb: 1.5 } }}>
@@ -1222,7 +1225,7 @@ const QuotePage = () => {
                 Dayton business over national chains. Our commitment to the community shows in every aspect of our service.
               </Typography>
               
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                 Personalized Service
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
@@ -1230,7 +1233,7 @@ const QuotePage = () => {
                 rather than generic corporate pricing structures.
               </Typography>
               
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                 Community Investment
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
@@ -1242,7 +1245,7 @@ const QuotePage = () => {
               </Typography>
 
               <Card elevation={2} sx={{ p: 3, mt: 3, backgroundColor: 'rgba(25, 118, 210, 0.05)' }}>
-                <Typography variant="h6" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+                <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                   Local Advantage Summary:
                 </Typography>
                 <Box sx={{ '& > div': { mb: 1 } }}>
@@ -1270,7 +1273,7 @@ const QuotePage = () => {
             </Grid>
             
             <Grid item xs={12} md={6}>
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                 Flexible Pricing
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
@@ -1278,7 +1281,7 @@ const QuotePage = () => {
                 to fit your specific budget and needs.
               </Typography>
               
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                 Better Communication & Feedback
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
@@ -1333,7 +1336,7 @@ const QuotePage = () => {
             
             <Grid item xs={12} md={4}>
               <Card elevation={2} sx={{ p: 3, height: 'fit-content' }}>
-                <Typography variant="h6" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+                <Typography variant="h6" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                   Every Quote Includes:
                 </Typography>
                 <Box sx={{ '& > div': { mb: 1.5 } }}>
@@ -1365,7 +1368,7 @@ const QuotePage = () => {
           </Grid>
           
           <Box sx={{ mt: 4, textAlign: 'center' }}>
-            <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
+            <Typography variant="h5" component="h4" sx={{ mb: 2, fontWeight: 600 }}>
               Transparent Pricing, No Surprises
             </Typography>
             <Typography variant="body1" sx={{ maxWidth: 600, mx: 'auto', color: 'text.secondary' }}>
@@ -1386,7 +1389,7 @@ const QuotePage = () => {
             <Grid item xs={12} md={6}>
               <Box sx={{ '& > div': { mb: 3 } }}>
                 <Card elevation={1} sx={{ p: 3 }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+                  <Typography variant="h6" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                     How quickly will I receive my cleaning estimate?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
@@ -1397,7 +1400,7 @@ const QuotePage = () => {
                 </Card>
                 
                 <Card elevation={1} sx={{ p: 3 }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+                  <Typography variant="h6" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                     Are your cleaning estimates really free?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
@@ -1408,7 +1411,7 @@ const QuotePage = () => {
                 </Card>
                 
                 <Card elevation={1} sx={{ p: 3 }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+                  <Typography variant="h6" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                     What information do you need for an accurate estimate?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
@@ -1419,7 +1422,7 @@ const QuotePage = () => {
                 </Card>
                 
                 <Card elevation={1} sx={{ p: 3 }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+                  <Typography variant="h6" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                     Can I modify my quote after I receive it?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
@@ -1434,7 +1437,7 @@ const QuotePage = () => {
             <Grid item xs={12} md={6}>
               <Box sx={{ '& > div': { mb: 3 } }}>
                 <Card elevation={1} sx={{ p: 3 }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+                  <Typography variant="h6" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                     Do you provide quotes for both residential and commercial cleaning?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
@@ -1445,7 +1448,7 @@ const QuotePage = () => {
                 </Card>
                 
                 <Card elevation={1} sx={{ p: 3 }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+                  <Typography variant="h6" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                     How long is my cleaning quote valid?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
@@ -1456,7 +1459,7 @@ const QuotePage = () => {
                 </Card>
                 
                 <Card elevation={1} sx={{ p: 3 }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
+                  <Typography variant="h6" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                     What areas do you provide estimates for?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
@@ -1478,7 +1481,7 @@ const QuotePage = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready for Your Free Cleaning Estimate?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Join hundreds of satisfied Dayton homeowners who trust Gem City Cleaning with their homes. 
             Get your personalized <strong>free house cleaning quote</strong> today - no obligations, just honest pricing!
           </Typography>

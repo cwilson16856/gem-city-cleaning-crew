@@ -239,7 +239,7 @@ const PostPage = () => {
             <>
               <Divider sx={{ my: 4 }} />
               <Box>
-                <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <Typography variant="h6" component="p" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                   <TagIcon /> Tags
                 </Typography>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
@@ -259,7 +259,7 @@ const PostPage = () => {
         </article>
 
         <Box sx={{ mt: 6, p: 3, backgroundColor: 'primary.light', borderRadius: 2, textAlign: 'center' }}>
-          <Typography variant="h5" gutterBottom color="primary.contrastText">
+          <Typography variant="h5" component="h2" gutterBottom color="primary.contrastText">
             Need Professional Cleaning Services?
           </Typography>
           <Typography variant="body1" paragraph color="primary.contrastText">
