@@ -2,6 +2,7 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import oktoberfestFallHostingContent from './posts/oktoberfest-fall-hosting-cleaning-dayton.js'
 import officeCleanBetweenCleaningsContent from './posts/how-to-keep-office-clean-between-cleanings-dayton.js'
 import stainlessSteelAppliancesContent from './posts/how-to-deep-clean-stainless-steel-appliances-dayton.js'
 import hardWaterStainsContent from './posts/how-to-remove-hard-water-stains-bathroom-fixtures-dayton.js'
@@ -14,6 +15,76 @@ import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'oktoberfest-fall-hosting-cleaning-dayton',
+    title: 'Oktoberfest Weekend Cleaning: A Dayton Hosting Guide',
+    description: "Oktoberfest weekend fills Dayton calendars fast. Here's the pre-party and post-party cleaning timeline to get your house guest-ready and reset fast after.",
+    publishedAt: '2026-08-25',
+    updatedAt: '2026-08-25',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Local Guides & Seasonal',
+    tags: ['fall entertaining', 'party cleaning', 'Oktoberfest', 'hosting checklist', 'Dayton'],
+    keywords: [
+      'fall entertaining cleaning checklist Dayton',
+      'how to clean house before hosting a party',
+      'post party cleaning checklist',
+      'Oktoberfest Dayton hosting',
+      'pre party cleaning timeline',
+      'clean house after hosting guests',
+      'Dayton Art Institute Oktoberfest',
+      'fall hosting cleaning tips Ohio',
+      'party prep cleaning checklist',
+    ],
+    problem: "Oktoberfest weekend packs Dayton's calendar with guests, tailgates, and watch parties — and most fall entertaining advice online is generic, with no plan for cleaning up the morning after.",
+    solution: 'A pre-party and post-party cleaning timeline tied to the real Dayton Art Institute Oktoberfest weekend (September 25-27, 2026), covering what to clean before guests arrive and how to reset fast the next day.',
+    targetAudience: 'Dayton-area homeowners hosting fall gatherings, tailgates, or Oktoberfest watch parties — especially in Oakwood, Kettering, Centerville, and downtown Dayton households near the Dayton Art Institute',
+    coverImage: '/images/blog/oktoberfest-fall-hosting-cleaning-dayton.png',
+    featured: false,
+    content: oktoberfestFallHostingContent,
+    faqs: [
+      {
+        question: 'How far in advance should I clean before hosting a party?',
+        answer: 'Start the deep-clean tasks about three days out — bathroom, fridge, and floors — then handle dusting and windows the day before, and save a quick clutter reset for the morning guests arrive. Spreading it out over three days means no single day turns into a marathon, and it leaves the morning-of free for food prep and last-minute details instead of scrubbing.',
+      },
+      {
+        question: "What's the fastest way to clean my house after a party?",
+        answer: "Work in this order: trash and recycling first, then dishes and kitchen surfaces, then the bathroom, and floors last. Doing floors first just means you're tracking through them again while you clean everything else. For a typical Oktoberfest-weekend gathering, this order gets a house back to normal in one to two focused hours.",
+      },
+      {
+        question: 'What areas should I prioritize before guests arrive?',
+        answer: "The kitchen, the guest bathroom, and whatever room people will actually gather in matter far more than bedrooms or closets nobody will see. Clear counters, stock the bathroom with fresh towels and soap, and make sure there's obvious space for food, drinks, and coats. Skip organizing cabinets or dusting shelves above eye level — nobody's checking, and your time is better spent where guests actually look.",
+      },
+      {
+        question: 'Do I need to deep clean before a small get-together?',
+        answer: "No. A small gathering of a few friends calls for a tidy-and-reset, not a full deep clean — clear surfaces, a quick vacuum, and a clean bathroom cover most of it. Save the full three-day countdown for a bigger Oktoberfest-weekend crowd, out-of-town guests, or anytime you're hosting people who'll be using multiple rooms of the house.",
+      },
+      {
+        question: 'When is Oktoberfest at the Dayton Art Institute in 2026?',
+        answer: "It runs Friday, September 25 through Sunday, September 27, 2026 — a Lederhosen Lunch and Preview Party on Friday, an all-day festival Saturday, and a Sunday capped by the Steinholding Competition. Tickets go on sale in late July. Because the exact dates shift slightly year to year, it's worth double-checking the Dayton Art Institute's own event page before you lock in your own hosting plans around it.",
+      },
+      {
+        question: 'How do I prevent stains and spills during a party?',
+        answer: 'Blot spills immediately instead of letting them sit — beer, cider, and wine are the most common Oktoberfest-weekend culprits, and all three lift far more easily wet than dried. Keep a stack of towels somewhere visible near the kitchen and living area, use coasters on any surface you care about, and stage a trash station so cups and cans don’t pile up on tables and counters in the first place.',
+      },
+      {
+        question: 'Should I hire a cleaning service before or after hosting?',
+        answer: 'Both have a case, but after tends to matter more for a weekend like Oktoberfest. Pre-party cleaning is usually manageable solo with the three-day countdown above, but the day-after reset competes directly with getting back to work on Monday. Plenty of Dayton hosts handle the prep themselves and book a one-time deep clean for the Monday after a big weekend instead.',
+      },
+      {
+        question: "What's the fastest way to reset my house the day after a party?",
+        answer: 'Trash and dishes first, then a wipe-down of the kitchen and bathroom, then floors. Most of what makes a post-party house feel overwhelming is visual clutter — bottles, cups, and plates — so clearing that first makes the rest of the cleanup feel much smaller and faster than it looks at 9 a.m. the morning after.',
+      },
+    ],
+    howToTitle: 'How to Get Your House Ready to Host for Oktoberfest Weekend',
+    howToSteps: [
+      { name: 'Deep clean 3 days out', text: 'Scrub the guest bathroom, clear and wipe the fridge and pantry shelves you’ll be loading with food and drinks, and do a full vacuum-and-mop pass while the house is still empty of party supplies.' },
+      { name: 'Dust and detail the day before', text: 'Wipe every reachable surface top to bottom and clean windows and mirrors — fingerprints and smudges show up fast under evening lighting.' },
+      { name: 'Reset clutter the morning of', text: 'Clear any mess that built up overnight, set out fresh hand towels in the bathroom, and empty every trash can so you start the day from zero.' },
+      { name: 'Stage a trash and spill station', text: 'Put an obvious bin near the entertaining space and keep a stack of towels by the kitchen so spills get blotted immediately instead of drying in.' },
+      { name: 'Clear trash and dishes first the next day', text: 'Walk the whole house pulling bottles, cans, and cups, then load the dishwasher and wipe counters before touching anything else.' },
+      { name: 'Finish with the bathroom and floors', text: 'Give the guest bathroom a full wipe-down and disinfect, then vacuum carpets and mop hard floors last so you finish on a clean surface.' },
+    ],
+  },
   {
     slug: 'how-to-keep-office-clean-between-cleanings-dayton',
     title: 'How to Keep Your Office Clean Between Professional Cleanings',
