@@ -482,6 +482,7 @@ const HomePage = () => {
                   <Box
                     key={index}
                     component="span"
+                    aria-hidden={index === currentHeadline ? undefined : true}
                   className={`headline-text elementor-headline-dynamic-text ${index === currentHeadline ? 'elementor-headline-text-active' : ''}`}
                     sx={{
                       display: index === currentHeadline ? 'inline-block' : 'none',

@@ -35,7 +35,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { getAllPosts } from '../src/content/blog/index.js'
-import { ALL_PRERENDER_ROUTES } from './routes.js'
+import { ALL_PRERENDER_ROUTES, SITE_URL } from './routes.js'
+import { htmlFragmentToMarkdown } from './html-to-markdown.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.join(__dirname, '..')
@@ -69,6 +70,48 @@ function replaceOrThrow(html, searchValue, replaceValue, label) {
     throw new Error(`buildDocument: "${label}" replacement had no effect — dist/index.html may have changed shape`)
   }
   return result
+}
+
+// Markdown sibling of outFileFor — same directory, index.md instead of
+// index.html. Fetched by middleware.js when a request negotiates
+// Accept: text/markdown (acceptmarkdown.com).
+function markdownOutFileFor(distDir, routePath) {
+  const trimmed = routePath.replace(/^\/+|\/+$/g, '')
+  return trimmed === ''
+    ? path.join(distDir, 'index.md')
+    : path.join(distDir, ...trimmed.split('/'), 'index.md')
+}
+
+function extractTitle(helmet) {
+  const match = helmet.title.toString().match(/<title[^>]*>(.*?)<\/title>/s)
+  if (!match) return 'Gem City Cleaning Crew'
+  return match[1]
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#x27;|&#39;/g, "'")
+}
+
+// Builds the text/markdown variant of a route from the same SSR appHtml
+// used for the HTML prerender — only the <main class="main-content"> region
+// (skips the Header/Footer chrome, which would otherwise repeat verbatim on
+// every single page's markdown output).
+function buildMarkdown(appHtml, helmet, routePath) {
+  const title = extractTitle(helmet)
+  const canonicalUrl = `${SITE_URL}${routePath === '/' ? '' : routePath}`
+  const mainMatch = appHtml.match(/<main[^>]*class="main-content"[^>]*>([\s\S]*?)<\/main>/)
+  const bodyMarkdown = htmlFragmentToMarkdown(mainMatch ? mainMatch[1] : appHtml, { siteUrl: SITE_URL })
+
+  return `${[
+    `# ${title}`,
+    `Source: ${canonicalUrl}`,
+    bodyMarkdown,
+    '---',
+    `More: [Sitemap](${SITE_URL}/sitemap.xml) · [Agent index](${SITE_URL}/llms.txt)`,
+  ]
+    .filter(Boolean)
+    .join('\n\n')}\n`
 }
 
 function buildDocument(template, appHtml, helmet) {
@@ -123,6 +166,7 @@ async function main() {
       const outFile = outFileFor(distDir, routePath)
       fs.mkdirSync(path.dirname(outFile), { recursive: true })
       fs.writeFileSync(outFile, buildDocument(template, appHtml, helmet))
+      fs.writeFileSync(markdownOutFileFor(distDir, routePath), buildMarkdown(appHtml, helmet, routePath))
       succeeded++
     } catch (error) {
       failed++

@@ -6,6 +6,10 @@
 
 import { CITY_SLUGS } from '../src/data/locations.js'
 
+// Single source of truth for the production origin — used anywhere a script
+// needs to build an absolute URL (sitemap, llms.txt, prerendered markdown).
+export const SITE_URL = 'https://gemcitycleaningcrew.com'
+
 // Static, non-dynamic routes (matches src/App.jsx's <Route> list). Excludes
 // blog (generated from post data) and location pages (generated below from
 // CITY_SLUGS) since those are dynamic.

@@ -8,11 +8,10 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { getAllPosts } from '../src/content/blog/index.js'
-import { SITEMAP_ROUTES } from './routes.js'
+import { SITEMAP_ROUTES, SITE_URL } from './routes.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.join(__dirname, '..')
-const SITE_URL = 'https://gemcitycleaningcrew.com'
 const TODAY = new Date().toISOString().split('T')[0]
 
 function buildSitemap(posts) {
