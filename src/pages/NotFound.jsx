@@ -51,7 +51,7 @@ const NotFound = () => {
         </Box>
 
         <Box sx={{ mt: 6, p: 3, backgroundColor: 'grey.50', borderRadius: 2 }}>
-          <Typography variant="h6" gutterBottom>
+          <Typography variant="h6" component="h3" gutterBottom>
             Looking for cleaning services?
           </Typography>
           <Typography variant="body2" color="text.secondary" paragraph>
@@ -65,6 +65,14 @@ const NotFound = () => {
           >
             Get a Free Quote
           </Button>
+        </Box>
+
+        <Box sx={{ mt: 4 }}>
+          <Typography variant="body2" color="text.secondary">
+            Looking for something specific? See the{' '}
+            <a href="/sitemap.xml">full sitemap</a> or the{' '}
+            <a href="/llms.txt">site index for AI agents</a>.
+          </Typography>
         </Box>
       </Container>
     </>

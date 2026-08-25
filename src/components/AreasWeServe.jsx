@@ -59,7 +59,7 @@ const AreasWeServe = ({ onCityClick }) => {
         </Grid>
         
         <Grid item xs={12} md={6} className={styles.areasSection}>
-          <Typography variant="h4" className={styles.areasTitle}>
+          <Typography variant="h4" component="h3" className={styles.areasTitle}>
             Areas We Serve
           </Typography>
           
@@ -121,7 +121,7 @@ const AreasWeServe = ({ onCityClick }) => {
           </Grid>
 
           <Box className={styles.expandSection}>
-            <Typography variant="h6" className={styles.expandTitle}>
+            <Typography variant="h6" component="h4" className={styles.expandTitle}>
               Don't see your area?
             </Typography>
             <Typography variant="body2" className={styles.expandText}>

@@ -47,9 +47,9 @@ const Footer = () => {
                   />
                 </div>
                 <div className={styles.logoTextContainer}>
-                  <h6 className={styles.companyName}>
+                  <div className={styles.companyName}>
                     Gem City Cleaning Crew
-                  </h6>
+                  </div>
                   <p className={styles.companyTagline}>
                     We Make Life Easier
                   </p>
@@ -69,9 +69,9 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h6 className={styles.sectionTitle}>
+            <p className={styles.sectionTitle}>
               Contact Information
-            </h6>
+            </p>
             
             <div className={styles.contactStack}>
               <div className={styles.contactItem}>
@@ -126,9 +126,9 @@ const Footer = () => {
 
           {/* Services & Areas */}
           <div>
-            <h6 className={styles.sectionTitle}>
+            <p className={styles.sectionTitle}>
               Our Services
-            </h6>
+            </p>
             
             <div className={styles.servicesSection}>
               <div className={styles.servicesList}>
@@ -150,9 +150,9 @@ const Footer = () => {
               </div>
             </div>
 
-            <h6 className={styles.sectionTitle}>
+            <p className={styles.sectionTitle}>
               Service Areas
-            </h6>
+            </p>
             
             <div className={styles.serviceAreasContainer}>
               {serviceAreas.map((area) => (
