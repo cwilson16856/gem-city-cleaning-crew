@@ -350,7 +350,8 @@ const OfficeCleaning = () => {
           </Typography>
           
           <Typography 
-            variant="h4" 
+            variant="h4"
+            component="p"
             className="hero-subtitle"
             sx={{ 
               fontSize: { xs: '1.2rem', md: '1.8rem' },
@@ -364,7 +365,8 @@ const OfficeCleaning = () => {
           </Typography>
 
           <Typography 
-            variant="h5" 
+            variant="h5"
+            component="p"
             sx={{ 
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
@@ -501,6 +503,7 @@ const OfficeCleaning = () => {
         
         <Typography 
           variant="h4" 
+          component="h3"
           sx={{ 
             mb: 4, 
             textAlign: 'center',
@@ -524,11 +527,11 @@ const OfficeCleaning = () => {
               <Box sx={{ mb: 2 }}>
                 <Rating value={5} readOnly size="large" sx={{ color: '#FFD700' }} />
               </Box>
-              <Typography variant="h6" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
+              <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
                 "Our law firm has used Gem City Cleaning for over 18 months. They understand the importance of confidentiality 
                 and always maintain the professional appearance our clients expect. No contracts makes it easy to adjust services as needed."
               </Typography>
-              <Typography variant="subtitle1" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
+              <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
                 - Michael T., Law Firm Partner
               </Typography>
             </Paper>
@@ -539,11 +542,11 @@ const OfficeCleaning = () => {
               <Box sx={{ mb: 2 }}>
                 <Rating value={5} readOnly size="large" sx={{ color: '#FFD700' }} />
               </Box>
-              <Typography variant="h6" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
+              <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
                 "As a real estate office, first impressions matter. Gem City Cleaning keeps our office spotless and ready for 
                 client meetings. Their recurring service keeps us consistently clean without any hassle."
               </Typography>
-              <Typography variant="subtitle1" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
+              <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
                 - Jennifer R., Real Estate Broker
               </Typography>
             </Paper>
@@ -679,7 +682,7 @@ const OfficeCleaning = () => {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <Paper sx={{ p: 3, height: '100%' }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>Standard Office Cleaning</Typography>
+                  <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600 }}>Standard Office Cleaning</Typography>
                   <Box component="ul" sx={{ pl: 2, m: 0 }}>
                     <Typography component="li" variant="body2" sx={{ mb: 1 }}>• Dusting all surfaces, desks, and furniture</Typography>
                     <Typography component="li" variant="body2" sx={{ mb: 1 }}>• Vacuuming carpets and rugs</Typography>
@@ -693,7 +696,7 @@ const OfficeCleaning = () => {
               
               <Grid item xs={12} md={6}>
                 <Paper sx={{ p: 3, height: '100%' }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>Specialized Office Services</Typography>
+                  <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600 }}>Specialized Office Services</Typography>
                   <Box component="ul" sx={{ pl: 2, m: 0 }}>
                     <Typography component="li" variant="body2" sx={{ mb: 1 }}>• Window cleaning (interior & exterior)</Typography>
                     <Typography component="li" variant="body2" sx={{ mb: 1 }}>• Light fixture cleaning</Typography>
@@ -815,7 +818,7 @@ const OfficeCleaning = () => {
                 aria-controls={`panel${index}a-content`}
                 id={`panel${index}a-header`}
               >
-                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>
@@ -880,7 +883,7 @@ const OfficeCleaning = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready for Professional Office Cleaning?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             No contracts • Recurring services • In-person quotes • Licensed & insured
           </Typography>
           

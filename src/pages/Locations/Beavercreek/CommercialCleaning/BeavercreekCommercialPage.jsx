@@ -397,7 +397,8 @@ const BeavercreekCommercialPage = () => {
           </Typography>
           
           <Typography 
-            variant="h4" 
+            variant="h4"
+            component="p"
             className="hero-subtitle"
             sx={{ 
               fontSize: { xs: '1.2rem', md: '1.8rem' },
@@ -411,7 +412,8 @@ const BeavercreekCommercialPage = () => {
           </Typography>
 
           <Typography 
-            variant="h5" 
+            variant="h5"
+            component="p"
             sx={{ 
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
@@ -572,6 +574,7 @@ const BeavercreekCommercialPage = () => {
         
         <Typography 
           variant="h4" 
+          component="h3"
           sx={{ 
             mb: 4, 
             textAlign: 'center',
@@ -594,10 +597,10 @@ const BeavercreekCommercialPage = () => {
             <Box sx={{ mb: 2 }}>
               <Rating value={featuredTestimonial.rating} readOnly size="large" sx={{ color: '#FFD700' }} />
             </Box>
-            <Typography variant="h6" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
+            <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
               {featuredTestimonial.text}
             </Typography>
-            <Typography variant="subtitle1" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
+            <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
               {featuredTestimonial.author}
             </Typography>
           </Paper>
@@ -830,7 +833,7 @@ const BeavercreekCommercialPage = () => {
                 aria-controls={`panel${index}a-content`}
                 id={`panel${index}a-header`}
               >
-                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>
@@ -859,7 +862,7 @@ const BeavercreekCommercialPage = () => {
             {serviceAreasText.areas.map((area, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <Card sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', p: 2 }}>
-                  <Typography variant="h6" sx={{ textAlign: 'center', color: theme.palette.primary.main }}>
+                  <Typography variant="h6" component="h3" sx={{ textAlign: 'center', color: theme.palette.primary.main }}>
                     {area}
                   </Typography>
                 </Card>
@@ -921,7 +924,7 @@ const BeavercreekCommercialPage = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Elevate Your Beavercreek Business with Professional Cleaning
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Join 100+ satisfied Beavercreek businesses who trust our licensed & insured cleaning team
           </Typography>
           

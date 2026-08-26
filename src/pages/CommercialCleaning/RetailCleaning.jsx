@@ -359,7 +359,8 @@ const RetailCleaning = () => {
           </Typography>
           
           <Typography 
-            variant="h4" 
+            variant="h4"
+            component="p"
             className="hero-subtitle"
             sx={{ 
               fontSize: { xs: '1.2rem', md: '1.8rem' },
@@ -373,7 +374,8 @@ const RetailCleaning = () => {
           </Typography>
 
           <Typography 
-            variant="h5" 
+            variant="h5"
+            component="p"
             sx={{ 
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
@@ -510,6 +512,7 @@ const RetailCleaning = () => {
         
         <Typography 
           variant="h4" 
+          component="h3"
           sx={{ 
             mb: 4, 
             textAlign: 'center',
@@ -533,11 +536,11 @@ const RetailCleaning = () => {
               <Box sx={{ mb: 2 }}>
                 <Rating value={5} readOnly size="large" sx={{ color: '#FFD700' }} />
               </Box>
-              <Typography variant="h6" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
+              <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
                 "Our boutique has worked with Gem City Cleaning for over a year. They understand retail and always work around our customers. 
                 The flexibility to adjust cleaning frequency during busy seasons has been invaluable."
               </Typography>
-              <Typography variant="subtitle1" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
+              <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
                 - Lisa K., Boutique Owner
               </Typography>
             </Paper>
@@ -548,11 +551,11 @@ const RetailCleaning = () => {
               <Box sx={{ mb: 2 }}>
                 <Rating value={5} readOnly size="large" sx={{ color: '#FFD700' }} />
               </Box>
-              <Typography variant="h6" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
+              <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
                 "As a restaurant owner, cleanliness is critical to our success. Gem City Cleaning helps us maintain health department standards 
                 while keeping our dining areas spotless for customers. Highly professional service."
               </Typography>
-              <Typography variant="subtitle1" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
+              <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
                 - Mark R., Restaurant Owner
               </Typography>
             </Paper>
@@ -688,7 +691,7 @@ const RetailCleaning = () => {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <Paper sx={{ p: 3, height: '100%' }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>Standard Retail Cleaning</Typography>
+                  <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600 }}>Standard Retail Cleaning</Typography>
                   <Box component="ul" sx={{ pl: 2, m: 0 }}>
                     <Typography component="li" variant="body2" sx={{ mb: 1 }}>• Sales floor cleaning and maintenance</Typography>
                     <Typography component="li" variant="body2" sx={{ mb: 1 }}>• Customer area sanitization</Typography>
@@ -702,7 +705,7 @@ const RetailCleaning = () => {
               
               <Grid item xs={12} md={6}>
                 <Paper sx={{ p: 3, height: '100%' }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>Specialized Retail Services</Typography>
+                  <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600 }}>Specialized Retail Services</Typography>
                   <Box component="ul" sx={{ pl: 2, m: 0 }}>
                     <Typography component="li" variant="body2" sx={{ mb: 1 }}>• Window cleaning (interior & exterior)</Typography>
                     <Typography component="li" variant="body2" sx={{ mb: 1 }}>• Dressing room deep sanitization</Typography>
@@ -801,7 +804,7 @@ const RetailCleaning = () => {
                 aria-controls={`panel${index}a-content`}
                 id={`panel${index}a-header`}
               >
-                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>
@@ -866,7 +869,7 @@ const RetailCleaning = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready for Professional Retail Cleaning?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Customer-focused • Flexible scheduling • No contracts • Licensed & insured
           </Typography>
           

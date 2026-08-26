@@ -317,9 +317,10 @@ const OfficeCleaningChecklist = () => {
             Professional Office Cleaning Checklist
           </Typography>
           
-          <Typography 
-            variant="h4" 
-            sx={{ 
+          <Typography
+            variant="h4"
+            component="p"
+            sx={{
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 400,
               mb: 4,
@@ -406,7 +407,7 @@ const OfficeCleaningChecklist = () => {
           <Grid item xs={12} md={4}>
             <Card sx={{ textAlign: 'center', p: 3, height: '100%' }}>
               <CleaningServicesIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600 }}>
                 Consistent Professional Results
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -417,7 +418,7 @@ const OfficeCleaningChecklist = () => {
           <Grid item xs={12} md={4}>
             <Card sx={{ textAlign: 'center', p: 3, height: '100%' }}>
               <CheckCircleIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600 }}>
                 Nothing Missed
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -428,7 +429,7 @@ const OfficeCleaningChecklist = () => {
           <Grid item xs={12} md={4}>
             <Card sx={{ textAlign: 'center', p: 3, height: '100%' }}>
               <SecurityIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600 }}>
                 Business-Focused Process
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -523,7 +524,7 @@ const OfficeCleaningChecklist = () => {
           {/* Business Assessment */}
           <Grid item xs={12} md={6}>
             <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h4" sx={{ mb: 3, fontWeight: 600, color: theme.palette.primary.main }}>
+              <Typography variant="h4" component="h3" sx={{ mb: 3, fontWeight: 600, color: theme.palette.primary.main }}>
                 Your Business Requirements
               </Typography>
               <Typography variant="body1" sx={{ mb: 4, color: '#525252' }}>
@@ -583,7 +584,7 @@ const OfficeCleaningChecklist = () => {
           {/* Field Implementation */}
           <Grid item xs={12} md={6}>
             <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h4" sx={{ mb: 3, fontWeight: 600, color: theme.palette.primary.main }}>
+              <Typography variant="h4" component="h3" sx={{ mb: 3, fontWeight: 600, color: theme.palette.primary.main }}>
                 Professional Execution
               </Typography>
               <Typography variant="body1" sx={{ mb: 4, color: '#525252' }}>
@@ -846,7 +847,7 @@ const OfficeCleaningChecklist = () => {
                 >
                   <CleaningServicesIcon sx={{ fontSize: 40, color: 'white' }} />
                 </Box>
-                <Typography variant="h4" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
                   One-Time Cleaning
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 3, color: '#525252' }}>
@@ -901,7 +902,7 @@ const OfficeCleaningChecklist = () => {
                 >
                   <CheckCircleIcon sx={{ fontSize: 40, color: 'white' }} />
                 </Box>
-                <Typography variant="h4" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
                   Recurring Office Cleaning
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 3, color: '#525252' }}>
@@ -956,7 +957,7 @@ const OfficeCleaningChecklist = () => {
                 >
                   <CorporateFareIcon sx={{ fontSize: 40, color: 'white' }} />
                 </Box>
-                <Typography variant="h4" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
                   Post-Construction Cleanup
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 3, color: '#525252' }}>
@@ -990,7 +991,7 @@ const OfficeCleaningChecklist = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready for Professional Office Cleaning?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Let our trained professionals handle your office cleaning with this comprehensive checklist approach.
           </Typography>
           

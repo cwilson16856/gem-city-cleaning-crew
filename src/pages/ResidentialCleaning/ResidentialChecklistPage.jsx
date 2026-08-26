@@ -351,9 +351,10 @@ const ResidentialChecklistPage = () => {
             Professional House Cleaning Checklist
           </Typography>
           
-          <Typography 
-            variant="h4" 
-            sx={{ 
+          <Typography
+            variant="h4"
+            component="p"
+            sx={{
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 400,
               mb: 4,
@@ -440,7 +441,7 @@ const ResidentialChecklistPage = () => {
           <Grid item xs={12} md={4}>
             <Card sx={{ textAlign: 'center', p: 3, height: '100%' }}>
               <CleaningServicesIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600 }}>
                 Consistent Results
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -451,7 +452,7 @@ const ResidentialChecklistPage = () => {
           <Grid item xs={12} md={4}>
             <Card sx={{ textAlign: 'center', p: 3, height: '100%' }}>
               <CheckCircleIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600 }}>
                 Nothing Missed
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -462,7 +463,7 @@ const ResidentialChecklistPage = () => {
           <Grid item xs={12} md={4}>
             <Card sx={{ textAlign: 'center', p: 3, height: '100%' }}>
               <DownloadIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
-              <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
+              <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600 }}>
                 Transparent Process
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -557,7 +558,7 @@ const ResidentialChecklistPage = () => {
           {/* Team Notes Mobile Mockup */}
           <Grid item xs={12} md={6}>
             <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h4" sx={{ mb: 3, fontWeight: 600, color: theme.palette.primary.main }}>
+              <Typography variant="h4" component="h3" sx={{ mb: 3, fontWeight: 600, color: theme.palette.primary.main }}>
                 Your Custom Preferences
               </Typography>
               <Typography variant="body1" sx={{ mb: 4, color: '#525252' }}>
@@ -620,7 +621,7 @@ const ResidentialChecklistPage = () => {
           {/* Cleaner's Field Checklist */}
           <Grid item xs={12} md={6}>
             <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h4" sx={{ mb: 3, fontWeight: 600, color: theme.palette.primary.main }}>
+              <Typography variant="h4" component="h3" sx={{ mb: 3, fontWeight: 600, color: theme.palette.primary.main }}>
                 What Cleaners See in the Field
               </Typography>
               <Typography variant="body1" sx={{ mb: 4, color: '#525252' }}>
@@ -736,7 +737,7 @@ const ResidentialChecklistPage = () => {
                     }} 
                   />
                 </Box>
-                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
+                <Typography variant="h5" component="h4" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
                   Your Preferences Documented
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6 }}>
@@ -796,7 +797,7 @@ const ResidentialChecklistPage = () => {
                     }} 
                   />
                 </Box>
-                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
+                <Typography variant="h5" component="h4" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
                   Flexible Standards
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6 }}>
@@ -856,7 +857,7 @@ const ResidentialChecklistPage = () => {
                     }} 
                   />
                 </Box>
-                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
+                <Typography variant="h5" component="h4" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
                   Mobile Technology
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6 }}>
@@ -1091,7 +1092,7 @@ const ResidentialChecklistPage = () => {
                 >
                   <CleaningServicesIcon sx={{ fontSize: 40, color: 'white' }} />
                 </Box>
-                <Typography variant="h4" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
                   Deep Cleaning
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 3, color: '#525252' }}>
@@ -1148,7 +1149,7 @@ const ResidentialChecklistPage = () => {
                 >
                   <CheckCircleIcon sx={{ fontSize: 40, color: 'white' }} />
                 </Box>
-                <Typography variant="h4" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
                   Recurring Cleaning
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 3, color: '#525252' }}>
@@ -1205,7 +1206,7 @@ const ResidentialChecklistPage = () => {
                 >
                   <DownloadIcon sx={{ fontSize: 40, color: 'white' }} />
                 </Box>
-                <Typography variant="h4" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 2, fontWeight: 700, color: theme.palette.primary.main }}>
                   Move In/Out Cleaning
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 3, color: '#525252' }}>
@@ -1241,7 +1242,7 @@ const ResidentialChecklistPage = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready for Professional Cleaning?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Let our trained professionals handle your home cleaning with this comprehensive checklist approach.
           </Typography>
           

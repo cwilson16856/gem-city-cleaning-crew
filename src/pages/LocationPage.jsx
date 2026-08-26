@@ -140,7 +140,7 @@ const LocationsIndex = () => {
                     {area.city}
                   </Typography>
 
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                  <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600 }}>
                     Residential Services
                   </Typography>
                   <CardActionArea
@@ -155,7 +155,7 @@ const LocationsIndex = () => {
 
                   <Divider sx={{ my: 2 }} />
 
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                  <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600 }}>
                     Commercial Services
                   </Typography>
                   <CardActionArea
@@ -246,7 +246,7 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
 
         {cityData.landmarks?.length > 0 && (
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h6" sx={{ mb: 1.5, fontWeight: 600 }}>
+            <Typography variant="h6" component="h2" sx={{ mb: 1.5, fontWeight: 600 }}>
               Local Landmarks
             </Typography>
             <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
@@ -259,7 +259,7 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
 
         {cityData.zipCodes?.length > 0 && (
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h6" sx={{ mb: 1.5, fontWeight: 600 }}>
+            <Typography variant="h6" component="h2" sx={{ mb: 1.5, fontWeight: 600 }}>
               Zip Codes Served
             </Typography>
             <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>

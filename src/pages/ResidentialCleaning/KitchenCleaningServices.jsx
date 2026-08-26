@@ -304,7 +304,8 @@ const KitchenCleaningServices = () => {
           </Typography>
           
           <Typography 
-            variant="h4" 
+            variant="h4"
+            component="p"
             className="hero-subtitle"
             sx={{ 
               fontSize: { xs: '1.2rem', md: '1.8rem' },
@@ -318,7 +319,8 @@ const KitchenCleaningServices = () => {
           </Typography>
 
           <Typography 
-            variant="h5" 
+            variant="h5"
+            component="p"
             sx={{ 
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
@@ -354,7 +356,8 @@ const KitchenCleaningServices = () => {
               }} 
             />
             <Typography 
-              variant="h6" 
+              variant="h6"
+              component="p"
               sx={{ 
                 color: '#FFD700', 
                 fontWeight: 600,
@@ -494,7 +497,8 @@ const KitchenCleaningServices = () => {
                   }}
                 >
                   <Typography 
-                    variant="h3" 
+                    variant="h3"
+                    component="p"
                     sx={{ 
                       color: 'white', 
                       fontWeight: 700,
@@ -505,7 +509,7 @@ const KitchenCleaningServices = () => {
                   </Typography>
                 </Box>
                 
-                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
+                <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
                   {step.title}
                 </Typography>
                 
@@ -576,7 +580,7 @@ const KitchenCleaningServices = () => {
                   )}
                   
                   <CardContent sx={{ p: 4, textAlign: 'center' }}>
-                    <Typography variant="h4" sx={{ mb: 1, fontWeight: 700, color: theme.palette.primary.main }}>
+                    <Typography variant="h4" component="h3" sx={{ mb: 1, fontWeight: 700, color: theme.palette.primary.main }}>
                       {service.title}
                     </Typography>
                     
@@ -657,7 +661,7 @@ const KitchenCleaningServices = () => {
                     }}
                   />
                   <Box sx={{ p: 3, backgroundColor: 'white' }}>
-                    <Typography variant="h6" sx={{ color: theme.palette.primary.main, fontWeight: 600, mb: 1 }}>
+                    <Typography variant="h6" component="h4" sx={{ color: theme.palette.primary.main, fontWeight: 600, mb: 1 }}>
                       Complete Kitchen Deep Clean
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -693,7 +697,7 @@ const KitchenCleaningServices = () => {
                     }}
                   />
                   <Box sx={{ p: 3, backgroundColor: 'white' }}>
-                    <Typography variant="h6" sx={{ color: theme.palette.primary.main, fontWeight: 600, mb: 1 }}>
+                    <Typography variant="h6" component="h4" sx={{ color: theme.palette.primary.main, fontWeight: 600, mb: 1 }}>
                       Appliance Deep Cleaning
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -747,7 +751,7 @@ const KitchenCleaningServices = () => {
                     {benefit.icon}
                   </Box>
                   <Box sx={{ flex: 1 }}>
-                    <Typography variant="h5" sx={{ mb: 1, fontWeight: 600, color: theme.palette.primary.main }}>
+                    <Typography variant="h5" component="h3" sx={{ mb: 1, fontWeight: 600, color: theme.palette.primary.main }}>
                       {benefit.title}
                     </Typography>
                     <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.6 }}>
@@ -820,7 +824,7 @@ const KitchenCleaningServices = () => {
                   </Typography>
                   
                   <Box>
-                    <Typography variant="subtitle2" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
+                    <Typography variant="subtitle2" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
                       - {testimonial.name}
                     </Typography>
                     <Typography variant="caption" color="text.secondary">
@@ -858,7 +862,7 @@ const KitchenCleaningServices = () => {
                 aria-controls={`kitchen-faq-${index}`}
                 id={`kitchen-faq-${index}`}
               >
-                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>
@@ -878,7 +882,7 @@ const KitchenCleaningServices = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready for a Spotless Kitchen in Dayton?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Create a healthier cooking environment with professional kitchen cleaning that removes grease, 
             sanitizes surfaces, and makes your kitchen shine. Food-safe products guaranteed!
           </Typography>

@@ -253,8 +253,9 @@ const HomePage = () => {
             Trusted House Cleaning in Dayton, OH
           </Typography>
           
-          <Typography 
-            variant="h4" 
+          <Typography
+            variant="h4"
+            component="p"
             className="hero-subtitle"
             sx={{ 
               fontSize: { xs: '1.2rem', md: '1.8rem' },
@@ -290,10 +291,11 @@ const HomePage = () => {
                 }
               }} 
             />
-            <Typography 
-              variant="h6" 
-              sx={{ 
-                color: '#FFD700', 
+            <Typography
+              variant="h6"
+              component="p"
+              sx={{
+                color: '#FFD700',
                 fontWeight: 600,
                 fontFamily: 'Inter, sans-serif',
                 minWidth: 200 // Prevent text shifting
@@ -415,7 +417,7 @@ const HomePage = () => {
               >
                 <Box className="advantage-icon">{advantage.icon}</Box>
                 <Box className="advantage-content">
-                    <Typography variant="h5" sx={{ mb: 1, fontWeight: 600 }}>
+                    <Typography variant="h5" component="h3" sx={{ mb: 1, fontWeight: 600 }}>
                       {advantage.title}
                     </Typography>
                     <Typography variant="body1" sx={{ mb: 2 }}>
@@ -480,6 +482,7 @@ const HomePage = () => {
                   <Box
                     key={index}
                     component="span"
+                    aria-hidden={index === currentHeadline ? undefined : true}
                   className={`headline-text elementor-headline-dynamic-text ${index === currentHeadline ? 'elementor-headline-text-active' : ''}`}
                     sx={{
                       display: index === currentHeadline ? 'inline-block' : 'none',
@@ -639,7 +642,7 @@ const HomePage = () => {
                 <Typography variant="body1" sx={{ mb: 3, fontStyle: 'italic' }}>
                   &quot;{testimonial.text}&quot;
                 </Typography>
-                <Typography variant="subtitle2" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
+                <Typography variant="subtitle2" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
                   - {testimonial.name}
                 </Typography>
               </Paper>
@@ -778,7 +781,7 @@ const HomePage = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready for Professional Service?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Experience the difference of our 3-month trained cleaning professionals.
           </Typography>
           

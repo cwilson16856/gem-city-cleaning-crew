@@ -666,7 +666,8 @@ const CommercialOneTimeCleaning = () => {
           </Typography>
           
           <Typography 
-            variant="h4" 
+            variant="h4"
+            component="p"
             className="hero-subtitle"
             sx={{ 
               fontSize: { xs: '1.2rem', md: '1.8rem' },
@@ -680,7 +681,8 @@ const CommercialOneTimeCleaning = () => {
           </Typography>
 
           <Typography 
-            variant="h5" 
+            variant="h5"
+            component="p"
             sx={{ 
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
@@ -716,7 +718,8 @@ const CommercialOneTimeCleaning = () => {
               }} 
             />
             <Typography 
-              variant="h6" 
+              variant="h6"
+              component="p"
               sx={{ 
                 color: '#FFD700', 
                 fontWeight: 600,
@@ -969,7 +972,7 @@ const CommercialOneTimeCleaning = () => {
               <Card sx={{ height: '100%', textAlign: 'center', p: 3 }}>
                 <CardContent>
                   <Box sx={{ mb: 3 }}>{reason.icon}</Box>
-                  <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
+                  <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
                     {reason.title}
                   </Typography>
                   <Typography variant="body1">
@@ -1150,7 +1153,7 @@ const CommercialOneTimeCleaning = () => {
           </Grid>
 
           <Box sx={{ textAlign: 'center', mt: 6 }}>
-            <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
+            <Typography variant="h5" component="h4" sx={{ mb: 2, fontWeight: 600, color: theme.palette.primary.main }}>
               Ready for These Results in Your Space?
             </Typography>
             <Typography variant="body1" sx={{ mb: 3, color: '#525252', maxWidth: 600, mx: 'auto' }}>
@@ -1198,7 +1201,7 @@ const CommercialOneTimeCleaning = () => {
                 aria-controls={`panel${index}a-content`}
                 id={`panel${index}a-header`}
               >
-                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>
@@ -1223,7 +1226,7 @@ const CommercialOneTimeCleaning = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Need Professional Deep Cleaning Today?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Same-day service available for urgent commercial cleaning needs in Dayton, OH
           </Typography>
           

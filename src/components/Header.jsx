@@ -197,10 +197,11 @@ const Header = () => {
                 />
               </Box>
               <Box sx={{ minWidth: 200 }}>
-                <Typography 
-                  variant="h6" 
-                  sx={{ 
-                    fontWeight: 700, 
+                <Typography
+                  variant="h6"
+                  component="p"
+                  sx={{
+                    fontWeight: 700,
                     color: theme.palette.primary.main,
                     fontSize: '1.4rem',
                     lineHeight: 1.2,

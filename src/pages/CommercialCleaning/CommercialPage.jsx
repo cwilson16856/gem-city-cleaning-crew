@@ -367,7 +367,8 @@ const CommercialPage = () => {
           </Typography>
           
           <Typography 
-            variant="h4" 
+            variant="h4"
+            component="p"
             className="hero-subtitle"
             sx={{ 
               fontSize: { xs: '1.2rem', md: '1.8rem' },
@@ -381,7 +382,8 @@ const CommercialPage = () => {
           </Typography>
 
           <Typography 
-            variant="h5" 
+            variant="h5"
+            component="p"
             sx={{ 
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
@@ -535,6 +537,7 @@ const CommercialPage = () => {
         
         <Typography 
           variant="h4" 
+          component="h3"
           sx={{ 
             mb: 4, 
             textAlign: 'center',
@@ -557,12 +560,12 @@ const CommercialPage = () => {
             <Box sx={{ mb: 2 }}>
               <Rating value={5} readOnly size="large" sx={{ color: '#FFD700' }} />
             </Box>
-            <Typography variant="h6" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
+            <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
               "Gem City Cleaning has been maintaining our office building for over two years. 
               Their attention to detail and professional approach has impressed both our staff and clients. 
               They work efficiently after hours and always leave our workspace spotless."
             </Typography>
-            <Typography variant="subtitle1" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
+            <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
               - Sarah M., Office Manager
             </Typography>
           </Paper>
@@ -794,7 +797,7 @@ const CommercialPage = () => {
                 aria-controls={`panel${index}a-content`}
                 id={`panel${index}a-header`}
               >
-                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>
@@ -860,7 +863,7 @@ const CommercialPage = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             Ready to Partner with Professional Commercial Cleaners?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Licensed, insured, and experienced commercial cleaning team serving Dayton businesses.
           </Typography>
           

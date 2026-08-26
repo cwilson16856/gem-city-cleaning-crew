@@ -91,10 +91,11 @@ const HeroSection = ({
           {title}
         </Typography>
         
-        <Typography 
+        <Typography
           variant="h4"
+          component="p"
           className="hero-subtitle"
-          sx={{ 
+          sx={{
             fontSize: { xs: '1.2rem', md: '1.8rem' },
             fontWeight: 400,
             mb: 2,
@@ -108,9 +109,10 @@ const HeroSection = ({
         </Typography>
 
         {description && (
-          <Typography 
+          <Typography
             variant="h5"
-            sx={{ 
+            component="p"
+            sx={{
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
               mb: 4,
@@ -149,10 +151,11 @@ const HeroSection = ({
                 }
               }} 
             />
-            <Typography 
-              variant="h6" 
-              sx={{ 
-                color: '#FFD700', 
+            <Typography
+              variant="h6"
+              component="p"
+              sx={{
+                color: '#FFD700',
                 fontWeight: 600,
                 fontFamily: 'Inter, sans-serif',
                 minWidth: 200,
