@@ -158,8 +158,8 @@ const ResidentialPage = () => {
       answer: "We pay our cleaners well. However, you're more than welcome to if you'd like, and whatever amount you think you'd give is up to you. We have also accepted gifts, and old appliances. It is up to you. :)"
     },
     {
-      question: "What is the cost of House Cleaning Services?",
-      answer: "The price of house cleaning services can vary depending on various factors such as the size of your home, the number of rooms, the type of cleaning services required, and the frequency of cleaning. Usually it is best to schedule a walk-through to get an accurate quote."
+      question: "How much does house cleaning cost?",
+      answer: "Standard house cleaning starts at $125, and deep cleaning starts at $180. The exact house cleaning cost depends on your home's size, number of rooms, and how often you'd like service — book a free walk-through and we'll give you a firm price, not just a rough estimate."
     },
     {
       question: "Are you a maid service, a cleaning company, or something else?",

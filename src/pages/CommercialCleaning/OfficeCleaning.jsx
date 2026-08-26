@@ -33,6 +33,7 @@ import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService'
 import DescriptionIcon from '@mui/icons-material/Description'
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom'
 import PersonIcon from '@mui/icons-material/Person'
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital'
 
 // Import the styling
 import '../../styles/homepages/HomePage.css'
@@ -94,6 +95,14 @@ const OfficeCleaning = () => {
       features: ["Document security protocols", "Client confidentiality", "Professional presentation", "Flexible service times"],
       popular: false,
       specialties: ["Accounting firms", "Consulting offices", "Insurance agencies", "Financial advisors"]
+    },
+    {
+      title: "Medical & Dental Offices",
+      description: "Medical office cleaning services with proper disinfection protocols for doctor's offices, dental practices, and small clinics",
+      icon: <LocalHospitalIcon sx={{ fontSize: 32, color: 'white' }} />,
+      features: ["EPA-approved disinfectants", "Waiting room sanitization", "Exam room cleaning", "High-touch surface disinfection"],
+      popular: false,
+      specialties: ["Doctor's offices", "Dental practices", "Small clinics", "Chiropractic offices"]
     }
   ]
 
@@ -133,7 +142,7 @@ const OfficeCleaning = () => {
     },
     {
       question: "What types of professional offices do you serve?",
-      answer: "We specialize in cleaning law offices, real estate agencies, therapy practices, corporate offices, accounting firms, consulting offices, and other professional service providers throughout the Dayton area."
+      answer: "We provide medical office cleaning services alongside law offices, real estate agencies, therapy practices, corporate offices, accounting firms, consulting offices, and other professional service providers throughout the Dayton area."
     },
     {
       question: "How do you ensure quality and consistency?",
@@ -217,7 +226,7 @@ const OfficeCleaning = () => {
         <link rel="preload" as="image" href="/images/legacy/8643309867_00758e220a_c.webp" fetchPriority="high" />
         <title>Office Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="description" content="Professional Dayton office cleaning for law firms, real estate offices, therapy offices, corporate offices. No contracts, recurring services, in-person quotes. Call today!" />
-        <meta name="keywords" content="Dayton office cleaning, law office cleaning, real estate office cleaning, therapy office cleaning, corporate office cleaning, professional office cleaning, no contracts" />
+        <meta name="keywords" content="Dayton office cleaning, medical office cleaning services, law office cleaning, real estate office cleaning, therapy office cleaning, corporate office cleaning, professional office cleaning, no contracts" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -261,7 +270,7 @@ const OfficeCleaning = () => {
             "@type": "Service",
             "@id": SERVICE_ID,
             "name": "Office Cleaning Services",
-            "description": "Professional Dayton office cleaning services for law firms, real estate offices, therapy offices, and corporate offices",
+            "description": "Professional Dayton office cleaning services for medical offices, law firms, real estate offices, therapy offices, and corporate offices",
             "provider": {
               "@id": "https://gemcitycleaningcrew.com/#business"
             },
@@ -289,6 +298,13 @@ const OfficeCleaning = () => {
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Therapy Office Cleaning"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Medical Office Cleaning"
                   }
                 }
               ]
