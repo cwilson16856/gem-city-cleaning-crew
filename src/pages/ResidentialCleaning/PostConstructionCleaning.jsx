@@ -111,6 +111,10 @@ const PostConstructionCleaning = () => {
     {
       question: 'Do I need to be present during the cleaning?',
       answer: "No — as long as we have access to the space, our team can complete the cleaning without you needing to be there. Just let us know how you'd like access arranged when you book."
+    },
+    {
+      question: 'What do your construction cleaning services actually cover?',
+      answer: 'Our construction cleaning services cover the full range from rough clean through final walkthrough-ready clean — dust and debris removal, adhesive and paint overspray cleanup, and detailed cleaning of every surface, fixture, and vent cover in the space.'
     }
   ]
 
@@ -126,7 +130,7 @@ const PostConstructionCleaning = () => {
   const canonicalUrl = generateCanonicalUrl(PAGE_PATH)
   const serviceId = `${canonicalUrl}#service`
   const pageTitle = 'Post-Construction Cleaning Dayton OH'
-  const metaDescription = 'Professional post-construction cleaning in Dayton, Ohio. Rough clean, final clean, and touch-up cleaning for new builds, renovations, and remodels. Free quotes available.'
+  const metaDescription = 'Professional post-construction cleaning services in Dayton, Ohio — rough clean, final clean, and touch-up cleaning for new builds, renovations, and remodels. Free quotes available.'
 
   const localBusinessSchema = generateLocalBusinessSchema(AREA_SERVED_CITIES)
   const serviceSchema = generateServiceSchema({
@@ -156,7 +160,7 @@ const PostConstructionCleaning = () => {
       <Helmet>
         <title>{generateSEOTitle(pageTitle)}</title>
         <meta name="description" content={metaDescription} />
-        <meta name="keywords" content="post construction cleaning Dayton Ohio, new build cleaning, renovation cleanup, remodel cleaning Dayton, construction dust removal" />
+        <meta name="keywords" content="post construction cleaning services, construction cleaning services, post construction cleaning Dayton Ohio, new build cleaning, renovation cleanup, remodel cleaning Dayton, construction dust removal" />
         <link rel="canonical" href={canonicalUrl} />
 
         <meta property="og:type" content="website" />
@@ -238,7 +242,7 @@ const PostConstructionCleaning = () => {
               textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8)'
             }}
           >
-            From construction dust to move-in ready — rough clean, final clean, and touch-up cleaning for new builds and renovations
+            Professional construction cleaning services — from construction dust to move-in ready, covering rough clean, final clean, and touch-up cleaning for new builds and renovations
           </Typography>
 
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
