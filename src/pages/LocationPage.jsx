@@ -70,7 +70,7 @@ const LocationsIndex = () => {
   return (
     <>
       <Helmet>
-        <title>Cleaning Services Locations | Dayton & Surrounding Areas | Gem City Cleaning</title>
+        <title>Cleaning Service Locations Near Dayton | Gem City Cleaning Crew</title>
         <meta name="description" content="Professional cleaning services throughout Greater Dayton including Kettering, Centerville, Beavercreek & more. Residential & commercial cleaning services." />
       </Helmet>
 

@@ -243,7 +243,7 @@ const BeavercreekCommercialPage = () => {
     <>
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/beavercreek-sign.webp" fetchPriority="high" />
-        <title>7+ Elite Commercial Cleaning Services in Beavercreek | Trusted by 100+ Local Businesses</title>
+        <title>Commercial Cleaning in Beavercreek OH | Gem City Cleaning Crew</title>
         <meta name="description" content="Unleash pristine workspaces with Beavercreek's premier commercial cleaning service. Trusted by 100+ local businesses. Expert office & retail cleaning. Free quotes!" />
         <meta name="keywords" content="Beavercreek commercial cleaning, office cleaning Beavercreek, retail cleaning Beavercreek, medical facility cleaning, janitorial services, business cleaning" />
         

@@ -233,7 +233,7 @@ const ResidentialPage = () => {
     <>
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg" fetchPriority="high" />
-        <title>House Cleaning Services Dayton Ohio | No Contracts, Custom Plans | Gem City Cleaning</title>
+        <title>House Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="description" content="Expert house cleaning services in Dayton, Ohio with 3-month trained staff, custom plans, and no contracts. Kitchens, bathrooms, bedrooms, and more. Free quotes available!" />
         <meta name="keywords" content="Dayton house cleaning, residential cleaning, custom cleaning plans, no contracts, professional cleaners, home cleaning service" />
         

@@ -211,7 +211,7 @@ const OfficeCleaning = () => {
     <>
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/8643309867_00758e220a_c.webp" fetchPriority="high" />
-        <title>Professional Dayton Office Cleaning Services | Law Firms, Real Estate, Therapy | Gem City Cleaning</title>
+        <title>Office Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="description" content="Professional Dayton office cleaning for law firms, real estate offices, therapy offices, corporate offices. No contracts, recurring services, in-person quotes. Call today!" />
         <meta name="keywords" content="Dayton office cleaning, law office cleaning, real estate office cleaning, therapy office cleaning, corporate office cleaning, professional office cleaning, no contracts" />
         

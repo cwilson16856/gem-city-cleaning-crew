@@ -199,7 +199,7 @@ const CondoCleaning = () => {
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
-        <title>Condo Cleaning Dayton OH – Luxury Property Care, HOA Compliant, Value Protection | Gem City Cleaning</title>
+        <title>Condo Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Condo Cleaning Dayton OH – Luxury Property Care, HOA Compliant, Value Protection" />
         <meta name="description" content="⭐ #1 Condo Cleaning Service in Dayton, OH. Luxury finish care, HOA compliant, property value protection. Professional maid service for condo owners. FREE quotes! Call 937-892-4157" />
         <meta name="keywords" content="condo cleaning Dayton, luxury condo cleaning, HOA compliant cleaning Dayton OH, condo maid service, residential cleaning condos, property value cleaning, condo maintenance Dayton, high-end condo cleaning, Kettering condo cleaning, Centerville condo cleaning, Oakwood condo cleaning, condo cleaning near me, professional condo cleaners Dayton, luxury residential cleaning" />

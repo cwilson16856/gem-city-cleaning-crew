@@ -148,7 +148,7 @@ const MoveInCleaningPage = () => {
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/Clean-Oven.webp" fetchPriority="high" />
         {/* Primary Meta Tags - Enhanced */}
-        <title>#1 Move-In Cleaning Services Dayton OH | Professional New Home Cleaners | Gem City Cleaning</title>
+        <title>Move-In Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="#1 Move-In Cleaning Services Dayton OH | Professional New Home Cleaners | Gem City Cleaning" />
         <meta name="description" content="⭐ #1 Professional move-in cleaning services in Dayton, OH. Deep sanitization for new homes & apartments. Fresh start cleaning for families moving to Dayton. Same-day quotes available." />
         <meta name="keywords" content="move in cleaning Dayton, new home cleaning Dayton OH, apartment move in cleaning, house sanitization, fresh start cleaning, new homeowner cleaning, move in ready cleaning, Kettering move in cleaning, Centerville new home cleaning, Oakwood move in service" />

@@ -154,7 +154,7 @@ const ApartmentBuildingCleaning = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Apartment Building Cleaning Services Dayton | Gem City Cleaning</title>
+        <title>Apartment Building Cleaning Dayton OH | Gem City Cleaning Crew</title>
         <meta name="description" content="Expert apartment building cleaning services in Dayton. Common areas, laundry rooms, hallways, elevators & more. Licensed & insured team. Get your free quote!" />
         <meta name="keywords" content="apartment building cleaning, common area cleaning, laundry room cleaning, hallway cleaning, Dayton property cleaning" />
         <link rel="canonical" href={PAGE_URL} />

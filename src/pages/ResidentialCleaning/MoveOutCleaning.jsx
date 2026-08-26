@@ -148,7 +148,7 @@ const MoveOutCleaningPage = () => {
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/Clean-Oven.webp" fetchPriority="high" />
         {/* Primary Meta Tags - Enhanced */}
-        <title>#1 Move-Out Cleaning Services Dayton OH | Security Deposit Protection | Gem City Cleaning</title>
+        <title>Move-Out Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="#1 Move-Out Cleaning Services Dayton OH | Security Deposit Protection | Gem City Cleaning" />
         <meta name="description" content="⭐ #1 Professional move-out cleaning services in Dayton, OH. Protect your security deposit with thorough cleaning that meets landlord standards. Serving tenants & property managers." />
         <meta name="keywords" content="move out cleaning Dayton, security deposit cleaning, tenant cleaning service Dayton OH, apartment move out cleaning, landlord cleaning requirements, property management cleaning, move out deposit protection, Kettering move out cleaning, Centerville tenant cleaning, Oakwood move out service" />

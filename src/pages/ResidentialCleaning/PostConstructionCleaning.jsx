@@ -154,7 +154,7 @@ const PostConstructionCleaning = () => {
   return (
     <>
       <Helmet>
-        <title>{generateSEOTitle(`${pageTitle} | New Build & Renovation Cleanup`, 'Gem City Cleaning')}</title>
+        <title>{generateSEOTitle(pageTitle)}</title>
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content="post construction cleaning Dayton Ohio, new build cleaning, renovation cleanup, remodel cleaning Dayton, construction dust removal" />
         <link rel="canonical" href={canonicalUrl} />

@@ -250,7 +250,7 @@ const RecurringCleaningPage = () => {
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
-        <title>Best Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner Every Visit | Gem City Cleaning</title>
+        <title>Recurring House Cleaning Service Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Best Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner Every Visit" />
         <meta name="description" content="⭐ #1 Rated Recurring House Cleaning Service in Dayton, OH. No contracts, same professional cleaner every visit, flexible scheduling. Weekly, bi-weekly & monthly options. FREE quotes! Call 937-892-4157" />
         <meta name="keywords" content="recurring house cleaning Dayton, weekly cleaning service Dayton OH, bi-weekly house cleaning, no contract cleaning service, regular house cleaning Dayton, maid service Dayton, professional house cleaners Dayton, weekly maid service, Kettering house cleaning, Centerville cleaning service, Oakwood maid service, recurring cleaning near me, house cleaning subscription Dayton, residential cleaning service, same cleaner every visit, flexible house cleaning" />
