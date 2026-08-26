@@ -160,6 +160,10 @@ const ResidentialPage = () => {
     {
       question: "What is the cost of House Cleaning Services?",
       answer: "The price of house cleaning services can vary depending on various factors such as the size of your home, the number of rooms, the type of cleaning services required, and the frequency of cleaning. Usually it is best to schedule a walk-through to get an accurate quote."
+    },
+    {
+      question: "Are you a maid service, a cleaning company, or something else?",
+      answer: "All of the above — Gem City Cleaning Crew is a locally owned cleaning company offering maid service and house cleaning throughout Dayton, Ohio and the surrounding suburbs. Whatever you call it, it's the same trained crew and the same no-contract approach."
     }
   ]
 
@@ -426,8 +430,8 @@ const ResidentialPage = () => {
           <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
             Choose Your Dayton House Cleaning Services
           </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
-            Professional Dayton house cleaning services tailored to your specific needs and schedule
+          <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 700, mx: 'auto' }}>
+            Searching for cleaning services in Dayton, Ohio? As a locally owned cleaning company, we provide professional house cleaning and maid services tailored to your specific needs and schedule.
           </Typography>
         </Box>
 
