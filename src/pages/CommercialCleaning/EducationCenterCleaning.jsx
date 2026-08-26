@@ -228,6 +228,10 @@ const DaycareCleaning = () => {
           name="description"
           content="Professional daycare cleaning services in Dayton. Child-safe, thorough cleaning that creates a healthy environment for children. Licensed and insured cleaners."
         />
+        <meta
+          name="keywords"
+          content="Dayton daycare cleaning, childcare facility cleaning, education center cleaning, child-safe cleaning products, school cleaning services Dayton"
+        />
         <link rel="canonical" href={PAGE_URL} />
 
         {/* Open Graph / Facebook */}
