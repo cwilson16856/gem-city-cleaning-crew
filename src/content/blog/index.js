@@ -17,7 +17,7 @@ import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-da
 const posts = [
   {
     slug: 'oktoberfest-fall-hosting-cleaning-dayton',
-    title: 'Oktoberfest Weekend Cleaning: A Dayton Hosting Guide',
+    title: 'Oktoberfest Cleaning Guide for Dayton Hosts',
     description: "Oktoberfest weekend fills Dayton calendars fast. Here's the pre-party and post-party cleaning timeline to get your house guest-ready and reset fast after.",
     publishedAt: '2026-08-25',
     updatedAt: '2026-08-25',
@@ -87,7 +87,7 @@ const posts = [
   },
   {
     slug: 'how-to-keep-office-clean-between-cleanings-dayton',
-    title: 'How to Keep Your Office Clean Between Professional Cleanings',
+    title: 'Keep Your Office Clean Between Cleanings',
     description: 'A crew resets your office weekly, but clients and staff see it daily. Here is how Dayton office managers keep a workspace sharp between professional cleanings.',
     publishedAt: '2026-08-20',
     updatedAt: '2026-08-20',
@@ -150,7 +150,7 @@ const posts = [
   },
   {
     slug: 'how-to-deep-clean-stainless-steel-appliances-dayton',
-    title: 'How to Deep Clean Stainless Steel Kitchen Appliances',
+    title: 'How to Deep Clean Stainless Steel Appliances',
     description: "Fingerprints and water spots make stainless look dirty fast. Here's how to deep clean stainless steel appliances streak-free — and beat Dayton's hard water.",
     publishedAt: '2026-08-18',
     updatedAt: '2026-08-18',
@@ -217,7 +217,7 @@ const posts = [
   },
   {
     slug: 'how-to-remove-hard-water-stains-bathroom-fixtures-dayton',
-    title: 'How to Remove Hard Water Stains From Bathroom Fixtures',
+    title: 'Removing Hard Water Stains From Fixtures',
     description: "Dayton's tap water runs about 9 grains hard, so fixtures spot fast. Here's how to remove hard water stains from faucets, glass, and showerheads safely.",
     publishedAt: '2026-08-13',
     updatedAt: '2026-08-13',
@@ -284,7 +284,7 @@ const posts = [
   },
   {
     slug: 'how-to-prep-home-before-cleaning-crew-dayton',
-    title: 'How to Prep Your Dayton Home Before the Cleaning Crew',
+    title: 'How to Prep Your Home Before Cleaning Day',
     description: 'Prepping before your cleaning crew arrives means more actual cleaning for your money. Here’s the 15-minute checklist Dayton homeowners should run first.',
     publishedAt: '2026-08-11',
     updatedAt: '2026-08-11',
@@ -351,7 +351,7 @@ const posts = [
   },
   {
     slug: 'what-to-expect-recurring-cleaning-service-dayton',
-    title: 'Recurring House Cleaning in Dayton: What to Expect',
+    title: 'Recurring Cleaning in Dayton: What to Expect',
     description: "Weekly or bi-weekly cleaning in the Miami Valley? Here's what a recurring house cleaning service includes each visit, what it skips, and how often to book.",
     publishedAt: '2026-08-06',
     updatedAt: '2026-08-06',
@@ -414,7 +414,7 @@ const posts = [
   },
   {
     slug: 'airbnb-str-turnover-cleaning-dayton',
-    title: 'Airbnb Turnover Cleaning in Dayton: A Fast Host Guide',
+    title: 'Airbnb Turnover Cleaning: A Dayton Guide',
     description: 'First Four weekend fills Dayton’s rentals fast. Here’s how short-term-rental hosts near UD Arena nail a same-day Airbnb turnover clean before the next guest.',
     publishedAt: '2026-08-04',
     updatedAt: '2026-08-04',
@@ -482,7 +482,7 @@ const posts = [
   },
   {
     slug: 'winter-salt-mud-floor-protection-dayton',
-    title: 'How to Protect Dayton Floors From Winter Salt and Mud',
+    title: 'Protecting Floors From Winter Salt in Dayton',
     description: 'Road salt and slush wreck Dayton’s older hardwood floors every winter. Here’s how to protect your entryways and lift salt stains before they leave a mark.',
     publishedAt: '2026-07-30',
     updatedAt: '2026-07-30',
@@ -548,7 +548,7 @@ const posts = [
   },
   {
     slug: 'wright-patterson-afb-pcs-move-out-cleaning-dayton',
-    title: 'Wright-Patterson PCS Move-Out Cleaning: A Dayton Guide',
+    title: 'Wright-Patterson PCS Move-Out Cleaning Guide',
     description: 'PCS season means a base-housing or off-base rental inspection is coming. Here’s how Wright-Patterson families get a Dayton move-out clean that passes.',
     publishedAt: '2026-07-28',
     updatedAt: '2026-07-28',
@@ -615,7 +615,7 @@ const posts = [
   },
   {
     slug: 'student-move-in-cleaning-dayton-ud-wright-state',
-    title: 'Move-In Cleaning for Dayton Student Rentals: 2026 Guide',
+    title: 'Move-In Cleaning for Dayton Student Rentals',
     description: "UD move-in is August 21 and Wright State starts the 24th. Here's how to get a just-vacated Dayton student rental actually clean before the boxes arrive.",
     publishedAt: '2026-07-24',
     updatedAt: '2026-07-24',
@@ -682,7 +682,7 @@ const posts = [
   },
   {
     slug: 'ragweed-season-dayton-allergy-cleaning',
-    title: 'Ragweed Season in Dayton: How to Allergy-Proof Your Home',
+    title: 'Ragweed Season in Dayton: Allergy Prep Guide',
     description: 'Ragweed season runs mid-August through November in the Miami Valley. Here’s the room-by-room checklist that cuts down what you’re breathing indoors.',
     publishedAt: '2026-07-22',
     updatedAt: '2026-07-22',

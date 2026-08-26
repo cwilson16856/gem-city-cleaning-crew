@@ -199,7 +199,7 @@ const ApartmentCleaning = () => {
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
-        <title>Apartment Cleaning Dayton OH – Move-Out Pros, Same-Day Service, Deposit Back Guarantee | Gem City Cleaning</title>
+        <title>Apartment Cleaning Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Apartment Cleaning Dayton OH – Move-Out Pros, Same-Day Service, Deposit Back Guarantee" />
         <meta name="description" content="⭐ #1 Apartment Cleaning Service in Dayton, OH. Move-in/out cleaning, deep cleaning, regular maintenance. Get your deposit back! Professional results guaranteed. FREE quotes! Call 937-892-4157" />
         <meta name="keywords" content="apartment cleaning Dayton, move out cleaning Dayton OH, move in cleaning service, get deposit back cleaning, rental property cleaning Dayton, apartment deep cleaning, student housing cleaning UD, condo cleaning Dayton, maid service, residential cleaning, vacant apartment cleaning, move out checklist, Kettering apartment cleaning, Centerville apartment cleaning, Oakwood apartment cleaning, apartment cleaning near me, rental cleaning service, professional apartment cleaners Dayton" />

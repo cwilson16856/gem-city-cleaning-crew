@@ -87,7 +87,7 @@ const QuotePage = () => {
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
-        <title>Get Free House Cleaning Quote Dayton OH | Request Estimate Online | Gem City Cleaning</title>
+        <title>Free House Cleaning Quote Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Get Free House Cleaning Quote Dayton OH | Request Estimate Online | Gem City Cleaning" />
         <meta name="description" content="⭐ Get your FREE house cleaning quote online in Dayton, OH! Professional residential & commercial cleaning estimates. Same-day response guaranteed. Call 937-892-4157 or request quote online now!" />
         <meta name="keywords" content="free house cleaning quote Dayton, cleaning estimate Dayton OH, house cleaning cost Dayton, maid service quote, residential cleaning estimate, commercial cleaning quote Dayton, cleaning service prices, free cleaning estimate near me, Kettering cleaning quote, Centerville house cleaning cost, Oakwood maid service estimate, cleaning quote online, house cleaning pricing Dayton, professional cleaning estimate, cleaning service consultation" />

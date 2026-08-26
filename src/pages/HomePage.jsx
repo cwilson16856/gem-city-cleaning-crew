@@ -132,7 +132,7 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>House Cleaning Dayton Ohio | No Contracts, Free Quotes | Gem City Cleaning Crew</title>
+        <title>House Cleaning Dayton Ohio | No Contracts | Gem City Cleaning Crew</title>
         <meta name="description" content="Professional house cleaning in Dayton, Ohio. No contracts, 3-month trained staff, all supplies included. Serving Dayton, Kettering, and surrounding areas. Call 937-892-4157" />
         <meta name="keywords" content="Dayton house cleaning, no contracts cleaning, local cleaning service, professional cleaning, residential cleaning Dayton" />
         <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />

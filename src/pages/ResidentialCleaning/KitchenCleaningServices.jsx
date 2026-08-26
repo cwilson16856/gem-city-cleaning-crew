@@ -199,7 +199,7 @@ const KitchenCleaningServices = () => {
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/kitchen-2.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
-        <title>Kitchen Cleaning Services Dayton OH – Deep Clean, Appliances, Grease Removal | Gem City Cleaning</title>
+        <title>Kitchen Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Kitchen Cleaning Services Dayton OH – Deep Clean, Appliances, Grease Removal" />
         <meta name="description" content="⭐ #1 Kitchen Cleaning Service in Dayton, OH. Deep cleaning, appliance cleaning, grease removal. Professional results for healthier cooking. FREE quotes! Call 937-892-4157" />
         <meta name="keywords" content="kitchen cleaning Dayton, professional kitchen cleaning, appliance cleaning Dayton OH, kitchen deep cleaning, grease removal service, kitchen sanitization, oven cleaning Dayton, refrigerator cleaning, Kettering kitchen cleaning, Centerville kitchen cleaning, Oakwood kitchen cleaning, kitchen cleaning near me, residential kitchen cleaning, maid service kitchen cleaning" />

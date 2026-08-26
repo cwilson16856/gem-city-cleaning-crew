@@ -201,7 +201,7 @@ const BathroomCleaningServices = () => {
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/bathroom-sink.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
-        <title>Bathroom Cleaning Services Dayton OH – Deep Clean, Sanitization, Mold Removal | Gem City Cleaning</title>
+        <title>Bathroom Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Bathroom Cleaning Services Dayton OH – Deep Clean, Sanitization, Mold Removal" />
         <meta name="description" content="⭐ #1 Bathroom Cleaning Service in Dayton, OH. Deep cleaning, sanitization, mold removal, grout restoration. Professional results for healthier bathrooms. FREE quotes! Call 937-892-4157" />
         <meta name="keywords" content="bathroom cleaning Dayton, professional bathroom cleaning, sanitization Dayton OH, bathroom deep cleaning, mold removal service, grout cleaning, bathroom hygiene, tile cleaning Dayton, shower cleaning, Kettering bathroom cleaning, Centerville bathroom cleaning, Oakwood bathroom cleaning, bathroom cleaning near me, residential bathroom cleaning, maid service bathroom cleaning" />
