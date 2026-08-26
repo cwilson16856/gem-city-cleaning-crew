@@ -156,6 +156,10 @@ const CommercialPage = () => {
     {
       question: "Do you provide day porter services?",
       answer: "Yes, we offer day porter services for facilities that need ongoing maintenance throughout business hours, including restroom monitoring, trash removal, and general upkeep."
+    },
+    {
+      question: "Do you offer commercial cleaning services near me if I'm outside Dayton?",
+      answer: "Yes — we serve businesses throughout Dayton and within roughly a 25-mile radius, including Kettering, Centerville, Beavercreek, Oakwood, Springboro, Huber Heights, Miamisburg, Fairborn, and Xenia. If you're searching for commercial cleaning services near you and aren't sure we cover your location, just give us a call at 937-892-4157."
     }
   ]
 
@@ -439,8 +443,8 @@ const CommercialPage = () => {
           <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
             Professional Dayton Commercial Cleaning Services
           </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
-            Comprehensive commercial cleaning solutions for businesses throughout the Dayton area
+          <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 700, mx: 'auto' }}>
+            Searching for commercial cleaning services near me? Gem City Cleaning Crew provides professional janitorial and commercial cleaning solutions for businesses throughout Dayton and the surrounding 25-mile service area.
           </Typography>
         </Box>
 

@@ -138,6 +138,10 @@ const OfficeCleaning = () => {
     {
       question: "How do you ensure quality and consistency?",
       answer: "We use detailed cleaning checklists specific to office environments, conduct regular quality inspections, and maintain consistent staff assignments when possible. Our supervisors perform periodic reviews to ensure high standards are met consistently."
+    },
+    {
+      question: "Are you a janitorial service, or just office cleaning?",
+      answer: "We provide both — office cleaning and janitorial services are the same thing to us. Whether you need a daily janitorial crew or scheduled office cleaning, we cover Dayton and businesses within roughly a 25-mile radius, including Kettering, Centerville, Beavercreek, Oakwood, Springboro, Huber Heights, Miamisburg, Fairborn, and Xenia."
     }
   ]
 
@@ -423,8 +427,8 @@ const OfficeCleaning = () => {
           <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
             Professional Office Cleaning Services in Dayton
           </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
-            Specialized cleaning solutions for professional offices throughout the Dayton area
+          <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 700, mx: 'auto' }}>
+            Looking for office cleaning services near me? We provide specialized office cleaning and janitorial services for professional offices throughout Dayton and the surrounding 25-mile area.
           </Typography>
         </Box>
 
