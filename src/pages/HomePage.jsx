@@ -132,16 +132,16 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>House Cleaning Dayton Ohio | No Contracts | Gem City Cleaning Crew</title>
-        <meta name="description" content="Professional house cleaning in Dayton, Ohio. No contracts, 3-month trained staff, all supplies included. Serving Dayton, Kettering, and surrounding areas. Call 937-892-4157" />
-        <meta name="keywords" content="Dayton house cleaning, no contracts cleaning, local cleaning service, professional cleaning, residential cleaning Dayton" />
+        <title>Gem City Cleaning Crew | House & Office Cleaning in Dayton, OH</title>
+        <meta name="description" content="Gem City Cleaning Crew provides professional house and office cleaning throughout Dayton, Ohio and the Miami Valley. No contracts, licensed and insured, free quotes. Call 937-892-4157" />
+        <meta name="keywords" content="Gem City Cleaning Crew, Dayton cleaning company, house cleaning Dayton, office cleaning Dayton, no contracts" />
         <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/" />
-        <meta property="og:title" content="House Cleaning Dayton Ohio | No Contracts | Gem City Cleaning Crew" />
-        <meta property="og:description" content="Professional house cleaning in Dayton, Ohio. No contracts, 3-month trained staff, all supplies included. Serving Dayton, Kettering, and surrounding areas." />
+        <meta property="og:title" content="Gem City Cleaning Crew | House & Office Cleaning in Dayton, OH" />
+        <meta property="og:description" content="Professional house and office cleaning throughout Dayton, Ohio and the Miami Valley. No contracts, licensed and insured, free quotes." />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -152,8 +152,8 @@ const HomePage = () => {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://gemcitycleaningcrew.com/" />
-        <meta name="twitter:title" content="House Cleaning Dayton Ohio | No Contracts | Gem City Cleaning Crew" />
-        <meta name="twitter:description" content="Professional house cleaning in Dayton, Ohio. No contracts, 3-month trained staff, all supplies included. Call 937-892-4157" />
+        <meta name="twitter:title" content="Gem City Cleaning Crew | House & Office Cleaning in Dayton, OH" />
+        <meta name="twitter:description" content="Professional house and office cleaning throughout Dayton, Ohio and the Miami Valley. No contracts, licensed and insured. Call 937-892-4157" />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta name="twitter:image:alt" content="Gem City Cleaning Crew - Professional house cleaning service in Dayton, Ohio" />
         
@@ -250,14 +250,14 @@ const HomePage = () => {
               lineHeight: 1.1
             }}
           >
-            Trusted House Cleaning in Dayton, OH
+            Trusted Cleaning Crew in Dayton, OH
           </Typography>
-          
+
           <Typography
             variant="h4"
             component="p"
             className="hero-subtitle"
-            sx={{ 
+            sx={{
               fontSize: { xs: '1.2rem', md: '1.8rem' },
               fontWeight: 400,
               mb: 2,
@@ -265,7 +265,7 @@ const HomePage = () => {
               mx: 'auto'
             }}
           >
-            Professional cleaning service with 3-month trained staff and flexible scheduling
+            Professional house and office cleaning with 3-month trained staff, no long-term contracts, and flexible scheduling
           </Typography>
 
           {/* Single Prominent Rating */}

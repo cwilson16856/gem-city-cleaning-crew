@@ -147,10 +147,10 @@ const MoveInOutCleaningPage = () => {
     <>
       <Helmet>
         {/* Primary Meta Tags - Enhanced */}
-        <title>#1 Move-In Move-Out Cleaning Services Dayton OH | Top-Rated Moving Cleaners | Gem City Cleaning</title>
-        <meta name="title" content="#1 Move-In Move-Out Cleaning Services Dayton OH | Top-Rated Moving Cleaners | Gem City Cleaning" />
-        <meta name="description" content="⭐ #1 Professional move-in/move-out cleaning services in Dayton, OH. Deep cleaning for empty homes, perfect for landlords, tenants, and new homeowners. Protect your security deposit! Same-day quotes available." />
-        <meta name="keywords" content="move in cleaning Dayton, move out cleaning Dayton OH, moving cleaning service, empty home cleaning, security deposit cleaning, tenant cleaning service, landlord cleaning, move-in ready cleaning, professional moving cleaners Dayton, apartment cleaning move out, house cleaning move in, Kettering move out cleaning, Centerville moving cleaning, Oakwood move in cleaning" />
+        <title>Moving Cleaning Package Dayton OH | Gem City Cleaning Crew</title>
+        <meta name="title" content="Moving Cleaning Package Dayton OH | Gem City Cleaning Crew" />
+        <meta name="description" content="Moving? Gem City Cleaning Crew cleans both your old home and your new home as one package — one trusted crew, no coordinating two separate cleaning companies. Serving Dayton, OH and the Miami Valley. Same-day quotes available." />
+        <meta name="keywords" content="combined move cleaning Dayton, moving cleaning package, two home cleaning service, clean old and new home Dayton, relocation cleaning service, buying and selling home cleaning, Kettering moving cleaning, Centerville moving cleaning, Oakwood moving cleaning" />
         
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -173,10 +173,10 @@ const MoveInOutCleaningPage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Gem City Cleaning Crew" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/move-in-out-cleaning" />
-        <meta property="og:title" content="#1 Professional Move-In Move-Out Cleaning Services Dayton OH | Gem City Cleaning" />
-        <meta property="og:description" content="⭐ #1 Professional move-in/move-out cleaning services in Dayton, OH. Deep cleaning for empty homes, perfect for landlords, tenants, and new homeowners. Protect your security deposit!" />
+        <meta property="og:title" content="Moving Cleaning Package Dayton OH | Gem City Cleaning Crew" />
+        <meta property="og:description" content="Moving? We clean both your old home and your new home as one package — one trusted crew, no coordinating two separate companies." />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
-        <meta property="og:image:alt" content="Professional move-in move-out cleaning services in Dayton OH" />
+        <meta property="og:image:alt" content="Combined move-in and move-out cleaning package in Dayton OH" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -190,10 +190,10 @@ const MoveInOutCleaningPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@GemCityCleaning" />
         <meta name="twitter:creator" content="@GemCityCleaning" />
-        <meta name="twitter:title" content="#1 Professional Move-In Move-Out Cleaning Services Dayton OH" />
-        <meta name="twitter:description" content="⭐ #1 Professional move-in/move-out cleaning services in Dayton, OH. Deep cleaning for empty homes, protect your security deposit!" />
+        <meta name="twitter:title" content="Moving Cleaning Package Dayton OH | Gem City Cleaning Crew" />
+        <meta name="twitter:description" content="Moving? We clean both your old home and your new home as one package — one trusted crew, no coordinating two separate companies." />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
-        <meta name="twitter:image:alt" content="Move-in move-out cleaning services Dayton OH" />
+        <meta name="twitter:image:alt" content="Combined move-in and move-out cleaning package in Dayton OH" />
         
         {/* Additional Social Media */}
         <meta property="article:author" content="Gem City Cleaning Crew" />
@@ -211,10 +211,10 @@ const MoveInOutCleaningPage = () => {
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://gemcitycleaningcrew.com/move-in-out-cleaning#service",
-            "name": "Move-In Move-Out Cleaning Services",
-            "alternateName": ["Moving Cleaning Service", "Tenant Cleaning", "Move Out Cleaning", "Move In Cleaning", "Empty Home Cleaning"],
-            "description": "Professional move-in/move-out cleaning services in Dayton, OH including deep cleaning for empty homes, perfect for landlords, tenants, and new homeowners",
-            "serviceType": "Move-In Move-Out Cleaning",
+            "name": "Combined Move-In & Move-Out Cleaning Package",
+            "alternateName": ["Moving Cleaning Package", "Two-Home Cleaning Service", "Combined Moving Cleaning", "Empty Home Cleaning"],
+            "description": "Combined move-in and move-out cleaning package in Dayton, OH — one crew cleans both your old home and your new home, perfect for landlords, tenants, and new homeowners handling a move",
+            "serviceType": "Combined Move-In and Move-Out Cleaning",
             "provider": {
               "@type": "LocalBusiness",
               "name": "Gem City Cleaning Crew",
@@ -571,13 +571,13 @@ const MoveInOutCleaningPage = () => {
               color: 'white'
             }}
           >
-            Move-In Move-Out Cleaning Services Dayton
+            Moving Homes? We Clean Both
           </Typography>
-          
-          <Typography 
-            variant="h2" 
-            component="h2" 
-            sx={{ 
+
+          <Typography
+            variant="h2"
+            component="h2"
+            sx={{
               fontSize: { xs: '1.2rem', md: '1.8rem' },
               fontWeight: 400,
               mb: 2,
@@ -588,13 +588,13 @@ const MoveInOutCleaningPage = () => {
               color: 'white'
             }}
           >
-            Professional Moving Cleaning for Stress-Free Transitions
+            Combined Move-In and Move-Out Cleaning for Your Old and New Home
           </Typography>
 
-          <Typography 
-            variant="h3" 
-            component="h3" 
-            sx={{ 
+          <Typography
+            variant="h3"
+            component="h3"
+            sx={{
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
               mb: 4,
@@ -605,7 +605,7 @@ const MoveInOutCleaningPage = () => {
               color: 'white'
             }}
           >
-            Deep cleaning for empty homes - perfect for landlords, tenants, and new homeowners
+            One trusted crew handles both cleanings — no coordinating two separate companies
           </Typography>
           
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
