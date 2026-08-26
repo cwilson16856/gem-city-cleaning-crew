@@ -159,7 +159,7 @@ const ResidentialPage = () => {
     },
     {
       question: "How much does house cleaning cost?",
-      answer: "Standard house cleaning starts at $125, and deep cleaning starts at $180. The exact house cleaning cost depends on your home's size, number of rooms, and how often you'd like service — book a free walk-through and we'll give you a firm price, not just a rough estimate."
+      answer: "House cleaning cost depends on your home's size, number of rooms, and how often you'd like service — every home is different, so we don't quote a flat rate up front. Book a free walk-through and we'll give you a firm, accurate price for your specific home."
     },
     {
       question: "Are you a maid service, a cleaning company, or something else?",
