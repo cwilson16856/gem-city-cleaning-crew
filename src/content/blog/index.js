@@ -2,6 +2,7 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import preListingDeepCleanContent from './posts/pre-listing-deep-clean-checklist-dayton.js'
 import oktoberfestFallHostingContent from './posts/oktoberfest-fall-hosting-cleaning-dayton.js'
 import officeCleanBetweenCleaningsContent from './posts/how-to-keep-office-clean-between-cleanings-dayton.js'
 import stainlessSteelAppliancesContent from './posts/how-to-deep-clean-stainless-steel-appliances-dayton.js'
@@ -15,6 +16,72 @@ import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'pre-listing-deep-clean-checklist-dayton',
+    title: 'The Pre-Listing Deep Clean Checklist for Dayton Sellers',
+    description: "Dayton's a seller's market right now — homes average just 38 days on market. Here's the pre-listing deep-clean checklist to get your house showing-ready fast.",
+    publishedAt: '2026-08-27',
+    updatedAt: '2026-08-27',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Local Guides & Seasonal',
+    tags: ['pre-listing cleaning', 'home selling tips', 'real estate cleaning', 'Dayton housing market', 'deep clean checklist'],
+    keywords: [
+      'deep clean before selling house Dayton',
+      'pre-listing cleaning checklist',
+      'house cleaning before showing home',
+      'deep clean checklist before listing',
+      'how to clean house before selling Dayton Ohio',
+      'Dayton home sellers cleaning tips',
+      'pre-listing deep clean',
+      'Dayton real estate cleaning',
+      'home showing cleaning checklist',
+    ],
+    problem: "Dayton's fast-moving seller's market gives homeowners little runway to prep, and most deep-clean-before-listing advice online is generic with no tie to the local market or timeline pressure sellers actually face.",
+    solution: 'A room-by-room pre-listing deep clean checklist and 3-4-week timeline tied to the real 2026 Dayton-area seller\'s market (1.3 months of inventory, 38-day average days on market), covering what to clean and when before photos and showings.',
+    targetAudience: 'Dayton-area homeowners preparing to list their home for sale, especially in Oakwood, Kettering, Centerville, Beavercreek, and Springboro, including Wright-Patterson-linked relocation sellers',
+    coverImage: '/images/blog/pre-listing-deep-clean-checklist-dayton.png',
+    featured: false,
+    content: preListingDeepCleanContent,
+    faqs: [
+      {
+        question: 'How far in advance should I deep clean before listing my house?',
+        answer: 'Start 3-4 weeks before your target listing date. That gives you time for the heavy lifting — decluttering, kitchen and bathroom degreasing, carpets and hardwood — without racing the photographer. The final 1-2 weeks are for windows, baseboards, and curb appeal, and showing week becomes a lighter maintenance pass instead of a scramble. In a market moving as fast as Dayton\'s is right now, starting early is what keeps the deep clean from colliding with your actual listing date.',
+      },
+      {
+        question: 'Does a clean house really sell faster or for more money?',
+        answer: "Yes — agents consistently rank deep cleaning among the highest-ROI prep a seller can do, and staged, clean homes have been shown to draw offers 1-10% higher than comparable unstaged ones while spending less time on market. In a Dayton market already averaging 38 days on market, a spotless first impression is often what turns a showing into an offer instead of a pass.",
+      },
+      {
+        question: 'What should I prioritize cleaning before a showing?',
+        answer: "The kitchen and bathrooms first — they're what buyers scrutinize hardest and what sinks a listing's photos fastest if they're not spotless. After that, clear counters and floors throughout, since visual clutter reads as \"not cared for\" even in an otherwise clean room. Bedrooms and closets matter far less than the kitchen, bathroom, and whatever main living space buyers will actually linger in.",
+      },
+      {
+        question: 'Do I need to deep clean before every single showing?',
+        answer: "No. The deep clean is a one-time job before your listing photos go live. After that, a 15-20 minute maintenance pass — wiping counters, a quick floor check, a bathroom once-over — before each individual showing is enough to keep the house at that same standard. Trying to re-deep-clean before every showing in a fast-moving market like Dayton's just isn't sustainable.",
+      },
+      {
+        question: "What's the best way to handle pet odors before listing?",
+        answer: 'Find the actual source instead of masking it — litter boxes, pet bedding, and carpets are the usual culprits. Wash or replace pet bedding, deep clean or shampoo any carpet a pet spends time on, and run an air purifier for a few days before showings. Avoid heavy air fresheners; buyers and agents are quick to read strong fragrance as something being hidden rather than resolved.',
+      },
+      {
+        question: 'Should I hire a cleaning service before listing or rely on staging alone?',
+        answer: "They solve different problems — staging arranges furniture and decor to help buyers picture themselves in the space, but it doesn't fix a grimy oven, hard-water film on shower glass, or grease on cabinet fronts. Most Dayton-area sellers get the best result pairing both: a professional deep clean to handle what staging can't, then light staging on top of a genuinely clean house.",
+      },
+      {
+        question: 'What areas do home inspectors and buyers notice most?',
+        answer: 'Kitchens and bathrooms top the list for both groups, followed by anything that signals deferred maintenance — grimy exhaust fans, mildew around window tracks, or a damp-smelling basement. Buyers also open closets, cabinets, and appliances far more often during a showing than sellers expect, so a clean interior matters as much as what\'s visible on the surface.',
+      },
+    ],
+    howToTitle: 'How to Deep Clean Your House Before Listing It For Sale',
+    howToSteps: [
+      { name: 'Declutter and depersonalize', text: 'Clear excess furniture, personal photos, and collections from every room so buyers can picture their own life in the space, and so cleaning surfaces are actually accessible.' },
+      { name: 'Deep clean the kitchen', text: 'Degrease cabinet fronts, pulls, and the backsplash, clean every appliance inside and out including the oven and fridge, and clear all counters.' },
+      { name: 'Deep clean bathrooms', text: 'Scrub grout, descale showerheads and glass, polish fixtures and mirrors to a true streak-free shine, and replace any worn shower curtains or mats.' },
+      { name: 'Handle floors, walls, and windows', text: 'Wash windows inside and out including sills and tracks, wipe down baseboards and walls, and deep clean carpets or polish hardwood floors.' },
+      { name: 'Eliminate odors at the source', text: 'Find and fix what\'s actually causing any smell — trash, litter boxes, damp areas, or laundry — instead of masking it with air fresheners.' },
+      { name: 'Finish curb appeal', text: 'Sweep the porch and walkway, power-wash siding or driveway if needed, wash exterior windows, and confirm outdoor lighting works for evening showings.' },
+    ],
+  },
   {
     slug: 'oktoberfest-fall-hosting-cleaning-dayton',
     title: 'Oktoberfest Cleaning Guide for Dayton Hosts',
