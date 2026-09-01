@@ -2,6 +2,7 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import groutTileCleaningContent from './posts/how-to-clean-grout-tile-without-damaging-dayton.js'
 import oktoberfestFallHostingContent from './posts/oktoberfest-fall-hosting-cleaning-dayton.js'
 import officeCleanBetweenCleaningsContent from './posts/how-to-keep-office-clean-between-cleanings-dayton.js'
 import stainlessSteelAppliancesContent from './posts/how-to-deep-clean-stainless-steel-appliances-dayton.js'
@@ -15,6 +16,74 @@ import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'how-to-clean-grout-tile-without-damaging-dayton',
+    title: 'How to Clean Grout and Tile Without Damaging It in Dayton',
+    description: "Dayton's hard water leaves grout haze fast. Here's the finish-safe way to clean and reseal tile grout without damaging the finish, plus what never to use.",
+    publishedAt: '2026-09-01',
+    updatedAt: '2026-09-01',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Cleaning Tips',
+    tags: ['grout cleaning', 'tile cleaning', 'hard water', 'cleaning tips', 'Dayton'],
+    keywords: [
+      'how to clean grout and tile without damaging it',
+      'clean grout without damaging tile',
+      'safe grout cleaner for tile floors',
+      'how to remove grout haze',
+      'grout cleaning Dayton hard water',
+      'does vinegar damage grout',
+      'how often should grout be resealed',
+      'can you use a steam cleaner on grout',
+      'how to reseal grout',
+      'clean tile without scratching',
+    ],
+    problem: "Dayton's hard water leaves grout looking gray and tile looking hazy no matter how often it's mopped, and the wrong cleaner or brush can scratch tile or break down grout instead of fixing it.",
+    solution: 'A finish-safe, step-by-step method using a baking soda and hydrogen peroxide paste plus a soft nylon brush to clean grout and tile safely, followed by the grout re-sealing routine that keeps hard-water buildup from coming right back.',
+    targetAudience: 'Dayton-area homeowners and renters — across Kettering, Centerville, Beavercreek, and the surrounding Miami Valley — dealing with hard-water grout haze and tile buildup in kitchens and bathrooms',
+    coverImage: '/images/blog/how-to-clean-grout-tile-without-damaging-dayton.png',
+    featured: false,
+    content: groutTileCleaningContent,
+    faqs: [
+      {
+        question: 'Does vinegar damage grout or tile?',
+        answer: "Not on standard cement-based grout or glazed ceramic/porcelain tile used in moderation — a diluted vinegar solution is a common, safe way to cut through light grime. It's a different story on natural stone like marble, travertine, or limestone, where vinegar's acidity can etch and permanently dull the surface. If you're unsure what your tile is made of, skip vinegar and use the baking soda and hydrogen peroxide method instead.",
+      },
+      {
+        question: 'How often should grout be resealed?',
+        answer: "Most Dayton-area homes do well resealing grout every 12 to 18 months, with high-traffic floors and shower floors leaning toward the 12-month end since they see more water exposure. A quick way to check is the water-drop test: if a few drops soak in and darken the grout within a minute or two instead of beading up, it's due for a new coat of sealer.",
+      },
+      {
+        question: "What's the safest way to remove grout haze caused by hard water?",
+        answer: 'Start with a paste of baking soda and hydrogen peroxide worked into the grout lines with a soft nylon brush, left to dwell for 10 to 15 minutes before scrubbing. This lifts mineral haze without the scratching risk of a steel brush or the etching risk of straight acid. For haze that won\'t fully lift, a color-safe oxygen-based grout cleaner is the next step before resorting to anything stronger.',
+      },
+      {
+        question: 'Can you use a steam cleaner on grout?',
+        answer: "Yes, but sparingly and mainly on grout that's already sealed. Steam is effective for loosening stubborn, set-in grime, but frequent steam use on unsealed, porous grout pushes moisture into the surface, which can encourage mold growth or weaken the grout over time. Treat it as an occasional spot tool rather than a weekly cleaning method.",
+      },
+      {
+        question: 'How do you get grout white again without bleach damaging it?',
+        answer: 'Skip straight chlorine bleach, especially on colored or tinted grout, since it can lighten unevenly and leave blotchy patches. An oxygen-based grout cleaner (built around sodium percarbonate rather than chlorine) brightens grout more evenly and is safe on colored grout. Combine it with the baking soda paste method for grout that\'s stained but not discolored by dye or mold.',
+      },
+      {
+        question: 'Is oxygen bleach safe for colored grout?',
+        answer: 'Generally yes — oxygen-based cleaners are color-safe and far gentler than chlorine bleach, which is why they\'re the standard recommendation for tinted or colored grout. Even so, test a small hidden section first and follow the product\'s dwell-time instructions, since very old or thin sealer coats can behave differently than fresh grout.',
+      },
+      {
+        question: 'Can hard water permanently stain grout?',
+        answer: "Left unaddressed for years, yes — mineral deposits can work deep enough into porous, unsealed grout that a surface cleaning no longer fully restores it, and at that point re-grouting or professional restoration may be the only fix. That's exactly why sealing matters in a hard-water area like Dayton: it keeps the minerals from soaking into the grout in the first place, rather than needing to be removed after the fact.",
+      },
+    ],
+    howToTitle: 'How to Clean Grout and Tile Without Damaging It',
+    howToSteps: [
+      { name: 'Dry sweep or vacuum first', text: 'Clear loose dirt and grit before adding any liquid, so it does not turn into gritty mud that grinds into the grout lines and tile surface.' },
+      { name: 'Mix a baking soda and peroxide paste', text: 'Combine roughly 3/4 cup baking soda with 1/4 cup hydrogen peroxide and a small squirt of dish soap into a spreadable paste.' },
+      { name: 'Spread it into the grout and let it dwell', text: 'Work the paste into the grout lines with an old toothbrush or soft nylon brush, then let it sit 10 to 15 minutes before scrubbing.' },
+      { name: 'Scrub with a soft nylon brush', text: 'Scrub the grout lines in small circles, then use the flat side of the brush on the tile itself — never a steel or wire brush.' },
+      { name: 'Use an oxygen-based cleaner for set-in stains', text: 'For stubborn spots the paste does not fully lift, apply a color-safe oxygen-based grout cleaner rather than straight bleach.' },
+      { name: 'Rinse thoroughly and dry', text: 'Wipe or mop the area with clean water to remove all cleaner residue, then dry with a towel or let it air dry.' },
+      { name: 'Reseal the grout once fully dry', text: 'Apply a penetrating grout sealer along the grout lines, wipe excess off the tile face, and let it cure fully before the floor gets wet again.' },
+    ],
+  },
   {
     slug: 'oktoberfest-fall-hosting-cleaning-dayton',
     title: 'Oktoberfest Cleaning Guide for Dayton Hosts',
