@@ -184,7 +184,7 @@ const HomePage = () => {
             },
             "paymentAccepted": "Cash, Check, Credit Card",
             "currenciesAccepted": "USD",
-            "openingHours": ["Mo-Fr 08:00-17:00"],
+            "openingHours": ["Mo-Fr 10:00-18:00", "Sa 10:00-14:00"],
             "areaServed": "Dayton, OH and surrounding areas",
             "hasOfferCatalog": {
               "@type": "OfferCatalog",

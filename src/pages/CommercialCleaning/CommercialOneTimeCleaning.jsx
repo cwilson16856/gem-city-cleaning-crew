@@ -269,9 +269,8 @@ const CommercialOneTimeCleaning = () => {
               "addressCountry": "US"
             },
             "openingHours": [
-              "Mo-Fr 08:00-18:00",
-              "Sa 09:00-17:00",
-              "Su 10:00-16:00"
+              "Mo-Fr 10:00-18:00",
+              "Sa 10:00-14:00"
             ],
             "priceRange": "$$",
             "currenciesAccepted": "USD",
