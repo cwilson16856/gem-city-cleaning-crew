@@ -111,12 +111,12 @@ const Footer = () => {
                     Business Hours
                   </p>
                   <p className={styles.contactValue}>
-                    Monday 8:00 AM - 5:00 PM<br />
-                    Tuesday 8:00 AM - 5:00 PM<br />
-                    Wednesday 8:00 AM - 5:00 PM<br />
-                    Thursday 8:00 AM - 5:00 PM<br />
-                    Friday 8:00 AM - 5:00 PM<br />
-                    Saturday Closed<br />
+                    Monday 10:00 AM - 6:00 PM<br />
+                    Tuesday 10:00 AM - 6:00 PM<br />
+                    Wednesday 10:00 AM - 6:00 PM<br />
+                    Thursday 10:00 AM - 6:00 PM<br />
+                    Friday 10:00 AM - 6:00 PM<br />
+                    Saturday 10:00 AM - 2:00 PM<br />
                     Sunday Closed
                   </p>
                 </div>

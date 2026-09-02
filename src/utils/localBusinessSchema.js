@@ -24,7 +24,7 @@ export const generateLocalBusinessSchema = (areaServedCities = []) => ({
     addressRegion: 'OH',
     addressCountry: 'US'
   },
-  openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-17:00', 'Su 10:00-16:00'],
+  openingHours: ['Mo-Fr 10:00-18:00', 'Sa 10:00-14:00'],
   priceRange: '$$',
   currenciesAccepted: 'USD',
   paymentAccepted: ['Cash', 'Credit Card', 'Check', 'PayPal', 'Venmo'],

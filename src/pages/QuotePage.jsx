@@ -212,14 +212,14 @@ const QuotePage = () => {
               {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "08:00",
-                "closes": "17:00"
+                "opens": "10:00",
+                "closes": "18:00"
               },
               {
-                "@type": "OpeningHoursSpecification", 
+                "@type": "OpeningHoursSpecification",
                 "dayOfWeek": "Saturday",
-                "opens": "09:00",
-                "closes": "15:00"
+                "opens": "10:00",
+                "closes": "14:00"
               }
             ],
             "sameAs": [
@@ -360,14 +360,14 @@ const QuotePage = () => {
                   {
                     "@type": "OpeningHoursSpecification",
                     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                    "opens": "08:00",
-                    "closes": "17:00"
+                    "opens": "10:00",
+                    "closes": "18:00"
                   },
                   {
-                    "@type": "OpeningHoursSpecification", 
+                    "@type": "OpeningHoursSpecification",
                     "dayOfWeek": "Saturday",
-                    "opens": "09:00",
-                    "closes": "15:00"
+                    "opens": "10:00",
+                    "closes": "14:00"
                   }
                 ]
               },
@@ -1394,7 +1394,7 @@ const QuotePage = () => {
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
                     We guarantee same-day response to all quote requests. Most <strong>cleaning estimates</strong> are 
-                    provided within 2-4 hours during business hours (Monday-Friday 8AM-5PM). 
+                    provided within 2-4 hours during business hours (Monday-Friday 10AM-6PM).
                     For urgent requests, call 937-892-4157 for immediate assistance.
                   </Typography>
                 </Card>
