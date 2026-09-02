@@ -40,6 +40,7 @@ export const STATIC_ROUTES = [
   { path: '/quote', changefreq: 'monthly', priority: '0.8' },
   { path: '/blog', changefreq: 'weekly', priority: '0.7' },
   { path: '/about-us', changefreq: 'monthly', priority: '0.6' },
+  { path: '/careers', changefreq: 'monthly', priority: '0.5' },
   // noindex pages (see robots meta in their own components) — still real,
   // linkable pages a crawler can land on, so still worth a real prerendered
   // shell rather than the empty CSR one, just not in the sitemap.

@@ -40,6 +40,7 @@ const LocationPage = lazy(() => import('./pages/LocationPage'))
 const BlogPage = lazy(() => import('./pages/BlogPage'))
 const PostPage = lazy(() => import('./pages/PostPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
+const HiringPage = lazy(() => import('./pages/HiringPage'))
 const QuotePage = lazy(() => import('./pages/QuotePage'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const TermsOfService = lazy(() => import('./pages/TermsOfService'))
@@ -241,6 +242,7 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<PostPage />} />
             <Route path="/about-us" element={<AboutPage />} />
+            <Route path="/careers" element={<HiringPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="*" element={<NotFound />} />

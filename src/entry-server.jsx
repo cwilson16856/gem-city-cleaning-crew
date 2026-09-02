@@ -55,6 +55,7 @@ import LocationPage from './pages/LocationPage'
 import BlogPage from './pages/BlogPage'
 import PostPage from './pages/PostPage'
 import AboutPage from './pages/AboutPage'
+import HiringPage from './pages/HiringPage'
 import QuotePage from './pages/QuotePage'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
@@ -153,6 +154,7 @@ export function render(url) {
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<PostPage />} />
                 <Route path="/about-us" element={<AboutPage />} />
+                <Route path="/careers" element={<HiringPage />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
                 <Route path="*" element={<NotFound />} />
