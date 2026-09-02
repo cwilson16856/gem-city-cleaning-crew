@@ -182,6 +182,7 @@ const Footer = () => {
             Proudly serving the Dayton area
           </p>
           <div className={styles.legalLinks}>
+            <Link to="/careers" className={styles.legalLink}>Careers</Link>
             <Link to="/privacy-policy" className={styles.legalLink}>Privacy Policy</Link>
             <Link to="/terms-of-service" className={styles.legalLink}>Terms of Service</Link>
           </div>
