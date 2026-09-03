@@ -2,6 +2,7 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import petHairOdorContent from './posts/how-to-remove-pet-hair-odor-dayton.js'
 import groutTileCleaningContent from './posts/how-to-clean-grout-tile-without-damaging-dayton.js'
 import preListingDeepCleanContent from './posts/pre-listing-deep-clean-checklist-dayton.js'
 import oktoberfestFallHostingContent from './posts/oktoberfest-fall-hosting-cleaning-dayton.js'
@@ -17,6 +18,76 @@ import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'how-to-remove-pet-hair-odor-dayton',
+    title: 'How to Get Rid of Pet Hair and Odor at Home: A Dayton Guide',
+    description: "A room-by-room pet hair and odor routine built for Dayton's mixed hardwood/carpet homes and closed-window winters — practical steps between cleanings.",
+    publishedAt: '2026-09-03',
+    updatedAt: '2026-09-03',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Cleaning Tips',
+    tags: ['pet hair removal', 'pet odor', 'carpet cleaning', 'cleaning tips', 'Dayton'],
+    keywords: [
+      'how to get rid of pet hair and odor at home',
+      'pet hair removal tips',
+      'how to remove pet odor from house',
+      'dog smell out of house',
+      'cat odor removal home',
+      'pet dander cleaning routine',
+      'how often should I deep clean for pet hair and odor',
+      'why does my house smell like dog in winter',
+      'best way to remove pet hair from carpet and hardwood',
+    ],
+    problem: "Pet hair and odor build up faster than a normal cleaning routine can keep up with, especially during Dayton's closed-window winters and humid summers, and a generic cleaning routine doesn't account for the hardwood-and-carpet mix common in older area homes.",
+    solution: "A room-by-room routine — upholstery and carpet, hard floors, laundry and pet bedding, and HVAC/air — tuned to which surfaces and seasons actually make pet hair and odor worse in a Dayton-area home.",
+    targetAudience: 'Pet-owning homeowners and renters across the Dayton area — including Kettering, Oakwood, and Centerville — dealing with pet hair and odor between professional cleanings',
+    coverImage: '/images/blog/how-to-remove-pet-hair-odor-dayton.png',
+    featured: false,
+    content: petHairOdorContent,
+    faqs: [
+      {
+        question: 'How often should you deep clean for pet hair and odor?',
+        answer: 'A professional deep clean every 2-3 months is a good baseline for most pet-owning households, on top of a weekly DIY routine for hair and light odor control. Homes with multiple pets, all-carpet flooring, or a pet that sheds heavily may do better closer to monthly.',
+      },
+      {
+        question: 'Why does my house still smell like dog after cleaning?',
+        answer: "Regular cleaning products often mask odor rather than break down the organic compounds causing it, especially in porous materials like carpet padding, upholstery foam, and pet bedding. An enzyme-based cleaner targets those compounds directly, which is why switching to one is usually the fix when standard cleaning isn't cutting it.",
+      },
+      {
+        question: 'What is the fastest way to get pet hair out of carpet?',
+        answer: 'A rubber glove or rubber broom pulls up embedded hair through static that a standard vacuum alone often misses, especially on looped or Berber-style carpet. Follow it with a vacuum pass using a dedicated pet-hair attachment for the best result.',
+      },
+      {
+        question: 'Does vinegar or baking soda work better for pet odor?',
+        answer: "Baking soda is generally the safer, more versatile choice for absorbing odor from carpet, rugs, and upholstery without any risk to the surface. Diluted vinegar can help on sealed hard flooring, but it shouldn't be used on natural stone or unsealed hardwood, where its acidity can cause damage over time.",
+      },
+      {
+        question: 'Can pet odor get into HVAC ducts and vents?',
+        answer: 'Yes — dander and odor particles get pulled into return vents and can settle inside ductwork, which is part of why odor sometimes seems to come from everywhere at once rather than one specific spot. Regular filter changes and periodic vent cleaning reduce this; a persistent whole-house pet odor that doesn\'t improve with cleaning is sometimes a sign ducts need a professional cleaning.',
+      },
+      {
+        question: 'How do you get pet smell out of hardwood floors?',
+        answer: 'A weekly damp mop with a pH-neutral hardwood cleaner removes the oils in dander and dried saliva that plain sweeping leaves behind, which is usually what\'s causing lingering odor on hard flooring. Avoid straight vinegar or ammonia-based cleaners on sealed hardwood, since repeated use can dull the finish.',
+      },
+      {
+        question: "What's the best vacuum for pet hair and dander?",
+        answer: 'Look for a vacuum with a sealed HEPA filtration system and a motorized pet-hair attachment — the HEPA filter keeps captured dander from blowing back into the air, and the motorized attachment lifts embedded hair from carpet and upholstery far better than a standard floor head.',
+      },
+      {
+        question: 'How long does pet odor last after removing the source?',
+        answer: 'If odor has only affected surface-level areas, it can clear within days of a thorough enzyme-cleaner treatment and good ventilation. If it\'s soaked into carpet padding, subfloor, or porous materials over a long period, it can take professional-grade treatment and, in more severe cases, replacing the affected padding or flooring to fully resolve.',
+      },
+    ],
+    howToTitle: 'How to Get Rid of Pet Hair and Odor at Home',
+    howToSteps: [
+      { name: 'Lift embedded hair from soft surfaces', text: 'Use a damp rubber glove or rubber broom on upholstery, carpet, and rugs to pull up embedded hair through static before vacuuming.' },
+      { name: 'Treat carpet and rugs for odor', text: 'Sprinkle a light, even layer of baking soda over carpet and rugs, let it sit at least 15-20 minutes, then vacuum thoroughly with a HEPA-filtered, pet-hair-attachment vacuum.' },
+      { name: 'Dry-dust hard floors before mopping', text: 'Run a dry microfiber mop or cloth over hardwood and tile to pick up loose hair through static, then follow with a weekly damp mop using a pH-neutral cleaner.' },
+      { name: 'Wash pet bedding with an enzyme cleaner', text: 'Wash pet bedding weekly (more often in humid months) using an enzyme-based cleaner as a pre-treatment to break down odor-causing compounds, not just mask them.' },
+      { name: 'Refresh HVAC filters and vents', text: 'Change HVAC filters every 30-45 days with pets in the home, and vacuum-dust return vent covers monthly to stop recirculating dander.' },
+      { name: 'Schedule a deeper reset periodically', text: 'Book a professional deep clean every 2-3 months to reach hair and dander that build up below the surface of carpet, upholstery, and under furniture that a weekly routine can\'t fully clear.' },
+    ],
+  },
   {
     slug: 'how-to-clean-grout-tile-without-damaging-dayton',
     title: 'How to Clean Grout and Tile Without Damaging It in Dayton',
