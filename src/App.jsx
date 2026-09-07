@@ -36,6 +36,7 @@ const DaycareCleaning = lazy(() => import('./pages/CommercialCleaning/EducationC
 const ApartmentBuildingCleaning = lazy(() => import('./pages/CommercialCleaning/ApartmentBuildingCleaning'))
 const IndustrialCleaning = lazy(() => import('./pages/CommercialCleaning/IndustrialCleaning'))
 const BeavercreekCommercialPage = lazy(() => import('./pages/Locations/Beavercreek/CommercialCleaning/BeavercreekCommercialPage'))
+const XeniaHouseCleaningPage = lazy(() => import('./pages/Locations/Xenia/HouseCleaning/XeniaHouseCleaningPage'))
 const LocationPage = lazy(() => import('./pages/LocationPage'))
 const BlogPage = lazy(() => import('./pages/BlogPage'))
 const PostPage = lazy(() => import('./pages/PostPage'))
@@ -235,6 +236,8 @@ function App() {
             <Route path="/apartment-building-cleaning" element={<ApartmentBuildingCleaning />} />
             <Route path="/industrial-cleaning" element={<IndustrialCleaning />} />
             <Route path="/locations" element={<LocationPage />} />
+            {/* Dedicated Xenia residential page — static segment outranks the :city param route below */}
+            <Route path="/locations/xenia/house-cleaning-services" element={<XeniaHouseCleaningPage />} />
             <Route path="/locations/:city/house-cleaning-services" element={<LocationPage serviceType="residential" />} />
             <Route path="/locations/:city/commercial-cleaning-services" element={<LocationPage serviceType="commercial" />} />
             <Route path="/locations/beavercreek/commercial-services" element={<BeavercreekCommercialPage />} />

@@ -2,6 +2,7 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import xenia1970sHomeCleaningContent from './posts/how-to-clean-1970s-xenia-home-room-by-room.js'
 import petHairOdorContent from './posts/how-to-remove-pet-hair-odor-dayton.js'
 import groutTileCleaningContent from './posts/how-to-clean-grout-tile-without-damaging-dayton.js'
 import preListingDeepCleanContent from './posts/pre-listing-deep-clean-checklist-dayton.js'
@@ -18,6 +19,76 @@ import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'how-to-clean-1970s-xenia-home-room-by-room',
+    title: 'How to Clean a 1970s Xenia Home: Room-by-Room Guide',
+    description: "One in four Xenia homes dates to the 1970s tornado rebuild. Here's how to clean popcorn ceilings, window tracks, registers, and hard-water scale safely.",
+    publishedAt: '2026-09-07',
+    updatedAt: '2026-09-07',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Local Guides & Seasonal',
+    tags: ['Xenia', '1970s homes', 'popcorn ceilings', 'hard water', 'Greene County', 'cleaning tips'],
+    keywords: [
+      'how to clean a 1970s house',
+      'cleaning 1970s home Xenia Ohio',
+      'how to clean popcorn ceiling without damaging it',
+      'how to clean wood paneling',
+      'clean aluminum window tracks',
+      'Xenia Ohio hard water',
+      'how to clean floor registers',
+      'house cleaning Xenia Ohio',
+      'Xenia 1974 tornado rebuild homes',
+      'Arrowhead Xenia homes',
+      'Windsor Park Xenia',
+      'steam mop on linoleum',
+    ],
+    problem: "About one in four Xenia homes was built in the 1970s rebuild after the 1974 tornado, and their textured ceilings, wood paneling, aluminum window tracks, sheet vinyl, and original tile under 23-grain city water get damaged by generic scrub-everything cleaning advice.",
+    solution: 'A room-by-room method for 1970s Xenia homes — two safety checks first, then ceilings, paneling, registers, hard-water bathrooms, window tracks, floors by material, and laminate kitchens — using dust-and-damp-wipe techniques instead of abrasives.',
+    targetAudience: "Xenia and Greene County homeowners and renters in 1970s ranches, split-levels, and tri-levels — especially Arrowhead, Windsor Park, and other post-tornado rebuild neighborhoods — plus buyers moving into one of these homes",
+    coverImage: '/images/blog/how-to-clean-1970s-xenia-home-room-by-room.png',
+    featured: false,
+    content: xenia1970sHomeCleaningContent,
+    faqs: [
+      {
+        question: 'Is it safe to clean a popcorn ceiling in a 1970s house?',
+        answer: "Yes, as long as you only dust it. Textured ceilings applied before the early 1980s may contain asbestos, which is harmless while the texture stays intact but becomes a hazard when it's sanded, scraped, or wet-scrubbed into dust. Use a soft microfiber duster or a vacuum brush attachment with light pressure, never water, and have the ceiling tested before any repair or removal.",
+      },
+      {
+        question: 'How do you clean 1970s wood paneling without damaging it?',
+        answer: 'Dust it dry with microfiber, then wipe with a cloth wrung nearly dry in warm water and a few drops of dish soap, following the grain and drying immediately. Standing moisture swells the veneer and lifts seams, and abrasive pads or ammonia sprays scratch and dull the finish. A very light coat of wood conditioner, buffed off, restores color if the panels look dry.',
+      },
+      {
+        question: 'Why do my faucets and shower glass get white spots so fast in Xenia?',
+        answer: "Because Xenia's city water is very hard and isn't softened at the plant. The City of Xenia's consumer confidence reports put total hardness near 400 mg/L, roughly 23 grains per gallon, compared with about 8 grains for Greene County's softened county water in Beavercreek. Diluted white vinegar dissolves the scale on chrome and glass; wiping fixtures dry after each use is what keeps it from returning.",
+      },
+      {
+        question: 'How do you clean old aluminum window tracks?',
+        answer: 'Vacuum the loose grit with a crevice tool, scrub with an old toothbrush and warm soapy water, and wipe the sludge out with a rag around a butter knife. Avoid vinegar and other acids, which pit and dull anodized aluminum. Once dry, clear the exterior weep holes with a toothpick and lightly spray the track with silicone lubricant.',
+      },
+      {
+        question: 'How often should I clean floor registers and change the furnace filter?',
+        answer: "Wash floor registers two or three times a year and change a standard furnace filter every 60 to 90 days. In Xenia, check it monthly during fall harvest (September through November) and spring pollen season, since the farmland around the city puts far more dust in the air than a typical suburb. If you can't see light through the filter, replace it.",
+      },
+      {
+        question: 'Can I use a steam mop on a 1970s vinyl or linoleum floor?',
+        answer: 'No. Steam softens the adhesive under sheet vinyl and linoleum, which leads to lifted seams and bubbles, and it can drive moisture into the subfloor. Sweep and damp-mop with a pH-neutral floor cleaner instead. If the floor is 9-inch vinyl tile, leave the tiles intact and never sand or grind them, since tiles from that era may contain asbestos.',
+      },
+      {
+        question: 'How much of Xenia was rebuilt after the 1974 tornado?',
+        answer: "The April 3, 1974 tornado destroyed roughly half the buildings in the city, and reporting from the 50th anniversary counted more than 1,200 homes condemned. Arrowhead and Windsor Park were rebuilt almost entirely, and today the 1970s are the single largest decade in Xenia's housing stock — about one home in four, according to census housing data — which is why so much of the city shares the same cleaning quirks.",
+      },
+    ],
+    howToTitle: 'How to Clean a 1970s Xenia Home Room by Room',
+    howToSteps: [
+      { name: 'Check ceilings and paint first', text: 'Treat textured ceilings and pre-1978 paint as dust-and-damp-wipe only. Never sand, scrape, or wet-scrub them, and have a textured ceiling tested before any repair or removal.' },
+      { name: 'Dust ceilings and fans top-down', text: 'Use an extendable microfiber duster or a vacuum brush attachment with light pressure on textured ceilings, and clean fan blades inside a pillowcase so dust does not fall onto furniture.' },
+      { name: 'Wipe wood paneling with the grain', text: 'Dust dry, then wipe with a nearly dry cloth of warm water and a few drops of dish soap, drying immediately. Skip abrasive pads and ammonia sprays.' },
+      { name: 'Wash registers and change the filter', text: 'Pull floor registers and wash them, vacuum the first foot of each duct opening, wipe the return grille, and replace the furnace filter — monthly during fall harvest and spring pollen in Xenia.' },
+      { name: 'Descale bathrooms for very hard water', text: 'Use half-and-half white vinegar on chrome, glass, and glazed tile, wipe dry, and soak aerators and showerheads. Keep vinegar off unsealed grout and natural stone, and never use abrasives on worn tub enamel.' },
+      { name: 'Detail aluminum window tracks', text: 'Vacuum the track, scrub with a toothbrush and soapy water, avoid acidic cleaners that pit aluminum, clear the weep holes, and finish with a light silicone spray.' },
+      { name: 'Clean floors and laminate by material', text: 'Damp-mop vinyl and linoleum with a pH-neutral cleaner (no steam), keep hardwood barely damp, vacuum carpet slowly, and clean laminate counters and cabinet fronts with soapy water instead of abrasives or bleach.' },
+    ],
+  },
   {
     slug: 'how-to-remove-pet-hair-odor-dayton',
     title: 'How to Get Rid of Pet Hair and Odor at Home: A Dayton Guide',

@@ -218,6 +218,11 @@ export const CITIES = {
     name: 'Xenia',
     zipCodes: ['45385'],
     landmarks: ['Greene County Courthouse', 'East Second Street Historic District', 'Xenia Station'],
+    // NOTE: the `residential` block below is no longer rendered. The Xenia
+    // residential URL is served by a dedicated, richer page
+    // (src/pages/Locations/Xenia/HouseCleaning/XeniaHouseCleaningPage.jsx) via a
+    // static <Route> in App.jsx/entry-server.jsx that outranks the :city route.
+    // Kept so the /locations index and any slug-based lookups stay consistent.
     residential: {
       heroTitle: 'House Cleaning Services in Xenia, OH',
       heroSubtitle: 'Serving Homes Near the Greene County Courthouse',

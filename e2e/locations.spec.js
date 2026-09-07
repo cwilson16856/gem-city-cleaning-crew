@@ -23,6 +23,21 @@ test.describe('Location Pages', () => {
     expect(types).toEqual(expect.arrayContaining(['LocalBusiness', 'Service', 'WebPage']))
   })
 
+  test('serves the dedicated Xenia residential page with FAQPage schema', async ({ page }) => {
+    await page.goto('/locations/xenia/house-cleaning-services')
+
+    await expect(page.locator('h1')).toContainText('House Cleaning Services in Xenia, OH')
+    // Xenia-specific copy that the generic data-driven page never rendered
+    await expect(page.getByRole('heading', { name: /Hard Water/i, level: 2 })).toBeVisible()
+    await expect(page.getByText('Wright Cycle Estates').first()).toBeVisible()
+
+    const blocks = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    const types = blocks.map((b) => JSON.parse(b)['@type'])
+    expect(types).toEqual(expect.arrayContaining(['LocalBusiness', 'Service', 'WebPage', 'FAQPage']))
+  })
+
   test('redirects Beavercreek commercial to its dedicated page', async ({ page }) => {
     await page.goto('/locations/beavercreek/commercial-cleaning-services')
     await expect(page).toHaveURL(/\/locations\/beavercreek\/commercial-services$/)

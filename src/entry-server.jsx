@@ -51,6 +51,7 @@ import DaycareCleaning from './pages/CommercialCleaning/EducationCenterCleaning'
 import ApartmentBuildingCleaning from './pages/CommercialCleaning/ApartmentBuildingCleaning'
 import IndustrialCleaning from './pages/CommercialCleaning/IndustrialCleaning'
 import BeavercreekCommercialPage from './pages/Locations/Beavercreek/CommercialCleaning/BeavercreekCommercialPage'
+import XeniaHouseCleaningPage from './pages/Locations/Xenia/HouseCleaning/XeniaHouseCleaningPage'
 import LocationPage from './pages/LocationPage'
 import BlogPage from './pages/BlogPage'
 import PostPage from './pages/PostPage'
@@ -147,6 +148,7 @@ export function render(url) {
                 <Route path="/apartment-building-cleaning" element={<ApartmentBuildingCleaning />} />
                 <Route path="/industrial-cleaning" element={<IndustrialCleaning />} />
                 <Route path="/locations" element={<LocationPage />} />
+                <Route path="/locations/xenia/house-cleaning-services" element={<XeniaHouseCleaningPage />} />
                 <Route path="/locations/:city/house-cleaning-services" element={<LocationPage serviceType="residential" />} />
                 <Route path="/locations/:city/commercial-cleaning-services" element={<LocationPage serviceType="commercial" />} />
                 <Route path="/locations/beavercreek/commercial-services" element={<BeavercreekCommercialPage />} />
