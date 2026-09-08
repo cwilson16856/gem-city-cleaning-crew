@@ -2,6 +2,7 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import windowsStreakFreeContent from './posts/how-to-clean-windows-streak-free-dayton.js'
 import xenia1970sHomeCleaningContent from './posts/how-to-clean-1970s-xenia-home-room-by-room.js'
 import petHairOdorContent from './posts/how-to-remove-pet-hair-odor-dayton.js'
 import groutTileCleaningContent from './posts/how-to-clean-grout-tile-without-damaging-dayton.js'
@@ -19,6 +20,68 @@ import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'how-to-clean-windows-streak-free-dayton',
+    title: "How to Clean Windows Streak-Free: A Dayton Homeowner's Guide",
+    description: "Streaky windows in Dayton usually mean hard water, not bad technique. Here's the tool, solution, and step-by-step method that actually gets glass clear.",
+    publishedAt: '2026-09-08',
+    updatedAt: '2026-09-08',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Cleaning Tips',
+    tags: ['window cleaning', 'streak-free', 'hard water', 'cleaning tips', 'Dayton'],
+    keywords: [
+      'how to clean windows streak free',
+      'streak free window cleaning tips',
+      'best window cleaning solution for hard water spots',
+      'how to clean window tracks and screens',
+      'why do windows still streak after cleaning',
+      'best time of day to clean windows',
+      'how often should you clean windows',
+      'does vinegar damage aluminum window tracks',
+      'window cleaning Dayton Ohio',
+      'clean windows without streaks',
+    ],
+    problem: "Most window-cleaning advice blames streaks on technique alone, but in the Dayton area even correct technique streaks because hard tap water leaves a mineral film behind as it evaporates.",
+    solution: 'A tool-and-technique method — squeegee and microfiber, a vinegar-water solution, top-down overlapping strokes, and separate care for aluminum tracks and screens — that accounts for hard water instead of ignoring it.',
+    targetAudience: 'Dayton-area homeowners and renters — across Kettering, Centerville, Beavercreek, and Oakwood — dealing with streaky windows despite following generic cleaning advice',
+    coverImage: '/images/blog/how-to-clean-windows-streak-free-dayton.png',
+    featured: false,
+    content: windowsStreakFreeContent,
+    faqs: [
+      {
+        question: "What's the best time of day to clean windows?",
+        answer: "Overcast, dry weather beats a sunny afternoon every time. Direct sunlight heats the glass and dries your cleaning solution before you can wipe it off evenly, and that half-dried residue is exactly what shows up as streaks once the glass cools. If you can only clean on a sunny day, work in the shaded side of the house first and move around as the sun shifts.",
+      },
+      {
+        question: 'Does vinegar damage window tracks or frames?',
+        answer: "It can, depending on the material. Vinegar is safe and effective on glass, but on aluminum window tracks — common in older Dayton-area homes — repeated acid exposure pits and dulls the anodized finish over time. Clean tracks with warm soapy water and a soft brush instead, and save the vinegar solution for the glass itself.",
+      },
+      {
+        question: 'Why do my windows still streak after I clean them?',
+        answer: 'The most common causes are cleaning in direct sun, using a cloth or paper towel instead of a squeegee, and hard water mineral film. In the Dayton area specifically, tap water lands in the "hard" range even after county treatment, so any water left to air-dry on glass — from a rinse, rain, or an overly wet cloth — leaves a faint mineral haze behind. Switching to a squeegee and drying edges immediately usually solves it.',
+      },
+      {
+        question: 'How often should windows be cleaned?',
+        answer: 'Twice a year for most homes — once in spring after pollen season and once in fall — keeps glass looking clear without much upkeep. Homes near busy roads, with pets, or with kids leaving fingerprints on interior glass often do better with a quick interior wipe-down monthly, saving the full inside-and-out clean for the twice-yearly pass.',
+      },
+      {
+        question: 'Is a squeegee really necessary, or will microfiber alone work?',
+        answer: "Microfiber alone can get glass clean, but it's much harder to get it streak-free, especially on larger panes. A squeegee pulls water and dissolved minerals off the surface in a single controlled pass, while a cloth alone tends to push water around and leave thin trails that dry into streaks. For anything bigger than a small bathroom window, a squeegee makes the job faster and the result more consistent.",
+      },
+      {
+        question: "What's causing the cloudy film that won't wipe off?",
+        answer: "That's almost always mineral scale from hard water, not dirt — and dry-wiping won't remove it because there's nothing loose to pick up. It needs a mild acid to dissolve the deposit first. Spray the glass with a vinegar-water solution, let it sit for a minute on stubborn spots, then squeegee and dry. If the film is thick from months of buildup, a second pass usually finishes the job.",
+      },
+    ],
+    howToTitle: 'How to Clean Windows Streak-Free',
+    howToSteps: [
+      { name: 'Pick a cloudy, dry day', text: "Avoid direct sun, which dries your cleaning solution too fast and leaves half-dried residue that shows up as streaks once the glass cools." },
+      { name: 'Clear loose dirt first', text: 'Do a dry microfiber pass or quick brush to remove grit before adding any liquid, so it does not turn into mud once wet.' },
+      { name: 'Spray an even vinegar solution', text: 'Mix one part white vinegar to two parts water and spray the glass evenly from top to bottom.' },
+      { name: 'Squeegee top-down in overlapping strokes', text: 'Wipe the squeegee blade dry with a cloth between passes. Working top to bottom keeps drips from re-wetting glass you already cleaned.' },
+      { name: 'Dry the edges immediately', text: 'Use a dry microfiber cloth on the sill and corners where the squeegee misses, before the last bit of moisture evaporates into a streak.' },
+    ],
+  },
   {
     slug: 'how-to-clean-1970s-xenia-home-room-by-room',
     title: 'How to Clean a 1970s Xenia Home: Room-by-Room Guide',
