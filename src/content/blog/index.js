@@ -2,6 +2,7 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import garageBasementDeepCleanContent from './posts/how-to-deep-clean-garage-basement-dayton.js'
 import windowsStreakFreeContent from './posts/how-to-clean-windows-streak-free-dayton.js'
 import xenia1970sHomeCleaningContent from './posts/how-to-clean-1970s-xenia-home-room-by-room.js'
 import petHairOdorContent from './posts/how-to-remove-pet-hair-odor-dayton.js'
@@ -20,6 +21,73 @@ import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
 const posts = [
+  {
+    slug: 'how-to-deep-clean-garage-basement-dayton',
+    title: 'How to Deep Clean a Garage or Basement: A Dayton Guide',
+    description: "Grease-caked concrete and a musty basement aren't the same problem. Here's the room-by-room fix for Dayton garages and basements, floor to humidity control.",
+    publishedAt: '2026-09-10',
+    updatedAt: '2026-09-10',
+    author: 'Gem City Cleaning Crew Team',
+    category: 'Cleaning Tips',
+    tags: ['garage cleaning', 'basement cleaning', 'concrete floor care', 'humidity control', 'Dayton'],
+    keywords: [
+      'how to deep clean a garage or basement',
+      'how to clean a concrete garage floor',
+      'basement deep clean checklist',
+      'how to get rid of musty smell in basement',
+      'garage organization ideas',
+      'remove oil stains from garage floor',
+      'best humidity setting for a dehumidifier',
+      'how often should you deep clean your garage',
+      'basement mustiness Dayton Ohio',
+      'garage cleanout Dayton Ohio',
+    ],
+    problem: "Garages collect grease and road grime that soak into porous concrete, while basements in Dayton's older homes trap humid-summer moisture that turns into a musty smell — and neither responds to a normal vacuum-and-mop routine.",
+    solution: 'A three-step system — declutter first, then degrease and seal the concrete floor, then control basement humidity to 45-50% relative humidity — tailored to the pre-1960s unfinished basements common across Dayton, Oakwood, and Kettering.',
+    targetAudience: 'Dayton-area homeowners — across Dayton, Oakwood, Kettering, and the surrounding Miami Valley — with a cluttered garage, a musty basement, or both',
+    coverImage: '/images/blog/how-to-deep-clean-garage-basement-dayton.png',
+    featured: false,
+    content: garageBasementDeepCleanContent,
+    faqs: [
+      {
+        question: 'How often should you deep clean a garage?',
+        answer: 'Once or twice a year covers most households — once in spring to clear winter salt and grime, and again in fall before things get buried under holiday storage. Garages that double as a workshop or see heavy vehicle use often do better with a quick floor pass every season.',
+      },
+      {
+        question: 'How do you get rid of a musty smell in a basement?',
+        answer: "Find and fix the moisture source first — a leaky window well, a downspout draining too close to the foundation, or a small crack — then run a dehumidifier set to 45-50% relative humidity and clean any visible mildew with a diluted bleach or vinegar solution. Treating the smell without addressing the moisture source means it comes back within weeks.",
+      },
+      {
+        question: "What's the best humidity setting for a basement dehumidifier?",
+        answer: '45-50% relative humidity is the target range most HVAC professionals recommend. Below 30% can dry out wood furniture and finishes; above 50% starts giving mold and mildew the moisture they need to grow, which is common in Dayton-area basements during humid summer months.',
+      },
+      {
+        question: 'How do you remove oil and grease stains from a concrete garage floor?',
+        answer: "Absorb fresh spills immediately with cat litter, baking soda, or cornstarch before they soak in. For stains that have already set, apply a concrete degreaser, let it dwell per the label, then scrub with a stiff push broom and rinse thoroughly. Dish soap alone isn't strong enough to break down set-in grease.",
+      },
+      {
+        question: 'Should you seal a garage floor after cleaning it?',
+        answer: 'Yes, if the floor is bare concrete. A sealer keeps future oil, salt, and grime from soaking into the porous surface, which makes every future cleaning faster and less involved. Apply it to a fully clean, dry floor during a stretch of mild, low-humidity weather so it cures properly.',
+      },
+      {
+        question: 'Are older Dayton-area basements more prone to moisture problems?',
+        answer: 'Often, yes. A lot of Dayton, Oakwood, and Kettering housing stock dates to before 1960, when concrete block foundations were commonly built without the vapor barriers standard in newer construction. That makes gradual moisture intrusion more common, which is exactly why humidity control matters more in these basements than in a newer build.',
+      },
+      {
+        question: 'What should never be stored directly on a basement floor?',
+        answer: 'Cardboard boxes, fabric, paper documents, and untreated wood — all of these wick up moisture quickly even from minor dampness or a seasonal humidity swing. Wire shelving or plastic totes raised on a platform protect stored items from a slow leak or a humid stretch of weather.',
+      },
+    ],
+    howToTitle: 'How to Deep Clean a Garage or Basement',
+    howToSteps: [
+      { name: 'Sort everything into four piles', text: 'Split items into keep-and-it-has-a-home, keep-but-store-elsewhere, donate/sell, and toss before any cleaning starts, working one section at a time.' },
+      { name: 'Absorb and treat concrete floor stains', text: 'Cover fresh oil or grease with cat litter or baking soda, then use a concrete degreaser and stiff push broom on set-in stains and a rust remover on rust spots.' },
+      { name: 'Seal the concrete floor once dry', text: 'Apply a concrete sealer to a fully clean, dry floor during mild, low-humidity weather so future spills and salt no longer soak in as deeply.' },
+      { name: 'Set a basement dehumidifier to 45-50% humidity', text: 'Run it continuously through Dayton\'s humid summer months to stop mold and mildew from getting a foothold in the room with the least airflow.' },
+      { name: 'Clean visible mildew and find the moisture source', text: 'Scrub mildew on non-porous surfaces with a diluted bleach or vinegar solution, then check window wells, downspouts, and foundation cracks so it doesn\'t return.' },
+      { name: 'Install wall-mounted or raised storage', text: 'Move stored items off the floor onto pegboards, wall shelving, or a raised platform so nothing wicks up moisture or blocks the next cleaning pass.' },
+    ],
+  },
   {
     slug: 'how-to-clean-windows-streak-free-dayton',
     title: "How to Clean Windows Streak-Free: A Dayton Homeowner's Guide",
