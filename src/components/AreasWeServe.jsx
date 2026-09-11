@@ -18,7 +18,15 @@ import { CITY_SLUGS } from '../data/locations'
 // named Kettering/Centerville/Huber Heights even on the Troy/Xenia/Tipp City
 // pages, which read as templated). Omit it (e.g. the homepage, the
 // /locations index) to keep the original generic copy.
-const AreasWeServe = ({ onCityClick, currentCity }) => {
+//
+// serviceType: 'residential' | 'commercial', pass alongside currentCity so
+// the intro sentence names the right service line. Without this the intro
+// hardcoded "house cleaning and move-in/move-out services" even on the 16
+// commercial location pages — a real bug caught in the 2026-09-11 SEO audit
+// follow-up (factually wrong copy live on every commercial city page).
+// Defaults to the residential phrasing so every other existing call site
+// (all of which are residential pages) is unaffected.
+const AreasWeServe = ({ onCityClick, currentCity, serviceType = 'residential' }) => {
   // Service areas
   const serviceAreas = [
     'Dayton', 'Kettering', 'Oakwood', 'Centerville',
@@ -39,9 +47,13 @@ const AreasWeServe = ({ onCityClick, currentCity }) => {
     ? serviceAreas.filter((area) => area !== currentCity).slice(0, 3)
     : ['Kettering', 'Centerville', 'Huber Heights']
 
+  const serviceLine = serviceType === 'commercial'
+    ? 'commercial and office cleaning services'
+    : 'house cleaning and move-in/move-out services'
+
   const introText = currentCity
-    ? `Gem City Cleaning Crew proudly serves ${currentCity} and the surrounding Greater Dayton area — including ${nearbyExamples.join(', ')} — with professional house cleaning and move-in/move-out services. Our local team knows ${currentCity} and provides reliable, trustworthy cleaning services throughout the region.`
-    : `Gem City Cleaning Crew proudly serves Dayton and nearby communities like ${nearbyExamples.join(', ')} with professional house cleaning and move-in/move-out services. Our local team knows the area and provides reliable, trustworthy cleaning services throughout the Greater Dayton region.`
+    ? `Gem City Cleaning Crew proudly serves ${currentCity} and the surrounding Greater Dayton area — including ${nearbyExamples.join(', ')} — with professional ${serviceLine}. Our local team knows ${currentCity} and provides reliable, trustworthy cleaning services throughout the region.`
+    : `Gem City Cleaning Crew proudly serves Dayton and nearby communities like ${nearbyExamples.join(', ')} with professional ${serviceLine}. Our local team knows the area and provides reliable, trustworthy cleaning services throughout the Greater Dayton region.`
 
   return (
     <Container maxWidth="lg" className={styles.container}>

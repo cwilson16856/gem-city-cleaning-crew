@@ -42,6 +42,9 @@ const TermsOfService = () => {
           content="Terms of Service for Gem City Cleaning Crew, including quote requests, communications, and text messaging terms."
         />
         <link rel="canonical" href="https://gemcitycleaningcrew.com/terms-of-service" />
+        <meta property="og:url" content="https://gemcitycleaningcrew.com/terms-of-service" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Terms of Service | Gem City Cleaning Crew" />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 

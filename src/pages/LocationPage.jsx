@@ -122,6 +122,11 @@ const LocationsIndex = () => {
       <Helmet>
         <title>Cleaning Service Locations Near Dayton | Gem City Cleaning Crew</title>
         <meta name="description" content="Professional cleaning services throughout Greater Dayton including Kettering, Centerville, Beavercreek & more. Residential & commercial cleaning services." />
+        <link rel="canonical" href={generateCanonicalUrl('/locations')} />
+        <meta property="og:url" content={generateCanonicalUrl('/locations')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Cleaning Service Locations Near Dayton | Gem City Cleaning Crew" />
+        <meta property="og:description" content="Professional cleaning services throughout Greater Dayton including Kettering, Centerville, Beavercreek & more. Residential & commercial cleaning services." />
       </Helmet>
 
       {/* Hero Section */}
@@ -272,6 +277,10 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
         <title>{generateSEOTitle(content.heroTitle, 'Gem City Cleaning')}</title>
         <meta name="description" content={content.metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={generateSEOTitle(content.heroTitle, 'Gem City Cleaning')} />
+        <meta property="og:description" content={content.metaDescription} />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
@@ -379,7 +388,7 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
         </Button>
       </Container>
 
-      <AreasWeServe currentCity={cityData.name} />
+      <AreasWeServe currentCity={cityData.name} serviceType={serviceType} />
 
       <QuoteForm
         open={quoteFormOpen}
