@@ -68,6 +68,10 @@ const AboutPage = () => {
         <title>About Us | Gem City Cleaning Crew</title>
         <meta name="description" content="Meet Chris and Macy Wilson, owners of Gem City Cleaning Crew — Dayton's no-contract residential and commercial cleaning company since 2017. Our mission, values, and training program." />
         <link rel="canonical" href="https://gemcitycleaningcrew.com/about-us" />
+        <meta property="og:url" content="https://gemcitycleaningcrew.com/about-us" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="About Us | Gem City Cleaning Crew" />
+        <meta property="og:description" content="Meet Chris and Macy Wilson, owners of Gem City Cleaning Crew — Dayton's no-contract residential and commercial cleaning company since 2017. Our mission, values, and training program." />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',

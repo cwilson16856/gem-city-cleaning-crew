@@ -872,7 +872,7 @@ const BeavercreekCommercialPage = () => {
 
       {/* Areas We Serve Component */}
       <Box id="greater-dayton-service-areas">
-        <AreasWeServe currentCity="Beavercreek" />
+        <AreasWeServe currentCity="Beavercreek" serviceType="commercial" />
       </Box>
 
       {/* Excellence Section */}
