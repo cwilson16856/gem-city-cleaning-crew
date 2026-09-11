@@ -203,7 +203,7 @@ const AirBnbCleaning = () => {
         {/* Primary Meta Tags */}
         <title>Airbnb Cleaning Service Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Best AirBnb Cleaning Service Dayton OH | Same-Day Turnaround | Professional Short-Term Rental Cleaning" />
-        <meta name="description" content="⭐ #1 Rated AirBnb Cleaning Service in Dayton, OH. Same-day turnaround, hospitality standards, flexible scheduling. Maximize your bookings with spotless properties. FREE quotes! Call 937-892-4157" />
+        <meta name="description" content="⭐ 4.6-Star Rated AirBnb Cleaning Service in Dayton, OH. Same-day turnaround, hospitality standards, flexible scheduling. Maximize your bookings with spotless properties. FREE quotes! Call 937-892-4157" />
         <meta name="keywords" content="AirBnb cleaning Dayton, short term rental cleaning Dayton OH, Airbnb cleaner Dayton, vacation rental cleaning, same day cleaning service, Airbnb turnover cleaning, hospitality cleaning Dayton, rental property cleaning, Kettering Airbnb cleaning, Centerville short term rental cleaning, Oakwood vacation rental cleaning, professional Airbnb cleaning near me, guest ready cleaning, 5 star cleaning service" />
         
         {/* Additional SEO Meta Tags */}
@@ -224,7 +224,7 @@ const AirBnbCleaning = () => {
         <meta property="og:site_name" content="Gem City Cleaning Crew" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/airbnb-cleaning-service" />
         <meta property="og:title" content="Best AirBnb Cleaning Service Dayton OH | Same-Day Turnaround | Professional" />
-        <meta property="og:description" content="⭐ #1 Rated AirBnb Cleaning in Dayton. Same-day turnaround, hospitality standards, flexible scheduling. Maximize bookings with spotless properties. FREE quotes!" />
+        <meta property="og:description" content="⭐ 4.6-Star Rated AirBnb Cleaning in Dayton. Same-day turnaround, hospitality standards, flexible scheduling. Maximize bookings with spotless properties. FREE quotes!" />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/airbnb-bed-made.webp" />
         <meta property="og:image:alt" content="Professional AirBnb cleaning results - perfectly made bed ready for guests" />
         <meta property="og:image:width" content="1536" />
@@ -237,7 +237,7 @@ const AirBnbCleaning = () => {
         <meta name="twitter:site" content="@GemCityCleaning" />
         <meta name="twitter:creator" content="@GemCityCleaning" />
         <meta name="twitter:title" content="Best AirBnb Cleaning Service Dayton OH | Same-Day Turnaround" />
-        <meta name="twitter:description" content="⭐ #1 Rated AirBnb Cleaning in Dayton. Same-day turnaround, hospitality standards. Maximize bookings with spotless properties!" />
+        <meta name="twitter:description" content="⭐ 4.6-Star Rated AirBnb Cleaning in Dayton. Same-day turnaround, hospitality standards. Maximize bookings with spotless properties!" />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/airbnb-bed-made.webp" />
         <meta name="twitter:image:alt" content="Professional AirBnb cleaning results in Dayton OH" />
         
@@ -245,89 +245,7 @@ const AirBnbCleaning = () => {
         <link rel="canonical" href="https://gemcitycleaningcrew.com/airbnb-cleaning-service" />
         <link rel="alternate" hrefLang="en-us" href="https://gemcitycleaningcrew.com/airbnb-cleaning-service" />
         
-        {/* JSON-LD Structured Data - Enhanced LocalBusiness */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "@id": "https://gemcitycleaningcrew.com/#business",
-            "name": "Gem City Cleaning Crew",
-            "alternateName": "Gem City Cleaning",
-            "description": "Professional AirBnb and short-term rental cleaning service in Dayton, OH with same-day turnaround, hospitality standards, and flexible scheduling for vacation rental properties.",
-            "url": "https://gemcitycleaningcrew.com",
-            "telephone": "+1-937-892-4157",
-            "email": "info@gemcitycleaningcrew.com",
-            "foundingDate": "2020",
-            "priceRange": "$$",
-            "currenciesAccepted": "USD",
-            "paymentAccepted": "Cash, Check, Credit Card, Venmo, Zelle",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dayton",
-              "addressRegion": "OH",
-              "addressCountry": "US"
-            },
-            "areaServed": [
-              {
-                "@type": "City",
-                "name": "Dayton",
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": "Ohio"
-                }
-              },
-              {
-                "@type": "City",
-                "name": "Kettering",
-                "containedInPlace": {
-                  "@type": "State", 
-                  "name": "Ohio"
-                }
-              },
-              {
-                "@type": "City",
-                "name": "Centerville",
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": "Ohio"
-                }
-              },
-              {
-                "@type": "City",
-                "name": "Oakwood",
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": "Ohio"
-                }
-              }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.5",
-              "reviewCount": "85",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "AirBnb Cleaning Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "name": "AirBnb Turnover Cleaning",
-                  "description": "Same-day cleaning service for AirBnb properties between guest stays",
-                  "category": "Short-Term Rental Cleaning"
-                },
-                {
-                  "@type": "Offer",
-                  "name": "Vacation Rental Deep Cleaning",
-                  "description": "Comprehensive deep cleaning for vacation rental properties",
-                  "category": "Vacation Rental Cleaning"
-                }
-              ]
-            }
-          })}
-        </script>
+        {/* LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting/inconsistent version. */}
 
         {/* Service Schema - Enhanced */}
         <script type="application/ld+json">
@@ -339,12 +257,7 @@ const AirBnbCleaning = () => {
             "alternateName": ["Short-Term Rental Cleaning", "Vacation Rental Cleaning", "AirBnb Turnover Cleaning"],
             "description": "Professional AirBnb and vacation rental cleaning service in Dayton, Ohio with same-day turnaround, hospitality standards, and flexible scheduling around guest check-ins and check-outs",
             "serviceType": "Short-Term Rental Cleaning Service",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "+1-937-892-4157",
-              "url": "https://gemcitycleaningcrew.com"
-            },
+            "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "offers": [
               {
                 "@type": "Offer",
@@ -455,7 +368,7 @@ const AirBnbCleaning = () => {
             }}
           >
             <Rating 
-              value={4.5} 
+              value={4.6} 
               precision={0.5} 
               readOnly 
               size="large" 
@@ -476,7 +389,7 @@ const AirBnbCleaning = () => {
                 minWidth: 200
               }}
             >
-              4.5/5 stars • 85+ reviews
+              4.6/5 stars • 90+ reviews
             </Typography>
           </Box>
           

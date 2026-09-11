@@ -43,7 +43,6 @@ import TableOfContents from '../../components/TableOfContents'
 // copy of LocalBusiness/Service, matching LocationPage.jsx's pattern.
 import { generateCanonicalUrl, generateSEOTitle } from '../../utils/seo'
 import {
-  generateLocalBusinessSchema,
   generateServiceSchema,
   generateLocationWebPageSchema
 } from '../../utils/localBusinessSchema'
@@ -132,7 +131,7 @@ const PostConstructionCleaning = () => {
   const pageTitle = 'Post-Construction Cleaning Dayton OH'
   const metaDescription = 'Professional post-construction cleaning services in Dayton, Ohio — rough clean, final clean, and touch-up cleaning for new builds, renovations, and remodels. Free quotes available.'
 
-  const localBusinessSchema = generateLocalBusinessSchema(AREA_SERVED_CITIES)
+  // LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting narrower areaServed.
   const serviceSchema = generateServiceSchema({
     id: serviceId,
     name: 'Post-Construction Cleaning',
@@ -175,8 +174,6 @@ const PostConstructionCleaning = () => {
         <meta name="twitter:title" content={`${pageTitle} | Gem City Cleaning Crew`} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
-
-        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
         {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}

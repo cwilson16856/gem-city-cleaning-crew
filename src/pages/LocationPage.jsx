@@ -21,10 +21,60 @@ import NotFound from './NotFound'
 import { getCityBySlug } from '../data/locations'
 import { generateSEOTitle, generateCanonicalUrl } from '../utils/seo'
 import {
-  generateLocalBusinessSchema,
   generateServiceSchema,
   generateLocationWebPageSchema
 } from '../utils/localBusinessSchema'
+
+// Shared, service-type-aware content for the "What's Included" / "How It
+// Works" / FAQ sections below — added 2026-09-11 (SEO audit, Critical
+// finding: 30 of 32 location pages ran 121-268 words, well under the
+// 500-600 word floor for the page type). Deliberately generic-but-genuine
+// service description rather than per-city facts, since a template shared
+// by every city page has no reliable way to verify a NEW city-specific claim
+// (a landmark, a business name) — that risk is exactly what the audit's
+// "scaled content abuse" check flags. Every fact asserted here already
+// exists elsewhere on the site (ResidentialPage.jsx / CommercialPage.jsx
+// FAQs, Footer.jsx's "Licensed • Insured" line) — this reuses and localizes
+// it, it doesn't introduce new claims. No FAQPage schema is added for this
+// content — Google retired FAQ rich results for all sites May 7 2026, and
+// per the audit's own quality-gate rule, new FAQPage schema isn't
+// recommended for SERP benefit; this is plain on-page content only.
+const WHATS_INCLUDED = {
+  residential: [
+    'Kitchens — countertops, appliance exteriors, sinks, and cabinet fronts',
+    'Bathrooms — toilets, showers, tubs, mirrors, and sinks',
+    'Bedrooms & living areas — dusting, vacuuming, and surface wipe-down',
+    'Floors — vacuuming and mopping all hard-surface and carpeted areas',
+    'Trash removal and general tidying throughout the home'
+  ],
+  commercial: [
+    'Workstations & offices — desks, surfaces, and high-touch points',
+    'Restrooms — full sanitization of fixtures, mirrors, and floors',
+    'Breakrooms & kitchenettes — counters, sinks, and appliance exteriors',
+    'Common areas & entryways — floors, glass, and reception surfaces',
+    'Trash and recycling removal throughout the facility'
+  ]
+}
+
+const HOW_IT_WORKS = [
+  { title: 'Get your free quote', body: 'Call 937-892-4157 or request a quote online — we\'ll ask a few questions about your space and cleaning needs.' },
+  { title: 'We build your plan', body: 'One-time, weekly, bi-weekly, or monthly — with no long-term contract required.' },
+  { title: 'Trained crew arrives', body: 'Every cleaner completes three months of training before working independently.' },
+  { title: 'Consistent results', body: 'The same standards every visit, with easy rescheduling if your plans change.' }
+]
+
+const LOCATION_FAQ = {
+  residential: [
+    { q: 'Do I need to be home during the cleaning?', a: 'No — many clients provide access instructions and go about their day. It\'s entirely up to what works for you.' },
+    { q: 'Do you bring your own cleaning supplies?', a: 'Yes, our trained crews bring their own tools and supplies. If you have a sensitivity and want us to use something specific instead, we can accommodate that.' },
+    { q: 'What if I need to reschedule?', a: 'No long-term contracts means flexible rescheduling — just give us a call ahead of your appointment.' }
+  ],
+  commercial: [
+    { q: 'Can you clean after business hours?', a: 'Yes — we offer flexible scheduling including evenings and weekends so cleaning never disrupts your operations.' },
+    { q: 'Do you provide cleaning supplies and equipment?', a: 'Yes, we bring all necessary supplies and equipment, using commercial-grade products that are effective yet safe for your workplace.' },
+    { q: 'Are your cleaners licensed and insured?', a: 'Yes — Gem City Cleaning Crew is licensed and insured for every job.' }
+  ]
+}
 
 // Service areas with their details — used only by the generic /locations index
 // page below (not by the per-city pages, which pull from src/data/locations.js).
@@ -82,8 +132,8 @@ const LocationsIndex = () => {
         backgroundImage="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
         chipText="LICENSED • INSURED • PROFESSIONAL"
         showRating={true}
-        ratingValue={4.5}
-        reviewCount="85+"
+        ratingValue={4.6}
+        reviewCount="90+"
         primaryButtonText="Get Your Free Quote"
         primaryButtonLink="/quote"
         differentiators={[
@@ -191,7 +241,10 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
   const canonicalUrl = generateCanonicalUrl(currentPath)
   const serviceId = `${canonicalUrl}#service`
 
-  const localBusinessSchema = generateLocalBusinessSchema([cityData.name])
+  // LocalBusiness itself is injected once, site-wide, by the app shell
+  // (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it
+  // with a conflicting narrower areaServed. See 2026-09-11 SEO audit,
+  // Schema finding #1.
   const serviceSchema = generateServiceSchema({
     id: serviceId,
     name: content.heroTitle,
@@ -219,7 +272,6 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
         <title>{generateSEOTitle(content.heroTitle, 'Gem City Cleaning')}</title>
         <meta name="description" content={content.metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
@@ -230,8 +282,8 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
         backgroundImage="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
         chipText="LICENSED • INSURED • PROFESSIONAL"
         showRating={true}
-        ratingValue={4.5}
-        reviewCount="85+"
+        ratingValue={4.6}
+        reviewCount="90+"
         primaryButtonText="Get Your Free Quote"
         primaryButtonLink="/quote"
         differentiators={['Same-Day Available', 'No Contracts', 'Local Service', 'Professional Staff']}
@@ -270,6 +322,53 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
           </Box>
         )}
 
+        <Box sx={{ mb: 5 }}>
+          <Typography variant="h5" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+            What's Included in {serviceType === 'residential' ? 'House' : 'Commercial'} Cleaning in {cityData.name}
+          </Typography>
+          <Box component="ul" sx={{ pl: 3, m: 0 }}>
+            {WHATS_INCLUDED[serviceType].map((item) => (
+              <Typography key={item} component="li" variant="body1" sx={{ mb: 1, lineHeight: 1.6 }}>
+                {item}
+              </Typography>
+            ))}
+          </Box>
+        </Box>
+
+        <Box sx={{ mb: 5 }}>
+          <Typography variant="h5" component="h2" sx={{ mb: 3, fontWeight: 600 }}>
+            How It Works
+          </Typography>
+          <Grid container spacing={3}>
+            {HOW_IT_WORKS.map((step, i) => (
+              <Grid item xs={12} sm={6} key={step.title}>
+                <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 0.5 }}>
+                  {i + 1}. {step.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                  {step.body}
+                </Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        <Box sx={{ mb: 5 }}>
+          <Typography variant="h5" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+            {cityData.name} {serviceType === 'residential' ? 'House' : 'Commercial'} Cleaning FAQ
+          </Typography>
+          {LOCATION_FAQ[serviceType].map((item) => (
+            <Box key={item.q} sx={{ mb: 2.5 }}>
+              <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 0.5 }}>
+                {item.q}
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                {item.a}
+              </Typography>
+            </Box>
+          ))}
+        </Box>
+
         <Button
           variant="contained"
           size="large"
@@ -280,7 +379,7 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
         </Button>
       </Container>
 
-      <AreasWeServe />
+      <AreasWeServe currentCity={cityData.name} />
 
       <QuoteForm
         open={quoteFormOpen}

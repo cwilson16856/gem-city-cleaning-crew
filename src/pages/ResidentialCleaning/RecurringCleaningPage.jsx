@@ -254,7 +254,7 @@ const RecurringCleaningPage = () => {
         <meta name="title" content="Best Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner Every Visit" />
         <meta name="description" content="⭐ #1 Rated Recurring House Cleaning Service in Dayton, OH. No contracts, same professional cleaner every visit, flexible scheduling. Weekly, bi-weekly & monthly options. FREE quotes! Call 937-892-4157" />
         <meta name="keywords" content="recurring house cleaning Dayton, weekly cleaning service Dayton OH, bi-weekly house cleaning, no contract cleaning service, regular house cleaning Dayton, maid service Dayton, professional house cleaners Dayton, weekly maid service, Kettering house cleaning, Centerville cleaning service, Oakwood maid service, recurring cleaning near me, house cleaning subscription Dayton, residential cleaning service, same cleaner every visit, flexible house cleaning" />
-        
+
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
@@ -267,7 +267,7 @@ const RecurringCleaningPage = () => {
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
         <meta name="theme-color" content="#D81B60" />
-        
+
         {/* Open Graph / Facebook - Enhanced */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Gem City Cleaning Crew" />
@@ -293,159 +293,21 @@ const RecurringCleaningPage = () => {
         <meta name="twitter:description" content="⭐ #1 Rated Recurring House Cleaning in Dayton. No contracts, same professional cleaner every visit. Weekly, bi-weekly & monthly options. FREE quotes!" />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta name="twitter:image:alt" content="Professional recurring house cleaning results in Dayton OH" />
-        
+
         {/* Additional Social Media */}
         <meta property="article:author" content="Gem City Cleaning Crew" />
         <meta property="article:publisher" content="https://www.facebook.com/GemCityCleaningCrew" />
         <meta property="article:published_time" content="2024-01-15T10:00:00Z" />
         <meta property="article:modified_time" content={new Date().toISOString()} />
-        
+
         {/* Canonical and Alternate URLs */}
         <link rel="canonical" href="https://gemcitycleaningcrew.com/recurring-cleaning-service" />
         <link rel="alternate" hrefLang="en-us" href="https://gemcitycleaningcrew.com/recurring-cleaning-service" />
-        
+
         {/* Preload critical resources */}
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
-        <link rel="preload" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" as="image" />
-        
-        {/* JSON-LD Structured Data - Enhanced LocalBusiness */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "@id": "https://gemcitycleaningcrew.com/#business",
-            "name": "Gem City Cleaning Crew",
-            "alternateName": "Gem City Cleaning",
-            "description": "Professional recurring house cleaning service in Dayton, OH with no contracts, same cleaner every visit, and flexible scheduling options for weekly, bi-weekly, and monthly service.",
-            "url": "https://gemcitycleaningcrew.com",
-            "telephone": "+1-937-892-4157",
-            "email": "info@gemcitycleaningcrew.com",
-            "foundingDate": "2020",
-            "priceRange": "$$",
-            "currenciesAccepted": "USD",
-            "paymentAccepted": "Cash, Check, Credit Card, Venmo, Zelle",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dayton",
-              "addressRegion": "OH",
-              "addressCountry": "US"
-            },
-            "areaServed": [
-              {
-                "@type": "City",
-                "name": "Dayton",
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": "Ohio"
-                }
-              },
-              {
-                "@type": "City",
-                "name": "Kettering",
-                "containedInPlace": {
-                  "@type": "State", 
-                  "name": "Ohio"
-                }
-              },
-              {
-                "@type": "City",
-                "name": "Centerville",
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": "Ohio"
-                }
-              },
-              {
-                "@type": "City",
-                "name": "Oakwood",
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": "Ohio"
-                }
-              }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.5",
-              "reviewCount": "85",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
-            "review": [
-              {
-                "@type": "Review",
-                "author": {
-                  "@type": "Person",
-                  "name": "Amanda T."
-                },
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "5",
-                  "bestRating": "5"
-                },
-                "reviewBody": "I have been using Gem City for four years now and am consistently happy with their service. I typically have the same cleaner each visit which is great for building trust.",
-                "datePublished": "2023-11-15"
-              },
-              {
-                "@type": "Review",
-                "author": {
-                  "@type": "Person",
-                  "name": "Anne B."
-                },
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "5",
-                  "bestRating": "5"
-                },
-                "reviewBody": "I've been using Gem City cleaning for 3 years, and I am very happy with the job they do. Consistent, reliable, positive, trustworthy. If ever I've had concerns, they make it right quickly.",
-                "datePublished": "2023-10-22"
-              }
-            ],
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "10:00",
-                "closes": "18:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "10:00",
-                "closes": "14:00"
-              }
-            ],
-            "sameAs": [
-              "https://www.facebook.com/GemCityCleaningCrew",
-              "https://www.instagram.com/gemcitycleaningcrew",
-              "https://www.linkedin.com/company/gem-city-cleaning-crew"
-            ],
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Recurring Cleaning Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "name": "Weekly Recurring House Cleaning",
-                  "description": "Professional weekly house cleaning service with same cleaner every visit, no contracts required",
-                  "category": "House Cleaning Service"
-                },
-                {
-                  "@type": "Offer",
-                  "name": "Bi-weekly Recurring House Cleaning",
-                  "description": "Bi-weekly house cleaning service with flexible scheduling and consistent professional cleaner",
-                  "category": "House Cleaning Service"
-                },
-                {
-                  "@type": "Offer",
-                  "name": "Monthly Recurring House Cleaning",
-                  "description": "Monthly house cleaning service with no long-term contracts and 100% satisfaction guarantee",
-                  "category": "House Cleaning Service"
-                }
-              ]
-            }
-          })}
-        </script>
+
+        {/* LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting/inconsistent version. */}
 
         {/* Service Schema - Enhanced */}
         <script type="application/ld+json">
@@ -457,18 +319,7 @@ const RecurringCleaningPage = () => {
             "alternateName": ["Weekly House Cleaning", "Bi-weekly House Cleaning", "Monthly House Cleaning", "Regular Maid Service"],
             "description": "Professional recurring house cleaning service in Dayton, Ohio with no contracts, same cleaner every visit, and flexible scheduling options for weekly, bi-weekly, and monthly service",
             "serviceType": "House Cleaning Service",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "+1-937-892-4157",
-              "url": "https://gemcitycleaningcrew.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Dayton",
-                "addressRegion": "OH",
-                "addressCountry": "US"
-              }
-            },
+            "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "offers": [
               {
                 "@type": "Offer",
@@ -721,7 +572,7 @@ const RecurringCleaningPage = () => {
             }}
           >
             <Rating 
-              value={4.5} 
+              value={4.6} 
               precision={0.5} 
               readOnly 
               size="large" 
@@ -742,7 +593,7 @@ const RecurringCleaningPage = () => {
                 minWidth: 200
               }}
             >
-              4.5/5 stars • 85+ reviews
+              4.6/5 stars • 90+ reviews
             </Typography>
           </Box>
           

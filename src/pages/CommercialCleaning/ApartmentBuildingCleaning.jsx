@@ -37,7 +37,6 @@ import QuoteForm from '../../components/QuoteForm'
 import HeroSection from '../../components/HeroSection'
 import { generateFAQPageStructuredData } from '../../utils/blogSchema'
 import {
-  generateLocalBusinessSchema,
   generateServiceSchema,
   generateLocationWebPageSchema
 } from '../../utils/localBusinessSchema'
@@ -171,9 +170,9 @@ const ApartmentBuildingCleaning = () => {
         <meta name="twitter:title" content="Professional Apartment Building Cleaning Services Dayton | Gem City Cleaning" />
         <meta name="twitter:description" content="Expert apartment building cleaning services in Dayton. Common areas, laundry rooms, hallways & more." />
 
-        <script type="application/ld+json">
-          {JSON.stringify(generateLocalBusinessSchema(['Dayton', 'Kettering', 'Beavercreek', 'Oakwood', 'Centerville']))}
-        </script>
+        {/* LocalBusiness itself is injected once, site-wide, by the app shell
+            (App.jsx / entry-server.jsx) — a per-page copy here would duplicate
+            it with a conflicting narrower areaServed. */}
         <script type="application/ld+json">
           {JSON.stringify(generateServiceSchema({
             id: SERVICE_ID,
@@ -213,8 +212,8 @@ const ApartmentBuildingCleaning = () => {
         primaryButtonText="Get Your Free Quote"
         primaryButtonLink="/quote?service=apartment-building"
         showRating={true}
-        ratingValue={4.5}
-        reviewCount="85+"
+        ratingValue={4.6}
+        reviewCount="90+"
         differentiators={[
           'Same-Day Availability',
           'Professional Staff',

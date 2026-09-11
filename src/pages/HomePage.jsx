@@ -162,54 +162,7 @@ const HomePage = () => {
         <meta name="googlebot" content="index, follow" />
         <link rel="canonical" href="https://gemcitycleaningcrew.com/" />
         
-        {/* LocalBusiness Schema - Simplified */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Gem City Cleaning Crew",
-            "image": "https://gemcitycleaningcrew.com/logo.png",
-            "telephone": "937-892-4157",
-            "email": "info@gemcitycleaningcrew.com",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dayton",
-              "addressRegion": "OH",
-              "addressCountry": "US"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.5",
-              "reviewCount": "85"
-            },
-            "paymentAccepted": "Cash, Check, Credit Card",
-            "currenciesAccepted": "USD",
-            "openingHours": ["Mo-Fr 10:00-18:00", "Sa 10:00-14:00"],
-            "areaServed": "Dayton, OH and surrounding areas",
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Cleaning Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Residential Cleaning",
-                    "description": "No contracts house cleaning with professional trained staff"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Commercial Cleaning",
-                    "description": "Flexible office cleaning without long-term contracts"
-                  }
-                }
-              ]
-            }
-          })}
-        </script>
+        {/* LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting/inconsistent version. */}
       </Helmet>
 
       {/* Hero Section with Rotating Headlines */}
@@ -280,7 +233,7 @@ const HomePage = () => {
             }}
           >
             <Rating 
-              value={4.5} 
+              value={4.6} 
               precision={0.5} 
               readOnly 
               size="large" 
@@ -301,7 +254,7 @@ const HomePage = () => {
                 minWidth: 200 // Prevent text shifting
               }}
             >
-              4.5/5 stars • 85+ reviews
+              4.6/5 stars • 90+ reviews
             </Typography>
           </Box>
           

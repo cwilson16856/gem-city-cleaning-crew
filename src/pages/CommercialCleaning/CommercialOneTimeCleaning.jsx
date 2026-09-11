@@ -229,7 +229,7 @@ const CommercialOneTimeCleaning = () => {
         <title>One-Time Commercial Cleaning Dayton OH | Gem City Cleaning Crew</title>
         <meta name="description" content="Professional one-time commercial deep cleaning in Dayton, OH. Perfect for special events, move-ins, post-construction, and quarterly deep cleans. Same-day availability!" />
         <meta name="keywords" content="commercial one-time cleaning, deep cleaning Dayton, office deep cleaning, post-construction cleanup, special event cleaning, move-out cleaning commercial" />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/commercial-one-time-cleaning" />
@@ -241,109 +241,10 @@ const CommercialOneTimeCleaning = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Commercial One-Time Deep Cleaning Dayton OH | Gem City Cleaning" />
         <meta name="twitter:description" content="Professional one-time commercial deep cleaning for special events, move-ins, and post-construction cleanup." />
-        
+
         <link rel="canonical" href="https://gemcitycleaningcrew.com/commercial-one-time-cleaning" />
-        
-        {/* Enhanced LocalBusiness Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "@id": "https://gemcitycleaningcrew.com/#business",
-            "name": "Gem City Cleaning Crew",
-            "alternateName": "Gem City Cleaning",
-            "description": "Professional commercial and residential cleaning services in Dayton, OH. Specializing in deep cleaning, one-time cleaning, and recurring maintenance services.",
-            "url": "https://gemcitycleaningcrew.com",
-            "logo": "https://gemcitycleaningcrew.com/logo.png",
-            "image": [
-              "/images/legacy/20240512_125224-scaled.webp",
-              "/images/legacy/IMG-20240512-WA0027.webp",
-              "/images/legacy/WhatsApp-Image-2024-05-12-at-18.02.07_cdbb91df.webp"
-            ],
-            "telephone": "937-892-4157",
-            "email": "info@gemcitycleaningcrew.com",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dayton",
-              "addressRegion": "OH",
-              "addressCountry": "US"
-            },
-            "openingHours": [
-              "Mo-Fr 10:00-18:00",
-              "Sa 10:00-14:00"
-            ],
-            "priceRange": "$$",
-            "currenciesAccepted": "USD",
-            "paymentAccepted": ["Cash", "Credit Card", "Check", "PayPal", "Venmo"],
-            "areaServed": [
-              {
-                "@type": "City",
-                "name": "Dayton",
-                "addressRegion": "OH"
-              },
-              {
-                "@type": "City", 
-                "name": "Kettering",
-                "addressRegion": "OH"
-              },
-              {
-                "@type": "City",
-                "name": "Beavercreek", 
-                "addressRegion": "OH"
-              },
-              {
-                "@type": "City",
-                "name": "Oakwood",
-                "addressRegion": "OH"
-              },
-              {
-                "@type": "City",
-                "name": "Centerville",
-                "addressRegion": "OH"
-              }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.5",
-              "bestRating": "5",
-              "worstRating": "1",
-              "ratingCount": "85",
-              "reviewCount": "85"
-            },
-            "review": [
-              {
-                "@type": "Review",
-                "author": {
-                  "@type": "Person",
-                  "name": "Commercial Client"
-                },
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "5",
-                  "bestRating": "5"
-                },
-                "reviewBody": "Excellent commercial deep cleaning service. They transformed our office space completely."
-              }
-            ],
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Commercial Cleaning Services",
-              "itemListElement": cleaningScenarios.map((scenario, index) => ({
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": scenario.title,
-                  "description": scenario.description
-                }
-              }))
-            },
-            "sameAs": [
-              "https://www.facebook.com/gemcitycleaningcrew",
-              "https://www.instagram.com/gemcitycleaningcrew",
-              "https://www.linkedin.com/company/gem-city-cleaning-crew"
-            ]
-          })}
-        </script>
+
+        {/* LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting/inconsistent version. */}
 
         {/* Enhanced Service Schema */}
         <script type="application/ld+json">
@@ -705,7 +606,7 @@ const CommercialOneTimeCleaning = () => {
             }}
           >
             <Rating 
-              value={4.5} 
+              value={4.6} 
               precision={0.5} 
               readOnly 
               size="large" 
@@ -726,7 +627,7 @@ const CommercialOneTimeCleaning = () => {
                 minWidth: 200
               }}
             >
-              4.5/5 stars • 85+ reviews
+              4.6/5 stars • 90+ reviews
             </Typography>
           </Box>
           

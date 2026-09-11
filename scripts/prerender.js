@@ -114,12 +114,20 @@ function buildMarkdown(appHtml, helmet, routePath) {
     .join('\n\n')}\n`
 }
 
-function buildDocument(template, appHtml, helmet) {
+function buildDocument(template, appHtml, helmet, emotionCss) {
+  // emotionCss is already one or more complete, correctly `data-emotion`-
+  // tagged <style> elements — entry-server.jsx's extractEmotionStyles() runs
+  // it through @emotion/server's constructStyleTagsFromChunks(), which
+  // builds these tags itself (see that file for why: this is also what
+  // makes the tags recognizable to the browser cache in main.jsx on
+  // hydration). Do not re-wrap it in another <style> tag here. A page with
+  // no styled components at all yields an empty string, which is harmless.
   const headTags = [
     helmet.title.toString(),
     helmet.meta.toString(),
     helmet.link.toString(),
     helmet.script.toString(),
+    emotionCss,
   ].join('')
 
   // index.html's own source has a static fallback <title> (for the raw,
@@ -162,10 +170,10 @@ async function main() {
 
   for (const routePath of routePaths) {
     try {
-      const { appHtml, helmet } = render(routePath)
+      const { appHtml, emotionCss, helmet } = render(routePath)
       const outFile = outFileFor(distDir, routePath)
       fs.mkdirSync(path.dirname(outFile), { recursive: true })
-      fs.writeFileSync(outFile, buildDocument(template, appHtml, helmet))
+      fs.writeFileSync(outFile, buildDocument(template, appHtml, helmet, emotionCss))
       fs.writeFileSync(markdownOutFileFor(distDir, routePath), buildMarkdown(appHtml, helmet, routePath))
       succeeded++
     } catch (error) {
@@ -175,8 +183,8 @@ async function main() {
   }
 
   try {
-    const { appHtml, helmet } = render(NOT_FOUND_PROBE_PATH)
-    fs.writeFileSync(path.join(distDir, '404.html'), buildDocument(template, appHtml, helmet))
+    const { appHtml, emotionCss, helmet } = render(NOT_FOUND_PROBE_PATH)
+    fs.writeFileSync(path.join(distDir, '404.html'), buildDocument(template, appHtml, helmet, emotionCss))
     succeeded++
   } catch (error) {
     failed++

@@ -5,13 +5,20 @@ import {
   Typography,
   Box,
   Grid,
-  Chip,
-  Button
+  Chip
 } from '@mui/material'
 import styles from '../styles/components/AreasWeServe.module.css'
 import { CITY_SLUGS } from '../data/locations'
 
-const AreasWeServe = ({ onCityClick }) => {
+// currentCity: pass the page's own city (e.g. LocationPage.jsx's
+// CityServicePage, XeniaHouseCleaningPage, BeavercreekCommercialPage) so the
+// intro sentence below leads with the actual page topic instead of the
+// generic Dayton-area blurb repeating verbatim on 30+ different city pages —
+// see 2026-09-11 SEO audit, Content finding #3 (the boilerplate previously
+// named Kettering/Centerville/Huber Heights even on the Troy/Xenia/Tipp City
+// pages, which read as templated). Omit it (e.g. the homepage, the
+// /locations index) to keep the original generic copy.
+const AreasWeServe = ({ onCityClick, currentCity }) => {
   // Service areas
   const serviceAreas = [
     'Dayton', 'Kettering', 'Oakwood', 'Centerville',
@@ -28,6 +35,14 @@ const AreasWeServe = ({ onCityClick }) => {
   // as plain, non-linked labels rather than 404ing.
   const slugFor = (area) => area.toLowerCase().replace(/\s+/g, '-')
 
+  const nearbyExamples = currentCity
+    ? serviceAreas.filter((area) => area !== currentCity).slice(0, 3)
+    : ['Kettering', 'Centerville', 'Huber Heights']
+
+  const introText = currentCity
+    ? `Gem City Cleaning Crew proudly serves ${currentCity} and the surrounding Greater Dayton area — including ${nearbyExamples.join(', ')} — with professional house cleaning and move-in/move-out services. Our local team knows ${currentCity} and provides reliable, trustworthy cleaning services throughout the region.`
+    : `Gem City Cleaning Crew proudly serves Dayton and nearby communities like ${nearbyExamples.join(', ')} with professional house cleaning and move-in/move-out services. Our local team knows the area and provides reliable, trustworthy cleaning services throughout the Greater Dayton region.`
+
   return (
     <Container maxWidth="lg" className={styles.container}>
       {/* Header Section - Completely Separate */}
@@ -39,7 +54,7 @@ const AreasWeServe = ({ onCityClick }) => {
           Local knowledge, local service - we know your neighborhood
         </Typography>
         <Typography variant="body2" className={styles.introText}>
-          Gem City Cleaning Crew proudly serves Dayton and nearby communities like Kettering, Centerville, and Huber Heights with professional house cleaning and move-in/move-out services. Our local team knows the area and provides reliable, trustworthy cleaning services throughout the Greater Dayton region.
+          {introText}
         </Typography>
       </Box>
 
@@ -122,10 +137,10 @@ const AreasWeServe = ({ onCityClick }) => {
 
           <Box className={styles.expandSection}>
             <Typography variant="h6" component="h4" className={styles.expandTitle}>
-              Don't see your area?
+              Don&apos;t see your area?
             </Typography>
             <Typography variant="body2" className={styles.expandText}>
-              We're expanding! Call us to see if we can serve your location.
+              We&apos;re expanding! Call us to see if we can serve your location.
             </Typography>
           </Box>
         </Grid>

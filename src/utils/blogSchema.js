@@ -24,8 +24,11 @@ export const generateBlogPostingStructuredData = (post, url) => {
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     author: {
-      '@type': 'Organization',
-      name: post.author || 'Gem City Cleaning Crew'
+      '@type': 'Person',
+      name: post.author || 'Chris Wilson',
+      url: `${SITE_URL}/about-us`,
+      jobTitle: 'Co-Owner',
+      worksFor: PUBLISHER
     },
     publisher: PUBLISHER,
     image: post.coverImage ? `${SITE_URL}${post.coverImage}` : LOGO_URL,

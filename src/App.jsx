@@ -41,6 +41,7 @@ const LocationPage = lazy(() => import('./pages/LocationPage'))
 const BlogPage = lazy(() => import('./pages/BlogPage'))
 const PostPage = lazy(() => import('./pages/PostPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
+const OurTrainingProgram = lazy(() => import('./pages/OurTrainingProgram'))
 const HiringPage = lazy(() => import('./pages/HiringPage'))
 const QuotePage = lazy(() => import('./pages/QuotePage'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
@@ -48,7 +49,7 @@ const TermsOfService = lazy(() => import('./pages/TermsOfService'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 // Utils
-import { generateLocalBusinessStructuredData } from './utils/seo'
+import { generateLocalBusinessSchema } from './utils/localBusinessSchema'
 
 // Theme configuration
 // Exported (not just default-consumed here) so entry-server.jsx can reuse the
@@ -161,7 +162,7 @@ export const theme = createTheme({
 })
 
 function App() {
-  const localBusinessData = generateLocalBusinessStructuredData()
+  const localBusinessData = generateLocalBusinessSchema()
 
   return (
     <ThemeProvider theme={theme}>
@@ -232,7 +233,7 @@ function App() {
             <Route path="/office-cleaning" element={<OfficeCleaning />} />
             <Route path="/office-cleaning-checklist" element={<OfficeCleaningChecklist />} />
             <Route path="/retail-cleaning" element={<RetailCleaning />} />
-            <Route path="/school-cleaning" element={<DaycareCleaning />} />
+            <Route path="/daycare-cleaning" element={<DaycareCleaning />} />
             <Route path="/apartment-building-cleaning" element={<ApartmentBuildingCleaning />} />
             <Route path="/industrial-cleaning" element={<IndustrialCleaning />} />
             <Route path="/locations" element={<LocationPage />} />
@@ -245,6 +246,7 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<PostPage />} />
             <Route path="/about-us" element={<AboutPage />} />
+            <Route path="/our-training-program" element={<OurTrainingProgram />} />
             <Route path="/careers" element={<HiringPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />

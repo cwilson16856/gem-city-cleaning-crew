@@ -1,11 +1,14 @@
 {
+  "trailingSlash": false,
   "redirects": [
     { "source": "/deep-cleaning-services", "destination": "/deep-cleaning", "permanent": true },
     { "source": "/deep-cleaning-services/", "destination": "/deep-cleaning", "permanent": true },
     { "source": "/house-cleaning-services-springboro-ohio", "destination": "/locations/springboro/house-cleaning-services", "permanent": true },
     { "source": "/house-cleaning-services-springboro-ohio/", "destination": "/locations/springboro/house-cleaning-services", "permanent": true },
     { "source": "/contact-us", "destination": "/quote", "permanent": true },
-    { "source": "/contact-us/", "destination": "/quote", "permanent": true }
+    { "source": "/contact-us/", "destination": "/quote", "permanent": true },
+    { "source": "/school-cleaning", "destination": "/daycare-cleaning", "permanent": true },
+    { "source": "/school-cleaning/", "destination": "/daycare-cleaning", "permanent": true }
   ],
   "headers": [
     {
@@ -13,6 +16,7 @@
       "headers": [
         { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=()" },
         { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
@@ -20,6 +24,12 @@
           "key": "Content-Security-Policy-Report-Only",
           "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net https://vercel.live; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://www.facebook.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://connect.facebook.net https://www.facebook.com https://vercel.live wss://vercel.live; frame-src https://api.leadconnectorhq.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'"
         }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     }
   ]

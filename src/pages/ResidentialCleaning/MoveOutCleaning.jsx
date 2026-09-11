@@ -59,12 +59,12 @@ const MoveOutCleaningPage = () => {
       afterAlt: "Spotless oven after professional move-out cleaning meeting landlord standards"
     },
     {
-      title: "Bathroom Deposit Protection",
-      description: "Thorough sanitization and cleaning to prevent security deposit deductions",
+      title: "Bathroom Move-Out Cleaning",
+      description: "Thorough sanitization and cleaning to meet landlord inspection standards",
       beforeImage: "/images/legacy/dirty-toilet-e1749136119717.webp",
       afterImage: "/images/legacy/clean-toilet-e1749135967505.webp",
-      beforeAlt: "Dirty bathroom before move-out cleaning showing stains that could cost security deposit",
-      afterAlt: "Clean bathroom after move-out cleaning protecting tenant security deposit"
+      beforeAlt: "Dirty bathroom before professional move-out cleaning",
+      afterAlt: "Clean bathroom after professional move-out cleaning"
     },
     {
       title: "Appliance Move-Out Ready",
@@ -87,8 +87,8 @@ const MoveOutCleaningPage = () => {
   // Move-Out specific cleaning features
   const moveOutFeatures = [
     {
-      title: "Security Deposit Protection",
-      description: "Professional cleaning standards that help protect your full security deposit",
+      title: "Landlord-Standard Cleaning",
+      description: "Professional cleaning standards that meet typical landlord and lease requirements",
       icon: <SecurityIcon sx={{ fontSize: 32, color: 'white' }} />
     },
     {
@@ -97,8 +97,8 @@ const MoveOutCleaningPage = () => {
       icon: <BusinessIcon sx={{ fontSize: 32, color: 'white' }} />
     },
     {
-      title: "Damage Deposit Savings",
-      description: "Avoid costly cleaning fees and deductions from your security deposit",
+      title: "Avoid Cleaning-Related Fees",
+      description: "Avoid the costly cleaning fees some landlords charge at move-out",
       icon: <AttachMoneyIcon sx={{ fontSize: 32, color: 'white' }} />
     },
     {
@@ -120,7 +120,7 @@ const MoveOutCleaningPage = () => {
 
   // Included services for move-out cleaning
   const includedServices = [
-    "Security deposit protection focus",
+    "Landlord inspection standards focus",
     "All appliances deep cleaned inside", 
     "Complete wall washing & spot cleaning",
     "Cabinet & drawer interior cleaning",
@@ -134,7 +134,7 @@ const MoveOutCleaningPage = () => {
 
   // Table of Contents items
   const tableOfContentsItems = [
-    { text: "Protect Your Security Deposit", href: "#security-deposit" },
+    { text: "Move-Out Cleaning Standards", href: "#security-deposit" },
     { text: "Before & After Results", href: "#before-after" },
     { text: "What's Included", href: "#whats-included" },
     { text: "For Tenants & Landlords", href: "#tenants-landlords" },
@@ -149,9 +149,9 @@ const MoveOutCleaningPage = () => {
         <link rel="preload" as="image" href="/images/legacy/Clean-Oven.webp" fetchPriority="high" />
         {/* Primary Meta Tags - Enhanced */}
         <title>Move-Out Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
-        <meta name="title" content="#1 Move-Out Cleaning Services Dayton OH | Security Deposit Protection | Gem City Cleaning" />
-        <meta name="description" content="⭐ #1 Professional move-out cleaning services in Dayton, OH. Protect your security deposit with thorough cleaning that meets landlord standards. Serving tenants & property managers." />
-        <meta name="keywords" content="move out cleaning Dayton, security deposit cleaning, tenant cleaning service Dayton OH, apartment move out cleaning, landlord cleaning requirements, property management cleaning, move out deposit protection, Kettering move out cleaning, Centerville tenant cleaning, Oakwood move out service" />
+        <meta name="title" content="Move-Out Cleaning Services Dayton OH | Landlord-Standard Cleaning | Gem City Cleaning" />
+        <meta name="description" content="⭐ Professional move-out cleaning services in Dayton, OH. Thorough cleaning designed to meet landlord and lease standards. Serving tenants & property managers." />
+        <meta name="keywords" content="move out cleaning Dayton, tenant cleaning service Dayton OH, apartment move out cleaning, landlord cleaning requirements, property management cleaning, move out cleaning checklist, Kettering move out cleaning, Centerville tenant cleaning, Oakwood move out service" />
         
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -170,8 +170,8 @@ const MoveOutCleaningPage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Gem City Cleaning Crew" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/move-out-cleaning" />
-        <meta property="og:title" content="#1 Professional Move-Out Cleaning Services Dayton OH | Security Deposit Protection" />
-        <meta property="og:description" content="⭐ #1 Professional move-out cleaning services in Dayton, OH. Protect your security deposit with thorough cleaning that meets landlord standards." />
+        <meta property="og:title" content="Professional Move-Out Cleaning Services Dayton OH | Landlord-Standard Cleaning" />
+        <meta property="og:description" content="⭐ Professional move-out cleaning services in Dayton, OH. Thorough cleaning designed to meet landlord and lease standards." />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Professional move-out cleaning services in Dayton OH" />
         <meta property="og:image:width" content="1200" />
@@ -182,8 +182,8 @@ const MoveOutCleaningPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@GemCityCleaning" />
         <meta name="twitter:creator" content="@GemCityCleaning" />
-        <meta name="twitter:title" content="#1 Professional Move-Out Cleaning Services Dayton OH" />
-        <meta name="twitter:description" content="⭐ Protect your security deposit with professional move-out cleaning in Dayton, OH." />
+        <meta name="twitter:title" content="Professional Move-Out Cleaning Services Dayton OH" />
+        <meta name="twitter:description" content="⭐ Professional move-out cleaning designed to meet landlord standards in Dayton, OH." />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         
         {/* Canonical URL */}
@@ -196,16 +196,10 @@ const MoveOutCleaningPage = () => {
             "@type": "Service",
             "@id": "https://gemcitycleaningcrew.com/move-out-cleaning#service",
             "name": "Move-Out Cleaning Services",
-            "alternateName": ["Tenant Cleaning", "Security Deposit Cleaning", "Move Out House Cleaning", "End of Lease Cleaning"],
-            "description": "Professional move-out cleaning services in Dayton, OH including security deposit protection cleaning that meets landlord and lease requirements",
+            "alternateName": ["Tenant Cleaning", "Landlord Inspection Cleaning", "Move Out House Cleaning", "End of Lease Cleaning"],
+            "description": "Professional move-out cleaning services in Dayton, OH that meet landlord and lease cleaning requirements",
             "serviceType": "Move-Out Cleaning",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "937-892-4157",
-              "email": "info@gemcitycleaningcrew.com",
-              "url": "https://gemcitycleaningcrew.com"
-            },
+            "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "areaServed": [
               "Dayton, OH", "Kettering, OH", "Centerville, OH", "Oakwood, OH", "Huber Heights, OH", "Miamisburg, OH"
             ]
@@ -220,10 +214,10 @@ const MoveOutCleaningPage = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Will move-out cleaning help me get my security deposit back?",
+                "name": "Does move-out cleaning affect my security deposit?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, professional move-out cleaning significantly increases your chances of getting your full security deposit back. Our thorough service meets most landlord expectations and lease requirements for cleanliness."
+                  "text": "Deposit decisions are made by your landlord or property manager, and depend on factors beyond cleaning, like damage or lease terms. Our move-out cleaning is designed to meet the cleaning standards landlords typically look for during a move-out inspection."
                 }
               },
               {
@@ -307,7 +301,7 @@ const MoveOutCleaningPage = () => {
               color: 'white'
             }}
           >
-            Protect Your Security Deposit with Professional Cleaning
+            Move-Out Cleaning That Meets Landlord Standards
           </Typography>
 
           <Typography 
@@ -324,7 +318,7 @@ const MoveOutCleaningPage = () => {
               color: 'white'
             }}
           >
-            Thorough cleaning that meets landlord standards and lease requirements
+            Thorough cleaning designed to meet landlord standards and lease requirements
           </Typography>
           
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -390,18 +384,30 @@ const MoveOutCleaningPage = () => {
         showItemCount={true}
       />
 
+      {/* Disambiguation — moving-page cannibalization fix, 2026-09-11 SEO audit */}
+      <Container maxWidth="lg" sx={{ pt: 4 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, p: 2, backgroundColor: '#F0E6EF', borderRadius: 2 }}>
+          <CompareArrowsIcon sx={{ color: '#D81B60' }} />
+          <Typography variant="body2">
+            Moving <em>into</em> a new place? See our{' '}
+            <Link to="/move-in-cleaning" style={{ color: '#D81B60', fontWeight: 600 }}>move-in cleaning page</Link>.
+            {' '}Need both on the same move? See <Link to="/move-in-out-cleaning" style={{ color: '#D81B60', fontWeight: 600 }}>move-in/move-out cleaning</Link>.
+          </Typography>
+        </Box>
+      </Container>
+
       {/* Introduction Section */}
       <Container maxWidth="lg" sx={{ py: 8 }} id="security-deposit">
         <Box sx={{ textAlign: 'center', mb: 8 }}>
           <Typography variant="h2" component="h2" sx={{ mb: 3 }}>
-            Protect Your Security Deposit with Professional Move-Out Cleaning
+            Move-Out Cleaning That Meets Landlord Standards
           </Typography>
           <Typography variant="body1" sx={{ fontSize: '1.1rem', maxWidth: 900, mx: 'auto', lineHeight: 1.7 }}>
-            Don't lose your security deposit to cleaning fees! Our <strong>move-out cleaning services in Dayton</strong> are 
-            specifically designed to meet landlord expectations and lease requirements. From <strong>Kettering apartments</strong> to 
-            <strong>Centerville rentals</strong> and <strong>Oakwood properties</strong>, we provide thorough cleaning that protects 
-            your deposit and helps ensure smooth property transitions. Our experienced team understands what landlords and property 
-            managers look for during final inspections, following 
+            Avoid cleaning-related fees at move-out! Our <strong>move-out cleaning services in Dayton</strong> are{' '}
+            specifically designed to meet landlord expectations and lease requirements. From <strong>Kettering apartments</strong> to{' '}
+            <strong>Centerville rentals</strong> and <strong>Oakwood properties</strong>, we provide thorough cleaning that meets{' '}
+            landlord cleaning standards and helps ensure smooth property transitions. Our experienced team understands what landlords and property
+            managers look for during final inspections, following{' '}
             <a href="https://www.hud.gov/states/ohio/renting" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'none' }}>
               Ohio tenant rights guidelines
             </a> to ensure fair treatment and proper cleaning standards.
@@ -414,10 +420,10 @@ const MoveOutCleaningPage = () => {
             <Card sx={{ textAlign: 'center', p: 3, height: '100%' }}>
               <SecurityIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
               <Typography variant="h3" sx={{ mb: 2, fontWeight: 600 }}>
-                Deposit Protection
+                Landlord-Standard Cleaning
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Professional cleaning standards that help protect your full security deposit from cleaning-related deductions
+                Professional cleaning standards designed to meet landlord and lease cleaning requirements
               </Typography>
             </Card>
           </Grid>
@@ -450,11 +456,11 @@ const MoveOutCleaningPage = () => {
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }} id="before-after">
         <Container maxWidth="lg">
           <Typography variant="h2" component="h2" sx={{ mb: 4, textAlign: 'center' }}>
-            See How We Protect Your Security Deposit
+            See Our Move-Out Cleaning Results
           </Typography>
           
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-            These real before and after photos show the thorough cleaning that helps protect your security deposit. 
+            These real before and after photos show the thorough cleaning our move-out service provides. 
             See why Dayton tenants trust us to meet landlord inspection standards.
           </Typography>
 
@@ -569,8 +575,8 @@ const MoveOutCleaningPage = () => {
         </Typography>
         
         <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-          Our move-out cleaning services are designed to meet landlord inspection standards and help protect your 
-          security deposit with thorough, professional cleaning of all areas.
+          Our move-out cleaning services are designed to meet landlord inspection standards
+          with thorough, professional cleaning of all areas.
         </Typography>
 
         <Grid container spacing={4} sx={{ mb: 6 }}>
@@ -656,7 +662,7 @@ const MoveOutCleaningPage = () => {
                     <ListItemIcon>
                       <CheckCircleIcon sx={{ color: theme.palette.primary.main }} />
                     </ListItemIcon>
-                    <ListItemText primary="Protect your full security deposit" />
+                    <ListItemText primary="Meets landlord move-out cleaning standards" />
                   </ListItem>
                   <ListItem sx={{ px: 0 }}>
                     <ListItemIcon>
@@ -864,7 +870,7 @@ const MoveOutCleaningPage = () => {
                   Typical move-out cleaning timeframe
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Thorough cleaning focused on meeting landlord inspection standards and protecting your deposit.
+                  Thorough cleaning focused on meeting landlord inspection standards.
                 </Typography>
               </Card>
             </Grid>
@@ -964,11 +970,11 @@ const MoveOutCleaningPage = () => {
       >
         <Container maxWidth="md" sx={{ textAlign: 'center' }}>
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600, color: 'white' }}>
-            Ready to Protect Your Security Deposit?
+            Ready for a Move-Out Clean That Meets Landlord Standards?
           </Typography>
           <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9, color: 'white' }}>
-            Don't risk losing your deposit to cleaning fees. Our professional move-out cleaning services
-            in Dayton help ensure you get your full security deposit back.
+            Avoid cleaning-related fees at move-out. Our professional move-out cleaning services
+            in Dayton are built to meet landlord and lease cleaning standards.
           </Typography>
           
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>

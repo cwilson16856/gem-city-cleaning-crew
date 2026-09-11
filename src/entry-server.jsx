@@ -17,12 +17,16 @@
 // Reuses App.jsx's `theme` (named export) so the ~100-line MUI theme config
 // has exactly one source of truth, not two drifting copies.
 
-import { renderToStaticMarkup } from 'react-dom/server'
+import { Suspense } from 'react'
+import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom/server'
 import { Routes, Route } from 'react-router-dom'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
+import createCache from '@emotion/cache'
+import { CacheProvider } from '@emotion/react'
+import createEmotionServer from '@emotion/server/create-instance'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -56,6 +60,7 @@ import LocationPage from './pages/LocationPage'
 import BlogPage from './pages/BlogPage'
 import PostPage from './pages/PostPage'
 import AboutPage from './pages/AboutPage'
+import OurTrainingProgram from './pages/OurTrainingProgram'
 import HiringPage from './pages/HiringPage'
 import QuotePage from './pages/QuotePage'
 import PrivacyPolicy from './pages/PrivacyPolicy'
@@ -63,19 +68,60 @@ import TermsOfService from './pages/TermsOfService'
 import NotFound from './pages/NotFound'
 
 import { theme } from './App.jsx'
-import { generateLocalBusinessStructuredData } from './utils/seo'
+import { generateLocalBusinessSchema } from './utils/localBusinessSchema'
+
+// renderToStaticMarkup() with Emotion's DEFAULT (no CacheProvider, no
+// extraction) SSR behavior emits one <style data-emotion="css HASH">
+// .css-HASH{...}</style> tag inline at EVERY point in the tree where a
+// styled class first appears — including inside flow-content elements like
+// <h2>/<h3>/<span>. Real browsers render this correctly (style content is
+// never visually displayed regardless of position), which is why this was
+// invisible in manual/visual QA. But it corrupts any *text-extraction*-based
+// reader of the static prerendered HTML this file's output ends up in: an
+// ancestor element's .textContent legitimately includes descendant <style>
+// text per the DOM spec, so a heading like "We Make Life {rotating text}"
+// was extractable as "We Make Life .css-dc0kb5{display:inline-block;...}
+// {rotating text}" by any tool that reads text content directly from the
+// raw HTML — AI answer engines, other SEO crawlers, and this project's own
+// html-to-markdown prerender step all hit this.
+//
+// Fix: an explicit @emotion/cache (`key: 'css'`, module-scoped so it's
+// reused across every route this file renders in one prerender run) fed
+// through createEmotionServer()'s extractCriticalToChunks +
+// constructStyleTagsFromChunks — Emotion's own official SSR extraction
+// mechanism, not a hand-rolled regex. It strips every inline <style> tag
+// back out of the rendered html and returns the same CSS as one deduped
+// block of correctly `data-emotion`-tagged <style> elements for <head>,
+// which is also what makes hydration safe: the browser's createCache with
+// the same key ('css', see main.jsx) recognizes those exact tags on init
+// and marks their rules as already-inserted, so a client-side render
+// produces the same DOM shape the server sent instead of re-inserting
+// fresh inline <style> tags into the body — see main.jsx for the client
+// half of this and the hydrateRoot attempt/revert history that found this
+// gap in the first place.
+const emotionCache = createCache({ key: 'css' })
+const { extractCriticalToChunks, constructStyleTagsFromChunks } = createEmotionServer(emotionCache)
+
+function extractEmotionStyles(html) {
+  const chunks = extractCriticalToChunks(html)
+  return { cleanedHtml: chunks.html, css: constructStyleTagsFromChunks(chunks) }
+}
 
 // Renders one URL to a static HTML string plus its collected react-helmet-async
-// tags. Returns both separately (rather than one combined document) because
+// tags. Returns three pieces (rather than one combined document) because
 // scripts/prerender.js splices each into a shared dist/index.html template —
 // see that file for why (it keeps the real, Vite-built <head> boilerplate
 // — favicon links, font preloads, the client script tag — instead of
-// hand-reconstructing an <html> document here).
+// hand-reconstructing an <html> document here). `emotionCss` is Emotion's
+// inline <style> tags, stripped out of appHtml and deduped — see
+// extractEmotionStyles() above for why; scripts/prerender.js places it in
+// <head> alongside the helmet tags.
 export function render(url) {
   const helmetContext = {}
-  const localBusinessData = generateLocalBusinessStructuredData()
+  const localBusinessData = generateLocalBusinessSchema()
 
-  const appHtml = renderToStaticMarkup(
+  const appHtml = renderToString(
+    <CacheProvider value={emotionCache}>
     <HelmetProvider context={helmetContext}>
       <StaticRouter location={url}>
         <ThemeProvider theme={theme}>
@@ -124,6 +170,7 @@ export function render(url) {
             <ScrollToTop />
 
             <main className="main-content">
+              <Suspense fallback={null}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/residential" element={<ResidentialPage />} />
@@ -144,7 +191,7 @@ export function render(url) {
                 <Route path="/office-cleaning" element={<OfficeCleaning />} />
                 <Route path="/office-cleaning-checklist" element={<OfficeCleaningChecklist />} />
                 <Route path="/retail-cleaning" element={<RetailCleaning />} />
-                <Route path="/school-cleaning" element={<DaycareCleaning />} />
+                <Route path="/daycare-cleaning" element={<DaycareCleaning />} />
                 <Route path="/apartment-building-cleaning" element={<ApartmentBuildingCleaning />} />
                 <Route path="/industrial-cleaning" element={<IndustrialCleaning />} />
                 <Route path="/locations" element={<LocationPage />} />
@@ -156,11 +203,13 @@ export function render(url) {
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<PostPage />} />
                 <Route path="/about-us" element={<AboutPage />} />
+                <Route path="/our-training-program" element={<OurTrainingProgram />} />
                 <Route path="/careers" element={<HiringPage />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
+              </Suspense>
             </main>
 
             <Footer />
@@ -168,7 +217,10 @@ export function render(url) {
         </ThemeProvider>
       </StaticRouter>
     </HelmetProvider>
+    </CacheProvider>
   )
 
-  return { appHtml, helmet: helmetContext.helmet }
+  const { cleanedHtml, css } = extractEmotionStyles(appHtml)
+
+  return { appHtml: cleanedHtml, emotionCss: css, helmet: helmetContext.helmet }
 }

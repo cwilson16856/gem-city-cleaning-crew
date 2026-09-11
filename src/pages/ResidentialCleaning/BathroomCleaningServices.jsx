@@ -203,7 +203,7 @@ const BathroomCleaningServices = () => {
         {/* Primary Meta Tags */}
         <title>Bathroom Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Bathroom Cleaning Services Dayton OH – Deep Clean, Sanitization, Mold Removal" />
-        <meta name="description" content="⭐ #1 Bathroom Cleaning Service in Dayton, OH. Deep cleaning, sanitization, mold removal, grout restoration. Professional results for healthier bathrooms. FREE quotes! Call 937-892-4157" />
+        <meta name="description" content="⭐ Trusted Bathroom Cleaning Service in Dayton, OH. Deep cleaning, sanitization, mold removal, grout restoration. Professional results for healthier bathrooms. FREE quotes! Call 937-892-4157" />
         <meta name="keywords" content="bathroom cleaning Dayton, professional bathroom cleaning, sanitization Dayton OH, bathroom deep cleaning, mold removal service, grout cleaning, bathroom hygiene, tile cleaning Dayton, shower cleaning, Kettering bathroom cleaning, Centerville bathroom cleaning, Oakwood bathroom cleaning, bathroom cleaning near me, residential bathroom cleaning, maid service bathroom cleaning" />
         
         {/* Additional SEO Meta Tags */}
@@ -219,7 +219,7 @@ const BathroomCleaningServices = () => {
         <meta property="og:site_name" content="Gem City Cleaning Crew" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/bathroom-cleaning-services" />
         <meta property="og:title" content="Bathroom Cleaning Services Dayton OH – Deep Clean, Sanitization, Mold Removal" />
-        <meta property="og:description" content="⭐ #1 Bathroom Cleaning in Dayton. Deep cleaning, sanitization, mold removal, grout restoration. Professional results for healthier bathrooms. FREE quotes!" />
+        <meta property="og:description" content="⭐ Trusted Bathroom Cleaning in Dayton. Deep cleaning, sanitization, mold removal, grout restoration. Professional results for healthier bathrooms. FREE quotes!" />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/bathroom-sink.jpg" />
         <meta property="og:image:alt" content="Professional bathroom cleaning service results showing spotless bathroom sink and fixtures in Dayton OH" />
         
@@ -233,18 +233,7 @@ const BathroomCleaningServices = () => {
             "alternateName": ["Professional Bathroom Cleaning", "Bathroom Sanitization", "Bathroom Deep Cleaning", "Mold Removal Service"],
             "description": "Professional bathroom cleaning service in Dayton, Ohio specializing in deep cleaning, sanitization, mold removal, and grout restoration",
             "serviceType": "Bathroom Cleaning Service",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "+1-937-892-4157",
-              "url": "https://gemcitycleaningcrew.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Dayton",
-                "addressRegion": "OH",
-                "addressCountry": "US"
-              }
-            },
+            "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "offers": [
               {
                 "@type": "Offer",
@@ -346,7 +335,7 @@ const BathroomCleaningServices = () => {
             }}
           >
             <Rating 
-              value={4.5} 
+              value={4.6} 
               precision={0.5} 
               readOnly 
               size="large" 
@@ -367,7 +356,7 @@ const BathroomCleaningServices = () => {
                 minWidth: 200
               }}
             >
-              4.5/5 stars • 85+ reviews
+              4.6/5 stars • 90+ reviews
             </Typography>
           </Box>
 

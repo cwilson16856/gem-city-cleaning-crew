@@ -39,7 +39,6 @@ import '../../styles/homepages/HomePage.css'
 import '../../styles/pages/CommercialPage.css'
 
 import {
-  generateLocalBusinessSchema,
   generateLocationWebPageSchema
 } from '../../utils/localBusinessSchema'
 
@@ -95,7 +94,7 @@ const CommercialPage = () => {
       icon: <SchoolIcon sx={{ fontSize: 32, color: 'white' }} />,
       features: ["Child-safe products", "Play area sanitization", "Nap room cleaning", "Food-safe protocols"],
       popular: false,
-      link: "/school-cleaning"
+      link: "/daycare-cleaning"
     },
     {
       title: "Apartment Building Cleaning",
@@ -251,10 +250,9 @@ const CommercialPage = () => {
         
         <link rel="canonical" href="https://gemcitycleaningcrew.com/commercial" />
         
-        {/* LocalBusiness Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify(generateLocalBusinessSchema(['Dayton', 'Kettering', 'Centerville', 'Beavercreek', 'Oakwood']))}
-        </script>
+        {/* LocalBusiness itself is injected once, site-wide, by the app shell
+            (App.jsx / entry-server.jsx) — a per-page copy here would duplicate
+            it with a conflicting narrower areaServed. */}
 
         {/* WebPage Schema (with breadcrumb) */}
         <script type="application/ld+json">
