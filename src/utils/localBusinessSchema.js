@@ -120,3 +120,20 @@ export const generateLocationWebPageSchema = ({ id, url, name, description, abou
     }))
   }
 })
+
+// Not for a rich-result/SERP claim -- Google retired FAQ rich results for
+// all sites May 7 2026 -- but so crawlers and LLM answer engines can parse
+// the Q&A pairing directly rather than inferring it from heading/paragraph
+// proximity. faqs: [{ question, answer }] -- same shape as blogSchema.js's
+// post.faqs; kept as a separate function here (not imported from there)
+// since that file is scoped to blog content, this one to location/service
+// pages, matching the existing @id-linked pattern in this file.
+export const generateFAQPageSchema = (faqs) => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+  }))
+})
