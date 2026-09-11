@@ -48,104 +48,11 @@ export const generateSEOTitle = (title, siteName = 'Gem City Cleaning Crew', sep
   return `${title}${separator}${siteName}`
 }
 
-// Generate structured data for local business
-export const generateLocalBusinessStructuredData = () => {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    'name': 'Gem City Cleaning Crew',
-    'image': [
-      LOGO_URL
-    ],
-    'logo': LOGO_URL,
-    'url': 'https://gemcitycleaningcrew.com',
-    'telephone': '937-892-4157',
-    'email': 'info@gemcitycleaningcrew.com',
-    'address': {
-      '@type': 'PostalAddress',
-      'addressLocality': 'Dayton',
-      'addressRegion': 'OH',
-      'addressCountry': 'US'
-    },
-    'description': 'Professional residential and commercial cleaning services in Dayton, OH. We make life easier with reliable, thorough cleaning.',
-    'slogan': 'We Make Life Easier',
-    'foundingDate': '2017',
-    'priceRange': '$$',
-    'serviceArea': [
-      {
-        '@type': 'City',
-        'name': 'Dayton',
-        'addressRegion': 'OH'
-      },
-      {
-        '@type': 'City', 
-        'name': 'Tipp City',
-        'addressRegion': 'OH'
-      },
-      {
-        '@type': 'City',
-        'name': 'Troy',
-        'addressRegion': 'OH'
-      },
-      {
-        '@type': 'City',
-        'name': 'Huber Heights',
-        'addressRegion': 'OH'
-      }
-    ],
-    'hasOfferCatalog': {
-      '@type': 'OfferCatalog',
-      'name': 'Cleaning Services',
-      'itemListElement': [
-        {
-          '@type': 'Offer',
-          'itemOffered': {
-            '@type': 'Service',
-            'name': 'Residential Cleaning',
-            'description': 'Professional house cleaning services for homes and apartments'
-          }
-        },
-        {
-          '@type': 'Offer',
-          'itemOffered': {
-            '@type': 'Service',
-            'name': 'Commercial Cleaning',
-            'description': 'Office and commercial building cleaning services'
-          }
-        },
-        {
-          '@type': 'Offer',
-          'itemOffered': {
-            '@type': 'Service',
-            'name': 'Deep Cleaning',
-            'description': 'Thorough deep cleaning services for homes and businesses'
-          }
-        }
-      ]
-    },
-    'contactPoint': [
-      {
-        '@type': 'ContactPoint',
-        'telephone': '937-892-4157',
-        'contactType': 'customer service',
-        'availableLanguage': 'English'
-      },
-      {
-        '@type': 'ContactPoint',
-        'email': 'info@gemcitycleaningcrew.com',
-        'contactType': 'customer service',
-        'availableLanguage': 'English'
-      }
-    ],
-    'openingHours': [
-      'Mo-Fr 10:00-18:00',
-      'Sa 10:00-14:00'
-    ],
-    'sameAs': [
-      'https://gemcitycleaningcrew.com'
-    ]
-  }
-}
+// NOTE: the site-wide LocalBusiness generator used to live here as
+// generateLocalBusinessStructuredData(). It's now generateLocalBusinessSchema()
+// in ./localBusinessSchema.js (the @id-linked, single-source-of-truth
+// version used by App.jsx / entry-server.jsx) — this duplicate was deleted
+// 2026-09-11 as part of the SEO audit's Critical schema-consolidation fix.
 
 // Generate breadcrumb structured data
 export const generateBreadcrumbStructuredData = (breadcrumbs) => {

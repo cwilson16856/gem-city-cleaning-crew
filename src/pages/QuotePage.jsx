@@ -145,112 +145,7 @@ const QuotePage = () => {
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
         <link rel="preload" href="https://link.msgsndr.com/js/form_embed.js" as="script" />
         
-        {/* JSON-LD Structured Data - Enhanced LocalBusiness */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "@id": "https://gemcitycleaningcrew.com/#business",
-            "name": "Gem City Cleaning Crew",
-            "alternateName": "Gem City Cleaning",
-            "description": "Professional house cleaning service in Dayton, OH offering free quotes for residential and commercial cleaning. Same-day response with no obligation estimates.",
-            "url": "https://gemcitycleaningcrew.com",
-            "telephone": "+1-937-892-4157",
-            "email": "info@gemcitycleaningcrew.com",
-            "foundingDate": "2020",
-            "priceRange": "$$",
-            "currenciesAccepted": "USD",
-            "paymentAccepted": "Cash, Check, Credit Card, Venmo, Zelle",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dayton",
-              "addressRegion": "OH",
-              "addressCountry": "US"
-            },
-            "areaServed": [
-              {
-                "@type": "City",
-                "name": "Dayton",
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": "Ohio"
-                }
-              },
-              {
-                "@type": "City",
-                "name": "Kettering",
-                "containedInPlace": {
-                  "@type": "State", 
-                  "name": "Ohio"
-                }
-              },
-              {
-                "@type": "City",
-                "name": "Centerville",
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": "Ohio"
-                }
-              },
-              {
-                "@type": "City",
-                "name": "Oakwood",
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": "Ohio"
-                }
-              }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.5",
-              "reviewCount": "85",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "10:00",
-                "closes": "18:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "10:00",
-                "closes": "14:00"
-              }
-            ],
-            "sameAs": [
-              "https://www.facebook.com/GemCityCleaningCrew",
-              "https://www.instagram.com/gemcitycleaningcrew",
-              "https://www.linkedin.com/company/gem-city-cleaning-crew"
-            ],
-            "makesOffer": [
-              {
-                "@type": "Offer",
-                "name": "Free House Cleaning Quote",
-                "description": "Free, no-obligation estimate for residential house cleaning services",
-                "price": "0",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "validFrom": "2024-01-01",
-                "areaServed": "Dayton, OH and surrounding areas"
-              },
-              {
-                "@type": "Offer",
-                "name": "Free Commercial Cleaning Quote",
-                "description": "Free estimate for commercial and office cleaning services",
-                "price": "0",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "validFrom": "2024-01-01",
-                "areaServed": "Dayton, OH and surrounding areas"
-              }
-            ]
-          })}
-        </script>
+        {/* LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting/inconsistent version. */}
 
         {/* ContactPage Schema */}
         <script type="application/ld+json">
@@ -261,18 +156,7 @@ const QuotePage = () => {
             "name": "Request Free Cleaning Quote",
             "description": "Get a free, no-obligation quote for house cleaning services in Dayton, OH. Online form and phone consultations available.",
             "url": "https://gemcitycleaningcrew.com/quote",
-            "mainEntity": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "+1-937-892-4157",
-              "email": "info@gemcitycleaningcrew.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Dayton",
-                "addressRegion": "OH",
-                "addressCountry": "US"
-              }
-            }
+            "mainEntity": { "@id": "https://gemcitycleaningcrew.com/#business" }
           })}
         </script>
 
@@ -286,19 +170,7 @@ const QuotePage = () => {
             "alternateName": ["Free Cleaning Estimate", "House Cleaning Quote", "Cleaning Service Consultation"],
             "description": "Free, no-obligation quotes for professional house cleaning services in Dayton, Ohio. Same-day response guaranteed for all quote requests.",
             "serviceType": "Cleaning Quote Service",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "+1-937-892-4157",
-              "email": "info@gemcitycleaningcrew.com",
-              "url": "https://gemcitycleaningcrew.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Dayton",
-                "addressRegion": "OH",
-                "addressCountry": "US"
-              }
-            },
+            "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "offers": {
               "@type": "Offer",
               "name": "Free House Cleaning Quote",
@@ -576,7 +448,7 @@ const QuotePage = () => {
             }}
           >
             <Rating 
-              value={4.5} 
+              value={4.6} 
               precision={0.5} 
               readOnly 
               size="large" 
@@ -597,7 +469,7 @@ const QuotePage = () => {
                 minWidth: 200
               }}
             >
-              4.5/5 stars • 85+ reviews
+              4.6/5 stars • 90+ reviews
             </Typography>
           </Box>
           
@@ -967,12 +839,8 @@ const QuotePage = () => {
                     🏆 Your Trusted Local Cleaners
                   </Typography>
                   <Typography variant="body2" sx={{ color: '#666', fontSize: '0.875rem' }}>
-                    Licensed, bonded, and insured for your peace of mind. 
-                    Serving the Dayton community with pride since 2017.{' '}
-                    <a href="https://www.bbb.org/" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                      Better Business Bureau member
-                    </a>{' '}
-                    committed to excellence.
+                    Licensed, bonded, and insured for your peace of mind.{' '}
+                    Serving the Dayton community with pride since 2017, with a 4.6-star average across 90+ Google reviews and Checkr-verified cleaners on every visit.
                   </Typography>
                 </CardContent>
               </Card>

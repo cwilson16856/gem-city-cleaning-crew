@@ -2,6 +2,9 @@
 // Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
 // Newest posts go first in the array.
 
+import deepCleaningGuideContent from './posts/deep-cleaning-guide-dayton.js'
+import moveOutTransitionsGuideContent from './posts/move-out-transitions-guide-dayton.js'
+import hiringCleaningServiceGuideContent from './posts/hiring-cleaning-service-guide-dayton.js'
 import garageBasementDeepCleanContent from './posts/how-to-deep-clean-garage-basement-dayton.js'
 import windowsStreakFreeContent from './posts/how-to-clean-windows-streak-free-dayton.js'
 import xenia1970sHomeCleaningContent from './posts/how-to-clean-1970s-xenia-home-room-by-room.js'
@@ -22,12 +25,123 @@ import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-da
 
 const posts = [
   {
+    slug: 'deep-cleaning-guide-dayton',
+    title: "Deep Cleaning in Dayton, OH: What's Actually Included",
+    description: "Deep clean doesn't mean extra thorough. Here's what it actually covers that regular cleaning skips, and how often your Dayton home really needs one.",
+    publishedAt: '2026-09-11',
+    updatedAt: '2026-09-11',
+    author: 'Chris Wilson',
+    category: 'Cleaning Tips',
+    tags: ['deep cleaning', 'Dayton', 'recurring cleaning', 'move-out cleaning', 'home maintenance'],
+    keywords: [
+      'deep cleaning Dayton Ohio',
+      'what is included in a deep clean',
+      'deep cleaning vs regular cleaning',
+      'how often should you deep clean your house',
+      'deep clean checklist',
+      'move out deep clean',
+      'pre-listing deep clean',
+      'how long does a deep clean take',
+      'deep clean cost factors',
+      'recurring cleaning vs deep cleaning'
+    ],
+    problem: "Homeowners conflate 'deep clean' with 'extra thorough regular clean,' so they either overpay for maintenance cleaning expecting deep-clean results, or underestimate what a real reset actually requires.",
+    solution: 'A clear breakdown of what deep cleaning covers room by room that standard cleaning skips, the real triggers for needing one, and how it sequences with recurring maintenance cleaning.',
+    targetAudience: "Dayton-area homeowners deciding between a one-time deep clean and recurring service, or trying to figure out why their regular cleaning isn't producing deep-clean results",
+    coverImage: '/images/blog/deep-cleaning-guide-dayton.png',
+    featured: true,
+    content: deepCleaningGuideContent,
+    faqs: [
+      { question: "What's included in a deep cleaning service that isn't in a regular cleaning?", answer: "A deep clean covers the buildup a regular maintenance visit is scoped to skip: inside ovens and refrigerators, behind and under furniture and appliances, baseboards, window tracks, light fixtures and ceiling fans, grout lines, cabinet fronts, and vents. A regular clean maintains a home that's already in good shape; a deep clean resets one that's accumulated buildup over time. They're complementary, not interchangeable." },
+      { question: 'How long does a deep clean take compared to a regular clean?', answer: "Typically two to four times as long as a standard visit for the same square footage, since it's addressing months or years of gradual buildup instead of a week's worth of normal use. A first-time deep clean on a home that's never had one, or hasn't in several years, tends to run toward the longer end of that range." },
+      { question: 'How often should I get my house deep cleaned?', answer: 'Most homes benefit from one once or twice a year at minimum, plus whenever a specific trigger applies — moving in or out, before listing for sale, after a renovation, or when starting a recurring cleaning schedule for the first time. A home already on a consistent recurring schedule generally needs deep cleans less often than one that\'s only cleaned occasionally.' },
+      { question: 'Is a move-out clean the same thing as a deep clean?', answer: 'They overlap heavily — a proper move-out clean is essentially a deep clean applied to an empty or nearly empty home, which makes some tasks easier since there\'s less to work around. The goal is the same: reset every surface to a genuine baseline, not just tidy what\'s visible.' },
+      { question: 'Can I deep clean my own home, or should I hire it out?', answer: "A smaller home is reasonably doable yourself with a full day or a weekend set aside. It's harder to justify DIY for larger homes, homes that haven't had a deep clean in years, or any situation with a real deadline like a closing date or move-out inspection — in those cases the time a professional crew saves usually outweighs the cost." },
+      { question: 'Do I need a deep clean before starting recurring cleaning service?', answer: "It's strongly recommended if your home hasn't had a thorough deep clean recently. Starting recurring service with a deep clean means every visit after that is genuine maintenance on an already-clean baseline, rather than the crew trying to catch up on months of buildup during what should be a quick maintenance visit." },
+      { question: 'Is there a best time of year for a deep clean in Dayton?', answer: "Two natural windows fit the Miami Valley's seasons especially well: spring, after winter road salt and slush have tracked through entryways, and late summer into fall, as ragweed season settles dust and allergens into carpets and vents. Neither is mandatory, but those two line up with real seasonal patterns." },
+      { question: 'What affects how much a deep clean costs?', answer: 'The main factors are square footage, how long it\'s been since the last deep clean, the number of bathrooms and kitchens, and any add-ons like inside-appliance detailing or interior window cleaning. A free quote based on your specific space is the fastest way to get an accurate number.' }
+    ]
+  },
+  {
+    slug: 'move-out-transitions-guide-dayton',
+    title: 'Move-Out & Move-In Cleaning: The Complete Dayton Guide',
+    description: "Ohio landlords have 30 days to return your deposit or itemize why they didn't. Here's what actually gets checked at move-out, and what most movers miss.",
+    publishedAt: '2026-09-11',
+    updatedAt: '2026-09-11',
+    author: 'Chris Wilson',
+    category: 'Moving & Turnover',
+    tags: ['move-out cleaning', 'move-in cleaning', 'security deposit', 'Dayton', 'renters', 'home sellers'],
+    keywords: [
+      'move out cleaning Dayton',
+      'security deposit cleaning checklist',
+      'move in cleaning checklist',
+      'Ohio security deposit law 30 days',
+      'what landlords check at move out',
+      'move out vs move in cleaning',
+      'pre-listing deep clean Dayton',
+      'Dayton renters cleaning guide',
+      'apartment move out checklist'
+    ],
+    problem: "Renters want to understand what landlords actually check at move-out, and sellers/movers waste time cleaning in the wrong order or at the wrong point in the move — with no single guide tying move-out, move-in, and listing prep together.",
+    solution: 'A complete guide to what landlords and buyers actually check, the real difference between a basic clean and a deep clean, the most commonly missed spots, and the right timing for renters, sellers, and people moving into a new home.',
+    targetAudience: 'Dayton-area renters preparing for a move-out inspection, homeowners prepping to list, and anyone moving into a new home or apartment',
+    coverImage: '/images/blog/move-out-transitions-guide-dayton.png',
+    featured: false,
+    content: moveOutTransitionsGuideContent,
+    faqs: [
+      { question: 'How far in advance should I schedule move-out cleaning?', answer: "Book it as soon as your move-out date is confirmed — cleaning companies' schedules fill up fastest around the first and last week of the month, when most leases turn over. For a same-day or next-day need, call directly rather than booking online, since availability changes daily." },
+      { question: 'Do I need to clean before movers arrive, or after they leave?', answer: 'After. Movers and their equipment will track dirt back in regardless of how clean the space is beforehand, so a pre-move clean is largely wasted effort. Clean once the space is fully empty.' },
+      { question: 'Will a landlord accept "reasonable wear and tear" instead of a deep clean?', answer: "Ohio law does distinguish normal wear and tear, which a landlord can't deduct for, from actual dirt or damage, which they can. But the line is subjective and landlord-dependent, and the final call is the landlord's — a thorough clean puts you in a stronger position than betting on how a specific landlord interprets that line." },
+      { question: "What's the difference between move-out and move-in cleaning?", answer: 'Functionally similar checklists — appliances, cabinets, bathrooms, floors — but different goals. Move-out cleaning is about meeting a landlord\'s cleaning standard on a unit you\'re leaving; move-in cleaning is about starting fresh in a space you don\'t yet know the history of.' },
+      { question: 'Can one cleaning crew handle both the move-out clean and the move-in clean on the same day?', answer: "It depends on timing and location, but it's a common request, especially for local moves. Same-day availability isn't guaranteed for every date, so the earlier you can confirm both addresses, the better the odds of getting both scheduled back to back." },
+      { question: 'Do I need to be present for the cleaning?', answer: "No — many clients coordinate lockbox or landlord-provided access, especially useful when a move-out and move-in are happening on the same day and you physically can't be in two places at once." },
+      { question: 'What should I photograph before handing back keys?', answer: 'Every room, with the oven, fridge, cabinets, and closets opened in the shots — not just wide room views. Timestamped photos are your strongest evidence if a landlord itemizes a cleaning deduction you disagree with.' }
+    ]
+  },
+  {
+    slug: 'hiring-cleaning-service-guide-dayton',
+    title: 'How to Choose & Budget for a Cleaning Service in Dayton',
+    description: "Your kitchen looks clean. It isn't. Here's what actually drives cleaning cost, which frequency fits your home, and the red flags that mean walk away.",
+    publishedAt: '2026-09-11',
+    updatedAt: '2026-09-11',
+    author: 'Chris Wilson',
+    category: 'Cleaning Tips',
+    tags: ['hiring a cleaning service', 'cleaning cost', 'Dayton cleaning company', 'recurring cleaning', 'move cleaning'],
+    keywords: [
+      'how to choose a cleaning service',
+      'house cleaning cost Dayton',
+      'what affects cleaning price',
+      'weekly vs biweekly cleaning',
+      'is my cleaning company insured',
+      'how to hire a house cleaner',
+      'cleaning service red flags',
+      'house cleaning quote Dayton Ohio',
+      'no contract cleaning service'
+    ],
+    problem: 'Homeowners comparing cleaning quotes see wildly different numbers for similar homes and have no framework for judging which quote — or which company — actually makes sense.',
+    solution: 'A breakdown of what genuinely drives cleaning cost (size, frequency, condition, add-ons), the real tradeoff between cleaning frequencies, and exactly what to vet — insurance, training, contracts, guarantees — before hiring anyone.',
+    targetAudience: 'Dayton-area homeowners comparing cleaning services for the first time, or reconsidering their current provider',
+    coverImage: '/images/blog/hiring-cleaning-service-guide-dayton.png',
+    featured: false,
+    content: hiringCleaningServiceGuideContent,
+    faqs: [
+      { question: 'Should I just go with the cheapest quote?', answer: "Not automatically. A quote that's far below every other estimate for the same home is worth asking about directly — it often means less experienced staff, no insurance, or a narrower scope than the other quotes included." },
+      { question: 'Why does the first cleaning cost more than the ongoing visits?', answer: "The first visit addresses buildup since the home's last professional clean. Once on a recurring schedule, each visit maintains a level much closer to what the last visit left, so it takes less time." },
+      { question: 'Can I change my cleaning frequency after I start?', answer: 'With a company that requires no contracts, yes — you should be able to move between weekly, biweekly, monthly, or pause, without a cancellation fee.' },
+      { question: 'Do I need to provide cleaning supplies?', answer: 'Most professional cleaning companies bring their own tools and supplies as standard. If you have a sensitivity or preference, a good company will accommodate that.' },
+      { question: 'Do I need to be home during the cleaning?', answer: 'No. Many clients provide access instructions and go about their day.' },
+      { question: 'How many quotes should I get before deciding?', answer: "Two or three is usually enough to compare what each includes, not just the bottom-line number." },
+      { question: 'Should I book a move-in or move-out clean before or after the move?', answer: 'Move-out cleans happen after the home is fully emptied, so every surface is accessible. Move-in cleans are best scheduled before furniture arrives.' },
+      { question: 'Why does insurance matter so much for house cleaning?', answer: 'If something is damaged or someone is injured and the company has no insurance, the cost and liability can fall on you as the homeowner.' }
+    ]
+  },
+  {
     slug: 'how-to-deep-clean-garage-basement-dayton',
     title: 'How to Deep Clean a Garage or Basement: A Dayton Guide',
     description: "Grease-caked concrete and a musty basement aren't the same problem. Here's the room-by-room fix for Dayton garages and basements, floor to humidity control.",
     publishedAt: '2026-09-10',
     updatedAt: '2026-09-10',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Cleaning Tips',
     tags: ['garage cleaning', 'basement cleaning', 'concrete floor care', 'humidity control', 'Dayton'],
     keywords: [
@@ -94,7 +208,7 @@ const posts = [
     description: "Streaky windows in Dayton usually mean hard water, not bad technique. Here's the tool, solution, and step-by-step method that actually gets glass clear.",
     publishedAt: '2026-09-08',
     updatedAt: '2026-09-08',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Cleaning Tips',
     tags: ['window cleaning', 'streak-free', 'hard water', 'cleaning tips', 'Dayton'],
     keywords: [
@@ -156,7 +270,7 @@ const posts = [
     description: "One in four Xenia homes dates to the 1970s tornado rebuild. Here's how to clean popcorn ceilings, window tracks, registers, and hard-water scale safely.",
     publishedAt: '2026-09-07',
     updatedAt: '2026-09-07',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Local Guides & Seasonal',
     tags: ['Xenia', '1970s homes', 'popcorn ceilings', 'hard water', 'Greene County', 'cleaning tips'],
     keywords: [
@@ -226,7 +340,7 @@ const posts = [
     description: "A room-by-room pet hair and odor routine built for Dayton's mixed hardwood/carpet homes and closed-window winters — practical steps between cleanings.",
     publishedAt: '2026-09-03',
     updatedAt: '2026-09-03',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Cleaning Tips',
     tags: ['pet hair removal', 'pet odor', 'carpet cleaning', 'cleaning tips', 'Dayton'],
     keywords: [
@@ -296,7 +410,7 @@ const posts = [
     description: "Dayton's hard water leaves grout haze fast. Here's the finish-safe way to clean and reseal tile grout without damaging the finish, plus what never to use.",
     publishedAt: '2026-09-01',
     updatedAt: '2026-09-01',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Cleaning Tips',
     tags: ['grout cleaning', 'tile cleaning', 'hard water', 'cleaning tips', 'Dayton'],
     keywords: [
@@ -361,10 +475,10 @@ const posts = [
   {
     slug: 'pre-listing-deep-clean-checklist-dayton',
     title: 'The Pre-Listing Deep Clean Checklist for Dayton Sellers',
-    description: "Dayton's a seller's market right now — homes average just 38 days on market. Here's the pre-listing deep-clean checklist to get your house showing-ready fast.",
+    description: "Dayton is a seller's market — homes average just 38 days on market. Here's the pre-listing checklist to get your house showing-ready fast.",
     publishedAt: '2026-08-27',
     updatedAt: '2026-08-27',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Local Guides & Seasonal',
     tags: ['pre-listing cleaning', 'home selling tips', 'real estate cleaning', 'Dayton housing market', 'deep clean checklist'],
     keywords: [
@@ -430,7 +544,7 @@ const posts = [
     description: "Oktoberfest weekend fills Dayton calendars fast. Here's the pre-party and post-party cleaning timeline to get your house guest-ready and reset fast after.",
     publishedAt: '2026-08-25',
     updatedAt: '2026-08-25',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Local Guides & Seasonal',
     tags: ['fall entertaining', 'party cleaning', 'Oktoberfest', 'hosting checklist', 'Dayton'],
     keywords: [
@@ -497,10 +611,10 @@ const posts = [
   {
     slug: 'how-to-keep-office-clean-between-cleanings-dayton',
     title: 'Keep Your Office Clean Between Cleanings',
-    description: 'A crew resets your office weekly, but clients and staff see it daily. Here is how Dayton office managers keep a workspace sharp between professional cleanings.',
+    description: "A crew resets your office weekly, but clients and staff see it daily. Here's how Dayton office managers keep it sharp in between visits.",
     publishedAt: '2026-08-20',
     updatedAt: '2026-08-20',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Commercial Cleaning',
     tags: ['office cleaning', 'commercial cleaning', 'workplace maintenance', 'cleaning tips', 'facility management', 'Dayton'],
     keywords: [
@@ -560,10 +674,10 @@ const posts = [
   {
     slug: 'how-to-deep-clean-stainless-steel-appliances-dayton',
     title: 'How to Deep Clean Stainless Steel Appliances',
-    description: "Fingerprints and water spots make stainless look dirty fast. Here's how to deep clean stainless steel appliances streak-free — and beat Dayton's hard water.",
+    description: "Fingerprints and water spots make stainless look dirty fast. Here's how to deep clean it streak-free — and beat Dayton's hard water.",
     publishedAt: '2026-08-18',
     updatedAt: '2026-08-18',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Cleaning Tips',
     tags: ['stainless steel', 'kitchen cleaning', 'appliance care', 'cleaning tips', 'hard water', 'Dayton'],
     keywords: [
@@ -630,7 +744,7 @@ const posts = [
     description: "Dayton's tap water runs about 9 grains hard, so fixtures spot fast. Here's how to remove hard water stains from faucets, glass, and showerheads safely.",
     publishedAt: '2026-08-13',
     updatedAt: '2026-08-13',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Cleaning Tips',
     tags: ['hard water stains', 'bathroom cleaning', 'limescale removal', 'cleaning tips', 'Dayton'],
     keywords: [
@@ -697,7 +811,7 @@ const posts = [
     description: 'Prepping before your cleaning crew arrives means more actual cleaning for your money. Here’s the 15-minute checklist Dayton homeowners should run first.',
     publishedAt: '2026-08-11',
     updatedAt: '2026-08-11',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Cleaning Tips',
     tags: ['house cleaning prep', 'cleaning checklist', 'first cleaning appointment', 'declutter', 'residential cleaning', 'Dayton'],
     keywords: [
@@ -764,7 +878,7 @@ const posts = [
     description: "Weekly or bi-weekly cleaning in the Miami Valley? Here's what a recurring house cleaning service includes each visit, what it skips, and how often to book.",
     publishedAt: '2026-08-06',
     updatedAt: '2026-08-06',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Cleaning Tips',
     tags: ['recurring cleaning', 'house cleaning', 'cleaning frequency', 'residential cleaning', 'Dayton'],
     keywords: [
@@ -824,10 +938,10 @@ const posts = [
   {
     slug: 'airbnb-str-turnover-cleaning-dayton',
     title: 'Airbnb Turnover Cleaning: A Dayton Guide',
-    description: 'First Four weekend fills Dayton’s rentals fast. Here’s how short-term-rental hosts near UD Arena nail a same-day Airbnb turnover clean before the next guest.',
+    description: 'First Four weekend fills Dayton’s rentals fast. Here’s how STR hosts near UD Arena nail a same-day turnover before the next guest.',
     publishedAt: '2026-08-04',
     updatedAt: '2026-08-04',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Moving & Turnover',
     tags: ['Airbnb cleaning', 'short-term rental', 'turnover cleaning', 'Dayton', 'UD Arena', 'First Four'],
     keywords: [
@@ -895,7 +1009,7 @@ const posts = [
     description: 'Road salt and slush wreck Dayton’s older hardwood floors every winter. Here’s how to protect your entryways and lift salt stains before they leave a mark.',
     publishedAt: '2026-07-30',
     updatedAt: '2026-07-30',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Local Guides & Seasonal',
     tags: ['winter cleaning', 'floor care', 'road salt', 'entryway maintenance', 'Dayton'],
     keywords: [
@@ -961,7 +1075,7 @@ const posts = [
     description: 'PCS season means a base-housing or off-base rental inspection is coming. Here’s how Wright-Patterson families get a Dayton move-out clean that passes.',
     publishedAt: '2026-07-28',
     updatedAt: '2026-07-28',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Moving & Turnover',
     tags: ['move-out cleaning', 'PCS cleaning', 'military housing', 'Wright-Patterson AFB', 'Dayton'],
     keywords: [
@@ -1028,7 +1142,7 @@ const posts = [
     description: "UD move-in is August 21 and Wright State starts the 24th. Here's how to get a just-vacated Dayton student rental actually clean before the boxes arrive.",
     publishedAt: '2026-07-24',
     updatedAt: '2026-07-24',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Moving & Turnover',
     tags: ['move-in cleaning', 'student housing', 'move-in move-out', 'Dayton', 'Wright State'],
     keywords: [
@@ -1067,7 +1181,7 @@ const posts = [
       },
       {
         question: 'What’s the difference between move-in and move-out cleaning?',
-        answer: 'Move-out cleaning is aimed at meeting a landlord’s standard so you get your deposit back on a unit you’re leaving. Move-in cleaning sanitizes a space for daily living — inside cabinets, the fridge, the shower, high-touch surfaces — on a unit you’re about to move into. Because turnover cleans are often light, a move-in clean is worth doing even when the unit was technically cleaned when the last tenant left.',
+        answer: 'Move-out cleaning is aimed at meeting a landlord’s cleaning standard on a unit you’re leaving. Move-in cleaning sanitizes a space for daily living — inside cabinets, the fridge, the shower, high-touch surfaces — on a unit you’re about to move into. Because turnover cleans are often light, a move-in clean is worth doing even when the unit was technically cleaned when the last tenant left.',
       },
       {
         question: 'Do landlords or tenants pay for move-in cleaning?',
@@ -1095,7 +1209,7 @@ const posts = [
     description: 'Ragweed season runs mid-August through November in the Miami Valley. Here’s the room-by-room checklist that cuts down what you’re breathing indoors.',
     publishedAt: '2026-07-22',
     updatedAt: '2026-07-22',
-    author: 'Gem City Cleaning Crew Team',
+    author: 'Chris Wilson',
     category: 'Local Guides & Seasonal',
     tags: ['allergy cleaning', 'ragweed season', 'fall cleaning', 'Dayton'],
     keywords: [

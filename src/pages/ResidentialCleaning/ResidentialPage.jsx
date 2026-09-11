@@ -85,7 +85,7 @@ const ResidentialPage = () => {
       title: "Apartment Cleaning",
       description: "Specialized cleaning for apartments, move-in/out, and rental properties",
       icon: <ApartmentIcon sx={{ fontSize: 32, color: 'white' }} />,
-      features: ["Move-in/out cleaning", "Get your deposit back", "Student housing specialists", "Same-day service available"],
+      features: ["Move-in/out cleaning", "Meets landlord standards", "Student housing specialists", "Same-day service available"],
       popular: false,
       link: "/apartment-cleaning"
     },
@@ -262,11 +262,7 @@ const ResidentialPage = () => {
             "@type": "Service",
             "name": "Residential House Cleaning Services",
             "description": "Professional Dayton house cleaning services with custom plans, no contracts, and 3-month trained staff",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "937-892-4157"
-            },
+            "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "areaServed": "Dayton, OH and surrounding areas",
             "hasOfferCatalog": {
               "@type": "OfferCatalog",

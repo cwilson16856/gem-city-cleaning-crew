@@ -40,7 +40,6 @@ import '../../styles/homepages/HomePage.css'
 import '../../styles/pages/CommercialPage.css'
 
 import {
-  generateLocalBusinessSchema,
   generateLocationWebPageSchema
 } from '../../utils/localBusinessSchema'
 
@@ -238,10 +237,7 @@ const RetailCleaning = () => {
         
         <link rel="canonical" href="https://gemcitycleaningcrew.com/retail-cleaning" />
 
-        {/* LocalBusiness Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify(generateLocalBusinessSchema(['Dayton', 'Kettering', 'Centerville', 'Beavercreek', 'Xenia']))}
-        </script>
+        {/* LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting narrower areaServed. */}
 
         {/* WebPage Schema (with breadcrumb) */}
         <script type="application/ld+json">

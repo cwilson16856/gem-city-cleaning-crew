@@ -244,16 +244,7 @@ const ResidentialChecklistPage = () => {
             "@type": "HowTo",
             "name": "Professional House Cleaning Checklist",
             "description": "Comprehensive house cleaning checklist used by professional cleaners in Dayton, OH",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "937-892-4157",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Dayton",
-                "@addressRegion": "OH"
-              }
-            },
+            "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "totalTime": "PT2H",
             "supply": [
               {

@@ -51,7 +51,6 @@ import '../../../../styles/homepages/HomePage.css'
 import '../../../../styles/pages/ResidentialPage.css'
 
 import {
-  generateLocalBusinessSchema,
   generateServiceSchema,
   generateLocationWebPageSchema
 } from '../../../../utils/localBusinessSchema'
@@ -105,7 +104,7 @@ const services = [
     description:
       'Empty-house cleans for Xenia rentals, homes changing hands, and PCS moves — plus new-build first cleans in Edenbridge, Grandstone Trace, and Wright Cycle Estates.',
     icon: <MoveToInboxIcon sx={{ fontSize: 32, color: 'white' }} />,
-    features: ['Inside cabinets and closets', 'Deposit-ready detail', 'Post-construction dust removal'],
+    features: ['Inside cabinets and closets', 'Landlord-ready detail', 'Post-construction dust removal'],
     popular: false,
     link: '/move-in-out-cleaning'
   },
@@ -270,7 +269,7 @@ const faqData = [
   {
     question: 'Do you offer move-out cleaning for Xenia rentals and new builds?',
     answer:
-      "Yes. We do deposit-ready move-out cleans for Xenia rentals — including student rentals near Central State and Wilberforce and PCS moves from Wright-Patt — and move-in cleans for homes changing hands. For new construction in Edenbridge, Grandstone Trace, Summer Brooke, or Wright Cycle Estates, ask for a post-construction clean, which adds cabinet interiors, vents, and the fine drywall dust a standard clean doesn't chase."
+      "Yes. We do landlord-ready move-out cleans for Xenia rentals — including student rentals near Central State and Wilberforce and PCS moves from Wright-Patt — and move-in cleans for homes changing hands. For new construction in Edenbridge, Grandstone Trace, Summer Brooke, or Wright Cycle Estates, ask for a post-construction clean, which adds cabinet interiors, vents, and the fine drywall dust a standard clean doesn't chase."
   },
   {
     question: 'Do you serve Wilberforce, Cedarville, Jamestown, and Yellow Springs?',
@@ -293,7 +292,7 @@ const XeniaHouseCleaningPage = () => {
   const openQuote = () => setQuoteFormOpen(true)
   const closeQuote = () => setQuoteFormOpen(false)
 
-  const localBusinessSchema = generateLocalBusinessSchema(['Xenia', 'Wilberforce', 'Beavercreek', 'Yellow Springs', 'Bellbrook'])
+  // LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting narrower areaServed.
   const serviceSchema = {
     ...generateServiceSchema({
       id: SERVICE_ID,
@@ -390,8 +389,6 @@ const XeniaHouseCleaningPage = () => {
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={META_DESCRIPTION} />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
-
-        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -800,7 +797,7 @@ const XeniaHouseCleaningPage = () => {
       </Box>
 
       <Box id="greater-dayton-service-areas">
-        <AreasWeServe />
+        <AreasWeServe currentCity="Xenia" />
       </Box>
 
       {/* Final CTA */}

@@ -151,7 +151,7 @@ const MoveInOutCleaningPage = () => {
         <meta name="title" content="Moving Cleaning Package Dayton OH | Gem City Cleaning Crew" />
         <meta name="description" content="Moving? Gem City Cleaning Crew cleans both your old home and your new home as one package — one trusted crew, no coordinating two separate cleaning companies. Serving Dayton, OH and the Miami Valley. Same-day quotes available." />
         <meta name="keywords" content="combined move cleaning Dayton, moving cleaning package, two home cleaning service, clean old and new home Dayton, relocation cleaning service, buying and selling home cleaning, Kettering moving cleaning, Centerville moving cleaning, Oakwood moving cleaning" />
-        
+
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
@@ -164,11 +164,11 @@ const MoveInOutCleaningPage = () => {
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
         <meta name="theme-color" content="#D81B60" />
-        
+
         {/* Preload critical resources for better LCP */}
         <link rel="preload" as="image" href="/images/legacy/Clean-Oven.webp" />
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
-        
+
         {/* Enhanced Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Gem City Cleaning Crew" />
@@ -185,7 +185,7 @@ const MoveInOutCleaningPage = () => {
         <meta property="business:contact_data:region" content="OH" />
         <meta property="business:contact_data:country_name" content="United States" />
         <meta property="business:contact_data:phone_number" content="+1-937-892-4157" />
-        
+
         {/* Enhanced Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@GemCityCleaning" />
@@ -194,17 +194,17 @@ const MoveInOutCleaningPage = () => {
         <meta name="twitter:description" content="Moving? We clean both your old home and your new home as one package — one trusted crew, no coordinating two separate companies." />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta name="twitter:image:alt" content="Combined move-in and move-out cleaning package in Dayton OH" />
-        
+
         {/* Additional Social Media */}
         <meta property="article:author" content="Gem City Cleaning Crew" />
         <meta property="article:publisher" content="https://www.facebook.com/GemCityCleaningCrew" />
         <meta property="article:published_time" content="2024-01-15T10:00:00Z" />
         <meta property="article:modified_time" content={new Date().toISOString()} />
-        
+
         {/* Canonical and Alternate URLs */}
         <link rel="canonical" href="https://gemcitycleaningcrew.com/move-in-out-cleaning" />
         <link rel="alternate" hrefLang="en-us" href="https://gemcitycleaningcrew.com/move-in-out-cleaning" />
-        
+
         {/* Enhanced Service Schema with more details */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -215,33 +215,7 @@ const MoveInOutCleaningPage = () => {
             "alternateName": ["Moving Cleaning Package", "Two-Home Cleaning Service", "Combined Moving Cleaning", "Empty Home Cleaning"],
             "description": "Combined move-in and move-out cleaning package in Dayton, OH — one crew cleans both your old home and your new home, perfect for landlords, tenants, and new homeowners handling a move",
             "serviceType": "Combined Move-In and Move-Out Cleaning",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "937-892-4157",
-              "email": "info@gemcitycleaningcrew.com",
-              "url": "https://gemcitycleaningcrew.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Dayton",
-                "addressRegion": "OH",
-                "addressCountry": "US"
-              },
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "10:00",
-                  "closes": "18:00"
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Saturday",
-                  "opens": "10:00",
-                  "closes": "14:00"
-                }
-              ]
-            },
+            "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "areaServed": [
               {
                 "@type": "City",
@@ -327,7 +301,7 @@ const MoveInOutCleaningPage = () => {
                 "name": "Will move-out cleaning help me get my security deposit back?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, professional move-out cleaning significantly increases your chances of getting your full security deposit back. Our thorough service meets most landlord expectations and lease requirements for cleanliness."
+                  "text": "A thorough move-out clean helps you meet most landlord expectations and lease cleaning requirements, which is what your deposit return actually depends on — we don't control landlord decisions, so we can't guarantee a deposit outcome, but our detailed checklist is built around what landlords and property managers typically look for at move-out."
                 }
               },
               {
@@ -358,85 +332,7 @@ const MoveInOutCleaningPage = () => {
           })}
         </script>
 
-        {/* LocalBusiness Schema for better local SEO */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "@id": "https://gemcitycleaningcrew.com/#business",
-            "name": "Gem City Cleaning Crew",
-            "alternateName": "Gem City Cleaning",
-            "description": "Professional move-in/move-out cleaning services in Dayton, OH. Deep cleaning for empty homes, perfect for landlords, tenants, and new homeowners.",
-            "url": "https://gemcitycleaningcrew.com",
-            "telephone": "+1-937-892-4157",
-            "email": "info@gemcitycleaningcrew.com",
-            "foundingDate": "2017",
-            "priceRange": "$$",
-            "currenciesAccepted": "USD",
-            "paymentAccepted": "Cash, Check, Credit Card, Venmo, Zelle",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dayton",
-              "addressRegion": "OH",
-              "addressCountry": "US"
-            },
-            "areaServed": [
-              {
-                "@type": "City",
-                "name": "Dayton",
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": "Ohio"
-                }
-              },
-              {
-                "@type": "City",
-                "name": "Kettering"
-              },
-              {
-                "@type": "City",
-                "name": "Centerville"
-              },
-              {
-                "@type": "City",
-                "name": "Oakwood"
-              },
-              {
-                "@type": "City",
-                "name": "Huber Heights"
-              },
-              {
-                "@type": "City",
-                "name": "Miamisburg"
-              }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.5",
-              "reviewCount": "85",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "10:00",
-                "closes": "18:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "10:00",
-                "closes": "14:00"
-              }
-            ],
-            "sameAs": [
-              "https://www.facebook.com/GemCityCleaningCrew",
-              "https://www.instagram.com/gemcitycleaningcrew"
-            ]
-          })}
-        </script>
+        {/* LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting/inconsistent version. */}
 
         {/* Breadcrumb Schema */}
         <script type="application/ld+json">
@@ -664,12 +560,26 @@ const MoveInOutCleaningPage = () => {
       </Box>
 
       {/* Table of Contents */}
-      <TableOfContents 
-        items={tableOfContentsItems} 
+      <TableOfContents
+        items={tableOfContentsItems}
         collapsible={true}
         defaultExpanded={false}
         showItemCount={true}
       />
+
+      {/* Disambiguation — moving-page cannibalization fix, 2026-09-11 SEO audit */}
+      <Container maxWidth="lg" sx={{ pt: 4 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, p: 2, backgroundColor: '#F0E6EF', borderRadius: 2 }}>
+          <CompareArrowsIcon sx={{ color: '#D81B60' }} />
+          <Typography variant="body2">
+            Only need one direction? See{' '}
+            <Link to="/move-in-cleaning" style={{ color: '#D81B60', fontWeight: 600 }}>move-in cleaning</Link>
+            {' '}or{' '}
+            <Link to="/move-out-cleaning" style={{ color: '#D81B60', fontWeight: 600 }}>move-out cleaning</Link>
+            {' '}on its own.
+          </Typography>
+        </Box>
+      </Container>
 
       {/* Introduction Section */}
       <Container maxWidth="lg" sx={{ py: 8 }} id="why-choose">
@@ -706,10 +616,10 @@ const MoveInOutCleaningPage = () => {
             <Card sx={{ textAlign: 'center', p: 3, height: '100%' }}>
               <SecurityIcon sx={{ fontSize: 48, color: theme.palette.primary.main, mb: 2 }} />
               <Typography variant="h3" sx={{ mb: 2, fontWeight: 600 }}>
-                Security Deposit Protection
+                Landlord-Standard Cleaning
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Professional move-out cleaning helps ensure you get your full security deposit back from Dayton landlords and property managers
+                Professional move-out cleaning designed to meet the standards Dayton landlords and property managers look for
               </Typography>
             </Card>
           </Grid>
@@ -1042,9 +952,9 @@ const MoveInOutCleaningPage = () => {
                   For Tenants Moving Out
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#525252', lineHeight: 1.6 }}>
-                  Protect your security deposit with professional move-out cleaning. 
-                  Our detailed service meets landlord expectations and lease requirements, 
-                  helping ensure you get your full deposit back.
+                  Avoid cleaning-related fees with professional move-out cleaning.
+                  Our detailed service is designed to meet landlord expectations and lease
+                  cleaning requirements.
                 </Typography>
               </Card>
             </Grid>
@@ -1164,8 +1074,8 @@ const MoveInOutCleaningPage = () => {
                     Move-Out Cleaning
                   </Typography>
                   <Typography variant="body1" sx={{ color: '#525252', lineHeight: 1.6, mb: 3, textAlign: 'center' }}>
-                    Security deposit protection cleaning for tenants and property preparation 
-                    for landlords. Meets lease requirements.
+                    Designed to meet typical landlord and lease cleaning requirements
+                    for tenants and property preparation for landlords.
                   </Typography>
                   <Button
                     variant="contained"
@@ -1351,7 +1261,7 @@ const MoveInOutCleaningPage = () => {
           </Typography>
           <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9, color: 'white' }}>
             Let us handle the cleaning while you focus on your move. Professional move-in/move-out
-            cleaning services throughout the Dayton area help protect deposits and ensure fresh starts.
+            cleaning services throughout the Dayton area are designed to meet typical landlord standards and help ensure fresh starts.
           </Typography>
           
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>

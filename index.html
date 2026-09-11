@@ -9,31 +9,46 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel + Google tag: window.fbq/window.gtag are defined
+    synchronously below (near-zero cost, no network — just the queueing
+    stubs both libraries ship with) so any code that fires an event early
+    (QuotePage.jsx's generate_lead conversion) always has a safe function to
+    call. The actual fbevents.js / gtag.js network fetches — the expensive
+    part — are deferred to the window 'load' event so they stop competing
+    with the hero for bandwidth/CPU during the LCP-critical render window.
+    Previously both loaded eagerly here; homepage LCP measured 10-11s in the
+    2026-09-11 SEO audit with ~470KB of this-plus-bundle blocking paint. -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+    window._loadFbPixelScript=function(){t=b.createElement(e);t.async=!0;t.src=v;
+    s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)};
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1837240890079802');
     fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NB7YB5WJNN"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-NB7YB5WJNN');
-      gtag('config', 'AW-11471124120');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-NB7YB5WJNN');
+    gtag('config', 'AW-11471124120');
+
+    function _loadDeferredTrackingScripts() {
+      window._loadFbPixelScript();
+      var gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-NB7YB5WJNN';
+      document.head.appendChild(gtagScript);
+    }
+    if (document.readyState === 'complete') {
+      _loadDeferredTrackingScripts();
+    } else {
+      window.addEventListener('load', _loadDeferredTrackingScripts);
+    }
     </script>
-    <!-- End Google tag (gtag.js) -->
 
     <!-- Preload critical fonts to prevent layout shifts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

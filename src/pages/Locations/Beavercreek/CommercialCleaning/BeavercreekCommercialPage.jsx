@@ -38,7 +38,6 @@ import '../../../../styles/homepages/HomePage.css'
 import '../../../../styles/pages/CommercialPage.css'
 
 import {
-  generateLocalBusinessSchema,
   generateLocationWebPageSchema
 } from '../../../../utils/localBusinessSchema'
 
@@ -127,7 +126,7 @@ const BeavercreekCommercialPage = () => {
       icon: <SchoolIcon sx={{ fontSize: 32, color: 'white' }} />,
       features: ["Child-safe products", "Play area sanitization", "Nap room cleaning", "Food-safe protocols"],
       popular: false,
-      link: "/school-cleaning"
+      link: "/daycare-cleaning"
     },
     {
       title: "Apartment Building Cleaning",
@@ -261,10 +260,9 @@ const BeavercreekCommercialPage = () => {
         
         <link rel="canonical" href={PAGE_URL} />
 
-        {/* LocalBusiness Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify(generateLocalBusinessSchema(['Beavercreek', 'Fairborn', 'Xenia', 'Dayton']))}
-        </script>
+        {/* LocalBusiness itself is injected once, site-wide, by the app shell
+            (App.jsx / entry-server.jsx) — a per-page copy here would duplicate
+            it with a conflicting narrower areaServed. */}
 
         {/* WebPage Schema (with breadcrumb) */}
         <script type="application/ld+json">
@@ -874,7 +872,7 @@ const BeavercreekCommercialPage = () => {
 
       {/* Areas We Serve Component */}
       <Box id="greater-dayton-service-areas">
-        <AreasWeServe />
+        <AreasWeServe currentCity="Beavercreek" />
       </Box>
 
       {/* Excellence Section */}

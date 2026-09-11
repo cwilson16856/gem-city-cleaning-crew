@@ -236,16 +236,7 @@ const OfficeCleaningChecklist = () => {
             "@type": "HowTo",
             "name": "Professional Office Cleaning Checklist",
             "description": "Comprehensive office cleaning checklist used by professional cleaners in Dayton, OH",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "937-892-4157",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Dayton",
-                "@addressRegion": "OH"
-              }
-            },
+            "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "totalTime": "PT3H",
             "supply": [
               {

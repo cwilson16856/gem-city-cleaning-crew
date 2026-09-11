@@ -70,10 +70,10 @@ const ApartmentCleaning = () => {
   // Apartment cleaning benefits
   const apartmentBenefits = [
     {
-      title: "Get Your Deposit Back",
-      description: "We understand exactly what Dayton landlords look for during move-out inspections. Our thorough apartment cleaning service helps ensure you get your full security deposit returned with our proven move-out cleaning checklist.",
+      title: "Meets Landlord Inspection Standards",
+      description: "We understand exactly what Dayton landlords look for during move-out inspections. Our thorough apartment cleaning service is designed to meet those standards with our proven move-out cleaning checklist.",
       icon: <MonetizationOnIcon sx={{ fontSize: 40, color: theme.palette.primary.main }} />,
-      benefit: "Maximize deposit recovery with professional apartment cleaning Dayton"
+      benefit: "Landlord-standard cleaning with professional apartment cleaning Dayton"
     },
     {
       title: "Fast Turnaround Maid Service",
@@ -111,7 +111,7 @@ const ApartmentCleaning = () => {
   const apartmentServices = [
     {
       title: "Move-Out Cleaning",
-      description: "Comprehensive cleaning to help you get your security deposit back",
+      description: "Comprehensive cleaning designed to meet landlord move-out inspection standards",
       features: ["Deep clean all rooms", "Appliance cleaning", "Cabinet & drawer cleaning", "Baseboard & trim detail"],
       popular: true,
       savings: "Most Popular"
@@ -153,8 +153,8 @@ const ApartmentCleaning = () => {
   // FAQ for apartment cleaning
   const apartmentFAQ = [
     {
-      question: "Will apartment cleaning help me get my security deposit back?",
-      answer: "Yes! We specifically focus on the areas landlords inspect most carefully during move-out. Our thorough cleaning of appliances, cabinets, baseboards, and all surfaces significantly improves your chances of getting your full deposit back. We've helped hundreds of tenants recover their deposits."
+      question: "Does apartment cleaning affect my security deposit?",
+      answer: "Deposit decisions are made by your landlord or property manager. We specifically focus on the areas landlords inspect most carefully during move-out — appliances, cabinets, baseboards, and all surfaces — so your apartment meets the cleaning standards landlords typically look for."
     },
     {
       question: "How much does apartment cleaning cost?",
@@ -182,7 +182,7 @@ const ApartmentCleaning = () => {
     },
     {
       question: "What if my landlord isn't satisfied with the cleaning?",
-      answer: "We offer a 100% satisfaction guarantee. If your landlord identifies any cleaning issues that we can address, contact us within 24 hours and we'll return to resolve them at no additional charge. Customer satisfaction and deposit recovery are our top priorities."
+      answer: "We offer a 100% satisfaction guarantee. If your landlord identifies any cleaning issues that we can address, contact us within 24 hours and we'll return to resolve them at no additional charge. Customer satisfaction is our top priority."
     },
     {
       question: "How far in advance should I schedule apartment cleaning?",
@@ -200,9 +200,9 @@ const ApartmentCleaning = () => {
         <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Apartment Cleaning Dayton OH | Gem City Cleaning Crew</title>
-        <meta name="title" content="Apartment Cleaning Dayton OH | Same-Day Service, Deposit Back Guarantee" />
-        <meta name="description" content="Professional apartment cleaning in Dayton, OH — regular maintenance, deep cleaning, and rental-ready turnovers for tenants and property managers. Get your deposit back. Free quotes! Call 937-892-4157" />
-        <meta name="keywords" content="apartment cleaning Dayton, apartment deep cleaning, get deposit back cleaning, student housing cleaning UD, vacant apartment cleaning, rental property cleaning Dayton, Kettering apartment cleaning, Centerville apartment cleaning, Oakwood apartment cleaning, apartment cleaning near me, rental cleaning service, professional apartment cleaners Dayton" />
+        <meta name="title" content="Apartment Cleaning Dayton OH | Same-Day Service, Landlord-Standard Cleaning" />
+        <meta name="description" content="Professional apartment cleaning in Dayton, OH — regular maintenance, deep cleaning, and rental-ready turnovers for tenants and property managers. Free quotes! Call 937-892-4157" />
+        <meta name="keywords" content="apartment cleaning Dayton, apartment deep cleaning, move out apartment cleaning, student housing cleaning UD, vacant apartment cleaning, rental property cleaning Dayton, Kettering apartment cleaning, Centerville apartment cleaning, Oakwood apartment cleaning, apartment cleaning near me, rental cleaning service, professional apartment cleaners Dayton" />
         
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -216,8 +216,8 @@ const ApartmentCleaning = () => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Gem City Cleaning Crew" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/apartment-cleaning" />
-        <meta property="og:title" content="Apartment Cleaning Dayton OH | Same-Day Service, Deposit Back Guarantee" />
-        <meta property="og:description" content="Professional apartment cleaning in Dayton, OH. Get your deposit back! Same-day service available. Student housing experts. Free quotes!" />
+        <meta property="og:title" content="Apartment Cleaning Dayton OH | Same-Day Service, Landlord-Standard Cleaning" />
+        <meta property="og:description" content="Professional apartment cleaning in Dayton, OH. Same-day service available. Student housing experts. Free quotes!" />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Professional apartment cleaning service results showing clean modern apartment ready for move-out inspection in Dayton OH" />
         
@@ -229,25 +229,14 @@ const ApartmentCleaning = () => {
             "@id": "https://gemcitycleaningcrew.com/apartment-cleaning#service",
             "name": "Apartment Cleaning Service",
             "alternateName": ["Move-Out Cleaning", "Move-In Cleaning", "Rental Property Cleaning", "Student Housing Cleaning"],
-            "description": "Professional apartment cleaning service in Dayton, Ohio specializing in move-in/out cleaning, deposit recovery, and student housing with same-day availability",
+            "description": "Professional apartment cleaning service in Dayton, Ohio specializing in move-in/out cleaning, landlord-standard cleaning, and student housing with same-day availability",
             "serviceType": "Apartment Cleaning Service",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "+1-937-892-4157",
-              "url": "https://gemcitycleaningcrew.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Dayton",
-                "addressRegion": "OH",
-                "addressCountry": "US"
-              }
-            },
+            "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "offers": [
               {
                 "@type": "Offer",
                 "name": "Move-Out Apartment Cleaning",
-                "description": "Comprehensive move-out cleaning to help get your security deposit back",
+                "description": "Comprehensive move-out cleaning that meets landlord inspection standards",
                 "priceCurrency": "USD",
                 "availability": "https://schema.org/InStock"
               },
@@ -315,7 +304,7 @@ const ApartmentCleaning = () => {
               mx: 'auto'
             }}
           >
-            Move-In/Out • Deep Cleaning • Get Your Deposit Back
+            Move-In/Out • Deep Cleaning • Landlord-Standard Results
           </Typography>
 
           <Typography 
@@ -344,7 +333,7 @@ const ApartmentCleaning = () => {
             }}
           >
             <Rating 
-              value={4.5} 
+              value={4.6} 
               precision={0.5} 
               readOnly 
               size="large" 
@@ -365,7 +354,7 @@ const ApartmentCleaning = () => {
                 minWidth: 200
               }}
             >
-              4.5/5 stars • 85+ reviews
+              4.6/5 stars • 90+ reviews
             </Typography>
           </Box>
 
@@ -425,7 +414,7 @@ const ApartmentCleaning = () => {
             flexWrap: 'wrap',
             opacity: 0.9 
           }}>
-            {['Same-Day Available', 'Deposit Recovery Focus', 'Student Housing Experts', 'All Supplies Included'].map((item) => (
+            {['Same-Day Available', 'Landlord-Standard Cleaning', 'Student Housing Experts', 'All Supplies Included'].map((item) => (
               <Chip 
                 key={item}
                 label={item} 
@@ -460,7 +449,7 @@ const ApartmentCleaning = () => {
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 800, mx: 'auto' }}>
             Whether you're moving in, moving out, or need a deep clean, our apartment cleaning process is designed to deliver 
-            professional results that meet landlord standards and help protect your deposit.
+            professional results designed to meet landlord standards for move-in and move-out inspections.
           </Typography>
         </Box>
 
@@ -646,7 +635,7 @@ const ApartmentCleaning = () => {
             As Ohio tenants, you have specific rights during your lease. Learn more about your tenant rights and responsibilities 
             at the <a href="https://ohiohome.org/renters.aspx" target="_blank" rel="noopener" style={{ color: '#D81B60', textDecoration: 'underline' }}>
             Ohio Housing Finance Agency's tenant resource center</a>, which provides valuable information about rental housing, 
-            tenant rights, and move-out procedures that can help you navigate the cleaning requirements for getting your full deposit back.
+            tenant rights, and move-out procedures that can help you understand what your lease requires at move-out.
           </Typography>
         </Box>
 
@@ -703,7 +692,7 @@ const ApartmentCleaning = () => {
               Student Housing & Apartment Cleaning Success Stories in Dayton
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
-              Real reviews from Dayton apartment tenants who got their deposits back and landlords who were impressed with our maid service
+              Real reviews from Dayton apartment tenants and landlords who were impressed with our maid service
             </Typography>
           </Box>
 
@@ -803,8 +792,8 @@ const ApartmentCleaning = () => {
             Ready for Professional Apartment Cleaning in Dayton?
           </Typography>
           <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
-            Don't lose your security deposit to vacant apartment cleaning issues. Our professional apartment cleaning service 
-            helps ensure you get every dollar back with our move-out cleaning checklist. Same-day service available!
+            Avoid cleaning-related move-out fees. Our professional apartment cleaning service
+            is built around a move-out cleaning checklist designed to meet landlord standards. Same-day service available!
           </Typography>
           
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>

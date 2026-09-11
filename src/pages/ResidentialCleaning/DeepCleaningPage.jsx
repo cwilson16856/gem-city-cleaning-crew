@@ -172,16 +172,7 @@ const DeepCleaningPage = () => {
             "@type": "Service",
             "name": "Deep Cleaning Services",
             "description": "Professional deep house cleaning services in Dayton, OH including appliance cleaning, baseboards, and detailed sanitization",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Gem City Cleaning Crew",
-              "telephone": "937-892-4157",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Dayton",
-                "addressRegion": "OH"
-              }
-            },
+            "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "areaServed": "Dayton, OH and surrounding areas",
             "hasOfferCatalog": {
               "@type": "OfferCatalog",

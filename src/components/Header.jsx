@@ -108,7 +108,7 @@ const Header = () => {
   }
 
   const isCommercialActive = () => {
-    const commercialPaths = ['/commercial', '/office-cleaning', '/office-cleaning-checklist', '/retail-cleaning', '/school-cleaning', '/corporate-building-cleaning', '/industrial-cleaning']
+    const commercialPaths = ['/commercial', '/office-cleaning', '/office-cleaning-checklist', '/retail-cleaning', '/daycare-cleaning', '/corporate-building-cleaning', '/industrial-cleaning']
     return commercialPaths.includes(location.pathname)
   }
 
@@ -134,7 +134,7 @@ const Header = () => {
     { label: 'Bathroom Cleaning', path: '/bathroom-cleaning-services', description: 'Sanitization, mold removal, grout restoration' },
     { label: 'Move-In/Out Cleaning', path: '/move-in-out-cleaning', description: 'Moving transition cleaning' },
     { label: 'Move-In Cleaning', path: '/move-in-cleaning', description: 'Fresh start for new homes' },
-    { label: 'Move-Out Cleaning', path: '/move-out-cleaning', description: 'Protect your security deposit' },
+    { label: 'Move-Out Cleaning', path: '/move-out-cleaning', description: 'Meets landlord cleaning standards' },
     { label: 'Post-Construction Cleaning', path: '/post-construction-cleaning', description: 'Rough clean, final clean & touch-up for new builds and renovations' },
     { label: 'Apartment Cleaning', path: '/apartment-cleaning', description: 'Specialized apartment & rental cleaning' },
     { label: 'Condo Cleaning', path: '/condo-cleaning', description: 'Luxury condo cleaning & HOA compliance' },
@@ -154,7 +154,7 @@ const Header = () => {
     { label: 'Office Cleaning', path: '/office-cleaning', description: 'Law firms, real estate, therapy offices' },
     { label: 'Office Cleaning Checklist', path: '/office-cleaning-checklist', description: 'See what we clean in offices' },
     { label: 'Retail Cleaning', path: '/retail-cleaning', description: 'Stores, shops, customer areas' },
-    { label: 'Daycare Cleaning', path: '/school-cleaning', description: 'Daycares, childcare centers' },
+    { label: 'Daycare Cleaning', path: '/daycare-cleaning', description: 'Daycares, childcare centers' },
     { label: 'Apartment Building Cleaning', path: '/apartment-building-cleaning', description: 'Common areas, hallways, laundry rooms' },
     { label: 'Commercial One-Time Cleaning', path: '/commercial-one-time-cleaning', description: 'Deep cleaning & special events' },
     { label: 'Industrial Cleaning', path: '/industrial-cleaning', description: 'Warehouses, manufacturing' },
@@ -688,6 +688,7 @@ const Header = () => {
               color="inherit"
               aria-label="Open navigation menu"
               onClick={handleMobileMenuOpen}
+              sx={{ minWidth: 44, minHeight: 44 }}
             >
               <MenuIcon />
             </IconButton>

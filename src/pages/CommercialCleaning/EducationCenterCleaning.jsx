@@ -45,12 +45,11 @@ import TableOfContents from '../../components/TableOfContents'
 import QuoteForm from '../../components/QuoteForm'
 import { generateFAQPageStructuredData } from '../../utils/blogSchema'
 import {
-  generateLocalBusinessSchema,
   generateServiceSchema,
   generateLocationWebPageSchema
 } from '../../utils/localBusinessSchema'
 
-const PAGE_URL = 'https://gemcitycleaningcrew.com/school-cleaning'
+const PAGE_URL = 'https://gemcitycleaningcrew.com/daycare-cleaning'
 const SERVICE_ID = `${PAGE_URL}#service`
 
 const DaycareCleaning = () => {
@@ -246,9 +245,7 @@ const DaycareCleaning = () => {
         <meta name="twitter:title" content="Daycare Cleaning Services Dayton | Gem City Cleaning" />
         <meta name="twitter:description" content="Professional daycare cleaning services in Dayton. Child-safe, thorough cleaning that creates a healthy environment for children." />
 
-        <script type="application/ld+json">
-          {JSON.stringify(generateLocalBusinessSchema(['Dayton', 'Kettering', 'Beavercreek', 'Centerville', 'Springboro']))}
-        </script>
+        {/* LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting narrower areaServed. */}
         <script type="application/ld+json">
           {JSON.stringify(generateServiceSchema({
             id: SERVICE_ID,
