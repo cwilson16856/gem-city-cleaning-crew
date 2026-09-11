@@ -5,6 +5,8 @@
 import deepCleaningGuideContent from './posts/deep-cleaning-guide-dayton.js'
 import moveOutTransitionsGuideContent from './posts/move-out-transitions-guide-dayton.js'
 import hiringCleaningServiceGuideContent from './posts/hiring-cleaning-service-guide-dayton.js'
+import garageBasementDeepCleanContent from './posts/how-to-deep-clean-garage-basement-dayton.js'
+import windowsStreakFreeContent from './posts/how-to-clean-windows-streak-free-dayton.js'
 import xenia1970sHomeCleaningContent from './posts/how-to-clean-1970s-xenia-home-room-by-room.js'
 import petHairOdorContent from './posts/how-to-remove-pet-hair-odor-dayton.js'
 import groutTileCleaningContent from './posts/how-to-clean-grout-tile-without-damaging-dayton.js'
@@ -132,6 +134,135 @@ const posts = [
       { question: 'Should I book a move-in or move-out clean before or after the move?', answer: 'Move-out cleans happen after the home is fully emptied, so every surface is accessible. Move-in cleans are best scheduled before furniture arrives.' },
       { question: 'Why does insurance matter so much for house cleaning?', answer: 'If something is damaged or someone is injured and the company has no insurance, the cost and liability can fall on you as the homeowner.' }
     ]
+  },
+  {
+    slug: 'how-to-deep-clean-garage-basement-dayton',
+    title: 'How to Deep Clean a Garage or Basement: A Dayton Guide',
+    description: "Grease-caked concrete and a musty basement aren't the same problem. Here's the room-by-room fix for Dayton garages and basements, floor to humidity control.",
+    publishedAt: '2026-09-10',
+    updatedAt: '2026-09-10',
+    author: 'Chris Wilson',
+    category: 'Cleaning Tips',
+    tags: ['garage cleaning', 'basement cleaning', 'concrete floor care', 'humidity control', 'Dayton'],
+    keywords: [
+      'how to deep clean a garage or basement',
+      'how to clean a concrete garage floor',
+      'basement deep clean checklist',
+      'how to get rid of musty smell in basement',
+      'garage organization ideas',
+      'remove oil stains from garage floor',
+      'best humidity setting for a dehumidifier',
+      'how often should you deep clean your garage',
+      'basement mustiness Dayton Ohio',
+      'garage cleanout Dayton Ohio',
+    ],
+    problem: "Garages collect grease and road grime that soak into porous concrete, while basements in Dayton's older homes trap humid-summer moisture that turns into a musty smell — and neither responds to a normal vacuum-and-mop routine.",
+    solution: 'A three-step system — declutter first, then degrease and seal the concrete floor, then control basement humidity to 45-50% relative humidity — tailored to the pre-1960s unfinished basements common across Dayton, Oakwood, and Kettering.',
+    targetAudience: 'Dayton-area homeowners — across Dayton, Oakwood, Kettering, and the surrounding Miami Valley — with a cluttered garage, a musty basement, or both',
+    coverImage: '/images/blog/how-to-deep-clean-garage-basement-dayton.png',
+    featured: false,
+    content: garageBasementDeepCleanContent,
+    faqs: [
+      {
+        question: 'How often should you deep clean a garage?',
+        answer: 'Once or twice a year covers most households — once in spring to clear winter salt and grime, and again in fall before things get buried under holiday storage. Garages that double as a workshop or see heavy vehicle use often do better with a quick floor pass every season.',
+      },
+      {
+        question: 'How do you get rid of a musty smell in a basement?',
+        answer: "Find and fix the moisture source first — a leaky window well, a downspout draining too close to the foundation, or a small crack — then run a dehumidifier set to 45-50% relative humidity and clean any visible mildew with a diluted bleach or vinegar solution. Treating the smell without addressing the moisture source means it comes back within weeks.",
+      },
+      {
+        question: "What's the best humidity setting for a basement dehumidifier?",
+        answer: '45-50% relative humidity is the target range most HVAC professionals recommend. Below 30% can dry out wood furniture and finishes; above 50% starts giving mold and mildew the moisture they need to grow, which is common in Dayton-area basements during humid summer months.',
+      },
+      {
+        question: 'How do you remove oil and grease stains from a concrete garage floor?',
+        answer: "Absorb fresh spills immediately with cat litter, baking soda, or cornstarch before they soak in. For stains that have already set, apply a concrete degreaser, let it dwell per the label, then scrub with a stiff push broom and rinse thoroughly. Dish soap alone isn't strong enough to break down set-in grease.",
+      },
+      {
+        question: 'Should you seal a garage floor after cleaning it?',
+        answer: 'Yes, if the floor is bare concrete. A sealer keeps future oil, salt, and grime from soaking into the porous surface, which makes every future cleaning faster and less involved. Apply it to a fully clean, dry floor during a stretch of mild, low-humidity weather so it cures properly.',
+      },
+      {
+        question: 'Are older Dayton-area basements more prone to moisture problems?',
+        answer: 'Often, yes. A lot of Dayton, Oakwood, and Kettering housing stock dates to before 1960, when concrete block foundations were commonly built without the vapor barriers standard in newer construction. That makes gradual moisture intrusion more common, which is exactly why humidity control matters more in these basements than in a newer build.',
+      },
+      {
+        question: 'What should never be stored directly on a basement floor?',
+        answer: 'Cardboard boxes, fabric, paper documents, and untreated wood — all of these wick up moisture quickly even from minor dampness or a seasonal humidity swing. Wire shelving or plastic totes raised on a platform protect stored items from a slow leak or a humid stretch of weather.',
+      },
+    ],
+    howToTitle: 'How to Deep Clean a Garage or Basement',
+    howToSteps: [
+      { name: 'Sort everything into four piles', text: 'Split items into keep-and-it-has-a-home, keep-but-store-elsewhere, donate/sell, and toss before any cleaning starts, working one section at a time.' },
+      { name: 'Absorb and treat concrete floor stains', text: 'Cover fresh oil or grease with cat litter or baking soda, then use a concrete degreaser and stiff push broom on set-in stains and a rust remover on rust spots.' },
+      { name: 'Seal the concrete floor once dry', text: 'Apply a concrete sealer to a fully clean, dry floor during mild, low-humidity weather so future spills and salt no longer soak in as deeply.' },
+      { name: 'Set a basement dehumidifier to 45-50% humidity', text: 'Run it continuously through Dayton\'s humid summer months to stop mold and mildew from getting a foothold in the room with the least airflow.' },
+      { name: 'Clean visible mildew and find the moisture source', text: 'Scrub mildew on non-porous surfaces with a diluted bleach or vinegar solution, then check window wells, downspouts, and foundation cracks so it doesn\'t return.' },
+      { name: 'Install wall-mounted or raised storage', text: 'Move stored items off the floor onto pegboards, wall shelving, or a raised platform so nothing wicks up moisture or blocks the next cleaning pass.' },
+    ],
+  },
+  {
+    slug: 'how-to-clean-windows-streak-free-dayton',
+    title: "How to Clean Windows Streak-Free: A Dayton Homeowner's Guide",
+    description: "Streaky windows in Dayton usually mean hard water, not bad technique. Here's the tool, solution, and step-by-step method that actually gets glass clear.",
+    publishedAt: '2026-09-08',
+    updatedAt: '2026-09-08',
+    author: 'Chris Wilson',
+    category: 'Cleaning Tips',
+    tags: ['window cleaning', 'streak-free', 'hard water', 'cleaning tips', 'Dayton'],
+    keywords: [
+      'how to clean windows streak free',
+      'streak free window cleaning tips',
+      'best window cleaning solution for hard water spots',
+      'how to clean window tracks and screens',
+      'why do windows still streak after cleaning',
+      'best time of day to clean windows',
+      'how often should you clean windows',
+      'does vinegar damage aluminum window tracks',
+      'window cleaning Dayton Ohio',
+      'clean windows without streaks',
+    ],
+    problem: "Most window-cleaning advice blames streaks on technique alone, but in the Dayton area even correct technique streaks because hard tap water leaves a mineral film behind as it evaporates.",
+    solution: 'A tool-and-technique method — squeegee and microfiber, a vinegar-water solution, top-down overlapping strokes, and separate care for aluminum tracks and screens — that accounts for hard water instead of ignoring it.',
+    targetAudience: 'Dayton-area homeowners and renters — across Kettering, Centerville, Beavercreek, and Oakwood — dealing with streaky windows despite following generic cleaning advice',
+    coverImage: '/images/blog/how-to-clean-windows-streak-free-dayton.png',
+    featured: false,
+    content: windowsStreakFreeContent,
+    faqs: [
+      {
+        question: "What's the best time of day to clean windows?",
+        answer: "Overcast, dry weather beats a sunny afternoon every time. Direct sunlight heats the glass and dries your cleaning solution before you can wipe it off evenly, and that half-dried residue is exactly what shows up as streaks once the glass cools. If you can only clean on a sunny day, work in the shaded side of the house first and move around as the sun shifts.",
+      },
+      {
+        question: 'Does vinegar damage window tracks or frames?',
+        answer: "It can, depending on the material. Vinegar is safe and effective on glass, but on aluminum window tracks — common in older Dayton-area homes — repeated acid exposure pits and dulls the anodized finish over time. Clean tracks with warm soapy water and a soft brush instead, and save the vinegar solution for the glass itself.",
+      },
+      {
+        question: 'Why do my windows still streak after I clean them?',
+        answer: 'The most common causes are cleaning in direct sun, using a cloth or paper towel instead of a squeegee, and hard water mineral film. In the Dayton area specifically, tap water lands in the "hard" range even after county treatment, so any water left to air-dry on glass — from a rinse, rain, or an overly wet cloth — leaves a faint mineral haze behind. Switching to a squeegee and drying edges immediately usually solves it.',
+      },
+      {
+        question: 'How often should windows be cleaned?',
+        answer: 'Twice a year for most homes — once in spring after pollen season and once in fall — keeps glass looking clear without much upkeep. Homes near busy roads, with pets, or with kids leaving fingerprints on interior glass often do better with a quick interior wipe-down monthly, saving the full inside-and-out clean for the twice-yearly pass.',
+      },
+      {
+        question: 'Is a squeegee really necessary, or will microfiber alone work?',
+        answer: "Microfiber alone can get glass clean, but it's much harder to get it streak-free, especially on larger panes. A squeegee pulls water and dissolved minerals off the surface in a single controlled pass, while a cloth alone tends to push water around and leave thin trails that dry into streaks. For anything bigger than a small bathroom window, a squeegee makes the job faster and the result more consistent.",
+      },
+      {
+        question: "What's causing the cloudy film that won't wipe off?",
+        answer: "That's almost always mineral scale from hard water, not dirt — and dry-wiping won't remove it because there's nothing loose to pick up. It needs a mild acid to dissolve the deposit first. Spray the glass with a vinegar-water solution, let it sit for a minute on stubborn spots, then squeegee and dry. If the film is thick from months of buildup, a second pass usually finishes the job.",
+      },
+    ],
+    howToTitle: 'How to Clean Windows Streak-Free',
+    howToSteps: [
+      { name: 'Pick a cloudy, dry day', text: "Avoid direct sun, which dries your cleaning solution too fast and leaves half-dried residue that shows up as streaks once the glass cools." },
+      { name: 'Clear loose dirt first', text: 'Do a dry microfiber pass or quick brush to remove grit before adding any liquid, so it does not turn into mud once wet.' },
+      { name: 'Spray an even vinegar solution', text: 'Mix one part white vinegar to two parts water and spray the glass evenly from top to bottom.' },
+      { name: 'Squeegee top-down in overlapping strokes', text: 'Wipe the squeegee blade dry with a cloth between passes. Working top to bottom keeps drips from re-wetting glass you already cleaned.' },
+      { name: 'Dry the edges immediately', text: 'Use a dry microfiber cloth on the sill and corners where the squeegee misses, before the last bit of moisture evaporates into a streak.' },
+    ],
   },
   {
     slug: 'how-to-clean-1970s-xenia-home-room-by-room',
