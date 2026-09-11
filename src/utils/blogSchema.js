@@ -25,6 +25,7 @@ export const generateBlogPostingStructuredData = (post, url) => {
     dateModified: post.updatedAt || post.publishedAt,
     author: {
       '@type': 'Person',
+      '@id': `${SITE_URL}/about-us#chris-wilson`,
       name: post.author || 'Chris Wilson',
       url: `${SITE_URL}/about-us`,
       jobTitle: 'Co-Owner',

@@ -42,6 +42,7 @@ import '../../styles/pages/ResidentialPage.css'
 
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
+import { GBP_REVIEW_URL } from '../../utils/localBusinessSchema'
 
 const RecurringCleaningPage = () => {
   const theme = useTheme()
@@ -561,27 +562,34 @@ const RecurringCleaningPage = () => {
           </Typography>
 
           {/* Trust indicator */}
-          <Box 
-            sx={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              alignItems: 'center', 
-              gap: 2, 
+          <Box
+            component="a"
+            href={GBP_REVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: 2,
               mb: 4,
-              minHeight: 40
+              minHeight: 40,
+              textDecoration: 'none',
+              cursor: 'pointer',
+              '&:hover': { opacity: 0.85 }
             }}
           >
-            <Rating 
-              value={4.6} 
-              precision={0.5} 
-              readOnly 
-              size="large" 
-              sx={{ 
+            <Rating
+              value={4.6}
+              precision={0.5}
+              readOnly
+              size="large"
+              sx={{
                 color: '#FFD700',
                 '& .MuiRating-icon': {
                   fontSize: '2rem'
                 }
-              }} 
+              }}
             />
             <Typography
               variant="h6"
@@ -590,7 +598,8 @@ const RecurringCleaningPage = () => {
                 color: '#FFD700',
                 fontWeight: 600,
                 fontFamily: 'Inter, sans-serif',
-                minWidth: 200
+                minWidth: 200,
+                textDecoration: 'underline'
               }}
             >
               4.6/5 stars • 90+ reviews

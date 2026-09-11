@@ -20,6 +20,8 @@ import HomeIcon from '@mui/icons-material/Home'
 import BusinessIcon from '@mui/icons-material/Business'
 import { Helmet } from 'react-helmet-async'
 import { QUOTE_FORMS } from '../utils/quoteForms'
+import { GBP_REVIEW_URL } from '../utils/localBusinessSchema'
+import TrustBlock from '../components/TrustBlock'
 
 // Import the styling
 import '../styles/homepages/HomePage.css'
@@ -437,36 +439,44 @@ const QuotePage = () => {
           </Typography>
 
           {/* Trust indicator */}
-          <Box 
-            sx={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              alignItems: 'center', 
-              gap: 2, 
+          <Box
+            component="a"
+            href={GBP_REVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: 2,
               mb: 4,
-              minHeight: 40
+              minHeight: 40,
+              textDecoration: 'none',
+              cursor: 'pointer',
+              '&:hover': { opacity: 0.85 }
             }}
           >
-            <Rating 
-              value={4.6} 
-              precision={0.5} 
-              readOnly 
-              size="large" 
-              sx={{ 
+            <Rating
+              value={4.6}
+              precision={0.5}
+              readOnly
+              size="large"
+              sx={{
                 color: '#FFD700',
                 '& .MuiRating-icon': {
                   fontSize: '2rem'
                 }
-              }} 
+              }}
             />
-            <Typography 
+            <Typography
               variant="h6"
               component="p"
-              sx={{ 
-                color: '#FFD700', 
+              sx={{
+                color: '#FFD700',
                 fontWeight: 600,
                 fontFamily: 'Inter, sans-serif',
-                minWidth: 200
+                minWidth: 200,
+                textDecoration: 'underline'
               }}
             >
               4.6/5 stars • 90+ reviews
@@ -619,11 +629,13 @@ const QuotePage = () => {
         </Box>
       </Container>
 
+      <TrustBlock variant="compact" />
+
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Grid container spacing={4}>
           <Grid item xs={12} md={8}>
             {/* Form Container with better integration */}
-            <Paper 
+            <Paper
               id="quote-form"
               elevation={2}
               sx={{ 
