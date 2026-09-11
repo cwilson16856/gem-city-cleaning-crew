@@ -22,23 +22,33 @@ import { getCityBySlug } from '../data/locations'
 import { generateSEOTitle, generateCanonicalUrl } from '../utils/seo'
 import {
   generateServiceSchema,
-  generateLocationWebPageSchema
+  generateLocationWebPageSchema,
+  generateFAQPageSchema
 } from '../utils/localBusinessSchema'
 
 // Shared, service-type-aware content for the "What's Included" / "How It
-// Works" / FAQ sections below — added 2026-09-11 (SEO audit, Critical
-// finding: 30 of 32 location pages ran 121-268 words, well under the
-// 500-600 word floor for the page type). Deliberately generic-but-genuine
-// service description rather than per-city facts, since a template shared
-// by every city page has no reliable way to verify a NEW city-specific claim
-// (a landmark, a business name) — that risk is exactly what the audit's
-// "scaled content abuse" check flags. Every fact asserted here already
-// exists elsewhere on the site (ResidentialPage.jsx / CommercialPage.jsx
-// FAQs, Footer.jsx's "Licensed • Insured" line) — this reuses and localizes
-// it, it doesn't introduce new claims. No FAQPage schema is added for this
-// content — Google retired FAQ rich results for all sites May 7 2026, and
-// per the audit's own quality-gate rule, new FAQPage schema isn't
-// recommended for SERP benefit; this is plain on-page content only.
+// Works" sections below — added 2026-09-11 (SEO audit, Critical finding: 30
+// of 32 location pages ran 121-268 words, well under the 500-600 word floor
+// for the page type). Deliberately generic-but-genuine service description
+// rather than per-city facts, since a template shared by every city page has
+// no reliable way to verify a NEW city-specific claim (a landmark, a
+// business name) — that risk is exactly what the audit's "scaled content
+// abuse" check flags. Every fact asserted here already exists elsewhere on
+// the site (ResidentialPage.jsx / CommercialPage.jsx FAQs, Footer.jsx's
+// "Licensed • Insured" line) — this reuses and localizes it, it doesn't
+// introduce new claims.
+//
+// The FAQ block below is NOT shared like this — see `content.faqs` in
+// `src/data/locations.js`, unique per city/service-type and grounded only in
+// that city's own already-verified facts (landmarks/zips/intro) or the same
+// already-published company-wide facts referenced above. FAQPage schema IS
+// added for that content (see `generateFAQPageSchema` below) — not for a
+// rich-result/SERP claim (Google retired FAQ rich results for all sites May
+// 7 2026, still true), but so crawlers and LLM answer engines can parse the
+// Q&A pairing directly. This fixed a 2026-09-11 audit follow-up finding: the
+// old fully-shared FAQ block (identical on all 30 pages) was the largest
+// contributor to a 46-80% textual-similarity finding across the location
+// pages.
 const WHATS_INCLUDED = {
   residential: [
     'Kitchens — countertops, appliance exteriors, sinks, and cabinet fronts',
@@ -62,19 +72,6 @@ const HOW_IT_WORKS = [
   { title: 'Trained crew arrives', body: 'Every cleaner completes three months of training before working independently.' },
   { title: 'Consistent results', body: 'The same standards every visit, with easy rescheduling if your plans change.' }
 ]
-
-const LOCATION_FAQ = {
-  residential: [
-    { q: 'Do I need to be home during the cleaning?', a: 'No — many clients provide access instructions and go about their day. It\'s entirely up to what works for you.' },
-    { q: 'Do you bring your own cleaning supplies?', a: 'Yes, our trained crews bring their own tools and supplies. If you have a sensitivity and want us to use something specific instead, we can accommodate that.' },
-    { q: 'What if I need to reschedule?', a: 'No long-term contracts means flexible rescheduling — just give us a call ahead of your appointment.' }
-  ],
-  commercial: [
-    { q: 'Can you clean after business hours?', a: 'Yes — we offer flexible scheduling including evenings and weekends so cleaning never disrupts your operations.' },
-    { q: 'Do you provide cleaning supplies and equipment?', a: 'Yes, we bring all necessary supplies and equipment, using commercial-grade products that are effective yet safe for your workplace.' },
-    { q: 'Are your cleaners licensed and insured?', a: 'Yes — Gem City Cleaning Crew is licensed and insured for every job.' }
-  ]
-}
 
 // Service areas with their details — used only by the generic /locations index
 // page below (not by the per-city pages, which pull from src/data/locations.js).
@@ -270,6 +267,7 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
       { name: content.breadcrumbLabel, url: canonicalUrl }
     ]
   })
+  const faqSchema = content.faqs?.length ? generateFAQPageSchema(content.faqs) : null
 
   return (
     <>
@@ -283,6 +281,7 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
         <meta property="og:description" content={content.metaDescription} />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
+        {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
       </Helmet>
 
       <HeroSection
@@ -366,13 +365,13 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
           <Typography variant="h5" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             {cityData.name} {serviceType === 'residential' ? 'House' : 'Commercial'} Cleaning FAQ
           </Typography>
-          {LOCATION_FAQ[serviceType].map((item) => (
-            <Box key={item.q} sx={{ mb: 2.5 }}>
+          {content.faqs.map((item) => (
+            <Box key={item.question} sx={{ mb: 2.5 }}>
               <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 0.5 }}>
-                {item.q}
+                {item.question}
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6 }}>
-                {item.a}
+                {item.answer}
               </Typography>
             </Box>
           ))}
