@@ -207,7 +207,17 @@ const PostConstructionCleaning = () => {
               color: 'white',
               fontWeight: 600,
               fontSize: '0.9rem',
-              px: 2
+              px: 2,
+              height: 'auto',
+              maxWidth: { xs: '90%', sm: 'none' },
+              '& .MuiChip-label': {
+                display: 'block',
+                whiteSpace: 'normal',
+                overflow: 'visible',
+                textOverflow: 'clip',
+                lineHeight: 1.4,
+                py: 0.75
+              }
             }}
           />
 
