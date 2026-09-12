@@ -208,31 +208,6 @@
 }
 
 /* ========================================
-   VIDEO SECTION
-   ======================================== */
-
-.video-container {
-  position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s ease;
-}
-
-.video-container:hover {
-  transform: scale(1.02);
-  box-shadow: 0 32px 80px rgba(233, 30, 99, 0.3);
-}
-
-.video-container video {
-  transition: all 0.3s ease;
-}
-
-.video-container:hover video {
-  filter: brightness(1.1) contrast(1.1);
-}
-
-/* ========================================
    TESTIMONIALS SECTION
    ======================================== */
 
