@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { 
   Container, 
   Typography, 
@@ -30,7 +30,12 @@ import '../styles/pages/ResidentialPage.css'
 const QuotePage = () => {
   // This page is titled/optimized around house cleaning, so it defaults to the
   // residential form, but visitors can switch to Commercial without leaving the page.
-  const [serviceType, setServiceType] = useState('residential')
+  // A commercial-context referrer (e.g. /office-cleaning, /retail-cleaning,
+  // /industrial-cleaning) can land here pre-set to Commercial via ?type=commercial
+  // without duplicating this page for a second, commercial-only variant.
+  const [searchParams] = useSearchParams()
+  const initialServiceType = searchParams.get('type') === 'commercial' ? 'commercial' : 'residential'
+  const [serviceType, setServiceType] = useState(initialServiceType)
   const [formLoaded, setFormLoaded] = useState(false)
   const theme = useTheme()
   const activeForm = QUOTE_FORMS[serviceType]
@@ -416,7 +421,7 @@ const QuotePage = () => {
               lineHeight: 1.1
             }}
           >
-            Get Your FREE House Cleaning Quote Today
+            {`Get Your FREE ${serviceType === 'commercial' ? 'Commercial' : 'House'} Cleaning Quote Today`}
           </Typography>
           
           <Typography 
@@ -433,7 +438,9 @@ const QuotePage = () => {
               mx: 'auto'
             }}
           >
-            Professional House Cleaning Quotes • Same-Day Response • Dayton, OH
+            {serviceType === 'commercial'
+              ? 'Professional Commercial Cleaning Quotes • Same-Day Response • Dayton, OH'
+              : 'Professional House Cleaning Quotes • Same-Day Response • Dayton, OH'}
           </Typography>
 
           <Typography 
