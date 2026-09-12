@@ -43,10 +43,29 @@
       gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-NB7YB5WJNN';
       document.head.appendChild(gtagScript);
     }
+    // 'load' fires once resources finish network-loading -- it says nothing
+    // about whether the main thread is actually free. Layering
+    // requestIdleCallback on top pushes the script-injection work itself
+    // into a genuine idle slot instead of running synchronously inside the
+    // load handler, so it can't land inside the same window LCP is trying
+    // to complete in. { timeout: 4000 } guarantees it still fires even if
+    // the main thread is never fully idle. setTimeout is the fallback for
+    // Safari and other browsers without native requestIdleCallback support.
+    // See 2026-09-11 SEO audit follow-up, "mobile LCP still Poor" finding.
+    function _scheduleIdle(fn, timeout) {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(fn, { timeout: timeout });
+      } else {
+        setTimeout(fn, timeout);
+      }
+    }
+    function _onLoaded() {
+      _scheduleIdle(_loadDeferredTrackingScripts, 4000);
+    }
     if (document.readyState === 'complete') {
-      _loadDeferredTrackingScripts();
+      _onLoaded();
     } else {
-      window.addEventListener('load', _loadDeferredTrackingScripts);
+      window.addEventListener('load', _onLoaded);
     }
     </script>
 

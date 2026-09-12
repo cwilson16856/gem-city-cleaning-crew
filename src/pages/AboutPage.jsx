@@ -20,6 +20,7 @@ import StarIcon from '@mui/icons-material/Star'
 import ShieldIcon from '@mui/icons-material/Shield'
 import HomeWorkIcon from '@mui/icons-material/HomeWork'
 import SchoolIcon from '@mui/icons-material/School'
+import TrustBlock from '../components/TrustBlock'
 
 const coreValues = [
   {
@@ -146,7 +147,7 @@ const AboutPage = () => {
           the opposite: no contracts, and wherever possible, the same trained cleaner on your home or
           business every time, so they actually know it.
         </Typography>
-        <Typography variant="body1" sx={{ mb: 6, fontSize: '1.1rem', lineHeight: 1.7 }}>
+        <Typography variant="body1" sx={{ mb: 4, fontSize: '1.1rem', lineHeight: 1.7 }}>
           Every cleaner on our team goes through our{' '}
           <Link to="/our-training-program" style={{ color: theme.palette.primary.main, fontWeight: 600 }}>
             three-month training program
@@ -154,6 +155,48 @@ const AboutPage = () => {
           before working independently in a client&apos;s home or business — it&apos;s not a one-day orientation,
           it&apos;s how we make sure the standard we set is the standard you actually get.
         </Typography>
+
+        {/* Landing point for the blog byline link (/about-us#chris-wilson)
+            and the LocalBusiness founder schema's @id (see
+            localBusinessSchema.js / blogSchema.js) -- previously those
+            pointed at nothing more specific than the page itself. See
+            2026-09-11 SEO audit follow-up, "blog byline mismatch" finding. */}
+        <Grid container spacing={3} sx={{ mb: 6 }}>
+          <Grid item xs={12} sm={6}>
+            <Card id="chris-wilson" sx={{ height: '100%' }}>
+              <CardContent sx={{ p: 3 }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 700, mb: 0.5 }}>
+                  Chris Wilson
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 1.5, fontWeight: 600 }}>
+                  Co-Owner
+                </Typography>
+                <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
+                  Chris co-founded Gem City Cleaning Crew with Macy in 2017 and writes the cleaning
+                  guides on the GCCC blog, drawing on what the crews actually run into cleaning homes
+                  and businesses across Dayton every week.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Card id="macy-wilson" sx={{ height: '100%' }}>
+              <CardContent sx={{ p: 3 }}>
+                <Typography variant="h6" component="h3" sx={{ fontWeight: 700, mb: 0.5 }}>
+                  Macy Wilson
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 1.5, fontWeight: 600 }}>
+                  Co-Owner
+                </Typography>
+                <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
+                  Macy co-founded Gem City Cleaning Crew with Chris in 2017, built the three-month
+                  training program every cleaner completes, and oversees the day-to-day standard the
+                  team is held to on every visit.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
 
         <Typography variant="h2" component="h2" sx={{ mb: 4, textAlign: 'center', color: theme.palette.primary.main, fontWeight: 700 }}>
           Our Core Values
@@ -191,7 +234,11 @@ const AboutPage = () => {
             </Grid>
           ))}
         </Grid>
+      </Container>
 
+      <TrustBlock variant="full" />
+
+      <Container maxWidth="md" sx={{ py: 8 }}>
         <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Chip
             icon={<SchoolIcon />}
