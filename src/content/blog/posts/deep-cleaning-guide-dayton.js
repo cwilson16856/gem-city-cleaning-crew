@@ -70,6 +70,8 @@ const content = `
 
 <h3 id="faq-cost-factors">What affects how much a deep clean costs?</h3>
 <p>The main factors are square footage, how long it's been since the last deep clean (more time generally means more buildup and more hours), the number of bathrooms and kitchens (the most labor-intensive rooms), and any add-ons like inside-appliance detailing or interior window cleaning. Every home is different, so <a href="https://gemcitycleaningcrew.com/quote">a free quote</a> based on your specific space is the fastest way to get an accurate number.</p>
+
+<p class="related-links">Ready to book? See our <a href="/deep-cleaning">deep cleaning service</a> page for what's included and how to schedule.</p>
 `
 
 export default content

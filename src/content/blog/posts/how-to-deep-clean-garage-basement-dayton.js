@@ -5,7 +5,7 @@ const content = `
 
 <h2 id="why-different">Why Garages and Basements Need a Different Approach</h2>
 <p>Most of the house responds to a vacuum and a mop. Garages and basements don't, because the problems aren't the same. A garage floor deals with motor oil, road salt, and grease ground in by tires and boots — porous concrete that a normal all-purpose cleaner barely touches. A basement deals with moisture: Dayton's humid summers push relative humidity into a range where mold and mildew take hold in a room that already gets the least airflow in the house.</p>
-<p>That's why a real garage-or-basement deep clean is really three separate jobs — decluttering, floor care, and (in basements) humidity control — done in that order. Skipping the declutter step means cleaning around piles instead of the floor itself, and skipping humidity control means any surface cleaning gets undone within a season.</p>
+<p>That's why a real garage-or-basement deep clean is really three separate jobs — decluttering, floor care, and (in basements) humidity control — done in that order. If you're tackling the rest of the house at the same time, our <a href="/blog/deep-cleaning-guide-dayton">full deep cleaning guide</a> covers what a whole-home deep clean actually includes. Skipping the declutter step means cleaning around piles instead of the floor itself, and skipping humidity control means any surface cleaning gets undone within a season.</p>
 
 <h2 id="declutter">Declutter First: A Weekend System That Actually Sticks</h2>
 <p>Garages and basements are where things go to be decided on later, so before any cleaning starts, sort everything into four groups. Doing this in one focused weekend keeps it from turning into a project that stalls halfway through:</p>

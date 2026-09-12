@@ -968,12 +968,23 @@ const MoveOutCleaningPage = () => {
         </Grid>
       </Container>
 
+      {/* Related guides */}
+      <Container maxWidth="md" sx={{ pb: 6 }}>
+        <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+          Planning a move-out clean? Read our full{' '}
+          <Link to="/blog/move-out-transitions-guide-dayton" style={{ color: theme.palette.primary.main, fontWeight: 600 }}>
+            move-out cleaning guide
+          </Link>{' '}
+          for what landlords actually check and how to document the clean.
+        </Typography>
+      </Container>
+
       {/* Final CTA */}
-      <Box 
+      <Box
         id="get-quote"
-        sx={{ 
-          backgroundColor: theme.palette.primary.main, 
-          color: 'white', 
+        sx={{
+          backgroundColor: theme.palette.primary.main,
+          color: 'white',
           py: 8,
           background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.dark} 100%)`
         }}

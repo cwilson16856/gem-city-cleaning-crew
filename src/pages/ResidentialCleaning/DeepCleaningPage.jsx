@@ -828,6 +828,17 @@ const DeepCleaningPage = () => {
         <AreasWeServe />
       </div>
 
+      {/* Related guides */}
+      <Container maxWidth="md" sx={{ pb: 6 }}>
+        <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+          Want the full room-by-room breakdown? Read our{' '}
+          <Link to="/blog/deep-cleaning-guide-dayton" style={{ color: theme.palette.primary.main, fontWeight: 600 }}>
+            deep cleaning guide
+          </Link>{' '}
+          for what&apos;s included and how often to schedule it.
+        </Typography>
+      </Container>
+
       {/* Final CTA */}
       <Box 
         id="get-quote"
