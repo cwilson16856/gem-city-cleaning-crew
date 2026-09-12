@@ -289,7 +289,17 @@ const OfficeCleaningChecklist = () => {
               fontSize: '0.9rem',
               px: 2,
               textShadow: 'none',
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+              height: 'auto',
+              maxWidth: { xs: '90%', sm: 'none' },
+              '& .MuiChip-label': {
+                display: 'block',
+                whiteSpace: 'normal',
+                overflow: 'visible',
+                textOverflow: 'clip',
+                lineHeight: 1.4,
+                py: 0.75
+              }
             }} 
           />
           
@@ -979,10 +989,10 @@ const OfficeCleaningChecklist = () => {
       {/* CTA Section */}
       <Box className="commercial-cta-section" sx={{ color: 'white', py: 8 }}>
         <Container maxWidth="md" sx={{ textAlign: 'center', position: 'relative', zIndex: 2 }}>
-          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+          <Typography variant="h3" component="h2" sx={{ color: 'white', mb: 2, fontWeight: 600 }}>
             Ready for Professional Office Cleaning?
           </Typography>
-          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ color: 'white', mb: 4, opacity: 0.9 }}>
             Let our trained professionals handle your office cleaning with this comprehensive checklist approach.
           </Typography>
           
