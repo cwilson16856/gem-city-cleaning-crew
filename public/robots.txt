@@ -4,6 +4,13 @@
 User-agent: *
 Allow: /
 
+# Disallow only debug artifacts, not rendering resources — Google needs JS/CSS
+# to evaluate mobile usability and render the page correctly
+Disallow: /*.map$
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
 # AI answer-engine / LLM crawlers — explicitly allowed for AI Overview /
 # AI-answer-engine discoverability
 User-agent: GPTBot
@@ -27,12 +34,5 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Disallow only debug artifacts, not rendering resources — Google needs JS/CSS
-# to evaluate mobile usability and render the page correctly
-Disallow: /*.map$
-
 # Sitemap location
 Sitemap: https://gemcitycleaningcrew.com/sitemap.xml
-
-# Crawl delay for polite crawling
-Crawl-delay: 1

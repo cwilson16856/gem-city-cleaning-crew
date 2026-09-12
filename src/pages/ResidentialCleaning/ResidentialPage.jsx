@@ -786,23 +786,6 @@ const ResidentialPage = () => {
         </Container>
       </Box>
 
-      {/* Video Section */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Box sx={{ maxWidth: 800, mx: 'auto' }}>
-          <Card className="residential-video-container" sx={{ borderRadius: 3, overflow: 'hidden' }}>
-            <video
-              controls
-              style={{ width: '100%', height: 'auto' }}
-              poster="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
-              aria-label="Meet the Gem City Cleaning Crew professional team"
-            >
-              <source src="/images/legacy/Gem-City-Video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </Card>
-        </Box>
-      </Container>
-
       {/* FAQ Section */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }} id="faq">
         <Container maxWidth="lg">
