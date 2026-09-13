@@ -241,7 +241,7 @@ function App() {
             <Route path="/locations/xenia/house-cleaning-services" element={<XeniaHouseCleaningPage />} />
             <Route path="/locations/:city/house-cleaning-services" element={<LocationPage serviceType="residential" />} />
             <Route path="/locations/:city/commercial-cleaning-services" element={<LocationPage serviceType="commercial" />} />
-            <Route path="/locations/beavercreek/commercial-services" element={<BeavercreekCommercialPage />} />
+            <Route path="/locations/beavercreek/commercial-cleaning-services" element={<BeavercreekCommercialPage />} />
             <Route path="/quote" element={<QuotePage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<PostPage />} />

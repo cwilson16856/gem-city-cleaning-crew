@@ -47,9 +47,13 @@ test.describe('Location Pages', () => {
     expect(types).toEqual(expect.arrayContaining(['LocalBusiness', 'Service', 'WebPage', 'FAQPage']))
   })
 
-  test('redirects Beavercreek commercial to its dedicated page', async ({ page }) => {
+  test('serves the dedicated Beavercreek commercial page at the standard URL pattern', async ({ page }) => {
+    // The old URL's 301 (vercel.json) is a platform-level redirect `vite
+    // preview` never executes -- it can only be verified against the real
+    // production/preview deployment (see this PR's description), not here.
     await page.goto('/locations/beavercreek/commercial-cleaning-services')
-    await expect(page).toHaveURL(/\/locations\/beavercreek\/commercial-services$/)
+    await expect(page).toHaveURL(/\/locations\/beavercreek\/commercial-cleaning-services$/)
+    await expect(page.locator('h1')).toContainText('Beavercreek', { timeout: 10_000 })
   })
 
   test('shows 404 for an unmapped city slug', async ({ page }) => {

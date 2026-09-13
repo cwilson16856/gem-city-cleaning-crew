@@ -162,7 +162,7 @@ const Header = () => {
     { label: 'Locations', type: 'header' },
     { label: 'Dayton', path: '/locations/dayton/commercial-cleaning-services', description: 'Commercial Cleaning Services in Dayton' },
     { label: 'Kettering', path: '/locations/kettering/commercial-cleaning-services', description: 'Commercial Cleaning Services in Kettering' },
-    { label: 'Beavercreek', path: '/locations/beavercreek/commercial-services', description: 'Elite Commercial Cleaning Services in Beavercreek' },
+    { label: 'Beavercreek', path: '/locations/beavercreek/commercial-cleaning-services', description: 'Elite Commercial Cleaning Services in Beavercreek' },
     { label: 'Centerville', path: '/locations/centerville/commercial-cleaning-services', description: 'Commercial Cleaning Services in Centerville' },
     { label: 'View All Locations', path: '/locations', description: 'See all areas we serve', type: 'action' }
   ]
@@ -522,7 +522,7 @@ const Header = () => {
                   <MenuItem 
                     key={city}
                     component={Link}
-                    to={city === 'Beavercreek' ? '/locations/beavercreek/commercial-services' : `/locations/${city.toLowerCase().replace(/\s+/g, '-')}/commercial-cleaning-services`}
+                    to={`/locations/${city.toLowerCase().replace(/\s+/g, '-')}/commercial-cleaning-services`}
                     onClick={handleLocationsMenuClose}
                     sx={{ 
                       minWidth: 280,
@@ -535,7 +535,7 @@ const Header = () => {
                         {city}
                       </Typography>
                       <Typography variant="caption" sx={{ color: theme.palette.text.secondary }}>
-                        {city === 'Beavercreek' ? 'Elite Commercial Cleaning Services in Beavercreek' : `Commercial Cleaning Services in ${city}`}
+                        {`Commercial Cleaning Services in ${city}`}
                       </Typography>
                     </Box>
                   </MenuItem>

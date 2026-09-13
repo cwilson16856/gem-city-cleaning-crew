@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
-import { Link, useLocation, useParams, Navigate } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import {
   Container,
@@ -85,7 +85,7 @@ const serviceAreas = [
   { city: 'Huber Heights', residential: { title: 'House Cleaning Services in Huber Heights', path: '/locations/huber-heights/house-cleaning-services' }, commercial: { title: 'Commercial Cleaning Services in Huber Heights', path: '/locations/huber-heights/commercial-cleaning-services' } },
   { city: 'Riverside', residential: { title: 'House Cleaning Services in Riverside', path: '/locations/riverside/house-cleaning-services' }, commercial: { title: 'Commercial Cleaning Services in Riverside', path: '/locations/riverside/commercial-cleaning-services' } },
   { city: 'Xenia', residential: { title: 'House Cleaning Services in Xenia', path: '/locations/xenia/house-cleaning-services' }, commercial: { title: 'Commercial Cleaning Services in Xenia', path: '/locations/xenia/commercial-cleaning-services' } },
-  { city: 'Beavercreek', residential: { title: 'House Cleaning Services in Beavercreek', path: '/locations/beavercreek/house-cleaning-services' }, commercial: { title: '7+ Elite Commercial Cleaning Services in Beavercreek', path: '/locations/beavercreek/commercial-services' } },
+  { city: 'Beavercreek', residential: { title: 'House Cleaning Services in Beavercreek', path: '/locations/beavercreek/house-cleaning-services' }, commercial: { title: '7+ Elite Commercial Cleaning Services in Beavercreek', path: '/locations/beavercreek/commercial-cleaning-services' } },
   { city: 'Fairborn', residential: { title: 'House Cleaning Services in Fairborn', path: '/locations/fairborn/house-cleaning-services' }, commercial: { title: 'Commercial Cleaning Services in Fairborn', path: '/locations/fairborn/commercial-cleaning-services' } },
   { city: 'Yellow Springs', residential: { title: 'House Cleaning Services in Yellow Springs', path: '/locations/yellow-springs/house-cleaning-services' }, commercial: { title: 'Commercial Cleaning Services in Yellow Springs', path: '/locations/yellow-springs/commercial-cleaning-services' } },
   { city: 'Tipp City', residential: { title: 'House Cleaning Services in Tipp City', path: '/locations/tipp-city/house-cleaning-services' }, commercial: { title: 'Commercial Cleaning Services in Tipp City', path: '/locations/tipp-city/commercial-cleaning-services' } },
@@ -404,10 +404,6 @@ const LocationPage = ({ serviceType }) => {
 
   if (!serviceType) {
     return <LocationsIndex />
-  }
-
-  if (citySlug === 'beavercreek' && serviceType === 'commercial') {
-    return <Navigate to="/locations/beavercreek/commercial-services" replace />
   }
 
   return (

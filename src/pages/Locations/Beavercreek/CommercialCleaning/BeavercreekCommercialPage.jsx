@@ -41,7 +41,7 @@ import {
   generateLocationWebPageSchema
 } from '../../../../utils/localBusinessSchema'
 
-const PAGE_URL = 'https://gemcitycleaningcrew.com/locations/beavercreek/commercial-services'
+const PAGE_URL = 'https://gemcitycleaningcrew.com/locations/beavercreek/commercial-cleaning-services'
 const SERVICE_ID = `${PAGE_URL}#service`
 
 // Components

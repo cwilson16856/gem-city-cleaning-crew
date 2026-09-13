@@ -50,15 +50,15 @@ export const STATIC_ROUTES = [
 ]
 
 // City slugs with dedicated location pages — sourced from src/data/locations.js,
-// the single source of truth (also used by LocationPage.jsx itself).
-// Beavercreek's commercial page has a special dedicated route.
+// the single source of truth (also used by LocationPage.jsx itself). Every
+// city's URL follows the same pattern, including Beavercreek's commercial page
+// (which renders a dedicated component, BeavercreekCommercialPage, but at the
+// same generic URL shape as every other city).
 export const LOCATION_ROUTES = []
 for (const city of CITY_SLUGS) {
   LOCATION_ROUTES.push({ path: `/locations/${city}/house-cleaning-services`, changefreq: 'monthly', priority: '0.6' })
   LOCATION_ROUTES.push({
-    path: city === 'beavercreek'
-      ? '/locations/beavercreek/commercial-services'
-      : `/locations/${city}/commercial-cleaning-services`,
+    path: `/locations/${city}/commercial-cleaning-services`,
     changefreq: 'monthly',
     priority: '0.6',
   })
