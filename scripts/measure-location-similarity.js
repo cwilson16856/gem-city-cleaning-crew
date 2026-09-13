@@ -115,11 +115,30 @@ function report(label, cities, slug) {
   return { avg, maxSim, maxPair, exactDuplicates }
 }
 
+// Added for the 2026-09 location-page content-depth expansion -- reports
+// each page's page-owned word count and flags any page still below the
+// 900-word competitive-depth target, so a shortfall can be named by city
+// rather than only showing up as a lower average.
+function reportWordCounts(label, cities, slug) {
+  console.log(`\n=== ${label}: word counts ===`)
+  let anyBelowTarget = false
+  for (const city of cities) {
+    const words = loadWindow(city, slug).split(/\s+/).filter(Boolean).length
+    const flag = words < 900 ? ' <-- BELOW 900-WORD TARGET' : ''
+    if (words < 900) anyBelowTarget = true
+    console.log(`  ${city}: ${words} words${flag}`)
+  }
+  return anyBelowTarget
+}
+
 function main() {
   if (!fs.existsSync(DIST)) {
     console.error('[measure-location-similarity] dist/ not found -- run `npm run build` first.')
     process.exit(1)
   }
+
+  const residentialBelowTarget = reportWordCounts('Residential location pages', CITIES_RESIDENTIAL, 'house-cleaning-services')
+  const commercialBelowTarget = reportWordCounts('Commercial location pages', CITIES_COMMERCIAL, 'commercial-cleaning-services')
 
   const residential = report('Residential location pages', CITIES_RESIDENTIAL, 'house-cleaning-services')
   const commercial = report('Commercial location pages', CITIES_COMMERCIAL, 'commercial-cleaning-services')
@@ -133,6 +152,10 @@ function main() {
     process.exitCode = 1
   } else {
     console.log('\nNo byte-identical content windows between any two pages of the same service type.')
+  }
+  if (residentialBelowTarget || commercialBelowTarget) {
+    console.warn('\n[WARNING] One or more pages are below the 900-word competitive-depth target -- see word-count report above.')
+    process.exitCode = 1
   }
 }
 

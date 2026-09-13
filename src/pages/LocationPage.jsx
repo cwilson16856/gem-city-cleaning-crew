@@ -17,6 +17,8 @@ import {
 import AreasWeServe from '../components/AreasWeServe'
 import HeroSection from '../components/HeroSection'
 import QuoteForm from '../components/QuoteForm'
+import TableOfContents from '../components/TableOfContents'
+import InfoCardGrid from '../components/InfoCardGrid'
 import NotFound from './NotFound'
 import { getCityBySlug } from '../data/locations'
 import { generateSEOTitle, generateCanonicalUrl } from '../utils/seo'
@@ -95,6 +97,24 @@ const serviceAreas = [
 ]
 
 const createCityId = (city) => city.toLowerCase().replace(/\s+/g, '-')
+
+// Table of contents for CityServicePage — every in-scope page has the same
+// section set after the 2026-09 depth expansion, so this isn't data-driven
+// per city the way AreasWeServe's chip list is. The neighborhoods entry is
+// conditional since a small handful of thin-material cities (Section 5.0.2
+// of the depth-expansion plan) genuinely have no verifiable named
+// neighborhoods and omit that section entirely.
+const buildTocItems = (cityData, content, serviceType) => [
+  { text: "What's Included", href: '#whats-included' },
+  { text: 'How It Works', href: '#how-it-works' },
+  {
+    text: serviceType === 'residential' ? `Built for ${cityData.name}'s Homes` : `Built for ${cityData.name}'s Businesses`,
+    href: serviceType === 'residential' ? '#home-eras' : '#business-districts'
+  },
+  ...(cityData.neighborhoods?.length ? [{ text: `${cityData.name} Neighborhoods We Serve`, href: '#neighborhoods' }] : []),
+  { text: 'Seasonal', href: '#seasonal' },
+  { text: 'FAQ', href: '#faq' }
+]
 
 // The generic /locations overview page — unchanged from before this rewrite.
 const LocationsIndex = () => {
@@ -297,6 +317,13 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
         differentiators={['Same-Day Available', 'No Contracts', 'Local Service', 'Professional Staff']}
       />
 
+      <TableOfContents
+        items={buildTocItems(cityData, content, serviceType)}
+        collapsible
+        defaultExpanded={false}
+        showItemCount
+      />
+
       <Container maxWidth="md" sx={{ py: 8 }}>
         {content.intro.map((paragraph, i) => (
           <Typography key={i} variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
@@ -330,7 +357,7 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
           </Box>
         )}
 
-        <Box sx={{ mb: 5 }}>
+        <Box id="whats-included" sx={{ mb: 5 }}>
           <Typography variant="h5" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             What's Included in {serviceType === 'residential' ? 'House' : 'Commercial'} Cleaning in {cityData.name}
           </Typography>
@@ -343,7 +370,7 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
           </Box>
         </Box>
 
-        <Box sx={{ mb: 5 }}>
+        <Box id="how-it-works" sx={{ mb: 5 }}>
           <Typography variant="h5" component="h2" sx={{ mb: 3, fontWeight: 600 }}>
             How It Works
           </Typography>
@@ -361,7 +388,30 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
           </Grid>
         </Box>
 
-        <Box sx={{ mb: 5 }}>
+        <InfoCardGrid
+          id={serviceType === 'residential' ? 'home-eras' : 'business-districts'}
+          heading={serviceType === 'residential' ? `Built for ${cityData.name}'s Homes` : `Built for ${cityData.name}'s Businesses`}
+          items={serviceType === 'residential' ? content.homeEras : content.businessDistricts}
+          columns={3}
+        />
+
+        {cityData.neighborhoods?.length > 0 && (
+          <InfoCardGrid
+            id="neighborhoods"
+            heading={`${cityData.name} Neighborhoods We Serve`}
+            items={cityData.neighborhoods}
+            columns={3}
+          />
+        )}
+
+        <InfoCardGrid
+          id="seasonal"
+          heading={`Cleaning Around the ${cityData.name} Calendar`}
+          items={content.seasonalHooks}
+          columns={2}
+        />
+
+        <Box id="faq" sx={{ mb: 5 }}>
           <Typography variant="h5" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
             {cityData.name} {serviceType === 'residential' ? 'House' : 'Commercial'} Cleaning FAQ
           </Typography>
