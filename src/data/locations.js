@@ -19,6 +19,11 @@ export const CITIES = {
         "We clean homes throughout Dayton's 45402, 45405, 45406, 45410, 45417, and 45459 zip codes, from Downtown high-rises near the Dayton Art Institute to family homes further out. Weekly, bi-weekly, monthly, or one-time — we'll build a plan around your home's layout and age."
       ],
       breadcrumbLabel: 'Dayton House Cleaning',
+      faqs: [
+        { question: 'Do you clean older homes in the Oregon District or Wright-Dunbar?', answer: "Yes — a lot of our Dayton cleanings are in the Oregon District's rowhouses and Wright-Dunbar's late-1800s Victorians. Plaster walls, original hardwood, and tall baseboards need a gentler touch than modern drywall, and our crews adjust for that instead of treating every home the same." },
+        { question: 'Do you serve the 45402 and 45459 zip codes?', answer: "Yes, along with 45405, 45406, 45410, and 45417 — we cover Dayton's full zip code range, from Downtown high-rises near the Dayton Art Institute to family homes further out." },
+        { question: 'Is there a contract if I want recurring cleaning in Dayton?', answer: 'No — weekly, bi-weekly, monthly, or one-time, none of it requires a long-term contract. You can adjust or pause your Dayton cleaning schedule anytime.' }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Dayton, OH',
@@ -29,6 +34,11 @@ export const CITIES = {
         "We handle both — office suites, retail storefronts, and restaurant common areas throughout Downtown and the Oregon District — with scheduling built around your hours, not ours."
       ],
       breadcrumbLabel: 'Dayton Commercial Cleaning',
+      faqs: [
+        { question: 'Can you clean Oregon District restaurants after close?', answer: "Yes — a lot of our Oregon District work happens early morning after close, since that's when kitchens and dining areas are actually empty. We build the schedule around your hours, not the other way around." },
+        { question: 'Do you clean office suites near Fifth Third Field and the Victoria Theatre?', answer: 'Yes, that Downtown Dayton corridor is one of our regular commercial service areas, along with retail storefronts and restaurant common areas throughout the Oregon District.' },
+        { question: 'Are your commercial cleaners insured?', answer: 'Yes — Gem City Cleaning Crew is licensed and insured for every Dayton commercial job, and every cleaner completes three months of training before working independently.' }
+      ],
     },
   },
 
@@ -45,6 +55,11 @@ export const CITIES = {
         "We serve homes across Kettering's 45429 core and the surrounding 45409, 45419, 45420, 45430, 45439, 45440, and 45459 zips, from starter homes to larger properties near the Town & Country retail corridor."
       ],
       breadcrumbLabel: 'Kettering House Cleaning',
+      faqs: [
+        { question: 'Do you clean homes near Fraze Pavilion?', answer: "Yes — Fraze Pavilion sits right in the heart of Kettering's 45429 core, and it's one of the neighborhoods we clean most regularly." },
+        { question: 'What Kettering zip codes do you serve?', answer: 'The 45429 core plus the surrounding 45409, 45419, 45420, 45430, 45439, 45440, and 45459 zips — basically all of Kettering, from starter homes to larger properties near Town & Country.' },
+        { question: 'Do I need to be home for my Kettering cleaning?', answer: "No — most Kettering clients leave access instructions and go about their day. It's entirely up to what works for you." }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Kettering, OH',
@@ -55,6 +70,11 @@ export const CITIES = {
         "We clean offices, retail spaces, and medical facilities throughout Kettering, with evening and after-hours options for businesses near Fraze Pavilion and the Town & Country corridor."
       ],
       breadcrumbLabel: 'Kettering Commercial Cleaning',
+      faqs: [
+        { question: 'Do you clean retail spaces at Town & Country Shopping Center?', answer: "Yes — Town & Country anchors a lot of Kettering's retail and office space, and we schedule around store hours and foot traffic there instead of a one-size-fits-all timetable." },
+        { question: 'Can you clean medical offices in Kettering?', answer: 'Yes, we clean offices, retail, and medical facilities throughout Kettering, including near Fraze Pavilion and the Town & Country corridor.' },
+        { question: 'Do you offer after-hours commercial cleaning in Kettering?', answer: 'Yes — evening and after-hours scheduling is standard for our Kettering commercial clients, so cleaning never disrupts your business hours.' }
+      ],
     },
   },
 
@@ -71,6 +91,11 @@ export const CITIES = {
         "Nearly all of Oakwood falls within 45419. We tailor our approach to each home's age and layout, whether that's a Schantz Park original or a newer build near the Wright Memorial Public Library."
       ],
       breadcrumbLabel: 'Oakwood House Cleaning',
+      faqs: [
+        { question: 'Do you have experience cleaning historic homes in Schantz Park?', answer: "Yes — Schantz Park Historic District has roughly 400 homes on the National Register, many built before 1939, and we're used to working around original woodwork and older window frames rather than treating them like a modern build." },
+        { question: 'Do you serve the whole 45419 zip code?', answer: 'Yes — nearly all of Oakwood falls within 45419, from Schantz Park originals to newer builds near the Wright Memorial Public Library.' },
+        { question: 'Do you bring your own cleaning supplies to Oakwood homes?', answer: "Yes, our trained crews bring their own tools and supplies. If a historic home's finishes need something specific, just let us know and we'll accommodate that." }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Oakwood, OH',
@@ -81,6 +106,11 @@ export const CITIES = {
         "We provide that same level of care for Oakwood's offices and small businesses, with flexible scheduling that fits a compact commercial footprint."
       ],
       breadcrumbLabel: 'Oakwood Commercial Cleaning',
+      faqs: [
+        { question: 'Do you clean small offices along Far Hills Avenue?', answer: "Yes — a lot of Oakwood's local businesses and professional offices cluster along Far Hills Avenue, and that's a regular part of our commercial route." },
+        { question: 'Is Oakwood too small an area for regular commercial service?', answer: 'Not at all — Oakwood is a small, mostly residential community, and we scale our scheduling to fit a compact commercial footprint rather than requiring a minimum job size.' },
+        { question: 'Are Oakwood commercial cleanings covered by insurance?', answer: 'Yes — Gem City Cleaning Crew is licensed and insured for every commercial job in Oakwood.' }
+      ],
     },
   },
 
@@ -97,6 +127,11 @@ export const CITIES = {
         "We clean homes throughout Centerville's 45305, 45458, and 45459 zip codes, from homes near Uptown to newer developments further out, with the same reliable, no-contract scheduling."
       ],
       breadcrumbLabel: 'Centerville House Cleaning',
+      faqs: [
+        { question: 'Do you clean historic stone homes in Uptown Centerville?', answer: "Yes — Centerville has one of Ohio's largest collections of early stone buildings, and Uptown's brick sidewalks and limestone architecture near the Asahel Wright House are part of our regular service area." },
+        { question: 'What zip codes do you cover in Centerville?', answer: '45305, 45458, and 45459 — from homes near Uptown to newer developments further out.' },
+        { question: 'Can I reschedule my Centerville cleaning if my plans change?', answer: 'Yes — no long-term contracts means flexible rescheduling. Just call ahead of your appointment.' }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Centerville, OH',
@@ -107,6 +142,11 @@ export const CITIES = {
         "We serve offices, retail, and medical facilities throughout Centerville, with scheduling built around your business hours, not ours."
       ],
       breadcrumbLabel: 'Centerville Commercial Cleaning',
+      faqs: [
+        { question: 'Do you clean businesses in the Main Street Architectural Preservation District?', answer: 'Yes — Uptown Centerville has nearly 100 businesses along that district, and we work around retail hours and historic storefronts there regularly.' },
+        { question: 'Do you clean offices outside of Uptown Centerville too?', answer: 'Yes, we serve offices, retail, and medical facilities throughout Centerville, not just the Uptown corridor.' },
+        { question: 'Do you provide your own cleaning equipment for Centerville businesses?', answer: 'Yes, we bring all necessary supplies and equipment, using commercial-grade products that are effective yet safe for your workplace.' }
+      ],
     },
   },
 
@@ -123,6 +163,11 @@ export const CITIES = {
         "We clean homes throughout Miamisburg's 45342 zip code, from homes near downtown's Market Square to newer neighborhoods further from the river."
       ],
       breadcrumbLabel: 'Miamisburg House Cleaning',
+      faqs: [
+        { question: 'Do you clean homes near the Miamisburg Mound?', answer: "Yes — the Miamisburg Mound and the 37-acre Mound Park it sits in are right in the middle of our Miamisburg service area." },
+        { question: 'Do you serve all of 45342?', answer: "Yes, that's the only zip code Miamisburg needs — we cover it fully, from homes near downtown's Market Square to newer neighborhoods further from the river." },
+        { question: 'Is there a minimum contract length for Miamisburg cleaning?', answer: "No — we don't require contracts. Weekly, bi-weekly, monthly, or one-time, whatever fits your Miamisburg home." }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Miamisburg, OH',
@@ -133,6 +178,11 @@ export const CITIES = {
         "We clean offices and retail spaces throughout Miamisburg, with after-hours scheduling that works around downtown foot traffic."
       ],
       breadcrumbLabel: 'Miamisburg Commercial Cleaning',
+      faqs: [
+        { question: "Do you clean businesses near Miamisburg's Market Square?", answer: "Yes — Miamisburg's historic downtown, anchored by the Market Square building and the city's last brick street, is a regular part of our commercial route." },
+        { question: 'Can you schedule around downtown Miamisburg foot traffic?', answer: "Yes — we offer after-hours scheduling specifically so cleaning doesn't compete with downtown foot traffic." },
+        { question: 'Are your Miamisburg commercial cleaners background-checked?', answer: 'Yes — every Gem City cleaner is Checkr background-checked and completes three months of training before working independently.' }
+      ],
     },
   },
 
@@ -149,6 +199,11 @@ export const CITIES = {
         "We clean homes throughout Springboro's 45066 zip code, from homes near the Old Stone Church and historic district to newer developments on the city's edges."
       ],
       breadcrumbLabel: 'Springboro House Cleaning',
+      faqs: [
+        { question: "Do you clean historic homes near Springboro's Old Stone Church?", answer: "Yes — Springboro's 50-acre Historic District includes Federal and Greek Revival buildings along Main, East, and Mill Streets, and we regularly clean homes near the Old Stone Church in that area." },
+        { question: 'What zip code do you serve in Springboro?', answer: '45066 — that covers all of Springboro, from the historic district to newer developments on the city\'s edges.' },
+        { question: 'Do you offer one-time cleanings in Springboro, or only recurring?', answer: 'Both — one-time, weekly, bi-weekly, or monthly, with no contract required either way.' }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Springboro, OH',
@@ -159,6 +214,11 @@ export const CITIES = {
         "We serve offices, retail, and medical facilities throughout Springboro, with scheduling built around your team's hours."
       ],
       breadcrumbLabel: 'Springboro Commercial Cleaning',
+      faqs: [
+        { question: "Do you clean offices in Springboro's growing business district?", answer: 'Yes — Springboro\'s location between Dayton and Cincinnati has brought steady business growth, and we serve offices and retail throughout that growth alongside the historic core.' },
+        { question: 'Do you serve medical facilities in Springboro?', answer: 'Yes, we serve offices, retail, and medical facilities throughout Springboro.' },
+        { question: 'Can Springboro businesses schedule cleaning around their own hours?', answer: "Yes — we build scheduling around your team's hours, not a fixed timetable." }
+      ],
     },
   },
 
@@ -175,6 +235,11 @@ export const CITIES = {
         "We clean homes throughout Huber Heights, from classic brick ranches to newer builds, with scheduling that works whether you're 10 minutes from Wright-Patterson AFB or closer to Dayton."
       ],
       breadcrumbLabel: 'Huber Heights House Cleaning',
+      faqs: [
+        { question: 'Do you clean the brick ranch homes Huber Heights is known for?', answer: "Yes — Huber Heights earned its \"America's largest community of brick homes\" motto from the brick ranches Charles Huber built in neighborhoods like Belle Plain, Beldale, and Evergreen Woods, and that's most of what we clean there." },
+        { question: 'Do you also clean newer homes in Stoney Creek?', answer: "Yes — alongside the classic brick ranches, we clean newer upscale developments like Stoney Creek, whether you're closer to Wright-Patterson AFB or nearer to Dayton." },
+        { question: 'Do your cleaners bring their own supplies to Huber Heights homes?', answer: 'Yes, our trained crews bring their own tools and supplies, and we can accommodate a specific product request if you have a sensitivity.' }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Huber Heights, OH',
@@ -185,6 +250,11 @@ export const CITIES = {
         "We clean offices, retail, and industrial spaces throughout Huber Heights, with flexible scheduling for businesses that support the base and the surrounding community alike."
       ],
       breadcrumbLabel: 'Huber Heights Commercial Cleaning',
+      faqs: [
+        { question: 'Do you clean industrial facilities in Huber Heights?', answer: 'Yes — with over 40,000 residents and a location 10 minutes from Wright-Patterson AFB, Huber Heights has real industrial and commercial space, and that\'s part of our regular service area there.' },
+        { question: 'Can you clean offices that support Wright-Patterson AFB contractors?', answer: 'Yes, we clean offices, retail, and industrial spaces throughout Huber Heights, including businesses that support the base and its contractors.' },
+        { question: 'Is there flexible scheduling for Huber Heights businesses?', answer: 'Yes — we offer flexible scheduling including evenings and weekends so cleaning never disrupts your operations.' }
+      ],
     },
   },
 
@@ -201,6 +271,11 @@ export const CITIES = {
         "We clean homes throughout Riverside's neighborhoods, from Belmont and Kittyhawk to Walnut Hills, in the 45404 and 45433 zip codes."
       ],
       breadcrumbLabel: 'Riverside House Cleaning',
+      faqs: [
+        { question: 'Do you clean homes near the National Museum of the U.S. Air Force?', answer: 'Yes — Riverside is home to the National Museum of the U.S. Air Force, and we regularly clean homes in the neighborhoods around it, including Belmont and Kittyhawk.' },
+        { question: 'What zip codes do you serve in Riverside?', answer: '45404 and 45433 — that covers Riverside\'s neighborhoods on both sides of the Mad River, including Walnut Hills.' },
+        { question: 'Do I need to be home during my Riverside cleaning?', answer: 'No — many Riverside clients provide access instructions and go about their day. It\'s entirely up to what works for you.' }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Riverside, OH',
@@ -211,6 +286,11 @@ export const CITIES = {
         "We clean offices and commercial spaces throughout Riverside, with scheduling that fits the base's rhythms as easily as a standard 9-to-5."
       ],
       breadcrumbLabel: 'Riverside Commercial Cleaning',
+      faqs: [
+        { question: 'Do you clean offices near Wright-Patterson Air Force Base?', answer: 'Yes — Riverside sits right next to Wright-Patterson, the third-largest base in the country, and a lot of our Riverside commercial work is for offices that serve base employees and contractors directly.' },
+        { question: 'Can you work around a schedule tied to the base?', answer: "Yes — our scheduling fits the base's rhythms as easily as a standard 9-to-5." },
+        { question: 'Are your Riverside commercial cleaners licensed and insured?', answer: 'Yes — Gem City Cleaning Crew is licensed and insured for every Riverside commercial job.' }
+      ],
     },
   },
 
@@ -242,6 +322,11 @@ export const CITIES = {
         "We clean offices, retail, and professional spaces throughout Xenia, with scheduling built around your business hours."
       ],
       breadcrumbLabel: 'Xenia Commercial Cleaning',
+      faqs: [
+        { question: 'Do you clean government offices near the Greene County Courthouse?', answer: 'Yes — as the county seat, Xenia has a steady mix of government offices and professional services around the courthouse square, and that\'s a regular part of our commercial route.' },
+        { question: 'Do you clean businesses tied to the Greene County Fairgrounds?', answer: 'Yes, we clean offices, retail, and professional spaces tied to the fairgrounds and the annual county fair as well as the downtown courthouse square.' },
+        { question: 'Can Xenia businesses schedule cleaning around their own hours?', answer: 'Yes — we build scheduling around your business hours, not ours.' }
+      ],
     },
   },
 
@@ -258,6 +343,11 @@ export const CITIES = {
         "We clean homes throughout Beavercreek's 45431, 45432, and 45434 zip codes, with flexible scheduling for busy households near The Greene, Fairfield Commons, and the Colonel Glenn Highway corridor."
       ],
       breadcrumbLabel: 'Beavercreek House Cleaning',
+      faqs: [
+        { question: 'Do you clean homes near The Greene Town Center?', answer: "Yes — Beavercreek's neighborhoods near The Greene Town Center are one of our most active residential service areas." },
+        { question: 'What zip codes do you serve in Beavercreek?', answer: '45431, 45432, and 45434 — with flexible scheduling for busy households near The Greene, Fairfield Commons, and the Colonel Glenn Highway corridor.' },
+        { question: 'Is Beavercreek cleaning available for families near Wright-Patterson AFB?', answer: 'Yes — Beavercreek sits just minutes from Wright-Patterson, and we regularly clean for both families and base personnel in the area.' }
+      ],
     },
     // No `commercial` key — Beavercreek's commercial page is a separate,
     // already-built file. LocationPage.jsx redirects to it instead.
@@ -277,6 +367,11 @@ export const CITIES = {
         "We clean homes throughout Fairborn's 45324 zip code, whether that's a rental near campus or a family home closer to the historic downtown."
       ],
       breadcrumbLabel: 'Fairborn House Cleaning',
+      faqs: [
+        { question: 'Do you clean rentals near Wright State University?', answer: 'Yes — Fairborn is home to Wright State University, and we clean everything from student rentals near campus to long-time family homes closer to the historic downtown.' },
+        { question: 'What zip code do you serve in Fairborn?', answer: '45324 — that covers all of Fairborn, campus-adjacent and otherwise.' },
+        { question: 'Is there a contract required for Fairborn house cleaning?', answer: 'No — one-time, weekly, bi-weekly, or monthly, none of it requires a long-term contract.' }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Fairborn, OH',
@@ -287,6 +382,11 @@ export const CITIES = {
         "We clean offices, retail spaces, and facilities throughout Fairborn, with scheduling that works around university and business hours alike."
       ],
       breadcrumbLabel: 'Fairborn Commercial Cleaning',
+      faqs: [
+        { question: 'Do you clean offices near Wright State and the Nutter Center?', answer: "Yes — Fairborn's commercial corridor around Wright State University, the WSU Nutter Center, and the Mall at Fairfield Commons is a regular part of our service area." },
+        { question: 'Can you handle the foot traffic near the Mall at Fairfield Commons?', answer: 'Yes, we clean offices, retail spaces, and facilities throughout Fairborn with scheduling that works around university and business hours alike.' },
+        { question: 'Do you provide commercial-grade cleaning products in Fairborn?', answer: "Yes — we bring everything needed, from commercial-grade cleaning products to the equipment itself, so Fairborn businesses don't have to stock or manage supplies themselves." }
+      ],
     },
   },
 
@@ -303,6 +403,11 @@ export const CITIES = {
         "We clean homes throughout Yellow Springs' 45387 zip code, from historic-district homes to properties bordering Glen Helen."
       ],
       breadcrumbLabel: 'Yellow Springs House Cleaning',
+      faqs: [
+        { question: 'Do you clean homes near Antioch College or Glen Helen?', answer: 'Yes — Yellow Springs is built around Antioch College, founded in 1850, and bordered by the Glen Helen Nature Preserve, and homes in both areas are part of our regular route.' },
+        { question: 'What zip code do you serve in Yellow Springs?', answer: '45387 — from historic-district homes to properties bordering Glen Helen.' },
+        { question: 'Do your cleaners bring their own supplies to Yellow Springs homes?', answer: 'Yes, our trained crews bring their own tools and supplies, and we can accommodate a specific product request if needed.' }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Yellow Springs, OH',
@@ -313,6 +418,11 @@ export const CITIES = {
         "We clean offices, shops, and studios throughout the village, with scheduling built around foot traffic and business hours."
       ],
       breadcrumbLabel: 'Yellow Springs Commercial Cleaning',
+      faqs: [
+        { question: 'Do you clean shops in the Yellow Springs village center?', answer: "Yes — the village's small, walkable center is full of independent shops, cafés, and offices, and that's exactly the kind of compact footprint we schedule around." },
+        { question: 'Can you clean businesses that see visitor traffic from Glen Helen or John Bryan State Park?', answer: 'Yes, we clean offices, shops, and studios throughout the village, with scheduling built around foot traffic and business hours.' },
+        { question: 'Are Yellow Springs commercial cleaners insured?', answer: 'Yes — Gem City Cleaning Crew is licensed and insured for every job in Yellow Springs.' }
+      ],
     },
   },
 
@@ -329,6 +439,11 @@ export const CITIES = {
         "We clean homes throughout Tipp City's roughly 10,000-resident community, from historic homes near Main Street to newer neighborhoods around the city's 20-plus parks."
       ],
       breadcrumbLabel: 'Tipp City House Cleaning',
+      faqs: [
+        { question: "Do you clean historic homes near Tipp City's Main Street?", answer: "Yes — Tipp City's Old Tippecanoe Historic District has more than 90 buildings on the National Register, and we regularly clean historic homes near that Main Street corridor." },
+        { question: 'What zip code do you serve in Tipp City?', answer: "45371 — covering Tipp City's roughly 10,000 residents, from historic homes near Main Street to newer neighborhoods around the city's parks." },
+        { question: 'Can I switch my Tipp City cleaning frequency later?', answer: 'Yes — no long-term contracts means you can move between weekly, biweekly, monthly, or pause anytime.' }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Tipp City, OH',
@@ -339,6 +454,11 @@ export const CITIES = {
         "We clean shops, offices, and restaurants throughout Tipp City, with after-hours scheduling built around a historic downtown's foot traffic."
       ],
       breadcrumbLabel: 'Tipp City Commercial Cleaning',
+      faqs: [
+        { question: "Do you clean shops along Tipp City's historic Main Street?", answer: "Yes — Tipp City's Main Street district is a genuine walkable downtown with buildings dating back to the canal era, and we clean shops, offices, and restaurants there regularly." },
+        { question: 'Can you schedule around foot traffic in downtown Tipp City?', answer: 'Yes, we offer after-hours scheduling built around a historic downtown\'s foot traffic.' },
+        { question: 'Do you bring your own equipment for Tipp City commercial jobs?', answer: 'Yes, we bring all necessary supplies and equipment, using commercial-grade products that are effective yet safe for older storefronts.' }
+      ],
     },
   },
 
@@ -355,6 +475,11 @@ export const CITIES = {
         "We clean homes throughout Bellbrook's 45305 zip code, from established neighborhoods near town to newer homes further out along the creek."
       ],
       breadcrumbLabel: 'Bellbrook House Cleaning',
+      faqs: [
+        { question: 'Do you clean homes near Sugarcreek MetroPark?', answer: 'Yes — Bellbrook sits in Sugarcreek Township along Sugar Creek, and homes near Sugarcreek MetroPark and Bill Yeck Park are part of our regular route.' },
+        { question: 'What zip code do you serve in Bellbrook?', answer: '45305 — from established neighborhoods near town to newer homes further out along the creek.' },
+        { question: 'Do I need to be home during my Bellbrook cleaning?', answer: 'No — many Bellbrook clients provide access instructions and go about their day.' }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Bellbrook, OH',
@@ -365,6 +490,11 @@ export const CITIES = {
         "We provide that same personal approach to commercial cleaning throughout Bellbrook, with flexible scheduling for a smaller commercial footprint."
       ],
       breadcrumbLabel: 'Bellbrook Commercial Cleaning',
+      faqs: [
+        { question: 'Do you clean small businesses in Bellbrook?', answer: "Yes — Bellbrook's local businesses tend to be smaller and more personal than what you'd find closer to Dayton, and we scale our approach to fit that smaller commercial footprint." },
+        { question: 'Is Bellbrook too small for regular commercial cleaning service?', answer: 'Not at all — we provide the same personal approach to commercial cleaning throughout Bellbrook with flexible scheduling.' },
+        { question: 'Are Bellbrook commercial cleaners licensed and insured?', answer: 'Yes — Gem City Cleaning Crew is licensed and insured for every job in Bellbrook.' }
+      ],
     },
   },
 
@@ -381,6 +511,11 @@ export const CITIES = {
         "We clean homes throughout Vandalia's 45377 zip code, with scheduling that works around the airport's flight patterns and the city's Air Show weekends alike."
       ],
       breadcrumbLabel: 'Vandalia House Cleaning',
+      faqs: [
+        { question: 'Do you clean homes near Dayton International Airport?', answer: 'Yes — Vandalia is home to Dayton International Airport, and we clean homes throughout the surrounding area with scheduling that works around flight patterns and Air Show weekends.' },
+        { question: 'What zip code do you serve in Vandalia?', answer: '45377 — covering all of Vandalia at the I-75/I-70 crossroads.' },
+        { question: 'Is there a contract for Vandalia house cleaning?', answer: 'No — weekly, bi-weekly, monthly, or one-time, with no long-term contract required.' }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Vandalia, OH',
@@ -391,6 +526,11 @@ export const CITIES = {
         "We clean offices, retail, and event spaces throughout Vandalia, with scheduling built to keep up with that traffic."
       ],
       breadcrumbLabel: 'Vandalia Commercial Cleaning',
+      faqs: [
+        { question: 'Do you clean businesses near Dayton International Airport or Scene75?', answer: "Yes — between the airport, Scene75's indoor entertainment venue, and the I-75/I-70 interchange, Vandalia sees more commercial foot traffic than a typical suburb its size, and we schedule to keep up with it." },
+        { question: 'Can you clean event spaces in Vandalia?', answer: 'Yes, we clean offices, retail, and event spaces throughout Vandalia.' },
+        { question: 'Do you offer flexible scheduling for Vandalia businesses?', answer: 'Yes — we build scheduling around your business hours, not a fixed timetable.' }
+      ],
     },
   },
 
@@ -407,6 +547,11 @@ export const CITIES = {
         "We clean homes throughout Troy's 45373 and 45374 zip codes, from the Southwest Historic District to newer subdivisions on the northwest side."
       ],
       breadcrumbLabel: 'Troy House Cleaning',
+      faqs: [
+        { question: "Do you clean homes near Troy's Public Square?", answer: "Yes — Troy's 1807 Public Square and the Southwest Historic District around it are part of our regular Troy service area." },
+        { question: 'What zip codes do you serve in Troy?', answer: '45373 and 45374 — from the Southwest Historic District to newer subdivisions on the northwest side.' },
+        { question: 'Can I reschedule my Troy cleaning if my plans change?', answer: 'Yes — no long-term contracts means flexible rescheduling, just call ahead of your appointment.' }
+      ],
     },
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Troy, OH',
@@ -417,6 +562,11 @@ export const CITIES = {
         "We clean offices, retail, and professional spaces throughout Troy, with scheduling built around downtown business hours."
       ],
       breadcrumbLabel: 'Troy Commercial Cleaning',
+      faqs: [
+        { question: "Do you clean businesses around Troy's Public Square?", answer: "Yes — as Miami County's seat since 1807, Troy's downtown around the Public Square is a genuine commerce center, and we clean the restaurants and shops that line it." },
+        { question: 'Do you clean professional offices near the Miami County Courthouse?', answer: 'Yes, we clean offices, retail, and professional spaces throughout Troy, including near the courthouse.' },
+        { question: 'Can Troy businesses schedule cleaning around downtown business hours?', answer: 'Yes — we build scheduling around downtown business hours.' }
+      ],
     },
   },
 }
