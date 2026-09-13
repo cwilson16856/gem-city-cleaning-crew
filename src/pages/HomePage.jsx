@@ -549,40 +549,6 @@ const HomePage = () => {
 
       <TrustBlock variant="full" />
 
-      {/* Video Section */}
-      <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }}>
-        <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 6 }}>
-            <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
-              Meet Our Professional Team
-            </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
-              See the dedication and professionalism that makes us different
-            </Typography>
-          </Box>
-
-          <Card 
-            className="video-container" 
-            sx={{ 
-              borderRadius: 3, 
-              overflow: 'hidden',
-              maxWidth: 800, 
-              mx: 'auto' 
-            }}
-          >
-              <video
-                controls
-                style={{ width: '100%', height: 'auto' }}
-                poster="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
-                aria-label="Meet the Gem City Cleaning Crew professional team"
-              >
-                <source src="/images/legacy/Gem-City-Video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </Card>
-        </Container>
-      </Box>
-
       {/* Service Areas with Map */}
       <AreasWeServe />
 
