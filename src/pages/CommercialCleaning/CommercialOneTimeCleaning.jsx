@@ -427,46 +427,6 @@ const CommercialOneTimeCleaning = () => {
           })}
         </script>
 
-        {/* Organization Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://gemcitycleaningcrew.com/#organization",
-            "name": "Gem City Cleaning Crew",
-            "url": "https://gemcitycleaningcrew.com",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://gemcitycleaningcrew.com/logo.png",
-              "width": 300,
-              "height": 300
-            },
-            "foundingDate": "2020",
-            "founder": {
-              "@type": "Person",
-              "name": "Gem City Cleaning Crew Founder"
-            },
-            "numberOfEmployees": "5-10",
-            "slogan": "Professional Cleaning Services in Dayton, OH",
-            "contactPoint": [
-              {
-                "@type": "ContactPoint",
-                "telephone": "937-892-4157",
-                "contactType": "customer service",
-                "availableLanguage": "English",
-                "areaServed": "US"
-              },
-              {
-                "@type": "ContactPoint",
-                "telephone": "937-892-4157", 
-                "contactType": "sales",
-                "availableLanguage": "English",
-                "areaServed": "US"
-              }
-            ],
-          })}
-        </script>
-
         {/* Enhanced FAQ Schema */}
         <script type="application/ld+json">
           {JSON.stringify({

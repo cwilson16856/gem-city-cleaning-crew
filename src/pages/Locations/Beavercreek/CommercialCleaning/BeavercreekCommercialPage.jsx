@@ -9,10 +9,8 @@ import {
   Card,
   CardContent,
   Box,
-  Paper,
   Chip,
   useTheme,
-  Rating,
   Accordion,
   AccordionSummary,
   AccordionDetails,
@@ -48,6 +46,7 @@ const SERVICE_ID = `${PAGE_URL}#service`
 import AreasWeServe from '../../../../components/AreasWeServe'
 import TableOfContents from '../../../../components/TableOfContents'
 import QuoteForm from '../../../../components/QuoteForm'
+import TrustBlock from '../../../../components/TrustBlock'
 
 const BeavercreekCommercialPage = () => {
   const theme = useTheme()
@@ -59,13 +58,6 @@ const BeavercreekCommercialPage = () => {
 
   const handleCloseQuoteForm = () => {
     setQuoteFormOpen(false)
-  }
-
-  // Featured testimonial content
-  const featuredTestimonial = {
-    text: "Gem City Cleaning has transformed our office space at The Greene. Their attention to detail and professional approach has consistently impressed both our staff and clients. They understand the high standards expected in Beavercreek's business community and deliver excellence every time.",
-    author: "Michael R., Property Manager at The Greene",
-    rating: 5
   }
 
   // Service areas text
@@ -86,9 +78,9 @@ const BeavercreekCommercialPage = () => {
 
   // Table of Contents items
   const tocItems = [
-    { text: '🏢 Elite Beavercreek Commercial Cleaning', href: '#beavercreek-commercial-cleaning-services' },
+    { text: '🏢 Beavercreek Commercial Cleaning', href: '#beavercreek-commercial-cleaning-services' },
     { text: '⭐ Beavercreek Business Reviews', href: '#testimonials' },
-    { text: '✨ Why Choose Beavercreek\'s Top Commercial Cleaners', href: '#why-choose-us' },
+    { text: '✨ Why Choose Our Beavercreek Cleaning Team', href: '#why-choose-us' },
     { text: '📍 Beavercreek Service Areas', href: '#service-areas' },
     { text: '📋 Commercial Cleaning Services Included', href: '#what-included' },
     { text: '❓ Beavercreek Commercial Cleaning FAQ', href: '#faq' }
@@ -243,19 +235,19 @@ const BeavercreekCommercialPage = () => {
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/beavercreek-sign.webp" fetchPriority="high" />
         <title>Commercial Cleaning in Beavercreek OH | Gem City Cleaning Crew</title>
-        <meta name="description" content="Unleash pristine workspaces with Beavercreek's premier commercial cleaning service. Trusted by 100+ local businesses. Expert office & retail cleaning. Free quotes!" />
+        <meta name="description" content="Unleash pristine workspaces with Beavercreek's 4.6-star rated commercial cleaning service. Expert office & retail cleaning. Free quotes!" />
         <meta name="keywords" content="Beavercreek commercial cleaning, office cleaning Beavercreek, retail cleaning Beavercreek, medical facility cleaning, janitorial services, business cleaning" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:title" content="Elite Beavercreek Commercial Cleaning Services | Trusted by 100+ Businesses" />
-        <meta property="og:description" content="Transform your Beavercreek business with our premium commercial cleaning services. Trusted by 100+ local businesses. Schedule your free consultation today!" />
+        <meta property="og:title" content="4.6-Star Rated Beavercreek Commercial Cleaning Services" />
+        <meta property="og:description" content="Transform your Beavercreek business with our 4.6-star rated commercial cleaning services. Schedule your free consultation today!" />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/beavercreek-sign.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Elite Beavercreek Commercial Cleaning Services | Trusted by 100+ Businesses" />
+        <meta name="twitter:title" content="4.6-Star Rated Beavercreek Commercial Cleaning Services" />
         <meta name="twitter:description" content="Transform your Beavercreek business with our premium commercial cleaning services." />
         
         <link rel="canonical" href={PAGE_URL} />
@@ -269,8 +261,8 @@ const BeavercreekCommercialPage = () => {
           {JSON.stringify(generateLocationWebPageSchema({
             id: `${PAGE_URL}#webpage`,
             url: PAGE_URL,
-            name: '7+ Elite Commercial Cleaning Services in Beavercreek',
-            description: "Beavercreek's premier commercial cleaning service. Trusted by 100+ local businesses. Expert office & retail cleaning.",
+            name: 'Commercial Cleaning Services in Beavercreek',
+            description: "Beavercreek's 4.6-star rated commercial cleaning service. Expert office & retail cleaning.",
             aboutId: SERVICE_ID,
             breadcrumbs: [
               { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
@@ -287,7 +279,7 @@ const BeavercreekCommercialPage = () => {
             "@type": "Service",
             "@id": SERVICE_ID,
             "name": "Commercial Cleaning Services",
-            "description": "Elite Beavercreek commercial cleaning services for offices, retail, medical facilities, and business properties. Trusted by 100+ local businesses.",
+            "description": "4.6-star rated Beavercreek commercial cleaning services for offices, retail, medical facilities, and business properties.",
             "provider": {
               "@id": "https://gemcitycleaningcrew.com/#business"
             },
@@ -401,7 +393,7 @@ const BeavercreekCommercialPage = () => {
               lineHeight: 1.1
             }}
           >
-            Beavercreek's Premier Commercial Cleaning Services
+            Beavercreek's 4.6-Star Rated Commercial Cleaning Services
           </Typography>
           
           <Typography 
@@ -418,7 +410,7 @@ const BeavercreekCommercialPage = () => {
               mx: 'auto'
             }}
           >
-            Trusted by 100+ Local Businesses for Exceptional Results
+            Trusted by Beavercreek Businesses with a 4.6-Star Rating
           </Typography>
 
           <Typography 
@@ -479,7 +471,7 @@ const BeavercreekCommercialPage = () => {
       <Container maxWidth="lg" sx={{ py: 8 }} id="beavercreek-commercial-cleaning-services">
         <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
-            Elite Beavercreek Commercial Cleaning Services
+            Beavercreek Commercial Cleaning Services
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
             Delivering exceptional cleaning solutions to businesses throughout Beavercreek and surrounding areas
@@ -594,29 +586,16 @@ const BeavercreekCommercialPage = () => {
             fontSize: { xs: '1.5rem', md: '1.8rem' }
           }}
         >
-          Trusted by Leading Beavercreek Businesses
+          Trusted by Beavercreek Businesses
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-          Our elite commercial cleaning services have earned the trust of Beavercreek's most prestigious businesses. 
-          From corporate offices at The Greene to medical facilities on Pentagon Boulevard, we deliver consistent, 
+          Our commercial cleaning services have earned the trust of many Beavercreek businesses.
+          From corporate offices at The Greene to medical facilities on Pentagon Boulevard, we deliver consistent,
           high-quality cleaning that maintains Beavercreek's high professional standards.
         </Typography>
 
-        {/* Featured Testimonial */}
-        <Box sx={{ maxWidth: 800, mx: 'auto', mb: 6 }}>
-          <Paper elevation={4} className="commercial-testimonial-card" sx={{ p: 4, textAlign: 'center' }}>
-            <Box sx={{ mb: 2 }}>
-              <Rating value={featuredTestimonial.rating} readOnly size="large" sx={{ color: '#FFD700' }} />
-            </Box>
-            <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
-              {featuredTestimonial.text}
-            </Typography>
-            <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
-              {featuredTestimonial.author}
-            </Typography>
-          </Paper>
-        </Box>
+        <TrustBlock variant="compact" />
 
         <Box sx={{ textAlign: 'center' }}>
           <Button
@@ -645,13 +624,13 @@ const BeavercreekCommercialPage = () => {
 
       {/* Why Choose Us Section */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }} id="why-choose-us">
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{ overflow: 'hidden' }}>
           <Typography variant="h3" component="h2" sx={{ mb: 6, textAlign: 'center' }}>
             Why Choose Our Beavercreek Commercial Cleaning Services?
           </Typography>
 
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-            Since 2017, Gem City Cleaning Crew has been the premier choice for commercial cleaning services in Beavercreek and surrounding areas. 
+            Since 2017, Gem City Cleaning Crew has been the trusted choice for commercial cleaning services in Beavercreek and surrounding areas.
             From North Fairfield Road to Dayton-Xenia Road, we serve businesses of all sizes with our comprehensive cleaning solutions. 
             Our commercial cleaning team is specifically trained for Beavercreek's diverse business environments and equipped with advanced tools 
             and expertise to deliver exceptional results that exceed expectations.
@@ -757,7 +736,7 @@ const BeavercreekCommercialPage = () => {
                 Transform Your Beavercreek Business Space
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, color: '#525252', fontSize: '1.1rem' }}>
-                Join 100+ satisfied Beavercreek businesses who trust us for their cleaning needs. Let us create a 
+                Join Beavercreek businesses who trust our 4.6-star rated team for their cleaning needs. Let us create a
                 customized cleaning plan that fits your facility, schedule, and budget requirements.
               </Typography>
               <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -937,7 +916,7 @@ const BeavercreekCommercialPage = () => {
             Elevate Your Beavercreek Business with Professional Cleaning
           </Typography>
           <Typography variant="h6" component="p" sx={{ color: 'white', mb: 4, opacity: 0.9 }}>
-            Join 100+ satisfied Beavercreek businesses who trust our licensed & insured cleaning team
+            Join Beavercreek businesses who trust our 4.6-star rated, licensed & insured cleaning team
           </Typography>
           
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>

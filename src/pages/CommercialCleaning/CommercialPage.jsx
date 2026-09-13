@@ -9,10 +9,8 @@ import {
   Card,
   CardContent,
   Box,
-  Paper,
   Chip,
   useTheme,
-  Rating,
   Accordion,
   AccordionSummary,
   AccordionDetails,
@@ -49,6 +47,7 @@ const SERVICE_ID = `${PAGE_URL}#service`
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
 import QuoteForm from '../../components/QuoteForm'
+import TrustBlock from '../../components/TrustBlock'
 
 const CommercialPage = () => {
   const theme = useTheme()
@@ -570,22 +569,7 @@ const CommercialPage = () => {
           Our trained professionals understand the unique needs of different business environments and work around your schedule to minimize disruption.
         </Typography>
 
-        {/* Featured Testimonial */}
-        <Box sx={{ maxWidth: 800, mx: 'auto', mb: 6 }}>
-          <Paper elevation={4} className="commercial-testimonial-card" sx={{ p: 4, textAlign: 'center' }}>
-            <Box sx={{ mb: 2 }}>
-              <Rating value={5} readOnly size="large" sx={{ color: '#FFD700' }} />
-            </Box>
-            <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
-              "Gem City Cleaning has been maintaining our office building for over two years. 
-              Their attention to detail and professional approach has impressed both our staff and clients. 
-              They work efficiently after hours and always leave our workspace spotless."
-            </Typography>
-            <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
-              - Sarah M., Office Manager
-            </Typography>
-          </Paper>
-        </Box>
+        <TrustBlock variant="compact" />
 
         <Box sx={{ textAlign: 'center' }}>
           <Button
@@ -614,7 +598,7 @@ const CommercialPage = () => {
 
       {/* Why Choose Us Section */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }} id="why-choose-us">
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{ overflow: 'hidden' }}>
           <Typography variant="h3" component="h2" sx={{ mb: 6, textAlign: 'center' }}>
             Why Choose Our Dayton Commercial Cleaning Services?
           </Typography>

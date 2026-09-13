@@ -210,7 +210,7 @@ const ApartmentBuildingCleaning = () => {
         backgroundImage="/images/legacy/sono-bono-XrsB8dosSWQ-unsplash-scaled.webp"
         chipText="LICENSED • INSURED • PROFESSIONAL"
         primaryButtonText="Get Your Free Quote"
-        primaryButtonLink="/quote?service=apartment-building"
+        primaryButtonLink="/quote?type=commercial"
         showRating={true}
         ratingValue={4.6}
         reviewCount="90+"

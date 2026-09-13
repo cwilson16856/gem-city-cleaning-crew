@@ -690,7 +690,7 @@ const XeniaHouseCleaningPage = () => {
       </Box>
 
       {/* Why choose us */}
-      <Container maxWidth="lg" sx={{ py: 8 }} id="why-choose-us">
+      <Container maxWidth="lg" sx={{ py: 8, overflow: 'hidden' }} id="why-choose-us">
         <Typography variant="h2" component="h2" sx={{ mb: 5, textAlign: 'center' }}>
           Why Xenia Homeowners Choose Gem City Cleaning Crew
         </Typography>

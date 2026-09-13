@@ -397,7 +397,7 @@ const DaycareCleaning = () => {
       />
 
       {/* Main Content */}
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ overflow: 'hidden' }}>
         {/* Facility Types Grid */}
         <Box sx={{ mb: 8 }}>
           <Typography variant="h3" component="h2" sx={{ mb: 4, textAlign: 'center' }}>

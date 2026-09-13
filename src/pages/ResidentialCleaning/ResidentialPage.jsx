@@ -519,11 +519,11 @@ const ResidentialPage = () => {
             fontSize: { xs: '1.5rem', md: '1.8rem' }
           }}
         >
-          Revitalize Your Home with Gem City Cleaning Crew's Top-Tier Dayton House Cleaning Services
+          Revitalize Your Home with Gem City Cleaning Crew's 4.6-Star Rated Dayton House Cleaning Services
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-          Looking for reliable and thorough Dayton house cleaning services? Look no further than Gem City Cleaning Crew! 
+          Looking for reliable and thorough Dayton house cleaning services? Gem City Cleaning Crew is a 4.6-star rated, locally owned team ready to help.
           Our team of experienced and dedicated cleaners will leave your home looking spotless and sparkling clean. 
           From dusting and vacuuming to deep cleaning and organizing, we offer a wide range of customizable home cleaning services to suit your needs. 
           We use only the highest-quality cleaning products and equipment to ensure that your home is not only clean but also safe and healthy. 
