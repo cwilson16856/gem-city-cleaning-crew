@@ -252,8 +252,8 @@ const RecurringCleaningPage = () => {
         <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Recurring House Cleaning Service Dayton OH | Gem City Cleaning Crew</title>
-        <meta name="title" content="Best Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner Every Visit" />
-        <meta name="description" content="⭐ #1 Rated Recurring House Cleaning Service in Dayton, OH. No contracts, same professional cleaner every visit, flexible scheduling. Weekly, bi-weekly & monthly options. FREE quotes! Call 937-892-4157" />
+        <meta name="title" content="4.6-Star Rated Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner Every Visit" />
+        <meta name="description" content="⭐ 4.6-Star Rated Recurring House Cleaning Service in Dayton, OH. No contracts, same professional cleaner every visit, flexible scheduling. Weekly, bi-weekly & monthly options. FREE quotes! Call 937-892-4157" />
         <meta name="keywords" content="recurring house cleaning Dayton, weekly cleaning service Dayton OH, bi-weekly house cleaning, no contract cleaning service, regular house cleaning Dayton, maid service Dayton, professional house cleaners Dayton, weekly maid service, Kettering house cleaning, Centerville cleaning service, Oakwood maid service, recurring cleaning near me, house cleaning subscription Dayton, residential cleaning service, same cleaner every visit, flexible house cleaning" />
 
         {/* Additional SEO Meta Tags */}
@@ -273,8 +273,8 @@ const RecurringCleaningPage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Gem City Cleaning Crew" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/recurring-cleaning-service" />
-        <meta property="og:title" content="Best Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner" />
-        <meta property="og:description" content="⭐ #1 Rated Recurring House Cleaning in Dayton. No contracts, same professional cleaner every visit, flexible scheduling. Weekly, bi-weekly & monthly options. FREE quotes!" />
+        <meta property="og:title" content="4.6-Star Rated Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner" />
+        <meta property="og:description" content="⭐ 4.6-Star Rated Recurring House Cleaning in Dayton. No contracts, same professional cleaner every visit, flexible scheduling. Weekly, bi-weekly & monthly options. FREE quotes!" />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Professional recurring house cleaning results showing organized living room with vacuum lines" />
         <meta property="og:image:width" content="1200" />
@@ -290,8 +290,8 @@ const RecurringCleaningPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@GemCityCleaning" />
         <meta name="twitter:creator" content="@GemCityCleaning" />
-        <meta name="twitter:title" content="Best Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner" />
-        <meta name="twitter:description" content="⭐ #1 Rated Recurring House Cleaning in Dayton. No contracts, same professional cleaner every visit. Weekly, bi-weekly & monthly options. FREE quotes!" />
+        <meta name="twitter:title" content="4.6-Star Rated Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner" />
+        <meta name="twitter:description" content="⭐ 4.6-Star Rated Recurring House Cleaning in Dayton. No contracts, same professional cleaner every visit. Weekly, bi-weekly & monthly options. FREE quotes!" />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta name="twitter:image:alt" content="Professional recurring house cleaning results in Dayton OH" />
 
@@ -539,7 +539,7 @@ const RecurringCleaningPage = () => {
               lineHeight: 1.1
             }}
           >
-            Best Recurring House Cleaning Service in Dayton
+            4.6-Star Rated Recurring House Cleaning Service in Dayton
           </Typography>
           
           <Typography
