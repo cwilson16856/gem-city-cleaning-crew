@@ -11,6 +11,7 @@ import {
   useTheme
 } from '@mui/material'
 import PhoneIcon from '@mui/icons-material/Phone'
+import { GBP_REVIEW_URL } from '../utils/localBusinessSchema'
 
 const HeroSection = ({ 
   title,
@@ -127,29 +128,41 @@ const HeroSection = ({
         )}
 
         {showRating && (
-          <Box 
-            sx={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              alignItems: 'center', 
-              gap: 2, 
+          // The rating badge links out to the actual Google Business Profile
+          // the reviews live on -- previously this rendered as an
+          // unverifiable, self-serving claim with no way for a visitor (or
+          // Google) to check it against a real source. See 2026-09-11 SEO
+          // audit follow-up, "self-serving review schema" finding.
+          <Box
+            component="a"
+            href={GBP_REVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: 2,
               mb: 4,
               minHeight: 40,
-              textShadow: '1px 1px 3px rgba(0,0,0,0.5)'
+              textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
+              textDecoration: 'none',
+              cursor: 'pointer',
+              '&:hover': { opacity: 0.85 }
             }}
           >
-            <Rating 
-              value={ratingValue} 
-              precision={0.5} 
-              readOnly 
-              size="large" 
-              sx={{ 
+            <Rating
+              value={ratingValue}
+              precision={0.5}
+              readOnly
+              size="large"
+              sx={{
                 color: '#FFD700',
                 '& .MuiRating-icon': {
                   fontSize: '2rem',
                   filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.5))'
                 }
-              }} 
+              }}
             />
             <Typography
               variant="h6"
@@ -159,7 +172,8 @@ const HeroSection = ({
                 fontWeight: 600,
                 fontFamily: 'Inter, sans-serif',
                 minWidth: 200,
-                textShadow: '1px 1px 3px rgba(0,0,0,0.5)'
+                textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
+                textDecoration: 'underline'
               }}
             >
               {ratingValue}/5 stars • {reviewCount} reviews

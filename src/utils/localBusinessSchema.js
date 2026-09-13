@@ -12,6 +12,13 @@ import { CITIES } from '../data/locations'
 const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://gemcitycleaningcrew.com'
 const BUSINESS_ID = `${SITE_URL}/#business`
 
+// Real Google Business Profile URL (CID 7373519259471335388, confirmed live
+// and claimed via the OpenSEO GBP lookup 2026-09-11). Single source of truth
+// for every rating-badge link and the sameAs entry below -- previously
+// inlined separately in 10+ page files. See 2026-09-11 SEO audit follow-up,
+// "self-serving review schema" finding.
+export const GBP_REVIEW_URL = 'https://www.google.com/maps?cid=7373519259471335388'
+
 // Every city with a dedicated location page (src/data/locations.js) — the
 // single site-wide LocalBusiness block (see App.jsx / entry-server.jsx) uses
 // the full list; a page-specific Service block still passes its own narrower
@@ -36,8 +43,8 @@ export const generateLocalBusinessSchema = (areaServedCities = ALL_SERVICE_AREA_
   slogan: 'We Make Life Easier',
   foundingDate: '2017',
   founder: [
-    { '@type': 'Person', name: 'Chris Wilson' },
-    { '@type': 'Person', name: 'Macy Wilson' }
+    { '@type': 'Person', '@id': `${SITE_URL}/about-us#chris-wilson`, name: 'Chris Wilson' },
+    { '@type': 'Person', '@id': `${SITE_URL}/about-us#macy-wilson`, name: 'Macy Wilson' }
   ],
   telephone: '937-892-4157',
   email: 'info@gemcitycleaningcrew.com',
@@ -53,13 +60,20 @@ export const generateLocalBusinessSchema = (areaServedCities = ALL_SERVICE_AREA_
   currenciesAccepted: 'USD',
   paymentAccepted: ['Cash', 'Credit Card', 'Check', 'PayPal', 'Venmo'],
   areaServed: areaServedCities.map((name) => ({ '@type': 'City', name, addressRegion: 'OH' })),
+  // ratingValue/ratingCount match the live Google Business Profile exactly
+  // (91 reviews, 4.6 avg, confirmed via the OpenSEO GBP lookup 2026-09-11 --
+  // the "90+" figure used in marketing copy elsewhere on the site is a
+  // deliberately-rounded-down public-facing number, but the schema value
+  // itself should be exact and checkable against the sameAs GBP link above,
+  // not an approximation). Re-verify against the GBP link periodically as
+  // the review count grows.
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.6',
     bestRating: '5',
     worstRating: '1',
-    ratingCount: '90',
-    reviewCount: '90'
+    ratingCount: '91',
+    reviewCount: '91'
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -75,10 +89,18 @@ export const generateLocalBusinessSchema = (areaServedCities = ALL_SERVICE_AREA_
     { '@type': 'ContactPoint', email: 'info@gemcitycleaningcrew.com', contactType: 'customer service', availableLanguage: 'English' }
   ],
   sameAs: [
+    // Google Business Profile -- CID 7373519259471335388, confirmed via the
+    // OpenSEO GBP lookup (claimed, live) 2026-09-11. Anchors the aggregateRating
+    // below to a checkable source instead of an unverifiable self-serving claim
+    // -- see 2026-09-11 SEO audit follow-up, "self-serving review schema" finding.
+    GBP_REVIEW_URL,
     'https://www.yelp.com/biz/gem-city-cleaning-crew-dayton',
     'https://www.facebook.com/GemCityCleaningCrew',
-    'https://www.instagram.com/gemcitycleaningcrew',
-    'https://www.linkedin.com/company/gem-city-cleaning-crew'
+    'https://www.instagram.com/gemcitycleaningcrew'
+    // LinkedIn deliberately omitted: linkedin.com/company/gem-city-cleaning-crew
+    // 404s (confirmed live 2026-09-11) -- an unresolvable sameAs entry is worse
+    // than none, since entity-reconciliation systems treat it as noise against
+    // the links above that do resolve. Add back once a real company page exists.
   ]
 })
 

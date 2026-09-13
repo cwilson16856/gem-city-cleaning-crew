@@ -29,9 +29,11 @@ import '../styles/homepages/HomePage.css'
 
 // Components
 import AreasWeServe from '../components/AreasWeServe'
+import TrustBlock from '../components/TrustBlock'
 
 // Content
 import { getAllPosts } from '../content/blog'
+import { GBP_REVIEW_URL } from '../utils/localBusinessSchema'
 
 const HomePage = () => {
   const theme = useTheme()
@@ -104,28 +106,6 @@ const HomePage = () => {
       title: "100% Supply Guarantee",
       description: "We bring everything - you don't buy a single cleaning product",
       highlight: "Save $200+ annually"
-    }
-  ]
-
-  // Real testimonials
-  const testimonials = [
-    {
-      name: "Dustin T.",
-      text: "Gem City Cleaning does a very professional and thorough job. Always on time, and pricing is fair.",
-      rating: 5,
-      highlight: "Professional & Thorough"
-    },
-    {
-      name: "Christina C.",
-      text: "The staff did an amazing job! They're trustworthy, reliable, and affordable.",
-      rating: 5,
-      highlight: "Trustworthy & Reliable"
-    },
-    {
-      name: "Rick V.",
-      text: "As a property owner, I call them and the next day it's perfect. They are the only cleaning crew I use.",
-      rating: 5,
-      highlight: "Property Owner Approved"
     }
   ]
 
@@ -221,28 +201,38 @@ const HomePage = () => {
             Professional house and office cleaning with 3-month trained staff, no long-term contracts, and flexible scheduling
           </Typography>
 
-          {/* Single Prominent Rating */}
-          <Box 
-            sx={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              alignItems: 'center', 
-              gap: 2, 
+          {/* Single Prominent Rating -- links to the real Google Business
+              Profile (CID 7373519259471335388) instead of rendering as an
+              unverifiable claim. See 2026-09-11 SEO audit follow-up,
+              "self-serving review schema" finding. */}
+          <Box
+            component="a"
+            href={GBP_REVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: 2,
               mb: 4,
-              minHeight: 40 // Prevent layout shift
+              minHeight: 40, // Prevent layout shift
+              textDecoration: 'none',
+              cursor: 'pointer',
+              '&:hover': { opacity: 0.85 }
             }}
           >
-            <Rating 
-              value={4.6} 
-              precision={0.5} 
-              readOnly 
-              size="large" 
-              sx={{ 
+            <Rating
+              value={4.6}
+              precision={0.5}
+              readOnly
+              size="large"
+              sx={{
                 color: '#FFD700',
                 '& .MuiRating-icon': {
                   fontSize: '2rem' // Fixed size to prevent shifts
                 }
-              }} 
+              }}
             />
             <Typography
               variant="h6"
@@ -251,7 +241,8 @@ const HomePage = () => {
                 color: '#FFD700',
                 fontWeight: 600,
                 fontFamily: 'Inter, sans-serif',
-                minWidth: 200 // Prevent text shifting
+                minWidth: 200, // Prevent text shifting
+                textDecoration: 'underline'
               }}
             >
               4.6/5 stars • 90+ reviews
@@ -556,53 +547,7 @@ const HomePage = () => {
         </Container>
       </Box>
 
-      {/* Personal Testimonials */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Box sx={{ textAlign: 'center', mb: 6 }}>
-          <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
-            Real Customers, Real Results
-          </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
-            See why Dayton trusts our professionally trained team
-          </Typography>
-        </Box>
-
-        <Grid container spacing={4}>
-          {testimonials.map((testimonial, index) => (
-            <Grid item xs={12} md={4} key={index}>
-              <Paper 
-                elevation={2} 
-                sx={{ 
-                  p: 4, 
-                  height: '100%', 
-                  position: 'relative',
-                  '& .MuiRating-root': { mb: 2 }
-                }}
-              >
-                <Chip 
-                  label={testimonial.highlight}
-                  size="small"
-                  sx={{ 
-                    position: 'absolute',
-                    top: 16,
-                    right: 16,
-                    backgroundColor: theme.palette.primary.main,
-                    color: 'white',
-                    fontSize: '0.7rem'
-                  }}
-                />
-                  <Rating value={testimonial.rating} readOnly size="small" />
-                <Typography variant="body1" sx={{ mb: 3, fontStyle: 'italic' }}>
-                  &quot;{testimonial.text}&quot;
-                </Typography>
-                <Typography variant="subtitle2" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
-                  - {testimonial.name}
-                </Typography>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+      <TrustBlock variant="full" />
 
       {/* Video Section */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }}>

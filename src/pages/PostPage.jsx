@@ -140,6 +140,13 @@ const PostPage = () => {
               }}
             >
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                By{' '}
+                <Link to="/about-us#chris-wilson" style={{ color: 'inherit', textDecoration: 'underline' }}>
+                  {post.author || 'Chris Wilson'}
+                </Link>
+              </Box>
+
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
                 <CalendarTodayIcon fontSize="small" />
                 {format(new Date(post.publishedAt), 'MMMM d, yyyy')}
               </Box>

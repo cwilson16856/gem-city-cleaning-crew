@@ -1,0 +1,137 @@
+/* TrustBlock component styles */
+
+.container {
+  padding: 64px 0;
+}
+
+.compactContainer {
+  padding: 32px 0;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 2.125rem;
+  font-weight: 400;
+  line-height: 1.235;
+}
+
+.policyBand {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  background-color: rgba(216, 27, 96, 0.05);
+  border-radius: 8px;
+  padding: 24px 32px;
+  margin-bottom: 48px;
+}
+
+.compactPolicyBand {
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.policyItem {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.policyIcon {
+  color: #D81B60;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.policyText {
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.reviewGrid {
+  margin-bottom: 24px;
+}
+
+.reviewCard {
+  height: 100%;
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.reviewText {
+  font-style: italic;
+  line-height: 1.6;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.reviewByline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 0.8rem;
+}
+
+.seeAllReviews {
+  text-align: center;
+}
+
+.seeAllReviewsLink {
+  color: #D81B60;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.seeAllReviewsLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 899px) {
+  .container {
+    padding: 48px 0;
+  }
+
+  .headerSection {
+    margin-bottom: 32px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .policyBand {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 599px) {
+  .container {
+    padding: 32px 0;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .policyBand {
+    padding: 16px;
+  }
+}

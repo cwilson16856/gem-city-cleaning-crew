@@ -68,6 +68,11 @@ import './styles/index.css'
 // (including several lazy ones) before shipping — re-run that check after
 // touching this file, entry-server.jsx's Suspense/cache setup, or App.jsx's
 // route eagerness.
+//
+// Re-evaluated 2026-09-11 (see .claude/plans/1. Pending/gccc-seo-visibility/GCCC/lcp-third-party-deferral-plan.md)
+// -- same conclusion holds, no new information changed the preload-gap
+// analysis above. That round shipped the Maps-embed lazy-load and
+// GTM/Pixel idle-defer fixes instead, since neither needs hydrateRoot.
 const clientCache = createCache({ key: 'css' })
 
 const root = document.getElementById('root')
