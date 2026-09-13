@@ -413,7 +413,18 @@ const XeniaHouseCleaningPage = () => {
         <Container maxWidth="lg" className="hero-content residential-hero-content" sx={{ position: 'relative', zIndex: 2 }}>
           <Chip
             label="XENIA & GREENE COUNTY • LICENSED • INSURED • NO CONTRACTS"
-            sx={{ mb: 3, backgroundColor: theme.palette.primary.main, color: 'white', fontWeight: 600, fontSize: '0.9rem', px: 2 }}
+            sx={{ mb: 3, backgroundColor: theme.palette.primary.main, color: 'white', fontWeight: 600, fontSize: '0.9rem', px: 2,
+              height: 'auto',
+              maxWidth: { xs: '90%', sm: 'none' },
+              '& .MuiChip-label': {
+                display: 'block',
+                whiteSpace: 'normal',
+                overflow: 'visible',
+                textOverflow: 'clip',
+                lineHeight: 1.4,
+                py: 0.75
+              }
+            }}
           />
           <Typography
             variant="h1"
@@ -426,14 +437,14 @@ const XeniaHouseCleaningPage = () => {
           <Typography
             variant="h4"
             component="p"
-            sx={{ fontSize: { xs: '1.15rem', md: '1.6rem' }, fontWeight: 400, mb: 2, maxWidth: 820, mx: 'auto' }}
+            sx={{ fontSize: { xs: '1.15rem', md: '1.6rem' }, fontWeight: 400, mb: 2, maxWidth: 820, mx: 'auto', color: 'white', textShadow: '1px 1px 3px rgba(0,0,0,0.5)' }}
           >
             Local cleaners for Greene County homes — from the courthouse square to Wright Cycle Estates
           </Typography>
           <Typography
             variant="h5"
             component="p"
-            sx={{ fontSize: { xs: '1rem', md: '1.25rem' }, fontWeight: 500, mb: 4, maxWidth: 720, mx: 'auto', opacity: 0.95 }}
+            sx={{ fontSize: { xs: '1rem', md: '1.25rem' }, fontWeight: 500, mb: 4, maxWidth: 720, mx: 'auto', opacity: 0.95, color: 'white', textShadow: '1px 1px 3px rgba(0,0,0,0.5)' }}
           >
             Recurring • Deep Cleaning • Move-In / Move-Out • One-Time Visits
           </Typography>
@@ -806,7 +817,7 @@ const XeniaHouseCleaningPage = () => {
           <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600, color: 'white' }}>
             Ready for a Cleaner Home in Xenia?
           </Typography>
-          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.95 }}>
+          <Typography variant="h6" component="p" sx={{ color: 'white', mb: 4, opacity: 0.95 }}>
             Free quotes, no contracts, and a licensed, insured crew that knows Greene County homes.
           </Typography>
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>

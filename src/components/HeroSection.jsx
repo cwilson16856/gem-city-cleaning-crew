@@ -63,16 +63,26 @@ const HeroSection = ({
         }}
       >
         {chipText && (
-          <Chip 
+          <Chip
             label={chipText}
-            sx={{ 
-              mb: 3, 
-              backgroundColor: theme.palette.primary.main, 
+            sx={{
+              mb: 3,
+              backgroundColor: theme.palette.primary.main,
               color: 'white',
               fontWeight: 600,
               fontSize: '0.9rem',
-              px: 2
-            }} 
+              px: 2,
+              height: 'auto',
+              maxWidth: { xs: '90%', sm: 'none' },
+              '& .MuiChip-label': {
+                display: 'block',
+                whiteSpace: 'normal',
+                overflow: 'visible',
+                textOverflow: 'clip',
+                lineHeight: 1.4,
+                py: 0.75
+              }
+            }}
           />
         )}
         
@@ -102,7 +112,7 @@ const HeroSection = ({
             mb: 2,
             maxWidth: 800,
             mx: 'auto',
-            color: 'black',
+            color: 'white',
             textShadow: '1px 1px 3px rgba(0,0,0,0.5)'
           }}
         >
@@ -119,7 +129,7 @@ const HeroSection = ({
               mb: 4,
               maxWidth: 700,
               mx: 'auto',
-              color: 'black',
+              color: 'white',
               textShadow: '1px 1px 3px rgba(0,0,0,0.5)'
             }}
           >

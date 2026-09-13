@@ -514,7 +514,17 @@ const RecurringCleaningPage = () => {
               color: 'white',
               fontWeight: 600,
               fontSize: '0.9rem',
-              px: 2
+              px: 2,
+              height: 'auto',
+              maxWidth: { xs: '90%', sm: 'none' },
+              '& .MuiChip-label': {
+                display: 'block',
+                whiteSpace: 'normal',
+                overflow: 'visible',
+                textOverflow: 'clip',
+                lineHeight: 1.4,
+                py: 0.75
+              }
             }} 
           />
           
@@ -537,6 +547,8 @@ const RecurringCleaningPage = () => {
             component="p"
             className="hero-subtitle"
             sx={{
+              color: 'white',
+              textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
               fontSize: { xs: '1.2rem', md: '1.8rem' },
               fontWeight: 400,
               mb: 2,
@@ -551,6 +563,8 @@ const RecurringCleaningPage = () => {
             variant="h5"
             component="p"
             sx={{
+              color: 'white',
+              textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               fontWeight: 500,
               mb: 4,
@@ -1633,10 +1647,10 @@ const RecurringCleaningPage = () => {
       {/* Final CTA */}
       <Box sx={{ backgroundColor: theme.palette.primary.main, color: 'white', py: 8 }}>
         <Container maxWidth="md" sx={{ textAlign: 'center' }}>
-          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+          <Typography variant="h3" component="h2" sx={{ color: 'white', mb: 2, fontWeight: 600 }}>
             Ready for Reliable Recurring Cleaning?
           </Typography>
-          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ color: 'white', mb: 4, opacity: 0.9 }}>
             Join the hundreds of Dayton families who trust us with their homes every week.
             No contracts, same cleaner, flexible scheduling guaranteed.
           </Typography>

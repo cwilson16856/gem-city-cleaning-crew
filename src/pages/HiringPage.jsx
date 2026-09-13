@@ -270,10 +270,10 @@ const HiringPage = () => {
       {/* Final CTA */}
       <Box sx={{ backgroundColor: theme.palette.primary.main, color: 'white', py: 8 }}>
         <Container maxWidth="md" sx={{ textAlign: 'center' }}>
-          <Typography variant="h3" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+          <Typography variant="h3" component="h2" sx={{ color: 'white', mb: 2, fontWeight: 600 }}>
             Have Questions Before You Apply?
           </Typography>
-          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ color: 'white', mb: 4, opacity: 0.9 }}>
             Give us a call and we&apos;ll walk you through what the job looks like day to day.
           </Typography>
           <Button

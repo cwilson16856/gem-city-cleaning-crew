@@ -268,7 +268,17 @@ const MoveInCleaningPage = () => {
               fontSize: '0.9rem',
               px: 2,
               textShadow: 'none',
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+              height: 'auto',
+              maxWidth: { xs: '90%', sm: 'none' },
+              '& .MuiChip-label': {
+                display: 'block',
+                whiteSpace: 'normal',
+                overflow: 'visible',
+                textOverflow: 'clip',
+                lineHeight: 1.4,
+                py: 0.75
+              }
             }} 
           />
           
