@@ -177,4 +177,22 @@
     flex-direction: column;
     text-align: center;
   }
+
+  /* MUI's default Chip height (32px, see index.html's CLS-prevention rule)
+     is under the 44px mobile tap-target guideline. !important matches this
+     file's existing precedent (.areaChip:hover) since MUI's runtime emotion
+     stylesheet can load after this CSS Module's <link> tag. */
+  .areaChip {
+    height: 44px !important;
+  }
+
+  /* The <a> wrapping each linked chip (AreasWeServe.jsx) is inline by
+     default and doesn't inherit the block-level Chip's height as its own
+     bounding box -- make it a flex box so its own tap-target area also
+     reaches 44px, not just its child. */
+  .areasGrid a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
 }
