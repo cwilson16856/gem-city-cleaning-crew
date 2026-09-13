@@ -4,7 +4,7 @@ const content = `
 <p><em>Jump to: <a href="#when-it-hits">When ragweed season hits Dayton</a> · <a href="#why-cleaning-helps">Why cleaning helps</a> · <a href="#checklist">Room-by-room checklist</a> · <a href="#before-you-come-inside">Before you come inside</a> · <a href="#faq">FAQ</a></em></p>
 
 <h2 id="when-it-hits">When Ragweed Season Actually Hits Dayton</h2>
-<p>Ragweed pollen typically shows up in the Miami Valley in mid-August and stays active through November, according to Public Health – Dayton & Montgomery County. It's the single biggest cause of fall hay fever in this area, and it doesn't take much wind to carry it indoors — through open windows, on clothes, in your dog's fur, on your kids after soccer practice.</p>
+<p>Ragweed pollen typically shows up in the Miami Valley in mid-August and stays active through November, according to <a href="https://www.phdmc.org/news-features/news-releases/protect-yourself-from-ragweed-allergies-this-fall" target="_blank" rel="noopener noreferrer">Public Health – Dayton & Montgomery County</a>. It's the single biggest cause of fall hay fever in this area, and it doesn't take much wind to carry it indoors — through open windows, on clothes, in your dog's fur, on your kids after soccer practice.</p>
 <p>Peak pollen hours locally run roughly <strong>10 a.m. to 4 p.m.</strong> That's the window to keep windows closed and limit outdoor time if you're sensitive to it. Counts also tend to spike on dry, breezy days and drop after rain.</p>
 
 <h2 id="why-cleaning-helps">Why Cleaning Helps (and What People Get Wrong)</h2>
@@ -58,7 +58,7 @@ const content = `
 <h2 id="faq">FAQ: Ragweed Season Cleaning in Dayton</h2>
 
 <h3>When does ragweed season start and end in Ohio?</h3>
-<p>In the Miami Valley, ragweed season typically runs from mid-August through November, per Public Health – Dayton & Montgomery County. It's the region's leading cause of fall hay fever, and counts usually peak in September before tapering off with the first hard frost.</p>
+<p>In the Miami Valley, ragweed season typically runs from mid-August through November, per <a href="https://www.phdmc.org/news-features/news-releases/protect-yourself-from-ragweed-allergies-this-fall" target="_blank" rel="noopener noreferrer">Public Health – Dayton & Montgomery County</a>. It's the region's leading cause of fall hay fever, and counts usually peak in September before tapering off with the first hard frost.</p>
 
 <h3>Does deep cleaning actually help with ragweed allergies?</h3>
 <p>Yes — it reduces the amount of pollen recirculating indoors, particularly in carpets, upholstery, bedding, and HVAC systems where it settles and builds up. It won't stop pollen from existing outside, but it meaningfully cuts down what you're breathing while you're home, which is where most people spend the bulk of allergy season.</p>
