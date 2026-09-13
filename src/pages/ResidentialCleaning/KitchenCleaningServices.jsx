@@ -211,7 +211,9 @@ const KitchenCleaningServices = () => {
         <meta name="geo.region" content="US-OH" />
         <meta name="geo.placename" content="Dayton, Ohio" />
         <meta name="author" content="Gem City Cleaning Crew" />
-        
+
+        <link rel="canonical" href="https://gemcitycleaningcrew.com/kitchen-cleaning-services" />
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Gem City Cleaning Crew" />

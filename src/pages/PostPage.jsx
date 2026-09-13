@@ -77,6 +77,7 @@ const PostPage = () => {
         {post.keywords?.length > 0 && (
           <meta name="keywords" content={post.keywords.join(', ')} />
         )}
+        <link rel="canonical" href={postUrl} />
 
         {structuredData && (
           <script type="application/ld+json">
@@ -103,6 +104,7 @@ const PostPage = () => {
         <meta property="og:description" content={socialMeta.description} />
         <meta property="og:image" content={socialMeta.image} />
         <meta property="og:type" content={socialMeta.type} />
+        <meta property="og:url" content={postUrl} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={socialMeta.title} />

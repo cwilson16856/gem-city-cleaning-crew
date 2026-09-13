@@ -41,6 +41,9 @@ const PrivacyPolicy = () => {
           content="How Gem City Cleaning Crew collects, uses, and protects your personal information, including text messaging consent and opt-out."
         />
         <link rel="canonical" href="https://gemcitycleaningcrew.com/privacy-policy" />
+        <meta property="og:url" content="https://gemcitycleaningcrew.com/privacy-policy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Privacy Policy | Gem City Cleaning Crew" />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 

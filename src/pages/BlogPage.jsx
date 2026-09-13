@@ -17,10 +17,11 @@ import { generateBreadcrumbStructuredData, generateCanonicalUrl } from '../utils
 
 const BlogPage = () => {
   const posts = getAllPosts()
+  const blogUrl = generateCanonicalUrl('/blog')
 
   const breadcrumbData = generateBreadcrumbStructuredData([
     { name: 'Home', url: generateCanonicalUrl('/') },
-    { name: 'Blog', url: generateCanonicalUrl('/blog') }
+    { name: 'Blog', url: blogUrl }
   ])
 
   return (
@@ -28,6 +29,11 @@ const BlogPage = () => {
       <Helmet>
         <title>Blog - Gem City Cleaning Crew</title>
         <meta name="description" content="Read our latest cleaning tips, industry news, and service updates. Professional cleaning advice from Gem City Cleaning Crew." />
+        <link rel="canonical" href={blogUrl} />
+        <meta property="og:url" content={blogUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Blog - Gem City Cleaning Crew" />
+        <meta property="og:description" content="Read our latest cleaning tips, industry news, and service updates. Professional cleaning advice from Gem City Cleaning Crew." />
         {breadcrumbData && (
           <script type="application/ld+json">
             {JSON.stringify(breadcrumbData)}
