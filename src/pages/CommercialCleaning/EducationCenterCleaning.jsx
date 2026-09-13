@@ -522,7 +522,7 @@ const DaycareCleaning = () => {
 
         {/* Service Areas Section */}
         <Box id="service-areas" sx={{ py: 8 }}>
-          <AreasWeServe />
+          <AreasWeServe serviceType="commercial" />
         </Box>
 
         {/* FAQ Section */}

@@ -1100,7 +1100,7 @@ const CommercialOneTimeCleaning = () => {
 
       {/* Service Areas */}
       <Box id="service-areas">
-        <AreasWeServe />
+        <AreasWeServe serviceType="commercial" />
       </Box>
 
       {/* Final CTA */}
