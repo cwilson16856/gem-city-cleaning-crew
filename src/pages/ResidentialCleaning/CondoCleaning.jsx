@@ -34,7 +34,7 @@ import '../../styles/pages/ResidentialPage.css'
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
-import { GBP_REVIEW_URL } from '../../utils/localBusinessSchema'
+import { GBP_REVIEW_URL, generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 
 const CondoCleaning = () => {
   const theme = useTheme()
@@ -195,6 +195,19 @@ const CondoCleaning = () => {
     }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/condo-cleaning#webpage',
+    url: 'https://gemcitycleaningcrew.com/condo-cleaning',
+    name: 'Condo Cleaning Services Dayton OH',
+    description: '⭐ Trusted Condo Cleaning Service in Dayton, OH. Luxury finish care, HOA compliant, property value protection. Professional maid service for condo owners. FREE quotes! Call 937-892-4157',
+    aboutId: 'https://gemcitycleaningcrew.com/condo-cleaning#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Condo Cleaning', url: 'https://gemcitycleaningcrew.com/condo-cleaning' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -253,6 +266,8 @@ const CondoCleaning = () => {
             ]
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}

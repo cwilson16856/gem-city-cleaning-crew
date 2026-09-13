@@ -163,7 +163,24 @@ const QuotePage = () => {
             "name": "Request Free Cleaning Quote",
             "description": "Get a free, no-obligation quote for house cleaning services in Dayton, OH. Online form and phone consultations available.",
             "url": "https://gemcitycleaningcrew.com/quote",
-            "mainEntity": { "@id": "https://gemcitycleaningcrew.com/#business" }
+            "mainEntity": { "@id": "https://gemcitycleaningcrew.com/#business" },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://gemcitycleaningcrew.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Request Quote",
+                  "item": "https://gemcitycleaningcrew.com/quote"
+                }
+              ]
+            }
           })}
         </script>
 
@@ -188,28 +205,6 @@ const QuotePage = () => {
               "validFrom": "2024-01-01",
               "areaServed": "Dayton, OH and surrounding areas"
             }
-          })}
-        </script>
-
-        {/* Breadcrumb Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://gemcitycleaningcrew.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Request Quote",
-                "item": "https://gemcitycleaningcrew.com/quote"
-              }
-            ]
           })}
         </script>
 
@@ -263,40 +258,6 @@ const QuotePage = () => {
           })}
         </script>
 
-        {/* Quote Form Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "@id": "https://gemcitycleaningcrew.com/quote#webpage",
-            "name": "Request Free House Cleaning Quote - Gem City Cleaning Crew",
-            "description": "Get your free house cleaning quote online. Professional cleaning services in Dayton, OH with same-day response guaranteed.",
-            "url": "https://gemcitycleaningcrew.com/quote",
-            "mainEntity": {
-              "@type": "WebPageElement",
-              "name": "House Cleaning Quote Form",
-              "description": "Online form to request free house cleaning estimates",
-              "url": "https://gemcitycleaningcrew.com/quote#quote-form"
-            },
-            "breadcrumb": {
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://gemcitycleaningcrew.com"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Request Quote",
-                  "item": "https://gemcitycleaningcrew.com/quote"
-                }
-              ]
-            }
-          })}
-        </script>
       </Helmet>
 
       {/* Hero Section */}

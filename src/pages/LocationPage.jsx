@@ -114,6 +114,19 @@ const LocationsIndex = () => {
     }
   }, [location])
 
+  const canonicalUrl = generateCanonicalUrl('/locations')
+  const webPageSchema = generateLocationWebPageSchema({
+    id: `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: 'Cleaning Service Locations Near Dayton',
+    description: 'Professional cleaning services throughout Greater Dayton including Kettering, Centerville, Beavercreek & more. Residential & commercial cleaning services.',
+    aboutId: 'https://gemcitycleaningcrew.com/#business',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Locations', url: canonicalUrl }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -124,6 +137,7 @@ const LocationsIndex = () => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Cleaning Service Locations Near Dayton | Gem City Cleaning Crew" />
         <meta property="og:description" content="Professional cleaning services throughout Greater Dayton including Kettering, Centerville, Beavercreek & more. Residential & commercial cleaning services." />
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}

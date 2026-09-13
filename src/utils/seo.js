@@ -70,6 +70,14 @@ export const generateBreadcrumbStructuredData = (breadcrumbs) => {
   }
 }
 
+// Blog pages are editorial content, not the reviewed entity -- Google's
+// structured-data guidelines disallow AggregateRating/Review markup on a
+// page whose own subject isn't the thing being reviewed. Shared by
+// App.jsx (client) and entry-server.jsx (SSR) so the site-wide
+// LocalBusiness injection in both places makes the same call.
+// 2026-09-13 SEO audit, "self-serving review schema on blog" finding.
+export const isBlogPath = (pathname) => pathname === '/blog' || pathname.startsWith('/blog/')
+
 // Calculate reading time
 export const calculateReadingTime = (content) => {
   if (!content) return 0

@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -50,6 +50,7 @@ const NotFound = lazy(() => import('./pages/NotFound'))
 
 // Utils
 import { generateLocalBusinessSchema } from './utils/localBusinessSchema'
+import { isBlogPath } from './utils/seo'
 
 // Theme configuration
 // Exported (not just default-consumed here) so entry-server.jsx can reuse the
@@ -162,7 +163,8 @@ export const theme = createTheme({
 })
 
 function App() {
-  const localBusinessData = generateLocalBusinessSchema()
+  const { pathname } = useLocation()
+  const localBusinessData = generateLocalBusinessSchema(undefined, { includeAggregateRating: !isBlogPath(pathname) })
 
   return (
     <ThemeProvider theme={theme}>
