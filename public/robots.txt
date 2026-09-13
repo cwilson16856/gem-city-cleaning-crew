@@ -11,18 +11,13 @@ Disallow: /*.map$
 # Crawl delay for polite crawling
 Crawl-delay: 1
 
-# AI answer-engine / LLM crawlers — explicitly allowed for AI Overview /
-# AI-answer-engine discoverability
+# AI training crawlers — allowing these affects whether GCCC's content
+# shapes a future model's general knowledge, not whether GCCC gets cited
+# in a live AI answer today
 User-agent: GPTBot
 Allow: /
 
-User-agent: ChatGPT-User
-Allow: /
-
 User-agent: Google-Extended
-Allow: /
-
-User-agent: PerplexityBot
 Allow: /
 
 User-agent: ClaudeBot
@@ -32,6 +27,20 @@ User-agent: anthropic-ai
 Allow: /
 
 User-agent: CCBot
+Allow: /
+
+# AI answer-engine / search-citation crawlers — explicitly allowed for
+# real-time citability in ChatGPT Search, Perplexity, and Claude Search
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
 Allow: /
 
 # Sitemap location
