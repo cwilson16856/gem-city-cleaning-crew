@@ -832,6 +832,16 @@ const CommercialPage = () => {
         <AreasWeServe />
       </Box>
 
+      {/* Related guides */}
+      <Container maxWidth="md" sx={{ py: 4 }}>
+        <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+          Want your space looking sharp between visits? Read{' '}
+          <Link to="/blog/how-to-keep-office-clean-between-cleanings-dayton" style={{ color: theme.palette.primary.main, fontWeight: 600 }}>
+            our guide to keeping an office clean between cleanings
+          </Link>.
+        </Typography>
+      </Container>
+
       {/* Excellence Section */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Divider sx={{ my: 4 }} />

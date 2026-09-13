@@ -855,6 +855,16 @@ const ResidentialPage = () => {
         <AreasWeServe />
       </Box>
 
+      {/* Related guides */}
+      <Container maxWidth="md" sx={{ py: 4 }}>
+        <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+          Curious what a recurring visit actually covers? Read{' '}
+          <Link to="/blog/what-to-expect-recurring-cleaning-service-dayton" style={{ color: theme.palette.primary.main, fontWeight: 600 }}>
+            our guide to what to expect from recurring cleaning
+          </Link>.
+        </Typography>
+      </Container>
+
       {/* Excellence Section */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Divider sx={{ my: 4 }} />

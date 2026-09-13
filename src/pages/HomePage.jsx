@@ -33,7 +33,41 @@ import TrustBlock from '../components/TrustBlock'
 
 // Content
 import { getAllPosts } from '../content/blog'
-import { GBP_REVIEW_URL } from '../utils/localBusinessSchema'
+import { GBP_REVIEW_URL, generateFAQPageSchema } from '../utils/localBusinessSchema'
+
+// Real facts only — founding year, licensing, and background-check policy
+// are the same ones already published in AboutPage.jsx's trustStats/
+// differentiators and localBusinessSchema.js. Not a rich-result/SERP claim —
+// Google retired FAQ rich results for all sites May 7 2026 — this schema is
+// added purely so crawlers and LLM answer engines can parse the Q&A directly,
+// matching the same reasoning already used for location pages' FAQPage
+// schema (see generateFAQPageSchema's own comment in localBusinessSchema.js).
+const HOMEPAGE_FAQS = [
+  {
+    question: 'Do you require contracts?',
+    answer: 'No. Gem City Cleaning Crew has never required contracts — cancel anytime, change your cleaning frequency anytime, no cancellation fees.'
+  },
+  {
+    question: 'Are your cleaners background-checked and insured?',
+    answer: 'Yes. Every cleaner passes a Checkr background check before their first visit, and Gem City Cleaning Crew carries full licensing and insurance coverage, with a certificate available on request.'
+  },
+  {
+    question: 'What areas do you serve?',
+    answer: 'We serve Dayton and the surrounding Miami Valley, including Kettering, Centerville, Oakwood, Miamisburg, Springboro, Huber Heights, Beavercreek, and more.'
+  },
+  {
+    question: 'How do I get a free quote?',
+    answer: 'Request a free, no-obligation quote online in a couple of minutes, or call 937-892-4157. Most requests get a response within a couple hours during business hours (Monday-Friday 10am-6pm, Saturday 10am-2pm).'
+  },
+  {
+    question: 'Do you bring your own cleaning supplies?',
+    answer: 'Yes. We bring professional-grade supplies and equipment to every visit — you never need to buy or provide any cleaning products.'
+  },
+  {
+    question: 'How long has Gem City Cleaning Crew been in business?',
+    answer: 'Since 2017. Chris and Macy Wilson founded Gem City Cleaning Crew in Dayton, Ohio, and the team has cleaned 700+ homes across the Miami Valley since.'
+  }
+]
 
 const HomePage = () => {
   const theme = useTheme()
@@ -143,6 +177,31 @@ const HomePage = () => {
         <link rel="canonical" href="https://gemcitycleaningcrew.com/" />
         
         {/* LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting/inconsistent version. */}
+
+        {/* WebSite entity — the canonical home for the #website @id that
+        location pages already reference via generateLocationWebPageSchema's
+        isPartOf field (src/utils/localBusinessSchema.js), but that no page
+        defined until now. No SearchAction: this site has no working /search
+        route, and an unresolvable action is worse than omitting one — same
+        reasoning already applied to the dropped LinkedIn sameAs entry. */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            '@id': 'https://gemcitycleaningcrew.com/#website',
+            url: 'https://gemcitycleaningcrew.com',
+            name: 'Gem City Cleaning Crew',
+            description: 'Professional house cleaning services in Dayton, Ohio',
+            publisher: { '@id': 'https://gemcitycleaningcrew.com/#business' }
+          })}
+        </script>
+
+        {/* Homepage FAQ — plain visible content below, schema added only for
+        AI-answer-engine/LLM-crawler parsing, not a Google rich-result claim
+        (Google retired FAQ rich results for all sites May 7 2026). */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateFAQPageSchema(HOMEPAGE_FAQS))}
+        </script>
       </Helmet>
 
       {/* Hero Section with Rotating Headlines */}
@@ -393,6 +452,14 @@ const HomePage = () => {
             </Grid>
           ))}
         </Grid>
+
+        <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 800, mx: 'auto', mt: 5, textAlign: 'center', lineHeight: 1.7 }}>
+          Chris and Macy Wilson founded Gem City Cleaning Crew in Dayton in 2017, and the team has
+          since cleaned 700+ homes across the Miami Valley. Every cleaner passes a Checkr background
+          check before their first visit, and our licensing and insurance coverage are backed by a
+          certificate available on request. We bring our own professional-grade supplies to every
+          visit, so you never have to buy or store a single cleaning product.
+        </Typography>
       </Container>
 
       {/* We Make Life Section with Rotating Text */}
@@ -650,6 +717,33 @@ const HomePage = () => {
           </Box>
         </Container>
       )}
+
+      {/* Homepage FAQ */}
+      <Container id="faq" maxWidth="lg" sx={{ py: 8 }}>
+        <Box sx={{ textAlign: 'center', mb: 6 }}>
+          <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
+            Frequently Asked Questions
+          </Typography>
+          <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
+            The questions we hear most from Dayton-area homeowners and businesses
+          </Typography>
+        </Box>
+
+        <Grid container spacing={3}>
+          {HOMEPAGE_FAQS.map((faq) => (
+            <Grid item xs={12} md={6} key={faq.question}>
+              <Card elevation={1} sx={{ p: 3, height: '100%' }}>
+                <Typography variant="h6" component="h3" sx={{ mb: 1.5, fontWeight: 600, color: 'primary.main' }}>
+                  {faq.question}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                  {faq.answer}
+                </Typography>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
 
       {/* Final CTA */}
       <Box sx={{ backgroundColor: theme.palette.primary.main, color: 'white', py: 8 }}>

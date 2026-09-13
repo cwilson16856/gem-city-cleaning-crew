@@ -29,7 +29,7 @@ const content = `
     <tr><td>The standard</td><td>Documented and specific — you can and should ask for the checklist up front</td><td>Often vaguer — "broom clean" vs. "professionally cleaned" varies by lease, so read it</td></tr>
   </tbody>
 </table>
-<p>In both cases the move is smoother if you know the standard before the packers ever show up. Ask for the checklist or re-read the lease early — it's much cheaper than a failed inspection.</p>
+<p>In both cases the move is smoother if you know the standard before the packers ever show up. Ask for the checklist or re-read the lease early — it's much cheaper than a failed inspection. If you're also coordinating a move-in on the other end, our <a href="/blog/move-out-transitions-guide-dayton">move-out and move-in cleaning guide</a> covers deposit timelines and documenting the clean for civilian rentals too.</p>
 
 <h2 id="checklist">Room-by-Room Move-Out Inspection Checklist</h2>
 <p>Inspectors and landlords look hardest at kitchens and bathrooms, then at the surfaces a normal weekly clean skips. Work top to bottom and save the floors for last. Here's what actually gets checked:</p>

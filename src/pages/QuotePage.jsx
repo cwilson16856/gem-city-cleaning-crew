@@ -271,23 +271,6 @@ const QuotePage = () => {
           })}
         </script>
 
-        {/* WebSite Schema for Search Box */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "@id": "https://gemcitycleaningcrew.com/#website",
-            "url": "https://gemcitycleaningcrew.com",
-            "name": "Gem City Cleaning Crew",
-            "description": "Professional house cleaning services in Dayton, Ohio",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://gemcitycleaningcrew.com/search?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          })}
-        </script>
-
         {/* FAQ Schema for Quote Process */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -1372,6 +1355,16 @@ const QuotePage = () => {
               </Box>
             </Grid>
           </Grid>
+        </Box>
+
+        {/* Related guides */}
+        <Box sx={{ textAlign: 'center', pb: 2 }}>
+          <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+            Not sure what to look for in a cleaning service? Read{' '}
+            <Link to="/blog/hiring-cleaning-service-guide-dayton" style={{ color: theme.palette.primary.main, fontWeight: 600 }}>
+              our guide to choosing and budgeting for a cleaning service
+            </Link>.
+          </Typography>
         </Box>
 
       </Container>
