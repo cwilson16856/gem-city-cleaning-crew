@@ -408,7 +408,7 @@ const OfficeCleaningChecklist = () => {
           <Typography variant="body1" sx={{ fontSize: '1.1rem', maxWidth: 800, mx: 'auto', lineHeight: 1.7 }}>
             At Gem City Cleaning Crew, our trained professionals follow this comprehensive office cleaning checklist to ensure 
             consistent, thorough cleaning every time. Our specialized training program teaches cleaners to complete 
-            every task with attention to detail and respect for your business environment. This office cleaning checklist guarantees nothing gets missed.
+            every task with attention to detail and respect for your business environment. This checklist reflects the same detailed, room-by-room process our trained team follows on every visit.
           </Typography>
         </Box>
 

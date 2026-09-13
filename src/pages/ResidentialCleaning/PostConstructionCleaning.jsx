@@ -65,7 +65,7 @@ const PostConstructionCleaning = () => {
     },
     {
       title: 'Final Clean',
-      description: 'Full top-to-bottom detail clean — window tracks, light fixtures, cabinet interiors, baseboards, and floors — ahead of your final walkthrough.'
+      description: 'Full top-to-bottom detail clean: window tracks, light fixtures, cabinet interiors, baseboards, and floors ahead of your final walkthrough.'
     },
     {
       title: 'Touch-Up Clean',
@@ -89,31 +89,31 @@ const PostConstructionCleaning = () => {
   const faqs = [
     {
       question: 'What is post-construction cleaning?',
-      answer: 'Post-construction cleaning removes the dust, debris, adhesive residue, and paint overspray left behind after a renovation, remodel, or new build — getting a space ready to actually live or work in, not just cleared of construction materials.'
+      answer: 'Post-construction cleaning removes the dust, debris, adhesive residue, and paint overspray left behind after a renovation, remodel, or new build: getting a space ready to actually live or work in, not just cleared of construction materials.'
     },
     {
       question: 'Do I need a rough clean and a final clean, or just one?',
-      answer: "It depends on your project. A rough clean (bulk debris and dust removal) is usually done before trades finish their work; the final clean happens right before your walkthrough. For smaller renovations, we can often combine both into a single visit — tell us about your project and we'll recommend what fits."
+      answer: "It depends on your project. A rough clean (bulk debris and dust removal) is usually done before trades finish their work; the final clean happens right before your walkthrough. For smaller renovations, we can often combine both into a single visit: tell us about your project and we'll recommend what fits."
     },
     {
       question: 'How long does post-construction cleaning take?',
-      answer: 'It varies with the size of the project and how much dust and debris is involved — a single renovated room is a few hours, a full new-construction home is typically a full day. We’ll give you a time estimate with your quote.'
+      answer: 'It varies with the size of the project and how much dust and debris is involved: a single renovated room is a few hours, a full new-construction home is typically a full day. We’ll give you a time estimate with your quote.'
     },
     {
       question: 'Do you clean construction dust out of vents and fixtures?',
-      answer: 'Yes — light fixtures, ceiling fans, switch plates, and visible surfaces around vents are part of our standard post-construction checklist. For full HVAC duct cleaning we can refer you to a specialist, since that requires different equipment.'
+      answer: 'Yes: light fixtures, ceiling fans, switch plates, and visible surfaces around vents are part of our standard post-construction checklist. For full HVAC duct cleaning we can refer you to a specialist, since that requires different equipment.'
     },
     {
       question: 'Is post-construction cleaning available for both homes and businesses?',
-      answer: "Yes. This page covers residential post-construction and renovation cleanup; for a commercial buildout or office renovation, see our Commercial One-Time Cleaning page — the process is similar but scoped for business spaces."
+      answer: "Yes. This page covers residential post-construction and renovation cleanup; for a commercial buildout or office renovation, see our Commercial One-Time Cleaning page: the process is similar but scoped for business spaces."
     },
     {
       question: 'Do I need to be present during the cleaning?',
-      answer: "No — as long as we have access to the space, our team can complete the cleaning without you needing to be there. Just let us know how you'd like access arranged when you book."
+      answer: "No: as long as we have access to the space, our team can complete the cleaning without you needing to be there. Just let us know how you'd like access arranged when you book."
     },
     {
       question: 'What do your construction cleaning services actually cover?',
-      answer: 'Our construction cleaning services cover the full range from rough clean through final walkthrough-ready clean — dust and debris removal, adhesive and paint overspray cleanup, and detailed cleaning of every surface, fixture, and vent cover in the space.'
+      answer: 'Our construction cleaning services cover the full range from rough clean through final walkthrough-ready clean: dust and debris removal, adhesive and paint overspray cleanup, and detailed cleaning of every surface, fixture, and vent cover in the space.'
     }
   ]
 
@@ -129,7 +129,7 @@ const PostConstructionCleaning = () => {
   const canonicalUrl = generateCanonicalUrl(PAGE_PATH)
   const serviceId = `${canonicalUrl}#service`
   const pageTitle = 'Post-Construction Cleaning Dayton OH'
-  const metaDescription = 'Professional post-construction cleaning services in Dayton, Ohio — rough clean, final clean, and touch-up cleaning for new builds, renovations, and remodels. Free quotes available.'
+  const metaDescription = 'Professional post-construction cleaning services in Dayton, Ohio: rough clean, final clean, and touch-up cleaning for new builds, renovations, and remodels. Free quotes available.'
 
   // LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting narrower areaServed.
   const serviceSchema = generateServiceSchema({
@@ -193,7 +193,7 @@ const PostConstructionCleaning = () => {
         }}
       >
         {/* .hero-section::before (HomePage.css) paints a semi-transparent
-            overlay across the whole hero at z-index: 1 — without this
+            overlay across the whole hero at z-index: 1: without this
             Container establishing its own stacking context above that, the
             content paints underneath it, washing out the white text/chip
             into a hazy, low-contrast look. Matches MoveInCleaning.jsx's
@@ -249,7 +249,7 @@ const PostConstructionCleaning = () => {
               textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8)'
             }}
           >
-            Professional construction cleaning services — from construction dust to move-in ready, covering rough clean, final clean, and touch-up cleaning for new builds and renovations
+            Professional construction cleaning services: from construction dust to move-in ready, covering rough clean, final clean, and touch-up cleaning for new builds and renovations
           </Typography>
 
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -306,7 +306,7 @@ const PostConstructionCleaning = () => {
             Why Professional Post-Construction Cleaning Matters
           </Typography>
           <Typography variant="body1" sx={{ fontSize: '1.1rem', maxWidth: 900, mx: 'auto', lineHeight: 1.7 }}>
-            Construction dust settles into places a standard cleaning won&apos;t reach — window tracks, light fixtures,
+            Construction dust settles into places a standard cleaning won&apos;t reach: window tracks, light fixtures,
             cabinet interiors, and vents. Whether you&apos;re finishing a renovation in Kettering, closing out a new
             build in Centerville, or wrapping up a remodel anywhere in the Dayton area, a dedicated construction
             cleanup gets the space genuinely ready to use, not just visibly tidy.
@@ -321,7 +321,7 @@ const PostConstructionCleaning = () => {
                 Built for Construction Dust
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Drywall dust, sawdust, and debris need a different approach than routine cleaning — we&apos;re equipped for it.
+                Drywall dust, sawdust, and debris need a different approach than routine cleaning: we&apos;re equipped for it.
               </Typography>
             </Card>
           </Grid>
@@ -343,7 +343,7 @@ const PostConstructionCleaning = () => {
                 Flexible Scheduling
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Book around your project timeline — rough clean, final clean, or both, whenever your trades finish.
+                Book around your project timeline: rough clean, final clean, or both, whenever your trades finish.
               </Typography>
             </Card>
           </Grid>
@@ -390,7 +390,7 @@ const PostConstructionCleaning = () => {
           Our 3-Stage Cleaning Process
         </Typography>
         <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto', fontSize: '1.1rem' }}>
-          A standard construction-cleanup sequence — book the stage (or stages) that fit your project.
+          A standard construction-cleanup sequence: book the stage (or stages) that fit your project.
         </Typography>
 
         <List>

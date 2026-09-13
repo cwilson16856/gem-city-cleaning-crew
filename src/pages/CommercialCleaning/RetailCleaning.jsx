@@ -828,7 +828,7 @@ const RetailCleaning = () => {
           <Typography variant="body1" sx={{ mb: 4, maxWidth: 900, mx: 'auto', lineHeight: 1.7 }}>
             At Gem City Cleaning Crew, we understand that your retail environment directly impacts customer experience, sales, and brand perception. 
             Our professional retail cleaning services are designed specifically for Dayton's retail community, serving clothing stores, restaurants, 
-            salons, fitness centers, and shopping centers with the highest standards of cleanliness and customer focus. 
+            salons, fitness centers, and shopping centers, backed by a 4.6-star rating and a customer-focused approach.
             With flexible scheduling, no long-term contracts, and customer-focused cleaning approaches, 
             we help create inviting retail spaces that enhance your business success and customer satisfaction.
           </Typography>

@@ -250,7 +250,7 @@ const QuoteForm = ({
                 }}
                 sx={{ textTransform: 'none', fontFamily: 'Inter, sans-serif', color: theme.palette.text.secondary }}
               >
-                ← Requesting a {activeForm.label} quote — not right? Switch
+                ← Requesting a {activeForm.label} quote: not right? Switch
               </Button>
             </Box>
 

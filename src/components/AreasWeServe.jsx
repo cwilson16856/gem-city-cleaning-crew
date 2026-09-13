@@ -53,7 +53,7 @@ const AreasWeServe = ({ onCityClick, currentCity, serviceType = 'residential' })
     : 'house cleaning and move-in/move-out services'
 
   const introText = currentCity
-    ? `Gem City Cleaning Crew proudly serves ${currentCity} and the surrounding Greater Dayton area — including ${nearbyExamples.join(', ')} — with professional ${serviceLine}. Our local team knows ${currentCity} and provides reliable, trustworthy cleaning services throughout the region.`
+    ? `Gem City Cleaning Crew proudly serves ${currentCity} and the surrounding Greater Dayton area, including ${nearbyExamples.join(', ')}, with professional ${serviceLine}. Our local team knows ${currentCity} and provides reliable, trustworthy cleaning services throughout the region.`
     : `Gem City Cleaning Crew proudly serves Dayton and nearby communities like ${nearbyExamples.join(', ')} with professional ${serviceLine}. Our local team knows the area and provides reliable, trustworthy cleaning services throughout the Greater Dayton region.`
 
   return (

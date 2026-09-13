@@ -171,7 +171,7 @@ const ApartmentBuildingCleaning = () => {
         <meta name="twitter:description" content="Expert apartment building cleaning services in Dayton. Common areas, laundry rooms, hallways & more." />
 
         {/* LocalBusiness itself is injected once, site-wide, by the app shell
-            (App.jsx / entry-server.jsx) — a per-page copy here would duplicate
+            (App.jsx / entry-server.jsx): a per-page copy here would duplicate
             it with a conflicting narrower areaServed. */}
         <script type="application/ld+json">
           {JSON.stringify(generateServiceSchema({

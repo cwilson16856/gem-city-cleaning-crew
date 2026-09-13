@@ -155,7 +155,7 @@ const ApartmentCleaning = () => {
   const apartmentFAQ = [
     {
       question: "Does apartment cleaning affect my security deposit?",
-      answer: "Deposit decisions are made by your landlord or property manager. We specifically focus on the areas landlords inspect most carefully during move-out — appliances, cabinets, baseboards, and all surfaces — so your apartment meets the cleaning standards landlords typically look for."
+      answer: "Deposit decisions are made by your landlord or property manager. We specifically focus on the areas landlords inspect most carefully during move-out: appliances, cabinets, baseboards, and all surfaces so your apartment meets the cleaning standards landlords typically look for."
     },
     {
       question: "How much does apartment cleaning cost?",
@@ -202,7 +202,7 @@ const ApartmentCleaning = () => {
         {/* Primary Meta Tags */}
         <title>Apartment Cleaning Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Apartment Cleaning Dayton OH | Same-Day Service, Landlord-Standard Cleaning" />
-        <meta name="description" content="Professional apartment cleaning in Dayton, OH — regular maintenance, deep cleaning, and rental-ready turnovers for tenants and property managers. Free quotes! Call 937-892-4157" />
+        <meta name="description" content="Professional apartment cleaning in Dayton, OH: regular maintenance, deep cleaning, and rental-ready turnovers for tenants and property managers. Free quotes! Call 937-892-4157" />
         <meta name="keywords" content="apartment cleaning Dayton, apartment deep cleaning, move out apartment cleaning, student housing cleaning UD, vacant apartment cleaning, rental property cleaning Dayton, Kettering apartment cleaning, Centerville apartment cleaning, Oakwood apartment cleaning, apartment cleaning near me, rental cleaning service, professional apartment cleaners Dayton" />
         
         {/* Additional SEO Meta Tags */}

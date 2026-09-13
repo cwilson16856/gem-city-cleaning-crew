@@ -149,7 +149,7 @@ const MoveInOutCleaningPage = () => {
         {/* Primary Meta Tags - Enhanced */}
         <title>Moving Cleaning Package Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Moving Cleaning Package Dayton OH | Gem City Cleaning Crew" />
-        <meta name="description" content="Moving? Gem City Cleaning Crew cleans both your old home and your new home as one package — one trusted crew, no coordinating two separate cleaning companies. Serving Dayton, OH and the Miami Valley. Same-day quotes available." />
+        <meta name="description" content="Moving? Gem City Cleaning Crew cleans both your old home and your new home as one package: one trusted crew, no coordinating two separate cleaning companies. Serving Dayton, OH and the Miami Valley. Same-day quotes available." />
         <meta name="keywords" content="combined move cleaning Dayton, moving cleaning package, two home cleaning service, clean old and new home Dayton, relocation cleaning service, buying and selling home cleaning, Kettering moving cleaning, Centerville moving cleaning, Oakwood moving cleaning" />
 
         {/* Additional SEO Meta Tags */}
@@ -174,7 +174,7 @@ const MoveInOutCleaningPage = () => {
         <meta property="og:site_name" content="Gem City Cleaning Crew" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/move-in-out-cleaning" />
         <meta property="og:title" content="Moving Cleaning Package Dayton OH | Gem City Cleaning Crew" />
-        <meta property="og:description" content="Moving? We clean both your old home and your new home as one package — one trusted crew, no coordinating two separate companies." />
+        <meta property="og:description" content="Moving? We clean both your old home and your new home as one package: one trusted crew, no coordinating two separate companies." />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Combined move-in and move-out cleaning package in Dayton OH" />
         <meta property="og:image:width" content="1200" />
@@ -191,7 +191,7 @@ const MoveInOutCleaningPage = () => {
         <meta name="twitter:site" content="@GemCityCleaning" />
         <meta name="twitter:creator" content="@GemCityCleaning" />
         <meta name="twitter:title" content="Moving Cleaning Package Dayton OH | Gem City Cleaning Crew" />
-        <meta name="twitter:description" content="Moving? We clean both your old home and your new home as one package — one trusted crew, no coordinating two separate companies." />
+        <meta name="twitter:description" content="Moving? We clean both your old home and your new home as one package: one trusted crew, no coordinating two separate companies." />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta name="twitter:image:alt" content="Combined move-in and move-out cleaning package in Dayton OH" />
 
@@ -213,7 +213,7 @@ const MoveInOutCleaningPage = () => {
             "@id": "https://gemcitycleaningcrew.com/move-in-out-cleaning#service",
             "name": "Combined Move-In & Move-Out Cleaning Package",
             "alternateName": ["Moving Cleaning Package", "Two-Home Cleaning Service", "Combined Moving Cleaning", "Empty Home Cleaning"],
-            "description": "Combined move-in and move-out cleaning package in Dayton, OH — one crew cleans both your old home and your new home, perfect for landlords, tenants, and new homeowners handling a move",
+            "description": "Combined move-in and move-out cleaning package in Dayton, OH: one crew cleans both your old home and your new home, perfect for landlords, tenants, and new homeowners handling a move",
             "serviceType": "Combined Move-In and Move-Out Cleaning",
             "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "areaServed": [
@@ -301,7 +301,7 @@ const MoveInOutCleaningPage = () => {
                 "name": "Will move-out cleaning help me get my security deposit back?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A thorough move-out clean helps you meet most landlord expectations and lease cleaning requirements, which is what your deposit return actually depends on — we don't control landlord decisions, so we can't guarantee a deposit outcome, but our detailed checklist is built around what landlords and property managers typically look for at move-out."
+                  "text": "A thorough move-out clean helps you meet most landlord expectations and lease cleaning requirements, which is what your deposit return actually depends on: we don't control landlord decisions, so we can't guarantee a deposit outcome, but our detailed checklist is built around what landlords and property managers typically look for at move-out."
                 }
               },
               {
@@ -511,7 +511,7 @@ const MoveInOutCleaningPage = () => {
               color: 'white'
             }}
           >
-            One trusted crew handles both cleanings — no coordinating two separate companies
+            One trusted crew handles both cleanings: no coordinating two separate companies
           </Typography>
           
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -601,9 +601,9 @@ const MoveInOutCleaningPage = () => {
             Our <strong>move-in/move-out cleaning services in Dayton</strong> provide the most comprehensive cleaning solution for your moving transition. 
             Moving is stressful enough without worrying about cleaning. Our professional cleaning services 
             in <strong>Dayton, Ohio</strong> handle the deep cleaning so you can focus on your transition. With empty homes, we can access every corner, 
-            wall, and hidden area for the most thorough cleaning possible. Whether you're moving to <strong>Kettering</strong>, <strong>Centerville</strong>, 
-            <strong>Oakwood</strong>, or anywhere in the greater Dayton area, our experienced cleaning team delivers exceptional results that meet 
-            <a href="https://www.cdc.gov/infectioncontrol/guidelines/environmental/cleaning.html" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'none' }}>
+            wall, and hidden area for the most thorough cleaning possible. Whether you're moving to <strong>Kettering</strong>, <strong>Centerville</strong>,{' '}
+            <strong>Oakwood</strong>, or anywhere in the greater Dayton area, our experienced cleaning team delivers thorough results that meet{' '}
+            <a href="https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'none' }}>
               CDC-recommended cleaning and disinfection standards
             </a> for your safety and peace of mind.
           </Typography>
@@ -652,14 +652,14 @@ const MoveInOutCleaningPage = () => {
             Serving Dayton and Surrounding Communities
           </Typography>
           <Typography variant="body1" sx={{ fontSize: '1.1rem', maxWidth: 900, mx: 'auto', lineHeight: 1.7, mb: 4 }}>
-            Our move-in/move-out cleaning services are available throughout the Dayton metropolitan area. We proudly serve 
-            <strong> Kettering move-out cleaning</strong>, <strong>Centerville move-in cleaning</strong>, <strong>Oakwood moving cleaning services</strong>, 
-            <strong>Huber Heights apartment cleaning</strong>, <strong>Miamisburg house cleaning</strong>, and many other communities within 
-            30 miles of Dayton. Whether you're moving within Ohio or relocating to the Dayton area, our local cleaning team 
-            understands the specific needs of our community and follows 
+            Our move-in/move-out cleaning services are available throughout the Dayton metropolitan area. We proudly serve
+            <strong> Kettering move-out cleaning</strong>, <strong>Centerville move-in cleaning</strong>, <strong>Oakwood moving cleaning services</strong>,{' '}
+            <strong>Huber Heights apartment cleaning</strong>, <strong>Miamisburg house cleaning</strong>, and many other communities within
+            roughly 30 miles of Dayton. Whether you're moving within Ohio or relocating to the Dayton area, our local cleaning team
+            understands the specific needs of our community and follows{' '}
             <a href="https://www.epa.gov/saferchoice" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'none' }}>
-              EPA-approved safe cleaning practices
-            </a> for environmental responsibility.
+              environmentally responsible cleaning practices informed by the EPA Safer Choice program
+            </a>.
           </Typography>
         </Box>
       </Container>

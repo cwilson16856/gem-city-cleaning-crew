@@ -186,7 +186,7 @@ const HomePage = () => {
         location pages already reference via generateLocationWebPageSchema's
         isPartOf field (src/utils/localBusinessSchema.js), but that no page
         defined until now. No SearchAction: this site has no working /search
-        route, and an unresolvable action is worse than omitting one — same
+        route, and an unresolvable action is worse than omitting one, same
         reasoning already applied to the dropped LinkedIn sameAs entry. */}
         <script type="application/ld+json">
           {JSON.stringify({

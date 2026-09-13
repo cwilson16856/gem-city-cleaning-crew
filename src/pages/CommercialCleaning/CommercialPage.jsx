@@ -157,7 +157,7 @@ const CommercialPage = () => {
     },
     {
       question: "Do you offer commercial cleaning services near me if I'm outside Dayton?",
-      answer: "Yes — we serve businesses throughout Dayton and within roughly a 25-mile radius, including Kettering, Centerville, Beavercreek, Oakwood, Springboro, Huber Heights, Miamisburg, Fairborn, and Xenia. If you're searching for commercial cleaning services near you and aren't sure we cover your location, just give us a call at 937-892-4157."
+      answer: "Yes: we serve businesses throughout Dayton and within roughly a 30-mile radius, including Kettering, Centerville, Beavercreek, Oakwood, Springboro, Huber Heights, Miamisburg, Fairborn, and Xenia. If you're searching for commercial cleaning services near you and aren't sure we cover your location, just give us a call at 937-892-4157."
     }
   ]
 
@@ -250,7 +250,7 @@ const CommercialPage = () => {
         <link rel="canonical" href="https://gemcitycleaningcrew.com/commercial" />
         
         {/* LocalBusiness itself is injected once, site-wide, by the app shell
-            (App.jsx / entry-server.jsx) — a per-page copy here would duplicate
+            (App.jsx / entry-server.jsx): a per-page copy here would duplicate
             it with a conflicting narrower areaServed. */}
 
         {/* WebPage Schema (with breadcrumb) */}
@@ -455,7 +455,7 @@ const CommercialPage = () => {
             Professional Dayton Commercial Cleaning Services
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 700, mx: 'auto' }}>
-            Searching for commercial cleaning services near me? Gem City Cleaning Crew provides professional janitorial and commercial cleaning solutions for businesses throughout Dayton and the surrounding 25-mile service area.
+            Searching for commercial cleaning services near me? Gem City Cleaning Crew provides professional janitorial and commercial cleaning solutions for businesses throughout Dayton and the surrounding 30-mile service area.
           </Typography>
         </Box>
 
@@ -604,9 +604,9 @@ const CommercialPage = () => {
           </Typography>
 
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-            Since 2017, Gem City Cleaning Crew has been the trusted choice for commercial cleaning services in Dayton and surrounding areas. 
+            Since 2017, Gem City Cleaning Crew has provided commercial cleaning services in Dayton and surrounding areas, backed by a 4.6-star rating and licensed, insured service.
             We understand that a clean business environment is essential for productivity, employee health, and making a positive impression on clients. 
-            Our commercial cleaning team is specifically trained for business environments and equipped with the right tools and expertise to deliver exceptional results.
+            Our commercial cleaning team is specifically trained for business environments and equipped with the right tools and expertise to deliver consistent, thorough results.
           </Typography>
 
           {/* Service Features */}
@@ -849,7 +849,7 @@ const CommercialPage = () => {
             Whether you need daily office cleaning, weekly retail maintenance, or specialized medical facility sanitation, 
             our experienced team delivers consistent, reliable results that support your business success. 
             We use eco-friendly, commercial-grade products and follow industry best practices to ensure your facility 
-            not only looks clean but maintains the highest standards of hygiene and safety.
+            not only looks clean but stays consistent, backed by our 4.6-star rating.
           </Typography>
 
           <Box
