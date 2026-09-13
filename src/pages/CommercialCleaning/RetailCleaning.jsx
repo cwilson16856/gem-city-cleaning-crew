@@ -164,19 +164,19 @@ const RetailCleaning = () => {
       title: "Customer-Focused Cleaning",
       description: "We understand that clean retail spaces directly impact customer experience and sales, prioritizing areas that matter most to your business.",
       icon: <PersonIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Trained.png"
+      image: "/images/legacy/Trained.webp"
     },
     {
       title: "Flexible Scheduling",
       description: "Work around your business hours with evening, weekend, and holiday cleaning options that don't disrupt customer traffic.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Plan.png"
+      image: "/images/legacy/Plan.webp"
     },
     {
       title: "No Contracts Required",
       description: "Flexible retail cleaning services without long-term contracts. Adjust frequency and services as your business needs change.",
       icon: <DescriptionIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.webp"
     }
   ]
 
@@ -759,7 +759,7 @@ const RetailCleaning = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="/images/legacy/FAQ.png"
+              src="/images/legacy/FAQ.webp"
               alt="Frequently asked questions about professional Dayton retail cleaning services"
               sx={{
                 width: 80,

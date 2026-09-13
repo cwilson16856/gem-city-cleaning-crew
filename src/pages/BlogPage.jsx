@@ -12,11 +12,11 @@ import {
 } from '@mui/material'
 import { format } from 'date-fns'
 
-import { getAllPosts } from '../content/blog'
+import { getAllPostsMeta } from '../content/blog/postsMeta'
 import { generateBreadcrumbStructuredData, generateCanonicalUrl } from '../utils/seo'
 
 const BlogPage = () => {
-  const posts = getAllPosts()
+  const posts = getAllPostsMeta()
   const blogUrl = generateCanonicalUrl('/blog')
 
   const breadcrumbData = generateBreadcrumbStructuredData([

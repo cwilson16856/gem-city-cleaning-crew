@@ -217,7 +217,7 @@ const ResidentialChecklistPage = () => {
   return (
     <>
       <Helmet>
-        <link rel="preload" as="image" href="/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.webp" fetchPriority="high" />
         <title>House Cleaning Checklist Dayton OH | Gem City Cleaning Crew</title>
         <meta name="description" content="Complete house cleaning checklist used by professional cleaners in Dayton. Our detailed room-by-room house cleaning checklist ensures nothing gets missed in your home cleaning service." />
         <meta name="keywords" content="house cleaning checklist, Dayton house cleaning checklist, residential cleaning checklist, professional cleaning checklist, home cleaning checklist, cleaning standards" />
@@ -300,7 +300,7 @@ const ResidentialChecklistPage = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg')`,
+          background: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

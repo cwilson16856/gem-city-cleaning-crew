@@ -148,19 +148,19 @@ const DaycareCleaning = () => {
       title: "Child-Safe Products",
       description: "We use eco-friendly, non-toxic cleaning products that are safe for children of all ages.",
       icon: <SecurityIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Plan.png"
+      image: "/images/legacy/Plan.webp"
     },
     {
       title: "Flexible Scheduling",
       description: "We work around your daycare hours with evening and weekend cleaning options.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.webp"
     },
     {
       title: "Trained Professionals",
       description: "Our staff is trained in daycare facility cleaning protocols and safety procedures.",
       icon: <ChildCareIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Trained.png"
+      image: "/images/legacy/Trained.webp"
     }
   ]
 

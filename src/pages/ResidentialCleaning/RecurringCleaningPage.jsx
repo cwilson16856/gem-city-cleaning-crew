@@ -249,7 +249,7 @@ const RecurringCleaningPage = () => {
   return (
     <>
       <Helmet>
-        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Recurring House Cleaning Service Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="4.6-Star Rated Recurring House Cleaning Service Dayton OH | No Contracts | Same Cleaner Every Visit" />
@@ -442,7 +442,7 @@ const RecurringCleaningPage = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

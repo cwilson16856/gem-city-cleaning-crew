@@ -96,19 +96,19 @@ const ApartmentBuildingCleaning = () => {
       title: "Licensed & Insured",
       description: "Fully licensed, insured, and bonded with commercial-grade coverage for your property's protection.",
       icon: <SecurityIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Plan.png"
+      image: "/images/legacy/Plan.webp"
     },
     {
       title: "Flexible Scheduling",
       description: "We work around your residents' schedules with evening and weekend cleaning options available.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.webp"
     },
     {
       title: "Trained Professionals",
       description: "Our cleaning staff are trained specifically for apartment building environments and safety protocols.",
       icon: <VerifiedIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Trained.png"
+      image: "/images/legacy/Trained.webp"
     }
   ]
 

@@ -169,19 +169,19 @@ const OfficeCleaning = () => {
       title: "No Contracts Required",
       description: "Flexible office cleaning services without long-term contracts. Book one-time cleanings or recurring services with the freedom to adjust as needed.",
       icon: <DescriptionIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.webp"
     },
     {
       title: "Recurring Services Available",
       description: "Consistent office cleaning with daily, weekly, bi-weekly, or monthly recurring services tailored to your business needs and schedule.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Plan.png"
+      image: "/images/legacy/Plan.webp"
     },
     {
       title: "In-Person Quotes",
       description: "We visit your office to provide accurate, personalized quotes based on your specific space, needs, and cleaning requirements.",
       icon: <PersonIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Trained.png"
+      image: "/images/legacy/Trained.webp"
     }
   ]
 
@@ -794,7 +794,7 @@ const OfficeCleaning = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="/images/legacy/FAQ.png"
+              src="/images/legacy/FAQ.webp"
               alt="Frequently asked questions about professional Dayton office cleaning services"
               sx={{
                 width: 80,

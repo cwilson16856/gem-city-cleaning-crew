@@ -36,7 +36,7 @@ import AreasWeServe from '../components/AreasWeServe'
 import TrustBlock from '../components/TrustBlock'
 
 // Content
-import { getAllPosts } from '../content/blog'
+import { getAllPostsMeta } from '../content/blog/postsMeta'
 import { GBP_REVIEW_URL, generateFAQPageSchema } from '../utils/localBusinessSchema'
 
 // Real facts only — founding year, licensing, and background-check policy
@@ -75,7 +75,7 @@ const HOMEPAGE_FAQS = [
 
 const HomePage = () => {
   const theme = useTheme()
-  const recentPosts = getAllPosts().slice(0, 3)
+  const recentPosts = getAllPostsMeta().slice(0, 3)
 
   // Rotating headline animation - Elementor style slide-down
   const [currentHeadline, setCurrentHeadline] = useState(0)
@@ -153,7 +153,7 @@ const HomePage = () => {
         <title>Gem City Cleaning Crew | House & Office Cleaning in Dayton, OH</title>
         <meta name="description" content="Gem City Cleaning Crew provides professional house and office cleaning throughout Dayton, Ohio and the Miami Valley. No contracts, licensed and insured, free quotes. Call 937-892-4157" />
         <meta name="keywords" content="Gem City Cleaning Crew, Dayton cleaning company, house cleaning Dayton, office cleaning Dayton, no contracts" />
-        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp" fetchPriority="high" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -212,7 +212,7 @@ const HomePage = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
