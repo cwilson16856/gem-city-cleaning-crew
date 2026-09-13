@@ -508,7 +508,7 @@ const AirBnbCleaning = () => {
           <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 800, mx: 'auto' }}>
             Simple, reliable, and designed for busy hosts. We handle the AirBnb cleaning so you can focus on 
             providing amazing guest experiences and maximizing your bookings in the Dayton area. Our vacation rental cleaning service 
-            follows industry best practices recommended by the <a href="https://www.cdc.gov/hygiene/cleaning/index.html" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'underline' }}>CDC for professional cleaning standards</a>.
+            follows general <a href="https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'underline' }}>CDC guidance on cleaning and disinfecting</a> as part of our own guest-turnover process.
           </Typography>
         </Box>
 
@@ -710,7 +710,7 @@ const AirBnbCleaning = () => {
             Why AirBnb Hosts in Dayton Choose Our Professional Cleaning Service
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 800, mx: 'auto' }}>
-            More than just cleaning - we're your partner in creating exceptional guest experiences 
+            More than just cleaning - we're your partner in creating guest-ready spaces
             that drive bookings, reviews, and revenue for your short-term rental property in Dayton, OH.
           </Typography>
         </Box>

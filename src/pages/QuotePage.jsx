@@ -1081,8 +1081,8 @@ const QuotePage = () => {
               Quality Service at Fair Prices
             </Typography>
             <Typography variant="body1" sx={{ maxWidth: 600, mx: 'auto', color: 'text.secondary' }}>
-              Our goal is to provide <strong>cleaning estimates</strong> that offer exceptional value for Dayton homeowners 
-              while maintaining the highest standards of service quality.
+              Our goal is to provide <strong>cleaning estimates</strong> that offer exceptional value for Dayton homeowners,
+              backed by our 4.6-star rating and licensed, insured service.
             </Typography>
           </Box>
         </Box>
@@ -1162,11 +1162,11 @@ const QuotePage = () => {
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
                 We offer multiple ways to reach us including phone, text, and email for faster response times and more 
                 personalized customer service. After each visit, you have the opportunity to rate your cleaning and 
-                provide feedback, ensuring we continuously improve our service quality. We follow{' '}
-                <a href="https://www.epa.gov/indoor-air-quality-iaq/publications-about-indoor-air-quality" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                  EPA guidelines for residential cleaning
+                provide feedback, ensuring we continuously improve our service quality. We are informed by{' '}
+                <a href="https://www.epa.gov/saferchoice" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                  the EPA Safer Choice program
                 </a>{' '}
-                to ensure our quotes reflect proper cleaning standards and safety protocols.
+                when selecting cleaning products, so our quotes reflect proper cleaning standards and safety protocols.
               </Typography>
             </Grid>
           </Grid>

@@ -103,7 +103,7 @@ const PrivacyPolicy = () => {
             <ListItemStyled>Message frequency varies based on your inquiry and, if applicable, your cleaning schedule.</ListItemStyled>
             <ListItemStyled>Message and data rates may apply.</ListItemStyled>
             <ListItemStyled>Reply <strong>STOP</strong> at any time to opt out of text messages, or <strong>HELP</strong> for help.</ListItemStyled>
-            <ListItemStyled>Consent to receive texts is not required to purchase our cleaning services — you may always request a quote by phone or email instead.</ListItemStyled>
+            <ListItemStyled>Consent to receive texts is not required to purchase our cleaning services: you may always request a quote by phone or email instead.</ListItemStyled>
           </List>
         </Section>
 
@@ -125,8 +125,8 @@ const PrivacyPolicy = () => {
 
         <Section title="5. We Do Not Sell or Share Your Information">
           <Typography variant="body1" sx={{ mb: 2, fontSize: '1.05rem', lineHeight: 1.7 }}>
-            We do not sell your personal information to third parties. No mobile information —
-            including your phone number and your SMS consent — will be shared with or sold to third
+            We do not sell your personal information to third parties. No mobile information,
+            including your phone number and your SMS consent, will be shared with or sold to third
             parties or affiliates for marketing or promotional purposes. We share your information only
             with the service providers who help us operate our business (for example, our scheduling and
             messaging providers), and only as needed to provide our services to you.

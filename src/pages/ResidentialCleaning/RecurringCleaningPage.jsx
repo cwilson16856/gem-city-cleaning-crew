@@ -16,12 +16,6 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
 } from '@mui/material'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import PhoneIcon from '@mui/icons-material/Phone'
@@ -43,6 +37,7 @@ import '../../styles/pages/ResidentialPage.css'
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import { GBP_REVIEW_URL } from '../../utils/localBusinessSchema'
+import { VERIFIED_REVIEWS, formatReviewDate } from '../../data/testimonials'
 
 const RecurringCleaningPage = () => {
   const theme = useTheme()
@@ -131,30 +126,20 @@ const RecurringCleaningPage = () => {
     }
   ]
 
-  // Customer testimonials focused on recurring service
-  const recurringTestimonials = [
-    {
-      name: "Amanda T.",
-      text: "I have been using Gem City for four years now and am consistently happy with their service. I typically have the same cleaner each visit which is great for building trust.",
-      rating: 5,
-      highlight: "4+ Years of Service",
-      service: "Bi-weekly cleaning"
-    },
-    {
-      name: "Anne B.", 
-      text: "I've been using Gem City cleaning for 3 years, and I am very happy with the job they do. Consistent, reliable, positive, trustworthy. If ever I've had concerns, they make it right quickly.",
-      rating: 5,
-      highlight: "3+ Years of Service", 
-      service: "Weekly cleaning"
-    },
-    {
-      name: "Eli M.",
-      text: "These guys do a great job. The initial deep clean was very thorough and all follow on cleans have been great. They do a really good job working around schedules and have always been friendly.",
-      rating: 5,
-      highlight: "Consistent Quality",
-      service: "Monthly cleaning"
-    }
-  ]
+  // Customer testimonials focused on recurring service. Sourced from
+  // src/data/testimonials.js -- the same GBP-verified reviews shown on
+  // /about-us via TrustBlock.jsx, so the text stays identical everywhere it
+  // appears (2026-09-13 SEO audit follow-up, "testimonial duplication").
+  const RECURRING_HIGHLIGHTS = {
+    'Amanda T.': '4+ Years of Service',
+    'Anne B.': '3+ Years of Service',
+    'Valerie P.': '5-Star Google Review'
+  }
+
+  const recurringTestimonials = VERIFIED_REVIEWS.map((review) => ({
+    ...review,
+    highlight: RECURRING_HIGHLIGHTS[review.name]
+  }))
 
   // FAQ specifically for recurring services
   const recurringFAQ = [
@@ -197,52 +182,6 @@ const RecurringCleaningPage = () => {
     {
       question: "How far in advance should I schedule recurring cleaning service?",
       answer: "We recommend scheduling 1-2 weeks in advance to secure your preferred day and time slot. However, we often have same-week availability and can sometimes accommodate last-minute requests depending on our schedule."
-    }
-  ]
-
-  // Competitor comparison data
-  const competitorComparison = [
-    {
-      feature: "Same Cleaner Every Visit",
-      gemCity: { status: "✅", text: "Yes" },
-      mollyMaid: { status: "🚫", text: "Not guaranteed" },
-      theMaids: { status: "🚫", text: "Rotating team" },
-      maidRight: { status: "✅", text: "Usually" }
-    },
-    {
-      feature: "Contract-Free",
-      gemCity: { status: "✅", text: "Always" },
-      mollyMaid: { status: "✅", text: "Yes" },
-      theMaids: { status: "✅", text: "Yes" },
-      maidRight: { status: "✅", text: "Yes" }
-    },
-    {
-      feature: "Custom Room-by-Room Plans",
-      gemCity: { status: "✅", text: "Fully Customized" },
-      mollyMaid: { status: "🟡", text: "Some customization" },
-      theMaids: { status: "🟡", text: "Limited" },
-      maidRight: { status: "✅", text: "Customized" }
-    },
-    {
-      feature: "Locally Owned & Operated",
-      gemCity: { status: "✅", text: "Dayton-based" },
-      mollyMaid: { status: "🚫", text: "National Franchise" },
-      theMaids: { status: "🚫", text: "National Franchise" },
-      maidRight: { status: "✅", text: "Yes" }
-    },
-    {
-      feature: "Training Program",
-      gemCity: { status: "✅", text: "3-Month Training" },
-      mollyMaid: { status: "🟡", text: "Variable" },
-      theMaids: { status: "✅", text: "22-Step Process" },
-      maidRight: { status: "🟡", text: "Certified Process" }
-    },
-    {
-      feature: "100% Satisfaction Guarantee",
-      gemCity: { status: "✅", text: "Yes" },
-      mollyMaid: { status: "✅", text: "Yes" },
-      theMaids: { status: "✅", text: "Yes" },
-      maidRight: { status: "✅", text: "Yes" }
     }
   ]
 
@@ -397,45 +336,6 @@ const RecurringCleaningPage = () => {
           })}
         </script>
 
-        {/* Competitor Comparison Schema for AI Overview */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "name": "Dayton Recurring Cleaning Service Comparison",
-            "description": "Comparison of top recurring house cleaning services in Dayton, Ohio",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Gem City Cleaning",
-                "url": "https://gemcitycleaningcrew.com/recurring-cleaning-service",
-                "description": "Local, contract-free, same-cleaner service with customized cleaning plans and a 3-month training program."
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Molly Maid",
-                "url": "https://www.mollymaid.com/southeast-dayton/our-services/regular-cleaning-service/",
-                "description": "National brand with flexible scheduling but rotating staff and limited plan customization."
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "The Maids",
-                "url": "https://www.maids.com/250/",
-                "description": "Franchise offering team-based cleaning with a health-focused 22-step process and HEPA vacuums."
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "Maid Right",
-                "url": "https://www.maidright.com/dayton/",
-                "description": "Premium personalized service with a certified cleaning process and local ownership."
-              }
-            ]
-          })}
-        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -879,157 +779,7 @@ const RecurringCleaningPage = () => {
         </Container>
       </Box>
 
-      {/* Competitor Comparison Table */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Box sx={{ textAlign: 'center', mb: 6 }}>
-          <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
-            How We Compare to Other Cleaning Services in Dayton
-          </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 800, mx: 'auto' }}>
-            See why Gem City Cleaning is the top choice for recurring house cleaning service 
-            compared to national chains and other local competitors.
-          </Typography>
-        </Box>
-
-        <TableContainer 
-          component={Paper} 
-          sx={{ 
-            borderRadius: 3,
-            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
-            overflow: 'hidden',
-            mb: 4
-          }}
-        >
-          <Table sx={{ minWidth: 650 }} aria-label="cleaning service comparison">
-            <TableHead>
-              <TableRow sx={{ backgroundColor: theme.palette.primary.main }}>
-                <TableCell 
-                  sx={{ 
-                    color: 'white', 
-                    fontWeight: 700, 
-                    fontSize: '1.1rem',
-                    borderBottom: 'none'
-                  }}
-                >
-                  Feature
-                </TableCell>
-                <TableCell 
-                  sx={{ 
-                    color: 'white', 
-                    fontWeight: 700, 
-                    fontSize: '1.1rem',
-                    borderBottom: 'none',
-                    backgroundColor: theme.palette.primary.dark
-                  }}
-                >
-                  Gem City Cleaning
-                </TableCell>
-                <TableCell 
-                  sx={{ 
-                    color: 'white', 
-                    fontWeight: 700, 
-                    fontSize: '1.1rem',
-                    borderBottom: 'none',
-                    backgroundColor: 'rgba(0, 0, 0, 0.1)'
-                  }}
-                >
-                  Molly Maid
-                </TableCell>
-                <TableCell 
-                  sx={{ 
-                    color: 'white', 
-                    fontWeight: 700, 
-                    fontSize: '1.1rem',
-                    borderBottom: 'none'
-                  }}
-                >
-                  The Maids
-                </TableCell>
-                <TableCell 
-                  sx={{ 
-                    color: 'white', 
-                    fontWeight: 700, 
-                    fontSize: '1.1rem',
-                    borderBottom: 'none',
-                    backgroundColor: 'rgba(0, 0, 0, 0.1)'
-                  }}
-                >
-                  Maid Right
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {competitorComparison.map((row, index) => (
-                <TableRow 
-                  key={index}
-                  sx={{ 
-                    '&:nth-of-type(even)': { 
-                      backgroundColor: 'rgba(0, 0, 0, 0.02)' 
-                    },
-                    '&:hover': { 
-                      backgroundColor: 'rgba(216, 27, 96, 0.05)' 
-                    }
-                  }}
-                >
-                  <TableCell 
-                    component="th" 
-                    scope="row"
-                    sx={{ 
-                      fontWeight: 600,
-                      fontSize: '1rem',
-                      color: '#333'
-                    }}
-                  >
-                    {row.feature}
-                  </TableCell>
-                  <TableCell 
-                    sx={{ 
-                      backgroundColor: 'rgba(216, 27, 96, 0.08)',
-                      fontWeight: 600,
-                      fontSize: '0.95rem'
-                    }}
-                  >
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      <span style={{ fontSize: '1.2rem' }}>{row.gemCity.status}</span>
-                      <span>{row.gemCity.text}</span>
-                    </Box>
-                  </TableCell>
-                  <TableCell 
-                    sx={{ 
-                      fontSize: '0.95rem',
-                      backgroundColor: 'rgba(0, 0, 0, 0.02)'
-                    }}
-                  >
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      <span style={{ fontSize: '1.2rem' }}>{row.mollyMaid.status}</span>
-                      <span>{row.mollyMaid.text}</span>
-                    </Box>
-                  </TableCell>
-                  <TableCell 
-                    sx={{ fontSize: '0.95rem' }}
-                  >
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      <span style={{ fontSize: '1.2rem' }}>{row.theMaids.status}</span>
-                      <span>{row.theMaids.text}</span>
-                    </Box>
-                  </TableCell>
-                  <TableCell 
-                    sx={{ 
-                      fontSize: '0.95rem',
-                      backgroundColor: 'rgba(0, 0, 0, 0.02)'
-                    }}
-                  >
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      <span style={{ fontSize: '1.2rem' }}>{row.maidRight.status}</span>
-                      <span>{row.maidRight.text}</span>
-                    </Box>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-
         <Box sx={{ textAlign: 'center', mt: 4 }}>
           <Typography variant="h4" component="h3" sx={{ mb: 2, color: theme.palette.primary.main, fontWeight: 600 }}>
             Why Choose Local Over National Chains?
@@ -1547,13 +1297,25 @@ const RecurringCleaningPage = () => {
                       - {testimonial.name}
                     </Typography>
                     <Typography variant="caption" color="text.secondary">
-                      {testimonial.service}
+                      {testimonial.platform}, {formatReviewDate(testimonial.date)}
                     </Typography>
                   </Box>
                 </Paper>
               </Grid>
             ))}
           </Grid>
+
+          <Box sx={{ textAlign: 'center', mt: 4 }}>
+            <Typography
+              component="a"
+              href={GBP_REVIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: theme.palette.primary.main, fontWeight: 600, textDecoration: 'none' }}
+            >
+              See all 90+ reviews on Google &rarr;
+            </Typography>
+          </Box>
         </Container>
       </Box>
 

@@ -33,22 +33,22 @@ const trainingModules = [
   {
     title: 'Bathrooms',
     icon: <BathtubIcon sx={{ fontSize: 36 }} />,
-    body: 'Sanitizing fixtures, tile, and grout without damaging finishes — different surfaces (tile, plastic enclosures, glass) need different products and techniques, and using the wrong one can permanently damage a customer\'s bathroom.'
+    body: 'Sanitizing fixtures, tile, and grout without damaging finishes: different surfaces (tile, plastic enclosures, glass) need different products and techniques, and using the wrong one can permanently damage a customer\'s bathroom.'
   },
   {
     title: 'Kitchens',
     icon: <KitchenIcon sx={{ fontSize: 36 }} />,
-    body: 'A systematic top-to-bottom approach — cabinets, countertops, and appliances inside and out — with material-specific care for granite, stainless steel, and wood finishes.'
+    body: 'A systematic top-to-bottom approach: cabinets, countertops, and appliances inside and out with material-specific care for granite, stainless steel, and wood finishes.'
   },
   {
     title: 'Bedrooms & Living Areas',
     icon: <BedIcon sx={{ fontSize: 36 }} />,
-    body: 'Dusting, vacuuming, and surface care that respects your belongings — everything gets put back exactly where it was.'
+    body: 'Dusting, vacuuming, and surface care that respects your belongings: everything gets put back exactly where it was.'
   },
   {
     title: 'Floors',
     icon: <SchoolIcon sx={{ fontSize: 36 }} />,
-    body: 'The right method for the right surface — hardwood, tile, and carpet are all cleaned differently, and using the wrong setting or product on the wrong floor can cause real damage.'
+    body: 'The right method for the right surface: hardwood, tile, and carpet are all cleaned differently, and using the wrong setting or product on the wrong floor can cause real damage.'
   }
 ]
 
@@ -61,7 +61,7 @@ const trainingPrinciples = [
   {
     title: 'Safety and property come first',
     icon: <HealthAndSafetyIcon sx={{ fontSize: 40 }} />,
-    body: "Our team is trained on which products are safe for which surfaces (and which combinations to never mix), so your home's finishes — and your family or employees — stay safe."
+    body: "Our team is trained on which products are safe for which surfaces (and which combinations to never mix), so your home's finishes, and your family or employees, stay safe."
   },
   {
     title: "Ask, don't guess",
@@ -139,7 +139,7 @@ const OurTrainingProgram = () => {
         <Typography variant="body1" sx={{ mb: 6, fontSize: '1.1rem', lineHeight: 1.7 }}>
           &ldquo;3 months of training&rdquo; is a claim you&apos;ll see on every page of our site. This page is why: cleaning
           a home or business well isn&apos;t obvious, and doing it wrong can genuinely damage a customer&apos;s
-          property — bleach ruins a plastic tub enclosure, the wrong scouring pad scratches stainless
+          property: bleach ruins a plastic tub enclosure, the wrong scouring pad scratches stainless
           steel, a heavy hand on granite dulls the finish. Before a cleaner ever works independently, they
           spend three months learning the difference, room by room, surface by surface.
         </Typography>
@@ -180,15 +180,15 @@ const OurTrainingProgram = () => {
           Respecting Your Home or Business
         </Typography>
         <Typography variant="body1" sx={{ mb: 2, fontSize: '1.1rem', lineHeight: 1.7 }}>
-          Training isn&apos;t only about technique — it&apos;s about how our team treats what&apos;s yours. We train our
+          Training isn&apos;t only about technique: it&apos;s about how our team treats what&apos;s yours. We train our
           cleaners to never open closed curio cabinets or display cases without being asked, to leave
           business paperwork on a desk untouched, and to put every item back exactly where it was found.
-          If a job note says a client has a preference — a product to avoid, a room to skip, a specific
-          way they want something done — that gets followed, every visit.
+          If a job note says a client has a preference: a product to avoid, a room to skip, a specific
+          way they want something done: that gets followed, every visit.
         </Typography>
         <Typography variant="body1" sx={{ mb: 6, fontSize: '1.1rem', lineHeight: 1.7 }}>
           Our team is also trained to communicate, not guess. If something in your home needs a judgment
-          call — a stain that needs special handling, a surface they&apos;re not sure about — our policy is to
+          call, a stain that needs special handling, a surface they&apos;re not sure about, our policy is to
           call and ask rather than risk damaging something that matters to you.
         </Typography>
 

@@ -166,7 +166,7 @@ const Footer = () => {
             </div>
             
             <p className={styles.additionalAreasNote}>
-              Proudly serving Dayton and communities within 30+ miles — <Link to="/locations" className={styles.serviceItemLink}>view all service areas</Link>
+              Proudly serving Dayton and communities within 30+ miles: <Link to="/locations" className={styles.serviceItemLink}>view all service areas</Link>
             </p>
           </div>
         </div>

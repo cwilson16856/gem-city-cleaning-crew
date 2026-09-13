@@ -65,7 +65,7 @@ const HERO_IMAGE = '/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.webp'
 
 const PAGE_TITLE = 'House Cleaning Services in Xenia, OH | Gem City Cleaning Crew'
 const META_DESCRIPTION =
-  'House cleaning in Xenia, OH for Greene County homes — 1970s rebuilds, East Second Street Victorians, and new builds off US-42. Licensed, insured, no contracts.'
+  'House cleaning in Xenia, OH for Greene County homes: 1970s rebuilds, East Second Street Victorians, and new builds off US-42. Licensed, insured, no contracts.'
 
 const tocItems = [
   { text: 'Xenia House Cleaning Services', href: '#xenia-cleaning-services' },
@@ -84,7 +84,7 @@ const services = [
   {
     title: 'Recurring House Cleaning',
     description:
-      'Weekly, bi-weekly, or monthly visits on a schedule that holds — including for households commuting to Dayton, Wright-Patt, or a shift at Kettering Health Greene Memorial.',
+      'Weekly, bi-weekly, or monthly visits on a schedule that holds: including for households commuting to Dayton, Wright-Patt, or a shift at Kettering Health Greene Memorial.',
     icon: <AutorenewIcon sx={{ fontSize: 32, color: 'white' }} />,
     features: ['Same crew whenever possible', 'No contracts, cancel anytime', 'Kitchens, baths, floors, dusting'],
     popular: true,
@@ -93,7 +93,7 @@ const services = [
   {
     title: 'Deep Cleaning',
     description:
-      'The top-to-bottom reset — inside appliances, baseboards, ceiling fans, window tracks, and the mineral scale Xenia water leaves on every fixture.',
+      'The top-to-bottom reset: inside appliances, baseboards, ceiling fans, window tracks, and the mineral scale Xenia water leaves on every fixture.',
     icon: <AutoAwesomeIcon sx={{ fontSize: 32, color: 'white' }} />,
     features: ['Inside oven and fridge', 'Descaling showers and faucets', 'Behind and under furniture'],
     popular: true,
@@ -102,7 +102,7 @@ const services = [
   {
     title: 'Move-In / Move-Out Cleaning',
     description:
-      'Empty-house cleans for Xenia rentals, homes changing hands, and PCS moves — plus new-build first cleans in Edenbridge, Grandstone Trace, and Wright Cycle Estates.',
+      'Empty-house cleans for Xenia rentals, homes changing hands, and PCS moves: plus new-build first cleans in Edenbridge, Grandstone Trace, and Wright Cycle Estates.',
     icon: <MoveToInboxIcon sx={{ fontSize: 32, color: 'white' }} />,
     features: ['Inside cabinets and closets', 'Landlord-ready detail', 'Post-construction dust removal'],
     popular: false,
@@ -111,7 +111,7 @@ const services = [
   {
     title: 'One-Time & Occasion Cleaning',
     description:
-      'A single visit before or after the big weekends — Hamvention houseguests in May, Greene County Fair week, or the holidays around The Christmas Station.',
+      'A single visit before or after the big weekends. Hamvention houseguests in May, Greene County Fair week, or the holidays around The Christmas Station.',
     icon: <EventAvailableIcon sx={{ fontSize: 32, color: 'white' }} />,
     features: ['Pre-guest prep', 'Post-party reset', 'Book one visit, no commitment'],
     popular: false,
@@ -147,7 +147,7 @@ const homeTypes = [
     title: 'Historic Homes Near the Courthouse',
     icon: <HistoryEduIcon sx={{ fontSize: 32, color: 'white' }} />,
     description:
-      "The Italianate and Queen Anne houses of the East Second Street Historic District — on the National Register since 1973 — have plaster walls, original hardwood, radiators, and tall baseboards. We use gentler products and hand-wipe trim rather than treating an 1880s house like modern drywall and laminate."
+      "The Italianate and Queen Anne houses of the East Second Street Historic District, on the National Register since 1973, have plaster walls, original hardwood, radiators, and tall baseboards. We use gentler products and hand-wipe trim rather than treating an 1880s house like modern drywall and laminate."
   },
   {
     title: "1970s Rebuilds in Arrowhead & Windsor Park",
@@ -170,7 +170,7 @@ const neighborhoods = [
   },
   {
     name: 'Arrowhead & Windsor Park',
-    note: 'Rebuilt after 1974 — mid-1970s ranches and tri-levels on the north and east sides.'
+    note: 'Rebuilt after 1974: mid-1970s ranches and tri-levels on the north and east sides.'
   },
   {
     name: 'Stadium Heights, Lanewood & Bickett',
@@ -201,7 +201,7 @@ const seasonalHooks = [
   },
   {
     title: 'Spring and Fall: Trail Season & Field Dust',
-    text: "Five trails meet at Xenia Station, and the city is ringed by farmland. Bike-trail grit in spring and harvest dust in fall both end up in the mudroom — entryway floors and registers get extra attention those months."
+    text: "Five trails meet at Xenia Station, and the city is ringed by farmland. Bike-trail grit in spring and harvest dust in fall both end up in the mudroom: entryway floors and registers get extra attention those months."
   },
   {
     title: 'December: The Christmas Station',
@@ -217,7 +217,7 @@ const whyChooseUs = [
   },
   {
     title: 'No Contracts',
-    description: 'Weekly, bi-weekly, monthly, or one-time — change or pause your schedule whenever life in Xenia changes.',
+    description: 'Weekly, bi-weekly, monthly, or one-time: change or pause your schedule whenever life in Xenia changes.',
     image: '/images/legacy/No-Contracts.webp'
   },
   {
@@ -229,7 +229,7 @@ const whyChooseUs = [
 
 const pricingFactors = [
   'Square footage and number of bedrooms and bathrooms',
-  'Frequency — recurring visits cost less per clean than one-time visits',
+  'Frequency: recurring visits cost less per clean than one-time visits',
   'Current condition and whether a first-visit deep clean is needed',
   'Add-ons like inside the oven or fridge, interior windows, or post-construction dust',
   'Pets, and the amount of hard-water scale on fixtures'
@@ -239,7 +239,7 @@ const faqData = [
   {
     question: 'How much does house cleaning cost in Xenia, OH?',
     answer:
-      "It depends on the size of the home, how many bedrooms and bathrooms it has, how often we come, and its current condition — a first-visit deep clean on a 1970s home that hasn't been descaled in years takes longer than a bi-weekly maintenance visit. Recurring visits cost less per clean than one-time visits. Every quote is free, and there are no contracts, so you can start with one visit and decide from there."
+      "It depends on the size of the home, how many bedrooms and bathrooms it has, how often we come, and its current condition: a first-visit deep clean on a 1970s home that hasn't been descaled in years takes longer than a bi-weekly maintenance visit. Recurring visits cost less per clean than one-time visits. Every quote is free, and there are no contracts, so you can start with one visit and decide from there."
   },
   {
     question: 'How often should I have my Xenia home cleaned?',
@@ -249,7 +249,7 @@ const faqData = [
   {
     question: "Does Xenia's hard water change how you clean?",
     answer:
-      "Yes. The City of Xenia's water plant does not soften its water, and the city's own consumer confidence reports put total hardness near 400 mg/L — about 23 grains per gallon, which is very hard. That leaves white scale on shower glass, faucets, and dishwasher interiors faster than in Beavercreek, where county water is now softened to about 8 grains. We build descaling into every Xenia bathroom and kitchen clean, and we use fixture-safe products rather than harsh acids on older chrome and tile."
+      "Yes. The City of Xenia's water plant does not soften its water, and the city's own consumer confidence reports put total hardness near 400 mg/L: about 23 grains per gallon, which is very hard. That leaves white scale on shower glass, faucets, and dishwasher interiors faster than in Beavercreek, where county water is now softened to about 8 grains. We build descaling into every Xenia bathroom and kitchen clean, and we use fixture-safe products rather than harsh acids on older chrome and tile."
   },
   {
     question: 'Do you clean older homes near the courthouse differently?',
@@ -259,22 +259,22 @@ const faqData = [
   {
     question: 'Do I need to be home during the cleaning?',
     answer:
-      "No. Most of our Xenia customers commute to Dayton, Beavercreek, or Wright-Patterson and aren't home when we arrive. We'll arrange entry instructions ahead of time — a lockbox, garage code, or a neighbor with a key — and lock up when we leave. You're always welcome to be home if you prefer."
+      "No. Most of our Xenia customers commute to Dayton, Beavercreek, or Wright-Patterson and aren't home when we arrive. We'll arrange entry instructions ahead of time: a lockbox, garage code, or a neighbor with a key and lock up when we leave. You're always welcome to be home if you prefer."
   },
   {
     question: 'Do you bring your own cleaning supplies and equipment?',
     answer:
-      'Yes, we bring everything, including vacuums, mops, microfiber, and the products we use. If you have a preferred product for a specific surface — a particular hardwood cleaner or a fragrance-free line for allergies — leave it out and we will use it instead.'
+      'Yes, we bring everything, including vacuums, mops, microfiber, and the products we use. If you have a preferred product for a specific surface, a particular hardwood cleaner or a fragrance-free line for allergies, leave it out and we will use it instead.'
   },
   {
     question: 'Do you offer move-out cleaning for Xenia rentals and new builds?',
     answer:
-      "Yes. We do landlord-ready move-out cleans for Xenia rentals — including student rentals near Central State and Wilberforce and PCS moves from Wright-Patt — and move-in cleans for homes changing hands. For new construction in Edenbridge, Grandstone Trace, Summer Brooke, or Wright Cycle Estates, ask for a post-construction clean, which adds cabinet interiors, vents, and the fine drywall dust a standard clean doesn't chase."
+      "Yes. We do landlord-ready move-out cleans for Xenia rentals, including student rentals near Central State and Wilberforce and PCS moves from Wright-Patt, and move-in cleans for homes changing hands. For new construction in Edenbridge, Grandstone Trace, Summer Brooke, or Wright Cycle Estates, ask for a post-construction clean, which adds cabinet interiors, vents, and the fine drywall dust a standard clean doesn't chase."
   },
   {
     question: 'Do you serve Wilberforce, Cedarville, Jamestown, and Yellow Springs?',
     answer:
-      "Xenia is the hub of our Greene County coverage. Wilberforce and Yellow Springs are regular stops, and Cedarville and Jamestown are within our service radius — call 937-892-4157 or request a quote with your address and we'll confirm scheduling for your road."
+      "Xenia is the hub of our Greene County coverage. Wilberforce and Yellow Springs are regular stops, and Cedarville and Jamestown are within our service radius: call 937-892-4157 or request a quote with your address and we'll confirm scheduling for your road."
   }
 ]
 
@@ -439,7 +439,7 @@ const XeniaHouseCleaningPage = () => {
             component="p"
             sx={{ fontSize: { xs: '1.15rem', md: '1.6rem' }, fontWeight: 400, mb: 2, maxWidth: 820, mx: 'auto', color: 'white', textShadow: '1px 1px 3px rgba(0,0,0,0.5)' }}
           >
-            Local cleaners for Greene County homes — from the courthouse square to Wright Cycle Estates
+            Local cleaners for Greene County homes: from the courthouse square to Wright Cycle Estates
           </Typography>
           <Typography
             variant="h5"
@@ -486,7 +486,7 @@ const XeniaHouseCleaningPage = () => {
           <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.7, maxWidth: 900, mx: 'auto', mb: 2 }}>
             Xenia is the Greene County seat and, about 25 minutes east of Dayton on US-35, one of the most distinct places we clean.
             The April 1974 tornado destroyed roughly half the city&apos;s buildings, and today about one in four Xenia homes dates to the
-            1970s rebuild — the ranches and tri-levels of Arrowhead, Windsor Park, and the streets around the 1977 Xenia High School
+            1970s rebuild: the ranches and tri-levels of Arrowhead, Windsor Park, and the streets around the 1977 Xenia High School
             sit a few blocks from Italianate and Queen Anne houses on East Second Street that survived it. Add the new construction
             at Edenbridge, Grandstone Trace, Summer Brooke, and Wright Cycle Estates, and no two Xenia homes on our schedule clean
             quite the same way.
@@ -494,7 +494,7 @@ const XeniaHouseCleaningPage = () => {
           <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.7, maxWidth: 900, mx: 'auto' }}>
             Gem City Cleaning Crew has cleaned Miami Valley homes since 2017. In Xenia&apos;s 45385 that means recurring visits for
             commuters and Greene Memorial shift workers, deep cleans that actually deal with the city&apos;s hard water, and empty-house
-            cleans for rentals, new builds, and moves — all with no contracts and a free quote.
+            cleans for rentals, new builds, and moves: all with no contracts and a free quote.
           </Typography>
         </Box>
 
@@ -583,10 +583,10 @@ const XeniaHouseCleaningPage = () => {
       {/* Built for Xenia's homes */}
       <Container maxWidth="lg" sx={{ py: 8 }} id="xenia-homes">
         <Typography variant="h2" component="h2" sx={{ mb: 2, textAlign: 'center' }}>
-          Built for Xenia&apos;s Homes — Three Eras, Three Checklists
+          Built for Xenia&apos;s Homes. Three Eras, Three Checklists
         </Typography>
         <Typography variant="body1" sx={{ mb: 5, textAlign: 'center', maxWidth: 860, mx: 'auto', fontSize: '1.05rem' }}>
-          A franchise checklist treats every house the same. Xenia&apos;s housing stock doesn&apos;t cooperate with that — it spans
+          A franchise checklist treats every house the same. Xenia&apos;s housing stock doesn&apos;t cooperate with that: it spans
           the 1880s, the post-tornado rebuild, and this decade&apos;s new construction, often on the same street.
         </Typography>
         <Grid container spacing={4}>
@@ -619,7 +619,7 @@ const XeniaHouseCleaningPage = () => {
           </Box>
           <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.75, mb: 2 }}>
             The City of Xenia&apos;s water plant does not soften its water. The city&apos;s own consumer confidence reports list total
-            hardness near 400 mg/L — roughly 23 grains per gallon, well into the &ldquo;very hard&rdquo; range. Greene County&apos;s new
+            hardness near 400 mg/L: roughly 23 grains per gallon, well into the &ldquo;very hard&rdquo; range. Greene County&apos;s new
             softening system brought county customers in Beavercreek and elsewhere down to about 8 grains in 2025, but Xenia,
             Fairborn, Jamestown, and Bellbrook run their own systems and weren&apos;t included.
           </Typography>

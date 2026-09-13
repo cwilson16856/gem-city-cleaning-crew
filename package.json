@@ -46,7 +46,8 @@
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "generate-sitemap": "node scripts/generate-sitemap-and-llms.js",
     "optimize-images": "node scripts/optimize-images.js",
-    "indexnow": "node scripts/indexnow-submit.js"
+    "indexnow": "node scripts/indexnow-submit.js",
+    "check:content": "node scripts/check-no-em-dash.js"
   },
   "browserslist": {
     "production": [

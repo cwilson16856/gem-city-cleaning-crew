@@ -51,9 +51,9 @@ const POST_EXTRAS = [
     faqs: [
       { question: "What's included in a deep cleaning service that isn't in a regular cleaning?", answer: "A deep clean covers the buildup a regular maintenance visit is scoped to skip: inside ovens and refrigerators, behind and under furniture and appliances, baseboards, window tracks, light fixtures and ceiling fans, grout lines, cabinet fronts, and vents. A regular clean maintains a home that's already in good shape; a deep clean resets one that's accumulated buildup over time. They're complementary, not interchangeable." },
       { question: 'How long does a deep clean take compared to a regular clean?', answer: "Typically two to four times as long as a standard visit for the same square footage, since it's addressing months or years of gradual buildup instead of a week's worth of normal use. A first-time deep clean on a home that's never had one, or hasn't in several years, tends to run toward the longer end of that range." },
-      { question: 'How often should I get my house deep cleaned?', answer: 'Most homes benefit from one once or twice a year at minimum, plus whenever a specific trigger applies — moving in or out, before listing for sale, after a renovation, or when starting a recurring cleaning schedule for the first time. A home already on a consistent recurring schedule generally needs deep cleans less often than one that\'s only cleaned occasionally.' },
-      { question: 'Is a move-out clean the same thing as a deep clean?', answer: 'They overlap heavily — a proper move-out clean is essentially a deep clean applied to an empty or nearly empty home, which makes some tasks easier since there\'s less to work around. The goal is the same: reset every surface to a genuine baseline, not just tidy what\'s visible.' },
-      { question: 'Can I deep clean my own home, or should I hire it out?', answer: "A smaller home is reasonably doable yourself with a full day or a weekend set aside. It's harder to justify DIY for larger homes, homes that haven't had a deep clean in years, or any situation with a real deadline like a closing date or move-out inspection — in those cases the time a professional crew saves usually outweighs the cost." },
+      { question: 'How often should I get my house deep cleaned?', answer: 'Most homes benefit from one once or twice a year at minimum, plus whenever a specific trigger applies: moving in or out, before listing for sale, after a renovation, or when starting a recurring cleaning schedule for the first time. A home already on a consistent recurring schedule generally needs deep cleans less often than one that\'s only cleaned occasionally.' },
+      { question: 'Is a move-out clean the same thing as a deep clean?', answer: 'They overlap heavily: a proper move-out clean is essentially a deep clean applied to an empty or nearly empty home, which makes some tasks easier since there\'s less to work around. The goal is the same: reset every surface to a genuine baseline, not just tidy what\'s visible.' },
+      { question: 'Can I deep clean my own home, or should I hire it out?', answer: "A smaller home is reasonably doable yourself with a full day or a weekend set aside. It's harder to justify DIY for larger homes, homes that haven't had a deep clean in years, or any situation with a real deadline like a closing date or move-out inspection: in those cases the time a professional crew saves usually outweighs the cost." },
       { question: 'Do I need a deep clean before starting recurring cleaning service?', answer: "It's strongly recommended if your home hasn't had a thorough deep clean recently. Starting recurring service with a deep clean means every visit after that is genuine maintenance on an already-clean baseline, rather than the crew trying to catch up on months of buildup during what should be a quick maintenance visit." },
       { question: 'Is there a best time of year for a deep clean in Dayton?', answer: "Two natural windows fit the Miami Valley's seasons especially well: spring, after winter road salt and slush have tracked through entryways, and late summer into fall, as ragweed season settles dust and allergens into carpets and vents. Neither is mandatory, but those two line up with real seasonal patterns." },
       { question: 'What affects how much a deep clean costs?', answer: 'The main factors are square footage, how long it\'s been since the last deep clean, the number of bathrooms and kitchens, and any add-ons like inside-appliance detailing or interior window cleaning. A free quote based on your specific space is the fastest way to get an accurate number.' }
@@ -72,18 +72,18 @@ const POST_EXTRAS = [
       'Dayton renters cleaning guide',
       'apartment move out checklist'
     ],
-    problem: "Renters want to understand what landlords actually check at move-out, and sellers/movers waste time cleaning in the wrong order or at the wrong point in the move — with no single guide tying move-out, move-in, and listing prep together.",
+    problem: "Renters want to understand what landlords actually check at move-out, and sellers/movers waste time cleaning in the wrong order or at the wrong point in the move: with no single guide tying move-out, move-in, and listing prep together.",
     solution: 'A complete guide to what landlords and buyers actually check, the real difference between a basic clean and a deep clean, the most commonly missed spots, and the right timing for renters, sellers, and people moving into a new home.',
     targetAudience: 'Dayton-area renters preparing for a move-out inspection, homeowners prepping to list, and anyone moving into a new home or apartment',
     content: moveOutTransitionsGuideContent,
     faqs: [
-      { question: 'How far in advance should I schedule move-out cleaning?', answer: "Book it as soon as your move-out date is confirmed — cleaning companies' schedules fill up fastest around the first and last week of the month, when most leases turn over. For a same-day or next-day need, call directly rather than booking online, since availability changes daily." },
+      { question: 'How far in advance should I schedule move-out cleaning?', answer: "Book it as soon as your move-out date is confirmed: cleaning companies' schedules fill up fastest around the first and last week of the month, when most leases turn over. For a same-day or next-day need, call directly rather than booking online, since availability changes daily." },
       { question: 'Do I need to clean before movers arrive, or after they leave?', answer: 'After. Movers and their equipment will track dirt back in regardless of how clean the space is beforehand, so a pre-move clean is largely wasted effort. Clean once the space is fully empty.' },
-      { question: 'Will a landlord accept "reasonable wear and tear" instead of a deep clean?', answer: "Ohio law does distinguish normal wear and tear, which a landlord can't deduct for, from actual dirt or damage, which they can. But the line is subjective and landlord-dependent, and the final call is the landlord's — a thorough clean puts you in a stronger position than betting on how a specific landlord interprets that line." },
-      { question: "What's the difference between move-out and move-in cleaning?", answer: 'Functionally similar checklists — appliances, cabinets, bathrooms, floors — but different goals. Move-out cleaning is about meeting a landlord\'s cleaning standard on a unit you\'re leaving; move-in cleaning is about starting fresh in a space you don\'t yet know the history of.' },
+      { question: 'Will a landlord accept "reasonable wear and tear" instead of a deep clean?', answer: "Ohio law does distinguish normal wear and tear, which a landlord can't deduct for, from actual dirt or damage, which they can. But the line is subjective and landlord-dependent, and the final call is the landlord's: a thorough clean puts you in a stronger position than betting on how a specific landlord interprets that line." },
+      { question: "What's the difference between move-out and move-in cleaning?", answer: 'Move-out and move-in cleaning use functionally similar checklists, covering appliances, cabinets, bathrooms, and floors, but the goals are different. Move-out cleaning is about meeting a landlord\'s cleaning standard on a unit you\'re leaving; move-in cleaning is about starting fresh in a space you don\'t yet know the history of.' },
       { question: 'Can one cleaning crew handle both the move-out clean and the move-in clean on the same day?', answer: "It depends on timing and location, but it's a common request, especially for local moves. Same-day availability isn't guaranteed for every date, so the earlier you can confirm both addresses, the better the odds of getting both scheduled back to back." },
-      { question: 'Do I need to be present for the cleaning?', answer: "No — many clients coordinate lockbox or landlord-provided access, especially useful when a move-out and move-in are happening on the same day and you physically can't be in two places at once." },
-      { question: 'What should I photograph before handing back keys?', answer: 'Every room, with the oven, fridge, cabinets, and closets opened in the shots — not just wide room views. Timestamped photos are your strongest evidence if a landlord itemizes a cleaning deduction you disagree with.' }
+      { question: 'Do I need to be present for the cleaning?', answer: "No: many clients coordinate lockbox or landlord-provided access, especially useful when a move-out and move-in are happening on the same day and you physically can't be in two places at once." },
+      { question: 'What should I photograph before handing back keys?', answer: 'Every room, with the oven, fridge, cabinets, and closets opened in the shots: not just wide room views. Timestamped photos are your strongest evidence if a landlord itemizes a cleaning deduction you disagree with.' }
     ]
   },
   {
@@ -99,14 +99,14 @@ const POST_EXTRAS = [
       'house cleaning quote Dayton Ohio',
       'no contract cleaning service'
     ],
-    problem: 'Homeowners comparing cleaning quotes see wildly different numbers for similar homes and have no framework for judging which quote — or which company — actually makes sense.',
-    solution: 'A breakdown of what genuinely drives cleaning cost (size, frequency, condition, add-ons), the real tradeoff between cleaning frequencies, and exactly what to vet — insurance, training, contracts, guarantees — before hiring anyone.',
+    problem: 'Homeowners comparing cleaning quotes see wildly different numbers for similar homes and have no framework for judging which quote, or which company, actually makes sense.',
+    solution: 'A breakdown of what genuinely drives cleaning cost (size, frequency, condition, add-ons), the real tradeoff between cleaning frequencies, and exactly what to vet: insurance, training, contracts, guarantees before hiring anyone.',
     targetAudience: 'Dayton-area homeowners comparing cleaning services for the first time, or reconsidering their current provider',
     content: hiringCleaningServiceGuideContent,
     faqs: [
-      { question: 'Should I just go with the cheapest quote?', answer: "Not automatically. A quote that's far below every other estimate for the same home is worth asking about directly — it often means less experienced staff, no insurance, or a narrower scope than the other quotes included." },
+      { question: 'Should I just go with the cheapest quote?', answer: "Not automatically. A quote that's far below every other estimate for the same home is worth asking about directly: it often means less experienced staff, no insurance, or a narrower scope than the other quotes included." },
       { question: 'Why does the first cleaning cost more than the ongoing visits?', answer: "The first visit addresses buildup since the home's last professional clean. Once on a recurring schedule, each visit maintains a level much closer to what the last visit left, so it takes less time." },
-      { question: 'Can I change my cleaning frequency after I start?', answer: 'With a company that requires no contracts, yes — you should be able to move between weekly, biweekly, monthly, or pause, without a cancellation fee.' },
+      { question: 'Can I change my cleaning frequency after I start?', answer: 'With a company that requires no contracts, yes: you should be able to move between weekly, biweekly, monthly, or pause, without a cancellation fee.' },
       { question: 'Do I need to provide cleaning supplies?', answer: 'Most professional cleaning companies bring their own tools and supplies as standard. If you have a sensitivity or preference, a good company will accommodate that.' },
       { question: 'Do I need to be home during the cleaning?', answer: 'No. Many clients provide access instructions and go about their day.' },
       { question: 'How many quotes should I get before deciding?', answer: "Two or three is usually enough to compare what each includes, not just the bottom-line number." },
@@ -128,18 +128,18 @@ const POST_EXTRAS = [
       'basement mustiness Dayton Ohio',
       'garage cleanout Dayton Ohio',
     ],
-    problem: "Garages collect grease and road grime that soak into porous concrete, while basements in Dayton's older homes trap humid-summer moisture that turns into a musty smell — and neither responds to a normal vacuum-and-mop routine.",
-    solution: 'A three-step system — declutter first, then degrease and seal the concrete floor, then control basement humidity to 45-50% relative humidity — tailored to the pre-1960s unfinished basements common across Dayton, Oakwood, and Kettering.',
-    targetAudience: 'Dayton-area homeowners — across Dayton, Oakwood, Kettering, and the surrounding Miami Valley — with a cluttered garage, a musty basement, or both',
+    problem: "Garages collect grease and road grime that soak into porous concrete, while basements in Dayton's older homes trap humid-summer moisture that turns into a musty smell. And neither responds to a normal vacuum-and-mop routine.",
+    solution: 'A three-step system: declutter first, then degrease and seal the concrete floor, then control basement humidity to 45-50% relative humidity tailored to the pre-1960s unfinished basements common across Dayton, Oakwood, and Kettering.',
+    targetAudience: 'Dayton-area homeowners: across Dayton, Oakwood, Kettering, and the surrounding Miami Valley with a cluttered garage, a musty basement, or both',
     content: garageBasementDeepCleanContent,
     faqs: [
       {
         question: 'How often should you deep clean a garage?',
-        answer: 'Once or twice a year covers most households — once in spring to clear winter salt and grime, and again in fall before things get buried under holiday storage. Garages that double as a workshop or see heavy vehicle use often do better with a quick floor pass every season.',
+        answer: 'Once or twice a year covers most households: once in spring to clear winter salt and grime, and again in fall before things get buried under holiday storage. Garages that double as a workshop or see heavy vehicle use often do better with a quick floor pass every season.',
       },
       {
         question: 'How do you get rid of a musty smell in a basement?',
-        answer: "Find and fix the moisture source first — a leaky window well, a downspout draining too close to the foundation, or a small crack — then run a dehumidifier set to 45-50% relative humidity and clean any visible mildew with a diluted bleach or vinegar solution. Treating the smell without addressing the moisture source means it comes back within weeks.",
+        answer: "Find and fix the moisture source first: a leaky window well, a downspout draining too close to the foundation, or a small crack then run a dehumidifier set to 45-50% relative humidity and clean any visible mildew with a diluted bleach or vinegar solution. Treating the smell without addressing the moisture source means it comes back within weeks.",
       },
       {
         question: "What's the best humidity setting for a basement dehumidifier?",
@@ -159,7 +159,7 @@ const POST_EXTRAS = [
       },
       {
         question: 'What should never be stored directly on a basement floor?',
-        answer: 'Cardboard boxes, fabric, paper documents, and untreated wood — all of these wick up moisture quickly even from minor dampness or a seasonal humidity swing. Wire shelving or plastic totes raised on a platform protect stored items from a slow leak or a humid stretch of weather.',
+        answer: 'Cardboard boxes, fabric, paper documents, and untreated wood: all of these wick up moisture quickly even from minor dampness or a seasonal humidity swing. Wire shelving or plastic totes raised on a platform protect stored items from a slow leak or a humid stretch of weather.',
       },
     ],
     howToTitle: 'How to Deep Clean a Garage or Basement',
@@ -187,8 +187,8 @@ const POST_EXTRAS = [
       'clean windows without streaks',
     ],
     problem: "Most window-cleaning advice blames streaks on technique alone, but in the Dayton area even correct technique streaks because hard tap water leaves a mineral film behind as it evaporates.",
-    solution: 'A tool-and-technique method — squeegee and microfiber, a vinegar-water solution, top-down overlapping strokes, and separate care for aluminum tracks and screens — that accounts for hard water instead of ignoring it.',
-    targetAudience: 'Dayton-area homeowners and renters — across Kettering, Centerville, Beavercreek, and Oakwood — dealing with streaky windows despite following generic cleaning advice',
+    solution: 'A tool-and-technique method: squeegee and microfiber, a vinegar-water solution, top-down overlapping strokes, and separate care for aluminum tracks and screens that accounts for hard water instead of ignoring it.',
+    targetAudience: 'Dayton-area homeowners and renters: across Kettering, Centerville, Beavercreek, and Oakwood dealing with streaky windows despite following generic cleaning advice',
     content: windowsStreakFreeContent,
     faqs: [
       {
@@ -197,15 +197,15 @@ const POST_EXTRAS = [
       },
       {
         question: 'Does vinegar damage window tracks or frames?',
-        answer: "It can, depending on the material. Vinegar is safe and effective on glass, but on aluminum window tracks — common in older Dayton-area homes — repeated acid exposure pits and dulls the anodized finish over time. Clean tracks with warm soapy water and a soft brush instead, and save the vinegar solution for the glass itself.",
+        answer: "It can, depending on the material. Vinegar is safe and effective on glass, but on aluminum window tracks, common in older Dayton-area homes, repeated acid exposure pits and dulls the anodized finish over time. Clean tracks with warm soapy water and a soft brush instead, and save the vinegar solution for the glass itself.",
       },
       {
         question: 'Why do my windows still streak after I clean them?',
-        answer: 'The most common causes are cleaning in direct sun, using a cloth or paper towel instead of a squeegee, and hard water mineral film. In the Dayton area specifically, tap water lands in the "hard" range even after county treatment, so any water left to air-dry on glass — from a rinse, rain, or an overly wet cloth — leaves a faint mineral haze behind. Switching to a squeegee and drying edges immediately usually solves it.',
+        answer: 'The most common causes are cleaning in direct sun, using a cloth or paper towel instead of a squeegee, and hard water mineral film. In the Dayton area specifically, tap water lands in the "hard" range even after county treatment, so any water left to air-dry on glass: from a rinse, rain, or an overly wet cloth leaves a faint mineral haze behind. Switching to a squeegee and drying edges immediately usually solves it.',
       },
       {
         question: 'How often should windows be cleaned?',
-        answer: 'Twice a year for most homes — once in spring after pollen season and once in fall — keeps glass looking clear without much upkeep. Homes near busy roads, with pets, or with kids leaving fingerprints on interior glass often do better with a quick interior wipe-down monthly, saving the full inside-and-out clean for the twice-yearly pass.',
+        answer: 'Twice a year for most homes, once in spring after pollen season and once in fall, keeps glass looking clear without much upkeep. Homes near busy roads, with pets, or with kids leaving fingerprints on interior glass often do better with a quick interior wipe-down monthly, saving the full inside-and-out clean for the twice-yearly pass.',
       },
       {
         question: 'Is a squeegee really necessary, or will microfiber alone work?',
@@ -213,7 +213,7 @@ const POST_EXTRAS = [
       },
       {
         question: "What's causing the cloudy film that won't wipe off?",
-        answer: "That's almost always mineral scale from hard water, not dirt — and dry-wiping won't remove it because there's nothing loose to pick up. It needs a mild acid to dissolve the deposit first. Spray the glass with a vinegar-water solution, let it sit for a minute on stubborn spots, then squeegee and dry. If the film is thick from months of buildup, a second pass usually finishes the job.",
+        answer: "That's almost always mineral scale from hard water, not dirt. And dry-wiping won't remove it because there's nothing loose to pick up. It needs a mild acid to dissolve the deposit first. Spray the glass with a vinegar-water solution, let it sit for a minute on stubborn spots, then squeegee and dry. If the film is thick from months of buildup, a second pass usually finishes the job.",
       },
     ],
     howToTitle: 'How to Clean Windows Streak-Free',
@@ -242,8 +242,8 @@ const POST_EXTRAS = [
       'steam mop on linoleum',
     ],
     problem: "About one in four Xenia homes was built in the 1970s rebuild after the 1974 tornado, and their textured ceilings, wood paneling, aluminum window tracks, sheet vinyl, and original tile under 23-grain city water get damaged by generic scrub-everything cleaning advice.",
-    solution: 'A room-by-room method for 1970s Xenia homes — two safety checks first, then ceilings, paneling, registers, hard-water bathrooms, window tracks, floors by material, and laminate kitchens — using dust-and-damp-wipe techniques instead of abrasives.',
-    targetAudience: "Xenia and Greene County homeowners and renters in 1970s ranches, split-levels, and tri-levels — especially Arrowhead, Windsor Park, and other post-tornado rebuild neighborhoods — plus buyers moving into one of these homes",
+    solution: 'A room-by-room method for 1970s Xenia homes: two safety checks first, then ceilings, paneling, registers, hard-water bathrooms, window tracks, floors by material, and laminate kitchens using dust-and-damp-wipe techniques instead of abrasives.',
+    targetAudience: "Xenia and Greene County homeowners and renters in 1970s ranches, split-levels, and tri-levels: especially Arrowhead, Windsor Park, and other post-tornado rebuild neighborhoods plus buyers moving into one of these homes",
     content: xenia1970sHomeCleaningContent,
     faqs: [
       {
@@ -272,7 +272,7 @@ const POST_EXTRAS = [
       },
       {
         question: 'How much of Xenia was rebuilt after the 1974 tornado?',
-        answer: "The April 3, 1974 tornado destroyed roughly half the buildings in the city, and reporting from the 50th anniversary counted more than 1,200 homes condemned. Arrowhead and Windsor Park were rebuilt almost entirely, and today the 1970s are the single largest decade in Xenia's housing stock — about one home in four, according to census housing data — which is why so much of the city shares the same cleaning quirks.",
+        answer: "The April 3, 1974 tornado destroyed roughly half the buildings in the city, and reporting from the 50th anniversary counted more than 1,200 homes condemned. Arrowhead and Windsor Park were rebuilt almost entirely, and today the 1970s are the single largest decade in Xenia's housing stock, about one home in four, according to census housing data, which is why so much of the city shares the same cleaning quirks.",
       },
     ],
     howToTitle: 'How to Clean a 1970s Xenia Home Room by Room',
@@ -280,7 +280,7 @@ const POST_EXTRAS = [
       { name: 'Check ceilings and paint first', text: 'Treat textured ceilings and pre-1978 paint as dust-and-damp-wipe only. Never sand, scrape, or wet-scrub them, and have a textured ceiling tested before any repair or removal.' },
       { name: 'Dust ceilings and fans top-down', text: 'Use an extendable microfiber duster or a vacuum brush attachment with light pressure on textured ceilings, and clean fan blades inside a pillowcase so dust does not fall onto furniture.' },
       { name: 'Wipe wood paneling with the grain', text: 'Dust dry, then wipe with a nearly dry cloth of warm water and a few drops of dish soap, drying immediately. Skip abrasive pads and ammonia sprays.' },
-      { name: 'Wash registers and change the filter', text: 'Pull floor registers and wash them, vacuum the first foot of each duct opening, wipe the return grille, and replace the furnace filter — monthly during fall harvest and spring pollen in Xenia.' },
+      { name: 'Wash registers and change the filter', text: 'Pull floor registers and wash them, vacuum the first foot of each duct opening, wipe the return grille, and replace the furnace filter: monthly during fall harvest and spring pollen in Xenia.' },
       { name: 'Descale bathrooms for very hard water', text: 'Use half-and-half white vinegar on chrome, glass, and glazed tile, wipe dry, and soak aerators and showerheads. Keep vinegar off unsealed grout and natural stone, and never use abrasives on worn tub enamel.' },
       { name: 'Detail aluminum window tracks', text: 'Vacuum the track, scrub with a toothbrush and soapy water, avoid acidic cleaners that pit aluminum, clear the weep holes, and finish with a light silicone spray.' },
       { name: 'Clean floors and laminate by material', text: 'Damp-mop vinyl and linoleum with a pH-neutral cleaner (no steam), keep hardwood barely damp, vacuum carpet slowly, and clean laminate counters and cabinet fronts with soapy water instead of abrasives or bleach.' },
@@ -300,8 +300,8 @@ const POST_EXTRAS = [
       'best way to remove pet hair from carpet and hardwood',
     ],
     problem: "Pet hair and odor build up faster than a normal cleaning routine can keep up with, especially during Dayton's closed-window winters and humid summers, and a generic cleaning routine doesn't account for the hardwood-and-carpet mix common in older area homes.",
-    solution: "A room-by-room routine — upholstery and carpet, hard floors, laundry and pet bedding, and HVAC/air — tuned to which surfaces and seasons actually make pet hair and odor worse in a Dayton-area home.",
-    targetAudience: 'Pet-owning homeowners and renters across the Dayton area — including Kettering, Oakwood, and Centerville — dealing with pet hair and odor between professional cleanings',
+    solution: "A room-by-room routine: upholstery and carpet, hard floors, laundry and pet bedding, and HVAC/air tuned to which surfaces and seasons actually make pet hair and odor worse in a Dayton-area home.",
+    targetAudience: 'Pet-owning homeowners and renters across the Dayton area: including Kettering, Oakwood, and Centerville dealing with pet hair and odor between professional cleanings',
     content: petHairOdorContent,
     faqs: [
       {
@@ -322,7 +322,7 @@ const POST_EXTRAS = [
       },
       {
         question: 'Can pet odor get into HVAC ducts and vents?',
-        answer: 'Yes — dander and odor particles get pulled into return vents and can settle inside ductwork, which is part of why odor sometimes seems to come from everywhere at once rather than one specific spot. Regular filter changes and periodic vent cleaning reduce this; a persistent whole-house pet odor that doesn\'t improve with cleaning is sometimes a sign ducts need a professional cleaning.',
+        answer: 'Yes: dander and odor particles get pulled into return vents and can settle inside ductwork, which is part of why odor sometimes seems to come from everywhere at once rather than one specific spot. Regular filter changes and periodic vent cleaning reduce this; a persistent whole-house pet odor that doesn\'t improve with cleaning is sometimes a sign ducts need a professional cleaning.',
       },
       {
         question: 'How do you get pet smell out of hardwood floors?',
@@ -330,7 +330,7 @@ const POST_EXTRAS = [
       },
       {
         question: "What's the best vacuum for pet hair and dander?",
-        answer: 'Look for a vacuum with a sealed HEPA filtration system and a motorized pet-hair attachment — the HEPA filter keeps captured dander from blowing back into the air, and the motorized attachment lifts embedded hair from carpet and upholstery far better than a standard floor head.',
+        answer: 'Look for a vacuum with a sealed HEPA filtration system and a motorized pet-hair attachment: the HEPA filter keeps captured dander from blowing back into the air, and the motorized attachment lifts embedded hair from carpet and upholstery far better than a standard floor head.',
       },
       {
         question: 'How long does pet odor last after removing the source?',
@@ -363,12 +363,12 @@ const POST_EXTRAS = [
     ],
     problem: "Dayton's hard water leaves grout looking gray and tile looking hazy no matter how often it's mopped, and the wrong cleaner or brush can scratch tile or break down grout instead of fixing it.",
     solution: 'A finish-safe, step-by-step method using a baking soda and hydrogen peroxide paste plus a soft nylon brush to clean grout and tile safely, followed by the grout re-sealing routine that keeps hard-water buildup from coming right back.',
-    targetAudience: 'Dayton-area homeowners and renters — across Kettering, Centerville, Beavercreek, and the surrounding Miami Valley — dealing with hard-water grout haze and tile buildup in kitchens and bathrooms',
+    targetAudience: 'Dayton-area homeowners and renters: across Kettering, Centerville, Beavercreek, and the surrounding Miami Valley dealing with hard-water grout haze and tile buildup in kitchens and bathrooms',
     content: groutTileCleaningContent,
     faqs: [
       {
         question: 'Does vinegar damage grout or tile?',
-        answer: "Not on standard cement-based grout or glazed ceramic/porcelain tile used in moderation — a diluted vinegar solution is a common, safe way to cut through light grime. It's a different story on natural stone like marble, travertine, or limestone, where vinegar's acidity can etch and permanently dull the surface. If you're unsure what your tile is made of, skip vinegar and use the baking soda and hydrogen peroxide method instead.",
+        answer: "Not on standard cement-based grout or glazed ceramic/porcelain tile used in moderation: a diluted vinegar solution is a common, safe way to cut through light grime. It's a different story on natural stone like marble, travertine, or limestone, where vinegar's acidity can etch and permanently dull the surface. If you're unsure what your tile is made of, skip vinegar and use the baking soda and hydrogen peroxide method instead.",
       },
       {
         question: 'How often should grout be resealed?',
@@ -388,11 +388,11 @@ const POST_EXTRAS = [
       },
       {
         question: 'Is oxygen bleach safe for colored grout?',
-        answer: 'Generally yes — oxygen-based cleaners are color-safe and far gentler than chlorine bleach, which is why they\'re the standard recommendation for tinted or colored grout. Even so, test a small hidden section first and follow the product\'s dwell-time instructions, since very old or thin sealer coats can behave differently than fresh grout.',
+        answer: 'Generally yes: oxygen-based cleaners are color-safe and far gentler than chlorine bleach, which is why they\'re the standard recommendation for tinted or colored grout. Even so, test a small hidden section first and follow the product\'s dwell-time instructions, since very old or thin sealer coats can behave differently than fresh grout.',
       },
       {
         question: 'Can hard water permanently stain grout?',
-        answer: "Left unaddressed for years, yes — mineral deposits can work deep enough into porous, unsealed grout that a surface cleaning no longer fully restores it, and at that point re-grouting or professional restoration may be the only fix. That's exactly why sealing matters in a hard-water area like Dayton: it keeps the minerals from soaking into the grout in the first place, rather than needing to be removed after the fact.",
+        answer: "Left unaddressed for years, yes: mineral deposits can work deep enough into porous, unsealed grout that a surface cleaning no longer fully restores it, and at that point re-grouting or professional restoration may be the only fix. That's exactly why sealing matters in a hard-water area like Dayton: it keeps the minerals from soaking into the grout in the first place, rather than needing to be removed after the fact.",
       },
     ],
     howToTitle: 'How to Clean Grout and Tile Without Damaging It',
@@ -400,7 +400,7 @@ const POST_EXTRAS = [
       { name: 'Dry sweep or vacuum first', text: 'Clear loose dirt and grit before adding any liquid, so it does not turn into gritty mud that grinds into the grout lines and tile surface.' },
       { name: 'Mix a baking soda and peroxide paste', text: 'Combine roughly 3/4 cup baking soda with 1/4 cup hydrogen peroxide and a small squirt of dish soap into a spreadable paste.' },
       { name: 'Spread it into the grout and let it dwell', text: 'Work the paste into the grout lines with an old toothbrush or soft nylon brush, then let it sit 10 to 15 minutes before scrubbing.' },
-      { name: 'Scrub with a soft nylon brush', text: 'Scrub the grout lines in small circles, then use the flat side of the brush on the tile itself — never a steel or wire brush.' },
+      { name: 'Scrub with a soft nylon brush', text: 'Scrub the grout lines in small circles, then use the flat side of the brush on the tile itself: never a steel or wire brush.' },
       { name: 'Use an oxygen-based cleaner for set-in stains', text: 'For stubborn spots the paste does not fully lift, apply a color-safe oxygen-based grout cleaner rather than straight bleach.' },
       { name: 'Rinse thoroughly and dry', text: 'Wipe or mop the area with clean water to remove all cleaner residue, then dry with a towel or let it air dry.' },
       { name: 'Reseal the grout once fully dry', text: 'Apply a penetrating grout sealer along the grout lines, wipe excess off the tile face, and let it cure fully before the floor gets wet again.' },
@@ -426,31 +426,31 @@ const POST_EXTRAS = [
     faqs: [
       {
         question: 'How far in advance should I deep clean before listing my house?',
-        answer: 'Start 3-4 weeks before your target listing date. That gives you time for the heavy lifting — decluttering, kitchen and bathroom degreasing, carpets and hardwood — without racing the photographer. The final 1-2 weeks are for windows, baseboards, and curb appeal, and showing week becomes a lighter maintenance pass instead of a scramble. In a market moving as fast as Dayton\'s is right now, starting early is what keeps the deep clean from colliding with your actual listing date.',
+        answer: 'Start 3-4 weeks before your target listing date. That gives you time for the heavy lifting: decluttering, kitchen and bathroom degreasing, carpets and hardwood without racing the photographer. The final 1-2 weeks are for windows, baseboards, and curb appeal, and showing week becomes a lighter maintenance pass instead of a scramble. In a market moving as fast as Dayton\'s is right now, starting early is what keeps the deep clean from colliding with your actual listing date.',
       },
       {
         question: 'Does a clean house really sell faster or for more money?',
-        answer: "Yes — agents consistently rank deep cleaning among the highest-ROI prep a seller can do, and staged, clean homes have been shown to draw offers 1-10% higher than comparable unstaged ones while spending less time on market. In a Dayton market already averaging 38 days on market, a spotless first impression is often what turns a showing into an offer instead of a pass.",
+        answer: "Yes: agents consistently rank deep cleaning among the highest-ROI prep a seller can do, and staged, clean homes have been shown to draw offers 1-10% higher than comparable unstaged ones while spending less time on market. In a Dayton market already averaging 38 days on market, a spotless first impression is often what turns a showing into an offer instead of a pass.",
       },
       {
         question: 'What should I prioritize cleaning before a showing?',
-        answer: "The kitchen and bathrooms first — they're what buyers scrutinize hardest and what sinks a listing's photos fastest if they're not spotless. After that, clear counters and floors throughout, since visual clutter reads as \"not cared for\" even in an otherwise clean room. Bedrooms and closets matter far less than the kitchen, bathroom, and whatever main living space buyers will actually linger in.",
+        answer: "The kitchen and bathrooms first: they're what buyers scrutinize hardest and what sinks a listing's photos fastest if they're not spotless. After that, clear counters and floors throughout, since visual clutter reads as \"not cared for\" even in an otherwise clean room. Bedrooms and closets matter far less than the kitchen, bathroom, and whatever main living space buyers will actually linger in.",
       },
       {
         question: 'Do I need to deep clean before every single showing?',
-        answer: "No. The deep clean is a one-time job before your listing photos go live. After that, a 15-20 minute maintenance pass — wiping counters, a quick floor check, a bathroom once-over — before each individual showing is enough to keep the house at that same standard. Trying to re-deep-clean before every showing in a fast-moving market like Dayton's just isn't sustainable.",
+        answer: "No. The deep clean is a one-time job before your listing photos go live. After that, a 15-20 minute maintenance pass: wiping counters, a quick floor check, a bathroom once-over before each individual showing is enough to keep the house at that same standard. Trying to re-deep-clean before every showing in a fast-moving market like Dayton's just isn't sustainable.",
       },
       {
         question: "What's the best way to handle pet odors before listing?",
-        answer: 'Find the actual source instead of masking it — litter boxes, pet bedding, and carpets are the usual culprits. Wash or replace pet bedding, deep clean or shampoo any carpet a pet spends time on, and run an air purifier for a few days before showings. Avoid heavy air fresheners; buyers and agents are quick to read strong fragrance as something being hidden rather than resolved.',
+        answer: 'Find the actual source instead of masking it: litter boxes, pet bedding, and carpets are the usual culprits. Wash or replace pet bedding, deep clean or shampoo any carpet a pet spends time on, and run an air purifier for a few days before showings. Avoid heavy air fresheners; buyers and agents are quick to read strong fragrance as something being hidden rather than resolved.',
       },
       {
         question: 'Should I hire a cleaning service before listing or rely on staging alone?',
-        answer: "They solve different problems — staging arranges furniture and decor to help buyers picture themselves in the space, but it doesn't fix a grimy oven, hard-water film on shower glass, or grease on cabinet fronts. Most Dayton-area sellers get the best result pairing both: a professional deep clean to handle what staging can't, then light staging on top of a genuinely clean house.",
+        answer: "They solve different problems: staging arranges furniture and decor to help buyers picture themselves in the space, but it doesn't fix a grimy oven, hard-water film on shower glass, or grease on cabinet fronts. Most Dayton-area sellers get the best result pairing both: a professional deep clean to handle what staging can't, then light staging on top of a genuinely clean house.",
       },
       {
         question: 'What areas do home inspectors and buyers notice most?',
-        answer: 'Kitchens and bathrooms top the list for both groups, followed by anything that signals deferred maintenance — grimy exhaust fans, mildew around window tracks, or a damp-smelling basement. Buyers also open closets, cabinets, and appliances far more often during a showing than sellers expect, so a clean interior matters as much as what\'s visible on the surface.',
+        answer: 'Kitchens and bathrooms top the list for both groups, followed by anything that signals deferred maintenance: grimy exhaust fans, mildew around window tracks, or a damp-smelling basement. Buyers also open closets, cabinets, and appliances far more often during a showing than sellers expect, so a clean interior matters as much as what\'s visible on the surface.',
       },
     ],
     howToTitle: 'How to Deep Clean Your House Before Listing It For Sale',
@@ -459,7 +459,7 @@ const POST_EXTRAS = [
       { name: 'Deep clean the kitchen', text: 'Degrease cabinet fronts, pulls, and the backsplash, clean every appliance inside and out including the oven and fridge, and clear all counters.' },
       { name: 'Deep clean bathrooms', text: 'Scrub grout, descale showerheads and glass, polish fixtures and mirrors to a true streak-free shine, and replace any worn shower curtains or mats.' },
       { name: 'Handle floors, walls, and windows', text: 'Wash windows inside and out including sills and tracks, wipe down baseboards and walls, and deep clean carpets or polish hardwood floors.' },
-      { name: 'Eliminate odors at the source', text: 'Find and fix what\'s actually causing any smell — trash, litter boxes, damp areas, or laundry — instead of masking it with air fresheners.' },
+      { name: 'Eliminate odors at the source', text: 'Find and fix what\'s actually causing any smell: trash, litter boxes, damp areas, or laundry instead of masking it with air fresheners.' },
       { name: 'Finish curb appeal', text: 'Sweep the porch and walkway, power-wash siding or driveway if needed, wash exterior windows, and confirm outdoor lighting works for evening showings.' },
     ],
   },
@@ -476,14 +476,14 @@ const POST_EXTRAS = [
       'fall hosting cleaning tips Ohio',
       'party prep cleaning checklist',
     ],
-    problem: "Oktoberfest weekend packs Dayton's calendar with guests, tailgates, and watch parties — and most fall entertaining advice online is generic, with no plan for cleaning up the morning after.",
+    problem: "Oktoberfest weekend packs Dayton's calendar with guests, tailgates, and watch parties. And most fall entertaining advice online is generic, with no plan for cleaning up the morning after.",
     solution: 'A pre-party and post-party cleaning timeline tied to the real Dayton Art Institute Oktoberfest weekend (September 25-27, 2026), covering what to clean before guests arrive and how to reset fast the next day.',
-    targetAudience: 'Dayton-area homeowners hosting fall gatherings, tailgates, or Oktoberfest watch parties — especially in Oakwood, Kettering, Centerville, and downtown Dayton households near the Dayton Art Institute',
+    targetAudience: 'Dayton-area homeowners hosting fall gatherings, tailgates, or Oktoberfest watch parties: especially in Oakwood, Kettering, Centerville, and downtown Dayton households near the Dayton Art Institute',
     content: oktoberfestFallHostingContent,
     faqs: [
       {
         question: 'How far in advance should I clean before hosting a party?',
-        answer: 'Start the deep-clean tasks about three days out — bathroom, fridge, and floors — then handle dusting and windows the day before, and save a quick clutter reset for the morning guests arrive. Spreading it out over three days means no single day turns into a marathon, and it leaves the morning-of free for food prep and last-minute details instead of scrubbing.',
+        answer: 'Start the deep-clean tasks about three days out: bathroom, fridge, and floors then handle dusting and windows the day before, and save a quick clutter reset for the morning guests arrive. Spreading it out over three days means no single day turns into a marathon, and it leaves the morning-of free for food prep and last-minute details instead of scrubbing.',
       },
       {
         question: "What's the fastest way to clean my house after a party?",
@@ -491,19 +491,19 @@ const POST_EXTRAS = [
       },
       {
         question: 'What areas should I prioritize before guests arrive?',
-        answer: "The kitchen, the guest bathroom, and whatever room people will actually gather in matter far more than bedrooms or closets nobody will see. Clear counters, stock the bathroom with fresh towels and soap, and make sure there's obvious space for food, drinks, and coats. Skip organizing cabinets or dusting shelves above eye level — nobody's checking, and your time is better spent where guests actually look.",
+        answer: "The kitchen, the guest bathroom, and whatever room people will actually gather in matter far more than bedrooms or closets nobody will see. Clear counters, stock the bathroom with fresh towels and soap, and make sure there's obvious space for food, drinks, and coats. Skip organizing cabinets or dusting shelves above eye level: nobody's checking, and your time is better spent where guests actually look.",
       },
       {
         question: 'Do I need to deep clean before a small get-together?',
-        answer: "No. A small gathering of a few friends calls for a tidy-and-reset, not a full deep clean — clear surfaces, a quick vacuum, and a clean bathroom cover most of it. Save the full three-day countdown for a bigger Oktoberfest-weekend crowd, out-of-town guests, or anytime you're hosting people who'll be using multiple rooms of the house.",
+        answer: "No. A small gathering of a few friends calls for a tidy-and-reset, not a full deep clean: clear surfaces, a quick vacuum, and a clean bathroom cover most of it. Save the full three-day countdown for a bigger Oktoberfest-weekend crowd, out-of-town guests, or anytime you're hosting people who'll be using multiple rooms of the house.",
       },
       {
         question: 'When is Oktoberfest at the Dayton Art Institute in 2026?',
-        answer: "It runs Friday, September 25 through Sunday, September 27, 2026 — a Lederhosen Lunch and Preview Party on Friday, an all-day festival Saturday, and a Sunday capped by the Steinholding Competition. Tickets go on sale in late July. Because the exact dates shift slightly year to year, it's worth double-checking the Dayton Art Institute's own event page before you lock in your own hosting plans around it.",
+        answer: "It runs Friday, September 25 through Sunday, September 27, 2026: a Lederhosen Lunch and Preview Party on Friday, an all-day festival Saturday, and a Sunday capped by the Steinholding Competition. Tickets go on sale in late July. Because the exact dates shift slightly year to year, it's worth double-checking the Dayton Art Institute's own event page before you lock in your own hosting plans around it.",
       },
       {
         question: 'How do I prevent stains and spills during a party?',
-        answer: 'Blot spills immediately instead of letting them sit — beer, cider, and wine are the most common Oktoberfest-weekend culprits, and all three lift far more easily wet than dried. Keep a stack of towels somewhere visible near the kitchen and living area, use coasters on any surface you care about, and stage a trash station so cups and cans don’t pile up on tables and counters in the first place.',
+        answer: 'Blot spills immediately instead of letting them sit: beer, cider, and wine are the most common Oktoberfest-weekend culprits, and all three lift far more easily wet than dried. Keep a stack of towels somewhere visible near the kitchen and living area, use coasters on any surface you care about, and stage a trash station so cups and cans don’t pile up on tables and counters in the first place.',
       },
       {
         question: 'Should I hire a cleaning service before or after hosting?',
@@ -511,13 +511,13 @@ const POST_EXTRAS = [
       },
       {
         question: "What's the fastest way to reset my house the day after a party?",
-        answer: 'Trash and dishes first, then a wipe-down of the kitchen and bathroom, then floors. Most of what makes a post-party house feel overwhelming is visual clutter — bottles, cups, and plates — so clearing that first makes the rest of the cleanup feel much smaller and faster than it looks at 9 a.m. the morning after.',
+        answer: 'Trash and dishes first, then a wipe-down of the kitchen and bathroom, then floors. Most of what makes a post-party house feel overwhelming is visual clutter: bottles, cups, and plates, so clearing that first makes the rest of the cleanup feel much smaller and faster than it looks at 9 a.m. the morning after.',
       },
     ],
     howToTitle: 'How to Get Your House Ready to Host for Oktoberfest Weekend',
     howToSteps: [
       { name: 'Deep clean 3 days out', text: 'Scrub the guest bathroom, clear and wipe the fridge and pantry shelves you’ll be loading with food and drinks, and do a full vacuum-and-mop pass while the house is still empty of party supplies.' },
-      { name: 'Dust and detail the day before', text: 'Wipe every reachable surface top to bottom and clean windows and mirrors — fingerprints and smudges show up fast under evening lighting.' },
+      { name: 'Dust and detail the day before', text: 'Wipe every reachable surface top to bottom and clean windows and mirrors: fingerprints and smudges show up fast under evening lighting.' },
       { name: 'Reset clutter the morning of', text: 'Clear any mess that built up overnight, set out fresh hand towels in the bathroom, and empty every trash can so you start the day from zero.' },
       { name: 'Stage a trash and spill station', text: 'Put an obvious bin near the entertaining space and keep a stack of towels by the kitchen so spills get blotted immediately instead of drying in.' },
       { name: 'Clear trash and dishes first the next day', text: 'Walk the whole house pulling bottles, cans, and cups, then load the dishwasher and wipe counters before touching anything else.' },
@@ -538,26 +538,26 @@ const POST_EXTRAS = [
       'high touch surface cleaning office',
       'office cleaning maintenance schedule',
     ],
-    problem: 'A professional crew resets an office on a schedule, but the workdays in between are what clients and staff actually see — and without light maintenance, a space that sparkled Monday looks tired by Thursday.',
-    solution: 'A simple between-visit routine: a 10-minute daily reset of shared areas, a handful of weekly team habits, strong entryway matting to stop tracked-in dirt, and midweek attention to break rooms and high-touch surfaces — while the heavy work stays with the crew.',
-    targetAudience: 'Dayton-area office managers, small-business owners, and facility managers — across downtown Dayton, Kettering, and Beavercreek office parks — keeping a workspace presentable between professional commercial cleanings',
+    problem: 'A professional crew resets an office on a schedule, but the workdays in between are what clients and staff actually see. And without light maintenance, a space that sparkled Monday looks tired by Thursday.',
+    solution: 'A simple between-visit routine: a 10-minute daily reset of shared areas, a handful of weekly team habits, strong entryway matting to stop tracked-in dirt, and midweek attention to break rooms and high-touch surfaces, while the heavy work stays with the crew.',
+    targetAudience: 'Dayton-area office managers, small-business owners, and facility managers: across downtown Dayton, Kettering, and Beavercreek office parks keeping a workspace presentable between professional commercial cleanings',
     content: officeCleanBetweenCleaningsContent,
     faqs: [
       {
         question: 'How often should an office be professionally cleaned?',
-        answer: 'Most offices do well with professional cleaning one to three times a week, depending on foot traffic, headcount, and the type of work. A small professional office with a dozen people might book twice weekly, while a busy medical or client-facing space often needs daily service. Restrooms, kitchens, and high-traffic entryways drive the frequency more than square footage does. Between those visits, light daily maintenance by staff keeps the space presentable — the professional schedule handles the deep and detailed work, and your team simply keeps surfaces clear and catches spills early.',
+        answer: 'Most offices do well with professional cleaning one to three times a week, depending on foot traffic, headcount, and the type of work. A small professional office with a dozen people might book twice weekly, while a busy medical or client-facing space often needs daily service. Restrooms, kitchens, and high-traffic entryways drive the frequency more than square footage does. Between those visits, light daily maintenance by staff keeps the space presentable: the professional schedule handles the deep and detailed work, and your team simply keeps surfaces clear and catches spills early.',
       },
       {
         question: 'What daily tasks keep an office clean between professional visits?',
-        answer: 'The highest-impact daily habits are clearing desks and shared surfaces, emptying full trash and recycling bins, wiping down the coffee station and any conference table after use, and straightening the lobby or reception area. A ten-minute end-of-day reset on the shared areas — or two minutes per person at each desk — resets the whole office nightly instead of letting mess build all week. None of this replaces professional cleaning; it protects the results between visits so each one starts from tidy.',
+        answer: 'The highest-impact daily habits are clearing desks and shared surfaces, emptying full trash and recycling bins, wiping down the coffee station and any conference table after use, and straightening the lobby or reception area. A ten-minute end-of-day reset on the shared areas, or two minutes per person at each desk, resets the whole office nightly instead of letting mess build all week. None of this replaces professional cleaning; it protects the results between visits so each one starts from tidy.',
       },
       {
         question: 'How do you keep office floors clean between cleanings?',
-        answer: 'The most effective step happens at the door: roughly 80 to 90 percent of the dirt in a commercial building is tracked in from outside, so a good entrance mat system captures most of it before it reaches your floors. Use enough matting that shoes are clean and dry after a few steps, and shake or vacuum the mats regularly so they keep working. In the Dayton area, winter road salt is especially hard on floors — abrasive and dulling — so matting and a winter boot tray matter even more from December through March. Blot spills immediately, and leave vacuuming and mopping to the professional crew.',
+        answer: 'The most effective step happens at the door: roughly 80 to 90 percent of the dirt in a commercial building is tracked in from outside, so a good entrance mat system captures most of it before it reaches your floors. Use enough matting that shoes are clean and dry after a few steps, and shake or vacuum the mats regularly so they keep working. In the Dayton area, winter road salt is especially hard on floors, abrasive and dulling, so matting and a winter boot tray matter even more from December through March. Blot spills immediately, and leave vacuuming and mopping to the professional crew.',
       },
       {
-        question: 'Whose job is it to keep the office clean — staff or the cleaning company?',
-        answer: 'It works best as a split. The professional cleaning company handles the skilled, heavy work: restrooms, floors, disinfection, and detailed surface cleaning on a set schedule. Staff handle light maintenance between visits — clearing their own desks, managing the break room, taking down full bins, and spot-cleaning spills. Many offices assign a rotating office steward each week to own the shared-area tasks so nothing falls through the cracks. Clear expectations about who does what prevents both the "someone else will get it" gap and the resentment of turning employees into janitors.',
+        question: 'Whose job is it to keep the office clean: staff or the cleaning company?',
+        answer: 'It works best as a split. The professional cleaning company handles the skilled, heavy work: restrooms, floors, disinfection, and detailed surface cleaning on a set schedule. Staff handle light maintenance between visits: clearing their own desks, managing the break room, taking down full bins, and spot-cleaning spills. Many offices assign a rotating office steward each week to own the shared-area tasks so nothing falls through the cracks. Clear expectations about who does what prevents both the "someone else will get it" gap and the resentment of turning employees into janitors.',
       },
       {
         question: 'How do you keep an office break room from smelling?',
@@ -565,17 +565,17 @@ const POST_EXTRAS = [
       },
       {
         question: 'What should you clean in an office during cold and flu season?',
-        answer: 'Focus on high-touch surfaces, because that is how illness travels through a workplace. Door handles, light switches, shared keyboards and mice, phone handsets, the printer or copier touchscreen, microwave keypads, and refrigerator handles all benefit from a disinfecting wipe once or twice midweek, on top of the professional cleaning schedule. Keeping hand sanitizer and disinfecting wipes accessible encourages people to clean their own space too. This is maintenance between visits, not a substitute for professional disinfection — but during peak season it noticeably cuts down how quickly a bug spreads through the office.',
+        answer: 'Focus on high-touch surfaces, because that is how illness travels through a workplace. Door handles, light switches, shared keyboards and mice, phone handsets, the printer or copier touchscreen, microwave keypads, and refrigerator handles all benefit from a disinfecting wipe once or twice midweek, on top of the professional cleaning schedule. Keeping hand sanitizer and disinfecting wipes accessible encourages people to clean their own space too. This is maintenance between visits, not a substitute for professional disinfection. But during peak season it noticeably cuts down how quickly a bug spreads through the office.',
       },
     ],
     howToTitle: 'How to Do a 10-Minute End-of-Day Office Reset',
     howToSteps: [
-      { name: 'Clear the shared surfaces', text: 'Walk the common areas and clear desktops, the reception counter, and the conference table — papers filed or stacked, mugs and dishes to the kitchen. A clear surface is what makes a room read as clean.' },
+      { name: 'Clear the shared surfaces', text: 'Walk the common areas and clear desktops, the reception counter, and the conference table: papers filed or stacked, mugs and dishes to the kitchen. A clear surface is what makes a room read as clean.' },
       { name: 'Take down full bins', text: 'Empty any trash or recycling bin that is full and walk it to the dumpster rather than leaving it overnight. This is where odor and pests start, so do not let it wait for the crew.' },
       { name: 'Reset the coffee station', text: 'Rinse the pot, toss the grounds, and wipe the counter. A neglected coffee area is the single biggest source of break-room smell by the end of the week.' },
-      { name: 'Wipe high-touch and meeting surfaces', text: 'Run a disinfecting wipe over the conference table after the last meeting and hit the main door handles and light switches — thirty seconds that keeps germs and coffee rings from building up.' },
+      { name: 'Wipe high-touch and meeting surfaces', text: 'Run a disinfecting wipe over the conference table after the last meeting and hit the main door handles and light switches: thirty seconds that keeps germs and coffee rings from building up.' },
       { name: 'Straighten the lobby', text: 'Square the chairs, fan the magazines, and clear the reception counter. It is the first thing every visitor sees and the fastest room to reset.' },
-      { name: 'Check the entrance mats', text: 'Give entry mats a quick shake or vacuum so they keep catching tracked-in dirt — especially important in Dayton winters when road salt and slush come in on every shoe.' },
+      { name: 'Check the entrance mats', text: 'Give entry mats a quick shake or vacuum so they keep catching tracked-in dirt: especially important in Dayton winters when road salt and slush come in on every shoe.' },
     ],
   },
   {
@@ -592,18 +592,18 @@ const POST_EXTRAS = [
       'how to polish stainless steel appliances',
       'what not to use on stainless steel',
     ],
-    problem: "Stainless steel appliances show every fingerprint and, in hard-water areas like Dayton, cloud over with mineral water spots — and wiping them the wrong way just smears streaks into the finish.",
-    solution: 'A finish-safe, streak-free deep-clean method: wash with mild soap and microfiber along the grain, lift hard-water spots with diluted vinegar, dry to prevent spotting, and optionally polish — plus what never to use.',
-    targetAudience: 'Dayton-area homeowners and renters — across Oakwood, Kettering, Centerville, and Beavercreek — keeping stainless steel kitchen appliances clean despite Miami Valley hard water',
+    problem: "Stainless steel appliances show every fingerprint and, in hard-water areas like Dayton, cloud over with mineral water spots. And wiping them the wrong way just smears streaks into the finish.",
+    solution: 'A finish-safe, streak-free deep-clean method: wash with mild soap and microfiber along the grain, lift hard-water spots with diluted vinegar, dry to prevent spotting, and optionally polish: plus what never to use.',
+    targetAudience: 'Dayton-area homeowners and renters: across Oakwood, Kettering, Centerville, and Beavercreek keeping stainless steel kitchen appliances clean despite Miami Valley hard water',
     content: stainlessSteelAppliancesContent,
     faqs: [
       {
         question: 'What is the best thing to clean stainless steel appliances with?',
-        answer: 'For everyday cleaning, warm water with a few drops of mild dish soap on a microfiber cloth is the best and safest option — it cuts grease without harming the finish. Wipe with the grain, rinse with a second damp cloth, and dry with a third to prevent streaks. You do not need a specialty stainless spray for routine cleaning; the soap-and-microfiber method handles most fingerprints and grime, and a little white vinegar takes care of water spots.',
+        answer: 'For everyday cleaning, warm water with a few drops of mild dish soap on a microfiber cloth is the best and safest option: it cuts grease without harming the finish. Wipe with the grain, rinse with a second damp cloth, and dry with a third to prevent streaks. You do not need a specialty stainless spray for routine cleaning; the soap-and-microfiber method handles most fingerprints and grime, and a little white vinegar takes care of water spots.',
       },
       {
         question: 'How do I clean stainless steel without leaving streaks?',
-        answer: 'Streaks come from two things: wiping against the grain and letting the surface air-dry. Always wipe in the same direction as the fine lines milled into the steel, and finish by buffing the whole surface completely dry with a clean microfiber cloth before the water evaporates on its own. If streaks still appear, you likely have soap or cleaner residue left behind — go over the surface once more with a cloth dampened in plain water, then buff dry again.',
+        answer: 'Streaks come from two things: wiping against the grain and letting the surface air-dry. Always wipe in the same direction as the fine lines milled into the steel, and finish by buffing the whole surface completely dry with a clean microfiber cloth before the water evaporates on its own. If streaks still appear, you likely have soap or cleaner residue left behind: go over the surface once more with a cloth dampened in plain water, then buff dry again.',
       },
       {
         question: 'How do I remove water spots from stainless steel?',
@@ -615,15 +615,15 @@ const POST_EXTRAS = [
       },
       {
         question: 'Can I use vinegar on stainless steel appliances?',
-        answer: 'Yes, diluted white vinegar is safe and effective for removing water spots and light mineral film from stainless steel. Mix it about half-and-half with water, apply it briefly, wipe with the grain, and always buff dry afterward — do not leave vinegar sitting on the surface for long stretches. What you should not use is bleach or ammonia-based cleaners, which can damage the protective layer over time. Vinegar is the go-to for hard-water spotting; mild dish soap is the go-to for grease.',
+        answer: 'Yes, diluted white vinegar is safe and effective for removing water spots and light mineral film from stainless steel. Mix it about half-and-half with water, apply it briefly, wipe with the grain, and always buff dry afterward: do not leave vinegar sitting on the surface for long stretches. What you should not use is bleach or ammonia-based cleaners, which can damage the protective layer over time. Vinegar is the go-to for hard-water spotting; mild dish soap is the go-to for grease.',
       },
       {
         question: 'Does olive oil really work to polish stainless steel?',
-        answer: 'It does, in very small amounts. After the appliance is clean and dry, put a few drops of olive or mineral oil on a dry microfiber cloth and buff a thin coat over the surface with the grain. It evens out the shine, masks minor smudges, and leaves a light barrier that helps repel fingerprints. The mistake people make is using too much, which leaves a greasy film that grabs dust — a few drops for an entire fridge door is plenty.',
+        answer: 'It does, in very small amounts. After the appliance is clean and dry, put a few drops of olive or mineral oil on a dry microfiber cloth and buff a thin coat over the surface with the grain. It evens out the shine, masks minor smudges, and leaves a light barrier that helps repel fingerprints. The mistake people make is using too much, which leaves a greasy film that grabs dust: a few drops for an entire fridge door is plenty.',
       },
       {
         question: 'How often should I deep clean my stainless appliances?',
-        answer: 'A thorough deep clean — soap wash, vinegar for spots, dry, and polish — is about a once-a-month task for most households. Fingerprints and light smudges can be buffed away with a dry microfiber cloth any time they bother you, which keeps the surface looking sharp between deep cleans. Kitchens with heavy cooking, kids, or a lot of hard-water splashing near the sink may want a mid-month touch-up on the most-used panels. The key is consistency: small, frequent buffing beats occasional heavy scrubbing.',
+        answer: 'A thorough deep clean: soap wash, vinegar for spots, dry, and polish is about a once-a-month task for most households. Fingerprints and light smudges can be buffed away with a dry microfiber cloth any time they bother you, which keeps the surface looking sharp between deep cleans. Kitchens with heavy cooking, kids, or a lot of hard-water splashing near the sink may want a mid-month touch-up on the most-used panels. The key is consistency: small, frequent buffing beats occasional heavy scrubbing.',
       },
     ],
     howToTitle: 'How to Deep Clean Stainless Steel Kitchen Appliances',
@@ -632,7 +632,7 @@ const POST_EXTRAS = [
       { name: 'Wash with warm soapy water', text: 'Dip a microfiber cloth in warm water with a few drops of dish soap, wring it nearly dry, and wipe the whole surface following the grain. Use a soft toothbrush on handle bases and seams.' },
       { name: 'Rinse with a clean damp cloth', text: 'Go over the surface again with a second microfiber cloth dampened in plain warm water to remove any soap film, still moving with the grain.' },
       { name: 'Lift hard-water spots with vinegar', text: 'For cloudy mineral spots, mist a 50/50 white vinegar and water mix, let it dwell one to two minutes, wipe with the grain, and move straight to drying.' },
-      { name: 'Dry and buff immediately', text: 'Buff the surface completely dry with a fresh microfiber cloth before the water can evaporate — this is the step that prevents streaks and new water spots.' },
+      { name: 'Dry and buff immediately', text: 'Buff the surface completely dry with a fresh microfiber cloth before the water can evaporate: this is the step that prevents streaks and new water spots.' },
       { name: 'Polish for extra shine (optional)', text: 'Put a few drops of olive or mineral oil on a dry cloth and buff a very thin coat over the surface with the grain to cut glare and help repel fingerprints.' },
     ],
   },
@@ -650,14 +650,14 @@ const POST_EXTRAS = [
       'clean hard water stains without damaging finish',
       'hard water spots bathroom Miami Valley',
     ],
-    problem: "Dayton-area tap water is hard enough (about 9 grains per gallon after county softening) to leave chalky mineral buildup on faucets, showerheads, and glass — and regular cleaning spray just slides over it.",
+    problem: "Dayton-area tap water is hard enough (about 9 grains per gallon after county softening) to leave chalky mineral buildup on faucets, showerheads, and glass. And regular cleaning spray just slides over it.",
     solution: 'A finish-safe, step-by-step method using white vinegar and baking soda to dissolve and lift hard water stains from bathroom fixtures, plus daily habits that keep the scale from coming back.',
-    targetAudience: 'Dayton-area homeowners and renters — across Kettering, Centerville, Beavercreek, and the surrounding Miami Valley — dealing with hard water spotting on bathroom fixtures and shower glass',
+    targetAudience: 'Dayton-area homeowners and renters: across Kettering, Centerville, Beavercreek, and the surrounding Miami Valley dealing with hard water spotting on bathroom fixtures and shower glass',
     content: hardWaterStainsContent,
     faqs: [
       {
         question: 'Does vinegar really remove hard water stains?',
-        answer: 'Yes. Hard water stains are alkaline mineral deposits — mostly calcium and magnesium — and white vinegar is mildly acidic, so it dissolves the scale instead of just smearing it around like a neutral cleaner does. The key is contact time: let the vinegar dwell on the deposit for 10 to 60 minutes depending on how thick it is, rather than wiping it off right away. For crusty buildup on faucets and showerheads, soaking with a vinegar-filled bag works far better than scrubbing.',
+        answer: 'Yes. Hard water stains are alkaline mineral deposits, mostly calcium and magnesium, and white vinegar is mildly acidic, so it dissolves the scale instead of just smearing it around like a neutral cleaner does. The key is contact time: let the vinegar dwell on the deposit for 10 to 60 minutes depending on how thick it is, rather than wiping it off right away. For crusty buildup on faucets and showerheads, soaking with a vinegar-filled bag works far better than scrubbing.',
       },
       {
         question: "What removes hard water stains that vinegar won't budge?",
@@ -665,15 +665,15 @@ const POST_EXTRAS = [
       },
       {
         question: "Is Dayton's water hard enough to cause this?",
-        answer: 'Yes. Montgomery County softens its water to roughly 9 grains per gallon before distribution, which still falls in the "hard" category, so mineral spotting on fixtures and glass is common across Dayton, Kettering, Centerville, Beavercreek, and the surrounding suburbs. The county notes many residents do not install a home softener because the water is already partially treated — but partially softened still leaves enough mineral content to build up on surfaces that get wet and dry every day.',
+        answer: 'Yes. Montgomery County softens its water to roughly 9 grains per gallon before distribution, which still falls in the "hard" category, so mineral spotting on fixtures and glass is common across Dayton, Kettering, Centerville, Beavercreek, and the surrounding suburbs. The county notes many residents do not install a home softener because the water is already partially treated. But partially softened still leaves enough mineral content to build up on surfaces that get wet and dry every day.',
       },
       {
         question: 'How do I clean a clogged showerhead without taking it off?',
-        answer: 'Fill a plastic bag with white vinegar, raise it around the showerhead until the nozzles are submerged, and secure it to the neck with a rubber band. Leave it about an hour — overnight for heavy buildup — then remove the bag, run hot water to flush loosened minerals, and scrub any remaining spots off the rubber nozzle tips with a soft toothbrush. This clears the clogged jets that cause weak or crooked spray without any tools or disassembly.',
+        answer: 'Fill a plastic bag with white vinegar, raise it around the showerhead until the nozzles are submerged, and secure it to the neck with a rubber band. Leave it about an hour, overnight for heavy buildup, then remove the bag, run hot water to flush loosened minerals, and scrub any remaining spots off the rubber nozzle tips with a soft toothbrush. This clears the clogged jets that cause weak or crooked spray without any tools or disassembly.',
       },
       {
         question: 'Can hard water stains permanently damage fixtures or glass?',
-        answer: 'If left long enough, yes — mineral deposits can etch into glass and pit or dull metal finishes over time, and at that point the surface itself is damaged rather than just coated. That is why regular removal matters. The bigger risk for most people, though, is self-inflicted: scrubbing with abrasive pads or harsh powders scratches the finish, and those micro-scratches trap minerals and make future spotting worse. Gentle acid plus time is almost always safer than aggressive scrubbing.',
+        answer: 'If left long enough, yes: mineral deposits can etch into glass and pit or dull metal finishes over time, and at that point the surface itself is damaged rather than just coated. That is why regular removal matters. The bigger risk for most people, though, is self-inflicted: scrubbing with abrasive pads or harsh powders scratches the finish, and those micro-scratches trap minerals and make future spotting worse. Gentle acid plus time is almost always safer than aggressive scrubbing.',
       },
       {
         question: 'How do I stop hard water stains from coming back?',
@@ -689,9 +689,9 @@ const POST_EXTRAS = [
       { name: 'Mix a vinegar solution', text: 'Combine equal parts white vinegar and water in a spray bottle for light spotting, and keep a jug of straight vinegar handy for soaking crusty buildup.' },
       { name: 'Soak the faucets and showerhead', text: 'Wrap a vinegar-filled bag around faucet spouts and the showerhead so the buildup is submerged, band it in place, and let it sit 30 minutes to an hour. Drop removable aerators in a bowl of vinegar too.' },
       { name: 'Clear the shower glass', text: 'Mist the glass with the 50/50 solution from the top down, let it dwell about 15 minutes while re-spraying as it drips, then wipe with a microfiber cloth.' },
-      { name: 'Break down stubborn spots', text: 'For deposits that remain, dip a damp cloth or soft toothbrush in baking soda and work the area in small circles — enough grit to lift scale, gentle enough not to scratch.' },
+      { name: 'Break down stubborn spots', text: 'For deposits that remain, dip a damp cloth or soft toothbrush in baking soda and work the area in small circles: enough grit to lift scale, gentle enough not to scratch.' },
       { name: 'Rinse, dry, and buff', text: 'Run water to flush loosened minerals, then dry every surface with a clean microfiber cloth and buff fixtures so no droplets are left to evaporate.' },
-      { name: 'Squeegee to prevent buildup', text: 'Finish by squeegeeing the glass and make it a daily habit — drying surfaces after use is what keeps hard water stains from returning.' },
+      { name: 'Squeegee to prevent buildup', text: 'Finish by squeegeeing the glass and make it a daily habit: drying surfaces after use is what keeps hard water stains from returning.' },
     ],
   },
   {
@@ -708,18 +708,18 @@ const POST_EXTRAS = [
       'what to put away before cleaners',
       'do I provide supplies for a cleaning service',
     ],
-    problem: 'Homeowners waste part of a paid cleaning visit having the crew tidy clutter, secure valuables, and work around pets — time that could have gone toward actual deep cleaning.',
-    solution: 'A quick 15-minute pre-clean routine — clear floors and counters, stash valuables, sort out pets and access, and flag priorities — so the crew spends the visit cleaning, not tidying.',
-    targetAudience: 'Dayton-area homeowners and renters — especially busy Kettering, Oakwood, and Centerville households — booking a house cleaning, particularly a first visit',
+    problem: 'Homeowners waste part of a paid cleaning visit having the crew tidy clutter, secure valuables, and work around pets: time that could have gone toward actual deep cleaning.',
+    solution: 'A quick 15-minute pre-clean routine: clear floors and counters, stash valuables, sort out pets and access, and flag priorities so the crew spends the visit cleaning, not tidying.',
+    targetAudience: 'Dayton-area homeowners and renters: especially busy Kettering, Oakwood, and Centerville households booking a house cleaning, particularly a first visit',
     content: prepHomeBeforeCleaningCrewContent,
     faqs: [
       {
         question: 'Should I clean before the cleaner comes?',
-        answer: 'No — you should tidy, not clean. The goal is to clear obstacles so the crew can reach the surfaces they’re there to clean, not to pre-scrub anything. Pick up clutter from floors and counters, clear the sink, and put away valuables. Actual scrubbing, dusting, and disinfecting is the crew’s job, and doing it yourself the night before just wastes your effort and theirs. A tidy, accessible home is all a professional cleaner needs to do their best work.',
+        answer: 'No: you should tidy, not clean. The goal is to clear obstacles so the crew can reach the surfaces they’re there to clean, not to pre-scrub anything. Pick up clutter from floors and counters, clear the sink, and put away valuables. Actual scrubbing, dusting, and disinfecting is the crew’s job, and doing it yourself the night before just wastes your effort and theirs. A tidy, accessible home is all a professional cleaner needs to do their best work.',
       },
       {
         question: 'Do I need to be home when the cleaning crew arrives?',
-        answer: 'No. Most clients arrange access — a key, a lockbox, or a garage or smart-lock code — and go about their day. If you won’t be home, leave a note listing your priorities and anything that’s off-limits, and confirm the entry method ahead of time so the crew isn’t stuck outside. Being present for the first visit can be helpful for a quick walk-through, but after that, many Dayton-area households simply come home to a clean house.',
+        answer: 'No. Most clients arrange access: a key, a lockbox, or a garage or smart-lock code and go about their day. If you won’t be home, leave a note listing your priorities and anything that’s off-limits, and confirm the entry method ahead of time so the crew isn’t stuck outside. Being present for the first visit can be helpful for a quick walk-through, but after that, many Dayton-area households simply come home to a clean house.',
       },
       {
         question: 'What should I do with my pets during a cleaning?',
@@ -727,19 +727,19 @@ const POST_EXTRAS = [
       },
       {
         question: 'What should I put away before house cleaners arrive?',
-        answer: 'Put away anything valuable, fragile, or personal: jewelry, cash, medications, important documents, and sentimental or breakable items. Also clear everyday clutter — toys, shoes, laundry, mail piles, and dishes — from floors and counters so surfaces are accessible. This isn’t about hiding things from the crew; it’s so nobody has to decide whether to move your belongings, and so the time you’re paying for goes toward cleaning rather than tidying around your stuff.',
+        answer: 'Put away anything valuable, fragile, or personal: jewelry, cash, medications, important documents, and sentimental or breakable items. Also clear everyday clutter: toys, shoes, laundry, mail piles, and dishes from floors and counters so surfaces are accessible. This isn’t about hiding things from the crew; it’s so nobody has to decide whether to move your belongings, and so the time you’re paying for goes toward cleaning rather than tidying around your stuff.',
       },
       {
         question: 'Do I need to provide cleaning supplies?',
-        answer: 'No. A professional cleaning crew brings its own products, tools, and equipment, including a vacuum and microfiber cloths. The exception is if you want a specific product used on a particular surface — say, a special cleaner for a natural-stone counter or a delicate floor. In that case, just leave the product out with a quick note. Otherwise, you don’t need to buy or stage anything for the visit.',
+        answer: 'No. A professional cleaning crew brings its own products, tools, and equipment, including a vacuum and microfiber cloths. The exception is if you want a specific product used on a particular surface: say, a special cleaner for a natural-stone counter or a delicate floor. In that case, just leave the product out with a quick note. Otherwise, you don’t need to buy or stage anything for the visit.',
       },
       {
         question: 'How long does it take to prep for a cleaning service?',
-        answer: 'About 15 minutes for most homes, and you can spread it across the night before and a quick morning pass. Clearing floors and counters, emptying the sink, taking out the trash, and putting away valuables is the bulk of it. That small investment typically saves the crew 30 to 45 minutes of tidying, which turns into more time on the deep-cleaning tasks you actually care about — a genuinely good return on a quarter-hour.',
+        answer: 'About 15 minutes for most homes, and you can spread it across the night before and a quick morning pass. Clearing floors and counters, emptying the sink, taking out the trash, and putting away valuables is the bulk of it. That small investment typically saves the crew 30 to 45 minutes of tidying, which turns into more time on the deep-cleaning tasks you actually care about: a genuinely good return on a quarter-hour.',
       },
       {
         question: 'What should I tell the cleaners before they start?',
-        answer: 'Point out your top priorities and any quirks in the home. If hard-water film on the shower glass, dusty blinds during ragweed season, or scuffed baseboards are what bug you most, say so — that’s what aims the visit. Also flag anything off-limits, any surface that needs special care such as older hardwood or natural stone, and how to handle pets and entry. A two-minute conversation at the first visit is the single best way to make sure the clean matches what you had in mind.',
+        answer: 'Point out your top priorities and any quirks in the home. If hard-water film on the shower glass, dusty blinds during ragweed season, or scuffed baseboards are what bug you most, say so: that’s what aims the visit. Also flag anything off-limits, any surface that needs special care such as older hardwood or natural stone, and how to handle pets and entry. A two-minute conversation at the first visit is the single best way to make sure the clean matches what you had in mind.',
       },
     ],
     howToTitle: 'How to Prep Your Home Before a Cleaning Crew Arrives',
@@ -748,7 +748,7 @@ const POST_EXTRAS = [
       { name: 'Clear counters and the sink', text: 'Move small appliances you don’t want touched, put away the mail pile and fruit bowl, and load or empty the dishwasher so the sink and counters are open to clean.' },
       { name: 'Secure valuables and personal items', text: 'Put jewelry, cash, medications, documents, and anything fragile or sentimental somewhere out of the way so nobody has to decide whether to move it.' },
       { name: 'Empty the trash', text: 'Bag up garbage and take it to the outside bins so the crew can wipe and reline empty cans instead of working around a full bag.' },
-      { name: 'Plan for pets and access', text: 'Decide where pets will be, and confirm how the crew will get in — a key, lockbox, or door code — so entry and animals are settled before arrival.' },
+      { name: 'Plan for pets and access', text: 'Decide where pets will be, and confirm how the crew will get in: a key, lockbox, or door code so entry and animals are settled before arrival.' },
       { name: 'Note your priorities', text: 'Leave a short list or have a quick word at the door about your top concerns and any off-limits rooms, so the visit targets what matters most to you.' },
     ],
   },
@@ -767,9 +767,9 @@ const POST_EXTRAS = [
       'bi-weekly cleaning service Dayton',
       'Miami Valley house cleaning',
     ],
-    problem: 'Cleaning companies advertise recurring service but rarely explain what you actually get — what happens each visit, what gets skipped between visits, how often you really need it, and the access and etiquette logistics no one mentions upfront.',
+    problem: 'Cleaning companies advertise recurring service but rarely explain what you actually get: what happens each visit, what gets skipped between visits, how often you really need it, and the access and etiquette logistics no one mentions upfront.',
     solution: "A plain-English guide to how recurring house cleaning works: what's included and excluded each visit, recurring vs. a one-time deep clean, choosing weekly/bi-weekly/monthly, and why it pays off in the Miami Valley's hard water, pollen, and salt seasons.",
-    targetAudience: 'Dayton-area homeowners — especially dual-income and commuter households in Kettering, Oakwood, Centerville, Beavercreek, and Springboro — weighing a standing weekly or bi-weekly cleaning schedule',
+    targetAudience: 'Dayton-area homeowners: especially dual-income and commuter households in Kettering, Oakwood, Centerville, Beavercreek, and Springboro weighing a standing weekly or bi-weekly cleaning schedule',
     content: recurringCleaningServiceContent,
     faqs: [
       {
@@ -778,31 +778,31 @@ const POST_EXTRAS = [
       },
       {
         question: "What's the difference between a recurring clean and a deep clean?",
-        answer: 'A deep clean is a top-to-bottom reset that hits what a normal clean skips — inside the oven and fridge, grout, baseboards, descaling fixtures, and behind furniture. A recurring clean maintains the baseline that deep clean established, so it is faster and costs less per visit. Most companies start a new recurring client with a deep or initial clean, then switch to the lighter recurring rhythm, because trying to do first-time buildup at a recurring price means either a rushed job or a surprise on the bill.',
+        answer: 'A deep clean is a top-to-bottom reset that hits what a normal clean skips: inside the oven and fridge, grout, baseboards, descaling fixtures, and behind furniture. A recurring clean maintains the baseline that deep clean established, so it is faster and costs less per visit. Most companies start a new recurring client with a deep or initial clean, then switch to the lighter recurring rhythm, because trying to do first-time buildup at a recurring price means either a rushed job or a surprise on the bill.',
       },
       {
-        question: 'How often should I have my house cleaned — weekly, bi-weekly, or monthly?',
-        answer: 'It depends on your household, but bi-weekly is the practical default for most homes — frequent enough that dust, bathroom scale, and floor grime never get ahead of you, without the cost of a weekly appointment. Weekly makes sense with pets, kids, allergies, or a high-traffic home. Monthly works for smaller or lower-traffic homes, as long as you are comfortable with each visit doing a bit more work since more buildup accumulates between cleanings.',
+        question: 'How often should I have my house cleaned, weekly, bi-weekly, or monthly?',
+        answer: 'It depends on your household, but bi-weekly is the practical default for most homes: frequent enough that dust, bathroom scale, and floor grime never get ahead of you, without the cost of a weekly appointment. Weekly makes sense with pets, kids, allergies, or a high-traffic home. Monthly works for smaller or lower-traffic homes, as long as you are comfortable with each visit doing a bit more work since more buildup accumulates between cleanings.',
       },
       {
         question: 'How much does recurring house cleaning cost per visit?',
-        answer: 'Pricing scales with the size and condition of your home, the number of bathrooms, and how often you are on the schedule — more frequent visits generally cost less per visit because there is less buildup each time. Because it depends on your specific home, the only accurate number is a quote based on your place. As a rule of thumb, expect your first (initial or deep) clean to cost more than the ongoing recurring visits that follow it.',
+        answer: 'Pricing scales with the size and condition of your home, the number of bathrooms, and how often you are on the schedule: more frequent visits generally cost less per visit because there is less buildup each time. Because it depends on your specific home, the only accurate number is a quote based on your place. As a rule of thumb, expect your first (initial or deep) clean to cost more than the ongoing recurring visits that follow it.',
       },
       {
         question: 'Do you tip a recurring house cleaner?',
-        answer: 'Tipping is always optional and never expected, but many recurring clients do tip, especially around the holidays or after an unusually big job. Because you often have the same crew every visit, a common approach is a modest per-visit tip or a larger year-end thank-you rather than tipping heavily every single time. If you would rather not tip, a genuine review or a referral is just as valued — for a local service business, both go a long way.',
+        answer: 'Tipping is always optional and never expected, but many recurring clients do tip, especially around the holidays or after an unusually big job. Because you often have the same crew every visit, a common approach is a modest per-visit tip or a larger year-end thank-you rather than tipping heavily every single time. If you would rather not tip, a genuine review or a referral is just as valued: for a local service business, both go a long way.',
       },
       {
         question: 'Do I need to be home when the cleaners come?',
-        answer: 'No — most recurring clients are not home during the clean, which is part of the appeal for commuter households. You just need to arrange reliable access: a spare key, a garage or lockbox code, or a smart lock. A trustworthy company keeps that access information secure and sends the same familiar crew, so you are not letting a stranger in each time. Being home for the first visit to walk through your priorities is helpful, but not required after that.',
+        answer: 'No: most recurring clients are not home during the clean, which is part of the appeal for commuter households. You just need to arrange reliable access: a spare key, a garage or lockbox code, or a smart lock. A trustworthy company keeps that access information secure and sends the same familiar crew, so you are not letting a stranger in each time. Being home for the first visit to walk through your priorities is helpful, but not required after that.',
       },
       {
         question: 'Should I tidy before the cleaner arrives?',
-        answer: "A quick tidy helps, but don't pre-clean. Clearing clutter — toys, papers, dishes, loose items on counters and floors — lets the crew spend their time actually cleaning surfaces instead of moving your things around, which means a better result in the same visit. You don't need to scrub anything ahead of time; that's the job. Think of it as clearing the runway, not doing the work.",
+        answer: "A quick tidy helps, but don't pre-clean. Clearing clutter: toys, papers, dishes, loose items on counters and floors lets the crew spend their time actually cleaning surfaces instead of moving your things around, which means a better result in the same visit. You don't need to scrub anything ahead of time; that's the job. Think of it as clearing the runway, not doing the work.",
       },
       {
         question: 'Will I get the same cleaning team every visit?',
-        answer: 'With a good recurring service, usually yes — and it matters. A consistent crew learns your home: which surfaces you care about most, where the pets are, how you like things left. That familiarity is a big part of why recurring service gets more efficient and more consistent over time compared with a rotating cast of one-off cleaners. If crew consistency is important to you, it is a fair thing to ask about before you sign up.',
+        answer: 'With a good recurring service, usually yes, and it matters. A consistent crew learns your home: which surfaces you care about most, where the pets are, how you like things left. That familiarity is a big part of why recurring service gets more efficient and more consistent over time compared with a rotating cast of one-off cleaners. If crew consistency is important to you, it is a fair thing to ask about before you sign up.',
       },
     ],
   },
@@ -822,41 +822,41 @@ const POST_EXTRAS = [
     ],
     problem: 'Dayton short-term rentals turn over in back-to-back bursts around events like the UD Arena First Four, and a rushed same-day clean is where reviews and ratings quietly slip.',
     solution: 'A Dayton-specific short-term-rental turnover system: a room-by-room reset checklist, a same-day sequence built around the four-hour window, and when to bring in a crew for the surges.',
-    targetAudience: 'Dayton-area Airbnb, VRBO, and short-term-rental hosts — especially those near UD Arena, downtown, and Wright-Patterson — managing back-to-back guest turnovers',
+    targetAudience: 'Dayton-area Airbnb, VRBO, and short-term-rental hosts: especially those near UD Arena, downtown, and Wright-Patterson managing back-to-back guest turnovers',
     content: airbnbStrTurnoverContent,
     faqs: [
       {
         question: 'How long does an Airbnb turnover clean take?',
-        answer: 'A one- or two-bedroom short-term rental typically takes about two to three hours for a full turnover — strip and remake beds, clean the kitchen and bathroom, dust, reset, restock, and do the floors. Laundry is the limiting factor, since a wash-and-dry cycle runs longer than the cleaning itself, which is why hosts start it the moment they walk in. A larger multi-bedroom unit, or one left in rough shape, can push past four hours and is where a two-person crew makes a same-day turnaround realistic.',
+        answer: 'A one- or two-bedroom short-term rental typically takes about two to three hours for a full turnover: strip and remake beds, clean the kitchen and bathroom, dust, reset, restock, and do the floors. Laundry is the limiting factor, since a wash-and-dry cycle runs longer than the cleaning itself, which is why hosts start it the moment they walk in. A larger multi-bedroom unit, or one left in rough shape, can push past four hours and is where a two-person crew makes a same-day turnaround realistic.',
       },
       {
         question: 'What is the 4-hour turnover window for short-term rentals?',
-        answer: 'Most short-term rentals set checkout at 11am and check-in at 3pm, which leaves roughly a four-hour window to fully reset the unit between guests. Everything — laundry, kitchen, bathroom, dusting, restocking, and floors — has to fit inside it. In Dayton, that window gets tight during demand spikes like First Four weekend, when the same unit may turn over on consecutive days, so hosts either tighten their process or line up cleaning help ahead of time.',
+        answer: 'Most short-term rentals set checkout at 11am and check-in at 3pm, which leaves roughly a four-hour window to fully reset the unit between guests. Everything: laundry, kitchen, bathroom, dusting, restocking, and floors has to fit inside it. In Dayton, that window gets tight during demand spikes like First Four weekend, when the same unit may turn over on consecutive days, so hosts either tighten their process or line up cleaning help ahead of time.',
       },
       {
         question: 'How often should I deep clean my Airbnb versus just cleaning between guests?',
-        answer: 'Turnover clean between every guest; deep clean on a regular schedule on top of that — roughly monthly for an active rental, and always once before your busy season. Turnovers keep the visible surfaces guest-ready, but they intentionally skip the slow jobs: inside the oven and fridge, grout, baseboards, vents, descaling, and behind furniture. In Dayton’s moderately hard water, bathroom scale in particular builds up faster than a turnover clean can address, so a periodic deep clean is what keeps the unit from slowly sliding.',
+        answer: 'Turnover clean between every guest; deep clean on a regular schedule on top of that: roughly monthly for an active rental, and always once before your busy season. Turnovers keep the visible surfaces guest-ready, but they intentionally skip the slow jobs: inside the oven and fridge, grout, baseboards, vents, descaling, and behind furniture. In Dayton’s moderately hard water, bathroom scale in particular builds up faster than a turnover clean can address, so a periodic deep clean is what keeps the unit from slowly sliding.',
       },
       {
         question: 'Why is cleanliness so important for Airbnb reviews?',
-        answer: 'Cleanliness is scored as its own category in Airbnb reviews and is one of the first things guests mention, good or bad. Because future guests read those reviews before booking, a single “not clean” comment can suppress your bookings for months, while a run of spotless stays builds the rating that lets you charge more. For a short-term rental, the cleaning isn’t a chore attached to the business — it basically is the product.',
+        answer: 'Cleanliness is scored as its own category in Airbnb reviews and is one of the first things guests mention, good or bad. Because future guests read those reviews before booking, a single “not clean” comment can suppress your bookings for months, while a run of spotless stays builds the rating that lets you charge more. For a short-term rental, the cleaning isn’t a chore attached to the business: it basically is the product.',
       },
       {
         question: 'When is the busiest season for Dayton short-term rentals?',
-        answer: 'The biggest concentrated surge is the NCAA First Four at UD Arena in mid-March — March 16–17 in 2027, expanded to six games in Dayton that year — which fills rentals near the University of Dayton. Other reliable spikes include the Dayton Air Show in mid-June, UD move-in and family weekends in August and October, graduation in May, and steady year-round demand from Wright-Patterson AFB visitors and relocating military families. The common thread is that bookings cluster into a few days at a time rather than spreading out.',
+        answer: 'The biggest concentrated surge is the NCAA First Four at UD Arena in mid-March, March 16–17 in 2027, expanded to six games in Dayton that year, which fills rentals near the University of Dayton. Other reliable spikes include the Dayton Air Show in mid-June, UD move-in and family weekends in August and October, graduation in May, and steady year-round demand from Wright-Patterson AFB visitors and relocating military families. The common thread is that bookings cluster into a few days at a time rather than spreading out.',
       },
       {
         question: 'Should I hire a cleaning service or clean my rental myself?',
-        answer: 'If your bookings are occasional and your turnovers rarely overlap, self-cleaning is very manageable with a consistent checklist. The case for hiring a crew gets stronger as volume rises: back-to-back same-day turnovers, multiple properties, busy stretches like First Four weekend, or simply hosting from out of town. A professional turnover buys you consistency and a reliable backup — the two things that protect your review score — so many Dayton hosts self-clean in slow months and bring in help for the surges.',
+        answer: 'If your bookings are occasional and your turnovers rarely overlap, self-cleaning is very manageable with a consistent checklist. The case for hiring a crew gets stronger as volume rises: back-to-back same-day turnovers, multiple properties, busy stretches like First Four weekend, or simply hosting from out of town. A professional turnover buys you consistency and a reliable backup, the two things that protect your review score, so many Dayton hosts self-clean in slow months and bring in help for the surges.',
       },
       {
         question: 'What should be restocked between Airbnb guests?',
-        answer: 'At minimum: fresh linens and towels, toilet paper, hand soap and basic toiletries, trash bags, paper towels, dish soap, and coffee and filters if you provide them. Restocking is easy to rush and easy to notice — a guest who finds one square of toilet paper left will remember it. Keeping a small par level of each item on-site and checking it every turn, as part of the same routine as the cleaning, prevents the mid-stay message asking where the supplies are.',
+        answer: 'At minimum: fresh linens and towels, toilet paper, hand soap and basic toiletries, trash bags, paper towels, dish soap, and coffee and filters if you provide them. Restocking is easy to rush and easy to notice: a guest who finds one square of toilet paper left will remember it. Keeping a small par level of each item on-site and checking it every turn, as part of the same routine as the cleaning, prevents the mid-stay message asking where the supplies are.',
       },
     ],
     howToTitle: 'How to Do a Same-Day Airbnb Turnover Clean',
     howToSteps: [
-      { name: 'Strip and start laundry first', text: 'Pull all sheets and towels the second you walk in and get a load going — laundry is the longest single task, so it should run in the background while you clean everything else.' },
+      { name: 'Strip and start laundry first', text: 'Pull all sheets and towels the second you walk in and get a load going: laundry is the longest single task, so it should run in the background while you clean everything else.' },
       { name: 'Clear trash and leftovers', text: 'Walk the whole unit pulling trash, dishes, and anything the last guest left in the fridge, so you are cleaning empty surfaces.' },
       { name: 'Reset the kitchen', text: 'Load or empty the dishwasher, wipe counters and appliances, clean the sink, and restock the basics guests expect like coffee, filters, and dish soap.' },
       { name: 'Clean and restock the bathroom', text: 'Scrub and descale the toilet, shower, and fixtures, wipe the vanity and mirror, then set out fresh towels and restock toilet paper and toiletries.' },
@@ -878,26 +878,26 @@ const POST_EXTRAS = [
       'vinegar to remove salt residue floors',
       'ice melt hardwood floor damage',
     ],
-    problem: 'Every Dayton winter, road salt and mud get tracked across floors — and the alkaline, gritty residue dulls finishes and stains older hardwood, which the Miami Valley has a lot of.',
+    problem: 'Every Dayton winter, road salt and mud get tracked across floors. And the alkaline, gritty residue dulls finishes and stains older hardwood, which the Miami Valley has a lot of.',
     solution: 'A Dayton-specific winter floor-care guide: an entryway setup that stops salt and mud at the door, a finish-safe method for removing salt stains, and extra care for the older homes most at risk.',
-    targetAudience: 'Dayton-area homeowners and renters — especially those in older Oregon District, Wright-Dunbar, and Oakwood homes with original hardwood — protecting floors through winter salt season',
+    targetAudience: 'Dayton-area homeowners and renters: especially those in older Oregon District, Wright-Dunbar, and Oakwood homes with original hardwood protecting floors through winter salt season',
     content: winterSaltMudFloorProtectionContent,
     faqs: [
       {
         question: 'Does road salt actually damage hardwood floors?',
-        answer: 'Yes. Road salt and ice melt leave an alkaline, gritty residue that scratches and dulls a floor’s finish underfoot, and if it’s left to sit, it draws moisture that can cause whitish stains, cupping, and discoloration over a winter. Older hardwood with a worn finish — common in Dayton’s Oregon District and Oakwood homes — shows the damage fastest, which is why prevention at the door matters more than any single cleaning.',
+        answer: 'Yes. Road salt and ice melt leave an alkaline, gritty residue that scratches and dulls a floor’s finish underfoot, and if it’s left to sit, it draws moisture that can cause whitish stains, cupping, and discoloration over a winter. Older hardwood with a worn finish, common in Dayton’s Oregon District and Oakwood homes, shows the damage fastest, which is why prevention at the door matters more than any single cleaning.',
       },
       {
         question: 'How do you get salt stains off hardwood floors?',
-        answer: 'Vacuum up the loose grit first, then lightly mist the stain with a solution of about one tablespoon of white vinegar per quart of warm water. Wipe it with a damp — not wet — microfiber cloth, then go over it with a dry cloth so no moisture is left behind. Vinegar works because it neutralizes the alkaline salt; a plain neutral cleaner just spreads it. Use the solution sparingly and never let water stand on the wood.',
+        answer: 'Vacuum up the loose grit first, then lightly mist the stain with a solution of about one tablespoon of white vinegar per quart of warm water. Wipe it with a damp, not wet, microfiber cloth, then go over it with a dry cloth so no moisture is left behind. Vinegar works because it neutralizes the alkaline salt; a plain neutral cleaner just spreads it. Use the solution sparingly and never let water stand on the wood.',
       },
       {
         question: 'What’s the best entryway setup to keep salt and mud out?',
-        answer: 'Two mats and a shoes-off habit. Put a coarse, stiff-bristled scraper mat outside the door to knock chunks of salt and mud off boot treads, and an absorbent mat just inside to catch meltwater and fine grit. Add a boot tray and a bench so taking shoes off is easy. Then actually shake out and vacuum the mats a couple times a week — a salt-saturated mat just tracks it back onto the floor.',
+        answer: 'Two mats and a shoes-off habit. Put a coarse, stiff-bristled scraper mat outside the door to knock chunks of salt and mud off boot treads, and an absorbent mat just inside to catch meltwater and fine grit. Add a boot tray and a bench so taking shoes off is easy. Then actually shake out and vacuum the mats a couple times a week: a salt-saturated mat just tracks it back onto the floor.',
       },
       {
         question: 'How often should you clean floors during winter in Dayton?',
-        answer: 'During active snow or melt, wipe down entryway and high-traffic floors daily with a damp microfiber mop, and do a full floor cleaning weekly. The point of the daily pass is to catch salt before it spreads and dries into a residue. In quieter stretches of winter, a normal weekly clean is fine — it’s the treated-road, freeze-thaw days that call for extra attention.',
+        answer: 'During active snow or melt, wipe down entryway and high-traffic floors daily with a damp microfiber mop, and do a full floor cleaning weekly. The point of the daily pass is to catch salt before it spreads and dries into a residue. In quieter stretches of winter, a normal weekly clean is fine: it’s the treated-road, freeze-thaw days that call for extra attention.',
       },
       {
         question: 'Does vinegar really neutralize road salt on floors?',
@@ -915,9 +915,9 @@ const POST_EXTRAS = [
     howToTitle: 'How to Protect and Clean Dayton Floors Through Salt Season',
     howToSteps: [
       { name: 'Set up a two-mat entryway', text: 'Place a coarse, stiff-bristled scraper mat outside the door and an absorbent mat just inside, so salt and mud come off boots before they reach the floor.' },
-      { name: 'Make winter a shoes-off house', text: 'Add a boot tray and a bench by the door so removing shoes is the easy default — it’s the single biggest thing that keeps salt off your floors.' },
+      { name: 'Make winter a shoes-off house', text: 'Add a boot tray and a bench by the door so removing shoes is the easy default: it’s the single biggest thing that keeps salt off your floors.' },
       { name: 'Sweep or vacuum grit daily', text: 'During active snow or melt, vacuum or dry-sweep entry and high-traffic floors every day to lift abrasive salt granules before they’re ground into the finish.' },
-      { name: 'Neutralize salt with diluted vinegar', text: 'Lightly mist any salt haze with about one tablespoon of white vinegar per quart of warm water, then wipe with a damp microfiber cloth — the acid neutralizes the alkaline residue.' },
+      { name: 'Neutralize salt with diluted vinegar', text: 'Lightly mist any salt haze with about one tablespoon of white vinegar per quart of warm water, then wipe with a damp microfiber cloth: the acid neutralizes the alkaline residue.' },
       { name: 'Dry the floor completely', text: 'Follow with a dry cloth or mop so no moisture is left standing, especially on hardwood and laminate seams where water causes staining and warping.' },
       { name: 'Shake out and reset the mats', text: 'A couple times a week, shake out the outdoor mat and vacuum the indoor one so a salt-saturated mat isn’t re-depositing grit back onto the floor.' },
     ],
@@ -935,18 +935,18 @@ const POST_EXTRAS = [
       'move-out cleaning cost military housing',
       'Wright-Patterson AFB relocation cleaning',
     ],
-    problem: 'Wright-Patterson families PCS out every summer and face a documented move-out inspection — on base or on an off-base rental — right after the movers leave, with little time to get an empty home to standard.',
+    problem: 'Wright-Patterson families PCS out every summer and face a documented move-out inspection, on base or on an off-base rental, right after the movers leave, with little time to get an empty home to standard.',
     solution: 'A Dayton-area PCS move-out cleaning guide tied to Wright-Patterson timing, with a room-by-room inspection checklist and the on-base vs. off-base standards that decide whether you pass.',
     targetAudience: 'Military families PCSing out of Wright-Patterson AFB from privatized on-base housing or off-base rentals in Fairborn, Riverside, Beavercreek, and Huber Heights',
     content: wrightPattPcsMoveOutCleaningContent,
     faqs: [
       {
         question: 'How do you pass a military housing move-out inspection?',
-        answer: 'Get the housing office’s clearing checklist up front and clean to it exactly — inspectors grade against that document, not a general impression. Focus on the high-scrutiny areas first: inside and behind the oven and fridge, inside cabinets, descaled tubs and showers, and clean grout. Do the deep clean after your household goods are picked up so every surface is reachable, then walk the home with the checklist before the inspector arrives. Cleaning to the written standard, not to "looks clean," is what actually passes.',
+        answer: 'Get the housing office’s clearing checklist up front and clean to it exactly: inspectors grade against that document, not a general impression. Focus on the high-scrutiny areas first: inside and behind the oven and fridge, inside cabinets, descaled tubs and showers, and clean grout. Do the deep clean after your household goods are picked up so every surface is reachable, then walk the home with the checklist before the inspector arrives. Cleaning to the written standard, not to "looks clean," is what actually passes.',
       },
       {
         question: 'Do you have to professionally clean base housing before a PCS?',
-        answer: 'It depends on the housing office. Some privatized housing offices require a receipt from a professional cleaning service; many just require the home to pass inspection however you get it there. Ask your housing office which applies to you before you decide. Even where it isn’t required, families often hire a crew because the cleaning window is short — the movers leave and the inspection follows within a day or two, usually while you’re also trying to get on the road.',
+        answer: 'It depends on the housing office. Some privatized housing offices require a receipt from a professional cleaning service; many just require the home to pass inspection however you get it there. Ask your housing office which applies to you before you decide. Even where it isn’t required, families often hire a crew because the cleaning window is short: the movers leave and the inspection follows within a day or two, usually while you’re also trying to get on the road.',
       },
       {
         question: 'Should you hire a cleaning service for a PCS move-out?',
@@ -958,7 +958,7 @@ const POST_EXTRAS = [
       },
       {
         question: 'How much does move-out cleaning cost for military housing?',
-        answer: 'It varies with the size and condition of the home, so the honest answer is that a quote based on your specific place is the only accurate number. Pricing generally scales with square footage, number of bathrooms, and how much deep-cleaning the unit needs — a larger home left in rough shape costs more than a small, well-kept one. The best move is to get a free quote a couple of weeks before your PCS date, while you can still lock in a summer appointment.',
+        answer: 'It varies with the size and condition of the home, so the honest answer is that a quote based on your specific place is the only accurate number. Pricing generally scales with square footage, number of bathrooms, and how much deep-cleaning the unit needs: a larger home left in rough shape costs more than a small, well-kept one. The best move is to get a free quote a couple of weeks before your PCS date, while you can still lock in a summer appointment.',
       },
       {
         question: 'When should you book move-out cleaning before a PCS?',
@@ -966,13 +966,13 @@ const POST_EXTRAS = [
       },
       {
         question: 'Who is responsible for cleaning an off-base rental when you PCS out?',
-        answer: 'The tenant is, in almost every case. Your lease sets the standard — some say "broom clean," others require professional cleaning — and meeting it is what protects your security deposit. Under Ohio law, a landlord has to return your deposit, minus any itemized deductions, within 30 days of the lease ending, so leaving the rental clean and documenting its condition with dated photos is the best way to get the full amount back after you’ve already left the area.',
+        answer: 'The tenant is, in almost every case. Your lease sets the standard, some say "broom clean," others require professional cleaning, and meeting it is what protects your security deposit. Under Ohio law, a landlord has to return your deposit, minus any itemized deductions, within 30 days of the lease ending, so leaving the rental clean and documenting its condition with dated photos is the best way to get the full amount back after you’ve already left the area.',
       },
     ],
     howToTitle: 'How to Clean a Home for a PCS Move-Out Inspection',
     howToSteps: [
       { name: 'Get the checklist first', text: 'Pull the housing office’s clearing checklist or re-read your lease so you’re cleaning to the actual standard, not guessing.' },
-      { name: 'Start with an empty home', text: 'Clean after household goods are picked up — an empty unit is the only time you can reach behind appliances, inside closets, and the floor under everything.' },
+      { name: 'Start with an empty home', text: 'Clean after household goods are picked up: an empty unit is the only time you can reach behind appliances, inside closets, and the floor under everything.' },
       { name: 'Deep clean the kitchen', text: 'Pull out the stove and fridge, clean behind and under them, then inside the oven, fridge, cabinets, and drawers before sanitizing counters and the sink.' },
       { name: 'Deep clean the bathrooms', text: 'Descale and scrub the tub, shower, and glass, clean grout, disinfect the toilet, then wipe the vanity, mirror, and vent cover.' },
       { name: 'Walls, windows, and fixtures', text: 'Erase marks and hand prints, dust ceiling fans and light fixtures, and clean interior windows, sills, and tracks.' },
@@ -993,14 +993,14 @@ const POST_EXTRAS = [
       'move-in vs move-out cleaning',
       'when to book move-in cleaning Dayton August',
     ],
-    problem: 'Dayton student rentals turn over in a tight two-week window every August, and the unit handed to the next tenant is often only lightly cleaned — cabinets, fridge, and bathroom included.',
+    problem: 'Dayton student rentals turn over in a tight two-week window every August, and the unit handed to the next tenant is often only lightly cleaned: cabinets, fridge, and bathroom included.',
     solution: 'A move-in cleaning guide tied to real 2026 UD and Wright State move-in dates, with a room-by-room checklist for getting an empty student rental genuinely clean before the furniture arrives.',
     targetAudience: 'Dayton-area students, parents, and landlords preparing a just-vacated UD or Wright State rental before August move-in',
     content: studentMoveInCleaningDaytonContent,
     faqs: [
       {
         question: 'What should you clean first in an empty apartment before moving in?',
-        answer: 'Start with the kitchen cabinets, fridge, and oven, then the bathroom — the enclosed spaces where the previous tenant leaves the most behind and where you’ll immediately be storing food, dishes, and toiletries. After that, dust from the top of the room down, and save vacuuming and mopping the floors for last so you finish on a clean surface. Doing it in that order means you never re-dirty a room you’ve already finished.',
+        answer: 'Start with the kitchen cabinets, fridge, and oven, then the bathroom: the enclosed spaces where the previous tenant leaves the most behind and where you’ll immediately be storing food, dishes, and toiletries. After that, dust from the top of the room down, and save vacuuming and mopping the floors for last so you finish on a clean surface. Doing it in that order means you never re-dirty a room you’ve already finished.',
       },
       {
         question: 'How long does move-in cleaning take for a student apartment?',
@@ -1012,28 +1012,28 @@ const POST_EXTRAS = [
       },
       {
         question: 'When should I book move-in cleaning for August in Dayton?',
-        answer: 'Book at least one to two weeks ahead if you want a specific date in the second half of August. That stretch — roughly August 15 through 24, around UD’s August 21 move-in and Wright State’s August 24 semester start — is the busiest turnover window of the year for Dayton-area cleaners, and same-week openings get scarce. Earlier August leases are easier to schedule.',
+        answer: 'Book at least one to two weeks ahead if you want a specific date in the second half of August. That stretch, roughly August 15 through 24, around UD’s August 21 move-in and Wright State’s August 24 semester start, is the busiest turnover window of the year for Dayton-area cleaners, and same-week openings get scarce. Earlier August leases are easier to schedule.',
       },
       {
         question: 'What’s the difference between move-in and move-out cleaning?',
-        answer: 'Move-out cleaning is aimed at meeting a landlord’s cleaning standard on a unit you’re leaving. Move-in cleaning sanitizes a space for daily living — inside cabinets, the fridge, the shower, high-touch surfaces — on a unit you’re about to move into. Because turnover cleans are often light, a move-in clean is worth doing even when the unit was technically cleaned when the last tenant left.',
+        answer: 'Move-out cleaning is aimed at meeting a landlord’s cleaning standard on a unit you’re leaving. Move-in cleaning sanitizes a space for daily living: inside cabinets, the fridge, the shower, high-touch surfaces on a unit you’re about to move into. Because turnover cleans are often light, a move-in clean is worth doing even when the unit was technically cleaned when the last tenant left.',
       },
       {
         question: 'Do landlords or tenants pay for move-in cleaning?',
-        answer: 'It depends on the lease. Landlords are typically responsible for delivering a unit in reasonable move-in condition, but "reasonable" varies a lot, and many student rentals get only a light turnover clean between tenants. Plenty of Dayton families choose to arrange a fresh move-in clean themselves rather than negotiate over what the landlord did or didn’t do — it’s faster than disputing it and you know exactly what got cleaned.',
+        answer: 'It depends on the lease. Landlords are typically responsible for delivering a unit in reasonable move-in condition, but "reasonable" varies a lot, and many student rentals get only a light turnover clean between tenants. Plenty of Dayton families choose to arrange a fresh move-in clean themselves rather than negotiate over what the landlord did or didn’t do: it’s faster than disputing it and you know exactly what got cleaned.',
       },
       {
         question: 'Can you deep clean a rental in one day before move-in?',
-        answer: 'Yes — an empty apartment or small house is very doable in a single focused day, and that’s the ideal scenario because nothing is blocking the surfaces yet. Work top to bottom, do the kitchen and bathroom before the floors, and give the unit time to air out at the end. For a larger multi-bedroom student house on a tight timeline, a two-person crew makes the one-day goal much more realistic.',
+        answer: 'Yes: an empty apartment or small house is very doable in a single focused day, and that’s the ideal scenario because nothing is blocking the surfaces yet. Work top to bottom, do the kitchen and bathroom before the floors, and give the unit time to air out at the end. For a larger multi-bedroom student house on a tight timeline, a two-person crew makes the one-day goal much more realistic.',
       },
     ],
     howToTitle: 'How to Clean an Empty Student Rental Before Move-In',
     howToSteps: [
-      { name: 'Start with an empty unit', text: 'Clean before any furniture or boxes come in — an empty room is the only time you can reach baseboards, closet shelves, and the floor under where everything will sit.' },
+      { name: 'Start with an empty unit', text: 'Clean before any furniture or boxes come in: an empty room is the only time you can reach baseboards, closet shelves, and the floor under where everything will sit.' },
       { name: 'Dust from the top down', text: 'Ceiling fans and light fixtures first, then blinds, shelves, window sills, and baseboards, so anything that falls gets caught on a later pass.' },
       { name: 'Clean the kitchen', text: 'Empty and wipe cabinets and drawers, clean inside the fridge and oven, degrease the stovetop, then sanitize counters and the sink.' },
       { name: 'Clean the bathroom', text: 'Disinfect the toilet, descale and scrub the shower and glass, clean grout lines, then wipe the vanity, mirror, and vent cover.' },
-      { name: 'Clean windows and glass', text: 'Wipe interior windows, sills, and tracks — student rentals collect a summer of grime here that natural light shows off immediately.' },
+      { name: 'Clean windows and glass', text: 'Wipe interior windows, sills, and tracks: student rentals collect a summer of grime here that natural light shows off immediately.' },
       { name: 'Do the floors last', text: 'Vacuum all carpet, then sweep and mop every hard floor, working toward the door so you finish on a clean surface.' },
       { name: 'Air out and final check', text: 'Open windows for 20–30 minutes, take out all trash, and walk each room once more before the boxes arrive.' },
     ],
@@ -1061,32 +1061,32 @@ const POST_EXTRAS = [
       },
       {
         question: 'Does deep cleaning actually help with ragweed allergies?',
-        answer: 'Yes — it reduces the amount of pollen recirculating indoors, particularly in carpets, upholstery, bedding, and HVAC systems where it settles and builds up. It won’t stop pollen from existing outside, but it meaningfully cuts down what you’re breathing while you’re home, which is where most people spend the bulk of allergy season.',
+        answer: 'Yes: it reduces the amount of pollen recirculating indoors, particularly in carpets, upholstery, bedding, and HVAC systems where it settles and builds up. It won’t stop pollen from existing outside, but it meaningfully cuts down what you’re breathing while you’re home, which is where most people spend the bulk of allergy season.',
       },
       {
         question: 'How often should you vacuum during allergy season?',
-        answer: 'Once a week is a reasonable baseline; twice a week is better in carpeted rooms during peak ragweed weeks (typically September). Use a vacuum with a true HEPA filter — a standard filter traps larger debris but lets fine pollen particles pass back through into the room.',
+        answer: 'Once a week is a reasonable baseline; twice a week is better in carpeted rooms during peak ragweed weeks (typically September). Use a vacuum with a true HEPA filter: a standard filter traps larger debris but lets fine pollen particles pass back through into the room.',
       },
       {
         question: 'What’s the best way to dust without spreading allergens?',
-        answer: 'Use a damp microfiber cloth instead of a dry duster or feather duster, and work from the highest surfaces down to the floor. A dry cloth just lifts particles into the air where they resettle somewhere else — usually back on you.',
+        answer: 'Use a damp microfiber cloth instead of a dry duster or feather duster, and work from the highest surfaces down to the floor. A dry cloth just lifts particles into the air where they resettle somewhere else, usually back on you.',
       },
       {
         question: 'Do air purifiers help with ragweed pollen?',
-        answer: 'Yes, if they use a true HEPA filter. Placement matters more than most people expect — put one in the room you spend the most time in (usually the bedroom or living room) rather than trying to cover the whole house with a single unit.',
+        answer: 'Yes, if they use a true HEPA filter. Placement matters more than most people expect: put one in the room you spend the most time in (usually the bedroom or living room) rather than trying to cover the whole house with a single unit.',
       },
       {
         question: 'Should you keep windows open or closed during ragweed season?',
-        answer: 'Closed, especially between 10 a.m. and 4 p.m. when local pollen counts peak. Running central air instead of opening windows keeps the indoor air filtered and dry, which also helps limit mold growth — a second common fall allergen.',
+        answer: 'Closed, especially between 10 a.m. and 4 p.m. when local pollen counts peak. Running central air instead of opening windows keeps the indoor air filtered and dry, which also helps limit mold growth, a second common fall allergen.',
       },
     ],
     howToTitle: 'How to Allergy-Proof Your Home for Ragweed Season',
     howToSteps: [
-      { name: 'Clean the entryway', text: 'Shake out or vacuum mats and wipe down the floor near the door weekly — this is where most outdoor pollen first enters the house.' },
+      { name: 'Clean the entryway', text: 'Shake out or vacuum mats and wipe down the floor near the door weekly: this is where most outdoor pollen first enters the house.' },
       { name: 'Vacuum floors and carpets', text: 'Vacuum with a true HEPA-filter vacuum 1–2 times a week. Carpet holds pollen far longer than hard flooring.' },
-      { name: 'Wash bedding and linens', text: 'Wash sheets, pillowcases, and throws in hot water weekly — pollen carried in on hair and clothes settles here.' },
+      { name: 'Wash bedding and linens', text: 'Wash sheets, pillowcases, and throws in hot water weekly: pollen carried in on hair and clothes settles here.' },
       { name: 'Check HVAC vents and filters', text: 'Wipe down vent covers and check or replace the HVAC filter monthly during peak season so it isn’t recirculating what it’s supposed to catch.' },
-      { name: 'Clean upholstery and curtains', text: 'Vacuum upholstery with an attachment and launder washable curtains every 2–3 weeks — soft surfaces trap pollen the same way carpet does.' },
+      { name: 'Clean upholstery and curtains', text: 'Vacuum upholstery with an attachment and launder washable curtains every 2–3 weeks: soft surfaces trap pollen the same way carpet does.' },
     ],
   },
 ]

@@ -148,7 +148,7 @@ const OfficeCleaning = () => {
     },
     {
       question: "Are you a janitorial service, or just office cleaning?",
-      answer: "We provide both — office cleaning and janitorial services are the same thing to us. Whether you need a daily janitorial crew or scheduled office cleaning, we cover Dayton and businesses within roughly a 25-mile radius, including Kettering, Centerville, Beavercreek, Oakwood, Springboro, Huber Heights, Miamisburg, Fairborn, and Xenia."
+      answer: "We provide both: office cleaning and janitorial services are the same thing to us. Whether you need a daily janitorial crew or scheduled office cleaning, we cover Dayton and businesses within roughly a 30-mile radius, including Kettering, Centerville, Beavercreek, Oakwood, Springboro, Huber Heights, Miamisburg, Fairborn, and Xenia."
     }
   ]
 
@@ -453,7 +453,7 @@ const OfficeCleaning = () => {
             Professional Office Cleaning Services in Dayton
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 700, mx: 'auto' }}>
-            Looking for office cleaning services near me? We provide specialized office cleaning and janitorial services for professional offices throughout Dayton and the surrounding 25-mile area.
+            Looking for office cleaning services near me? We provide specialized office cleaning and janitorial services for professional offices throughout Dayton and the surrounding 30-mile area.
           </Typography>
         </Box>
 
@@ -855,7 +855,7 @@ const OfficeCleaning = () => {
           <Typography variant="body1" sx={{ mb: 4, maxWidth: 900, mx: 'auto', lineHeight: 1.7 }}>
             At Gem City Cleaning Crew, we understand that your office environment directly impacts productivity, employee morale, and client perceptions. 
             Our professional office cleaning services are designed specifically for Dayton's business community, serving law firms, real estate offices, 
-            therapy centers, and corporate offices with the highest standards of cleanliness and professionalism. 
+            therapy centers, and corporate offices, backed by a 4.6-star rating and a professional, consistent approach.
             With no long-term contracts required, flexible recurring services, and personalized in-person quotes, 
             we make it easy to maintain a consistently clean and professional workspace that supports your business success.
           </Typography>

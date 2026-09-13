@@ -433,7 +433,7 @@ const ResidentialChecklistPage = () => {
           <Typography variant="body1" sx={{ fontSize: '1.1rem', maxWidth: 800, mx: 'auto', lineHeight: 1.7 }}>
             At Gem City Cleaning Crew, our trained professionals follow this comprehensive house cleaning checklist to ensure 
             consistent, thorough cleaning every time. Our 3-month training program teaches cleaners to complete 
-            every task with attention to detail and care for your home. This house cleaning checklist guarantees nothing gets missed.
+            every task with attention to detail and care for your home. This checklist reflects the same detailed, room-by-room process our trained team follows on every visit.
           </Typography>
         </Box>
 

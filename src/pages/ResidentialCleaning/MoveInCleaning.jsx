@@ -417,7 +417,7 @@ const MoveInCleaningPage = () => {
             your new home is completely sanitized and spotless before you unpack. From <strong>Kettering apartments</strong> to{' '}
             <strong>Centerville houses</strong> and <strong>Oakwood condos</strong>, we provide comprehensive cleaning that creates{' '}
             a fresh, healthy environment for your family. Our professional cleaning team follows{' '}
-            <a href="https://www.cdc.gov/infectioncontrol/guidelines/environmental/cleaning.html" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'none' }}>
+            <a href="https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'none' }}>
               CDC-recommended sanitization standards
             </a> to ensure your new home is safe and clean from day one.
           </Typography>

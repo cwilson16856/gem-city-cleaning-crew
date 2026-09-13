@@ -51,24 +51,24 @@ import {
 // pages.
 const WHATS_INCLUDED = {
   residential: [
-    'Kitchens — countertops, appliance exteriors, sinks, and cabinet fronts',
-    'Bathrooms — toilets, showers, tubs, mirrors, and sinks',
-    'Bedrooms & living areas — dusting, vacuuming, and surface wipe-down',
-    'Floors — vacuuming and mopping all hard-surface and carpeted areas',
+    'Kitchens: countertops, appliance exteriors, sinks, and cabinet fronts',
+    'Bathrooms: toilets, showers, tubs, mirrors, and sinks',
+    'Bedrooms & living areas: dusting, vacuuming, and surface wipe-down',
+    'Floors: vacuuming and mopping all hard-surface and carpeted areas',
     'Trash removal and general tidying throughout the home'
   ],
   commercial: [
-    'Workstations & offices — desks, surfaces, and high-touch points',
-    'Restrooms — full sanitization of fixtures, mirrors, and floors',
-    'Breakrooms & kitchenettes — counters, sinks, and appliance exteriors',
-    'Common areas & entryways — floors, glass, and reception surfaces',
+    'Workstations & offices: desks, surfaces, and high-touch points',
+    'Restrooms: full sanitization of fixtures, mirrors, and floors',
+    'Breakrooms & kitchenettes: counters, sinks, and appliance exteriors',
+    'Common areas & entryways: floors, glass, and reception surfaces',
     'Trash and recycling removal throughout the facility'
   ]
 }
 
 const HOW_IT_WORKS = [
-  { title: 'Get your free quote', body: 'Call 937-892-4157 or request a quote online — we\'ll ask a few questions about your space and cleaning needs.' },
-  { title: 'We build your plan', body: 'One-time, weekly, bi-weekly, or monthly — with no long-term contract required.' },
+  { title: 'Get your free quote', body: 'Call 937-892-4157 or request a quote online: we\'ll ask a few questions about your space and cleaning needs.' },
+  { title: 'We build your plan', body: 'One-time, weekly, bi-weekly, or monthly: with no long-term contract required.' },
   { title: 'Trained crew arrives', body: 'Every cleaner completes three months of training before working independently.' },
   { title: 'Consistent results', body: 'The same standards every visit, with easy rescheduling if your plans change.' }
 ]

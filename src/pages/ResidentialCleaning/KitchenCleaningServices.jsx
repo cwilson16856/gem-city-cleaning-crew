@@ -57,7 +57,7 @@ const KitchenCleaningServices = () => {
       details: ["Appliance condition check", "Grease & grime assessment", "Custom cleaning plan", "Transparent pricing"]
     },
     {
-      title: "Deep Kitchen Cleaning", 
+      title: "Deep Cleaning Pass",
       description: "Our trained team performs comprehensive kitchen cleaning using specialized products for appliances, countertops, and sanitization.",
       details: ["All appliances cleaned inside/out", "Degreasing & sanitization", "Cabinet & drawer cleaning", "Professional equipment used"]
     },

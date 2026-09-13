@@ -159,11 +159,11 @@ const ResidentialPage = () => {
     },
     {
       question: "How much does house cleaning cost?",
-      answer: "House cleaning cost depends on your home's size, number of rooms, and how often you'd like service — every home is different, so we don't quote a flat rate up front. Book a free walk-through and we'll give you a firm, accurate price for your specific home."
+      answer: "House cleaning cost depends on your home's size, number of rooms, and how often you'd like service: every home is different, so we don't quote a flat rate up front. Book a free walk-through and we'll give you a firm, accurate price for your specific home."
     },
     {
       question: "Are you a maid service, a cleaning company, or something else?",
-      answer: "All of the above — Gem City Cleaning Crew is a locally owned cleaning company offering maid service and house cleaning throughout Dayton, Ohio and the surrounding suburbs. Whatever you call it, it's the same trained crew and the same no-contract approach."
+      answer: "All of the above. Gem City Cleaning Crew is a locally owned cleaning company offering maid service and house cleaning throughout Dayton, Ohio and the surrounding suburbs. Whatever you call it, it's the same trained crew and the same no-contract approach."
     }
   ]
 
@@ -527,7 +527,7 @@ const ResidentialPage = () => {
           Our team of experienced and dedicated cleaners will leave your home looking spotless and sparkling clean. 
           From dusting and vacuuming to deep cleaning and organizing, we offer a wide range of customizable home cleaning services to suit your needs. 
           We use only the highest-quality cleaning products and equipment to ensure that your home is not only clean but also safe and healthy. 
-          According to the <a href="https://www.cdc.gov/hygiene/index.html" target="_blank" rel="nofollow noopener" style={{ color: '#D81B60', textDecoration: 'underline' }}>CDC's hygiene guidelines</a>, 
+          According to the <a href="https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html" target="_blank" rel="nofollow noopener" style={{ color: '#D81B60', textDecoration: 'underline' }}>CDC's hygiene guidelines</a>, 
           maintaining a clean home environment is essential for family health and wellbeing.
           Here's a word from one our current customers:
         </Typography>
@@ -583,7 +583,7 @@ const ResidentialPage = () => {
           </Typography>
 
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-            Since 2017, Gem City Cleaning Crew has been delivering exceptional Dayton house cleaning services and we cover a 30 mile radius around Dayton, 
+            Since 2017, Gem City Cleaning Crew has been delivering exceptional Dayton house cleaning services and we cover a 30 mile radius around Dayton,
             earning a loyal client base through our consistent and thorough approach. We offer customizable house cleaning plans to fit your unique needs and schedule, 
             ensuring that you receive the level of service you expect each time by having:
           </Typography>
@@ -655,8 +655,8 @@ const ResidentialPage = () => {
           to provide top-quality cleaning services to our clients. We also understand the importance of consistency and try our best to send the same cleaner 
           to a client's home every time to build a comfortable relationship and ensure a thorough and consistent clean. At Gem City Cleaning Crew, 
           we treat your home as if it were our own and strive to exceed your expectations with every visit. 
-          Our professional cleaning crew follows industry best practices as recommended by the <a href="https://www.issa.com/articles/residential-cleaning-best-practices" target="_blank" rel="nofollow noopener" style={{ color: '#D81B60', textDecoration: 'underline' }}>International Sanitary Supply Association</a> 
-          to ensure the highest standards of cleanliness and safety for our Dayton house cleaning services.
+          Our professional cleaning crew follows training standards recommended by the <a href="https://www.issa.com/articles/house-cleaning-training/" target="_blank" rel="nofollow noopener" style={{ color: '#D81B60', textDecoration: 'underline' }}>International Sanitary Supply Association</a>{' '}
+          to ensure a consistent, 4.6-star-rated clean and safety for our Dayton house cleaning services.
         </Typography>
 
 
@@ -695,7 +695,7 @@ const ResidentialPage = () => {
             Wondering what's included in our comprehensive Dayton house cleaning services? We provide detailed, 
             professional house cleaners Dayton OH residents trust for consistent, high-quality results. Our experienced cleaners follow a thorough 
             checklist to ensure consistent, high-quality results every time with our reliable maid service Dayton families love.
-            Our trained housekeepers specialize in custom cleaning plans with no contracts, making us the top choice for Dayton house cleaning services.
+            Our trained housekeepers specialize in custom cleaning plans with no contracts, backed by a 4.6-star rating for Dayton house cleaning services.
           </Typography>
 
           <Grid container spacing={4} sx={{ mb: 6 }}>

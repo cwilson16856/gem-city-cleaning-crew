@@ -88,7 +88,7 @@ const IndustrialCleaning = () => {
     },
     {
       question: "Do you offer industrial cleaning without long-term contracts?",
-      answer: "Yes. Like all of our commercial services, industrial cleaning is available without long-term contracts — you can book one-time cleanings or set up a recurring schedule that fits your facility."
+      answer: "Yes. Like all of our commercial services, industrial cleaning is available without long-term contracts: you can book one-time cleanings or set up a recurring schedule that fits your facility."
     },
     {
       question: "What areas of an industrial facility do you clean?",
@@ -121,7 +121,7 @@ const IndustrialCleaning = () => {
     },
     {
       title: "No Contracts Required",
-      description: "Book one-time cleanings or set up a recurring schedule — adjust frequency and scope as your facility's needs change.",
+      description: "Book one-time cleanings or set up a recurring schedule: adjust frequency and scope as your facility's needs change.",
       icon: <DescriptionIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />
     }
   ]
@@ -423,8 +423,8 @@ const IndustrialCleaning = () => {
 
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
             Since 2017, Gem City Cleaning Crew has served the Dayton area with dependable commercial cleaning.
-            Industrial facilities need crews that understand scale, safety, and flexible shift schedules —
-            our industrial cleaning services are built around exactly that.
+            Industrial facilities need crews that understand scale, safety, and flexible shift schedules.
+            Our industrial cleaning services are built around exactly that.
           </Typography>
 
           <Grid container spacing={4} sx={{ mb: 6 }} className="commercial-service-features">
@@ -496,7 +496,7 @@ const IndustrialCleaning = () => {
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, color: '#525252', fontSize: '1.1rem' }}>
                 Let us build a cleaning plan around your facility's scale and schedule.
-                No contracts required — just reliable, professional industrial cleaning.
+                No contracts required: just reliable, professional industrial cleaning.
               </Typography>
               <Button
                 variant="contained"

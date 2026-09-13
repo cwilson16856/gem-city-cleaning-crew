@@ -253,7 +253,7 @@ const BeavercreekCommercialPage = () => {
         <link rel="canonical" href={PAGE_URL} />
 
         {/* LocalBusiness itself is injected once, site-wide, by the app shell
-            (App.jsx / entry-server.jsx) — a per-page copy here would duplicate
+            (App.jsx / entry-server.jsx): a per-page copy here would duplicate
             it with a conflicting narrower areaServed. */}
 
         {/* WebPage Schema (with breadcrumb) */}
@@ -474,7 +474,7 @@ const BeavercreekCommercialPage = () => {
             Beavercreek Commercial Cleaning Services
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
-            Delivering exceptional cleaning solutions to businesses throughout Beavercreek and surrounding areas
+            Delivering reliable, 4.6-star-rated cleaning solutions to businesses throughout Beavercreek and surrounding areas
           </Typography>
         </Box>
 
@@ -566,7 +566,7 @@ const BeavercreekCommercialPage = () => {
           Our commercial cleaning services have transformed hundreds of Beavercreek businesses, from The Greene to Pentagon Boulevard. 
           As your local cleaning experts, we understand the unique needs of Beavercreek's business community and deliver consistent, 
           high-quality cleaning that elevates your professional image. Our trained professionals work around your schedule to ensure 
-          minimal disruption while maintaining the highest standards of cleanliness.
+          minimal disruption while backed by our 4.6-star rating and licensed, insured service.
         </Typography>
       </Container>
 
@@ -630,10 +630,10 @@ const BeavercreekCommercialPage = () => {
           </Typography>
 
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-            Since 2017, Gem City Cleaning Crew has been the trusted choice for commercial cleaning services in Beavercreek and surrounding areas.
+            Since 2017, Gem City Cleaning Crew has provided commercial cleaning services in Beavercreek and surrounding areas, backed by a 4.6-star rating and licensed, insured service.
             From North Fairfield Road to Dayton-Xenia Road, we serve businesses of all sizes with our comprehensive cleaning solutions. 
             Our commercial cleaning team is specifically trained for Beavercreek's diverse business environments and equipped with advanced tools 
-            and expertise to deliver exceptional results that exceed expectations.
+            and expertise to deliver consistent, thorough results on every visit.
           </Typography>
 
           {/* Service Features */}
@@ -891,7 +891,7 @@ const BeavercreekCommercialPage = () => {
             Whether you need daily office cleaning, weekly retail maintenance, or specialized medical facility sanitation, 
             our experienced team delivers consistent, reliable results that support your business success. 
             We use eco-friendly, commercial-grade products and follow industry best practices to ensure your facility 
-            not only looks clean but maintains the highest standards of hygiene and safety.
+            not only looks clean but stays consistent, backed by our 4.6-star rating.
           </Typography>
 
           <Box
