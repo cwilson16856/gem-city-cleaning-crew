@@ -335,6 +335,9 @@ const AirBnbCleaning = () => {
               lineHeight: 1.1
             }}
           >
+            {/* "4.6-Star Rated" mirrors localBusinessSchema.js's aggregateRating — if that
+               value changes (periodic re-verification via the OpenSEO GBP lookup), update
+               this H1 (and its title/meta/OG/twitter tags above) to match. */}
             4.6-Star Rated AirBnb Cleaning Service in Dayton
           </Typography>
           

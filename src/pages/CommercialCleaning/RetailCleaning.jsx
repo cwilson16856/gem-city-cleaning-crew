@@ -11,7 +11,6 @@ import {
   Paper,
   Chip,
   useTheme,
-  Rating,
   Accordion,
   AccordionSummary,
   AccordionDetails,
@@ -49,6 +48,7 @@ const SERVICE_ID = `${PAGE_URL}#service`
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
 import QuoteForm from '../../components/QuoteForm'
+import TrustBlock from '../../components/TrustBlock'
 
 const RetailCleaning = () => {
   const theme = useTheme()
@@ -538,7 +538,7 @@ const RetailCleaning = () => {
             fontSize: { xs: '1.5rem', md: '1.8rem' }
           }}
         >
-          Trusted by Dayton's Leading Retail Businesses
+          Trusted by Dayton Businesses for Professional Retail Cleaning
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
@@ -547,38 +547,7 @@ const RetailCleaning = () => {
           no-contract approach means we adapt to your business needs while maintaining the clean, inviting environment your customers expect.
         </Typography>
 
-        {/* Featured Testimonials */}
-        <Grid container spacing={4} sx={{ mb: 6 }}>
-          <Grid item xs={12} md={6}>
-            <Paper elevation={4} className="commercial-testimonial-card" sx={{ p: 4, textAlign: 'center', height: '100%' }}>
-              <Box sx={{ mb: 2 }}>
-                <Rating value={5} readOnly size="large" sx={{ color: '#FFD700' }} />
-              </Box>
-              <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
-                "Our boutique has worked with Gem City Cleaning for over a year. They understand retail and always work around our customers. 
-                The flexibility to adjust cleaning frequency during busy seasons has been invaluable."
-              </Typography>
-              <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
-                - Lisa K., Boutique Owner
-              </Typography>
-            </Paper>
-          </Grid>
-          
-          <Grid item xs={12} md={6}>
-            <Paper elevation={4} className="commercial-testimonial-card" sx={{ p: 4, textAlign: 'center', height: '100%' }}>
-              <Box sx={{ mb: 2 }}>
-                <Rating value={5} readOnly size="large" sx={{ color: '#FFD700' }} />
-              </Box>
-              <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
-                "As a restaurant owner, cleanliness is critical to our success. Gem City Cleaning helps us maintain health department standards 
-                while keeping our dining areas spotless for customers. Highly professional service."
-              </Typography>
-              <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
-                - Mark R., Restaurant Owner
-              </Typography>
-            </Paper>
-          </Grid>
-        </Grid>
+        <TrustBlock variant="compact" />
 
         <Box sx={{ textAlign: 'center' }}>
           <Button
@@ -607,7 +576,7 @@ const RetailCleaning = () => {
 
       {/* Why Choose Us Section */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }} id="why-choose-us">
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{ overflow: 'hidden' }}>
           <Typography variant="h3" component="h2" sx={{ mb: 6, textAlign: 'center' }}>
             Why Choose Our Dayton Retail Cleaning Services?
           </Typography>

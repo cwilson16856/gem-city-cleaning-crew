@@ -865,12 +865,11 @@ const OfficeCleaningChecklist = () => {
                 </Typography>
                 <Button
                   variant="contained"
-                  component={Link}
-                  to="/quote?service=office-cleaning"
+                  onClick={handleOpenQuoteForm}
                   sx={{
                     backgroundColor: theme.palette.primary.main,
                     color: 'white !important',
-                    '&:hover': { 
+                    '&:hover': {
                       backgroundColor: theme.palette.primary.dark,
                       color: 'white !important',
                       transform: 'translateY(-2px)'
@@ -920,12 +919,11 @@ const OfficeCleaningChecklist = () => {
                 </Typography>
                 <Button
                   variant="contained"
-                  component={Link}
-                  to="/quote?service=recurring-office-cleaning"
+                  onClick={handleOpenQuoteForm}
                   sx={{
                     backgroundColor: theme.palette.primary.main,
                     color: 'white !important',
-                    '&:hover': { 
+                    '&:hover': {
                       backgroundColor: theme.palette.primary.dark,
                       color: 'white !important',
                       transform: 'translateY(-2px)'
@@ -975,12 +973,11 @@ const OfficeCleaningChecklist = () => {
                 </Typography>
                 <Button
                   variant="contained"
-                  component={Link}
-                  to="/quote?service=post-construction-cleaning"
+                  onClick={handleOpenQuoteForm}
                   sx={{
                     backgroundColor: theme.palette.primary.main,
                     color: 'white !important',
-                    '&:hover': { 
+                    '&:hover': {
                       backgroundColor: theme.palette.primary.dark,
                       color: 'white !important',
                       transform: 'translateY(-2px)'

@@ -13,7 +13,10 @@ import {
   Chip,
   useTheme,
   Rating,
-  CardActionArea
+  CardActionArea,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails
 } from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home'
 import BusinessIcon from '@mui/icons-material/Business'
@@ -23,6 +26,7 @@ import PhoneIcon from '@mui/icons-material/Phone'
 import ScheduleIcon from '@mui/icons-material/Schedule'
 import PersonIcon from '@mui/icons-material/Person'
 import LocalOfferIcon from '@mui/icons-material/LocalOffer'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 // Import the stunning CSS styles
 import '../styles/homepages/HomePage.css'
@@ -45,7 +49,7 @@ import { GBP_REVIEW_URL, generateFAQPageSchema } from '../utils/localBusinessSch
 const HOMEPAGE_FAQS = [
   {
     question: 'Do you require contracts?',
-    answer: 'No. Gem City Cleaning Crew has never required contracts — cancel anytime, change your cleaning frequency anytime, no cancellation fees.'
+    answer: 'No. Gem City Cleaning Crew has never required contracts. Cancel anytime, change your cleaning frequency anytime, no cancellation fees.'
   },
   {
     question: 'Are your cleaners background-checked and insured?',
@@ -61,7 +65,7 @@ const HOMEPAGE_FAQS = [
   },
   {
     question: 'Do you bring your own cleaning supplies?',
-    answer: 'Yes. We bring professional-grade supplies and equipment to every visit — you never need to buy or provide any cleaning products.'
+    answer: 'Yes. We bring professional-grade supplies and equipment to every visit. You never need to buy or provide any cleaning products.'
   },
   {
     question: 'How long has Gem City Cleaning Crew been in business?',
@@ -729,20 +733,24 @@ const HomePage = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={3}>
-          {HOMEPAGE_FAQS.map((faq) => (
-            <Grid item xs={12} md={6} key={faq.question}>
-              <Card elevation={1} sx={{ p: 3, height: '100%' }}>
-                <Typography variant="h6" component="h3" sx={{ mb: 1.5, fontWeight: 600, color: 'primary.main' }}>
-                  {faq.question}
-                </Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6 }}>
-                  {faq.answer}
-                </Typography>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+        {HOMEPAGE_FAQS.map((faq, index) => (
+          <Accordion key={index} sx={{ mb: 1 }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls={`homepage-faq-${index}-content`}
+              id={`homepage-faq-${index}-header`}
+            >
+              <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>
+                {faq.question}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography variant="body1" sx={{ lineHeight: 1.6 }}>
+                {faq.answer}
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        ))}
       </Container>
 
       {/* Final CTA */}

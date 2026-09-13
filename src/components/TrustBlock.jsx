@@ -98,7 +98,7 @@ const TrustBlock = ({ variant = 'full' }) => {
           <ShieldIcon className={styles.policyIcon} />
           <Typography className={styles.policyText}>
             <strong>Fully licensed and insured,</strong> with a certificate of insurance available on
-            request — real coverage behind every visit, not just a claim in our meta tags.
+            request.
           </Typography>
         </Box>
       </Box>

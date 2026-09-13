@@ -12,7 +12,6 @@ import {
   Paper,
   Chip,
   useTheme,
-  Rating,
   Accordion,
   AccordionSummary,
   AccordionDetails,
@@ -50,6 +49,7 @@ const SERVICE_ID = `${PAGE_URL}#service`
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
 import QuoteForm from '../../components/QuoteForm'
+import TrustBlock from '../../components/TrustBlock'
 
 const OfficeCleaning = () => {
   const theme = useTheme()
@@ -550,7 +550,7 @@ const OfficeCleaning = () => {
             fontSize: { xs: '1.5rem', md: '1.8rem' }
           }}
         >
-          Trusted by Dayton's Leading Professional Offices
+          Trusted by Dayton Businesses for Professional Office Cleaning
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
@@ -559,38 +559,7 @@ const OfficeCleaning = () => {
           no long-term contracts, and our in-person quotes ensure you get exactly the services your office needs.
         </Typography>
 
-        {/* Featured Testimonials */}
-        <Grid container spacing={4} sx={{ mb: 6 }}>
-          <Grid item xs={12} md={6}>
-            <Paper elevation={4} className="commercial-testimonial-card" sx={{ p: 4, textAlign: 'center', height: '100%' }}>
-              <Box sx={{ mb: 2 }}>
-                <Rating value={5} readOnly size="large" sx={{ color: '#FFD700' }} />
-              </Box>
-              <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
-                "Our law firm has used Gem City Cleaning for over 18 months. They understand the importance of confidentiality 
-                and always maintain the professional appearance our clients expect. No contracts makes it easy to adjust services as needed."
-              </Typography>
-              <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
-                - Michael T., Law Firm Partner
-              </Typography>
-            </Paper>
-          </Grid>
-          
-          <Grid item xs={12} md={6}>
-            <Paper elevation={4} className="commercial-testimonial-card" sx={{ p: 4, textAlign: 'center', height: '100%' }}>
-              <Box sx={{ mb: 2 }}>
-                <Rating value={5} readOnly size="large" sx={{ color: '#FFD700' }} />
-              </Box>
-              <Typography variant="h6" component="p" sx={{ mb: 2, fontStyle: 'italic', lineHeight: 1.6 }}>
-                "As a real estate office, first impressions matter. Gem City Cleaning keeps our office spotless and ready for 
-                client meetings. Their recurring service keeps us consistently clean without any hassle."
-              </Typography>
-              <Typography variant="subtitle1" component="p" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
-                - Jennifer R., Real Estate Broker
-              </Typography>
-            </Paper>
-          </Grid>
-        </Grid>
+        <TrustBlock variant="compact" />
 
         <Box sx={{ textAlign: 'center' }}>
           <Button
@@ -619,7 +588,7 @@ const OfficeCleaning = () => {
 
       {/* Why Choose Us Section */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }} id="why-choose-us">
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{ overflow: 'hidden' }}>
           <Typography variant="h3" component="h2" sx={{ mb: 6, textAlign: 'center' }}>
             Why Choose Our Dayton Office Cleaning Services?
           </Typography>

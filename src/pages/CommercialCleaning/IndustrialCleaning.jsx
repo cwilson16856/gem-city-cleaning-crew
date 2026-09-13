@@ -424,7 +424,7 @@ const IndustrialCleaning = () => {
 
       {/* Why Choose Us Section */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }} id="why-choose-us">
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{ overflow: 'hidden' }}>
           <Typography variant="h3" component="h2" sx={{ mb: 6, textAlign: 'center' }}>
             Why Choose Our Dayton Industrial Cleaning Services?
           </Typography>

@@ -213,64 +213,6 @@ const QuotePage = () => {
           })}
         </script>
 
-        {/* Organization Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://gemcitycleaningcrew.com/#organization",
-            "name": "Gem City Cleaning Crew",
-            "alternateName": "Gem City Cleaning",
-            "url": "https://gemcitycleaningcrew.com",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://gemcitycleaningcrew.com/logo.png",
-              "width": "300",
-              "height": "100"
-            },
-            "contactPoint": [
-              {
-                "@type": "ContactPoint",
-                "telephone": "+1-937-892-4157",
-                "contactType": "customer service",
-                "areaServed": "US",
-                "availableLanguage": "English",
-                "hoursAvailable": [
-                  {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                    "opens": "10:00",
-                    "closes": "18:00"
-                  },
-                  {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": "Saturday",
-                    "opens": "10:00",
-                    "closes": "14:00"
-                  }
-                ]
-              },
-              {
-                "@type": "ContactPoint",
-                "email": "info@gemcitycleaningcrew.com",
-                "contactType": "customer service",
-                "areaServed": "US",
-                "availableLanguage": "English"
-              }
-            ],
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dayton",
-              "addressRegion": "OH",
-              "addressCountry": "US"
-            },
-            "sameAs": [
-              "https://www.facebook.com/gemcitycleaning",
-              "https://www.instagram.com/gemcitycleaningcrew"
-            ]
-          })}
-        </script>
-
         {/* FAQ Schema for Quote Process */}
         <script type="application/ld+json">
           {JSON.stringify({

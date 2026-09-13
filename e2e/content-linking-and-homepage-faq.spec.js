@@ -28,6 +28,10 @@ test.describe('Service page to blog linking', () => {
 })
 
 test.describe('Homepage FAQ', () => {
+  // Converted to the sitewide Accordion pattern (2026-09-13 SEO audit
+  // round-2 remediation, Finding 8) for consistency with the 17 other pages
+  // already using it -- answers are collapsed until their question is
+  // clicked, so each pair below must expand its accordion first.
   test('FAQ section renders with the expected Q&A pairs', async ({ page }) => {
     await page.goto('/')
     const faqSection = page.locator('#faq')
@@ -43,7 +47,9 @@ test.describe('Homepage FAQ', () => {
     ]
 
     for (const [question, answerPattern] of pairs) {
-      await expect(faqSection.getByText(question, { exact: true })).toBeVisible()
+      const questionButton = faqSection.getByRole('button', { name: question, exact: true })
+      await expect(questionButton).toBeVisible()
+      await questionButton.click()
       await expect(faqSection.getByText(answerPattern)).toBeVisible()
     }
   })

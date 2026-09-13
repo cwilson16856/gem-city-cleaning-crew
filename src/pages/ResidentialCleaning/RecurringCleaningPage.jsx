@@ -397,60 +397,6 @@ const RecurringCleaningPage = () => {
           })}
         </script>
 
-        {/* Organization Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://gemcitycleaningcrew.com/#organization",
-            "name": "Gem City Cleaning Crew",
-            "alternateName": "Gem City Cleaning",
-            "url": "https://gemcitycleaningcrew.com",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://gemcitycleaningcrew.com/logo.png",
-              "width": "300",
-              "height": "100"
-            },
-            "contactPoint": [
-              {
-                "@type": "ContactPoint",
-                "telephone": "+1-937-892-4157",
-                "contactType": "customer service",
-                "areaServed": "US",
-                "availableLanguage": "English"
-              }
-            ],
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dayton",
-              "addressRegion": "OH",
-              "addressCountry": "US"
-            },
-            "sameAs": [
-              "https://www.facebook.com/gemcitycleaning",
-              "https://www.instagram.com/gemcitycleaningcrew"
-            ]
-          })}
-        </script>
-
-        {/* WebSite Schema for Search Box */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "@id": "https://gemcitycleaningcrew.com/#website",
-            "url": "https://gemcitycleaningcrew.com",
-            "name": "Gem City Cleaning Crew",
-            "description": "Professional house cleaning services in Dayton, Ohio",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://gemcitycleaningcrew.com/search?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          })}
-        </script>
-
         {/* Competitor Comparison Schema for AI Overview */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -539,6 +485,9 @@ const RecurringCleaningPage = () => {
               lineHeight: 1.1
             }}
           >
+            {/* "4.6-Star Rated" mirrors localBusinessSchema.js's aggregateRating — if that
+               value changes (periodic re-verification via the OpenSEO GBP lookup), update
+               this H1 (and its title/meta/OG/twitter tags above) to match. */}
             4.6-Star Rated Recurring House Cleaning Service in Dayton
           </Typography>
           
@@ -1291,8 +1240,8 @@ const RecurringCleaningPage = () => {
               See the Results of Our Recurring Cleaning
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 800, mx: 'auto' }}>
-              Every room, every visit, every time. Experience the consistent professional quality that makes 
-              our recurring cleaning service the best choice for your home.
+              Every room, every visit, every time. Experience the consistent, 4.6-star rated quality behind
+              our recurring cleaning service.
             </Typography>
           </Box>
 
