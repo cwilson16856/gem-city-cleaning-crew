@@ -34,7 +34,7 @@ import '../../styles/pages/ResidentialPage.css'
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
-import { GBP_REVIEW_URL } from '../../utils/localBusinessSchema'
+import { GBP_REVIEW_URL, generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 
 const KitchenCleaningServices = () => {
   const theme = useTheme()
@@ -195,6 +195,19 @@ const KitchenCleaningServices = () => {
     }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/kitchen-cleaning-services#webpage',
+    url: 'https://gemcitycleaningcrew.com/kitchen-cleaning-services',
+    name: 'Kitchen Cleaning Services Dayton OH',
+    description: '⭐ Trusted Kitchen Cleaning Service in Dayton, OH. Deep cleaning, appliance cleaning, grease removal. Professional results for healthier cooking. FREE quotes! Call 937-892-4157',
+    aboutId: 'https://gemcitycleaningcrew.com/kitchen-cleaning-services#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Kitchen Cleaning Services', url: 'https://gemcitycleaningcrew.com/kitchen-cleaning-services' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -253,6 +266,8 @@ const KitchenCleaningServices = () => {
             ]
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}

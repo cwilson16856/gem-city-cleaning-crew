@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 import {
   Container,
   Typography,
@@ -233,6 +234,18 @@ const ResidentialPage = () => {
     { text: '❓ Frequently Asked Questions', href: '#faq' }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/residential#webpage',
+    url: 'https://gemcitycleaningcrew.com/residential',
+    name: 'House Cleaning Services Dayton OH',
+    description: 'Expert house cleaning services in Dayton, Ohio with 3-month trained staff, custom plans, and no contracts. Kitchens, bathrooms, bedrooms, and more. Free quotes available!',
+    aboutId: 'https://gemcitycleaningcrew.com/residential#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -260,6 +273,7 @@ const ResidentialPage = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://gemcitycleaningcrew.com/residential#service",
             "name": "Residential House Cleaning Services",
             "description": "Professional Dayton house cleaning services with custom plans, no contracts, and 3-month trained staff",
             "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
@@ -293,6 +307,8 @@ const ResidentialPage = () => {
             }
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
 
         {/* FAQ Schema */}
         <script type="application/ld+json">

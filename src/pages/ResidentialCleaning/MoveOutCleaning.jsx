@@ -3,6 +3,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 import {
   Container,
   Typography,
@@ -143,6 +144,19 @@ const MoveOutCleaningPage = () => {
     { text: "Get Your Free Quote", href: "#get-quote" }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/move-out-cleaning#webpage',
+    url: 'https://gemcitycleaningcrew.com/move-out-cleaning',
+    name: 'Move-Out Cleaning Services Dayton OH',
+    description: '⭐ Professional move-out cleaning services in Dayton, OH. Thorough cleaning designed to meet landlord and lease standards. Serving tenants & property managers.',
+    aboutId: 'https://gemcitycleaningcrew.com/move-out-cleaning#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Move-Out Cleaning', url: 'https://gemcitycleaningcrew.com/move-out-cleaning' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -205,6 +219,8 @@ const MoveOutCleaningPage = () => {
             ]
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
 
         {/* FAQ Schema */}
         <script type="application/ld+json">

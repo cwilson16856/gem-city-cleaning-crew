@@ -3,6 +3,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 import {
   Container,
   Typography,
@@ -143,6 +144,19 @@ const MoveInCleaningPage = () => {
     { text: "Get Your Free Quote", href: "#get-quote" }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/move-in-cleaning#webpage',
+    url: 'https://gemcitycleaningcrew.com/move-in-cleaning',
+    name: 'Move-In Cleaning Services Dayton OH',
+    description: '⭐ Professional move-in cleaning services in Dayton, OH. Deep sanitization for new homes & apartments. Fresh start cleaning for families moving to Dayton. Same-day quotes available.',
+    aboutId: 'https://gemcitycleaningcrew.com/move-in-cleaning#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Move-In Cleaning', url: 'https://gemcitycleaningcrew.com/move-in-cleaning' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -205,6 +219,8 @@ const MoveInCleaningPage = () => {
             ]
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
 
         {/* FAQ Schema */}
         <script type="application/ld+json">

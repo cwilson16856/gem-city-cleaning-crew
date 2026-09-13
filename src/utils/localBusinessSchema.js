@@ -36,7 +36,10 @@ export const ALL_SERVICE_AREA_CITIES = Object.values(CITIES).map((c) => c.name)
 // hand-edited; regenerate it via Google Maps' Share > Embed a map flow.
 const GEO = { '@type': 'GeoCoordinates', latitude: 39.791763, longitude: -84.097988 }
 
-export const generateLocalBusinessSchema = (areaServedCities = ALL_SERVICE_AREA_CITIES) => ({
+export const generateLocalBusinessSchema = (
+  areaServedCities = ALL_SERVICE_AREA_CITIES,
+  { includeAggregateRating = true } = {}
+) => ({
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   '@id': BUSINESS_ID,
@@ -61,7 +64,20 @@ export const generateLocalBusinessSchema = (areaServedCities = ALL_SERVICE_AREA_
     addressCountry: 'US'
   },
   geo: GEO,
-  openingHours: ['Mo-Fr 10:00-18:00', 'Sa 10:00-14:00'],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '10:00',
+      closes: '18:00'
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday'],
+      opens: '10:00',
+      closes: '14:00'
+    }
+  ],
   priceRange: '$$',
   currenciesAccepted: 'USD',
   paymentAccepted: ['Cash', 'Credit Card', 'Check', 'PayPal', 'Venmo'],
@@ -73,14 +89,24 @@ export const generateLocalBusinessSchema = (areaServedCities = ALL_SERVICE_AREA_
   // itself should be exact and checkable against the sameAs GBP link above,
   // not an approximation). Re-verify against the GBP link periodically as
   // the review count grows.
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.6',
-    bestRating: '5',
-    worstRating: '1',
-    ratingCount: '91',
-    reviewCount: '91'
-  },
+  //
+  // includeAggregateRating defaults to true for every page except blog
+  // routes (App.jsx/entry-server.jsx pass false there via isBlogPath()) --
+  // an editorial blog post isn't the entity being reviewed, and Google's
+  // structured-data guidelines disallow self-serving review/rating markup
+  // on a page whose own subject isn't the reviewed thing. See 2026-09-13
+  // SEO audit follow-up, "aggregateRating stuffed onto every blog page"
+  // finding.
+  ...(includeAggregateRating && {
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.6',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '91',
+      reviewCount: '91'
+    }
+  }),
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Cleaning Services',
@@ -102,7 +128,15 @@ export const generateLocalBusinessSchema = (areaServedCities = ALL_SERVICE_AREA_
     GBP_REVIEW_URL,
     'https://www.yelp.com/biz/gem-city-cleaning-crew-dayton',
     'https://www.facebook.com/gemcitycleaning',
-    'https://www.instagram.com/gemcitycleaningcrew'
+    'https://www.instagram.com/gemcitycleaningcrew',
+    // BBB profile -- confirmed live and claimed via the 2026-09-13 SEO audit
+    // follow-up ("local citation completeness" finding). Distinct from the
+    // *visible page badge* removed from /quote on 2026-09-11 (commit
+    // 88be331) -- that removal was because no verified profile existed at
+    // the time. This is a different, since-confirmed real profile, added
+    // only to this entity-reconciliation list, not restored as an on-page
+    // trust badge.
+    'https://www.bbb.org/us/oh/dayton/profile/cleaning-services/gem-city-cleaning-crew-llc-0322-55058'
     // LinkedIn deliberately omitted: linkedin.com/company/gem-city-cleaning-crew
     // 404s (confirmed live 2026-09-11) -- an unresolvable sameAs entry is worse
     // than none, since entity-reconciliation systems treat it as noise against

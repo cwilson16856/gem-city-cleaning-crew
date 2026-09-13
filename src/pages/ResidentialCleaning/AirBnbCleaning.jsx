@@ -44,7 +44,7 @@ import '../../styles/pages/ResidentialPage.css'
 
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
-import { GBP_REVIEW_URL } from '../../utils/localBusinessSchema'
+import { GBP_REVIEW_URL, generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 
 const AirBnbCleaning = () => {
   const theme = useTheme()
@@ -197,6 +197,19 @@ const AirBnbCleaning = () => {
     }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/airbnb-cleaning-service#webpage',
+    url: 'https://gemcitycleaningcrew.com/airbnb-cleaning-service',
+    name: 'Airbnb Cleaning Service Dayton OH',
+    description: '⭐ 4.6-Star Rated AirBnb Cleaning Service in Dayton, OH. Same-day turnaround, hospitality standards, flexible scheduling. Maximize your bookings with spotless properties. FREE quotes! Call 937-892-4157',
+    aboutId: 'https://gemcitycleaningcrew.com/airbnb-cleaning-service#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Airbnb Cleaning Service', url: 'https://gemcitycleaningcrew.com/airbnb-cleaning-service' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -270,6 +283,8 @@ const AirBnbCleaning = () => {
             ]
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
 
         {/* FAQ Schema */}
         <script type="application/ld+json">

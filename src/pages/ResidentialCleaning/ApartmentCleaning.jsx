@@ -34,7 +34,7 @@ import '../../styles/pages/ResidentialPage.css'
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
-import { GBP_REVIEW_URL } from '../../utils/localBusinessSchema'
+import { GBP_REVIEW_URL, generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 
 const ApartmentCleaning = () => {
   const theme = useTheme()
@@ -195,6 +195,19 @@ const ApartmentCleaning = () => {
     }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/apartment-cleaning#webpage',
+    url: 'https://gemcitycleaningcrew.com/apartment-cleaning',
+    name: 'Apartment Cleaning Dayton OH',
+    description: 'Professional apartment cleaning in Dayton, OH — regular maintenance, deep cleaning, and rental-ready turnovers for tenants and property managers. Free quotes! Call 937-892-4157',
+    aboutId: 'https://gemcitycleaningcrew.com/apartment-cleaning#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Apartment Cleaning', url: 'https://gemcitycleaningcrew.com/apartment-cleaning' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -253,6 +266,8 @@ const ApartmentCleaning = () => {
             ]
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}
