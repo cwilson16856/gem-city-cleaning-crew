@@ -8,6 +8,15 @@ import { test, expect } from '@playwright/test'
 // hydrated route ("/") still hydrates cleanly with LazyMapEmbed in its tree.
 
 test.describe('Lazy Maps embed', () => {
+  // Added 2026-09-13 SEO audit round-2, "dead whitespace before load" finding:
+  // a visual audit's mobile screenshot caught this placeholder still empty
+  // during the load window, reading as a broken layout gap rather than a
+  // deliberate lazy-load.
+  test('shows a visible loading placeholder (not an empty gap) before the Maps iframe mounts', async ({ page }) => {
+    await page.goto('/')
+    await expect(page.getByText('Loading map…')).toBeVisible()
+  })
+
   test('does not fetch the Maps embed until scrolled into view (homepage)', async ({ page }) => {
     let mapRequestFired = false
     page.on('request', (req) => {
@@ -21,6 +30,7 @@ test.describe('Lazy Maps embed', () => {
     await page.locator('[class*="mapContainer"]').scrollIntoViewIfNeeded()
     await page.waitForRequest((req) => req.url().includes('google.com/maps/embed'), { timeout: 5000 })
     await expect(page.locator('[class*="mapContainer"] iframe')).toBeVisible()
+    await expect(page.getByText('Loading map…')).toHaveCount(0)
   })
 
   test('does not fetch the Maps embed until scrolled into view (/locations)', async ({ page }) => {
