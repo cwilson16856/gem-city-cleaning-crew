@@ -50,16 +50,14 @@ test.describe('Internal Linking', () => {
     await page.getByRole('menuitem', { name: 'Commercial' }).click()
 
     const links = page.locator(
-      'a[role="menuitem"][href^="/locations/"][href$="/commercial-cleaning-services"], a[role="menuitem"][href="/locations/beavercreek/commercial-services"]'
+      'a[role="menuitem"][href^="/locations/"][href$="/commercial-cleaning-services"]'
     )
     const count = await links.count()
     expect(count).toBe(REAL_CITY_SLUGS.length)
 
     for (let i = 0; i < count; i++) {
       const href = await links.nth(i).getAttribute('href')
-      const slug = href === '/locations/beavercreek/commercial-services'
-        ? 'beavercreek'
-        : href.split('/')[2]
+      const slug = href.split('/')[2]
       expect(REAL_CITY_SLUGS).toContain(slug)
     }
   })

@@ -9,6 +9,8 @@
     { "source": "/house-cleaning-services-dayton-ohio/", "destination": "/locations/dayton/house-cleaning-services", "permanent": true },
     { "source": "/dayton-house-cleaning-services", "destination": "/locations/dayton/house-cleaning-services", "permanent": true },
     { "source": "/dayton-house-cleaning-services/", "destination": "/locations/dayton/house-cleaning-services", "permanent": true },
+    { "source": "/locations/beavercreek/commercial-services", "destination": "/locations/beavercreek/commercial-cleaning-services", "permanent": true },
+    { "source": "/locations/beavercreek/commercial-services/", "destination": "/locations/beavercreek/commercial-cleaning-services", "permanent": true },
     { "source": "/contact-us", "destination": "/quote", "permanent": true },
     { "source": "/contact-us/", "destination": "/quote", "permanent": true },
     { "source": "/school-cleaning", "destination": "/daycare-cleaning", "permanent": true },

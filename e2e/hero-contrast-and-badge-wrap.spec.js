@@ -8,12 +8,12 @@ import { test, expect } from '@playwright/test'
 // .claude/plans/1. Pending/gccc-seo-visibility/GCCC/hero-contrast-and-badge-wrap-fixes-plan.md
 
 const LONGEST_BADGE_PAGES = [
-  { path: '/locations/beavercreek/commercial-services', label: "BEAVERCREEK'S TRUSTED CLEANING EXPERTS" },
+  { path: '/locations/beavercreek/commercial-cleaning-services', label: "BEAVERCREEK'S TRUSTED CLEANING EXPERTS" },
   { path: '/industrial-cleaning', label: 'HEAVY-DUTY CLEANING' },
   { path: '/locations/xenia/house-cleaning-services', label: 'XENIA & GREENE COUNTY' }
 ]
 
-const CONTRAST_SAMPLE_PAGES = ['/', '/recurring-cleaning-service', '/airbnb-cleaning-service', '/locations/beavercreek/commercial-services', '/quote']
+const CONTRAST_SAMPLE_PAGES = ['/', '/recurring-cleaning-service', '/airbnb-cleaning-service', '/locations/beavercreek/commercial-cleaning-services', '/quote']
 
 test.describe('Hero badge wrap', () => {
   for (const { path, label } of LONGEST_BADGE_PAGES) {

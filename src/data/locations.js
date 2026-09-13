@@ -351,7 +351,7 @@ export const CITIES = {
     },
     // No `commercial` key — Beavercreek's commercial page is a separate,
     // already-built file. LocationPage.jsx redirects to it instead.
-    commercialRedirect: '/locations/beavercreek/commercial-services',
+    commercialRedirect: '/locations/beavercreek/commercial-cleaning-services',
   },
 
   fairborn: {
