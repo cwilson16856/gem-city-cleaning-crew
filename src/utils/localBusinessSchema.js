@@ -95,7 +95,7 @@ export const generateLocalBusinessSchema = (areaServedCities = ALL_SERVICE_AREA_
     // -- see 2026-09-11 SEO audit follow-up, "self-serving review schema" finding.
     GBP_REVIEW_URL,
     'https://www.yelp.com/biz/gem-city-cleaning-crew-dayton',
-    'https://www.facebook.com/GemCityCleaningCrew',
+    'https://www.facebook.com/gemcitycleaning',
     'https://www.instagram.com/gemcitycleaningcrew'
     // LinkedIn deliberately omitted: linkedin.com/company/gem-city-cleaning-crew
     // 404s (confirmed live 2026-09-11) -- an unresolvable sameAs entry is worse
