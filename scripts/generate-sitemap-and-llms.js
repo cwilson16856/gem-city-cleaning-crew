@@ -7,6 +7,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { execFileSync } from 'node:child_process'
 import { getAllPosts } from '../src/content/blog/index.js'
 import { SITEMAP_ROUTES, SITE_URL } from './routes.js'
 
@@ -14,19 +15,58 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.join(__dirname, '..')
 const TODAY = new Date().toISOString().split('T')[0]
 
+// Real, per-route <lastmod> instead of a fresh build-time timestamp on every
+// route (Google/SEO audits treat "every URL changed today" as not credible).
+// Takes the most recent git commit date across a route's owning source
+// file(s) — this always runs on a developer machine with full git history
+// (generate-sitemap is a standalone script, not part of the Vercel build), so
+// there's no shallow-clone risk to work around. Falls back to today's date,
+// with a visible warning, only if git has no history for any of the files
+// (e.g. an uncommitted new page) — this script is a one-shot dev CLI tool
+// (see measure-location-similarity.js's own header comment for the same
+// established console-output convention), not shipped runtime code.
+function getLastModDate(sourceFiles) {
+  // %ct (committer epoch seconds) drives the "most recent" comparison since
+  // it's a plain number regardless of the committing machine's UTC offset;
+  // %cI (ISO 8601 with that offset preserved) is fetched in the same call
+  // purely to slice out the calendar date it prints in, using the same
+  // epoch-to-date mapping git itself already resolved.
+  let latestEpoch = -Infinity
+  let latestIso = null
+  for (const relPath of sourceFiles) {
+    let line
+    try {
+      line = execFileSync('git', ['log', '-1', '--format=%ct|%cI', '--', relPath], {
+        cwd: ROOT,
+        encoding: 'utf-8',
+      }).trim()
+    } catch {
+      line = ''
+    }
+    if (!line) continue
+    const [epochStr, iso] = line.split('|')
+    const epoch = Number(epochStr)
+    if (Number.isFinite(epoch) && epoch > latestEpoch) {
+      latestEpoch = epoch
+      latestIso = iso
+    }
+  }
+  if (!latestIso) {
+    console.warn(`[generate-sitemap] no git history for ${sourceFiles.join(', ')}, using build date as lastmod fallback`)
+    return TODAY
+  }
+  return latestIso.split('T')[0]
+}
+
 function buildSitemap(posts) {
-  const urlEntries = SITEMAP_ROUTES.map(({ path: routePath, changefreq, priority }) => `  <url>
+  const urlEntries = SITEMAP_ROUTES.map(({ path: routePath, sourceFile, sourceFiles }) => `  <url>
     <loc>${SITE_URL}${routePath}</loc>
-    <lastmod>${TODAY}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
+    <lastmod>${getLastModDate(sourceFiles || [sourceFile])}</lastmod>
   </url>`)
 
   const postEntries = posts.map((post) => `  <url>
     <loc>${SITE_URL}/blog/${post.slug}</loc>
     <lastmod>${post.updatedAt || post.publishedAt}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
     <image:image>
       <image:loc>${SITE_URL}${post.coverImage}</image:loc>
       <image:title>${escapeXml(post.title)}</image:title>

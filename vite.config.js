@@ -18,7 +18,13 @@ export default defineConfig(({ isSsrBuild }) => ({
   },
   build: {
     outDir: isSsrBuild ? 'dist-ssr' : 'dist',
-    sourcemap: true,
+    // Source maps only for the SSR build, which scripts/prerender.js consumes
+    // locally and is never deployed/served (Vercel's zero-config Vite preset
+    // only serves dist/). The client build's maps were reachable in
+    // production (vendor-*.js.map, mui-*.js.map, etc.) with no error-tracking
+    // integration in this repo to consume them for stack-trace debugging —
+    // disabling them removes a real, live exposure with no current cost.
+    sourcemap: isSsrBuild,
     minify: 'terser',
     terserOptions: {
       compress: {
