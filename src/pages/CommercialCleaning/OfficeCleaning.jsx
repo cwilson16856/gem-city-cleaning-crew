@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import {
@@ -48,21 +48,10 @@ const SERVICE_ID = `${PAGE_URL}#service`
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
-import QuoteForm from '../../components/QuoteForm'
 import TrustBlock from '../../components/TrustBlock'
 
 const OfficeCleaning = () => {
   const theme = useTheme()
-  const [quoteFormOpen, setQuoteFormOpen] = useState(false)
-
-  const handleOpenQuoteForm = () => {
-    setQuoteFormOpen(true)
-  }
-
-  const handleCloseQuoteForm = () => {
-    setQuoteFormOpen(false)
-  }
-
   // Office Types - positioned high up
   const officeTypes = [
     {
@@ -159,7 +148,7 @@ const OfficeCleaning = () => {
     },
     {
       question: "Are you a janitorial service, or just office cleaning?",
-      answer: "We provide both — office cleaning and janitorial services are the same thing to us. Whether you need a daily janitorial crew or scheduled office cleaning, we cover Dayton and businesses within roughly a 25-mile radius, including Kettering, Centerville, Beavercreek, Oakwood, Springboro, Huber Heights, Miamisburg, Fairborn, and Xenia."
+      answer: "We provide both: office cleaning and janitorial services are the same thing to us. Whether you need a daily janitorial crew or scheduled office cleaning, we cover Dayton and businesses within roughly a 30-mile radius, including Kettering, Centerville, Beavercreek, Oakwood, Springboro, Huber Heights, Miamisburg, Fairborn, and Xenia."
     }
   ]
 
@@ -169,19 +158,19 @@ const OfficeCleaning = () => {
       title: "No Contracts Required",
       description: "Flexible office cleaning services without long-term contracts. Book one-time cleanings or recurring services with the freedom to adjust as needed.",
       icon: <DescriptionIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.webp"
     },
     {
       title: "Recurring Services Available",
       description: "Consistent office cleaning with daily, weekly, bi-weekly, or monthly recurring services tailored to your business needs and schedule.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Plan.png"
+      image: "/images/legacy/Plan.webp"
     },
     {
       title: "In-Person Quotes",
       description: "We visit your office to provide accurate, personalized quotes based on your specific space, needs, and cleaning requirements.",
       icon: <PersonIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Trained.png"
+      image: "/images/legacy/Trained.webp"
     }
   ]
 
@@ -422,7 +411,8 @@ const OfficeCleaning = () => {
             <Button
               variant="contained"
               size="large"
-              onClick={handleOpenQuoteForm}
+              component={Link}
+              to="/quote?type=commercial"
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -463,7 +453,7 @@ const OfficeCleaning = () => {
             Professional Office Cleaning Services in Dayton
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 700, mx: 'auto' }}>
-            Looking for office cleaning services near me? We provide specialized office cleaning and janitorial services for professional offices throughout Dayton and the surrounding 25-mile area.
+            Looking for office cleaning services near me? We provide specialized office cleaning and janitorial services for professional offices throughout Dayton and the surrounding 30-mile area.
           </Typography>
         </Box>
 
@@ -565,7 +555,8 @@ const OfficeCleaning = () => {
           <Button
             variant="outlined"
             size="large"
-            onClick={handleOpenQuoteForm}
+            component={Link}
+            to="/quote?type=commercial"
             sx={{
               fontSize: '1.1rem',
               px: 4,
@@ -743,7 +734,8 @@ const OfficeCleaning = () => {
                 <Button
                   variant="contained"
                   size="large"
-                  onClick={handleOpenQuoteForm}
+                  component={Link}
+                  to="/quote?type=commercial"
                   sx={{
                     fontSize: '1.1rem',
                     px: 4,
@@ -794,7 +786,7 @@ const OfficeCleaning = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="/images/legacy/FAQ.png"
+              src="/images/legacy/FAQ.webp"
               alt="Frequently asked questions about professional Dayton office cleaning services"
               sx={{
                 width: 80,
@@ -840,7 +832,7 @@ const OfficeCleaning = () => {
 
       {/* Service Areas with Map */}
       <Box id="service-areas">
-        <AreasWeServe />
+        <AreasWeServe serviceType="commercial" />
       </Box>
 
       {/* Excellence Section */}
@@ -863,7 +855,7 @@ const OfficeCleaning = () => {
           <Typography variant="body1" sx={{ mb: 4, maxWidth: 900, mx: 'auto', lineHeight: 1.7 }}>
             At Gem City Cleaning Crew, we understand that your office environment directly impacts productivity, employee morale, and client perceptions. 
             Our professional office cleaning services are designed specifically for Dayton's business community, serving law firms, real estate offices, 
-            therapy centers, and corporate offices with the highest standards of cleanliness and professionalism. 
+            therapy centers, and corporate offices, backed by a 4.6-star rating and a professional, consistent approach.
             With no long-term contracts required, flexible recurring services, and personalized in-person quotes, 
             we make it easy to maintain a consistently clean and professional workspace that supports your business success.
           </Typography>
@@ -897,7 +889,8 @@ const OfficeCleaning = () => {
             <Button
               variant="contained"
               size="large"
-              onClick={handleOpenQuoteForm}
+              component={Link}
+              to="/quote?type=commercial"
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -950,15 +943,6 @@ const OfficeCleaning = () => {
         </Container>
       </Box>
 
-      {/* Quote Form Modal */}
-      {/* Quote modal defaults to suggesting Commercial (this is a commercial page), but always
-          asks the user to confirm residential vs. commercial before loading either form. */}
-      <QuoteForm
-        open={quoteFormOpen}
-        onClose={handleCloseQuoteForm}
-        title="Get Your Free Cleaning Estimate!"
-        defaultServiceType="commercial"
-      />
     </>
   )
 }

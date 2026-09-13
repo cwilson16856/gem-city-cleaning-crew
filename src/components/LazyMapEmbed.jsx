@@ -39,7 +39,7 @@ const LazyMapEmbed = ({ src, title, className }) => {
 
   return (
     <div ref={containerRef} className={className} style={{ width: '100%', height: '100%' }}>
-      {shouldLoad && (
+      {shouldLoad ? (
         <iframe
           src={src}
           title={title}
@@ -48,6 +48,22 @@ const LazyMapEmbed = ({ src, title, className }) => {
           referrerPolicy="no-referrer-when-downgrade"
           style={{ width: '100%', height: '100%', border: 0 }}
         />
+      ) : (
+        <div
+          style={{
+            width: '100%',
+            height: '100%',
+            minHeight: 200,
+            backgroundColor: '#e8e8e8',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'rgba(0, 0, 0, 0.5)',
+            fontSize: '0.95rem'
+          }}
+        >
+          Loading map…
+        </div>
       )}
     </div>
   )

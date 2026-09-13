@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 import {
   Container,
   Typography,
@@ -159,11 +160,11 @@ const ResidentialPage = () => {
     },
     {
       question: "How much does house cleaning cost?",
-      answer: "House cleaning cost depends on your home's size, number of rooms, and how often you'd like service — every home is different, so we don't quote a flat rate up front. Book a free walk-through and we'll give you a firm, accurate price for your specific home."
+      answer: "House cleaning cost depends on your home's size, number of rooms, and how often you'd like service: every home is different, so we don't quote a flat rate up front. Book a free walk-through and we'll give you a firm, accurate price for your specific home."
     },
     {
       question: "Are you a maid service, a cleaning company, or something else?",
-      answer: "All of the above — Gem City Cleaning Crew is a locally owned cleaning company offering maid service and house cleaning throughout Dayton, Ohio and the surrounding suburbs. Whatever you call it, it's the same trained crew and the same no-contract approach."
+      answer: "All of the above. Gem City Cleaning Crew is a locally owned cleaning company offering maid service and house cleaning throughout Dayton, Ohio and the surrounding suburbs. Whatever you call it, it's the same trained crew and the same no-contract approach."
     }
   ]
 
@@ -173,19 +174,19 @@ const ResidentialPage = () => {
       title: "Custom Cleaning Plans",
       description: "We'll work with you to create a cleaning plan that works best for you. We'll simply add, or take off any room that you'd like.",
       icon: <AssignmentIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Plan.png"
+      image: "/images/legacy/Plan.webp"
     },
     {
       title: "No Contracts",
       description: "We don't like contracts as much as you don't. You can keep us on for as little or as long as you like!",
       icon: <PersonIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.webp"
     },
     {
       title: "Trained Employees",
       description: "Our employees go through 3 months of training in order to keep your home clean consistently at the highest level.",
       icon: <GroupsIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Trained.png"
+      image: "/images/legacy/Trained.webp"
     }
   ]
 
@@ -233,10 +234,22 @@ const ResidentialPage = () => {
     { text: '❓ Frequently Asked Questions', href: '#faq' }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/residential#webpage',
+    url: 'https://gemcitycleaningcrew.com/residential',
+    name: 'House Cleaning Services Dayton OH',
+    description: 'Expert house cleaning services in Dayton, Ohio with 3-month trained staff, custom plans, and no contracts. Kitchens, bathrooms, bedrooms, and more. Free quotes available!',
+    aboutId: 'https://gemcitycleaningcrew.com/residential#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
-        <link rel="preload" as="image" href="/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.webp" fetchPriority="high" />
         <title>House Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="description" content="Expert house cleaning services in Dayton, Ohio with 3-month trained staff, custom plans, and no contracts. Kitchens, bathrooms, bedrooms, and more. Free quotes available!" />
         <meta name="keywords" content="Dayton house cleaning, residential cleaning, custom cleaning plans, no contracts, professional cleaners, home cleaning service" />
@@ -260,6 +273,7 @@ const ResidentialPage = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://gemcitycleaningcrew.com/residential#service",
             "name": "Residential House Cleaning Services",
             "description": "Professional Dayton house cleaning services with custom plans, no contracts, and 3-month trained staff",
             "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
@@ -294,6 +308,8 @@ const ResidentialPage = () => {
           })}
         </script>
 
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
+
         {/* FAQ Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -315,7 +331,7 @@ const ResidentialPage = () => {
       <Box
         className="hero-section residential-hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -527,7 +543,7 @@ const ResidentialPage = () => {
           Our team of experienced and dedicated cleaners will leave your home looking spotless and sparkling clean. 
           From dusting and vacuuming to deep cleaning and organizing, we offer a wide range of customizable home cleaning services to suit your needs. 
           We use only the highest-quality cleaning products and equipment to ensure that your home is not only clean but also safe and healthy. 
-          According to the <a href="https://www.cdc.gov/hygiene/index.html" target="_blank" rel="nofollow noopener" style={{ color: '#D81B60', textDecoration: 'underline' }}>CDC's hygiene guidelines</a>, 
+          According to the <a href="https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html" target="_blank" rel="nofollow noopener" style={{ color: '#D81B60', textDecoration: 'underline' }}>CDC's hygiene guidelines</a>, 
           maintaining a clean home environment is essential for family health and wellbeing.
           Here's a word from one our current customers:
         </Typography>
@@ -583,7 +599,7 @@ const ResidentialPage = () => {
           </Typography>
 
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-            Since 2017, Gem City Cleaning Crew has been delivering exceptional Dayton house cleaning services and we cover a 30 mile radius around Dayton, 
+            Since 2017, Gem City Cleaning Crew has been delivering exceptional Dayton house cleaning services and we cover a 30 mile radius around Dayton,
             earning a loyal client base through our consistent and thorough approach. We offer customizable house cleaning plans to fit your unique needs and schedule, 
             ensuring that you receive the level of service you expect each time by having:
           </Typography>
@@ -655,8 +671,8 @@ const ResidentialPage = () => {
           to provide top-quality cleaning services to our clients. We also understand the importance of consistency and try our best to send the same cleaner 
           to a client's home every time to build a comfortable relationship and ensure a thorough and consistent clean. At Gem City Cleaning Crew, 
           we treat your home as if it were our own and strive to exceed your expectations with every visit. 
-          Our professional cleaning crew follows industry best practices as recommended by the <a href="https://www.issa.com/articles/residential-cleaning-best-practices" target="_blank" rel="nofollow noopener" style={{ color: '#D81B60', textDecoration: 'underline' }}>International Sanitary Supply Association</a> 
-          to ensure the highest standards of cleanliness and safety for our Dayton house cleaning services.
+          Our professional cleaning crew follows training standards recommended by the <a href="https://www.issa.com/articles/house-cleaning-training/" target="_blank" rel="nofollow noopener" style={{ color: '#D81B60', textDecoration: 'underline' }}>International Sanitary Supply Association</a>{' '}
+          to ensure a consistent, 4.6-star-rated clean and safety for our Dayton house cleaning services.
         </Typography>
 
 
@@ -695,7 +711,7 @@ const ResidentialPage = () => {
             Wondering what's included in our comprehensive Dayton house cleaning services? We provide detailed, 
             professional house cleaners Dayton OH residents trust for consistent, high-quality results. Our experienced cleaners follow a thorough 
             checklist to ensure consistent, high-quality results every time with our reliable maid service Dayton families love.
-            Our trained housekeepers specialize in custom cleaning plans with no contracts, making us the top choice for Dayton house cleaning services.
+            Our trained housekeepers specialize in custom cleaning plans with no contracts, backed by a 4.6-star rating for Dayton house cleaning services.
           </Typography>
 
           <Grid container spacing={4} sx={{ mb: 6 }}>
@@ -806,7 +822,7 @@ const ResidentialPage = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="/images/legacy/FAQ.png"
+              src="/images/legacy/FAQ.webp"
               alt="Frequently asked questions about professional Dayton house cleaning services and maid service options"
               sx={{
                 width: 80,
@@ -893,12 +909,13 @@ const ResidentialPage = () => {
 
           <Box
             component="img"
-            src="/images/legacy/naomi-hebert-MP0bgaS_d1c-unsplash-2-scaled.jpg"
+            src="/images/legacy/naomi-hebert-MP0bgaS_d1c-unsplash-2-scaled.webp"
             alt="Beautiful clean home interior showcasing professional Dayton house cleaning services results and quality workmanship"
             sx={{
               width: '100%',
               maxWidth: 600,
               height: 'auto',
+              aspectRatio: '1200 / 797', // matches the WebP's real dimensions -- reserves layout space before load (unsized-images fix)
               borderRadius: 2,
               boxShadow: theme.shadows[4]
             }}

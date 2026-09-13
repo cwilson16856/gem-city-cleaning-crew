@@ -3,6 +3,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 import {
   Container,
   Typography,
@@ -87,7 +88,7 @@ const MoveOutCleaningPage = () => {
   // Move-Out specific cleaning features
   const moveOutFeatures = [
     {
-      title: "Landlord-Standard Cleaning",
+      title: "Lease-Compliant Cleaning",
       description: "Professional cleaning standards that meet typical landlord and lease requirements",
       icon: <SecurityIcon sx={{ fontSize: 32, color: 'white' }} />
     },
@@ -142,6 +143,19 @@ const MoveOutCleaningPage = () => {
     { text: "Areas We Serve", href: "#service-areas" },
     { text: "Get Your Free Quote", href: "#get-quote" }
   ]
+
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/move-out-cleaning#webpage',
+    url: 'https://gemcitycleaningcrew.com/move-out-cleaning',
+    name: 'Move-Out Cleaning Services Dayton OH',
+    description: '⭐ Professional move-out cleaning services in Dayton, OH. Thorough cleaning designed to meet landlord and lease standards. Serving tenants & property managers.',
+    aboutId: 'https://gemcitycleaningcrew.com/move-out-cleaning#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Move-Out Cleaning', url: 'https://gemcitycleaningcrew.com/move-out-cleaning' }
+    ]
+  })
 
   return (
     <>
@@ -205,6 +219,8 @@ const MoveOutCleaningPage = () => {
             ]
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
 
         {/* FAQ Schema */}
         <script type="application/ld+json">
@@ -410,17 +426,17 @@ const MoveOutCleaningPage = () => {
       <Container maxWidth="lg" sx={{ py: 8 }} id="security-deposit">
         <Box sx={{ textAlign: 'center', mb: 8 }}>
           <Typography variant="h2" component="h2" sx={{ mb: 3 }}>
-            Move-Out Cleaning That Meets Landlord Standards
+            What Landlords Look for at Move-Out
           </Typography>
           <Typography variant="body1" sx={{ fontSize: '1.1rem', maxWidth: 900, mx: 'auto', lineHeight: 1.7 }}>
             Avoid cleaning-related fees at move-out! Our <strong>move-out cleaning services in Dayton</strong> are{' '}
             specifically designed to meet landlord expectations and lease requirements. From <strong>Kettering apartments</strong> to{' '}
             <strong>Centerville rentals</strong> and <strong>Oakwood properties</strong>, we provide thorough cleaning that meets{' '}
             landlord cleaning standards and helps ensure smooth property transitions. Our experienced team understands what landlords and property
-            managers look for during final inspections, following{' '}
-            <a href="https://www.hud.gov/states/ohio/renting" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'none' }}>
-              Ohio tenant rights guidelines
-            </a> to ensure fair treatment and proper cleaning standards.
+            managers look for during final inspections, and our team stays familiar with{' '}
+            <a href="https://codes.ohio.gov/ohio-revised-code/chapter-5321" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'none' }}>
+              Ohio landlord-tenant law (ORC Chapter 5321)
+            </a> so we can follow whatever cleaning checklist your lease or property manager requires.
           </Typography>
         </Box>
 

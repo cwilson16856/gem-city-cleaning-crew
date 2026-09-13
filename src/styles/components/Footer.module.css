@@ -241,4 +241,19 @@
   .serviceAreasContainer {
     justify-content: center;
   }
+
+  /* 44px mobile tap target. Scoped to the nav-list usage only -- .serviceItemLink
+     is also reused for one in-prose link ("view all service areas") that must
+     keep its normal inline text sizing, see additionalAreasNote. */
+  .servicesList > .serviceItemLink {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .legalLink {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
 }

@@ -3,6 +3,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 import {
   Container,
   Typography,
@@ -143,6 +144,19 @@ const MoveInCleaningPage = () => {
     { text: "Get Your Free Quote", href: "#get-quote" }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/move-in-cleaning#webpage',
+    url: 'https://gemcitycleaningcrew.com/move-in-cleaning',
+    name: 'Move-In Cleaning Services Dayton OH',
+    description: '⭐ Professional move-in cleaning services in Dayton, OH. Deep sanitization for new homes & apartments. Fresh start cleaning for families moving to Dayton. Same-day quotes available.',
+    aboutId: 'https://gemcitycleaningcrew.com/move-in-cleaning#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Move-In Cleaning', url: 'https://gemcitycleaningcrew.com/move-in-cleaning' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -205,6 +219,8 @@ const MoveInCleaningPage = () => {
             ]
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
 
         {/* FAQ Schema */}
         <script type="application/ld+json">
@@ -417,7 +433,7 @@ const MoveInCleaningPage = () => {
             your new home is completely sanitized and spotless before you unpack. From <strong>Kettering apartments</strong> to{' '}
             <strong>Centerville houses</strong> and <strong>Oakwood condos</strong>, we provide comprehensive cleaning that creates{' '}
             a fresh, healthy environment for your family. Our professional cleaning team follows{' '}
-            <a href="https://www.cdc.gov/infectioncontrol/guidelines/environmental/cleaning.html" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'none' }}>
+            <a href="https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'none' }}>
               CDC-recommended sanitization standards
             </a> to ensure your new home is safe and clean from day one.
           </Typography>

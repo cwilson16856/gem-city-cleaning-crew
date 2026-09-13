@@ -12,6 +12,7 @@ import ShieldIcon from '@mui/icons-material/Shield'
 import RateReviewIcon from '@mui/icons-material/RateReview'
 import styles from '../styles/components/TrustBlock.module.css'
 import { GBP_REVIEW_URL } from '../utils/localBusinessSchema'
+import { VERIFIED_REVIEWS as REVIEWS, formatReviewDate } from '../data/testimonials'
 
 // Canonical attributed-testimonial + real-policy component for the site's
 // highest-trust-need pages (homepage, About Us, Quote). Added 2026-09-11 SEO
@@ -43,33 +44,6 @@ import { GBP_REVIEW_URL } from '../utils/localBusinessSchema'
 // badge to the real GBP profile instead of asserting an unverifiable claim.
 // aggregateRating on LocalBusiness (localBusinessSchema.js) stays the only
 // review-signal schema; this component is plain visible HTML only.
-
-const REVIEWS = [
-  {
-    name: 'Amanda T.',
-    date: '2025-03-20',
-    rating: 5,
-    platform: 'Google review',
-    text: "I have been using Gem City for four years now and am consistently happy with their service. I typically have the same cleaner who always does amazing, but have always been impressed with others on the team when I've needed to reschedule. Can't recommend them enough."
-  },
-  {
-    name: 'Anne B.',
-    date: '2024-10-15',
-    rating: 5,
-    platform: 'Google review',
-    text: "I've been using Gem City cleaning for 3 years, and I am very happy with the job they do. Consistent, reliable, positive, trustworthy. If ever I've had concerns, they make it right quickly."
-  },
-  {
-    name: 'Valerie P.',
-    date: '2023-09-29',
-    rating: 5,
-    platform: 'Google review',
-    text: 'Gem City has been cleaning our house for several months. Can not say enough positive things about Chris and Macy and their cleaning crews - they take their time and leave no spots untouched. All are reliable and treat each clean as if they were cleaning their own homes! Will be with Gem City until the end of time!'
-  }
-]
-
-const formatReviewDate = (dateStr) =>
-  new Date(dateStr).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
 
 const TrustBlock = ({ variant = 'full' }) => {
   const isCompact = variant === 'compact'

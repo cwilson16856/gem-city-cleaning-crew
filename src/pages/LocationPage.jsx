@@ -53,24 +53,24 @@ import {
 // pages.
 const WHATS_INCLUDED = {
   residential: [
-    'Kitchens — countertops, appliance exteriors, sinks, and cabinet fronts',
-    'Bathrooms — toilets, showers, tubs, mirrors, and sinks',
-    'Bedrooms & living areas — dusting, vacuuming, and surface wipe-down',
-    'Floors — vacuuming and mopping all hard-surface and carpeted areas',
+    'Kitchens: countertops, appliance exteriors, sinks, and cabinet fronts',
+    'Bathrooms: toilets, showers, tubs, mirrors, and sinks',
+    'Bedrooms & living areas: dusting, vacuuming, and surface wipe-down',
+    'Floors: vacuuming and mopping all hard-surface and carpeted areas',
     'Trash removal and general tidying throughout the home'
   ],
   commercial: [
-    'Workstations & offices — desks, surfaces, and high-touch points',
-    'Restrooms — full sanitization of fixtures, mirrors, and floors',
-    'Breakrooms & kitchenettes — counters, sinks, and appliance exteriors',
-    'Common areas & entryways — floors, glass, and reception surfaces',
+    'Workstations & offices: desks, surfaces, and high-touch points',
+    'Restrooms: full sanitization of fixtures, mirrors, and floors',
+    'Breakrooms & kitchenettes: counters, sinks, and appliance exteriors',
+    'Common areas & entryways: floors, glass, and reception surfaces',
     'Trash and recycling removal throughout the facility'
   ]
 }
 
 const HOW_IT_WORKS = [
-  { title: 'Get your free quote', body: 'Call 937-892-4157 or request a quote online — we\'ll ask a few questions about your space and cleaning needs.' },
-  { title: 'We build your plan', body: 'One-time, weekly, bi-weekly, or monthly — with no long-term contract required.' },
+  { title: 'Get your free quote', body: 'Call 937-892-4157 or request a quote online: we\'ll ask a few questions about your space and cleaning needs.' },
+  { title: 'We build your plan', body: 'One-time, weekly, bi-weekly, or monthly: with no long-term contract required.' },
   { title: 'Trained crew arrives', body: 'Every cleaner completes three months of training before working independently.' },
   { title: 'Consistent results', body: 'The same standards every visit, with easy rescheduling if your plans change.' }
 ]
@@ -134,6 +134,19 @@ const LocationsIndex = () => {
     }
   }, [location])
 
+  const canonicalUrl = generateCanonicalUrl('/locations')
+  const webPageSchema = generateLocationWebPageSchema({
+    id: `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: 'Cleaning Service Locations Near Dayton',
+    description: 'Professional cleaning services throughout Greater Dayton including Kettering, Centerville, Beavercreek & more. Residential & commercial cleaning services.',
+    aboutId: 'https://gemcitycleaningcrew.com/#business',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Locations', url: canonicalUrl }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -144,6 +157,7 @@ const LocationsIndex = () => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Cleaning Service Locations Near Dayton | Gem City Cleaning Crew" />
         <meta property="og:description" content="Professional cleaning services throughout Greater Dayton including Kettering, Centerville, Beavercreek & more. Residential & commercial cleaning services." />
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}
@@ -151,7 +165,7 @@ const LocationsIndex = () => {
         title="Service Locations"
         subtitle="Professional Cleaning Services Throughout Greater Dayton"
         description="Residential & Commercial Cleaning Services in Dayton and Surrounding Areas"
-        backgroundImage="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
+        backgroundImage="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp"
         chipText="LICENSED • INSURED • PROFESSIONAL"
         showRating={true}
         ratingValue={4.6}
@@ -307,7 +321,7 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
       <HeroSection
         title={content.heroTitle}
         subtitle={content.heroSubtitle}
-        backgroundImage="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
+        backgroundImage="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp"
         chipText="LICENSED • INSURED • PROFESSIONAL"
         showRating={true}
         ratingValue={4.6}

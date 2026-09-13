@@ -9,34 +9,34 @@ import { test, expect } from '@playwright/test'
 // linking straight to the residential-framed /quote page. This spec covers
 // both the modal conversion and the new ?type=commercial support on /quote
 // itself.
+//
+// Reversed 2026-09-13 SEO audit round 2, "B2B hub CTAs invisible to
+// crawlers/unbookmarkable" finding: the modal chosen above broke
+// crawlability (no href, no bookmarkable URL, back-button doesn't return to
+// the commercial page). /quote?type=commercial now carries the full correct
+// commercial framing end-to-end, including the below-the-fold copy fixed in
+// the same PR as this test update, so the modal's safety-net purpose is no
+// longer needed -- every CTA is now a real, crawlable Link.
 
 const COMMERCIAL_PAGES = [
+  { path: '/commercial', name: 'Commercial' },
   { path: '/office-cleaning', name: 'Office Cleaning' },
   { path: '/retail-cleaning', name: 'Retail Cleaning' },
   { path: '/industrial-cleaning', name: 'Industrial Cleaning' }
 ]
 
-test.describe('Commercial page quote CTAs open a modal defaulting to Commercial', () => {
+test.describe('Commercial page quote CTAs are real, crawlable links to /quote?type=commercial', () => {
   for (const { path, name } of COMMERCIAL_PAGES) {
-    test(`${name} CTA opens the QuoteForm modal in-page, pre-set to Commercial`, async ({ page }) => {
+    test(`${name} CTA is a real link, not a modal trigger`, async ({ page }) => {
       await page.goto(path)
 
-      const ctaButton = page.getByRole('button', { name: /free.*(quote|estimate)/i }).first()
-      await ctaButton.scrollIntoViewIfNeeded()
-      await ctaButton.click()
+      const cta = page.getByRole('link', { name: /free.*(quote|estimate)/i }).first()
+      await cta.scrollIntoViewIfNeeded()
+      await expect(cta).toHaveAttribute('href', '/quote?type=commercial')
 
-      const dialog = page.getByRole('dialog')
-      await expect(dialog).toBeVisible()
-
-      // URL must not have navigated away to /quote -- this is an in-page modal
-      expect(page.url()).toContain(path)
-
-      const commercialOption = dialog.getByRole('button', { name: 'Commercial Cleaning' })
-      await expect(commercialOption).toBeVisible()
-      await expect(commercialOption).toHaveClass(/MuiButton-contained/)
-
-      const residentialOption = dialog.getByRole('button', { name: 'Residential Cleaning' })
-      await expect(residentialOption).toHaveClass(/MuiButton-outlined/)
+      await cta.click()
+      await expect(page).toHaveURL(/\/quote\?type=commercial/)
+      await expect(page.getByRole('dialog')).toHaveCount(0)
     })
   }
 })

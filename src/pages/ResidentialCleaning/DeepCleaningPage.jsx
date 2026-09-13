@@ -3,6 +3,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 import {
   Container,
   Typography,
@@ -140,6 +141,19 @@ const DeepCleaningPage = () => {
     "Detailed trim work"
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/deep-cleaning#webpage',
+    url: 'https://gemcitycleaningcrew.com/deep-cleaning',
+    name: 'Dayton Deep Cleaning Services',
+    description: 'Professional deep cleaning services in Dayton, OH. Complete deep house cleaning including appliances, baseboards, and areas missed in regular cleaning. See dramatic before/after results!',
+    aboutId: 'https://gemcitycleaningcrew.com/deep-cleaning#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Deep Cleaning', url: 'https://gemcitycleaningcrew.com/deep-cleaning' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -170,6 +184,7 @@ const DeepCleaningPage = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://gemcitycleaningcrew.com/deep-cleaning#service",
             "name": "Deep Cleaning Services",
             "description": "Professional deep house cleaning services in Dayton, OH including appliance cleaning, baseboards, and detailed sanitization",
             "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
@@ -188,6 +203,8 @@ const DeepCleaningPage = () => {
             }
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
 
         {/* FAQ Schema */}
         <script type="application/ld+json">

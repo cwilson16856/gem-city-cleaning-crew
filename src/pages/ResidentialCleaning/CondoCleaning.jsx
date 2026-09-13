@@ -34,7 +34,7 @@ import '../../styles/pages/ResidentialPage.css'
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
-import { GBP_REVIEW_URL } from '../../utils/localBusinessSchema'
+import { GBP_REVIEW_URL, generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 
 const CondoCleaning = () => {
   const theme = useTheme()
@@ -195,10 +195,23 @@ const CondoCleaning = () => {
     }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/condo-cleaning#webpage',
+    url: 'https://gemcitycleaningcrew.com/condo-cleaning',
+    name: 'Condo Cleaning Services Dayton OH',
+    description: '⭐ Trusted Condo Cleaning Service in Dayton, OH. Luxury finish care, HOA compliant, property value protection. Professional maid service for condo owners. FREE quotes! Call 937-892-4157',
+    aboutId: 'https://gemcitycleaningcrew.com/condo-cleaning#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Condo Cleaning', url: 'https://gemcitycleaningcrew.com/condo-cleaning' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
-        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Condo Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Condo Cleaning Dayton OH – Luxury Property Care, HOA Compliant, Value Protection" />
@@ -253,13 +266,15 @@ const CondoCleaning = () => {
             ]
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

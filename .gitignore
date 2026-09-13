@@ -4,6 +4,7 @@ node_modules/
 # Build output
 dist/
 dist-ssr/
+stats.html
 
 # Playwright
 test-results/

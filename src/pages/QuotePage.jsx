@@ -92,7 +92,7 @@ const QuotePage = () => {
   return (
     <>
       <Helmet>
-        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Free House Cleaning Quote Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Get Free House Cleaning Quote Dayton OH | Request Estimate Online | Gem City Cleaning" />
@@ -163,7 +163,24 @@ const QuotePage = () => {
             "name": "Request Free Cleaning Quote",
             "description": "Get a free, no-obligation quote for house cleaning services in Dayton, OH. Online form and phone consultations available.",
             "url": "https://gemcitycleaningcrew.com/quote",
-            "mainEntity": { "@id": "https://gemcitycleaningcrew.com/#business" }
+            "mainEntity": { "@id": "https://gemcitycleaningcrew.com/#business" },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://gemcitycleaningcrew.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Request Quote",
+                  "item": "https://gemcitycleaningcrew.com/quote"
+                }
+              ]
+            }
           })}
         </script>
 
@@ -188,28 +205,6 @@ const QuotePage = () => {
               "validFrom": "2024-01-01",
               "areaServed": "Dayton, OH and surrounding areas"
             }
-          })}
-        </script>
-
-        {/* Breadcrumb Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://gemcitycleaningcrew.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Request Quote",
-                "item": "https://gemcitycleaningcrew.com/quote"
-              }
-            ]
           })}
         </script>
 
@@ -263,47 +258,13 @@ const QuotePage = () => {
           })}
         </script>
 
-        {/* Quote Form Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "@id": "https://gemcitycleaningcrew.com/quote#webpage",
-            "name": "Request Free House Cleaning Quote - Gem City Cleaning Crew",
-            "description": "Get your free house cleaning quote online. Professional cleaning services in Dayton, OH with same-day response guaranteed.",
-            "url": "https://gemcitycleaningcrew.com/quote",
-            "mainEntity": {
-              "@type": "WebPageElement",
-              "name": "House Cleaning Quote Form",
-              "description": "Online form to request free house cleaning estimates",
-              "url": "https://gemcitycleaningcrew.com/quote#quote-form"
-            },
-            "breadcrumb": {
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://gemcitycleaningcrew.com"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Request Quote",
-                  "item": "https://gemcitycleaningcrew.com/quote"
-                }
-              ]
-            }
-          })}
-        </script>
       </Helmet>
 
       {/* Hero Section */}
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -832,38 +793,65 @@ const QuotePage = () => {
           </Container>
         </Box>
 
-        {/* Why Get a Free House Cleaning Quote Section */}
+        {/* Why Get a Free House/Commercial Cleaning Quote Section */}
         <Box id="why-get-quote" sx={{ mb: 6 }}>
           <Typography variant="h2" component="h2" sx={{ mb: 3, textAlign: 'center', color: 'primary.main' }}>
-            Why Get a Free House Cleaning Quote?
+            {`Why Get a Free ${serviceType === 'commercial' ? 'Commercial' : 'House'} Cleaning Quote?`}
           </Typography>
-          
+
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
-              <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
-                Getting a <strong>cleaning estimate</strong> from Gem City Cleaning is the first step toward 
-                a cleaner, more comfortable home. Our no-obligation house cleaning quotes provide complete 
-                transparency about pricing and services, allowing you to make informed decisions without pressure.
-              </Typography>
-              
-              <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
-                Understanding <strong>house cleaning costs</strong> in Dayton doesn't have to be complicated. 
-                Our comprehensive cleaning estimates break down every aspect of your service, from basic room 
-                cleaning to specialized tasks like inside appliance cleaning or garage organization. According to the{' '}
-                <a href="https://www.cleaninginstitute.org/" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                  American Cleaning Institute
-                </a>, professional cleaning services save the average household 2-4 hours per week.
-              </Typography>
-              
-              <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
-                Our detailed <strong>maid service quotes</strong> help you understand exactly how this time-saving 
-                investment works for your specific home and budget. We guarantee same-day response to all quote requests 
-                because we understand that when you're ready to get help with house cleaning, you want answers quickly. 
-                Check out our{' '}
-                <Link to="/locations" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                  service areas throughout the Dayton region
-                </Link>.
-              </Typography>
+              {serviceType === 'commercial' ? (
+                <>
+                  <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
+                    Getting a <strong>cleaning estimate</strong> from Gem City Cleaning is the first step toward
+                    a cleaner, more professional facility. Our no-obligation commercial cleaning quotes provide complete
+                    transparency about pricing and services, allowing you to make informed decisions without pressure.
+                  </Typography>
+
+                  <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
+                    Understanding <strong>commercial cleaning costs</strong> in Dayton doesn't have to be complicated.
+                    Our comprehensive cleaning estimates break down every aspect of your service, from routine
+                    janitorial cleaning to specialized tasks like floor care or post-construction cleanup. Handing
+                    that work to our team frees your staff to focus on running the business.
+                  </Typography>
+
+                  <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
+                    Our detailed <strong>commercial cleaning quotes</strong> help you understand exactly how this
+                    investment works for your specific facility and budget. We guarantee same-day response to all quote requests
+                    because we understand that when you're ready to get help with commercial cleaning, you want answers quickly.
+                    Check out our{' '}
+                    <Link to="/locations" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                      service areas throughout the Dayton region
+                    </Link>.
+                  </Typography>
+                </>
+              ) : (
+                <>
+                  <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
+                    Getting a <strong>cleaning estimate</strong> from Gem City Cleaning is the first step toward
+                    a cleaner, more comfortable home. Our no-obligation house cleaning quotes provide complete
+                    transparency about pricing and services, allowing you to make informed decisions without pressure.
+                  </Typography>
+
+                  <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
+                    Understanding <strong>house cleaning costs</strong> in Dayton doesn't have to be complicated.
+                    Our comprehensive cleaning estimates break down every aspect of your service, from basic room
+                    cleaning to specialized tasks like inside appliance cleaning or garage organization. Handing
+                    that work to our team gives you back real time in your week to spend elsewhere.
+                  </Typography>
+
+                  <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
+                    Our detailed <strong>maid service quotes</strong> help you understand exactly how this time-saving
+                    investment works for your specific home and budget. We guarantee same-day response to all quote requests
+                    because we understand that when you're ready to get help with house cleaning, you want answers quickly.
+                    Check out our{' '}
+                    <Link to="/locations" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                      service areas throughout the Dayton region
+                    </Link>.
+                  </Typography>
+                </>
+              )}
             </Grid>
             
             <Grid item xs={12} md={6}>
@@ -948,59 +936,81 @@ const QuotePage = () => {
           </Grid>
         </Box>
 
-        {/* Understanding House Cleaning Costs Section */}
+        {/* Understanding House/Commercial Cleaning Costs Section */}
         <Box id="understanding-costs" sx={{ py: 8, backgroundColor: '#f8f9fa', borderRadius: 3, mb: 6 }}>
           <Typography variant="h2" component="h2" sx={{ mb: 4, textAlign: 'center', color: 'primary.main' }}>
-            Understanding House Cleaning Costs in Dayton
+            {`Understanding ${serviceType === 'commercial' ? 'Commercial' : 'House'} Cleaning Costs in Dayton`}
           </Typography>
-          
+
           <Grid container spacing={4}>
             <Grid item xs={12} md={8}>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
-                <strong>Cleaning service pricing</strong> varies significantly based on several key factors. 
-                Our transparent approach to house cleaning quotes ensures you understand exactly what influences your investment.
+                <strong>Cleaning service pricing</strong> varies significantly based on several key factors.
+                Our transparent approach to {serviceType === 'commercial' ? 'commercial' : 'house'} cleaning quotes ensures you understand exactly what influences your investment.
               </Typography>
-              
+
               <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
-                Home Size & Layout
+                {serviceType === 'commercial' ? 'Facility Size & Layout' : 'Home Size & Layout'}
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
-                Larger homes naturally require more time and resources. Our <strong>cleaning estimates</strong> account 
-                for square footage, number of rooms, and the complexity of your home's layout.
+                {serviceType === 'commercial'
+                  ? "Larger facilities naturally require more time and resources. Our cleaning estimates account for square footage, number of rooms, and the complexity of the layout and traffic patterns at your facility."
+                  : "Larger homes naturally require more time and resources. Our cleaning estimates account for square footage, number of rooms, and the complexity of your home's layout."}
               </Typography>
-              
+
               <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                 Cleaning Frequency
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
-                Regular weekly or bi-weekly service typically costs less per visit than monthly or one-time cleanings 
-                because maintaining an already-clean home requires less intensive work. Learn more about our{' '}
+                Regular weekly or bi-weekly service typically costs less per visit than monthly or one-time cleanings
+                because maintaining an already-clean {serviceType === 'commercial' ? 'facility' : 'home'} requires less intensive work. Learn more about our{' '}
                 <Link to="/recurring-cleaning-service" style={{ color: '#1976d2', textDecoration: 'none' }}>
                   recurring cleaning service options
                 </Link>.
               </Typography>
-              
+
               <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                 Specific Services Needed
               </Typography>
-              <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
-                Basic maintenance cleaning differs from deep cleaning or specialized services like post-construction cleanup. 
-                Each service type has different time and resource requirements reflected in our{' '}
-                <strong>residential cleaning quotes</strong>. View our{' '}
-                <Link to="/residential-house-cleaning-checklist" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                  detailed cleaning checklist
-                </Link>{' '}
-                to understand what's included.
-              </Typography>
+              {serviceType === 'commercial' ? (
+                <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
+                  Basic maintenance cleaning differs from deep cleaning or specialized services like post-construction cleanup.
+                  Each service type has different time and resource requirements reflected in our{' '}
+                  <strong>commercial cleaning quotes</strong>. View our{' '}
+                  <Link to="/office-cleaning-checklist" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                    detailed cleaning checklist
+                  </Link>{' '}
+                  to see everything included.
+                </Typography>
+              ) : (
+                <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
+                  Basic maintenance cleaning differs from deep cleaning or specialized services like post-construction cleanup.
+                  Each service type has different time and resource requirements reflected in our{' '}
+                  <strong>residential cleaning quotes</strong>. View our{' '}
+                  <Link to="/residential-house-cleaning-checklist" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                    detailed cleaning checklist
+                  </Link>{' '}
+                  to understand what's included.
+                </Typography>
+              )}
             </Grid>
-            
+
             <Grid item xs={12} md={4}>
               <Card elevation={2} sx={{ p: 3, height: 'fit-content' }}>
                 <Typography variant="h6" component="h4" sx={{ mb: 2, fontWeight: 600, color: 'primary.main' }}>
                   Cost Factors Include:
                 </Typography>
                 <Box sx={{ '& > div': { mb: 1.5 } }}>
-                  {[
+                  {(serviceType === 'commercial' ? [
+                    'Facility square footage',
+                    'Number of rooms/workstations',
+                    'Current cleanliness level',
+                    'Frequency of service',
+                    'Special requests or add-ons',
+                    'Accessibility and layout',
+                    'After-hours/access scheduling needs',
+                    'Eco-friendly product preferences'
+                  ] : [
                     'Home square footage',
                     'Number of bedrooms & bathrooms',
                     'Current cleanliness level',
@@ -1009,7 +1019,7 @@ const QuotePage = () => {
                     'Accessibility and layout',
                     'Pet hair or allergen considerations',
                     'Eco-friendly product preferences'
-                  ].map((item, index) => (
+                  ]).map((item, index) => (
                     <Box key={index} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                       <Box sx={{ 
                         width: 6, 
@@ -1032,8 +1042,8 @@ const QuotePage = () => {
               Quality Service at Fair Prices
             </Typography>
             <Typography variant="body1" sx={{ maxWidth: 600, mx: 'auto', color: 'text.secondary' }}>
-              Our goal is to provide <strong>cleaning estimates</strong> that offer exceptional value for Dayton homeowners 
-              while maintaining the highest standards of service quality.
+              Our goal is to provide <strong>cleaning estimates</strong> that offer exceptional value for Dayton homeowners,
+              backed by our 4.6-star rating and licensed, insured service.
             </Typography>
           </Box>
         </Box>
@@ -1113,11 +1123,11 @@ const QuotePage = () => {
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
                 We offer multiple ways to reach us including phone, text, and email for faster response times and more 
                 personalized customer service. After each visit, you have the opportunity to rate your cleaning and 
-                provide feedback, ensuring we continuously improve our service quality. We follow{' '}
-                <a href="https://www.epa.gov/indoor-air-quality-iaq/publications-about-indoor-air-quality" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                  EPA guidelines for residential cleaning
+                provide feedback, ensuring we continuously improve our service quality. We are informed by{' '}
+                <a href="https://www.epa.gov/saferchoice" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                  the EPA Safer Choice program
                 </a>{' '}
-                to ensure our quotes reflect proper cleaning standards and safety protocols.
+                when selecting cleaning products, so our quotes reflect proper cleaning standards and safety protocols.
               </Typography>
             </Grid>
           </Grid>

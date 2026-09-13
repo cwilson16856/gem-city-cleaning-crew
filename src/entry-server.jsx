@@ -69,6 +69,7 @@ import NotFound from './pages/NotFound'
 
 import { theme } from './App.jsx'
 import { generateLocalBusinessSchema } from './utils/localBusinessSchema'
+import { isBlogPath } from './utils/seo'
 
 // renderToStaticMarkup() with Emotion's DEFAULT (no CacheProvider, no
 // extraction) SSR behavior emits one <style data-emotion="css HASH">
@@ -118,7 +119,7 @@ function extractEmotionStyles(html) {
 // <head> alongside the helmet tags.
 export function render(url) {
   const helmetContext = {}
-  const localBusinessData = generateLocalBusinessSchema()
+  const localBusinessData = generateLocalBusinessSchema(undefined, { includeAggregateRating: !isBlogPath(url) })
 
   const appHtml = renderToString(
     <CacheProvider value={emotionCache}>

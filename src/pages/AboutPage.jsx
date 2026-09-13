@@ -56,7 +56,7 @@ const differentiators = [
   { title: 'The same cleaner every time.', body: 'They get to know your home, so nothing gets overlooked.' },
   { title: 'No initial-clean upcharge, up to 5 hours.', body: "That covers most homes. If we expect to run longer, we call first to talk through what's done, what's left, and next steps." },
   { title: 'We bring our own supplies.', body: 'Professional-grade products, included with every visit.' },
-  { title: 'We reply within 30 minutes during business hours.', body: 'Through the portal, text, email, or a call — whatever\'s easiest for you.' },
+  { title: 'We reply within 30 minutes during business hours.', body: 'Through the portal, text, email, or a call, whatever\'s easiest for you.' },
   { title: "If your regular cleaner is out sick, we reach out before your appointment.", body: 'Your call: a substitute cleaner, or we reschedule around you.' }
 ]
 
@@ -67,12 +67,12 @@ const AboutPage = () => {
     <>
       <Helmet>
         <title>About Us | Gem City Cleaning Crew</title>
-        <meta name="description" content="Meet Chris and Macy Wilson, owners of Gem City Cleaning Crew — Dayton's no-contract residential and commercial cleaning company since 2017. Our mission, values, and training program." />
+        <meta name="description" content="Meet Chris and Macy Wilson, owners of Gem City Cleaning Crew. Dayton's no-contract residential and commercial cleaning company since 2017. Our mission, values, and training program." />
         <link rel="canonical" href="https://gemcitycleaningcrew.com/about-us" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/about-us" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="About Us | Gem City Cleaning Crew" />
-        <meta property="og:description" content="Meet Chris and Macy Wilson, owners of Gem City Cleaning Crew — Dayton's no-contract residential and commercial cleaning company since 2017. Our mission, values, and training program." />
+        <meta property="og:description" content="Meet Chris and Macy Wilson, owners of Gem City Cleaning Crew. Dayton's no-contract residential and commercial cleaning company since 2017. Our mission, values, and training program." />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
@@ -132,8 +132,8 @@ const AboutPage = () => {
         </Typography>
         <Typography variant="body1" sx={{ mb: 6, fontSize: '1.1rem', lineHeight: 1.7 }}>
           We create a positive atmosphere in the home and business by cleaning from top to bottom. The
-          services that we offer — house cleaning, commercial cleaning, post-construction cleanup, deep
-          cleaning, sanitization, and move in/out cleaning — are all part of the way we help you thrive
+          services that we offer, house cleaning, commercial cleaning, post-construction cleanup, deep
+          cleaning, sanitization, and move in/out cleaning, are all part of the way we help you thrive
           at home or in the workplace.
         </Typography>
 
@@ -152,7 +152,7 @@ const AboutPage = () => {
           <Link to="/our-training-program" style={{ color: theme.palette.primary.main, fontWeight: 600 }}>
             three-month training program
           </Link>{' '}
-          before working independently in a client&apos;s home or business — it&apos;s not a one-day orientation,
+          before working independently in a client&apos;s home or business: it&apos;s not a one-day orientation,
           it&apos;s how we make sure the standard we set is the standard you actually get.
         </Typography>
 

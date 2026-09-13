@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import {
   Container,
@@ -47,21 +48,10 @@ const SERVICE_ID = `${PAGE_URL}#service`
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
-import QuoteForm from '../../components/QuoteForm'
 import TrustBlock from '../../components/TrustBlock'
 
 const RetailCleaning = () => {
   const theme = useTheme()
-  const [quoteFormOpen, setQuoteFormOpen] = useState(false)
-
-  const handleOpenQuoteForm = () => {
-    setQuoteFormOpen(true)
-  }
-
-  const handleCloseQuoteForm = () => {
-    setQuoteFormOpen(false)
-  }
-
   // Retail Types - positioned high up
   const retailTypes = [
     {
@@ -164,19 +154,19 @@ const RetailCleaning = () => {
       title: "Customer-Focused Cleaning",
       description: "We understand that clean retail spaces directly impact customer experience and sales, prioritizing areas that matter most to your business.",
       icon: <PersonIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Trained.png"
+      image: "/images/legacy/Trained.webp"
     },
     {
       title: "Flexible Scheduling",
       description: "Work around your business hours with evening, weekend, and holiday cleaning options that don't disrupt customer traffic.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Plan.png"
+      image: "/images/legacy/Plan.webp"
     },
     {
       title: "No Contracts Required",
       description: "Flexible retail cleaning services without long-term contracts. Adjust frequency and services as your business needs change.",
       icon: <DescriptionIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.webp"
     }
   ]
 
@@ -410,7 +400,8 @@ const RetailCleaning = () => {
             <Button
               variant="contained"
               size="large"
-              onClick={handleOpenQuoteForm}
+              component={Link}
+              to="/quote?type=commercial"
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -553,7 +544,8 @@ const RetailCleaning = () => {
           <Button
             variant="outlined"
             size="large"
-            onClick={handleOpenQuoteForm}
+            component={Link}
+            to="/quote?type=commercial"
             sx={{
               fontSize: '1.1rem',
               px: 4,
@@ -732,7 +724,8 @@ const RetailCleaning = () => {
               <Button
                 variant="contained"
                 size="large"
-                onClick={handleOpenQuoteForm}
+                component={Link}
+                to="/quote?type=commercial"
                 sx={{
                   fontSize: '1.1rem',
                   px: 4,
@@ -759,7 +752,7 @@ const RetailCleaning = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="/images/legacy/FAQ.png"
+              src="/images/legacy/FAQ.webp"
               alt="Frequently asked questions about professional Dayton retail cleaning services"
               sx={{
                 width: 80,
@@ -805,7 +798,7 @@ const RetailCleaning = () => {
 
       {/* Service Areas with Map */}
       <Box id="service-areas">
-        <AreasWeServe />
+        <AreasWeServe serviceType="commercial" />
       </Box>
 
       {/* Excellence Section */}
@@ -828,7 +821,7 @@ const RetailCleaning = () => {
           <Typography variant="body1" sx={{ mb: 4, maxWidth: 900, mx: 'auto', lineHeight: 1.7 }}>
             At Gem City Cleaning Crew, we understand that your retail environment directly impacts customer experience, sales, and brand perception. 
             Our professional retail cleaning services are designed specifically for Dayton's retail community, serving clothing stores, restaurants, 
-            salons, fitness centers, and shopping centers with the highest standards of cleanliness and customer focus. 
+            salons, fitness centers, and shopping centers, backed by a 4.6-star rating and a customer-focused approach.
             With flexible scheduling, no long-term contracts, and customer-focused cleaning approaches, 
             we help create inviting retail spaces that enhance your business success and customer satisfaction.
           </Typography>
@@ -862,7 +855,8 @@ const RetailCleaning = () => {
             <Button
               variant="contained"
               size="large"
-              onClick={handleOpenQuoteForm}
+              component={Link}
+              to="/quote?type=commercial"
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -915,15 +909,6 @@ const RetailCleaning = () => {
         </Container>
       </Box>
 
-      {/* Quote Form Modal */}
-      {/* Quote modal defaults to suggesting Commercial (this is a commercial page), but always
-          asks the user to confirm residential vs. commercial before loading either form. */}
-      <QuoteForm
-        open={quoteFormOpen}
-        onClose={handleCloseQuoteForm}
-        title="Get Your Free Cleaning Estimate!"
-        defaultServiceType="commercial"
-      />
     </>
   )
 }

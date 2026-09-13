@@ -34,7 +34,7 @@ import '../../styles/pages/ResidentialPage.css'
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
-import { GBP_REVIEW_URL } from '../../utils/localBusinessSchema'
+import { GBP_REVIEW_URL, generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 
 const ApartmentCleaning = () => {
   const theme = useTheme()
@@ -155,7 +155,7 @@ const ApartmentCleaning = () => {
   const apartmentFAQ = [
     {
       question: "Does apartment cleaning affect my security deposit?",
-      answer: "Deposit decisions are made by your landlord or property manager. We specifically focus on the areas landlords inspect most carefully during move-out — appliances, cabinets, baseboards, and all surfaces — so your apartment meets the cleaning standards landlords typically look for."
+      answer: "Deposit decisions are made by your landlord or property manager. We specifically focus on the areas landlords inspect most carefully during move-out: appliances, cabinets, baseboards, and all surfaces so your apartment meets the cleaning standards landlords typically look for."
     },
     {
       question: "How much does apartment cleaning cost?",
@@ -195,14 +195,27 @@ const ApartmentCleaning = () => {
     }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/apartment-cleaning#webpage',
+    url: 'https://gemcitycleaningcrew.com/apartment-cleaning',
+    name: 'Apartment Cleaning Dayton OH',
+    description: 'Professional apartment cleaning in Dayton, OH: regular maintenance, deep cleaning, and rental-ready turnovers for tenants and property managers. Free quotes! Call 937-892-4157',
+    aboutId: 'https://gemcitycleaningcrew.com/apartment-cleaning#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Apartment Cleaning', url: 'https://gemcitycleaningcrew.com/apartment-cleaning' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
-        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Apartment Cleaning Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Apartment Cleaning Dayton OH | Same-Day Service, Landlord-Standard Cleaning" />
-        <meta name="description" content="Professional apartment cleaning in Dayton, OH — regular maintenance, deep cleaning, and rental-ready turnovers for tenants and property managers. Free quotes! Call 937-892-4157" />
+        <meta name="description" content="Professional apartment cleaning in Dayton, OH: regular maintenance, deep cleaning, and rental-ready turnovers for tenants and property managers. Free quotes! Call 937-892-4157" />
         <meta name="keywords" content="apartment cleaning Dayton, apartment deep cleaning, move out apartment cleaning, student housing cleaning UD, vacant apartment cleaning, rental property cleaning Dayton, Kettering apartment cleaning, Centerville apartment cleaning, Oakwood apartment cleaning, apartment cleaning near me, rental cleaning service, professional apartment cleaners Dayton" />
         
         {/* Additional SEO Meta Tags */}
@@ -253,13 +266,15 @@ const ApartmentCleaning = () => {
             ]
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

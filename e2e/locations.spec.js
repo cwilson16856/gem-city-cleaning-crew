@@ -116,11 +116,11 @@ test.describe('Location Pages', () => {
 
   test('WHATS_INCLUDED and HOW_IT_WORKS remain shared across cities (regression guard)', async ({ page }) => {
     await page.goto('/locations/dayton/house-cleaning-services')
-    await expect(page.getByText('Kitchens — countertops, appliance exteriors, sinks, and cabinet fronts')).toBeVisible()
+    await expect(page.getByText('Kitchens: countertops, appliance exteriors, sinks, and cabinet fronts')).toBeVisible()
     await expect(page.getByRole('heading', { name: /get your free quote/i, level: 6 })).toBeVisible()
 
     await page.goto('/locations/kettering/house-cleaning-services')
-    await expect(page.getByText('Kitchens — countertops, appliance exteriors, sinks, and cabinet fronts')).toBeVisible()
+    await expect(page.getByText('Kitchens: countertops, appliance exteriors, sinks, and cabinet fronts')).toBeVisible()
     await expect(page.getByRole('heading', { name: /get your free quote/i, level: 6 })).toBeVisible()
   })
 
@@ -177,6 +177,7 @@ test.describe('Location Pages', () => {
       await page.goto('/locations/yellow-springs/house-cleaning-services')
       await page.goto('/locations/oakwood/commercial-cleaning-services')
       await page.goto('/locations/huber-heights/commercial-cleaning-services')
+      await expect(page.getByText('Table of Contents')).toBeVisible()
 
       const relevantErrors = consoleErrors.filter(
         (e) => !/ResizeObserver|favicon/i.test(e)

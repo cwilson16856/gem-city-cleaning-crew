@@ -44,7 +44,7 @@ import '../../styles/pages/ResidentialPage.css'
 
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
-import { GBP_REVIEW_URL } from '../../utils/localBusinessSchema'
+import { GBP_REVIEW_URL, generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 
 const AirBnbCleaning = () => {
   const theme = useTheme()
@@ -197,6 +197,19 @@ const AirBnbCleaning = () => {
     }
   ]
 
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/airbnb-cleaning-service#webpage',
+    url: 'https://gemcitycleaningcrew.com/airbnb-cleaning-service',
+    name: 'Airbnb Cleaning Service Dayton OH',
+    description: '⭐ 4.6-Star Rated AirBnb Cleaning Service in Dayton, OH. Same-day turnaround, hospitality standards, flexible scheduling. Maximize your bookings with spotless properties. FREE quotes! Call 937-892-4157',
+    aboutId: 'https://gemcitycleaningcrew.com/airbnb-cleaning-service#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Airbnb Cleaning Service', url: 'https://gemcitycleaningcrew.com/airbnb-cleaning-service' }
+    ]
+  })
+
   return (
     <>
       <Helmet>
@@ -270,6 +283,8 @@ const AirBnbCleaning = () => {
             ]
           })}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
 
         {/* FAQ Schema */}
         <script type="application/ld+json">
@@ -508,7 +523,7 @@ const AirBnbCleaning = () => {
           <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 800, mx: 'auto' }}>
             Simple, reliable, and designed for busy hosts. We handle the AirBnb cleaning so you can focus on 
             providing amazing guest experiences and maximizing your bookings in the Dayton area. Our vacation rental cleaning service 
-            follows industry best practices recommended by the <a href="https://www.cdc.gov/hygiene/cleaning/index.html" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'underline' }}>CDC for professional cleaning standards</a>.
+            follows general <a href="https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'underline' }}>CDC guidance on cleaning and disinfecting</a> as part of our own guest-turnover process.
           </Typography>
         </Box>
 
@@ -710,7 +725,7 @@ const AirBnbCleaning = () => {
             Why AirBnb Hosts in Dayton Choose Our Professional Cleaning Service
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', maxWidth: 800, mx: 'auto' }}>
-            More than just cleaning - we're your partner in creating exceptional guest experiences 
+            More than just cleaning - we're your partner in creating guest-ready spaces
             that drive bookings, reviews, and revenue for your short-term rental property in Dayton, OH.
           </Typography>
         </Box>

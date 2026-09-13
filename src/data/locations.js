@@ -18,10 +18,10 @@ export const CITIES = {
     residential: {
       heroTitle: 'House Cleaning Services in Dayton, OH',
       heroSubtitle: 'From Oregon District Bungalows to Wright-Dunbar Victorians',
-      metaDescription: 'Professional house cleaning in Dayton, OH — Oregon District, Wright-Dunbar, and Downtown. Licensed, insured, same-day availability.',
+      metaDescription: 'Professional house cleaning in Dayton, OH: Oregon District, Wright-Dunbar, and Downtown. Licensed, insured, same-day availability.',
       intro: [
         "Dayton's older neighborhoods bring their own cleaning considerations. In the Oregon District, that means rowhouses and apartments with original hardwood and tight kitchens; in Wright-Dunbar, it means late-1800s Victorians with bay windows, tall baseboards, and plaster walls that need a gentler touch than modern drywall.",
-        "We clean homes throughout Dayton's 45402, 45405, 45406, 45410, 45417, and 45459 zip codes, from Downtown high-rises near the Dayton Art Institute to family homes further out. Weekly, bi-weekly, monthly, or one-time — we'll build a plan around your home's layout and age.",
+        "We clean homes throughout Dayton's 45402, 45405, 45406, 45410, 45417, and 45459 zip codes, from Downtown high-rises near the Dayton Art Institute to family homes further out. Weekly, bi-weekly, monthly, or one-time: we'll build a plan around your home's layout and age.",
         "South Park, one of the largest historic districts in the city, adds another housing type to the mix: more than 700 Victorian and Craftsman-era structures where original trim, hardwood, and plaster call for the same careful approach we use in the Oregon District and Wright-Dunbar.",
         "Every Dayton cleaner we send has completed three months of training and passed a Checkr background check before working independently, and every visit is backed by the same licensed-and-insured guarantee whether you're in a Downtown high-rise or a South Park bungalow."
       ],
@@ -46,10 +46,10 @@ export const CITIES = {
     commercial: {
       heroTitle: 'Commercial Cleaning Services in Dayton, OH',
       heroSubtitle: 'Serving Downtown Offices to Oregon District Storefronts',
-      metaDescription: 'Commercial cleaning in Dayton, OH — downtown offices, Oregon District restaurants and retail. Flexible after-hours scheduling.',
+      metaDescription: 'Commercial cleaning in Dayton, OH: downtown offices, Oregon District restaurants and retail. Flexible after-hours scheduling.',
       intro: [
         "Downtown Dayton's office towers near Fifth Third Field and the Victoria Theatre need a different cleaning rhythm than the bars and restaurants a few blocks away in the Oregon District, where kitchens and late-night foot traffic mean cleaning crews often work early mornings after close.",
-        "We handle both — office suites, retail storefronts, and restaurant common areas throughout Downtown and the Oregon District — with scheduling built around your hours, not ours.",
+        "We handle both: office suites, retail storefronts, and restaurant common areas throughout Downtown and the Oregon District, with scheduling built around your hours, not ours.",
         "Grafton Hill and Five Oaks, home to the Dayton Art Institute, round out our commercial route with smaller professional offices that need the same reliable, background-checked crews as our biggest Downtown accounts.",
         "Gem City Cleaning Crew has served the Dayton area since 2017, and every commercial cleaner is Checkr background-checked and licensed and insured before ever working a Dayton account independently."
       ],
@@ -87,7 +87,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Homes Throughout Kettering, Ohio',
       metaDescription: 'Professional house cleaning in Kettering, OH near Fraze Pavilion and Town & Country. Licensed, insured, flexible scheduling.',
       intro: [
-        "Kettering is named for Charles Kettering, but it's Ermal Fraze — the Kettering resident who invented the pop-top can — that the 4,300-seat Fraze Pavilion amphitheater honors. It's one of the touches that makes this a distinct community, not just a Dayton suburb.",
+        "Kettering is named for Charles Kettering, but it's Ermal Fraze, the Kettering resident who invented the pop-top can, that the 4,300-seat Fraze Pavilion amphitheater honors. It's one of the touches that makes this a distinct community, not just a Dayton suburb.",
         "We serve homes across Kettering's 45429 core and the surrounding 45409, 45419, 45420, 45430, 45439, 45440, and 45459 zips, from starter homes to larger properties near the Town & Country retail corridor.",
         "At roughly 57,000 residents, Kettering is the most populous suburb in the Dayton area, and its mostly mid-century housing stock of ranches and split-levels is a big part of why we tailor each visit to the home's actual age rather than a one-size-fits-all checklist.",
         "Every cleaner we send to a Kettering home has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -152,7 +152,7 @@ export const CITIES = {
     residential: {
       heroTitle: 'House Cleaning Services in Oakwood, OH',
       heroSubtitle: 'Trusted Cleaning for Oakwood\'s Historic Homes',
-      metaDescription: 'Professional house cleaning in Oakwood, OH — Schantz Park and the 45419 area. Experienced with historic homes, licensed & insured.',
+      metaDescription: 'Professional house cleaning in Oakwood, OH: Schantz Park and the 45419 area. Experienced with historic homes, licensed & insured.',
       intro: [
         "Oakwood's Schantz Park Historic District is listed on the National Register of Historic Places, with many homes built before 1939, not far from Hawthorn Hill, Orville Wright's former home. Cleaning a house like that means working around original woodwork, older window frames, and finishes that don't always match modern building materials.",
         "Nearly all of Oakwood falls within 45419. We tailor our approach to each home's age and layout, whether that's a Schantz Park original or a newer build near the Wright Memorial Public Library.",
@@ -182,7 +182,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Oakwood\'s Local Businesses',
       metaDescription: 'Commercial cleaning in Oakwood, OH for small businesses and offices in the 45419 area. Licensed & insured.',
       intro: [
-        "Oakwood is a small, mostly residential community, and its handful of local businesses and professional offices — many clustered along Far Hills Avenue — tend to want the same personal, detail-oriented service their historic-home neighbors expect.",
+        "Oakwood is a small, mostly residential community, and its handful of local businesses and professional offices, many clustered along Far Hills Avenue, tend to want the same personal, detail-oriented service their historic-home neighbors expect.",
         "We provide that same level of care for Oakwood's offices and small businesses, with flexible scheduling that fits a compact commercial footprint.",
         "With roughly 9,500 residents citywide, Oakwood's commercial base is genuinely small, which is exactly why we don't size our scheduling or pricing around a minimum job like a franchise operation might.",
         "Gem City Cleaning Crew has served the Oakwood area since 2017, and every commercial cleaner is Checkr background-checked, licensed, and insured before working an Oakwood account independently."
@@ -218,7 +218,7 @@ export const CITIES = {
     residential: {
       heroTitle: 'House Cleaning Services in Centerville, OH',
       heroSubtitle: 'Serving Homes Across Centerville Since Founding in 1796',
-      metaDescription: 'Professional house cleaning services in Centerville, Ohio — Uptown and surrounding neighborhoods. Licensed, insured, no contracts.',
+      metaDescription: 'Professional house cleaning services in Centerville, Ohio: Uptown and surrounding neighborhoods. Licensed, insured, no contracts.',
       intro: [
         "Founded in 1796, Centerville has one of Ohio's largest collections of early stone buildings, and Uptown Centerville's brick sidewalks and limestone architecture still define the area around the Asahel Wright House at the Four Corners.",
         "We clean homes throughout Centerville's 45305, 45458, and 45459 zip codes, from homes near Uptown to newer developments further out, with the same reliable, no-contract scheduling.",
@@ -248,7 +248,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Nearly 100 Uptown Centerville Businesses and More',
       metaDescription: 'Commercial cleaning in Centerville, OH for offices and retail in and around Uptown Centerville. Flexible scheduling.',
       intro: [
-        "Uptown Centerville is home to nearly 100 businesses along Main Street's Architectural Preservation District — boutiques, cafés, and offices that need cleaning crews who can work around retail hours and historic storefronts alike.",
+        "Uptown Centerville is home to nearly 100 businesses along Main Street's Architectural Preservation District: boutiques, cafés, and offices that need cleaning crews who can work around retail hours and historic storefronts alike.",
         "We serve offices, retail, and medical facilities throughout Centerville, with scheduling built around your business hours, not ours.",
         "Beyond Uptown, Centerville's roughly 25,000 residents support a real base of medical and professional offices throughout Washington Township, and we treat those accounts with the same care as our historic Main Street clients.",
         "Gem City Cleaning Crew has served Centerville businesses since 2017, and every commercial cleaner is Checkr background-checked, licensed, and insured before working a Centerville account independently."
@@ -287,7 +287,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Homes Near the Miamisburg Mound',
       metaDescription: 'Professional house cleaning in Miamisburg, OH, zip code 45342. Licensed, insured, flexible scheduling.',
       intro: [
-        "The Miamisburg Mound is the largest prehistoric burial mound in the Eastern U.S. — 65 feet tall, inside the 37-acre Mound Park — and it's a fitting anchor for a city that takes its history seriously, down to the last remaining brick street in its historic downtown.",
+        "The Miamisburg Mound is the largest prehistoric burial mound in the Eastern U.S., 65 feet tall, inside the 37-acre Mound Park, and it's a fitting anchor for a city that takes its history seriously, down to the last remaining brick street in its historic downtown.",
         "We clean homes throughout Miamisburg's 45342 zip code, from homes near downtown's Market Square to newer neighborhoods further from the river.",
         "At about 20,000 residents spread across neighborhoods like City Center, Miamisburg South, and the newer Sycamore Trails area, the city has enough of a range in home age that we tailor each visit rather than treating every Miamisburg home the same.",
         "Every Miamisburg cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -354,7 +354,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Homes Between Dayton and Cincinnati',
       metaDescription: 'Professional house cleaning in Springboro, OH, zip code 45066. Licensed, insured, no contracts required.',
       intro: [
-        "Springboro sits between Dayton and Cincinnati, and its 50-acre Historic District — Federal and Greek Revival buildings along Main, East, and Mill Streets — reflects a city that provided more Underground Railroad safe houses than anywhere else in Ohio.",
+        "Springboro sits between Dayton and Cincinnati, and its 50-acre Historic District, Federal and Greek Revival buildings along Main, East, and Mill Streets, reflects a city that provided more Underground Railroad safe houses than anywhere else in Ohio.",
         "We clean homes throughout Springboro's 45066 zip code, from homes near the Old Stone Church and historic district to newer developments on the city's edges.",
         "At roughly 19,600 residents, Springboro has grown well beyond its historic core into newer communities like Heatherwoode and Settlers Walk, and we tailor our approach whether that means a 19th-century home along Main Street or a recently built one further out.",
         "Every Springboro cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -419,9 +419,9 @@ export const CITIES = {
     residential: {
       heroTitle: 'House Cleaning Services in Huber Heights, OH',
       heroSubtitle: '"America\'s Largest Community of Brick Homes"',
-      metaDescription: 'Professional house cleaning in Huber Heights, OH — brick ranch homes and newer developments. Licensed & insured.',
+      metaDescription: 'Professional house cleaning in Huber Heights, OH: brick ranch homes and newer developments. Licensed & insured.',
       intro: [
-        "Huber Heights earned its motto — \"America's largest community of brick homes\" — from the solid brick ranch homes Charles Huber built in neighborhoods like Belle Plain, Beldale, and Evergreen Woods. Newer upscale developments like Stoney Creek and Callamere Farms have added to the mix since.",
+        "Huber Heights earned its motto, \"America's largest community of brick homes,\" from the solid brick ranch homes Charles Huber built in neighborhoods like Belle Plain, Beldale, and Evergreen Woods. Newer upscale developments like Stoney Creek and Callamere Farms have added to the mix since.",
         "We clean homes throughout Huber Heights, from classic brick ranches to newer builds, with scheduling that works whether you're 10 minutes from Wright-Patterson AFB or closer to Dayton.",
         "With over 40,000 residents, Huber Heights is one of the larger cities we serve, and its mix of decades-old brick ranches and newer Stoney Creek-era construction means we adjust our approach by the home's actual age, not a single citywide checklist.",
         "Every Huber Heights cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -488,7 +488,7 @@ export const CITIES = {
       heroSubtitle: 'Serving a City Split by the Mad River',
       metaDescription: 'Professional house cleaning in Riverside, OH, home to the National Museum of the U.S. Air Force. Licensed & insured.',
       intro: [
-        "Riverside, incorporated in 1995, is split in half by the Mad River and home to the National Museum of the U.S. Air Force — the largest aviation museum in the world, drawing over a million visitors a year.",
+        "Riverside, incorporated in 1995, is split in half by the Mad River and home to the National Museum of the U.S. Air Force, the largest aviation museum in the world, drawing over a million visitors a year.",
         "We clean homes throughout Riverside's neighborhoods, from Belmont and Kittyhawk to Walnut Hills, in the 45404 and 45433 zip codes.",
         "At roughly 24,000 residents, Riverside is a fairly compact city, but its neighborhoods on either side of the Mad River each have their own character, and we schedule crews familiar with both Belmont/Kittyhawk and the Walnut Hills side.",
         "Every Riverside cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -516,7 +516,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Offices Near Wright-Patterson AFB',
       metaDescription: 'Commercial cleaning in Riverside, OH for offices and businesses near Wright-Patterson Air Force Base. Licensed & insured.',
       intro: [
-        "Riverside sits right next to Wright-Patterson Air Force Base — the third-largest base in the country — and many of its offices and commercial spaces serve base employees and contractors directly.",
+        "Riverside sits right next to Wright-Patterson Air Force Base, the third-largest base in the country, and many of its offices and commercial spaces serve base employees and contractors directly.",
         "We clean offices and commercial spaces throughout Riverside, with scheduling that fits the base's rhythms as easily as a standard 9-to-5.",
         "The National Museum of the U.S. Air Force also draws over a million visitors a year, and nearby businesses that serve that traffic get the same reliable scheduling as our base-adjacent accounts.",
         "Gem City Cleaning Crew has served Riverside businesses since 2017, and every commercial cleaner is Checkr background-checked, licensed, and insured before working a Riverside account independently."
@@ -564,7 +564,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Homes Near the Greene County Courthouse',
       metaDescription: 'Professional house cleaning in Xenia, OH, zip code 45385, near the Greene County Courthouse. Licensed & insured.',
       intro: [
-        "As the Greene County seat, Xenia's 1902 courthouse — designed by Samuel Hannaford & Sons — anchors a downtown surrounded by Victorian-era homes in the East Second Street Historic District, many within walking distance of Xenia Station's trail hub.",
+        "As the Greene County seat, Xenia's 1902 courthouse, designed by Samuel Hannaford & Sons, anchors a downtown surrounded by Victorian-era homes in the East Second Street Historic District, many within walking distance of Xenia Station's trail hub.",
         "We clean homes throughout Xenia's 45385 zip code, from historic homes near the courthouse square to newer development on the city's north and east sides."
       ],
       breadcrumbLabel: 'Xenia House Cleaning',
@@ -655,7 +655,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Homes Near Wright State University',
       metaDescription: 'Professional house cleaning in Fairborn, OH, zip code 45324, home to Wright State University. Licensed & insured.',
       intro: [
-        "Fairborn, about 14 miles northeast of Dayton, is home to Wright State University — independent since 1967 and named for the Wright brothers — which brings a mix of student housing, faculty homes, and long-time residents into the same zip code.",
+        "Fairborn, about 14 miles northeast of Dayton, is home to Wright State University, independent since 1967 and named for the Wright brothers, which brings a mix of student housing, faculty homes, and long-time residents into the same zip code.",
         "We clean homes throughout Fairborn's 45324 zip code, whether that's a rental near campus or a family home closer to the historic downtown.",
         "At roughly 34,500 residents, Fairborn's housing ranges from campus-area rentals to established family neighborhoods like Holiday Valley, and we clean each the way it actually needs, not a single one-size-fits-all visit.",
         "Every Fairborn cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -720,7 +720,7 @@ export const CITIES = {
       heroSubtitle: 'Serving a Village Anchored by Antioch College',
       metaDescription: 'Professional house cleaning in Yellow Springs, OH, zip code 45387, near Antioch College and Glen Helen. Licensed & insured.',
       intro: [
-        "Yellow Springs is a village of under 4,000 people, built around Antioch College — founded in 1850 — and bordered by the 700-plus acres of old-growth forest at Glen Helen Nature Preserve, with John Bryan State Park just beyond.",
+        "Yellow Springs is a village of under 4,000 people, built around Antioch College, founded in 1850, and bordered by the 700-plus acres of old-growth forest at Glen Helen Nature Preserve, with John Bryan State Park just beyond.",
         "We clean homes throughout Yellow Springs' 45387 zip code, from historic-district homes to properties bordering Glen Helen.",
         "Being one of the smallest villages we serve doesn't mean less attention. If anything, a compact, walkable community like Yellow Springs means our crews get to know a client's home and its quirks faster than in a larger, more spread-out city.",
         "Every Yellow Springs cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -785,7 +785,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Homes Since the Canal Era',
       metaDescription: 'Professional house cleaning in Tipp City, OH, zip code 45371. Licensed & insured, serving the historic Main Street district.',
       intro: [
-        "Founded in 1840 along the Miami and Erie Canal, Tipp City's Main Street — the Old Tippecanoe Historic District — still has more than 90 buildings on the National Register, including the 1850s Hotel Gallery, now home to local shops.",
+        "Founded in 1840 along the Miami and Erie Canal, Tipp City's Main Street, the Old Tippecanoe Historic District, still has more than 90 buildings on the National Register, including the 1850s Hotel Gallery, now home to local shops.",
         "We clean homes throughout Tipp City's roughly 10,000-resident community, from historic homes near Main Street to newer neighborhoods around the city's 20-plus parks.",
         "Kyle Park, one of the newer additions to Tipp City's park system at roughly 280 acres, anchors newer residential growth on the south side of the city, giving us two distinct housing eras to work around: canal-era Main Street homes and more recently built neighborhoods further out.",
         "Every Tipp City cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -812,7 +812,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Historic Main Street Businesses',
       metaDescription: 'Commercial cleaning in Tipp City, OH for shops and offices along the historic Main Street district. Licensed & insured.',
       intro: [
-        "Tipp City's historic Main Street district is a genuine walkable downtown — antique shops, boutiques, and restaurants housed in buildings dating back to the canal era — and they need cleaning that respects older storefronts.",
+        "Tipp City's historic Main Street district is a genuine walkable downtown: antique shops, boutiques, and restaurants housed in buildings dating back to the canal era, and they need cleaning that respects older storefronts.",
         "We clean shops, offices, and restaurants throughout Tipp City, with after-hours scheduling built around a historic downtown's foot traffic.",
         "Beyond Main Street, Tipp City's roughly 10,000 residents support smaller commercial space near Kyle Park and the city's newer growth areas, and we treat those accounts with the same care as our historic downtown clients.",
         "Gem City Cleaning Crew has served Tipp City businesses since 2017, and every commercial cleaner is Checkr background-checked, licensed, and insured before working a Tipp City account independently."
@@ -849,7 +849,7 @@ export const CITIES = {
       heroSubtitle: 'Serving a Small Town Along Sugar Creek',
       metaDescription: 'Professional house cleaning in Bellbrook, OH, zip code 45305, in Sugarcreek Township. Licensed & insured.',
       intro: [
-        "Bellbrook, in Sugarcreek Township, has kept its small-town character since 1816 — green space at Sugarcreek MetroPark, Bill Yeck Park, and the 177-acre Morris Reserve borders much of the community along Sugar Creek.",
+        "Bellbrook, in Sugarcreek Township, has kept its small-town character since 1816. Green space at Sugarcreek MetroPark, Bill Yeck Park, and the 177-acre Morris Reserve borders much of the community along Sugar Creek.",
         "We clean homes throughout Bellbrook's 45305 zip code, from established neighborhoods near town to newer homes further out along the creek.",
         "At around 7,500 residents, Bellbrook is one of the smaller cities we serve, and most of its remaining growth is happening just over the line in neighboring Sugarcreek Township rather than inside city limits, we serve both sides of that boundary the same way.",
         "Every Bellbrook cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -877,7 +877,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Bellbrook\'s Small Business Community',
       metaDescription: 'Commercial cleaning in Bellbrook, OH for local offices and small businesses in the 45305 area. Licensed & insured.',
       intro: [
-        "Bellbrook's local businesses tend to be smaller and more personal than what you'd find closer to Dayton — offices, shops, and services that value the same small-town relationships the community was built on.",
+        "Bellbrook's local businesses tend to be smaller and more personal than what you'd find closer to Dayton: offices, shops, and services that value the same small-town relationships the community was built on.",
         "We provide that same personal approach to commercial cleaning throughout Bellbrook, with flexible scheduling for a smaller commercial footprint.",
         "With around 7,500 residents and little land left for new commercial development inside city limits, Bellbrook's business base stays genuinely small, and we scale our scheduling and crew size to match rather than requiring a big-city minimum.",
         "Gem City Cleaning Crew has served Bellbrook businesses since 2017, and every commercial cleaner is Checkr background-checked, licensed, and insured before working a Bellbrook account independently."
@@ -915,7 +915,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Homes at the I-75/I-70 Crossroads',
       metaDescription: 'Professional house cleaning in Vandalia, OH, zip code 45377, home to Dayton International Airport. Licensed & insured.',
       intro: [
-        "Vandalia sits right at the crossroads of I-75 and I-70 and is home to Dayton International Airport — a location that's made it one of the top-ranked places to raise a family in Montgomery County.",
+        "Vandalia sits right at the crossroads of I-75 and I-70 and is home to Dayton International Airport, a location that's made it one of the top-ranked places to raise a family in Montgomery County.",
         "We clean homes throughout Vandalia's 45377 zip code, with scheduling that works around the airport's flight patterns and the city's Air Show weekends alike.",
         "At roughly 15,000 residents, Vandalia is a compact city split loosely into east and west residential areas around a City Center core, and we schedule crews familiar with all three.",
         "Every Vandalia cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -982,7 +982,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Homes Around the Historic Public Square',
       metaDescription: 'Professional house cleaning in Troy, OH, zip codes 45373 and 45374, near the historic Public Square. Licensed & insured.',
       intro: [
-        "Troy's Public Square — an 1807 traffic circle restored with a fountain and surrounded by Victorian-age buildings — sits at the heart of a city that's been the Miami County seat since 1807, home to the 1888 Miami County Courthouse and the Overfield Tavern Museum.",
+        "Troy's Public Square, an 1807 traffic circle restored with a fountain and surrounded by Victorian-age buildings, sits at the heart of a city that's been the Miami County seat since 1807, home to the 1888 Miami County Courthouse and the Overfield Tavern Museum.",
         "We clean homes throughout Troy's 45373 and 45374 zip codes, from the Southwest Historic District to newer subdivisions on the northwest side.",
         "At close to 27,000 residents, Troy is Miami County's largest city, and its Southwest Historic District's 1807-era housing stock calls for a different touch than the newer subdivisions further from downtown, so we adjust our approach by the home, not a single citywide routine.",
         "Every Troy cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -1010,7 +1010,7 @@ export const CITIES = {
       heroSubtitle: 'Serving Businesses Around the Public Square',
       metaDescription: 'Commercial cleaning in Troy, OH for offices and retail around the historic Public Square and county courthouse. Licensed & insured.',
       intro: [
-        "As Miami County's seat since 1807, Troy's downtown around the Public Square is a genuine commerce center — restaurants and shops that line the square, alongside county and professional offices near the courthouse.",
+        "As Miami County's seat since 1807, Troy's downtown around the Public Square is a genuine commerce center: restaurants and shops that line the square, alongside county and professional offices near the courthouse.",
         "We clean offices, retail, and professional spaces throughout Troy, with scheduling built around downtown business hours.",
         "As Miami County's largest city at close to 27,000 residents, Troy's commercial base extends well beyond the Public Square into newer offices on the northwest side, and we schedule each account around its own hours.",
         "Gem City Cleaning Crew has served Troy businesses since 2017, and every commercial cleaner is Checkr background-checked, licensed, and insured before working a Troy account independently."

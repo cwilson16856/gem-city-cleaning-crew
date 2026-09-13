@@ -83,6 +83,7 @@ const REDIRECTS = {
   '/house-cleaning-services-springboro-ohio': '/locations/springboro/house-cleaning-services',
   '/house-cleaning-services-dayton-ohio': '/locations/dayton/house-cleaning-services',
   '/dayton-house-cleaning-services': '/locations/dayton/house-cleaning-services',
+  '/commercial-cleaning-services': '/commercial',
   '/locations/beavercreek/commercial-services': '/locations/beavercreek/commercial-cleaning-services',
   '/contact-us': '/quote',
   '/school-cleaning': '/daycare-cleaning',

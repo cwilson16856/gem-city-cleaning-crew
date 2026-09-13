@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import {
   Container,
@@ -42,20 +43,9 @@ const SERVICE_ID = `${PAGE_URL}#service`
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
-import QuoteForm from '../../components/QuoteForm'
 
 const IndustrialCleaning = () => {
   const theme = useTheme()
-  const [quoteFormOpen, setQuoteFormOpen] = useState(false)
-
-  const handleOpenQuoteForm = () => {
-    setQuoteFormOpen(true)
-  }
-
-  const handleCloseQuoteForm = () => {
-    setQuoteFormOpen(false)
-  }
-
   const industrialTypes = [
     {
       title: "Warehouses & Distribution Centers",
@@ -98,7 +88,7 @@ const IndustrialCleaning = () => {
     },
     {
       question: "Do you offer industrial cleaning without long-term contracts?",
-      answer: "Yes. Like all of our commercial services, industrial cleaning is available without long-term contracts — you can book one-time cleanings or set up a recurring schedule that fits your facility."
+      answer: "Yes. Like all of our commercial services, industrial cleaning is available without long-term contracts: you can book one-time cleanings or set up a recurring schedule that fits your facility."
     },
     {
       question: "What areas of an industrial facility do you clean?",
@@ -131,7 +121,7 @@ const IndustrialCleaning = () => {
     },
     {
       title: "No Contracts Required",
-      description: "Book one-time cleanings or set up a recurring schedule — adjust frequency and scope as your facility's needs change.",
+      description: "Book one-time cleanings or set up a recurring schedule: adjust frequency and scope as your facility's needs change.",
       icon: <DescriptionIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />
     }
   ]
@@ -315,7 +305,8 @@ const IndustrialCleaning = () => {
             <Button
               variant="contained"
               size="large"
-              onClick={handleOpenQuoteForm}
+              component={Link}
+              to="/quote?type=commercial"
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -405,7 +396,8 @@ const IndustrialCleaning = () => {
           <Button
             variant="outlined"
             size="large"
-            onClick={handleOpenQuoteForm}
+            component={Link}
+            to="/quote?type=commercial"
             sx={{
               fontSize: '1.1rem',
               px: 4,
@@ -431,8 +423,8 @@ const IndustrialCleaning = () => {
 
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
             Since 2017, Gem City Cleaning Crew has served the Dayton area with dependable commercial cleaning.
-            Industrial facilities need crews that understand scale, safety, and flexible shift schedules —
-            our industrial cleaning services are built around exactly that.
+            Industrial facilities need crews that understand scale, safety, and flexible shift schedules.
+            Our industrial cleaning services are built around exactly that.
           </Typography>
 
           <Grid container spacing={4} sx={{ mb: 6 }} className="commercial-service-features">
@@ -504,12 +496,13 @@ const IndustrialCleaning = () => {
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, color: '#525252', fontSize: '1.1rem' }}>
                 Let us build a cleaning plan around your facility's scale and schedule.
-                No contracts required — just reliable, professional industrial cleaning.
+                No contracts required: just reliable, professional industrial cleaning.
               </Typography>
               <Button
                 variant="contained"
                 size="large"
-                onClick={handleOpenQuoteForm}
+                component={Link}
+                to="/quote?type=commercial"
                 sx={{
                   fontSize: '1.1rem',
                   px: 4,
@@ -550,7 +543,7 @@ const IndustrialCleaning = () => {
 
       {/* Service Areas with Map */}
       <Box id="service-areas">
-        <AreasWeServe />
+        <AreasWeServe serviceType="commercial" />
       </Box>
 
       {/* Excellence Section */}
@@ -585,7 +578,8 @@ const IndustrialCleaning = () => {
             <Button
               variant="contained"
               size="large"
-              onClick={handleOpenQuoteForm}
+              component={Link}
+              to="/quote?type=commercial"
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -633,15 +627,6 @@ const IndustrialCleaning = () => {
         </Container>
       </Box>
 
-      {/* Quote Form Modal */}
-      {/* Quote modal defaults to suggesting Commercial (this is a commercial page), but always
-          asks the user to confirm residential vs. commercial before loading either form. */}
-      <QuoteForm
-        open={quoteFormOpen}
-        onClose={handleCloseQuoteForm}
-        title="Get Your Free Cleaning Estimate!"
-        defaultServiceType="commercial"
-      />
     </>
   )
 }
