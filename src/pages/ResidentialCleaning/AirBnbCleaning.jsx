@@ -203,7 +203,7 @@ const AirBnbCleaning = () => {
         <link rel="preload" as="image" href="/images/legacy/airbnb-bed-made.webp" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Airbnb Cleaning Service Dayton OH | Gem City Cleaning Crew</title>
-        <meta name="title" content="Best AirBnb Cleaning Service Dayton OH | Same-Day Turnaround | Professional Short-Term Rental Cleaning" />
+        <meta name="title" content="4.6-Star Rated AirBnb Cleaning Service Dayton OH | Same-Day Turnaround | Professional Short-Term Rental Cleaning" />
         <meta name="description" content="⭐ 4.6-Star Rated AirBnb Cleaning Service in Dayton, OH. Same-day turnaround, hospitality standards, flexible scheduling. Maximize your bookings with spotless properties. FREE quotes! Call 937-892-4157" />
         <meta name="keywords" content="AirBnb cleaning Dayton, short term rental cleaning Dayton OH, Airbnb cleaner Dayton, vacation rental cleaning, same day cleaning service, Airbnb turnover cleaning, hospitality cleaning Dayton, rental property cleaning, Kettering Airbnb cleaning, Centerville short term rental cleaning, Oakwood vacation rental cleaning, professional Airbnb cleaning near me, guest ready cleaning, 5 star cleaning service" />
         
@@ -224,7 +224,7 @@ const AirBnbCleaning = () => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Gem City Cleaning Crew" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/airbnb-cleaning-service" />
-        <meta property="og:title" content="Best AirBnb Cleaning Service Dayton OH | Same-Day Turnaround | Professional" />
+        <meta property="og:title" content="4.6-Star Rated AirBnb Cleaning Service Dayton OH | Same-Day Turnaround | Professional" />
         <meta property="og:description" content="⭐ 4.6-Star Rated AirBnb Cleaning in Dayton. Same-day turnaround, hospitality standards, flexible scheduling. Maximize bookings with spotless properties. FREE quotes!" />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/airbnb-bed-made.webp" />
         <meta property="og:image:alt" content="Professional AirBnb cleaning results - perfectly made bed ready for guests" />
@@ -237,7 +237,7 @@ const AirBnbCleaning = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@GemCityCleaning" />
         <meta name="twitter:creator" content="@GemCityCleaning" />
-        <meta name="twitter:title" content="Best AirBnb Cleaning Service Dayton OH | Same-Day Turnaround" />
+        <meta name="twitter:title" content="4.6-Star Rated AirBnb Cleaning Service Dayton OH | Same-Day Turnaround" />
         <meta name="twitter:description" content="⭐ 4.6-Star Rated AirBnb Cleaning in Dayton. Same-day turnaround, hospitality standards. Maximize bookings with spotless properties!" />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/airbnb-bed-made.webp" />
         <meta name="twitter:image:alt" content="Professional AirBnb cleaning results in Dayton OH" />
@@ -335,7 +335,7 @@ const AirBnbCleaning = () => {
               lineHeight: 1.1
             }}
           >
-            Best AirBnb Cleaning Service in Dayton
+            4.6-Star Rated AirBnb Cleaning Service in Dayton
           </Typography>
           
           <Typography 
