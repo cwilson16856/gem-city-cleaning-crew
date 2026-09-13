@@ -173,19 +173,19 @@ const ResidentialPage = () => {
       title: "Custom Cleaning Plans",
       description: "We'll work with you to create a cleaning plan that works best for you. We'll simply add, or take off any room that you'd like.",
       icon: <AssignmentIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Plan.png"
+      image: "/images/legacy/Plan.webp"
     },
     {
       title: "No Contracts",
       description: "We don't like contracts as much as you don't. You can keep us on for as little or as long as you like!",
       icon: <PersonIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.webp"
     },
     {
       title: "Trained Employees",
       description: "Our employees go through 3 months of training in order to keep your home clean consistently at the highest level.",
       icon: <GroupsIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Trained.png"
+      image: "/images/legacy/Trained.webp"
     }
   ]
 
@@ -236,7 +236,7 @@ const ResidentialPage = () => {
   return (
     <>
       <Helmet>
-        <link rel="preload" as="image" href="/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.webp" fetchPriority="high" />
         <title>House Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="description" content="Expert house cleaning services in Dayton, Ohio with 3-month trained staff, custom plans, and no contracts. Kitchens, bathrooms, bedrooms, and more. Free quotes available!" />
         <meta name="keywords" content="Dayton house cleaning, residential cleaning, custom cleaning plans, no contracts, professional cleaners, home cleaning service" />
@@ -315,7 +315,7 @@ const ResidentialPage = () => {
       <Box
         className="hero-section residential-hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -806,7 +806,7 @@ const ResidentialPage = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="/images/legacy/FAQ.png"
+              src="/images/legacy/FAQ.webp"
               alt="Frequently asked questions about professional Dayton house cleaning services and maid service options"
               sx={{
                 width: 80,
@@ -893,12 +893,13 @@ const ResidentialPage = () => {
 
           <Box
             component="img"
-            src="/images/legacy/naomi-hebert-MP0bgaS_d1c-unsplash-2-scaled.jpg"
+            src="/images/legacy/naomi-hebert-MP0bgaS_d1c-unsplash-2-scaled.webp"
             alt="Beautiful clean home interior showcasing professional Dayton house cleaning services results and quality workmanship"
             sx={{
               width: '100%',
               maxWidth: 600,
               height: 'auto',
+              aspectRatio: '1200 / 797', // matches the WebP's real dimensions -- reserves layout space before load (unsized-images fix)
               borderRadius: 2,
               boxShadow: theme.shadows[4]
             }}

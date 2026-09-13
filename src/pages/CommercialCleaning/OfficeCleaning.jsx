@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import {
@@ -48,21 +48,10 @@ const SERVICE_ID = `${PAGE_URL}#service`
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
-import QuoteForm from '../../components/QuoteForm'
 import TrustBlock from '../../components/TrustBlock'
 
 const OfficeCleaning = () => {
   const theme = useTheme()
-  const [quoteFormOpen, setQuoteFormOpen] = useState(false)
-
-  const handleOpenQuoteForm = () => {
-    setQuoteFormOpen(true)
-  }
-
-  const handleCloseQuoteForm = () => {
-    setQuoteFormOpen(false)
-  }
-
   // Office Types - positioned high up
   const officeTypes = [
     {
@@ -169,19 +158,19 @@ const OfficeCleaning = () => {
       title: "No Contracts Required",
       description: "Flexible office cleaning services without long-term contracts. Book one-time cleanings or recurring services with the freedom to adjust as needed.",
       icon: <DescriptionIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.webp"
     },
     {
       title: "Recurring Services Available",
       description: "Consistent office cleaning with daily, weekly, bi-weekly, or monthly recurring services tailored to your business needs and schedule.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Plan.png"
+      image: "/images/legacy/Plan.webp"
     },
     {
       title: "In-Person Quotes",
       description: "We visit your office to provide accurate, personalized quotes based on your specific space, needs, and cleaning requirements.",
       icon: <PersonIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Trained.png"
+      image: "/images/legacy/Trained.webp"
     }
   ]
 
@@ -422,7 +411,8 @@ const OfficeCleaning = () => {
             <Button
               variant="contained"
               size="large"
-              onClick={handleOpenQuoteForm}
+              component={Link}
+              to="/quote?type=commercial"
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -565,7 +555,8 @@ const OfficeCleaning = () => {
           <Button
             variant="outlined"
             size="large"
-            onClick={handleOpenQuoteForm}
+            component={Link}
+            to="/quote?type=commercial"
             sx={{
               fontSize: '1.1rem',
               px: 4,
@@ -743,7 +734,8 @@ const OfficeCleaning = () => {
                 <Button
                   variant="contained"
                   size="large"
-                  onClick={handleOpenQuoteForm}
+                  component={Link}
+                  to="/quote?type=commercial"
                   sx={{
                     fontSize: '1.1rem',
                     px: 4,
@@ -794,7 +786,7 @@ const OfficeCleaning = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="/images/legacy/FAQ.png"
+              src="/images/legacy/FAQ.webp"
               alt="Frequently asked questions about professional Dayton office cleaning services"
               sx={{
                 width: 80,
@@ -840,7 +832,7 @@ const OfficeCleaning = () => {
 
       {/* Service Areas with Map */}
       <Box id="service-areas">
-        <AreasWeServe />
+        <AreasWeServe serviceType="commercial" />
       </Box>
 
       {/* Excellence Section */}
@@ -897,7 +889,8 @@ const OfficeCleaning = () => {
             <Button
               variant="contained"
               size="large"
-              onClick={handleOpenQuoteForm}
+              component={Link}
+              to="/quote?type=commercial"
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -950,15 +943,6 @@ const OfficeCleaning = () => {
         </Container>
       </Box>
 
-      {/* Quote Form Modal */}
-      {/* Quote modal defaults to suggesting Commercial (this is a commercial page), but always
-          asks the user to confirm residential vs. commercial before loading either form. */}
-      <QuoteForm
-        open={quoteFormOpen}
-        onClose={handleCloseQuoteForm}
-        title="Get Your Free Cleaning Estimate!"
-        defaultServiceType="commercial"
-      />
     </>
   )
 }

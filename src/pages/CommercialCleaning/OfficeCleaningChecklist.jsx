@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import {
@@ -33,20 +33,9 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime'
 // Import the styling
 import '../../styles/homepages/HomePage.css'
 import '../../styles/pages/CommercialPage.css'
-import QuoteForm from '../../components/QuoteForm'
 
 const OfficeCleaningChecklist = () => {
   const theme = useTheme()
-  const [quoteFormOpen, setQuoteFormOpen] = useState(false)
-
-  const handleOpenQuoteForm = () => {
-    setQuoteFormOpen(true)
-  }
-
-  const handleCloseQuoteForm = () => {
-    setQuoteFormOpen(false)
-  }
-
   // Comprehensive office cleaning checklist organized by area
   const officeCleaningChecklist = [
     {
@@ -350,7 +339,8 @@ const OfficeCleaningChecklist = () => {
             <Button
               variant="contained"
               size="large"
-              onClick={handleOpenQuoteForm}
+              component={Link}
+              to="/quote?type=commercial"
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -865,7 +855,8 @@ const OfficeCleaningChecklist = () => {
                 </Typography>
                 <Button
                   variant="contained"
-                  onClick={handleOpenQuoteForm}
+                  component={Link}
+                  to="/quote?type=commercial"
                   sx={{
                     backgroundColor: theme.palette.primary.main,
                     color: 'white !important',
@@ -919,7 +910,8 @@ const OfficeCleaningChecklist = () => {
                 </Typography>
                 <Button
                   variant="contained"
-                  onClick={handleOpenQuoteForm}
+                  component={Link}
+                  to="/quote?type=commercial"
                   sx={{
                     backgroundColor: theme.palette.primary.main,
                     color: 'white !important',
@@ -973,7 +965,8 @@ const OfficeCleaningChecklist = () => {
                 </Typography>
                 <Button
                   variant="contained"
-                  onClick={handleOpenQuoteForm}
+                  component={Link}
+                  to="/quote?type=commercial"
                   sx={{
                     backgroundColor: theme.palette.primary.main,
                     color: 'white !important',
@@ -1006,7 +999,8 @@ const OfficeCleaningChecklist = () => {
             <Button
               variant="contained"
               size="large"
-              onClick={handleOpenQuoteForm}
+              component={Link}
+              to="/quote?type=commercial"
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -1050,15 +1044,6 @@ const OfficeCleaningChecklist = () => {
         </Container>
       </Box>
 
-      {/* Quote Form Modal */}
-      {/* Quote modal defaults to suggesting Commercial (this is a commercial page), but always
-          asks the user to confirm residential vs. commercial before loading either form. */}
-      <QuoteForm
-        open={quoteFormOpen}
-        onClose={handleCloseQuoteForm}
-        title="Get Your Free Cleaning Estimate!"
-        defaultServiceType="commercial"
-      />
     </>
   )
 }

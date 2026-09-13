@@ -61,7 +61,7 @@ import QuoteForm from '../../../../components/QuoteForm'
 
 const PAGE_URL = 'https://gemcitycleaningcrew.com/locations/xenia/house-cleaning-services'
 const SERVICE_ID = `${PAGE_URL}#service`
-const HERO_IMAGE = '/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.jpg'
+const HERO_IMAGE = '/images/legacy/clay-elliot-1by_GbwEMwc-unsplash-2.webp'
 
 const PAGE_TITLE = 'House Cleaning Services in Xenia, OH | Gem City Cleaning Crew'
 const META_DESCRIPTION =
@@ -213,17 +213,17 @@ const whyChooseUs = [
   {
     title: 'Licensed & Insured',
     description: 'Fully licensed and insured for residential work throughout Greene County, with a satisfaction guarantee on every visit.',
-    image: '/images/legacy/Plan.png'
+    image: '/images/legacy/Plan.webp'
   },
   {
     title: 'No Contracts',
     description: 'Weekly, bi-weekly, monthly, or one-time: change or pause your schedule whenever life in Xenia changes.',
-    image: '/images/legacy/No-Contracts.png'
+    image: '/images/legacy/No-Contracts.webp'
   },
   {
     title: 'Trained Local Crew',
     description: "A Dayton-area crew that has served the Miami Valley since 2017 and knows the difference between an East Second Street Victorian and an Arrowhead ranch.",
-    image: '/images/legacy/Trained.png'
+    image: '/images/legacy/Trained.webp'
   }
 ]
 
@@ -752,7 +752,7 @@ const XeniaHouseCleaningPage = () => {
         <Box sx={{ textAlign: 'center', mb: 5 }}>
           <Box
             component="img"
-            src="/images/legacy/FAQ.png"
+            src="/images/legacy/FAQ.webp"
             alt="Frequently asked questions about house cleaning in Xenia, Ohio"
             loading="lazy"
             sx={{ width: 80, height: 80, objectFit: 'contain', mb: 2, mx: 'auto', display: 'block' }}

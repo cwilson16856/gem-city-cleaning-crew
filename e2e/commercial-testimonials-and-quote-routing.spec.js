@@ -41,23 +41,23 @@ test.describe('Fabricated testimonials removed, TrustBlock renders instead', () 
 })
 
 test.describe('Office Cleaning Checklist quote CTAs', () => {
-  test('the 3 previously-?service= CTAs now open the QuoteForm modal pre-set to Commercial', async ({ page }) => {
+  // Reversed 2026-09-13 SEO audit round 2: the modal these CTAs used to open
+  // (see the comment on commercial-quote-routing.spec.js) had no href, so it
+  // was invisible to crawlers and unbookmarkable. All 5 quote CTAs on this
+  // page are now real links to /quote?type=commercial.
+  test('all 5 quote CTAs are real links to /quote?type=commercial, not modal triggers', async ({ page }) => {
     await page.goto('/office-cleaning-checklist')
 
-    for (const label of ['Get Office Cleaning Quote', 'Get Recurring Quote', 'Get Construction Cleanup Quote']) {
-      const cta = page.getByRole('button', { name: label })
+    for (const label of [
+      'Get Professional Office Cleaning',
+      'Get Office Cleaning Quote',
+      'Get Recurring Quote',
+      'Get Construction Cleanup Quote',
+      'Get Free Office Cleaning Quote'
+    ]) {
+      const cta = page.getByRole('link', { name: label })
       await cta.scrollIntoViewIfNeeded()
-      await cta.click()
-
-      const dialog = page.getByRole('dialog')
-      await expect(dialog).toBeVisible()
-      expect(page.url()).toContain('/office-cleaning-checklist')
-
-      const commercialOption = dialog.getByRole('button', { name: 'Commercial Cleaning' })
-      await expect(commercialOption).toHaveClass(/MuiButton-contained/)
-
-      await page.keyboard.press('Escape')
-      await expect(dialog).toHaveCount(0)
+      await expect(cta).toHaveAttribute('href', '/quote?type=commercial')
     }
   })
 })

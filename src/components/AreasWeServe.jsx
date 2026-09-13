@@ -134,7 +134,7 @@ const AreasWeServe = ({ onCityClick, currentCity, serviceType = 'residential' })
                 <Grid item xs={6} sm={4} key={index}>
                   {hasPage ? (
                     <Link
-                      to={`/locations/${slugFor(area)}/house-cleaning-services`}
+                      to={`/locations/${slugFor(area)}/${serviceType === 'commercial' ? 'commercial-cleaning-services' : 'house-cleaning-services'}`}
                       style={{ textDecoration: 'none' }}
                     >
                       {chip}

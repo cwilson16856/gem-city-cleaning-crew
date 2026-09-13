@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 // Config-as-function (not a plain object) so build.rollupOptions.manualChunks
 // can be scoped to the client build only. Vite runs the SAME `build` config
@@ -11,13 +12,24 @@ import react from '@vitejs/plugin-react'
 // already marked external ("react cannot be included in manualChunks
 // because it is resolved as an external module").
 export default defineConfig(({ isSsrBuild }) => ({
-  plugins: [react()],
+  plugins: [
+    react(),
+    // Diagnostic only -- gated behind ANALYZE so it never runs on a normal
+    // build/deploy. Run with `ANALYZE=true npm run build`.
+    process.env.ANALYZE && visualizer({ filename: 'stats.html', gzipSize: true, brotliSize: true, template: 'treemap' })
+  ].filter(Boolean),
   server: {
     port: 3000,
     open: true
   },
   build: {
     outDir: isSsrBuild ? 'dist-ssr' : 'dist',
+    // A concrete, modern-but-safe baseline (supported in every major browser
+    // since 2020) rather than esbuild's default 'modules' target, which
+    // down-levels slightly further than this app's actual audience needs
+    // (2026-09-13 LCP audit's "~12KB legacy JS" finding). Applied to both
+    // the client and SSR build, same as minify/chunkSizeWarningLimit below.
+    target: ['es2020'],
     // Source maps only for the SSR build, which scripts/prerender.js consumes
     // locally and is never deployed/served (Vercel's zero-config Vite preset
     // only serves dist/). The client build's maps were reachable in

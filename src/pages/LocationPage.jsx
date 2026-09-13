@@ -131,7 +131,7 @@ const LocationsIndex = () => {
         title="Service Locations"
         subtitle="Professional Cleaning Services Throughout Greater Dayton"
         description="Residential & Commercial Cleaning Services in Dayton and Surrounding Areas"
-        backgroundImage="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
+        backgroundImage="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp"
         chipText="LICENSED • INSURED • PROFESSIONAL"
         showRating={true}
         ratingValue={4.6}
@@ -287,7 +287,7 @@ const CityServicePage = ({ citySlug, serviceType, currentPath }) => {
       <HeroSection
         title={content.heroTitle}
         subtitle={content.heroSubtitle}
-        backgroundImage="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg"
+        backgroundImage="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp"
         chipText="LICENSED • INSURED • PROFESSIONAL"
         showRating={true}
         ratingValue={4.6}
