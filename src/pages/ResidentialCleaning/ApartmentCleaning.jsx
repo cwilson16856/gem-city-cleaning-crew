@@ -199,7 +199,7 @@ const ApartmentCleaning = () => {
     id: 'https://gemcitycleaningcrew.com/apartment-cleaning#webpage',
     url: 'https://gemcitycleaningcrew.com/apartment-cleaning',
     name: 'Apartment Cleaning Dayton OH',
-    description: 'Professional apartment cleaning in Dayton, OH — regular maintenance, deep cleaning, and rental-ready turnovers for tenants and property managers. Free quotes! Call 937-892-4157',
+    description: 'Professional apartment cleaning in Dayton, OH: regular maintenance, deep cleaning, and rental-ready turnovers for tenants and property managers. Free quotes! Call 937-892-4157',
     aboutId: 'https://gemcitycleaningcrew.com/apartment-cleaning#service',
     breadcrumbs: [
       { name: 'Home', url: 'https://gemcitycleaningcrew.com' },

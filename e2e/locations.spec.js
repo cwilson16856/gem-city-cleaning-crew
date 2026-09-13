@@ -107,7 +107,7 @@ test.describe('Location Pages', () => {
     const faqSchema = blocks.map((b) => JSON.parse(b)).find((b) => b['@type'] === 'FAQPage')
 
     expect(faqSchema).toBeTruthy()
-    expect(faqSchema.mainEntity.length).toBe(3)
+    expect(faqSchema.mainEntity.length).toBe(5)
     for (const item of faqSchema.mainEntity) {
       await expect(page.getByText(item.name)).toBeVisible()
       await expect(page.getByText(item.acceptedAnswer.text)).toBeVisible()
@@ -116,12 +116,53 @@ test.describe('Location Pages', () => {
 
   test('WHATS_INCLUDED and HOW_IT_WORKS remain shared across cities (regression guard)', async ({ page }) => {
     await page.goto('/locations/dayton/house-cleaning-services')
-    await expect(page.getByText('Kitchens — countertops, appliance exteriors, sinks, and cabinet fronts')).toBeVisible()
+    await expect(page.getByText('Kitchens: countertops, appliance exteriors, sinks, and cabinet fronts')).toBeVisible()
     await expect(page.getByRole('heading', { name: /get your free quote/i, level: 6 })).toBeVisible()
 
     await page.goto('/locations/kettering/house-cleaning-services')
-    await expect(page.getByText('Kitchens — countertops, appliance exteriors, sinks, and cabinet fronts')).toBeVisible()
+    await expect(page.getByText('Kitchens: countertops, appliance exteriors, sinks, and cabinet fronts')).toBeVisible()
     await expect(page.getByRole('heading', { name: /get your free quote/i, level: 6 })).toBeVisible()
+  })
+
+  // Added for the 2026-09 location-page content-depth expansion.
+  test('renders a table of contents and a neighborhoods section on generic city pages', async ({ page }) => {
+    await page.goto('/locations/huber-heights/house-cleaning-services')
+    await expect(page.getByText('Table of Contents')).toBeVisible()
+    await expect(page.getByRole('heading', { name: /Huber Heights Neighborhoods We Serve/i })).toBeVisible()
+  })
+
+  test('renders home-eras (residential) or business-districts (commercial) sections', async ({ page }) => {
+    await page.goto('/locations/troy/house-cleaning-services')
+    await expect(page.getByRole('heading', { name: /Built for Troy's Homes/i })).toBeVisible()
+
+    await page.goto('/locations/troy/commercial-cleaning-services')
+    await expect(page.getByRole('heading', { name: /Built for Troy's Businesses/i })).toBeVisible()
+  })
+
+  test('intro now includes a fourth (trust/credentials) paragraph', async ({ page }) => {
+    await page.goto('/locations/kettering/house-cleaning-services')
+    await expect(page.getByText(/most populous suburb in the Dayton area/i)).toBeVisible()
+    await expect(page.getByText(/completed three months of training and passed a Checkr background check/i)).toBeVisible()
+  })
+
+  test('renders seasonal hooks section and expanded FAQ (5 items)', async ({ page }) => {
+    await page.goto('/locations/vandalia/house-cleaning-services')
+    await expect(page.getByRole('heading', { name: /Cleaning Around the Vandalia Calendar/i })).toBeVisible()
+
+    const blocks = await page.locator('script[type="application/ld+json"]').allTextContents()
+    const faqSchema = blocks.map((b) => JSON.parse(b)).find((b) => b['@type'] === 'FAQPage')
+    expect(faqSchema.mainEntity.length).toBe(5)
+  })
+
+  // Cities with no genuine named neighborhoods (thin-material allowance,
+  // depth-expansion plan Section 5.0.2) omit the neighborhoods section and
+  // its TOC entry entirely rather than padding with invented names.
+  test('thin-material cities omit the neighborhoods section without breaking the TOC', async ({ page }) => {
+    await page.goto('/locations/bellbrook/house-cleaning-services')
+    await expect(page.getByText('Table of Contents')).toBeVisible()
+    await expect(page.getByRole('heading', { name: /Bellbrook Neighborhoods We Serve/i })).toHaveCount(0)
+    await expect(page.getByRole('link', { name: /Bellbrook Neighborhoods We Serve/i })).toHaveCount(0)
+    await expect(page.getByRole('heading', { name: /Built for Bellbrook's Homes/i })).toBeVisible()
   })
 
   test.describe('Backend Integration', () => {
@@ -135,6 +176,8 @@ test.describe('Location Pages', () => {
       await page.goto('/locations/xenia/commercial-cleaning-services')
       await page.goto('/locations/yellow-springs/house-cleaning-services')
       await page.goto('/locations/oakwood/commercial-cleaning-services')
+      await page.goto('/locations/huber-heights/commercial-cleaning-services')
+      await expect(page.getByText('Table of Contents')).toBeVisible()
 
       const relevantErrors = consoleErrors.filter(
         (e) => !/ResizeObserver|favicon/i.test(e)
