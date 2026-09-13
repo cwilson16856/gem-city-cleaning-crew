@@ -197,7 +197,7 @@ const MoveInOutCleaningPage = () => {
 
         {/* Additional Social Media */}
         <meta property="article:author" content="Gem City Cleaning Crew" />
-        <meta property="article:publisher" content="https://www.facebook.com/GemCityCleaningCrew" />
+        <meta property="article:publisher" content="https://www.facebook.com/gemcitycleaning" />
         <meta property="article:published_time" content="2024-01-15T10:00:00Z" />
         <meta property="article:modified_time" content={new Date().toISOString()} />
 
