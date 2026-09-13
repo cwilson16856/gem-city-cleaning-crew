@@ -49,9 +49,19 @@ const SERVICE_ID = `${PAGE_URL}#service`
 // Components
 import AreasWeServe from '../../components/AreasWeServe'
 import TableOfContents from '../../components/TableOfContents'
+import QuoteForm from '../../components/QuoteForm'
 
 const OfficeCleaning = () => {
   const theme = useTheme()
+  const [quoteFormOpen, setQuoteFormOpen] = useState(false)
+
+  const handleOpenQuoteForm = () => {
+    setQuoteFormOpen(true)
+  }
+
+  const handleCloseQuoteForm = () => {
+    setQuoteFormOpen(false)
+  }
 
   // Office Types - positioned high up
   const officeTypes = [
@@ -412,8 +422,7 @@ const OfficeCleaning = () => {
             <Button
               variant="contained"
               size="large"
-              component={Link}
-              to="/quote"
+              onClick={handleOpenQuoteForm}
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -587,8 +596,7 @@ const OfficeCleaning = () => {
           <Button
             variant="outlined"
             size="large"
-            component={Link}
-            to="/quote"
+            onClick={handleOpenQuoteForm}
             sx={{
               fontSize: '1.1rem',
               px: 4,
@@ -766,8 +774,7 @@ const OfficeCleaning = () => {
                 <Button
                   variant="contained"
                   size="large"
-                  component={Link}
-                  to="/quote"
+                  onClick={handleOpenQuoteForm}
                   sx={{
                     fontSize: '1.1rem',
                     px: 4,
@@ -921,8 +928,7 @@ const OfficeCleaning = () => {
             <Button
               variant="contained"
               size="large"
-              component={Link}
-              to="/quote"
+              onClick={handleOpenQuoteForm}
               sx={{
                 fontSize: '1.1rem',
                 px: 4,
@@ -974,6 +980,16 @@ const OfficeCleaning = () => {
           </Box>
         </Container>
       </Box>
+
+      {/* Quote Form Modal */}
+      {/* Quote modal defaults to suggesting Commercial (this is a commercial page), but always
+          asks the user to confirm residential vs. commercial before loading either form. */}
+      <QuoteForm
+        open={quoteFormOpen}
+        onClose={handleCloseQuoteForm}
+        title="Get Your Free Cleaning Estimate!"
+        defaultServiceType="commercial"
+      />
     </>
   )
 }
