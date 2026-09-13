@@ -156,19 +156,19 @@ const CommercialPage = () => {
       title: "Licensed & Insured",
       description: "Fully licensed, insured, and bonded with commercial-grade coverage for your peace of mind and property protection.",
       icon: <SecurityIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Plan.png"
+      image: "/images/legacy/Plan.webp"
     },
     {
       title: "Flexible Scheduling",
       description: "We work around your business hours with evening, weekend, and holiday cleaning options available.",
       icon: <AccessTimeIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/No-Contracts.png"
+      image: "/images/legacy/No-Contracts.webp"
     },
     {
       title: "Trained Professionals",
       description: "Our commercial cleaning staff undergo specialized training for different business environments and safety protocols.",
       icon: <VerifiedIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      image: "/images/legacy/Trained.png"
+      image: "/images/legacy/Trained.webp"
     }
   ]
 
@@ -219,7 +219,7 @@ const CommercialPage = () => {
   return (
     <>
       <Helmet>
-        <link rel="preload" as="image" href="/images/legacy/benjamin-child-GWe0dlVD9e0-unsplash.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/legacy/benjamin-child-GWe0dlVD9e0-unsplash.webp" fetchPriority="high" />
         <title>Commercial Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="description" content="Professional Dayton commercial cleaning services for offices, retail, medical facilities, and more. Flexible scheduling, insured team, custom cleaning plans. Free quotes!" />
         <meta name="keywords" content="Dayton commercial cleaning, office cleaning, retail cleaning, medical facility cleaning, janitorial services, business cleaning" />
@@ -320,7 +320,7 @@ const CommercialPage = () => {
       <Box
         className="hero-section commercial-hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/benjamin-child-GWe0dlVD9e0-unsplash.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/benjamin-child-GWe0dlVD9e0-unsplash.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -759,7 +759,7 @@ const CommercialPage = () => {
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box
               component="img"
-              src="/images/legacy/FAQ.png"
+              src="/images/legacy/FAQ.webp"
               alt="Frequently asked questions about professional Dayton commercial cleaning services"
               sx={{
                 width: 80,
@@ -852,6 +852,7 @@ const CommercialPage = () => {
               width: '100%',
               maxWidth: 600,
               height: 'auto',
+              aspectRatio: '1200 / 675', // matches the WebP's real dimensions -- reserves layout space before load (unsized-images fix)
               borderRadius: 2,
               boxShadow: theme.shadows[4]
             }}

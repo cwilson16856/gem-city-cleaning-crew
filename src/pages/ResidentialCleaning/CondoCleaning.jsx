@@ -198,7 +198,7 @@ const CondoCleaning = () => {
   return (
     <>
       <Helmet>
-        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp" fetchPriority="high" />
         {/* Primary Meta Tags */}
         <title>Condo Cleaning Services Dayton OH | Gem City Cleaning Crew</title>
         <meta name="title" content="Condo Cleaning Dayton OH – Luxury Property Care, HOA Compliant, Value Protection" />
@@ -259,7 +259,7 @@ const CondoCleaning = () => {
       <Box
         className="hero-section"
         sx={{
-          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.jpg')`,
+          background: `linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

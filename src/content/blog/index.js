@@ -1,5 +1,9 @@
 // Self-hosted blog content index.
-// Each entry pairs post metadata with its HTML body (imported from ./posts/{slug}.js).
+// Full-post fields only (content, faqs, keywords, problem, solution,
+// targetAudience, howToTitle, howToSteps) -- listing metadata (title,
+// description, dates, tags, coverImage, etc.) lives in ./postsMeta.js and
+// is merged back in below by slug. This split keeps the ~90KB+ gzip of
+// full post HTML out of every page's JS chunk except PostPage.jsx's own.
 // Newest posts go first in the array.
 
 import deepCleaningGuideContent from './posts/deep-cleaning-guide-dayton.js'
@@ -23,16 +27,11 @@ import wrightPattPcsMoveOutCleaningContent from './posts/wright-patterson-afb-pc
 import studentMoveInCleaningDaytonContent from './posts/student-move-in-cleaning-dayton-ud-wright-state.js'
 import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-dayton-allergy-cleaning.js'
 
-const posts = [
+import { POSTS_META } from './postsMeta.js'
+
+const POST_EXTRAS = [
   {
     slug: 'deep-cleaning-guide-dayton',
-    title: "Deep Cleaning in Dayton, OH: What's Actually Included",
-    description: "Deep clean doesn't mean extra thorough. Here's what it actually covers that regular cleaning skips, and how often your Dayton home really needs one.",
-    publishedAt: '2026-09-11',
-    updatedAt: '2026-09-11',
-    author: 'Chris Wilson',
-    category: 'Cleaning Tips',
-    tags: ['deep cleaning', 'Dayton', 'recurring cleaning', 'move-out cleaning', 'home maintenance'],
     keywords: [
       'deep cleaning Dayton Ohio',
       'what is included in a deep clean',
@@ -48,8 +47,6 @@ const posts = [
     problem: "Homeowners conflate 'deep clean' with 'extra thorough regular clean,' so they either overpay for maintenance cleaning expecting deep-clean results, or underestimate what a real reset actually requires.",
     solution: 'A clear breakdown of what deep cleaning covers room by room that standard cleaning skips, the real triggers for needing one, and how it sequences with recurring maintenance cleaning.',
     targetAudience: "Dayton-area homeowners deciding between a one-time deep clean and recurring service, or trying to figure out why their regular cleaning isn't producing deep-clean results",
-    coverImage: '/images/blog/deep-cleaning-guide-dayton.png',
-    featured: true,
     content: deepCleaningGuideContent,
     faqs: [
       { question: "What's included in a deep cleaning service that isn't in a regular cleaning?", answer: "A deep clean covers the buildup a regular maintenance visit is scoped to skip: inside ovens and refrigerators, behind and under furniture and appliances, baseboards, window tracks, light fixtures and ceiling fans, grout lines, cabinet fronts, and vents. A regular clean maintains a home that's already in good shape; a deep clean resets one that's accumulated buildup over time. They're complementary, not interchangeable." },
@@ -64,13 +61,6 @@ const posts = [
   },
   {
     slug: 'move-out-transitions-guide-dayton',
-    title: 'Move-Out & Move-In Cleaning: The Complete Dayton Guide',
-    description: "Ohio landlords have 30 days to return your deposit or itemize why they didn't. Here's what actually gets checked at move-out, and what most movers miss.",
-    publishedAt: '2026-09-11',
-    updatedAt: '2026-09-11',
-    author: 'Chris Wilson',
-    category: 'Moving & Turnover',
-    tags: ['move-out cleaning', 'move-in cleaning', 'security deposit', 'Dayton', 'renters', 'home sellers'],
     keywords: [
       'move out cleaning Dayton',
       'security deposit cleaning checklist',
@@ -85,8 +75,6 @@ const posts = [
     problem: "Renters want to understand what landlords actually check at move-out, and sellers/movers waste time cleaning in the wrong order or at the wrong point in the move — with no single guide tying move-out, move-in, and listing prep together.",
     solution: 'A complete guide to what landlords and buyers actually check, the real difference between a basic clean and a deep clean, the most commonly missed spots, and the right timing for renters, sellers, and people moving into a new home.',
     targetAudience: 'Dayton-area renters preparing for a move-out inspection, homeowners prepping to list, and anyone moving into a new home or apartment',
-    coverImage: '/images/blog/move-out-transitions-guide-dayton.png',
-    featured: false,
     content: moveOutTransitionsGuideContent,
     faqs: [
       { question: 'How far in advance should I schedule move-out cleaning?', answer: "Book it as soon as your move-out date is confirmed — cleaning companies' schedules fill up fastest around the first and last week of the month, when most leases turn over. For a same-day or next-day need, call directly rather than booking online, since availability changes daily." },
@@ -100,13 +88,6 @@ const posts = [
   },
   {
     slug: 'hiring-cleaning-service-guide-dayton',
-    title: 'How to Choose & Budget for a Cleaning Service in Dayton',
-    description: "Your kitchen looks clean. It isn't. Here's what actually drives cleaning cost, which frequency fits your home, and the red flags that mean walk away.",
-    publishedAt: '2026-09-11',
-    updatedAt: '2026-09-11',
-    author: 'Chris Wilson',
-    category: 'Cleaning Tips',
-    tags: ['hiring a cleaning service', 'cleaning cost', 'Dayton cleaning company', 'recurring cleaning', 'move cleaning'],
     keywords: [
       'how to choose a cleaning service',
       'house cleaning cost Dayton',
@@ -121,8 +102,6 @@ const posts = [
     problem: 'Homeowners comparing cleaning quotes see wildly different numbers for similar homes and have no framework for judging which quote — or which company — actually makes sense.',
     solution: 'A breakdown of what genuinely drives cleaning cost (size, frequency, condition, add-ons), the real tradeoff between cleaning frequencies, and exactly what to vet — insurance, training, contracts, guarantees — before hiring anyone.',
     targetAudience: 'Dayton-area homeowners comparing cleaning services for the first time, or reconsidering their current provider',
-    coverImage: '/images/blog/hiring-cleaning-service-guide-dayton.png',
-    featured: false,
     content: hiringCleaningServiceGuideContent,
     faqs: [
       { question: 'Should I just go with the cheapest quote?', answer: "Not automatically. A quote that's far below every other estimate for the same home is worth asking about directly — it often means less experienced staff, no insurance, or a narrower scope than the other quotes included." },
@@ -137,13 +116,6 @@ const posts = [
   },
   {
     slug: 'how-to-deep-clean-garage-basement-dayton',
-    title: 'How to Deep Clean a Garage or Basement: A Dayton Guide',
-    description: "Grease-caked concrete and a musty basement aren't the same problem. Here's the room-by-room fix for Dayton garages and basements, floor to humidity control.",
-    publishedAt: '2026-09-10',
-    updatedAt: '2026-09-10',
-    author: 'Chris Wilson',
-    category: 'Cleaning Tips',
-    tags: ['garage cleaning', 'basement cleaning', 'concrete floor care', 'humidity control', 'Dayton'],
     keywords: [
       'how to deep clean a garage or basement',
       'how to clean a concrete garage floor',
@@ -159,8 +131,6 @@ const posts = [
     problem: "Garages collect grease and road grime that soak into porous concrete, while basements in Dayton's older homes trap humid-summer moisture that turns into a musty smell — and neither responds to a normal vacuum-and-mop routine.",
     solution: 'A three-step system — declutter first, then degrease and seal the concrete floor, then control basement humidity to 45-50% relative humidity — tailored to the pre-1960s unfinished basements common across Dayton, Oakwood, and Kettering.',
     targetAudience: 'Dayton-area homeowners — across Dayton, Oakwood, Kettering, and the surrounding Miami Valley — with a cluttered garage, a musty basement, or both',
-    coverImage: '/images/blog/how-to-deep-clean-garage-basement-dayton.png',
-    featured: false,
     content: garageBasementDeepCleanContent,
     faqs: [
       {
@@ -204,13 +174,6 @@ const posts = [
   },
   {
     slug: 'how-to-clean-windows-streak-free-dayton',
-    title: "How to Clean Windows Streak-Free: A Dayton Homeowner's Guide",
-    description: "Streaky windows in Dayton usually mean hard water, not bad technique. Here's the tool, solution, and step-by-step method that actually gets glass clear.",
-    publishedAt: '2026-09-08',
-    updatedAt: '2026-09-08',
-    author: 'Chris Wilson',
-    category: 'Cleaning Tips',
-    tags: ['window cleaning', 'streak-free', 'hard water', 'cleaning tips', 'Dayton'],
     keywords: [
       'how to clean windows streak free',
       'streak free window cleaning tips',
@@ -226,8 +189,6 @@ const posts = [
     problem: "Most window-cleaning advice blames streaks on technique alone, but in the Dayton area even correct technique streaks because hard tap water leaves a mineral film behind as it evaporates.",
     solution: 'A tool-and-technique method — squeegee and microfiber, a vinegar-water solution, top-down overlapping strokes, and separate care for aluminum tracks and screens — that accounts for hard water instead of ignoring it.',
     targetAudience: 'Dayton-area homeowners and renters — across Kettering, Centerville, Beavercreek, and Oakwood — dealing with streaky windows despite following generic cleaning advice',
-    coverImage: '/images/blog/how-to-clean-windows-streak-free-dayton.png',
-    featured: false,
     content: windowsStreakFreeContent,
     faqs: [
       {
@@ -266,13 +227,6 @@ const posts = [
   },
   {
     slug: 'how-to-clean-1970s-xenia-home-room-by-room',
-    title: 'How to Clean a 1970s Xenia Home: Room-by-Room Guide',
-    description: "One in four Xenia homes dates to the 1970s tornado rebuild. Here's how to clean popcorn ceilings, window tracks, registers, and hard-water scale safely.",
-    publishedAt: '2026-09-07',
-    updatedAt: '2026-09-07',
-    author: 'Chris Wilson',
-    category: 'Local Guides & Seasonal',
-    tags: ['Xenia', '1970s homes', 'popcorn ceilings', 'hard water', 'Greene County', 'cleaning tips'],
     keywords: [
       'how to clean a 1970s house',
       'cleaning 1970s home Xenia Ohio',
@@ -290,8 +244,6 @@ const posts = [
     problem: "About one in four Xenia homes was built in the 1970s rebuild after the 1974 tornado, and their textured ceilings, wood paneling, aluminum window tracks, sheet vinyl, and original tile under 23-grain city water get damaged by generic scrub-everything cleaning advice.",
     solution: 'A room-by-room method for 1970s Xenia homes — two safety checks first, then ceilings, paneling, registers, hard-water bathrooms, window tracks, floors by material, and laminate kitchens — using dust-and-damp-wipe techniques instead of abrasives.',
     targetAudience: "Xenia and Greene County homeowners and renters in 1970s ranches, split-levels, and tri-levels — especially Arrowhead, Windsor Park, and other post-tornado rebuild neighborhoods — plus buyers moving into one of these homes",
-    coverImage: '/images/blog/how-to-clean-1970s-xenia-home-room-by-room.png',
-    featured: false,
     content: xenia1970sHomeCleaningContent,
     faqs: [
       {
@@ -336,13 +288,6 @@ const posts = [
   },
   {
     slug: 'how-to-remove-pet-hair-odor-dayton',
-    title: 'How to Get Rid of Pet Hair and Odor at Home: A Dayton Guide',
-    description: "A room-by-room pet hair and odor routine built for Dayton's mixed hardwood/carpet homes and closed-window winters — practical steps between cleanings.",
-    publishedAt: '2026-09-03',
-    updatedAt: '2026-09-03',
-    author: 'Chris Wilson',
-    category: 'Cleaning Tips',
-    tags: ['pet hair removal', 'pet odor', 'carpet cleaning', 'cleaning tips', 'Dayton'],
     keywords: [
       'how to get rid of pet hair and odor at home',
       'pet hair removal tips',
@@ -357,8 +302,6 @@ const posts = [
     problem: "Pet hair and odor build up faster than a normal cleaning routine can keep up with, especially during Dayton's closed-window winters and humid summers, and a generic cleaning routine doesn't account for the hardwood-and-carpet mix common in older area homes.",
     solution: "A room-by-room routine — upholstery and carpet, hard floors, laundry and pet bedding, and HVAC/air — tuned to which surfaces and seasons actually make pet hair and odor worse in a Dayton-area home.",
     targetAudience: 'Pet-owning homeowners and renters across the Dayton area — including Kettering, Oakwood, and Centerville — dealing with pet hair and odor between professional cleanings',
-    coverImage: '/images/blog/how-to-remove-pet-hair-odor-dayton.png',
-    featured: false,
     content: petHairOdorContent,
     faqs: [
       {
@@ -406,13 +349,6 @@ const posts = [
   },
   {
     slug: 'how-to-clean-grout-tile-without-damaging-dayton',
-    title: 'How to Clean Grout and Tile Without Damaging It in Dayton',
-    description: "Dayton's hard water leaves grout haze fast. Here's the finish-safe way to clean and reseal tile grout without damaging the finish, plus what never to use.",
-    publishedAt: '2026-09-01',
-    updatedAt: '2026-09-01',
-    author: 'Chris Wilson',
-    category: 'Cleaning Tips',
-    tags: ['grout cleaning', 'tile cleaning', 'hard water', 'cleaning tips', 'Dayton'],
     keywords: [
       'how to clean grout and tile without damaging it',
       'clean grout without damaging tile',
@@ -428,8 +364,6 @@ const posts = [
     problem: "Dayton's hard water leaves grout looking gray and tile looking hazy no matter how often it's mopped, and the wrong cleaner or brush can scratch tile or break down grout instead of fixing it.",
     solution: 'A finish-safe, step-by-step method using a baking soda and hydrogen peroxide paste plus a soft nylon brush to clean grout and tile safely, followed by the grout re-sealing routine that keeps hard-water buildup from coming right back.',
     targetAudience: 'Dayton-area homeowners and renters — across Kettering, Centerville, Beavercreek, and the surrounding Miami Valley — dealing with hard-water grout haze and tile buildup in kitchens and bathrooms',
-    coverImage: '/images/blog/how-to-clean-grout-tile-without-damaging-dayton.png',
-    featured: false,
     content: groutTileCleaningContent,
     faqs: [
       {
@@ -474,13 +408,6 @@ const posts = [
   },
   {
     slug: 'pre-listing-deep-clean-checklist-dayton',
-    title: 'The Pre-Listing Deep Clean Checklist for Dayton Sellers',
-    description: "Dayton is a seller's market — homes average just 38 days on market. Here's the pre-listing checklist to get your house showing-ready fast.",
-    publishedAt: '2026-08-27',
-    updatedAt: '2026-08-27',
-    author: 'Chris Wilson',
-    category: 'Local Guides & Seasonal',
-    tags: ['pre-listing cleaning', 'home selling tips', 'real estate cleaning', 'Dayton housing market', 'deep clean checklist'],
     keywords: [
       'deep clean before selling house Dayton',
       'pre-listing cleaning checklist',
@@ -495,8 +422,6 @@ const posts = [
     problem: "Dayton's fast-moving seller's market gives homeowners little runway to prep, and most deep-clean-before-listing advice online is generic with no tie to the local market or timeline pressure sellers actually face.",
     solution: 'A room-by-room pre-listing deep clean checklist and 3-4-week timeline tied to the real 2026 Dayton-area seller\'s market (1.3 months of inventory, 38-day average days on market), covering what to clean and when before photos and showings.',
     targetAudience: 'Dayton-area homeowners preparing to list their home for sale, especially in Oakwood, Kettering, Centerville, Beavercreek, and Springboro, including Wright-Patterson-linked relocation sellers',
-    coverImage: '/images/blog/pre-listing-deep-clean-checklist-dayton.png',
-    featured: false,
     content: preListingDeepCleanContent,
     faqs: [
       {
@@ -540,13 +465,6 @@ const posts = [
   },
   {
     slug: 'oktoberfest-fall-hosting-cleaning-dayton',
-    title: 'Oktoberfest Cleaning Guide for Dayton Hosts',
-    description: "Oktoberfest weekend fills Dayton calendars fast. Here's the pre-party and post-party cleaning timeline to get your house guest-ready and reset fast after.",
-    publishedAt: '2026-08-25',
-    updatedAt: '2026-08-25',
-    author: 'Chris Wilson',
-    category: 'Local Guides & Seasonal',
-    tags: ['fall entertaining', 'party cleaning', 'Oktoberfest', 'hosting checklist', 'Dayton'],
     keywords: [
       'fall entertaining cleaning checklist Dayton',
       'how to clean house before hosting a party',
@@ -561,8 +479,6 @@ const posts = [
     problem: "Oktoberfest weekend packs Dayton's calendar with guests, tailgates, and watch parties — and most fall entertaining advice online is generic, with no plan for cleaning up the morning after.",
     solution: 'A pre-party and post-party cleaning timeline tied to the real Dayton Art Institute Oktoberfest weekend (September 25-27, 2026), covering what to clean before guests arrive and how to reset fast the next day.',
     targetAudience: 'Dayton-area homeowners hosting fall gatherings, tailgates, or Oktoberfest watch parties — especially in Oakwood, Kettering, Centerville, and downtown Dayton households near the Dayton Art Institute',
-    coverImage: '/images/blog/oktoberfest-fall-hosting-cleaning-dayton.png',
-    featured: false,
     content: oktoberfestFallHostingContent,
     faqs: [
       {
@@ -610,13 +526,6 @@ const posts = [
   },
   {
     slug: 'how-to-keep-office-clean-between-cleanings-dayton',
-    title: 'Keep Your Office Clean Between Cleanings',
-    description: "A crew resets your office weekly, but clients and staff see it daily. Here's how Dayton office managers keep it sharp in between visits.",
-    publishedAt: '2026-08-20',
-    updatedAt: '2026-08-20',
-    author: 'Chris Wilson',
-    category: 'Commercial Cleaning',
-    tags: ['office cleaning', 'commercial cleaning', 'workplace maintenance', 'cleaning tips', 'facility management', 'Dayton'],
     keywords: [
       'how to keep office clean between cleanings',
       'office cleaning tips for employees',
@@ -632,8 +541,6 @@ const posts = [
     problem: 'A professional crew resets an office on a schedule, but the workdays in between are what clients and staff actually see — and without light maintenance, a space that sparkled Monday looks tired by Thursday.',
     solution: 'A simple between-visit routine: a 10-minute daily reset of shared areas, a handful of weekly team habits, strong entryway matting to stop tracked-in dirt, and midweek attention to break rooms and high-touch surfaces — while the heavy work stays with the crew.',
     targetAudience: 'Dayton-area office managers, small-business owners, and facility managers — across downtown Dayton, Kettering, and Beavercreek office parks — keeping a workspace presentable between professional commercial cleanings',
-    coverImage: '/images/blog/how-to-keep-office-clean-between-cleanings-dayton.png',
-    featured: false,
     content: officeCleanBetweenCleaningsContent,
     faqs: [
       {
@@ -673,13 +580,6 @@ const posts = [
   },
   {
     slug: 'how-to-deep-clean-stainless-steel-appliances-dayton',
-    title: 'How to Deep Clean Stainless Steel Appliances',
-    description: "Fingerprints and water spots make stainless look dirty fast. Here's how to deep clean it streak-free — and beat Dayton's hard water.",
-    publishedAt: '2026-08-18',
-    updatedAt: '2026-08-18',
-    author: 'Chris Wilson',
-    category: 'Cleaning Tips',
-    tags: ['stainless steel', 'kitchen cleaning', 'appliance care', 'cleaning tips', 'hard water', 'Dayton'],
     keywords: [
       'how to deep clean stainless steel appliances',
       'how to clean stainless steel appliances without streaks',
@@ -695,8 +595,6 @@ const posts = [
     problem: "Stainless steel appliances show every fingerprint and, in hard-water areas like Dayton, cloud over with mineral water spots — and wiping them the wrong way just smears streaks into the finish.",
     solution: 'A finish-safe, streak-free deep-clean method: wash with mild soap and microfiber along the grain, lift hard-water spots with diluted vinegar, dry to prevent spotting, and optionally polish — plus what never to use.',
     targetAudience: 'Dayton-area homeowners and renters — across Oakwood, Kettering, Centerville, and Beavercreek — keeping stainless steel kitchen appliances clean despite Miami Valley hard water',
-    coverImage: '/images/blog/how-to-deep-clean-stainless-steel-appliances-dayton.png',
-    featured: false,
     content: stainlessSteelAppliancesContent,
     faqs: [
       {
@@ -740,13 +638,6 @@ const posts = [
   },
   {
     slug: 'how-to-remove-hard-water-stains-bathroom-fixtures-dayton',
-    title: 'Removing Hard Water Stains From Fixtures',
-    description: "Dayton's tap water runs about 9 grains hard, so fixtures spot fast. Here's how to remove hard water stains from faucets, glass, and showerheads safely.",
-    publishedAt: '2026-08-13',
-    updatedAt: '2026-08-13',
-    author: 'Chris Wilson',
-    category: 'Cleaning Tips',
-    tags: ['hard water stains', 'bathroom cleaning', 'limescale removal', 'cleaning tips', 'Dayton'],
     keywords: [
       'how to remove hard water stains from bathroom fixtures',
       'remove hard water stains from faucets',
@@ -762,8 +653,6 @@ const posts = [
     problem: "Dayton-area tap water is hard enough (about 9 grains per gallon after county softening) to leave chalky mineral buildup on faucets, showerheads, and glass — and regular cleaning spray just slides over it.",
     solution: 'A finish-safe, step-by-step method using white vinegar and baking soda to dissolve and lift hard water stains from bathroom fixtures, plus daily habits that keep the scale from coming back.',
     targetAudience: 'Dayton-area homeowners and renters — across Kettering, Centerville, Beavercreek, and the surrounding Miami Valley — dealing with hard water spotting on bathroom fixtures and shower glass',
-    coverImage: '/images/blog/how-to-remove-hard-water-stains-bathroom-fixtures-dayton.png',
-    featured: false,
     content: hardWaterStainsContent,
     faqs: [
       {
@@ -807,13 +696,6 @@ const posts = [
   },
   {
     slug: 'how-to-prep-home-before-cleaning-crew-dayton',
-    title: 'How to Prep Your Home Before Cleaning Day',
-    description: 'Prepping before your cleaning crew arrives means more actual cleaning for your money. Here’s the 15-minute checklist Dayton homeowners should run first.',
-    publishedAt: '2026-08-11',
-    updatedAt: '2026-08-11',
-    author: 'Chris Wilson',
-    category: 'Cleaning Tips',
-    tags: ['house cleaning prep', 'cleaning checklist', 'first cleaning appointment', 'declutter', 'residential cleaning', 'Dayton'],
     keywords: [
       'how to prepare for a cleaning service',
       'what to do before house cleaners arrive',
@@ -829,8 +711,6 @@ const posts = [
     problem: 'Homeowners waste part of a paid cleaning visit having the crew tidy clutter, secure valuables, and work around pets — time that could have gone toward actual deep cleaning.',
     solution: 'A quick 15-minute pre-clean routine — clear floors and counters, stash valuables, sort out pets and access, and flag priorities — so the crew spends the visit cleaning, not tidying.',
     targetAudience: 'Dayton-area homeowners and renters — especially busy Kettering, Oakwood, and Centerville households — booking a house cleaning, particularly a first visit',
-    coverImage: '/images/blog/how-to-prep-home-before-cleaning-crew-dayton.png',
-    featured: false,
     content: prepHomeBeforeCleaningCrewContent,
     faqs: [
       {
@@ -874,13 +754,6 @@ const posts = [
   },
   {
     slug: 'what-to-expect-recurring-cleaning-service-dayton',
-    title: 'Recurring Cleaning in Dayton: What to Expect',
-    description: "Weekly or bi-weekly cleaning in the Miami Valley? Here's what a recurring house cleaning service includes each visit, what it skips, and how often to book.",
-    publishedAt: '2026-08-06',
-    updatedAt: '2026-08-06',
-    author: 'Chris Wilson',
-    category: 'Cleaning Tips',
-    tags: ['recurring cleaning', 'house cleaning', 'cleaning frequency', 'residential cleaning', 'Dayton'],
     keywords: [
       'recurring cleaning service Dayton',
       'what to expect from a recurring cleaning service',
@@ -897,8 +770,6 @@ const posts = [
     problem: 'Cleaning companies advertise recurring service but rarely explain what you actually get — what happens each visit, what gets skipped between visits, how often you really need it, and the access and etiquette logistics no one mentions upfront.',
     solution: "A plain-English guide to how recurring house cleaning works: what's included and excluded each visit, recurring vs. a one-time deep clean, choosing weekly/bi-weekly/monthly, and why it pays off in the Miami Valley's hard water, pollen, and salt seasons.",
     targetAudience: 'Dayton-area homeowners — especially dual-income and commuter households in Kettering, Oakwood, Centerville, Beavercreek, and Springboro — weighing a standing weekly or bi-weekly cleaning schedule',
-    coverImage: '/images/blog/what-to-expect-recurring-cleaning-service-dayton.png',
-    featured: false,
     content: recurringCleaningServiceContent,
     faqs: [
       {
@@ -937,13 +808,6 @@ const posts = [
   },
   {
     slug: 'airbnb-str-turnover-cleaning-dayton',
-    title: 'Airbnb Turnover Cleaning: A Dayton Guide',
-    description: 'First Four weekend fills Dayton’s rentals fast. Here’s how STR hosts near UD Arena nail a same-day turnover before the next guest.',
-    publishedAt: '2026-08-04',
-    updatedAt: '2026-08-04',
-    author: 'Chris Wilson',
-    category: 'Moving & Turnover',
-    tags: ['Airbnb cleaning', 'short-term rental', 'turnover cleaning', 'Dayton', 'UD Arena', 'First Four'],
     keywords: [
       'Airbnb turnover cleaning Dayton',
       'short-term rental cleaning Dayton Ohio',
@@ -959,8 +823,6 @@ const posts = [
     problem: 'Dayton short-term rentals turn over in back-to-back bursts around events like the UD Arena First Four, and a rushed same-day clean is where reviews and ratings quietly slip.',
     solution: 'A Dayton-specific short-term-rental turnover system: a room-by-room reset checklist, a same-day sequence built around the four-hour window, and when to bring in a crew for the surges.',
     targetAudience: 'Dayton-area Airbnb, VRBO, and short-term-rental hosts — especially those near UD Arena, downtown, and Wright-Patterson — managing back-to-back guest turnovers',
-    coverImage: '/images/blog/airbnb-str-turnover-cleaning-dayton.png',
-    featured: false,
     content: airbnbStrTurnoverContent,
     faqs: [
       {
@@ -1005,13 +867,6 @@ const posts = [
   },
   {
     slug: 'winter-salt-mud-floor-protection-dayton',
-    title: 'Protecting Floors From Winter Salt in Dayton',
-    description: 'Road salt and slush wreck Dayton’s older hardwood floors every winter. Here’s how to protect your entryways and lift salt stains before they leave a mark.',
-    publishedAt: '2026-07-30',
-    updatedAt: '2026-07-30',
-    author: 'Chris Wilson',
-    category: 'Local Guides & Seasonal',
-    tags: ['winter cleaning', 'floor care', 'road salt', 'entryway maintenance', 'Dayton'],
     keywords: [
       'protect hardwood floors from road salt',
       'remove salt stains from floors',
@@ -1026,8 +881,6 @@ const posts = [
     problem: 'Every Dayton winter, road salt and mud get tracked across floors — and the alkaline, gritty residue dulls finishes and stains older hardwood, which the Miami Valley has a lot of.',
     solution: 'A Dayton-specific winter floor-care guide: an entryway setup that stops salt and mud at the door, a finish-safe method for removing salt stains, and extra care for the older homes most at risk.',
     targetAudience: 'Dayton-area homeowners and renters — especially those in older Oregon District, Wright-Dunbar, and Oakwood homes with original hardwood — protecting floors through winter salt season',
-    coverImage: '/images/blog/winter-salt-mud-floor-protection-dayton.png',
-    featured: false,
     content: winterSaltMudFloorProtectionContent,
     faqs: [
       {
@@ -1071,13 +924,6 @@ const posts = [
   },
   {
     slug: 'wright-patterson-afb-pcs-move-out-cleaning-dayton',
-    title: 'Wright-Patterson PCS Move-Out Cleaning Guide',
-    description: 'PCS season means a base-housing or off-base rental inspection is coming. Here’s how Wright-Patterson families get a Dayton move-out clean that passes.',
-    publishedAt: '2026-07-28',
-    updatedAt: '2026-07-28',
-    author: 'Chris Wilson',
-    category: 'Moving & Turnover',
-    tags: ['move-out cleaning', 'PCS cleaning', 'military housing', 'Wright-Patterson AFB', 'Dayton'],
     keywords: [
       'Wright-Patterson PCS move-out cleaning',
       'military move-out cleaning Dayton',
@@ -1092,8 +938,6 @@ const posts = [
     problem: 'Wright-Patterson families PCS out every summer and face a documented move-out inspection — on base or on an off-base rental — right after the movers leave, with little time to get an empty home to standard.',
     solution: 'A Dayton-area PCS move-out cleaning guide tied to Wright-Patterson timing, with a room-by-room inspection checklist and the on-base vs. off-base standards that decide whether you pass.',
     targetAudience: 'Military families PCSing out of Wright-Patterson AFB from privatized on-base housing or off-base rentals in Fairborn, Riverside, Beavercreek, and Huber Heights',
-    coverImage: '/images/blog/wright-patterson-afb-pcs-move-out-cleaning-dayton.png',
-    featured: false,
     content: wrightPattPcsMoveOutCleaningContent,
     faqs: [
       {
@@ -1138,13 +982,6 @@ const posts = [
   },
   {
     slug: 'student-move-in-cleaning-dayton-ud-wright-state',
-    title: 'Move-In Cleaning for Dayton Student Rentals',
-    description: "UD move-in is August 21 and Wright State starts the 24th. Here's how to get a just-vacated Dayton student rental actually clean before the boxes arrive.",
-    publishedAt: '2026-07-24',
-    updatedAt: '2026-07-24',
-    author: 'Chris Wilson',
-    category: 'Moving & Turnover',
-    tags: ['move-in cleaning', 'student housing', 'move-in move-out', 'Dayton', 'Wright State'],
     keywords: [
       'student move-in cleaning Dayton',
       'UD move-in cleaning',
@@ -1159,8 +996,6 @@ const posts = [
     problem: 'Dayton student rentals turn over in a tight two-week window every August, and the unit handed to the next tenant is often only lightly cleaned — cabinets, fridge, and bathroom included.',
     solution: 'A move-in cleaning guide tied to real 2026 UD and Wright State move-in dates, with a room-by-room checklist for getting an empty student rental genuinely clean before the furniture arrives.',
     targetAudience: 'Dayton-area students, parents, and landlords preparing a just-vacated UD or Wright State rental before August move-in',
-    coverImage: '/images/blog/student-move-in-cleaning-dayton-ud-wright-state.png',
-    featured: false,
     content: studentMoveInCleaningDaytonContent,
     faqs: [
       {
@@ -1205,13 +1040,6 @@ const posts = [
   },
   {
     slug: 'ragweed-season-dayton-allergy-cleaning',
-    title: 'Ragweed Season in Dayton: Allergy Prep Guide',
-    description: 'Ragweed season runs mid-August through November in the Miami Valley. Here’s the room-by-room checklist that cuts down what you’re breathing indoors.',
-    publishedAt: '2026-07-22',
-    updatedAt: '2026-07-22',
-    author: 'Chris Wilson',
-    category: 'Local Guides & Seasonal',
-    tags: ['allergy cleaning', 'ragweed season', 'fall cleaning', 'Dayton'],
     keywords: [
       'ragweed allergy cleaning Dayton',
       'reduce ragweed pollen in house',
@@ -1225,8 +1053,6 @@ const posts = [
     problem: 'Ragweed season hits the Miami Valley every fall, and most cleaning advice online is generic, non-local, and vague about timing.',
     solution: 'A room-by-room cleaning checklist tied to real Dayton-area ragweed season dates and peak pollen hours.',
     targetAudience: 'Dayton-area homeowners dealing with fall ragweed allergies',
-    coverImage: '/images/blog/ragweed-season-dayton-allergy-cleaning.png',
-    featured: false,
     content: ragweedSeasonDaytonAllergyCleaningContent,
     faqs: [
       {
@@ -1264,6 +1090,10 @@ const posts = [
     ],
   },
 ]
+
+const extrasBySlug = Object.fromEntries(POST_EXTRAS.map((extra) => [extra.slug, extra]))
+
+const posts = POSTS_META.map((meta) => ({ ...meta, ...extrasBySlug[meta.slug] }))
 
 export const getAllPosts = () => posts
 
