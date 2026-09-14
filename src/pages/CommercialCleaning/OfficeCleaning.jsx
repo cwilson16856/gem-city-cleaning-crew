@@ -545,7 +545,7 @@ const OfficeCleaning = () => {
 
         <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
           From law firms and real estate offices to therapy centers and corporate offices, Dayton's professional businesses trust 
-          Gem City Cleaning Crew for reliable, confidential, and thorough office cleaning services. Our flexible approach means 
+          Gem City Cleaning Crew for reliable, confidential, and thorough cleaning services. Our flexible approach means
           no long-term contracts, and our in-person quotes ensure you get exactly the services your office needs.
         </Typography>
 
@@ -586,7 +586,7 @@ const OfficeCleaning = () => {
 
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
             Since 2017, professional offices throughout Dayton have relied on Gem City Cleaning Crew for dependable, 
-            discrete, and thorough office cleaning services. We understand that professional environments require special attention 
+            discrete, and thorough cleaning services. We understand that professional environments require special attention
             to detail, confidentiality, and flexibility. Our no-contract approach and recurring service options make it easy 
             to maintain a consistently clean office that reflects your professional standards.
           </Typography>
@@ -638,7 +638,7 @@ const OfficeCleaning = () => {
           </Typography>
 
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-            Our comprehensive office cleaning services cover every area of your professional workspace. 
+            Our comprehensive cleaning services cover every area of your professional workspace.
             We use commercial-grade equipment and eco-friendly cleaning products that are safe for office environments, 
             electronics, and sensitive documents while maintaining the professional appearance your clients expect.
           </Typography>
@@ -727,8 +727,8 @@ const OfficeCleaning = () => {
                 Ready for Professional Office Cleaning?
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, color: '#525252', fontSize: '1.1rem' }}>
-                Schedule your free in-person quote today. No contracts required - just professional, 
-                reliable office cleaning services tailored to your needs.
+                Schedule your free in-person quote today. No contracts required - just professional,
+                reliable, tailored cleaning services for your needs.
               </Typography>
               <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Button
@@ -854,7 +854,7 @@ const OfficeCleaning = () => {
 
           <Typography variant="body1" sx={{ mb: 4, maxWidth: 900, mx: 'auto', lineHeight: 1.7 }}>
             At Gem City Cleaning Crew, we understand that your office environment directly impacts productivity, employee morale, and client perceptions. 
-            Our professional office cleaning services are designed specifically for Dayton's business community, serving law firms, real estate offices, 
+            Our professional cleaning services are designed specifically for Dayton's business community, serving law firms, real estate offices,
             therapy centers, and corporate offices, backed by a 4.6-star rating and a professional, consistent approach.
             With no long-term contracts required, flexible recurring services, and personalized in-person quotes, 
             we make it easy to maintain a consistently clean and professional workspace that supports your business success.

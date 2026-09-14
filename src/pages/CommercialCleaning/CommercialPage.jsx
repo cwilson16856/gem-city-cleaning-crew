@@ -554,7 +554,7 @@ const CommercialPage = () => {
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-          Our commercial cleaning services have helped hundreds of Dayton businesses maintain clean, professional environments. 
+          Our commercial cleaning services help Dayton businesses maintain clean, professional environments.
           From small offices to large corporate facilities, we deliver consistent, high-quality cleaning that supports your business success. 
           Our trained professionals understand the unique needs of different business environments and work around your schedule to minimize disruption.
         </Typography>

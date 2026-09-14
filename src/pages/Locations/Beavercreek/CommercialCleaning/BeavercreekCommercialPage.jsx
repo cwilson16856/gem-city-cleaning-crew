@@ -563,7 +563,7 @@ const BeavercreekCommercialPage = () => {
         </Grid>
 
         <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-          Our commercial cleaning services have transformed hundreds of Beavercreek businesses, from The Greene to Pentagon Boulevard. 
+          Our commercial cleaning services support Beavercreek businesses from The Greene to Pentagon Boulevard.
           As your local cleaning experts, we understand the unique needs of Beavercreek's business community and deliver consistent, 
           high-quality cleaning that elevates your professional image. Our trained professionals work around your schedule to ensure 
           minimal disruption while backed by our 4.6-star rating and licensed, insured service.

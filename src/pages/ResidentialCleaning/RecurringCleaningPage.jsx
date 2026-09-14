@@ -1362,7 +1362,7 @@ const RecurringCleaningPage = () => {
             Ready for Reliable Recurring Cleaning?
           </Typography>
           <Typography variant="h6" component="p" sx={{ color: 'white', mb: 4, opacity: 0.9 }}>
-            Join the hundreds of Dayton families who trust us with their homes every week.
+            Join the Dayton families who trust our 4.6-star rated team with their homes every week.
             No contracts, same cleaner, flexible scheduling guaranteed.
           </Typography>
           

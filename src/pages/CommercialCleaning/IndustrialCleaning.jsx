@@ -424,7 +424,7 @@ const IndustrialCleaning = () => {
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
             Since 2017, Gem City Cleaning Crew has served the Dayton area with dependable commercial cleaning.
             Industrial facilities need crews that understand scale, safety, and flexible shift schedules.
-            Our industrial cleaning services are built around exactly that.
+            Our services are built around exactly that.
           </Typography>
 
           <Grid container spacing={4} sx={{ mb: 6 }} className="commercial-service-features">
@@ -455,7 +455,7 @@ const IndustrialCleaning = () => {
           </Typography>
 
           <Typography variant="body1" sx={{ mb: 6, textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
-            Our industrial cleaning services cover every area of your facility. We use commercial-grade
+            Our cleaning services cover every area of your facility. We use commercial-grade
             equipment suited for large floor plans and heavy-duty environments, and we'll work with your
             team on any facility-specific safety requirements.
           </Typography>
@@ -496,7 +496,7 @@ const IndustrialCleaning = () => {
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, color: '#525252', fontSize: '1.1rem' }}>
                 Let us build a cleaning plan around your facility's scale and schedule.
-                No contracts required: just reliable, professional industrial cleaning.
+                No contracts required: just reliable, professional service.
               </Typography>
               <Button
                 variant="contained"
@@ -558,7 +558,7 @@ const IndustrialCleaning = () => {
           <Typography variant="body1" sx={{ mb: 4, maxWidth: 900, mx: 'auto', lineHeight: 1.7 }}>
             At Gem City Cleaning Crew, we understand that industrial facilities require cleaning crews who
             can handle scale, work around production schedules, and follow facility safety protocols.
-            Our industrial cleaning services are designed for Dayton's warehouses, manufacturers, and
+            Our cleaning services are designed for Dayton's warehouses, manufacturers, and
             distribution centers, with flexible scheduling and no long-term contracts required.
           </Typography>
         </Box>

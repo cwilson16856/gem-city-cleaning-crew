@@ -127,6 +127,42 @@ test.describe('Idle-deferred GTM/Pixel', () => {
     await expect.poll(() => gtagFiredBeforeLoad, { timeout: 2500 }).toBe(true)
     await expect.poll(() => fbFiredBeforeLoad, { timeout: 2500 }).toBe(true)
   })
+
+  // 2026-09-14 SEO audit round-4 follow-up: a fresh PSI run found these
+  // scripts still firing before LCP despite the fix above, because Lighthouse's
+  // full-page-screenshot gatherer performs a real, programmatic scroll during
+  // every audit run -- a genuine 'scroll' event, indistinguishable in code
+  // from a person scrolling. 'scroll' was removed from the trigger list, so a
+  // scripted scroll (page.mouse.wheel(), the same technique the Maps-embed
+  // tests above already use for a genuine native scroll event) must now fall
+  // through to the unchanged window.load+idle fallback, not fire immediately.
+  test('a scripted scroll does not load the scripts immediately (falls through to load+idle)', async ({ page }) => {
+    let loadFired = false
+    let gtagFiredBeforeLoad = false
+    let fbFiredBeforeLoad = false
+    page.on('load', () => { loadFired = true })
+    page.on('request', (req) => {
+      const url = req.url()
+      if (url.includes('googletagmanager.com/gtag/js') && !loadFired) gtagFiredBeforeLoad = true
+      if (url.includes('connect.facebook.net/en_US/fbevents.js') && !loadFired) fbFiredBeforeLoad = true
+    })
+
+    await page.route('**/assets/*.css', async (route) => {
+      await new Promise((resolve) => setTimeout(resolve, 3000))
+      await route.continue()
+    })
+
+    await page.goto('/', { waitUntil: 'domcontentloaded' })
+    expect(loadFired).toBe(false)
+    await page.mouse.wheel(0, 3000)
+
+    // Give the scroll handler every chance to (incorrectly) fire before
+    // asserting it didn't -- a flaky false-pass here would be worse than a
+    // slow test.
+    await page.waitForTimeout(1000)
+    expect(gtagFiredBeforeLoad).toBe(false)
+    expect(fbFiredBeforeLoad).toBe(false)
+  })
 })
 
 test.describe('Backend Integration', () => {
