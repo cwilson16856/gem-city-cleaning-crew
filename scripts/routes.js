@@ -45,6 +45,17 @@ export const STATIC_ROUTES = [
   { path: '/industrial-cleaning', sourceFile: 'src/pages/CommercialCleaning/IndustrialCleaning.jsx' },
   { path: '/locations', sourceFile: 'src/pages/LocationPage.jsx' },
   { path: '/quote', sourceFile: 'src/pages/QuotePage.jsx' },
+  // Prerendered separately from '/quote' so crawlers hitting this exact URL
+  // (every B2B hub CTA links here) see the real commercially-framed
+  // <title>/meta/FAQ instead of the default residential snapshot --
+  // react-router's StaticRouter correctly parses the query string during
+  // SSR (confirmed: render('/quote?type=commercial') already produces
+  // "Free Commercial Cleaning Quote..."), the gap was only that this exact
+  // path+query combination was never in the prerender route list. Not in
+  // the sitemap: this URL canonicalizes to /quote (QuotePage.jsx's own
+  // <link rel="canonical">), so it should never be treated as a distinct
+  // indexable page -- just a crawlable snapshot of a real, linked URL.
+  { path: '/quote?type=commercial', sourceFile: 'src/pages/QuotePage.jsx', sitemap: false },
   { path: '/blog', sourceFile: 'src/pages/BlogPage.jsx' },
   { path: '/about-us', sourceFile: 'src/pages/AboutPage.jsx' },
   { path: '/our-training-program', sourceFile: 'src/pages/OurTrainingProgram.jsx' },

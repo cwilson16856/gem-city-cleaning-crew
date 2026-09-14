@@ -44,8 +44,16 @@ const ROOT = path.join(__dirname, '..')
 // Maps a route path to where its prerendered index.html should live under dist/.
 // '/' -> dist/index.html, '/blog' -> dist/blog/index.html,
 // '/locations/kettering/house-cleaning-services' -> dist/locations/kettering/house-cleaning-services/index.html
+// A route with a query string (e.g. '/quote?type=commercial', prerendered as
+// its own variant so crawlers hitting that exact URL see commercially-framed
+// <title>/meta instead of the default /quote snapshot -- see vercel.json's
+// matching `has: [{type: 'query', ...}]` rewrite, which serves this file for
+// that exact query without changing the URL the browser/crawler sees) gets
+// its '?'/'&'/'=' turned into extra path segments: '?type=commercial' ->
+// '/type-commercial'.
 function outFileFor(distDir, routePath) {
-  const trimmed = routePath.replace(/^\/+|\/+$/g, '')
+  const filesystemSafePath = routePath.replace(/[?&]/g, '/').replace(/=/g, '-')
+  const trimmed = filesystemSafePath.replace(/^\/+|\/+$/g, '')
   return trimmed === ''
     ? path.join(distDir, 'index.html')
     : path.join(distDir, ...trimmed.split('/'), 'index.html')
@@ -76,7 +84,8 @@ function replaceOrThrow(html, searchValue, replaceValue, label) {
 // index.html. Fetched by middleware.js when a request negotiates
 // Accept: text/markdown (acceptmarkdown.com).
 function markdownOutFileFor(distDir, routePath) {
-  const trimmed = routePath.replace(/^\/+|\/+$/g, '')
+  const filesystemSafePath = routePath.replace(/[?&]/g, '/').replace(/=/g, '-')
+  const trimmed = filesystemSafePath.replace(/^\/+|\/+$/g, '')
   return trimmed === ''
     ? path.join(distDir, 'index.md')
     : path.join(distDir, ...trimmed.split('/'), 'index.md')

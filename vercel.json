@@ -3,6 +3,13 @@
   "redirects": [
     { "source": "/commercial-cleaning-services/", "destination": "/commercial", "permanent": true }
   ],
+  "rewrites": [
+    {
+      "source": "/quote",
+      "has": [{ "type": "query", "key": "type", "value": "commercial" }],
+      "destination": "/quote/type-commercial"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
