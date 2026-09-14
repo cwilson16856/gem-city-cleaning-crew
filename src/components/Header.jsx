@@ -19,14 +19,12 @@ import {
   Menu as MenuIcon,
   Phone as PhoneIcon,
   Email as EmailIcon,
-  Sms as SmsIcon,
   ExpandMore as ExpandMoreIcon,
   ChevronRight as ChevronRightIcon
 } from '@mui/icons-material'
 import { CITY_SLUGS, CITIES } from '../data/locations'
 const Header = () => {
   const [mobileMenuAnchor, setMobileMenuAnchor] = useState(null)
-  const [contactMenuAnchor, setContactMenuAnchor] = useState(null)
   const [residentialMenuAnchor, setResidentialMenuAnchor] = useState(null)
   const [commercialMenuAnchor, setCommercialMenuAnchor] = useState(null)
   const [locationsMenuAnchor, setLocationsMenuAnchor] = useState(null)
@@ -42,14 +40,6 @@ const Header = () => {
 
   const handleMobileMenuClose = () => {
     setMobileMenuAnchor(null)
-  }
-
-  const handleContactMenuOpen = (event) => {
-    setContactMenuAnchor(event.currentTarget)
-  }
-
-  const handleContactMenuClose = () => {
-    setContactMenuAnchor(null)
   }
 
   const handleResidentialMenuOpen = (event) => {
@@ -88,17 +78,12 @@ const Header = () => {
 
   const handleCall = () => {
     window.open('tel:937-892-4157', '_self')
-    handleContactMenuClose()
+    handleMobileMenuClose()
   }
 
   const handleEmail = () => {
     window.open('mailto:info@gemcitycleaningcrew.com', '_self')
-    handleContactMenuClose()
-  }
-
-  const handleText = () => {
-    window.open('sms:937-892-4157', '_self')
-    handleContactMenuClose()
+    handleMobileMenuClose()
   }
 
   const isActive = (path) => location.pathname === path
@@ -644,39 +629,12 @@ const Header = () => {
                 
                 <Button
                   variant="outlined"
-                  onClick={handleContactMenuOpen}
-                  endIcon={<ExpandMoreIcon />}
+                  component={Link}
+                  to="/quote"
                   sx={{ px: 2 }}
                 >
                   Contact
                 </Button>
-
-                {/* Contact Dropdown Menu */}
-                <Menu
-                  anchorEl={contactMenuAnchor}
-                  open={Boolean(contactMenuAnchor)}
-                  onClose={handleContactMenuClose}
-                  sx={{ mt: 1 }}
-                >
-                  <MenuItem onClick={handleCall} sx={{ gap: 2, minWidth: 180 }}>
-                    <PhoneIcon sx={{ color: theme.palette.primary.main }} />
-                    <Box>
-                      <ListItemText primary="Call Us" secondary="937-892-4157" />
-                    </Box>
-                  </MenuItem>
-                  <MenuItem onClick={handleText} sx={{ gap: 2 }}>
-                    <SmsIcon sx={{ color: theme.palette.primary.main }} />
-                    <Box>
-                      <ListItemText primary="Text Us" secondary="937-892-4157" />
-                    </Box>
-                  </MenuItem>
-                  <MenuItem onClick={handleEmail} sx={{ gap: 2 }}>
-                    <EmailIcon sx={{ color: theme.palette.primary.main }} />
-                    <Box>
-                      <ListItemText primary="Email Us" secondary="info@gemcitycleaningcrew.com" />
-                    </Box>
-                  </MenuItem>
-                </Menu>
               </Box>
             </Box>
           )}

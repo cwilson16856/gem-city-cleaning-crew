@@ -251,6 +251,18 @@
     min-height: 44px;
   }
 
+  /* 2026-09-13 SEO audit round-3 follow-up: the in-prose "view all service
+     areas" link excluded from the block above (see the comment on it) never
+     got its own accessible sizing. Padding + matching negative margin grows
+     the tap target to 44px tall without visually pushing the surrounding
+     sentence text, preserving its inline appearance. */
+  .additionalAreasNote .serviceItemLink {
+    display: inline-block;
+    padding: 11px 4px;
+    margin: -11px -4px;
+    vertical-align: middle;
+  }
+
   .legalLink {
     display: inline-flex;
     align-items: center;

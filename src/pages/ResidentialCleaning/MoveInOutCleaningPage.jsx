@@ -3,6 +3,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
 import {
   Container,
   Typography,
@@ -142,6 +143,19 @@ const MoveInOutCleaningPage = () => {
     { text: "Areas We Serve", href: "#service-areas" },
     { text: "Get Your Free Quote", href: "#get-quote" }
   ]
+
+  const webPageSchema = generateLocationWebPageSchema({
+    id: 'https://gemcitycleaningcrew.com/move-in-out-cleaning#webpage',
+    url: 'https://gemcitycleaningcrew.com/move-in-out-cleaning',
+    name: 'Move-In Move-Out Cleaning Services Dayton OH | Professional Moving Cleaners',
+    description: 'Professional move-in/move-out cleaning services in Dayton, OH. Deep cleaning for empty homes, perfect for landlords, tenants, and new homeowners.',
+    aboutId: 'https://gemcitycleaningcrew.com/move-in-out-cleaning#service',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://gemcitycleaningcrew.com' },
+      { name: 'Residential Services', url: 'https://gemcitycleaningcrew.com/residential' },
+      { name: 'Move-In Move-Out Cleaning', url: 'https://gemcitycleaningcrew.com/move-in-out-cleaning' }
+    ]
+  })
 
   return (
     <>
@@ -334,34 +348,6 @@ const MoveInOutCleaningPage = () => {
 
         {/* LocalBusiness itself is injected once, site-wide, by the app shell (App.jsx / entry-server.jsx) — a per-page copy here would duplicate it with a conflicting/inconsistent version. */}
 
-        {/* Breadcrumb Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://gemcitycleaningcrew.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Residential Services",
-                "item": "https://gemcitycleaningcrew.com/residential"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Move-In Move-Out Cleaning",
-                "item": "https://gemcitycleaningcrew.com/move-in-out-cleaning"
-              }
-            ]
-          })}
-        </script>
-
         {/* ImageObject Schema for before/after images */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -382,45 +368,7 @@ const MoveInOutCleaningPage = () => {
 
         {/* WebPage Schema */}
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "@id": "https://gemcitycleaningcrew.com/move-in-out-cleaning#webpage",
-            "name": "Move-In Move-Out Cleaning Services Dayton OH | Professional Moving Cleaners",
-            "description": "Professional move-in/move-out cleaning services in Dayton, OH. Deep cleaning for empty homes, perfect for landlords, tenants, and new homeowners.",
-            "url": "https://gemcitycleaningcrew.com/move-in-out-cleaning",
-            "mainEntity": {
-              "@type": "Service",
-              "name": "Move-In Move-Out Cleaning Services"
-            },
-            "breadcrumb": {
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://gemcitycleaningcrew.com"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Residential Services",
-                  "item": "https://gemcitycleaningcrew.com/residential"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Move-In Move-Out Cleaning",
-                  "item": "https://gemcitycleaningcrew.com/move-in-out-cleaning"
-                }
-              ]
-            },
-            "speakable": {
-              "@type": "SpeakableSpecification",
-              "cssSelector": ["h1", "h2", ".hero-subtitle"]
-            }
-          })}
+          {JSON.stringify(webPageSchema)}
         </script>
       </Helmet>
 

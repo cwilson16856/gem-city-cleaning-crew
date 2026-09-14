@@ -207,7 +207,7 @@ const RetailCleaning = () => {
   // Table of Contents items
   const tocItems = [
     { text: '🛍️ Professional Retail Cleaning Dayton', href: '#dayton-retail-cleaning-services' },
-    { text: '⭐ Retail Client Testimonials', href: '#testimonials' },
+    { text: '⭐ Why Businesses Trust Us', href: '#testimonials' },
     { text: '✨ Why Choose Professional Retail Cleaning', href: '#why-choose-us' },
     { text: '📍 Service Areas & Coverage', href: '#service-areas' },
     { text: '📋 What\'s Included in Retail Cleaning', href: '#what-included' },
@@ -516,7 +516,7 @@ const RetailCleaning = () => {
       {/* Testimonial Section */}
       <Container maxWidth="lg" sx={{ py: 8 }} id="testimonials">
         <Typography variant="h2" component="h2" sx={{ mb: 2, textAlign: 'center' }}>
-          Retail Cleaning Client Reviews
+          Why Dayton Businesses Trust Gem City
         </Typography>
         
         <Typography 
@@ -538,7 +538,7 @@ const RetailCleaning = () => {
           no-contract approach means we adapt to your business needs while maintaining the clean, inviting environment your customers expect.
         </Typography>
 
-        <TrustBlock variant="compact" />
+        <TrustBlock variant="compact" showReviews={false} />
 
         <Box sx={{ textAlign: 'center' }}>
           <Button

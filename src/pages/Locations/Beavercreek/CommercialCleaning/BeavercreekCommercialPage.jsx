@@ -79,7 +79,7 @@ const BeavercreekCommercialPage = () => {
   // Table of Contents items
   const tocItems = [
     { text: '🏢 Beavercreek Commercial Cleaning', href: '#beavercreek-commercial-cleaning-services' },
-    { text: '⭐ Beavercreek Business Reviews', href: '#testimonials' },
+    { text: '⭐ Why Businesses Trust Us', href: '#testimonials' },
     { text: '✨ Why Choose Our Beavercreek Cleaning Team', href: '#why-choose-us' },
     { text: '📍 Beavercreek Service Areas', href: '#service-areas' },
     { text: '📋 Commercial Cleaning Services Included', href: '#what-included' },
@@ -573,7 +573,7 @@ const BeavercreekCommercialPage = () => {
       {/* Testimonial Section */}
       <Container maxWidth="lg" sx={{ py: 8 }} id="testimonials">
         <Typography variant="h2" component="h2" sx={{ mb: 2, textAlign: 'center' }}>
-          Beavercreek Business Client Reviews
+          Why Beavercreek Businesses Trust Gem City
         </Typography>
         
         <Typography 
@@ -595,7 +595,7 @@ const BeavercreekCommercialPage = () => {
           high-quality cleaning that maintains Beavercreek's high professional standards.
         </Typography>
 
-        <TrustBlock variant="compact" />
+        <TrustBlock variant="compact" showReviews={false} />
 
         <Box sx={{ textAlign: 'center' }}>
           <Button

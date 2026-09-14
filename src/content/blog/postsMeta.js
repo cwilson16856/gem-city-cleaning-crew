@@ -157,7 +157,7 @@ export const POSTS_META = [
   {
     "slug": "pre-listing-deep-clean-checklist-dayton",
     "title": "The Pre-Listing Deep Clean Checklist for Dayton Sellers",
-    "description": "Dayton is a seller's market: homes average just 38 days on market. Here's the pre-listing checklist to get your house showing-ready fast.",
+    "description": "Dayton's fast-moving seller's market gives homeowners little time to prep. Here's the pre-listing checklist to get your house showing-ready fast.",
     "publishedAt": "2026-08-27",
     "updatedAt": "2026-08-27",
     "author": "Chris Wilson",

@@ -93,10 +93,16 @@ const QuotePage = () => {
     <>
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp" fetchPriority="high" />
-        {/* Primary Meta Tags */}
-        <title>Free House Cleaning Quote Dayton OH | Gem City Cleaning Crew</title>
-        <meta name="title" content="Get Free House Cleaning Quote Dayton OH | Request Estimate Online | Gem City Cleaning" />
-        <meta name="description" content="⭐ Get your FREE house cleaning quote online in Dayton, OH! Professional residential & commercial cleaning estimates. Same-day response guaranteed. Call 937-892-4157 or request quote online now!" />
+        {/* Primary Meta Tags -- title/description conditional on serviceType. Note:
+        scripts/routes.js only prerenders bare /quote, so this swap reaches real
+        browsers and JS-executing crawlers, not a bare-HTTP OG scraper hitting
+        ?type=commercial directly -- an accepted, documented limitation, same
+        class as middleware.js's other accepted routing gaps. */}
+        <title>{`Free ${serviceType === 'commercial' ? 'Commercial' : 'House'} Cleaning Quote Dayton OH | Gem City Cleaning Crew`}</title>
+        <meta name="title" content={`Get Free ${serviceType === 'commercial' ? 'Commercial' : 'House'} Cleaning Quote Dayton OH | Request Estimate Online | Gem City Cleaning`} />
+        <meta name="description" content={serviceType === 'commercial'
+          ? '⭐ Get your FREE commercial cleaning quote online in Dayton, OH! Professional office, retail & facility cleaning estimates. Same-day response guaranteed. Call 937-892-4157 or request quote online now!'
+          : '⭐ Get your FREE house cleaning quote online in Dayton, OH! Professional residential & commercial cleaning estimates. Same-day response guaranteed. Call 937-892-4157 or request quote online now!'} />
         <meta name="keywords" content="free house cleaning quote Dayton, cleaning estimate Dayton OH, house cleaning cost Dayton, maid service quote, residential cleaning estimate, commercial cleaning quote Dayton, cleaning service prices, free cleaning estimate near me, Kettering cleaning quote, Centerville house cleaning cost, Oakwood maid service estimate, cleaning quote online, house cleaning pricing Dayton, professional cleaning estimate, cleaning service consultation" />
         
         {/* Additional SEO Meta Tags */}
@@ -116,8 +122,10 @@ const QuotePage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Gem City Cleaning Crew" />
         <meta property="og:url" content="https://gemcitycleaningcrew.com/quote" />
-        <meta property="og:title" content="Get Free House Cleaning Quote Dayton OH | Request Estimate Online" />
-        <meta property="og:description" content="⭐ Get your FREE house cleaning quote online in Dayton, OH! Professional residential & commercial cleaning estimates. Same-day response guaranteed. Call 937-892-4157!" />
+        <meta property="og:title" content={`Get Free ${serviceType === 'commercial' ? 'Commercial' : 'House'} Cleaning Quote Dayton OH | Request Estimate Online`} />
+        <meta property="og:description" content={serviceType === 'commercial'
+          ? '⭐ Get your FREE commercial cleaning quote online in Dayton, OH! Professional office, retail & facility cleaning estimates. Same-day response guaranteed. Call 937-892-4157!'
+          : '⭐ Get your FREE house cleaning quote online in Dayton, OH! Professional residential & commercial cleaning estimates. Same-day response guaranteed. Call 937-892-4157!'} />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta property="og:image:alt" content="Professional house cleaning quote form for Dayton OH residents" />
         <meta property="og:image:width" content="1200" />
@@ -133,8 +141,10 @@ const QuotePage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@GemCityCleaning" />
         <meta name="twitter:creator" content="@GemCityCleaning" />
-        <meta name="twitter:title" content="Get Free House Cleaning Quote Dayton OH | Request Estimate Online" />
-        <meta name="twitter:description" content="⭐ Get your FREE house cleaning quote online in Dayton, OH! Professional cleaning estimates with same-day response. Call 937-892-4157!" />
+        <meta name="twitter:title" content={`Get Free ${serviceType === 'commercial' ? 'Commercial' : 'House'} Cleaning Quote Dayton OH | Request Estimate Online`} />
+        <meta name="twitter:description" content={serviceType === 'commercial'
+          ? '⭐ Get your FREE commercial cleaning quote online in Dayton, OH! Professional cleaning estimates with same-day response. Call 937-892-4157!'
+          : '⭐ Get your FREE house cleaning quote online in Dayton, OH! Professional cleaning estimates with same-day response. Call 937-892-4157!'} />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
         <meta name="twitter:image:alt" content="Free house cleaning quote form for Dayton OH" />
         
@@ -216,10 +226,10 @@ const QuotePage = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "How do I get a free house cleaning quote?",
+                "name": `How do I get a free ${serviceType === 'commercial' ? 'commercial' : 'house'} cleaning quote?`,
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "You can get a free house cleaning quote by filling out our online form on this page or calling us directly at 937-892-4157. We provide same-day responses to all quote requests with no obligation."
+                  "text": `You can get a free ${serviceType === 'commercial' ? 'commercial' : 'house'} cleaning quote by filling out our online form on this page or calling us directly at 937-892-4157. We provide same-day responses to all quote requests with no obligation.`
                 }
               },
               {
@@ -232,10 +242,10 @@ const QuotePage = () => {
               },
               {
                 "@type": "Question",
-                "name": "Is the house cleaning quote really free?",
+                "name": `Is the ${serviceType === 'commercial' ? 'commercial' : 'house'} cleaning quote really free?`,
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, absolutely! Our house cleaning quotes are completely free with no obligation. We provide detailed estimates for all our services including one-time, recurring, deep cleaning, and move-in/move-out cleaning."
+                  "text": `Yes, absolutely! Our ${serviceType === 'commercial' ? 'commercial' : 'house'} cleaning quotes are completely free with no obligation. We provide detailed estimates for all our services including one-time, recurring, deep cleaning, and move-in/move-out cleaning.`
                 }
               },
               {
@@ -243,7 +253,7 @@ const QuotePage = () => {
                 "name": "What information do you need for an accurate quote?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "To provide the most accurate quote, we need information about your home size, number of rooms, type of cleaning service needed, preferred frequency, and any special requests or areas of focus."
+                  "text": `To provide the most accurate quote, we need information about your ${serviceType === 'commercial' ? 'facility size, number of rooms or workstations' : 'home size, number of rooms'}, type of cleaning service needed, preferred frequency, and any special requests or areas of focus.`
                 }
               },
               {
@@ -536,7 +546,7 @@ const QuotePage = () => {
         </Box>
       </Container>
 
-      <TrustBlock variant="compact" />
+      <TrustBlock variant="compact" showReviews={serviceType !== 'commercial'} />
 
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Grid container spacing={4}>
@@ -1042,7 +1052,7 @@ const QuotePage = () => {
               Quality Service at Fair Prices
             </Typography>
             <Typography variant="body1" sx={{ maxWidth: 600, mx: 'auto', color: 'text.secondary' }}>
-              Our goal is to provide <strong>cleaning estimates</strong> that offer exceptional value for Dayton homeowners,
+              Our goal is to provide <strong>cleaning estimates</strong> that offer exceptional value for {serviceType === 'commercial' ? 'Dayton businesses' : 'Dayton homeowners'},
               backed by our 4.6-star rating and licensed, insured service.
             </Typography>
           </Box>
@@ -1057,7 +1067,7 @@ const QuotePage = () => {
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
-                When comparing <strong>house cleaning costs</strong>, consider the advantages of choosing a local 
+                When comparing <strong>{serviceType === 'commercial' ? 'commercial cleaning costs' : 'house cleaning costs'}</strong>, consider the advantages of choosing a local
                 Dayton business over national chains. Our commitment to the community shows in every aspect of our service.
               </Typography>
               
@@ -1148,26 +1158,44 @@ const QuotePage = () => {
               </Typography>
               
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
-                Our <strong>house cleaning cost</strong> assessment begins with understanding your unique needs. 
-                Whether you're researching weekly maid service pricing or need a one-time deep clean estimate, 
+                Our <strong>{serviceType === 'commercial' ? 'commercial cleaning cost' : 'house cleaning cost'}</strong> assessment begins with understanding your unique needs.
+                Whether you're researching {serviceType === 'commercial' ? 'commercial janitorial' : 'weekly maid service'} pricing or need a one-time deep clean estimate,
                 we tailor our evaluation to your specific situation. Professional cleaning estimates should never be rushed.
               </Typography>
-              
-              <Typography variant="body1" sx={{ mb: 4, fontSize: '1.1rem', lineHeight: 1.7 }}>
-                Each <strong>residential cleaning quote</strong> includes extensive customization options because every 
-                home and family has unique needs. We'll work with you to create a cleaning plan that fits your 
-                schedule, budget, and specific preferences, ensuring you only pay for the services you actually want. 
-                Whether you're looking for{' '}
-                <Link to="/deep-cleaning" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                  one-time deep cleaning
-                </Link>,{' '}
-                <Link to="/recurring-cleaning-service" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                  regular weekly service
-                </Link>, or{' '}
-                <Link to="/move-in-out-cleaning" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                  move-in/move-out cleaning
-                </Link>, your quote will clearly outline all costs.
-              </Typography>
+
+              {serviceType === 'commercial' ? (
+                <Typography variant="body1" sx={{ mb: 4, fontSize: '1.1rem', lineHeight: 1.7 }}>
+                  Each <strong>commercial cleaning quote</strong> includes extensive customization options because every
+                  business has unique needs. We'll work with you to create a cleaning plan that fits your
+                  schedule, budget, and specific preferences, ensuring you only pay for the services you actually want.
+                  Whether you're looking for{' '}
+                  <Link to="/commercial-one-time-cleaning" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                    one-time commercial cleaning
+                  </Link>,{' '}
+                  <Link to="/recurring-cleaning-service" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                    regular office service
+                  </Link>, or{' '}
+                  <Link to="/office-cleaning-checklist" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                    a detailed office cleaning checklist
+                  </Link>, your quote will clearly outline all costs.
+                </Typography>
+              ) : (
+                <Typography variant="body1" sx={{ mb: 4, fontSize: '1.1rem', lineHeight: 1.7 }}>
+                  Each <strong>residential cleaning quote</strong> includes extensive customization options because every
+                  home and family has unique needs. We'll work with you to create a cleaning plan that fits your
+                  schedule, budget, and specific preferences, ensuring you only pay for the services you actually want.
+                  Whether you're looking for{' '}
+                  <Link to="/deep-cleaning" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                    one-time deep cleaning
+                  </Link>,{' '}
+                  <Link to="/recurring-cleaning-service" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                    regular weekly service
+                  </Link>, or{' '}
+                  <Link to="/move-in-out-cleaning" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                    move-in/move-out cleaning
+                  </Link>, your quote will clearly outline all costs.
+                </Typography>
+              )}
             </Grid>
             
             <Grid item xs={12} md={4}>
@@ -1240,9 +1268,9 @@ const QuotePage = () => {
                     Are your cleaning estimates really free?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
-                    Yes, absolutely! Our <strong>house cleaning estimates</strong> are completely free with no obligation. 
-                    We provide detailed quotes for all our services including one-time cleaning, recurring service, 
-                    deep cleaning, and move-in/move-out cleaning without any commitment from you.
+                    Yes, absolutely! Our <strong>{serviceType === 'commercial' ? 'commercial cleaning estimates' : 'house cleaning estimates'}</strong> are completely free with no obligation.
+                    We provide detailed quotes for all our services including one-time cleaning, recurring service,
+                    deep cleaning, and {serviceType === 'commercial' ? 'post-construction cleanup' : 'move-in/move-out cleaning'} without any commitment from you.
                   </Typography>
                 </Card>
                 
@@ -1251,8 +1279,8 @@ const QuotePage = () => {
                     What information do you need for an accurate estimate?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
-                    To provide the most accurate <strong>cleaning service quote</strong>, we need information about your home size, 
-                    number of rooms, type of cleaning service needed, preferred frequency, and any special requests 
+                    To provide the most accurate <strong>cleaning service quote</strong>, we need information about your {serviceType === 'commercial' ? 'facility size, number of rooms or workstations' : 'home size, number of rooms'},
+                    type of cleaning service needed, preferred frequency, and any special requests
                     or areas that need extra attention. The more details you provide, the more precise your quote will be.
                   </Typography>
                 </Card>
@@ -1262,8 +1290,8 @@ const QuotePage = () => {
                     Can I modify my quote after I receive it?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
-                    Absolutely! Your <strong>maid service pricing</strong> estimate is completely flexible. We can add or remove 
-                    rooms, adjust cleaning tasks, change frequency, or modify any aspect of your service plan. 
+                    Absolutely! Your <strong>{serviceType === 'commercial' ? 'commercial cleaning' : 'maid service pricing'}</strong> estimate is completely flexible. We can add or remove
+                    {serviceType === 'commercial' ? ' areas' : ' rooms'}, adjust cleaning tasks, change frequency, or modify any aspect of your service plan.
                     We'll provide updated pricing for any changes you'd like to make.
                   </Typography>
                 </Card>
@@ -1288,7 +1316,7 @@ const QuotePage = () => {
                     How long is my cleaning quote valid?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
-                    Your <strong>house cleaning quote</strong> is valid for 30 days from the date issued. This gives 
+                    Your <strong>{serviceType === 'commercial' ? 'commercial cleaning quote' : 'house cleaning quote'}</strong> is valid for 30 days from the date issued. This gives
                     you plenty of time to consider your options without pressure. If you need to extend the validity 
                     or update any details after 30 days, just contact us for a refreshed estimate.
                   </Typography>
@@ -1299,7 +1327,7 @@ const QuotePage = () => {
                     What areas do you provide estimates for?
                   </Typography>
                   <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
-                    We provide <strong>residential cleaning quotes</strong> throughout Dayton, Kettering, Centerville, 
+                    We provide <strong>{serviceType === 'commercial' ? 'commercial cleaning quotes' : 'residential cleaning quotes'}</strong> throughout Dayton, Kettering, Centerville,
                     Oakwood, Huber Heights, Miamisburg, Springboro, Beavercreek, and surrounding areas. 
                     If you're unsure whether we service your area, call us at 937-892-4157 to confirm.
                   </Typography>
@@ -1328,8 +1356,10 @@ const QuotePage = () => {
             Ready for Your Free Cleaning Estimate?
           </Typography>
           <Typography variant="h6" component="p" sx={{ color: 'white', mb: 4, opacity: 0.9 }}>
-            Join hundreds of satisfied Dayton homeowners who trust Gem City Cleaning with their homes. 
-            Get your personalized <strong>free house cleaning quote</strong> today - no obligations, just honest pricing!
+            {serviceType === 'commercial'
+              ? 'Join hundreds of satisfied Dayton businesses who trust Gem City Cleaning with their facilities.'
+              : 'Join hundreds of satisfied Dayton homeowners who trust Gem City Cleaning with their homes.'}
+            {' '}Get your personalized <strong>free {serviceType === 'commercial' ? 'commercial' : 'house'} cleaning quote</strong> today - no obligations, just honest pricing!
           </Typography>
           
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>

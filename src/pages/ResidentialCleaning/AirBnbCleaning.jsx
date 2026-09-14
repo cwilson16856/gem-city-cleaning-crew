@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { VERIFIED_REVIEWS, formatReviewDate } from '../../data/testimonials'
 import {
   Container,
   Typography,
@@ -128,30 +129,19 @@ const AirBnbCleaning = () => {
     }
   ]
 
-  // Customer testimonials for AirBnb hosts
-  const airbnbTestimonials = [
-    {
-      name: "Sarah M.",
-      text: "Gem City has been cleaning my Airbnb for over a year. They're always reliable, work around my tight schedules, and my guests consistently comment on how clean the place is. My reviews have improved significantly!",
-      rating: 5,
-      highlight: "AirBnb Superhost",
-      property: "Downtown Dayton Condo"
-    },
-    {
-      name: "Mike R.", 
-      text: "As someone who manages multiple short-term rentals, I need cleaning that I can count on. Gem City delivers every time - professional, thorough, and they understand the hospitality business.",
-      rating: 5,
-      highlight: "Multi-Property Owner",
-      property: "Kettering Area Rentals"
-    },
-    {
-      name: "Jennifer L.",
-      text: "The turnaround time is incredible. Guests check out at 11 AM, Gem City cleans, and the place is ready for 3 PM check-in. This reliability has allowed me to maximize my bookings.",
-      rating: 5,
-      highlight: "5-Star Reviews",
-      property: "Oakwood Victorian"
-    }
-  ]
+  // Real, GBP-sourced reviews (src/data/testimonials.js) -- replaces 3
+  // unsourced, no-platform/no-date names removed in the 2026-09-13 round-3
+  // SEO audit follow-up. Same highlight labels used on RecurringCleaningPage
+  // for the same underlying reviewers, for consistency across pages.
+  const AIRBNB_HIGHLIGHTS = {
+    'Amanda T.': '4+ Years of Service',
+    'Anne B.': '3+ Years of Service',
+    'Valerie P.': '5-Star Google Review'
+  }
+  const airbnbTestimonials = VERIFIED_REVIEWS.map((review) => ({
+    ...review,
+    highlight: AIRBNB_HIGHLIGHTS[review.name]
+  }))
 
   // AirBnb cleaning FAQ
   const airbnbFAQ = [
@@ -780,11 +770,11 @@ const AirBnbCleaning = () => {
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
-              What Dayton AirBnb Hosts Say About Our Cleaning Service
+              What Our Cleaning Clients Say
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
-              Real reviews from successful hosts who trust our AirBnb cleaning service with their Dayton rental properties. 
-              According to <a href="https://www.airbnb.com/help/article/3061/cleaning-fees-and-standards" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'underline' }}>AirBnb's official cleaning standards</a>, 
+              Real, Google-verified reviews from Gem City Cleaning Crew clients.
+              According to <a href="https://www.airbnb.com/help/article/3061/cleaning-fees-and-standards" target="_blank" rel="noopener noreferrer" style={{ color: '#D81B60', textDecoration: 'underline' }}>AirBnb's official cleaning standards</a>,
               professional cleaning is essential for maintaining Superhost status and guest satisfaction.
             </Typography>
           </Box>
@@ -830,7 +820,7 @@ const AirBnbCleaning = () => {
                       - {testimonial.name}
                     </Typography>
                     <Typography variant="caption" color="text.secondary">
-                      {testimonial.property}
+                      {testimonial.platform}, {formatReviewDate(testimonial.date)}
                     </Typography>
                   </Box>
                 </Paper>

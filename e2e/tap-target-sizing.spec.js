@@ -6,6 +6,12 @@ import { test, expect } from '@playwright/test'
 // links). Fix is CSS-only, scoped to a mobile-only media query, and must not
 // touch desktop sizing or the Footer's one in-prose reuse of .serviceItemLink
 // ("...view all service areas").
+//
+// Round-3 follow-up (2026-09-13): that in-prose link was deliberately
+// excluded from the round-2 fix but never given its own accessible sizing --
+// it's no longer exempt. It now reaches 44px too, via a separate selector
+// (.additionalAreasNote .serviceItemLink) scoped to keep its inline
+// appearance.
 
 test.describe('Mobile tap targets meet 44px minimum', () => {
   test.use({ viewport: { width: 390, height: 844 } })
@@ -39,12 +45,13 @@ test.describe('Mobile tap targets meet 44px minimum', () => {
     expect(box.height).toBeGreaterThanOrEqual(44)
   })
 
-  test('Footer in-prose "view all service areas" link keeps normal inline sizing', async ({ page }) => {
+  test('Footer in-prose "view all service areas" link now meets the 44px tap target too', async ({ page }) => {
     await page.goto('/')
     const link = page.getByRole('link', { name: 'view all service areas' })
     await link.scrollIntoViewIfNeeded()
     const box = await link.boundingBox()
-    expect(box.height).toBeLessThan(30)
+    expect(box.height).toBeGreaterThanOrEqual(44)
+    expect(box.width).toBeLessThan(300)
   })
 })
 
@@ -60,6 +67,14 @@ test.describe('Desktop tap target sizing unchanged', () => {
   test('Footer legal link is unchanged on desktop', async ({ page }) => {
     await page.goto('/')
     const link = page.getByRole('link', { name: 'Careers' })
+    await link.scrollIntoViewIfNeeded()
+    const box = await link.boundingBox()
+    expect(box.height).toBeLessThan(30)
+  })
+
+  test('Footer in-prose link is unchanged on desktop', async ({ page }) => {
+    await page.goto('/')
+    const link = page.getByRole('link', { name: 'view all service areas' })
     await link.scrollIntoViewIfNeeded()
     const box = await link.boundingBox()
     expect(box.height).toBeLessThan(30)

@@ -420,7 +420,7 @@ const POST_EXTRAS = [
       'home showing cleaning checklist',
     ],
     problem: "Dayton's fast-moving seller's market gives homeowners little runway to prep, and most deep-clean-before-listing advice online is generic with no tie to the local market or timeline pressure sellers actually face.",
-    solution: 'A room-by-room pre-listing deep clean checklist and 3-4-week timeline tied to the real 2026 Dayton-area seller\'s market (1.3 months of inventory, 38-day average days on market), covering what to clean and when before photos and showings.',
+    solution: 'A room-by-room pre-listing deep clean checklist and 3-4-week timeline tied to the real 2026 Dayton-area seller\'s market (Miami Valley median sale price up 4.4% year-over-year to $271,450 as of August 2026), covering what to clean and when before photos and showings.',
     targetAudience: 'Dayton-area homeowners preparing to list their home for sale, especially in Oakwood, Kettering, Centerville, Beavercreek, and Springboro, including Wright-Patterson-linked relocation sellers',
     content: preListingDeepCleanContent,
     faqs: [
@@ -430,7 +430,7 @@ const POST_EXTRAS = [
       },
       {
         question: 'Does a clean house really sell faster or for more money?',
-        answer: "Yes: agents consistently rank deep cleaning among the highest-ROI prep a seller can do, and staged, clean homes have been shown to draw offers 1-10% higher than comparable unstaged ones while spending less time on market. In a Dayton market already averaging 38 days on market, a spotless first impression is often what turns a showing into an offer instead of a pass.",
+        answer: "Yes: agents consistently rank deep cleaning among the highest-ROI prep a seller can do. A 2025 National Association of Realtors staging report found that 29% of sellers' agents reported staged homes drew offers 1-10% higher than comparable unstaged ones, and nearly half of agents said staging reduced time on market. In a Dayton market moving as fast as it is right now, a spotless first impression is often what turns a showing into an offer instead of a pass.",
       },
       {
         question: 'What should I prioritize cleaning before a showing?',

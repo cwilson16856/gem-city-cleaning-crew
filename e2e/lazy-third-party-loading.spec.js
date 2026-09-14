@@ -89,6 +89,44 @@ test.describe('Idle-deferred GTM/Pixel', () => {
     await expect.poll(() => gtagFired, { timeout: 10000 }).toBe(true)
     await expect.poll(() => fbFired, { timeout: 10000 }).toBe(true)
   })
+
+  // 2026-09-13 SEO audit round-3 follow-up, "third-party script total cost"
+  // finding: a genuine first interaction should load these scripts
+  // immediately, rather than waiting on window.load + idle -- this is a
+  // separate trigger path from the no-interaction baseline test above, which
+  // stays unchanged as the "never before load" invariant for visitors who
+  // never interact within the load+idle window.
+  test('a real user interaction loads the scripts immediately, without waiting for load+idle', async ({ page }) => {
+    // A local preview server serves every asset near-instantly, so 'load'
+    // can fire almost as soon as 'domcontentloaded' does -- too fast to
+    // reliably prove "the interaction path fired this, not the load+idle
+    // fallback" without deliberately holding 'load' open. Delaying one
+    // harmless sub-resource (a favicon) gives a real window to dispatch the
+    // interaction and confirm the requests land before 'load' actually
+    // fires, which the load+idle fallback structurally cannot do (it's
+    // gated behind 'load' itself).
+    let loadFired = false
+    let gtagFiredBeforeLoad = false
+    let fbFiredBeforeLoad = false
+    page.on('load', () => { loadFired = true })
+    page.on('request', (req) => {
+      const url = req.url()
+      if (url.includes('googletagmanager.com/gtag/js') && !loadFired) gtagFiredBeforeLoad = true
+      if (url.includes('connect.facebook.net/en_US/fbevents.js') && !loadFired) fbFiredBeforeLoad = true
+    })
+
+    await page.route('**/assets/*.css', async (route) => {
+      await new Promise((resolve) => setTimeout(resolve, 3000))
+      await route.continue()
+    })
+
+    await page.goto('/', { waitUntil: 'domcontentloaded' })
+    expect(loadFired).toBe(false)
+    await page.keyboard.press('Tab')
+
+    await expect.poll(() => gtagFiredBeforeLoad, { timeout: 2500 }).toBe(true)
+    await expect.poll(() => fbFiredBeforeLoad, { timeout: 2500 }).toBe(true)
+  })
 })
 
 test.describe('Backend Integration', () => {

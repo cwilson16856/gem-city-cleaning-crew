@@ -61,6 +61,14 @@ test.describe('Trust Block', () => {
       const formY = (await page.locator('#quote-form').boundingBox())?.y ?? 0
       expect(policyY).toBeLessThan(formY)
     })
+
+    // 2026-09-13 round-3 follow-up: a real residential review shouldn't be
+    // shown as proof on a commercial-framed quote request.
+    test('commercial variant suppresses the residential review', async ({ page }) => {
+      await page.goto('/quote?type=commercial')
+      await expect(page.getByText('Amanda T.')).toHaveCount(0)
+      await expect(page.locator('[class*="substituteTrustNote"]')).toBeVisible()
+    })
   })
 
   test.describe('Backend Integration', () => {
