@@ -93,11 +93,11 @@ const QuotePage = () => {
     <>
       <Helmet>
         <link rel="preload" as="image" href="/images/legacy/katja-rooke-77JACslA8G0-unsplash-scaled.webp" fetchPriority="high" />
-        {/* Primary Meta Tags -- title/description conditional on serviceType. Note:
-        scripts/routes.js only prerenders bare /quote, so this swap reaches real
-        browsers and JS-executing crawlers, not a bare-HTTP OG scraper hitting
-        ?type=commercial directly -- an accepted, documented limitation, same
-        class as middleware.js's other accepted routing gaps. */}
+        {/* Primary Meta Tags -- title/description conditional on serviceType.
+        scripts/routes.js prerenders '/quote?type=commercial' as its own snapshot
+        in addition to bare '/quote' (added in a prior PR), so this swap reaches
+        real browsers, JS-executing crawlers, and bare-HTTP scrapers hitting
+        either URL directly. */}
         <title>{`Free ${serviceType === 'commercial' ? 'Commercial' : 'House'} Cleaning Quote Dayton OH | Gem City Cleaning Crew`}</title>
         <meta name="title" content={`Get Free ${serviceType === 'commercial' ? 'Commercial' : 'House'} Cleaning Quote Dayton OH | Request Estimate Online | Gem City Cleaning`} />
         <meta name="description" content={serviceType === 'commercial'
@@ -127,7 +127,9 @@ const QuotePage = () => {
           ? '⭐ Get your FREE commercial cleaning quote online in Dayton, OH! Professional office, retail & facility cleaning estimates. Same-day response guaranteed. Call 937-892-4157!'
           : '⭐ Get your FREE house cleaning quote online in Dayton, OH! Professional residential & commercial cleaning estimates. Same-day response guaranteed. Call 937-892-4157!'} />
         <meta property="og:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
-        <meta property="og:image:alt" content="Professional house cleaning quote form for Dayton OH residents" />
+        <meta property="og:image:alt" content={serviceType === 'commercial'
+          ? 'Free commercial cleaning quote form for Dayton OH businesses'
+          : 'Professional house cleaning quote form for Dayton OH residents'} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -146,7 +148,9 @@ const QuotePage = () => {
           ? '⭐ Get your FREE commercial cleaning quote online in Dayton, OH! Professional cleaning estimates with same-day response. Call 937-892-4157!'
           : '⭐ Get your FREE house cleaning quote online in Dayton, OH! Professional cleaning estimates with same-day response. Call 937-892-4157!'} />
         <meta name="twitter:image" content="https://gemcitycleaningcrew.com/images/legacy/gemcitycleaningcrew-facebook.webp" />
-        <meta name="twitter:image:alt" content="Free house cleaning quote form for Dayton OH" />
+        <meta name="twitter:image:alt" content={serviceType === 'commercial'
+          ? 'Free commercial cleaning quote form for Dayton OH'
+          : 'Free house cleaning quote form for Dayton OH'} />
         
         {/* Additional Social Media */}
         <meta property="article:author" content="Gem City Cleaning Crew" />
@@ -171,7 +175,7 @@ const QuotePage = () => {
             "@type": "ContactPage",
             "@id": "https://gemcitycleaningcrew.com/quote#contactpage",
             "name": "Request Free Cleaning Quote",
-            "description": "Get a free, no-obligation quote for house cleaning services in Dayton, OH. Online form and phone consultations available.",
+            "description": `Get a free, no-obligation quote for ${serviceType === 'commercial' ? 'commercial' : 'house'} cleaning services in Dayton, OH. Online form and phone consultations available.`,
             "url": "https://gemcitycleaningcrew.com/quote",
             "mainEntity": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "breadcrumb": {
@@ -200,15 +204,17 @@ const QuotePage = () => {
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://gemcitycleaningcrew.com/quote#service",
-            "name": "Free House Cleaning Quote Service",
-            "alternateName": ["Free Cleaning Estimate", "House Cleaning Quote", "Cleaning Service Consultation"],
-            "description": "Free, no-obligation quotes for professional house cleaning services in Dayton, Ohio. Same-day response guaranteed for all quote requests.",
+            "name": `Free ${serviceType === 'commercial' ? 'Commercial' : 'House'} Cleaning Quote Service`,
+            "alternateName": serviceType === 'commercial'
+              ? ["Free Commercial Cleaning Estimate", "Commercial Cleaning Quote", "Cleaning Service Consultation"]
+              : ["Free Cleaning Estimate", "House Cleaning Quote", "Cleaning Service Consultation"],
+            "description": `Free, no-obligation quotes for professional ${serviceType === 'commercial' ? 'commercial' : 'house'} cleaning services in Dayton, Ohio. Same-day response guaranteed for all quote requests.`,
             "serviceType": "Cleaning Quote Service",
             "provider": { "@id": "https://gemcitycleaningcrew.com/#business" },
             "offers": {
               "@type": "Offer",
-              "name": "Free House Cleaning Quote",
-              "description": "Complimentary estimate for all house cleaning services",
+              "name": `Free ${serviceType === 'commercial' ? 'Commercial' : 'House'} Cleaning Quote`,
+              "description": `Complimentary estimate for all ${serviceType === 'commercial' ? 'commercial' : 'house'} cleaning services`,
               "price": "0",
               "priceCurrency": "USD",
               "availability": "https://schema.org/InStock",
@@ -491,7 +497,7 @@ const QuotePage = () => {
               {
                 step: '1',
                 title: 'Online Form or Phone Call',
-                description: 'Submit our simple online form, or call/text us directly at 937-892-4157. Our cleaning estimate process starts with understanding your basic needs, home size, and cleaning preferences.'
+                description: `Submit our simple online form, or call/text us directly at 937-892-4157. Our cleaning estimate process starts with understanding your basic needs, ${serviceType === 'commercial' ? 'facility size' : 'home size'}, and cleaning preferences.`
               },
               {
                 step: '2', 
@@ -501,7 +507,7 @@ const QuotePage = () => {
               {
                 step: '3',
                 title: 'Quote Delivery & Scheduling',
-                description: 'Receive your personalized maid service quote within 2-4 hours. No pressure, no sales tactics - just transparent pricing and honest answers to all your questions.'
+                description: `Receive your personalized ${serviceType === 'commercial' ? 'commercial cleaning' : 'maid service'} quote within 2-4 hours. No pressure, no sales tactics - just transparent pricing and honest answers to all your questions.`
               }
             ].map((process, index) => (
               <Grid item xs={12} md={4} key={index}>
@@ -661,8 +667,8 @@ const QuotePage = () => {
                     {[
                       { label: 'Established 2017', desc: 'Years of experience', link: '/about-us' },
                       { label: 'Professional Team', desc: 'Trained & insured', link: '/about-us' },
-                      { label: 'Flexible Scheduling', desc: 'We work around you', link: '/recurring-cleaning-service' },
-                      { label: 'Satisfaction Guaranteed', desc: 'We make it right', link: '/residential' },
+                      { label: 'Flexible Scheduling', desc: 'We work around you', link: serviceType === 'commercial' ? '/commercial' : '/recurring-cleaning-service' },
+                      { label: 'Satisfaction Guaranteed', desc: 'We make it right', link: serviceType === 'commercial' ? '/commercial' : '/residential' },
                       { label: 'Serving Dayton Area', desc: 'Local & reliable', link: '/locations' }
                     ].map((item, index) => (
                       <Box key={index} sx={{ mb: 2, display: 'flex', alignItems: 'flex-start' }}>
@@ -703,11 +709,15 @@ const QuotePage = () => {
                     Our Cleaning Services
                   </Typography>
                   <Box sx={{ mb: 3 }}>
-                    {[
+                    {(serviceType === 'commercial' ? [
+                      { service: 'One-Time Commercial Cleaning', link: '/commercial-one-time-cleaning' },
+                      { service: 'Office Cleaning', link: '/office-cleaning' },
+                      { service: 'Retail Cleaning', link: '/retail-cleaning' }
+                    ] : [
                       { service: 'Recurring Cleaning Service', link: '/recurring-cleaning-service' },
                       { service: 'Deep Cleaning Service', link: '/deep-cleaning' },
                       { service: 'Move-in/Move-out Cleaning', link: '/move-in-out-cleaning' }
-                    ].map((item, index) => (
+                    ]).map((item, index) => (
                       <Typography 
                         key={index}
                         variant="body2" 
@@ -895,7 +905,7 @@ const QuotePage = () => {
                       flexShrink: 0
                     }} />
                     <Typography variant="body2" sx={{ fontWeight: 500 }}>
-                      <strong>Customized Pricing</strong> - Rates based on your home size and specific needs
+                      <strong>Customized Pricing</strong> - Rates based on your {serviceType === 'commercial' ? 'facility size' : 'home size'} and specific needs
                     </Typography>
                   </Box>
                   
@@ -974,8 +984,8 @@ const QuotePage = () => {
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.7 }}>
                 Regular weekly or bi-weekly service typically costs less per visit than monthly or one-time cleanings
                 because maintaining an already-clean {serviceType === 'commercial' ? 'facility' : 'home'} requires less intensive work. Learn more about our{' '}
-                <Link to="/recurring-cleaning-service" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                  recurring cleaning service options
+                <Link to={serviceType === 'commercial' ? '/commercial' : '/recurring-cleaning-service'} style={{ color: '#1976d2', textDecoration: 'none' }}>
+                  {serviceType === 'commercial' ? 'commercial cleaning service options' : 'recurring cleaning service options'}
                 </Link>.
               </Typography>
 
@@ -1172,7 +1182,7 @@ const QuotePage = () => {
                   <Link to="/commercial-one-time-cleaning" style={{ color: '#1976d2', textDecoration: 'none' }}>
                     one-time commercial cleaning
                   </Link>,{' '}
-                  <Link to="/recurring-cleaning-service" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                  <Link to="/commercial" style={{ color: '#1976d2', textDecoration: 'none' }}>
                     regular office service
                   </Link>, or{' '}
                   <Link to="/office-cleaning-checklist" style={{ color: '#1976d2', textDecoration: 'none' }}>
@@ -1357,8 +1367,8 @@ const QuotePage = () => {
           </Typography>
           <Typography variant="h6" component="p" sx={{ color: 'white', mb: 4, opacity: 0.9 }}>
             {serviceType === 'commercial'
-              ? 'Join hundreds of satisfied Dayton businesses who trust Gem City Cleaning with their facilities.'
-              : 'Join hundreds of satisfied Dayton homeowners who trust Gem City Cleaning with their homes.'}
+              ? "Join the Dayton businesses who trust Gem City Cleaning's 4.6-star rated team with their facilities."
+              : "Join the Dayton homeowners who trust Gem City Cleaning's 4.6-star rated team with their homes."}
             {' '}Get your personalized <strong>free {serviceType === 'commercial' ? 'commercial' : 'house'} cleaning quote</strong> today - no obligations, just honest pricing!
           </Typography>
           

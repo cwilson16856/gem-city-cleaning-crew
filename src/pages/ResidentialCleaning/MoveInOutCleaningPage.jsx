@@ -4,6 +4,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { generateLocationWebPageSchema } from '../../utils/localBusinessSchema'
+import { generateCanonicalUrl } from '../../utils/seo'
 import {
   Container,
   Typography,
@@ -359,8 +360,8 @@ const MoveInOutCleaningPage = () => {
               "@type": "ImageObject",
               "name": comparison.title,
               "description": comparison.description,
-              "url": comparison.afterImage,
-              "contentUrl": comparison.afterImage,
+              "url": generateCanonicalUrl(comparison.afterImage),
+              "contentUrl": generateCanonicalUrl(comparison.afterImage),
               "caption": comparison.afterAlt
             }))
           })}

@@ -159,7 +159,7 @@ export const POSTS_META = [
     "title": "The Pre-Listing Deep Clean Checklist for Dayton Sellers",
     "description": "Dayton's fast-moving seller's market gives homeowners little time to prep. Here's the pre-listing checklist to get your house showing-ready fast.",
     "publishedAt": "2026-08-27",
-    "updatedAt": "2026-08-27",
+    "updatedAt": "2026-09-14",
     "author": "Chris Wilson",
     "category": "Local Guides & Seasonal",
     "tags": [
