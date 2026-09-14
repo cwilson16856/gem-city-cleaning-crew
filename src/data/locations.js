@@ -488,7 +488,7 @@ export const CITIES = {
       heroSubtitle: 'Serving a City Split by the Mad River',
       metaDescription: 'Professional house cleaning in Riverside, OH, home to the National Museum of the U.S. Air Force. Licensed & insured.',
       intro: [
-        "Riverside, incorporated in 1995, is split in half by the Mad River and home to the National Museum of the U.S. Air Force, the largest aviation museum in the world, drawing over a million visitors a year.",
+        "Riverside, incorporated in 1995, is split in half by the Mad River and home to the National Museum of the U.S. Air Force, the largest military aviation museum in the world, drawing over a million visitors a year.",
         "We clean homes throughout Riverside's neighborhoods, from Belmont and Kittyhawk to Walnut Hills, in the 45404 and 45433 zip codes.",
         "At roughly 24,000 residents, Riverside is a fairly compact city, but its neighborhoods on either side of the Mad River each have their own character, and we schedule crews familiar with both Belmont/Kittyhawk and the Walnut Hills side.",
         "Every Riverside cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."
@@ -720,7 +720,7 @@ export const CITIES = {
       heroSubtitle: 'Serving a Village Anchored by Antioch College',
       metaDescription: 'Professional house cleaning in Yellow Springs, OH, zip code 45387, near Antioch College and Glen Helen. Licensed & insured.',
       intro: [
-        "Yellow Springs is a village of under 4,000 people, built around Antioch College, founded in 1850, and bordered by the 700-plus acres of old-growth forest at Glen Helen Nature Preserve, with John Bryan State Park just beyond.",
+        "Yellow Springs is a village of under 4,000 people, built around Antioch College, founded in 1850, and bordered by the 1,000-plus-acre Glen Helen Nature Preserve, including stands of old-growth forest, with John Bryan State Park just beyond.",
         "We clean homes throughout Yellow Springs' 45387 zip code, from historic-district homes to properties bordering Glen Helen.",
         "Being one of the smallest villages we serve doesn't mean less attention. If anything, a compact, walkable community like Yellow Springs means our crews get to know a client's home and its quirks faster than in a larger, more spread-out city.",
         "Every Yellow Springs cleaner has completed three months of training and passed a Checkr background check, and every visit is backed by the same licensed-and-insured guarantee, no long-term contract required."

@@ -209,7 +209,7 @@ const CommercialPage = () => {
   // Table of Contents items
   const tocItems = [
     { text: '🏢 Commercial Cleaning Services Dayton', href: '#dayton-commercial-cleaning-services' },
-    { text: '⭐ Business Client Testimonials', href: '#testimonials' },
+    { text: '⭐ Why Businesses Trust Us', href: '#testimonials' },
     { text: '✨ Why Choose Professional Commercial Cleaning', href: '#why-choose-us' },
     { text: '📍 Service Areas & Coverage', href: '#service-areas' },
     { text: '📋 What\'s Included in Commercial Service', href: '#what-included' },
@@ -537,7 +537,7 @@ const CommercialPage = () => {
       {/* Testimonial Section */}
       <Container maxWidth="lg" sx={{ py: 8 }} id="testimonials">
         <Typography variant="h2" component="h2" sx={{ mb: 2, textAlign: 'center' }}>
-          Commercial Cleaning Client Reviews
+          Why Dayton Businesses Trust Gem City
         </Typography>
         
         <Typography 
@@ -559,7 +559,7 @@ const CommercialPage = () => {
           Our trained professionals understand the unique needs of different business environments and work around your schedule to minimize disruption.
         </Typography>
 
-        <TrustBlock variant="compact" />
+        <TrustBlock variant="compact" showReviews={false} />
 
         <Box sx={{ textAlign: 'center' }}>
           <Button

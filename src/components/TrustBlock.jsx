@@ -45,7 +45,7 @@ import { VERIFIED_REVIEWS as REVIEWS, formatReviewDate } from '../data/testimoni
 // aggregateRating on LocalBusiness (localBusinessSchema.js) stays the only
 // review-signal schema; this component is plain visible HTML only.
 
-const TrustBlock = ({ variant = 'full' }) => {
+const TrustBlock = ({ variant = 'full', showReviews = true }) => {
   const isCompact = variant === 'compact'
   const reviews = isCompact ? REVIEWS.slice(0, 1) : REVIEWS
 
@@ -77,24 +77,30 @@ const TrustBlock = ({ variant = 'full' }) => {
         </Box>
       </Box>
 
-      <Grid container spacing={3} className={styles.reviewGrid}>
-        {reviews.map((review) => (
-          <Grid item xs={12} sm={isCompact ? 12 : 4} key={review.name}>
-            <Card className={styles.reviewCard} elevation={1}>
-              <Rating value={review.rating} readOnly size="small" />
-              <Typography className={styles.reviewText}>
-                &ldquo;{review.text}&rdquo;
-              </Typography>
-              <Box className={styles.reviewByline}>
-                <RateReviewIcon fontSize="inherit" />
-                <span>
-                  {review.name} · {review.platform}, {formatReviewDate(review.date)}
-                </span>
-              </Box>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+      {showReviews ? (
+        <Grid container spacing={3} className={styles.reviewGrid}>
+          {reviews.map((review) => (
+            <Grid item xs={12} sm={isCompact ? 12 : 4} key={review.name}>
+              <Card className={styles.reviewCard} elevation={1}>
+                <Rating value={review.rating} readOnly size="small" />
+                <Typography className={styles.reviewText}>
+                  &ldquo;{review.text}&rdquo;
+                </Typography>
+                <Box className={styles.reviewByline}>
+                  <RateReviewIcon fontSize="inherit" />
+                  <span>
+                    {review.name} · {review.platform}, {formatReviewDate(review.date)}
+                  </span>
+                </Box>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      ) : (
+        <Typography className={styles.substituteTrustNote}>
+          Serving the Dayton community with pride since 2017, with a 4.6-star average across 90+ Google reviews and Checkr-verified cleaners on every visit.
+        </Typography>
+      )}
 
       <Box className={styles.seeAllReviews}>
         <a

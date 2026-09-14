@@ -24,7 +24,8 @@ const Footer = () => {
     { name: 'Deep Cleaning', link: '/deep-cleaning' },
     { name: 'Move-In/Out Cleaning', link: '/move-in-out-cleaning' },
     { name: 'Commercial Cleaning', link: '/commercial' },
-    { name: 'Office Cleaning', link: '/commercial' },
+    { name: 'Office Cleaning', link: '/office-cleaning' },
+    { name: 'Retail Cleaning', link: '/retail-cleaning' },
     { name: 'Blog', link: '/blog' }
   ]
 

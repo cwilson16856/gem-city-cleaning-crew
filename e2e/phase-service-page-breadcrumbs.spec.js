@@ -31,7 +31,8 @@ const CASES = [
   { path: '/condo-cleaning', crumbLength: 3, lastName: 'Condo Cleaning', lastUrl: 'https://gemcitycleaningcrew.com/condo-cleaning' },
   { path: '/kitchen-cleaning-services', crumbLength: 3, lastName: 'Kitchen Cleaning Services', lastUrl: 'https://gemcitycleaningcrew.com/kitchen-cleaning-services' },
   { path: '/bathroom-cleaning-services', crumbLength: 3, lastName: 'Bathroom Cleaning Services', lastUrl: 'https://gemcitycleaningcrew.com/bathroom-cleaning-services' },
-  { path: '/locations', crumbLength: 2, lastName: 'Locations', lastUrl: 'https://gemcitycleaningcrew.com/locations' }
+  { path: '/locations', crumbLength: 2, lastName: 'Locations', lastUrl: 'https://gemcitycleaningcrew.com/locations' },
+  { path: '/move-in-out-cleaning', crumbLength: 3, lastName: 'Move-In Move-Out Cleaning', lastUrl: 'https://gemcitycleaningcrew.com/move-in-out-cleaning' }
 ]
 
 test.describe('Service Page Breadcrumb Schema', () => {
@@ -48,11 +49,17 @@ test.describe('Service Page Breadcrumb Schema', () => {
       expect(items).toHaveLength(crumbLength)
       expect(items[0]).toMatchObject({ name: 'Home', item: 'https://gemcitycleaningcrew.com' })
       expect(items[items.length - 1]).toMatchObject({ name: lastName, item: lastUrl })
+
+      // 2026-09-13 round-3 follow-up: /move-in-out-cleaning previously had a
+      // standalone BreadcrumbList in ADDITION to the nested one above -- guard
+      // against that duplication class recurring on any of these pages.
+      const breadcrumbBlocks = blocks.filter((b) => b['@type'] === 'BreadcrumbList')
+      expect(breadcrumbBlocks).toHaveLength(0)
     })
   }
 
   test.describe('Backend Integration', () => {
-    test('no console errors across all 10 pages', async ({ page }) => {
+    test('no console errors across all 11 pages', async ({ page }) => {
       const consoleErrors = []
       page.on('console', (msg) => {
         if (msg.type() === 'error') consoleErrors.push(msg.text())

@@ -1,5 +1,8 @@
 {
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/commercial-cleaning-services/", "destination": "/commercial", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

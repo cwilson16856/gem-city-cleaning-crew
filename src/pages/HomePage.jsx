@@ -103,7 +103,7 @@ const HomePage = () => {
       title: "Office Cleaning",
       description: "No contracts, maximum flexibility",
       icon: <BusinessIcon sx={{ fontSize: 48, color: theme.palette.primary.main }} />,
-      link: "/commercial",
+      link: "/office-cleaning",
       badge: "No Contracts!",
       features: ["No long-term contracts", "Free estimates", "Flexible scheduling"],
       differentiator: "Freedom and flexibility for your business"
@@ -662,18 +662,18 @@ const HomePage = () => {
                 >
                   <CardActionArea component={Link} to={`/blog/${post.slug}`} sx={{ height: '100%' }}>
                     {post.coverImage && (
-                      <Box
-                        component="img"
-                        src={post.coverImage}
-                        alt={post.title}
-                        loading="lazy"
-                        sx={{
-                          width: '100%',
-                          height: 200,
-                          objectFit: 'cover',
-                          aspectRatio: '16/9' // Fixed aspect ratio to prevent shifts
-                        }}
-                      />
+                      <picture style={{ display: 'block' }}>
+                        <source srcSet={`/images-optimized/blog/${post.slug}.avif`} type="image/avif" />
+                        <source srcSet={`/images-optimized/blog/${post.slug}.webp`} type="image/webp" />
+                        <img
+                          src={post.coverImage}
+                          alt={post.title}
+                          loading="lazy"
+                          width={1200}
+                          height={624}
+                          style={{ width: '100%', height: 200, objectFit: 'cover', display: 'block' }}
+                        />
+                      </picture>
                     )}
                     <CardContent sx={{ p: 3 }}>
                       <Typography variant="h6" component="h3" sx={{ mb: 2, fontWeight: 600 }}>

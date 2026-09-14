@@ -211,7 +211,7 @@ const OfficeCleaning = () => {
   // Table of Contents items
   const tocItems = [
     { text: '🏢 Professional Office Cleaning Dayton', href: '#dayton-office-cleaning-services' },
-    { text: '⭐ Office Client Testimonials', href: '#testimonials' },
+    { text: '⭐ Why Businesses Trust Us', href: '#testimonials' },
     { text: '✨ Why Choose Professional Office Cleaning', href: '#why-choose-us' },
     { text: '📍 Service Areas & Coverage', href: '#service-areas' },
     { text: '📋 What\'s Included in Office Cleaning', href: '#what-included' },
@@ -527,7 +527,7 @@ const OfficeCleaning = () => {
       {/* Testimonial Section */}
       <Container maxWidth="lg" sx={{ py: 8 }} id="testimonials">
         <Typography variant="h2" component="h2" sx={{ mb: 2, textAlign: 'center' }}>
-          Professional Office Cleaning Reviews
+          Why Dayton Businesses Trust Gem City
         </Typography>
         
         <Typography 
@@ -549,7 +549,7 @@ const OfficeCleaning = () => {
           no long-term contracts, and our in-person quotes ensure you get exactly the services your office needs.
         </Typography>
 
-        <TrustBlock variant="compact" />
+        <TrustBlock variant="compact" showReviews={false} />
 
         <Box sx={{ textAlign: 'center' }}>
           <Button

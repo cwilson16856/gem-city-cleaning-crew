@@ -13,6 +13,13 @@ import { test, expect } from '@playwright/test'
 //    default.
 // 3. The homepage FAQ, converted from a static card grid to the sitewide
 //    Accordion pattern for consistency.
+//
+// Round-3 follow-up (2026-09-13): round-2's fix replaced the fabricated
+// names with a REAL testimonial (Amanda T.), but that review is a
+// residential customer's, and it was being shown under a "Commercial
+// Cleaning Client Reviews" heading -- true, but misleading in context.
+// These 4 pages now suppress the review card entirely (TrustBlock
+// showReviews={false}) and show a factual trust-facts sentence instead.
 
 const FABRICATED_NAMES = ['Sarah M.', 'Michael T.', 'Jennifer R.', 'Lisa K.', 'Mark R.', 'Michael R., Property Manager']
 
@@ -25,13 +32,15 @@ const TRUSTBLOCK_PAGES = [
 
 test.describe('Fabricated testimonials removed, TrustBlock renders instead', () => {
   for (const { path, name } of TRUSTBLOCK_PAGES) {
-    test(`${name} shows real TrustBlock reviews, no fabricated names`, async ({ page }) => {
+    test(`${name} shows factual trust facts, no fabricated or misattributed reviews`, async ({ page }) => {
       await page.goto(path)
 
-      // A real TrustBlock review name must be visible before asserting
-      // absence of fabricated ones -- confirms the section actually rendered
-      // rather than the page just being empty/broken.
-      await expect(page.getByText('Amanda T.')).toBeVisible()
+      // A residential review must NOT be shown as commercial proof -- the
+      // round-3 fix -- and the substitute trust-facts sentence must render
+      // in its place, confirming the section actually rendered rather than
+      // the page just being empty/broken.
+      await expect(page.getByText('Amanda T.')).toHaveCount(0)
+      await expect(page.getByText(/4\.6-star average/i)).toBeVisible()
 
       for (const fabricatedName of FABRICATED_NAMES) {
         await expect(page.getByText(fabricatedName)).toHaveCount(0)
