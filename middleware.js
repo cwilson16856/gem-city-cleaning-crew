@@ -135,6 +135,35 @@ export default async function middleware(request) {
     return redirectResponse(`${legacyTarget}${url.search}`)
   }
 
+  // Serve the commercially-framed prerendered snapshot for this exact
+  // query string, without changing the URL the browser/crawler sees.
+  // Tried first as a declarative vercel.json `rewrites` entry with a
+  // `has: [{type: 'query', ...}]` condition -- confirmed live it never
+  // took effect (x-vercel-cache: HIT kept serving the plain /quote
+  // snapshot even seconds after deploy), so this uses the same
+  // same-origin-fetch-and-serve pattern the markdown negotiation relies
+  // on below, which is proven working in this exact file. Checks
+  // prefersMarkdown itself (rather than falling through to the generic
+  // markdown branch below, which only ever looks at url.pathname) so a
+  // markdown-negotiating request to this same query string still gets
+  // the commercial .md variant, not the plain /quote one.
+  if (url.pathname === '/quote' && url.searchParams.get('type') === 'commercial') {
+    const wantsMarkdown = prefersMarkdown(request.headers.get('accept'))
+    const commercialUrl = new URL(
+      wantsMarkdown ? '/quote/type-commercial/index.md' : '/quote/type-commercial',
+      url.origin
+    )
+    const commercialResponse = await fetch(commercialUrl)
+
+    if (commercialResponse.ok) {
+      const headers = new Headers(commercialResponse.headers)
+      if (wantsMarkdown) headers.set('Content-Type', 'text/markdown; charset=utf-8')
+      for (const [key, value] of Object.entries(SECURITY_HEADERS)) headers.set(key, value)
+      headers.set('Vary', 'Accept, Accept-Encoding')
+      return new Response(commercialResponse.body, { status: 200, headers })
+    }
+  }
+
   if (prefersMarkdown(request.headers.get('accept'))) {
     const markdownUrl = new URL(markdownPathFor(url.pathname), url.origin)
     const markdownResponse = await fetch(markdownUrl)
