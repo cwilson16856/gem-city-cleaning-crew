@@ -9,6 +9,24 @@
 
 export const POSTS_META = [
   {
+    "slug": "how-to-clean-organize-laundry-room-dayton",
+    "title": "How to Clean and Organize a Laundry Room in Dayton",
+    "description": "Your washer smells musty and the dryer vent's clogged with lint. Here's a Dayton homeowner's step-by-step laundry room deep-clean and organizing guide.",
+    "publishedAt": "2026-09-15",
+    "updatedAt": "2026-09-15",
+    "author": "Gem City Cleaning Crew Team",
+    "category": "Cleaning Tips",
+    "tags": [
+      "laundry room",
+      "home organization",
+      "appliance care",
+      "Dayton hard water",
+      "house cleaning tips"
+    ],
+    "coverImage": "/images/blog/how-to-clean-organize-laundry-room-dayton.png",
+    "featured": false
+  },
+  {
     "slug": "deep-cleaning-guide-dayton",
     "title": "Deep Cleaning in Dayton, OH: What's Actually Included",
     "description": "Deep clean doesn't mean extra thorough. Here's what it actually covers that regular cleaning skips, and how often your Dayton home really needs one.",
