@@ -6,6 +6,7 @@
 // full post HTML out of every page's JS chunk except PostPage.jsx's own.
 // Newest posts go first in the array.
 
+import laundryRoomCleanOrganizeContent from './posts/how-to-clean-organize-laundry-room-dayton.js'
 import deepCleaningGuideContent from './posts/deep-cleaning-guide-dayton.js'
 import moveOutTransitionsGuideContent from './posts/move-out-transitions-guide-dayton.js'
 import hiringCleaningServiceGuideContent from './posts/hiring-cleaning-service-guide-dayton.js'
@@ -30,6 +31,62 @@ import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-da
 import { POSTS_META } from './postsMeta.js'
 
 const POST_EXTRAS = [
+  {
+    slug: 'how-to-clean-organize-laundry-room-dayton',
+    keywords: [
+      'how to clean and organize a laundry room',
+      'laundry room deep clean checklist',
+      'how to clean a washing machine',
+      'dryer vent cleaning safety',
+      'front load washer mold smell',
+      'laundry room organization ideas',
+      'how often should you clean your washing machine',
+      'why does my front load washer smell musty',
+    ],
+    problem: "Laundry rooms get a quick wipe-down at best, so detergent scum, musty front-load washer gaskets, and lint-clogged dryer vents build up for months before anyone notices, and Dayton's hard water speeds up two of the three.",
+    solution: "A step-by-step deep-clean-and-organize routine that starts with the washer and dryer themselves, then builds storage and a maintenance schedule that actually holds up.",
+    targetAudience: "Dayton-area homeowners and renters who want a laundry room that's actually clean, not just tidy, and stays that way",
+    content: laundryRoomCleanOrganizeContent,
+    faqs: [
+      {
+        question: 'How often should you clean your washing machine?',
+        answer: "Run an empty hot-water cycle with a washer cleaner or white vinegar once a month for most households, more often for a family doing several loads a day. Dayton's hard water accelerates the detergent and mineral buildup inside the drum that causes a musty smell and dingy laundry, so skipping this step for months at a time shows up faster here than it would in a soft-water area.",
+      },
+      {
+        question: 'Why does my front-load washer smell musty?',
+        answer: 'Front-load washers seal the door with a rubber gasket that traps residual water after each cycle, and that trapped moisture combined with detergent residue is exactly what mold and mildew need to grow. Wiping the gasket dry and leaving the door propped open between loads prevents most of it; if the smell has already set in, a deep clean of the gasket with a diluted bleach or vinegar solution followed by an empty hot cycle usually resolves it.',
+      },
+      {
+        question: 'How do you clean a dryer vent, and why does it matter?',
+        answer: 'Pull the lint trap and vacuum the cavity it sits in, then use a vacuum crevice tool or a flexible dryer-vent brush kit to clear lint from the exhaust duct, working from both the machine end and the exterior vent opening if you can reach it. This matters beyond drying time: a lint-clogged dryer vent is one of the leading causes of house fires, and it\'s worth checking at least once or twice a year even if the dryer still seems to be working fine.',
+      },
+      {
+        question: 'Can I use vinegar to clean my washing machine?',
+        answer: "Yes: white vinegar run through an empty hot cycle is an effective, low-cost way to break down detergent buildup and mineral scale inside the drum, and it's gentle enough to use monthly. For a front-load gasket with visible mold, a stronger diluted bleach solution applied directly with a cloth works faster than vinegar alone, just rinse and wipe the gasket dry afterward.",
+      },
+      {
+        question: 'How do you organize a small laundry room?',
+        answer: "Prioritize vertical space over floor space: wall-mounted shelves above the machines, a pegboard for small tools, and a fold-down drying rack or ironing board that tucks away when not in use all free up floor room in a tight closet-style laundry area. Stackable, labeled bins on a shelf hold more in the same footprint than the same items left loose.",
+      },
+      {
+        question: 'What should never be stored near a washer or dryer?',
+        answer: "Avoid stacking cardboard boxes, paper goods, or lint-fuel materials like extra dryer sheets directly on or behind the dryer, since dryer exteriors run warm and any lint that escapes the trap is highly flammable. Keep the area immediately around and behind both machines clear so air can circulate and so nothing blocks the dryer's exhaust vent connection.",
+      },
+      {
+        question: 'How often should you deep clean a laundry room overall?',
+        answer: 'A full deep clean, machines, shelving, floor, and dispenser drawer, once every 3 to 6 months keeps a laundry room from sliding back into clutter and buildup, on top of the lighter weekly and monthly tasks. Households that do several loads a day or run a front-load washer in a humid basement often do better leaning toward the shorter end of that range.',
+      },
+    ],
+    howToTitle: 'How to Clean and Organize a Laundry Room',
+    howToSteps: [
+      { name: 'Clear the room and sort', text: 'Take everything off shelves and out of cabinets and sort into keep, relocate, and toss before any cleaning starts.' },
+      { name: 'Deep clean the washer', text: 'Run an empty hot-water cycle with a washer cleaner or white vinegar, wipe the front-load gasket, and clean the detergent dispenser drawer.' },
+      { name: 'Clean the dryer lint trap and vent', text: 'Wash the lint trap mesh, then vacuum the vent from the machine end and exterior exhaust opening to cut fire risk and restore airflow.' },
+      { name: 'Wipe down surfaces and floor', text: 'Clean machine exteriors and the wall and floor space behind and underneath them, then sweep or mop the floor.' },
+      { name: 'Set up storage zones', text: 'Add shelves, a pegboard, and labeled bins for detergent, tools, and small supplies so nothing piles up loose on top of the machines.' },
+      { name: 'Build a maintenance routine', text: 'Attach quick tasks, wiping the gasket, emptying the lint trap, to laundry day itself so the reset holds up week to week.' },
+    ],
+  },
   {
     slug: 'deep-cleaning-guide-dayton',
     keywords: [
