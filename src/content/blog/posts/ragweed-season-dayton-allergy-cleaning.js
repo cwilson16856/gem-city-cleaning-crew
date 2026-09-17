@@ -3,6 +3,8 @@ const content = `
 
 <p><em>Jump to: <a href="#when-it-hits">When ragweed season hits Dayton</a> · <a href="#why-cleaning-helps">Why cleaning helps</a> · <a href="#checklist">Room-by-room checklist</a> · <a href="#before-you-come-inside">Before you come inside</a> · <a href="#faq">FAQ</a></em></p>
 
+<p>Dealing with allergies in the spring too? See our companion guide to <a href="https://gemcitycleaningcrew.com/blog/spring-pollen-season-dayton-allergy-cleaning">spring tree pollen season cleaning</a> for the Miami Valley's other big allergy stretch.</p>
+
 <h2 id="when-it-hits">When Ragweed Season Actually Hits Dayton</h2>
 <p>Ragweed pollen typically shows up in the Miami Valley in mid-August and stays active through November, according to <a href="https://www.phdmc.org/news-features/news-releases/protect-yourself-from-ragweed-allergies-this-fall" target="_blank" rel="noopener noreferrer">Public Health – Dayton & Montgomery County</a>. It's the single biggest cause of fall hay fever in this area, and it doesn't take much wind to carry it indoors: through open windows, on clothes, in your dog's fur, on your kids after soccer practice.</p>
 <p>Peak pollen hours locally run roughly <strong>10 a.m. to 4 p.m.</strong> That's the window to keep windows closed and limit outdoor time if you're sensitive to it. Counts also tend to spike on dry, breezy days and drop after rain.</p>
