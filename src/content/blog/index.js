@@ -6,6 +6,7 @@
 // full post HTML out of every page's JS chunk except PostPage.jsx's own.
 // Newest posts go first in the array.
 
+import springPollenSeasonDaytonAllergyCleaningContent from './posts/spring-pollen-season-dayton-allergy-cleaning.js'
 import laundryRoomCleanOrganizeContent from './posts/how-to-clean-organize-laundry-room-dayton.js'
 import deepCleaningGuideContent from './posts/deep-cleaning-guide-dayton.js'
 import moveOutTransitionsGuideContent from './posts/move-out-transitions-guide-dayton.js'
@@ -31,6 +32,53 @@ import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-da
 import { POSTS_META } from './postsMeta.js'
 
 const POST_EXTRAS = [
+  {
+    slug: 'spring-pollen-season-dayton-allergy-cleaning',
+    keywords: [
+      'spring allergy cleaning Dayton Ohio',
+      'tree pollen allergy cleaning checklist',
+      'Miami Valley pollen season cleaning',
+      'allergy proofing your home Dayton',
+      'spring deep clean allergies Ohio',
+      'when does tree pollen season start in Ohio',
+      'how to reduce pollen in your house Dayton',
+      'does vacuuming help with tree pollen allergies',
+    ],
+    problem: "Spring tree pollen blankets the Miami Valley every March through May, and most cleaning advice online is generic, non-local, and doesn't account for how differently tree pollen behaves from fall ragweed.",
+    solution: 'A room-by-room cleaning checklist tied to real Dayton-area spring pollen timing, peak hours, and the HVAC changeover that comes with it.',
+    targetAudience: 'Dayton-area homeowners dealing with spring tree pollen allergies',
+    content: springPollenSeasonDaytonAllergyCleaningContent,
+    faqs: [
+      {
+        question: 'When does tree pollen season start in Ohio?',
+        answer: 'In the Miami Valley, spring tree pollen season typically runs from March through May, with the heaviest stretch in late March to mid-April, per Public Health – Dayton & Montgomery County. Oak, maple, birch, elm, ash, and several other trees are the main sources.',
+      },
+      {
+        question: 'What trees cause the most allergy problems in the Dayton area?',
+        answer: 'Oak, elm, birch, ash, hickory, poplar, sycamore, maple, cypress, walnut, and western red cedar are the main spring allergen sources locally. Oak and maple tend to be the most noticeable in Dayton’s older, tree-lined suburban neighborhoods simply because there are so many of them.',
+      },
+      {
+        question: 'Does cleaning your house actually help with pollen allergies?',
+        answer: "Yes: it reduces the pollen recirculating indoors, particularly in carpets, upholstery, bedding, and HVAC systems where it settles and builds up. It won't stop pollen from existing outside, but it meaningfully cuts down what you're breathing while you're home, which is where most people spend the bulk of allergy season.",
+      },
+      {
+        question: 'What time of day is tree pollen worst?',
+        answer: "Roughly 5 a.m. to 10 a.m., and worse on windy days. That's the reverse of fall ragweed season, which peaks from late morning into the afternoon, so an early outdoor routine that worked fine in the fall may need to shift later in the spring.",
+      },
+      {
+        question: 'Should you keep windows open or closed during spring pollen season?',
+        answer: 'Closed, especially in that early-morning window. Running central air instead of opening windows keeps the indoor air filtered and dry, which also helps limit mold growth, a second common spring allergen.',
+      },
+      {
+        question: 'Do air purifiers help with tree pollen?',
+        answer: 'Yes, if they use a true HEPA filter. Placement matters more than most people expect: put one in the room you spend the most time in, usually the bedroom or living room, rather than trying to cover the whole house with a single unit.',
+      },
+      {
+        question: 'Is spring tree pollen cleaning different from fall ragweed cleaning?',
+        answer: 'The core habits are the same, damp dusting, frequent HEPA vacuuming, clean bedding, but the timing changes: peak exposure hours flip from midday to early morning, and spring lines up with the first AC run of the year, which usually means a dirtier-than-usual filter needs attention right at the point when pollen counts start climbing.',
+      },
+    ],
+  },
   {
     slug: 'how-to-clean-organize-laundry-room-dayton',
     keywords: [

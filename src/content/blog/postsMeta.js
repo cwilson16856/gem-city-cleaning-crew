@@ -9,6 +9,25 @@
 
 export const POSTS_META = [
   {
+    "slug": "spring-pollen-season-dayton-allergy-cleaning",
+    "title": "Dayton's Tree Pollen Season: A Room-by-Room Deep-Clean Checklist",
+    "description": "Oak, maple, and birch pollen blanket the Miami Valley every spring. Here's the room-by-room cleaning checklist that cuts what you're breathing indoors.",
+    "publishedAt": "2026-09-17",
+    "updatedAt": "2026-09-17",
+    "author": "Gem City Cleaning Crew Team",
+    "category": "Local Guides & Seasonal",
+    "tags": [
+      "spring pollen",
+      "allergy cleaning",
+      "seasonal cleaning",
+      "Dayton allergies",
+      "HEPA vacuum",
+      "HVAC filter"
+    ],
+    "coverImage": "/images/blog/spring-pollen-season-dayton-allergy-cleaning.png",
+    "featured": false
+  },
+  {
     "slug": "how-to-clean-organize-laundry-room-dayton",
     "title": "How to Clean and Organize a Laundry Room in Dayton",
     "description": "Your washer smells musty and the dryer vent's clogged with lint. Here's a Dayton homeowner's step-by-step laundry room deep-clean and organizing guide.",
@@ -379,7 +398,7 @@ export const POSTS_META = [
     "title": "Ragweed Season in Dayton: Allergy Prep Guide",
     "description": "Ragweed season runs mid-August through November in the Miami Valley. Here’s the room-by-room checklist that cuts down what you’re breathing indoors.",
     "publishedAt": "2026-07-22",
-    "updatedAt": "2026-07-22",
+    "updatedAt": "2026-09-17",
     "author": "Chris Wilson",
     "category": "Local Guides & Seasonal",
     "tags": [
