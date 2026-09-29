@@ -6,6 +6,7 @@
 // full post HTML out of every page's JS chunk except PostPage.jsx's own.
 // Newest posts go first in the array.
 
+import fallGutterDownspoutCleaningDaytonContent from './posts/fall-gutter-downspout-cleaning-dayton.js'
 import springPollenSeasonDaytonAllergyCleaningContent from './posts/spring-pollen-season-dayton-allergy-cleaning.js'
 import laundryRoomCleanOrganizeContent from './posts/how-to-clean-organize-laundry-room-dayton.js'
 import deepCleaningGuideContent from './posts/deep-cleaning-guide-dayton.js'
@@ -32,6 +33,62 @@ import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-da
 import { POSTS_META } from './postsMeta.js'
 
 const POST_EXTRAS = [
+  {
+    slug: 'fall-gutter-downspout-cleaning-dayton',
+    keywords: [
+      'fall gutter cleaning Dayton',
+      'how to clean gutters before winter',
+      'downspout cleaning tips',
+      'gutter cleaning checklist',
+      'when to clean gutters in Ohio',
+      'ice dam prevention',
+      'basement moisture from clogged gutters',
+      'how often should gutters be cleaned',
+    ],
+    problem: "Clogged gutters and downspouts trap wet leaves and debris right as Dayton's freeze-thaw cycles set in, and most cleaning advice online skips the exact fall timing and foundation-protection steps that matter most for the area's older housing stock.",
+    solution: "A step-by-step fall gutter and downspout cleaning checklist timed to Dayton's real leaf-drop and freeze schedule, plus the downspout-extension and slope checks that keep melting snow and ice out of the foundation.",
+    targetAudience: 'Dayton-area homeowners, especially in older housing stock across Dayton, Oakwood, and Kettering, prepping their home\'s exterior before winter',
+    content: fallGutterDownspoutCleaningDaytonContent,
+    faqs: [
+      {
+        question: 'When is the best time to clean gutters before winter in Dayton?',
+        answer: 'Plan on two fall passes: one after the first major leaf-drop (typically mid-to-late October) and a final check in mid-to-late November once most trees are bare, before the first hard freeze sets in. Cleaning too early just means redoing it a few weeks later as more leaves come down.',
+      },
+      {
+        question: 'How often should gutters be cleaned in Ohio?',
+        answer: 'Twice a year covers most homes: once in late spring after seed and pollen drop, and again in late fall after leaves have finished falling. Homes with heavy mature tree cover, common across Dayton, Oakwood, and Kettering, sometimes need a mid-season check as well.',
+      },
+      {
+        question: "What happens if you don't clean your gutters before winter?",
+        answer: 'Trapped wet leaves and debris hold water that freezes and expands, which stresses seams, cracks joints, and can pull hangers loose. It also sets up ice dams, where melting snow backs up under shingles instead of draining, which is how winter gutter neglect turns into an indoor water problem.',
+      },
+      {
+        question: 'How far should downspouts extend from the foundation?',
+        answer: 'At least 3-5 feet. Water dumped right at the base of the house is a common, easily fixed cause of basement moisture and dampness in older Dayton-area homes, especially those built before modern foundation waterproofing was standard.',
+      },
+      {
+        question: 'Can clogged gutters actually cause basement moisture problems?',
+        answer: "Yes. Overflowing or backed-up gutters send water pooling right along the foundation instead of away from it, and that water works its way into older concrete block foundations over time. It's one of the more common, and more overlooked, sources of a musty basement smell.",
+      },
+      {
+        question: 'Is it safe to clean gutters yourself, or should you hire it out?',
+        answer: 'A single-story home with a stable, low-pitched roofline is reasonably doable yourself with basic ladder safety precautions. Multi-story homes, steep rooflines, or gutters near power lines are safer left to a professional gutter-cleaning service.',
+      },
+      {
+        question: 'How do you know if your gutters need repair instead of just cleaning?',
+        answer: "Visible sagging between hangers, water spilling over the edge during a flush test instead of draining to the downspout, or separated seams all point to a repair need beyond a simple cleaning. Catching these during a fall cleaning pass is cheaper than dealing with the water damage that follows if they're ignored through winter.",
+      },
+    ],
+    howToTitle: 'How to Clean Gutters and Downspouts Before Winter',
+    howToSteps: [
+      { name: 'Clear the loose debris first', text: 'Working from a stable ladder, scoop out leaves and twigs by hand or with a plastic gutter scoop, moving toward the nearest downspout.' },
+      { name: 'Flush with a hose', text: 'Run water from the far end toward each downspout to clear fine grit and confirm water is actually flowing through instead of backing up.' },
+      { name: 'Clear the downspouts themselves', text: "Feed a hose in from the top, or use a plumber's snake for a stubborn clog, until water runs freely out the bottom." },
+      { name: 'Extend downspouts away from the foundation', text: 'Add or check downspout extensions so water discharges 3-5 feet from the foundation instead of pooling against it.' },
+      { name: 'Check the slope and hardware', text: 'Confirm gutters pitch roughly 1/4 inch per 10 feet toward the downspout, and tighten any loose hangers or fasteners.' },
+      { name: 'Do a final pass after the last leaves fall', text: 'Plan a second, shorter check in mid-to-late November so the system goes into the first hard freeze fully clear.' },
+    ],
+  },
   {
     slug: 'spring-pollen-season-dayton-allergy-cleaning',
     keywords: [

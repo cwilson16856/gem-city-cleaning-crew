@@ -9,6 +9,25 @@
 
 export const POSTS_META = [
   {
+    "slug": "fall-gutter-downspout-cleaning-dayton",
+    "title": "How to Clean Gutters and Downspouts Before Winter in Dayton",
+    "description": "Clogged gutters trap water that freezes and expands as Dayton winters set in. Here's the fall gutter and downspout cleaning checklist that protects your home.",
+    "publishedAt": "2026-09-29",
+    "updatedAt": "2026-09-29",
+    "author": "Gem City Cleaning Crew Team",
+    "category": "Cleaning Tips",
+    "tags": [
+      "gutter cleaning",
+      "fall home maintenance",
+      "downspout cleaning",
+      "winter prep",
+      "Dayton home maintenance",
+      "foundation moisture"
+    ],
+    "coverImage": "/images/blog/fall-gutter-downspout-cleaning-dayton.png",
+    "featured": false
+  },
+  {
     "slug": "spring-pollen-season-dayton-allergy-cleaning",
     "title": "Dayton's Tree Pollen Season: A Room-by-Room Deep-Clean Checklist",
     "description": "Oak, maple, and birch pollen blanket the Miami Valley every spring. Here's the room-by-room cleaning checklist that cuts what you're breathing indoors.",
