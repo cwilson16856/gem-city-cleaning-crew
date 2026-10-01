@@ -6,6 +6,7 @@
 // full post HTML out of every page's JS chunk except PostPage.jsx's own.
 // Newest posts go first in the array.
 
+import fireplaceWoodStoveBurningSeasonPrepContent from './posts/how-to-prep-fireplace-wood-stove-burning-season-dayton.js'
 import springPollenSeasonDaytonAllergyCleaningContent from './posts/spring-pollen-season-dayton-allergy-cleaning.js'
 import laundryRoomCleanOrganizeContent from './posts/how-to-clean-organize-laundry-room-dayton.js'
 import deepCleaningGuideContent from './posts/deep-cleaning-guide-dayton.js'
@@ -32,6 +33,63 @@ import ragweedSeasonDaytonAllergyCleaningContent from './posts/ragweed-season-da
 import { POSTS_META } from './postsMeta.js'
 
 const POST_EXTRAS = [
+  {
+    slug: 'how-to-prep-fireplace-wood-stove-burning-season-dayton',
+    keywords: [
+      'how to prep a fireplace for burning season',
+      'how to clean a wood stove before winter',
+      'fireplace ash removal how often',
+      'chimney sweep before winter Dayton',
+      'wood stove cleaning checklist',
+      'how often should ash be removed from a fireplace',
+      'how do you get soot off a fireplace mantel',
+      'is it safe to clean creosote yourself',
+      'chimney sweep cost Dayton Ohio',
+      'fireplace safety checklist fall',
+    ],
+    problem: "A fireplace or wood stove that sat unused all summer is an unknown by the time the first cold snap hits, and most online advice either recommends risky DIY creosote removal or skips the line entirely between what's safe to clean yourself and what needs a certified chimney sweep.",
+    solution: "A clear, step-by-step breakdown of what's safe to clean yourself (ash, hearth, glass, soot on nearby surfaces) versus what requires a CSIA-certified chimney sweep (creosote, flue, liner), plus firewood and detector checks, tied to Dayton's real heating-season timing and older housing stock.",
+    targetAudience: 'Dayton-area homeowners with a masonry fireplace or wood stove getting ready for heating season, especially in older Dayton, Oakwood, and Kettering homes',
+    content: fireplaceWoodStoveBurningSeasonPrepContent,
+    faqs: [
+      {
+        question: 'How often should you remove ash from a fireplace or wood stove?',
+        answer: "Clean out ash once it builds up past about an inch, which for regular winter use usually means every week or two, not after every single fire. Leaving a thin, roughly one-inch layer of ash in place actually helps: it insulates the firebox floor and makes the next fire easier to start. Letting ash build up much deeper than that can block airflow and cause smoky, hard-to-light fires.",
+      },
+      {
+        question: 'How do I know if my chimney needs to be swept before winter?',
+        answer: "The honest answer is that you usually can't tell from the firebox alone, which is exactly why an annual inspection matters even for chimneys that don't get heavy use. The Chimney Safety Institute of America recommends sweeping once soot buildup reaches about 1/8 inch, or sooner if any hardened, glazed creosote is visible, both of which require a trained eye or camera inspection to assess accurately.",
+      },
+      {
+        question: 'Is it safe to clean creosote out of a wood stove myself?',
+        answer: 'No, not the glazed or heavily built-up kind inside the flue and liner. Creosote in that stage is both the most flammable form it takes and genuinely difficult to remove without the right brushes and rods, and getting it wrong risks a chimney fire rather than preventing one. Surface ash and soot on the firebox, glass, and hearth are fine to clean yourself; the flue and liner are a certified chimney sweep\'s job.',
+      },
+      {
+        question: 'How do you get soot off a fireplace mantel or nearby walls?',
+        answer: 'A damp microfiber cloth handles light soot film on painted walls, trim, and most mantel finishes without smearing it further. For soot that\'s worked into carpet or upholstery near the fireplace, vacuum it first with a HEPA-filtered vacuum before applying any cleaner, since a dry vacuum pass lifts far more than wiping a damp cloth over loose soot ever will.',
+      },
+      {
+        question: "What's the best way to tell if firewood is properly seasoned?",
+        answer: "Properly seasoned wood looks noticeably grayer or darker than freshly cut wood, feels lighter when picked up, and makes a sharp, hollow crack rather than a dull thud when two pieces are struck together. For a definitive answer, a basic moisture meter should read under 20% on a freshly split face, which is the threshold the EPA's Burn Wise program recommends for cleaner, safer burning.",
+      },
+      {
+        question: 'How much does a chimney sweep cost in the Dayton area?',
+        answer: 'Local pricing typically runs in the ballpark of $120-$140 for a standard single-flue sweep, with inspections landing anywhere from around $100 to $500 depending on whether a camera inspection is included and how accessible the chimney is. These are general local ranges, not a quote: actual pricing depends on the specific company and the condition of your chimney or wood stove liner.',
+      },
+      {
+        question: 'Can a smoky, smelly fireplace be fixed without a full chimney sweep?',
+        answer: "Sometimes a lingering smoky smell is just ash that's overdue for cleaning out, or a damper that isn't opening fully, both of which are quick DIY fixes. But a fireplace that smokes into the room during a fire, rather than just smelling faintly of smoke between uses, is often a sign of a draft problem, a blockage, or creosote buildup restricting the flue, and that's worth a professional look rather than repeated surface cleaning.",
+      },
+    ],
+    howToTitle: 'How to Prep a Fireplace or Wood Stove for Burning Season',
+    howToSteps: [
+      { name: 'Let everything cool and gear up', text: 'Wait at least 24-48 hours since the last fire before cleaning anything, and wear gloves and a dust mask since fine ash and soot can irritate skin and lungs.' },
+      { name: 'Remove ash, leaving a thin protective bed', text: 'Scoop ash into a metal container with a lid, never plastic, and leave about an inch behind rather than clearing down to bare metal or brick.' },
+      { name: 'Clean the hearth, surround, and glass doors', text: 'Vacuum loose soot with a HEPA-filtered vacuum, then wipe stone, tile, brick, and glass with a mild soap solution or a baking soda paste for stubborn spots.' },
+      { name: 'Schedule a CSIA-certified chimney sweep', text: "Book an annual inspection and sweep for the flue, liner, and any creosote buildup before the first fire of the season. This part isn't a DIY job." },
+      { name: 'Check firewood moisture and test detectors', text: "Confirm firewood reads under 20% moisture with a moisture meter, test smoke and carbon monoxide detectors, and clear anything combustible from the stove's clearance zone." },
+    ],
+  },
   {
     slug: 'spring-pollen-season-dayton-allergy-cleaning',
     keywords: [
