@@ -9,6 +9,26 @@
 
 export const POSTS_META = [
   {
+    "slug": "how-to-prep-fireplace-wood-stove-burning-season-dayton",
+    "title": "How to Prep Your Fireplace or Wood Stove for Burning Season",
+    "description": "A step-by-step fireplace and wood stove prep checklist for Dayton's heating season — what's safe to clean yourself and when to call a certified sweep.",
+    "publishedAt": "2026-10-01",
+    "updatedAt": "2026-10-01",
+    "author": "Gem City Cleaning Crew Team",
+    "category": "Local Guides & Seasonal",
+    "tags": [
+      "fireplace cleaning",
+      "wood stove",
+      "chimney safety",
+      "fall home prep",
+      "Dayton Ohio",
+      "heating season",
+      "creosote"
+    ],
+    "coverImage": "/images/blog/how-to-prep-fireplace-wood-stove-burning-season-dayton.png",
+    "featured": false
+  },
+  {
     "slug": "fall-gutter-downspout-cleaning-dayton",
     "title": "How to Clean Gutters and Downspouts Before Winter in Dayton",
     "description": "Clogged gutters trap water that freezes and expands as Dayton winters set in. Here's the fall gutter and downspout cleaning checklist that protects your home.",
